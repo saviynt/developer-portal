@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdemo=self.webpackChunkdemo||[]).push([[2633],{80690:e=>{e.exports=JSON.parse('{"label":"openapi","permalink":"/docs/tags/openapi","allTagsPath":"/docs/tags","count":1,"items":[{"id":"intro","title":"Overview","description":"OpenAPI plugin for generating API reference docs in Docusaurus v2.","permalink":"/docs/"}],"unlisted":false}')}}]);
