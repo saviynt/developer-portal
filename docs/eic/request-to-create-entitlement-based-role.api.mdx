@@ -1,0 +1,694 @@
+---
+id: request-to-create-entitlement-based-role
+title: "Request to Create Entitlement Based Role"
+description: "This API is used to create role of roletype 'Entitlement', such as AzureAD/Unix Group in SSM."
+sidebar_label: "Request to Create Entitlement Based Role"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: eic/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Request to Create Entitlement Based Role"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/createrequest"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API is used to create role of roletype "Entitlement", such as AzureAD/Unix Group in SSM.
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+Mandatory params:  
+`accesstype` - roles,  
+`roletype` - 6,  
+`requesttype` - create,  
+`entitlementtype`,  
+`endpoint`,  
+`securitysystem`  
+`role_name customproperty22`
+
+Optional params:
+
+`requestor`,  
+`displayname`,  
+`description`,  
+`grouptype`,  
+`enablemail`,  
+`enablesecurity`,  
+`soxcritical`,  
+`syscritical`,  
+`priviliged`,  
+`confidentiality`,
+
+Note: From v23.8 onwards, the acceptable value for soxcritical, syscritical, priviliged and confidentiality will be critical, high, medium, low, and very low.
+
+`requestable`,  
+`comments`,  
+`owner` -
+
+1. `ownername` - mandatory
+2. `rank`
+3. `updatetype` - optional, value can be 'add'
+
+`entitlements` -
+
+1. `entitlement_value` - mandatory
+2. `updatetype` - optional, value can be 'add'
+
+`parententitlements` -
+
+1. `entitlement_value` - mandatory
+2. `entitlementType`
+3. `updatetype` - add/remove
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"path","in":"path","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"accesstype"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"roles"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"confidentiality"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"Low"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"customproperty22"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"Global"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"description"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"adGroupAshok300600 Description"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"displayname"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"adGroupAshok300600 Display"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"endpoint"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"AD_Rashid"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"entitlementtype"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"memberof"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"priviliged"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"Medium"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"requestor"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"admin"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"requesttype"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"Create"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"role_name"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"CN=adGroupAshok300600,OU=DocTeamOU,OU=SaviyntTeams,DC=saviyntlabs,DC=org"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"roletype"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"6"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"securitysystem"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"AD_Rashid"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"soxcritical"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"Critical"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"syscritical"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"High"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Request to Create AzureAD Group / new json
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Credentials
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Origin
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Cache-Control
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Connection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Content-Security-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Expires
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Permissions-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Pragma
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Referrer-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-XSS-Protection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":0}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Success"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"requestid"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"3110105"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"requestkey"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"3924"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": 0,\n  \"msg\": \"Success\",\n  \"requestid\": \"3110105\",\n  \"requestkey\": \"3924\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Request to Create AzureAD Group"}
+                  value={"Request to Create AzureAD Group"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": 0,\n  \"msg\": \"Success\",\n  \"requestid\": \"3110105\",\n  \"requestkey\": \"3924\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"new json"}
+                  value={"new json"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": 0,\n  \"msg\": \"Success\",\n  \"requestid\": \"6960781\",\n  \"requestkey\": \"17731\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

@@ -1,0 +1,496 @@
+---
+id: certify-usermanager-requests
+title: "Certify UserManager Requests"
+description: "This API can be used to certify users employment status for user manager attestation."
+sidebar_label: "Certify UserManager Requests"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV+9uGjkQfxXLn1pplz9pSJs99QOltIoqQgRUPSmJhNkdWJdde2t7oXsIqY9x93p9ktPYC2xCCpyud58aCcVrj+f//Ga8oobNNA1u6UWtQdrGgDbMcCk0vfdoBDpUPMNvGtBRzDVp31yRkAkyAZJriIiRJARl+LTAb6UJpFkiixSEIcgq12QqlT0jKRNsBoqwnZjanboT+BvFQMbt3MRS8T/s0ZikuTYkZgsg4zfAFKgxmcokkUuIyKQg45GcgxjXyIZHj4mIGakKkjHFUh1sT8YLUHzKQ2famPi7E6cvAG5+1KAESwGtWsYyJYXMyZIJUzHzEUtUyidXIkLmoImJgXz/9mdecvr+7S8ip3aXZZmSC1D1zUXLyVheLHQW+2SYQYjOLPm07QFyqapi2BysW5FKgc4gNHwBpMPSjPGZqJEbqTWfJEAWLMlBE6Ysu09SzV1ArGoe7r2VoImQhiylmj86G4FKuWAGIrvDRIS719IKlUIjIRpACLEeHfNo3x2VcBMeWQnLmIfxvknODURbH3CICBf7jrCxBQOqRrZRxF/f5ilLNsH/Yey3B6FMMU/1Y79v9h8oiDuonHU7m3Mxe+x9pz31qMxAWWlXEQ1omTeYW2UBDOBLDtpo6lHllm9kVNBgRUMpDAiDS5ZlSal0/bPGAlxRHcaQMlyZIgMaUDn5DKGhHs0UCjUcNJ4+sLhCzpRiBfUoN5Dq42xKg3Z02iguZtSj8JWlWYJbb/vd4XV/9Kk/+PCuP+h16dqjm5I6fDOaMJ5AgRd4dJi0+QKpNnVzmJZFKRd0vV5XNm93tuwrXNV3q5TTCQVX5W6Y31fZW1d1SgzEKPdKmNuGGSOCZfhEaP4LzaxymwK10s8aDfz3EM4PquzRGFgEyl5/yww8mX5PuL8nhUcaF6Sdz8hZo/mKNFvBWSt4cUHe90YUNRuCWrggnsKvnbEwBr8jC2mg3qw1Sx7G70g55yfr1ekMB+/8Uf9D9/r1ZfPsPJzCud88n0788xfwyr9svrz0L5qXrdZ5K2owdv4buWEmfl234kaKCT0F5XdFKCNkfaLUMM7FHCLL5Hf/HQKX73BKn8pi2O51+4Or91fXLql/EkSEMndMSjKRpxNQVclNTHGlpOrI6EgpY3Wmenac6CcB0z8GmBPtaJwORkfNHeZhCFrvI9GTNV1RkDYe1LgVtOP2L6CnDHnzobStCLoXnp+irIOjbdN2bHE0ogHNmInxvtitsSFyBRENjMrB+2GJrNf3Hk3BxBKFZ1LbLEEeAa1XWm5vr+Vqiz9Oj1wlNKCxMZkO6vWVAcGEWdc0W/BCmDCReVQLZVrvdnp1lvH6ooVeYoqzSel9d2UfXct9nKGnLE8MDbZJsLa6awhzxU0xRAMdrwnTPMQZuGIu6kZLN+C3pcEEnNiJ+Bi1JbLwgwAx2E0b3U1G/g8tCSM8lVZNblxxOAeTrjCgMsU1kKsIByxTkA563b4zBjAFBSIE+uRTpCOTBNzEiJM1j8p5MwLDeKI3c7fOs0wqAxFx6aK3k/NxLZ51rzrPnVXaSW7VGjULE5hyKbOYW2bzkYb6wILKqPfrXfXrXfXrXXXKu6oEOQNfTT1LGIKL5yB8VUL/LT0A/fcejbFPBLd0tZowDR9Vsl7j9pccVEGD2/sduFscjLjGdUSDKUs0HKjhZ4Oybz0nP1J0M+qIwvYQ25Sx6c6h2LQ/i5Vu8Lby3VHHSfFHyGB3dW/6W3ubG+0whMwcpK12z5v+cEQ9Oikfoanr7IotsR+zJQ3oHb2j9mG7Hdzs/oomTMxyNkN6xxf//gYzSHnj
+sidebar_class_name: "post api-method"
+info_path: eic/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Certify UserManager Requests"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/certifyUserManagerRequests"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API can be used to certify users employment status for user manager attestation.
+
+The `Authorization` must have `Bearer` followed by `Token`. 
+
+Mandatory params: 
+
+`verifications` - 
+
+`employee` - Username to whom you want to certify
+
+`verifier` - Indicates the ‘username’ of the approver/verifier
+	
+`action` - Specify the ‘Action’ you want to take for the respective Campaign. Possible values are ‘Works for me’, ‘Does not work for me’, ‘Terminated’, and ‘No response’
+    
+`id` - Indicates the attestation id for which you want to take action specified in the ‘Action’ parameter.  
+
+
+Optional params:
+
+`verifications` -
+
+`comments` - Specify the comments you want to mention for taking the respective action
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"path","in":"path","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={true}
+          className={"schemaItem"}
+        >
+          <details
+            style={{}}
+            className={"openapi-markdown__details"}
+          >
+            <summary
+              style={{}}
+            >
+              <span
+                className={"openapi-schema__container"}
+              >
+                <strong
+                  className={"openapi-schema__property"}
+                >
+                  verifications
+                </strong><span
+                  className={"openapi-schema__name"}
+                >
+                   object[]
+                </span>
+              </span>
+            </summary><div
+              style={{"marginLeft":"1rem"}}
+            >
+              <li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                >
+                  Array [
+                </div>
+              </li><SchemaItem
+                collapsible={false}
+                name={"action"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"DOESNOTWORKFORME"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"employee"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"dbailey"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"id"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"13"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"verifier"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"admin"}}
+              >
+                
+              </SchemaItem><li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                >
+                  ]
+                </div>
+              </li>
+            </div>
+          </details>
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Certify UserManager Requests
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"count"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":1}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":""}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":""}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                verifications
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object[]
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                              >
+                                Array [
+                              </div>
+                            </li><SchemaItem
+                              collapsible={false}
+                              name={"employee"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"dbailey"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"errorCode"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"0"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"id"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"13"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"msg"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Success"}}
+                            >
+                              
+                            </SchemaItem><li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                              >
+                                ]
+                              </div>
+                            </li>
+                          </div>
+                        </details>
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"count\": 1,\n  \"errorCode\": \"\",\n  \"msg\": \"\",\n  \"verifications\": [\n    {\n      \"employee\": \"dbailey\",\n      \"errorCode\": \"0\",\n      \"id\": \"13\",\n      \"msg\": \"Success\"\n    }\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Certify UserManager Requests"}
+                  value={"Certify UserManager Requests"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"count\": 1,\n  \"errorCode\": \"\",\n  \"msg\": \"\",\n  \"verifications\": [\n    {\n      \"employee\": \"dbailey\",\n      \"errorCode\": \"0\",\n      \"id\": \"13\",\n      \"msg\": \"Success\"\n    }\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

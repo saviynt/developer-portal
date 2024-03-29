@@ -1,0 +1,503 @@
+---
+id: approve-reject-each-line-item-in-a-request
+title: "Approve/Reject each line item in a request"
+description: "This API is used to approve/reject requests. Before running this call, first we need to run the API to retrieve request approval details in order to obtain the taskid and taskkey."
+sidebar_label: "Approve/Reject each line item in a request"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWNtu2zgQ/RWCT0kg+Z6bij64jlsY2zSF42IXSIJ6LI4sNhKpkpRTr+F/X5CUYqdpc+n2YYttgaCUPDwzPByeGWpFDcw1jS5or9Ei/ThGrckYP5eoDQ1oNSL9olByARm9CihDHSteGC4Fjegk5Zr0348I16TUyIiRBJw1NhV+wtgQ5UF0g7zCRCokqhSCizkxdm4MWRaQhCttyA0SgR5DlYKYFB20fUSjOC6wBqt8QEYYGuCZJlwQqRgqay1nBrifb0Bfc0ZAMDe8xmXjUl0K+zdJkUz7pUml4n+DXc+U5KU2JIUFkukrBIVqShKZZfIGGZktyXQir1FMG6TGOAXBwEi1JAUoyHXkfplWUf6By2ngXlSUqDuPkDEwMCU7PsigjjAgENtwdl9Ug6jd7ASkTcKa2oB0SEg8v3UoZ25LIKsjcY5imecojJ7WVnt7e++kwb29vYiggFmGdWgLyDhzNHBRxwcFJ0kG850bblJiVInNBDKNZAFZiXqXxCDIDAkwhsxuQSxFwuelcjjEWHy7Id5Tk3Ht3mxcaXKToqiXpW4H2m1eRWPjBBMoM+O9Epk8I3Kbl6LMsgYNqCzQBzZiNKLV7LEjcQhx+pYLHBnMR6K/OQFVCK8kW9JoRWMpDApjh1AUGY8dXvOTtodhRXWcYg52ZJYF0ojKmUWnAS2U9W446mru7f5vWYNSsKQB5QZz/QSU2B/CWztR5jNUNKD4BfIiQxq11wH12bVlpo3iYr5tRo9b3YPux48fe112jEcHnfAQW52wx7AbHnX2Mdw/ADiA3vH+/iHSCvMalw/67nYO1uv11ouLTcjtTVjP873l2uIHG8jOV5C9H4I8XF+tgzo31MOkAcu5sGzUp+wR81qyKnM7cyMUD29j92ibSueoX6msT2CCEKck4wKJzR57FqE+P9baHZ37qfeLbMn2jlS0b7N+n9q7zHr6HIMKdSGF9hR2Wi37392K9gxeA5oiMFQO7AQMflMDvpEKfyILSGufnGBMOq32EWm1om4v6hyRN6cTauM8R1Xl31Pw+gXEKYYDuZQGm+1Gu8Iw4UDKa/7kuAaD8/HrcHL2x/DdS2yxw4NOfBiyw6Qd9lqHByF0Zyw8bh2x7n6nl8zanRfkPZj0ZdO5mygQOkEVDkUsmYV+otc4LcU1MgfyVzjwEhtOlgWGvqjppyIJqQVPkgrptYL82RDn/dPh2Xj0ZvSOuoT5yYo/rvLvx1VfoS4z80g+xDEWxlL635L/OvZNgD9PdB7F/jcFAZWSaiAZPsxjy5KT6/kjKfZhMBien7/+8Jb+bFXfpNcvy/YdsmmLVoR+xZpXc9fqonEKfLGiAnI7pwCT2vMkNmPLGVfIaGSb2OC7SrC2/nM0qbTrKKQTeYcR0WZ/u2M8cfeOTaOonWD7OEqV0YimxhQ6ajZXBgUIs25oWPClMHEmS9aIZd4cDk6bUPDmYp8GdAGK267WS4Cbcr84Ve/tLcy1xDS6zau1i11jXCpulud2gR5rBprH9p6ztVwbG61osM/OxibvzN16HrN2Rk5lrQ6ONz3ysE7y/2+jYRMvkY49bvx59/tOhsKgKhTXSEYMheFmSQY2Gdwtd4wJKhQx0m/esQcyy9Atl9gQOEN/R6rvvzJxj7osCqkMMuKzWJNEKvfL41HsDEeDXZuJqLT3vN9oNZym2ZOQg6t41SF7Vpt0Zz1bt6jfnw9+fz74ZT4fVGJo8ItpFhn4q5+T+lVVIi7oAyXiKqCprSfRBV2tZqDxg8rWa/v6c4lqSaOLq00RcIJZrZfRyLH2wDHaGVf1bZd8L9C62RRLV2tc30BpQJ32+fhdp+NvNM6//2m7H9+aeq8ZtnrsZ/iW4EHb7Sr7/ux8QgM6qz6x5L7wK7ix4go3NKKX9JK67ze3nbx7v6IZiHkJc2vvce2/fwDTFAoT
+sidebar_class_name: "post api-method"
+info_path: eic/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Approve/Reject each line item in a request"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/ApproveRejectDetailRequest"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API is used to approve/reject requests. Before running this call, first we need to run the API to retrieve request approval details in order to obtain the taskid and taskkey.
+
+The `Authorization` must have `Bearer` followed by `Token`. 
+
+Mandatory params: 
+`requestKey`,
+`approver`,
+`approvaldata` (taskid, taskkey, action); action:1/2, 1 - approve, 2 - reject
+
+Optional params:
+`comments`
+
+***Note***: enableapprovervalidationinapprovalapi flag(with true/false values) can be added in configuration table to enable/disable validations when approver approvers the request.Default value of enableapprovervalidationinapprovalapi flag is null.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"path","in":"path","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={true}
+          className={"schemaItem"}
+        >
+          <details
+            style={{}}
+            className={"openapi-markdown__details"}
+          >
+            <summary
+              style={{}}
+            >
+              <span
+                className={"openapi-schema__container"}
+              >
+                <strong
+                  className={"openapi-schema__property"}
+                >
+                  approvaldata
+                </strong><span
+                  className={"openapi-schema__name"}
+                >
+                   object[]
+                </span>
+              </span>
+            </summary><div
+              style={{"marginLeft":"1rem"}}
+            >
+              <li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                >
+                  Array [
+                </div>
+              </li><SchemaItem
+                collapsible={false}
+                name={"action"}
+                required={false}
+                schemaName={"number"}
+                qualifierMessage={undefined}
+                schema={{"type":"number","example":1}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"taskid"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"90363___43d9e862-7e02-4de3-825e-56aa6a49557e"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"taskkey"}
+                required={false}
+                schemaName={"number"}
+                qualifierMessage={undefined}
+                schema={{"type":"number","example":326}}
+              >
+                
+              </SchemaItem><li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                >
+                  ]
+                </div>
+              </li>
+            </div>
+          </details>
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"approver"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"admin"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"comments"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"approval comment"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"requestKey"}
+          required={false}
+          schemaName={"number"}
+          qualifierMessage={undefined}
+          schema={{"type":"number","example":138}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Approve/Reject each line item in a request
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                approvalResponse
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object[]
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                              >
+                                Array [
+                              </div>
+                            </li><SchemaItem
+                              collapsible={false}
+                              name={"result"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Accepted"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"taskid"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"90363___43d9e862-7e02-4de3-825e-56aa6a49557e"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"taskkey"}
+                              required={false}
+                              schemaName={"number"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"number","example":326}}
+                            >
+                              
+                            </SchemaItem><li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                              >
+                                ]
+                              </div>
+                            </li>
+                          </div>
+                        </details>
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"SUCCESSFUL"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"approvalResponse\": [\n    {\n      \"result\": \"Accepted\",\n      \"taskid\": \"90363___43d9e862-7e02-4de3-825e-56aa6a49557e\",\n      \"taskkey\": 326\n    },\n    {\n      \"result\": \"Accepted\",\n      \"taskid\": \"90364___43d9e862-7e02-4de3-825e-56aa6a49557e\",\n      \"taskkey\": 327\n    }\n  ],\n  \"errorCode\": \"0\",\n  \"msg\": \"SUCCESSFUL\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Approve/Reject each line item in a request"}
+                  value={"Approve/Reject each line item in a request"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"approvalResponse\": [\n    {\n      \"result\": \"Accepted\",\n      \"taskid\": \"90363___43d9e862-7e02-4de3-825e-56aa6a49557e\",\n      \"taskkey\": 326\n    },\n    {\n      \"result\": \"Accepted\",\n      \"taskid\": \"90364___43d9e862-7e02-4de3-825e-56aa6a49557e\",\n      \"taskkey\": 327\n    }\n  ],\n  \"errorCode\": \"0\",\n  \"msg\": \"SUCCESSFUL\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

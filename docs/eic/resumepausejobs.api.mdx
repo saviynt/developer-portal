@@ -1,0 +1,509 @@
+---
+id: resumepausejobs
+title: "resumePauseJobs"
+description: "Starting with Release v23.10, the resumePauseJobs API enables you to pause jobs based on their job type and job name."
+sidebar_label: "resumePauseJobs"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: eic/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"resumePauseJobs"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/resumePauseJobs"}
+>
+  
+</MethodEndpoint>
+
+
+
+Starting with Release v23.10, the resumePauseJobs API enables you to pause jobs based on their job type and job name.
+
+When a job is paused, its status is displayed as Paused on the Job Control Panel page.
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+Mandatory params:
+
+`action`
+
+Optional params:
+
+`triggername`
+
+`jobname`
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"path","in":"path","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"action"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"RESUME"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"jobname"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"ArchiveJob,TriggerChainJob"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"triggername"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"GDPR"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Pausing Job / Resume Job
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Credentials
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Origin
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Cache-Control
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Connection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Content-Security-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Expires
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Permissions-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Pragma
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Referrer-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-XSS-Protection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"text/plain"}
+              value={"text/plain"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      any
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Pausing Job"}
+                  value={"Pausing Job"}
+                >
+                  <ResponseSamples
+                    responseExample={"Job(s) Paused successfully"}
+                    language={"shell"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Resume Job"}
+                  value={"Resume Job"}
+                >
+                  <ResponseSamples
+                    responseExample={"Job(s) Resumed successfully"}
+                    language={"shell"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

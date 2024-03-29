@@ -1,0 +1,614 @@
+---
+id: get-access-recommendations
+title: "Get Access Recommendations"
+description: "This API provides the count and details of all the recommended entitlements associated with that entitlement type and displays relevance scores to requestors while requesting access."
+sidebar_label: "Get Access Recommendations"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: eic/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Access Recommendations"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/getAccessRecommendations"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API provides the count and details of all the recommended entitlements associated with that entitlement type and displays relevance scores to requestors while requesting access.
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+Mandatory params:
+
+`username`/`userkey`(if both are passed then userkey will be considered)
+
+Optional params:
+
+`endpointname`/`endpointkey`(if both are passed then endpointkey will be considered)
+
+`entitlementtypekey`/`entitlementtype`(if both are passed then entitlementtypekey will be considered)
+
+`entitlement_valuekey`
+
+`max`
+
+`offset`
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"path","in":"path","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"endpointkey"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"201"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"entitlement_valuekey"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"102"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"entitlementtypekey"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"101"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"max"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"100"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"offset"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"0"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"userkey"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"2444562"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Get Access Recommendations
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Connection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Vary
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-XSS-Protection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"displaycount"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":1}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"errorcode"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":0}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"success"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                recommendations
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object[]
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                              >
+                                Array [
+                              </div>
+                            </li><SchemaItem
+                              collapsible={false}
+                              name={"accountkey"}
+                              required={false}
+                              schemaName={"number"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"number","example":105923}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"accountname"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Devloper2amp"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"description"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"displayname"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"endpointkey"}
+                              required={false}
+                              schemaName={"number"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"number","example":201}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"endpointname"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Aha"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"entitlement_value"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Aha Feature Editor"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"entitlement_valuekey"}
+                              required={false}
+                              schemaName={"number"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"number","example":102}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"entitlementtype"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Aha Features"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"entitlementtypekey"}
+                              required={false}
+                              schemaName={"number"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"number","example":101}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"peergroupconfidencepercentage"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"100"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"recommended"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"true"}}
+                            >
+                              
+                            </SchemaItem><li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                              >
+                                ]
+                              </div>
+                            </li>
+                          </div>
+                        </details>
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"totalcount"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":1}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"displaycount\": 1,\n  \"errorcode\": 0,\n  \"msg\": \"success\",\n  \"recommendations\": [\n    {\n      \"accountkey\": 105923,\n      \"accountname\": \"Devloper2amp\",\n      \"description\": \"\",\n      \"displayname\": \"\",\n      \"endpointkey\": 201,\n      \"endpointname\": \"Aha\",\n      \"entitlement_value\": \"Aha Feature Editor\",\n      \"entitlement_valuekey\": 102,\n      \"entitlementtype\": \"Aha Features\",\n      \"entitlementtypekey\": 101,\n      \"peergroupconfidencepercentage\": \"100\",\n      \"recommended\": \"true\"\n    }\n  ],\n  \"totalcount\": 1\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Get Access Recommendations"}
+                  value={"Get Access Recommendations"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"displaycount\": 1,\n  \"errorcode\": 0,\n  \"msg\": \"success\",\n  \"recommendations\": [\n    {\n      \"accountkey\": 105923,\n      \"accountname\": \"Devloper2amp\",\n      \"description\": \"\",\n      \"displayname\": \"\",\n      \"endpointkey\": 201,\n      \"endpointname\": \"Aha\",\n      \"entitlement_value\": \"Aha Feature Editor\",\n      \"entitlement_valuekey\": 102,\n      \"entitlementtype\": \"Aha Features\",\n      \"entitlementtypekey\": 101,\n      \"peergroupconfidencepercentage\": \"100\",\n      \"recommended\": \"true\"\n    }\n  ],\n  \"totalcount\": 1\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

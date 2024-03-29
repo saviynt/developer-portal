@@ -1,0 +1,544 @@
+---
+id: fetch-control-details-es
+title: "Fetch Control Details ES"
+description: "This API performs the action specified under the `Default_Action_For_Analytics` parameter and retrieves records starting from the offset."
+sidebar_label: "Fetch Control Details ES"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: eic/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Fetch Control Details ES"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/fetchControlDetailsES"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API performs the action specified under the `Default_Action_For_Analytics` parameter and retrieves records starting from the offset.
+
+This API can return the response even if the `offset` parameter is set beyond 1000.
+
+Now, the response of this API displays an additional offset attribute.
+
+Starting with Release v24.1, the behavior of this API has been modified as follows:
+
+- **For newly created analytics controls:** You can swiftly execute and retrieve the history of newly created analytics controls.
+- **For previously existing analytics controls:** To expedite fetching the run history of previously existing analytics controls, you must initially run the control on the Analytics Configuration List page within the user interface. Subsequently, you can use the API to fetch the run history.
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+**Mandatory** **params:**
+
+- `controlId` - this is the ANALYTICSKEY
+
+- `offset`\- Specify the value from where the records must be retrieved
+
+**Optional params:**
+
+`max`
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"path","in":"path","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"analyticsid"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"18"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"offset"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"1001"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Fetch Control Details ES / Fetch Control Details ES / Offset value set &lt; 1000 / Offset value set > 1000 / max parameter set / Removed max parameter
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Credentials
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Origin
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Cache-Control
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Connection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Expires
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Permissions-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Pragma
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Referrer-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-XSS-Protection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"attributeDefaultValue"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"'Enter Account ID here'"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"attributeKey"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":145}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"attributeLabel"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"AWS Accounts"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"attributeName"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"AWS Accounts"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"attributeValue"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":""}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"format"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"String"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"orderIndex"}
+                        required={false}
+                        schemaName={""}
+                        qualifierMessage={undefined}
+                        schema={{"nullable":true,"example":null}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"attributeDefaultValue\": \"'Enter Account ID here'\",\n  \"attributeKey\": 145,\n  \"attributeLabel\": \"AWS Accounts\",\n  \"attributeName\": \"AWS Accounts\",\n  \"attributeValue\": \"\",\n  \"format\": \"String\",\n  \"orderIndex\": null\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

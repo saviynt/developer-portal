@@ -1,0 +1,644 @@
+---
+id: create-task-remove-entitlement
+title: "Create Task - Remove Entitlement"
+description: "Starting with Release v23.9, you can use the createtask API to create remove access tasks for inactive accounts."
+sidebar_label: "Create Task - Remove Entitlement"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: eic/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create Task - Remove Entitlement"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/createtask"}
+>
+  
+</MethodEndpoint>
+
+
+
+Starting with Release v23.9, you can use the createtask API to create remove access tasks for inactive accounts.
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+Mandatory params:  
+`assignmenttype` - ENTITLEMENTS,  
+`tasktype` - DEL,  
+`username`,  
+`endpointname`,  
+`accountname`
+
+Optional params:  
+`comments`  
+`source`(Default : WEBSERVICE)
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"path","in":"path","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"accountname"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"536736@saviyntlive.onmicrosoft.com"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"assignmenttype"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"ENTITLEMENTS"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"comments"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"Test Removal"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"endpointname"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"AzureAD_CONN"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"entitlementtype"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"AADGroup"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"entitlementvalue"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"15Febmonday1Grp"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"tasktype"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"DEL"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"username"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"536736@saviyntlive.onmicrosoft.com"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Remove Entitlement
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Credentials
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Origin
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  CF-Cache-Status
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  CF-RAY
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Cache-Control
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Connection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Content-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Content-Security-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Expires
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Permissions-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Pragma
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Referrer-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-XSS-Protection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"Status"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Success"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"TaskID List"}
+                        required={false}
+                        schemaName={"number[]"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"array","items":{"type":"number","example":61585},"example":[61585]}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"errorcode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"Status\": \"Success\",\n  \"TaskID List\": [\n    61585\n  ],\n  \"errorcode\": \"0\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Remove Entitlement"}
+                  value={"Remove Entitlement"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"Status\": \"Success\",\n  \"TaskID List\": [\n    61585\n  ],\n  \"errorcode\": \"0\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

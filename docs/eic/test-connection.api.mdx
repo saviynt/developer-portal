@@ -1,0 +1,726 @@
+---
+id: test-connection
+title: "Test Connection"
+description: "This API is used to save and test a connection."
+sidebar_label: "Test Connection"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: eic/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Test Connection"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/ECM/testConnection"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API is used to save and test a connection.
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+Mandatory params:
+
+`connectiontype, connectionName` _**OR**_ `connectionkey`(if both are passed connectionkey is considered)
+
+Additional connection parameters can also be passed -
+
+For example, for SAP Import, provide paramters - JCO_ASHOST, JCO_SYSNR, JCO_CLIENT, JCO_USER, PASSWORD,
+
+This API is enhanced to update vaultconnection, and vaultconfiguration connection details.
+
+From Release v23.10, if you specify the key value for header `response` as `standard,`a detailed error message is displayed in the Response that enables you to troubleshoot errors.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+  schemaType={"request"}
+>
+  <TabItem
+    label={"multipart/form-data"}
+    value={"multipart/form-data"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"PASSWORD"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"{{password}}"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"URL"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"LDAP://3.19.17.34:386"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"USERNAME"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"CN=Doc Admin,OU=SaviyntAdmins,DC=saviyntlabs,DC=org"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"connectionName"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"Active Directory_Doc"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"connectiontype"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"AD"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"saveconnection"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"Y"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Test Connection-non standard response / Test Connection-non standard failure / Test Connection-standard response success / Test Connection-standard response failure
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Credentials
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Origin
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  CF-Cache-Status
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  CF-RAY
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Cache-Control
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Connection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Content-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Content-Security-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Expires
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Permissions-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Pragma
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Referrer-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"connectionKey"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":1909}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"connectionName"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Active Directory_Doc"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                connectionResult
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <SchemaItem
+                              collapsible={true}
+                              className={"schemaItem"}
+                            >
+                              <details
+                                style={{}}
+                                className={"openapi-markdown__details"}
+                              >
+                                <summary
+                                  style={{}}
+                                >
+                                  <span
+                                    className={"openapi-schema__container"}
+                                  >
+                                    <strong
+                                      className={"openapi-schema__property"}
+                                    >
+                                      errors
+                                    </strong><span
+                                      className={"openapi-schema__name"}
+                                    >
+                                       object[]
+                                    </span>
+                                  </span>
+                                </summary><div
+                                  style={{"marginLeft":"1rem"}}
+                                >
+                                  <li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                                    >
+                                      Array [
+                                    </div>
+                                  </li><SchemaItem
+                                    collapsible={false}
+                                    name={"errorMessage"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"The connection to the [LDAP://3.19.17.34:386] server was denied. Target Error Message: [javax.naming.CommunicationException: 3.19.17.34:386 [Root exception is java.net.ConnectException: Connection refused (Connection refused)]\n\t]"}}
+                                  >
+                                    
+                                  </SchemaItem><li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                                    >
+                                      ]
+                                    </div>
+                                  </li>
+                                </div>
+                              </details>
+                            </SchemaItem>
+                          </div>
+                        </details>
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"connectionStatus"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"SUCCESS"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"connectionType"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"AD"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Connection Successful"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"connectionKey\": 1909,\n  \"connectionName\": \"Active Directory_Doc\",\n  \"connectionResult\": {\n    \"errors\": [\n      {\n        \"errorMessage\": \"The connection to the [LDAP://3.19.17.34:386] server was denied. Target Error Message: [javax.naming.CommunicationException: 3.19.17.34:386 [Root exception is java.net.ConnectException: Connection refused (Connection refused)]\\n\\t]\"\n      }\n    ]\n  },\n  \"connectionStatus\": \"SUCCESS\",\n  \"connectionType\": \"AD\",\n  \"errorCode\": \"0\",\n  \"msg\": \"Connection Successful\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Test Connection-non standard failure"}
+                  value={"Test Connection-non standard failure"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"connectionKey\": 1909,\n  \"errorCode\": \"0\",\n  \"msg\": \"Connection Failed\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Test Connection-non standard response"}
+                  value={"Test Connection-non standard response"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"connectionKey\": 1909,\n  \"errorCode\": \"0\",\n  \"msg\": \"Connection Successful\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Test Connection-standard response failure"}
+                  value={"Test Connection-standard response failure"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"connectionKey\": 1909,\n  \"connectionName\": \"Active Directory_Doc\",\n  \"connectionResult\": {\n    \"errors\": [\n      {\n        \"errorMessage\": \"The connection to the [LDAP://3.19.17.34:386] server was denied. Target Error Message: [javax.naming.CommunicationException: 3.19.17.34:386 [Root exception is java.net.ConnectException: Connection refused (Connection refused)]\\n\\t]\"\n      }\n    ]\n  },\n  \"connectionStatus\": \"FAILURE\",\n  \"connectionType\": \"AD\",\n  \"errorCode\": \"0\",\n  \"msg\": \"Connection Failed\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Test Connection-standard response success"}
+                  value={"Test Connection-standard response success"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"connectionKey\": 1909,\n  \"connectionName\": \"Active Directory_Doc\",\n  \"connectionStatus\": \"SUCCESS\",\n  \"connectionType\": \"AD\",\n  \"errorCode\": \"0\",\n  \"msg\": \"Connection Successful\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

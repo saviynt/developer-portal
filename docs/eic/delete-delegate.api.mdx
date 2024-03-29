@@ -1,0 +1,337 @@
+---
+id: delete-delegate
+title: "Delete Delegate"
+description: "This API is used to delete a specific delegate."
+sidebar_label: "Delete Delegate"
+hide_title: true
+hide_table_of_contents: true
+api: eJzlVttu2zgQ/RVinlpAspSL01SLPriuUxiLXBB7gQKuAdPUyGIjkSxJ2VEN/fuClJw4SVNnnxd+MDnknLnwzIy2YOnKQDKDfi8mX7DAFbWYkkFacsGN1dRyKWAeQIqGaa78NoFpzg0Z3IwJN6QymBIrSYoFWiSUGIWMZ5x5icPrke/C/aY5ksWgsrnU/JdHXpCyMpbkdI1k8RmpRr0gmSwKucGULGuymMo7FIueU7+kIqVW6pooqmlpEg+7qAzqK1rigoTEOr+4ITZH55cmm1y6vfeNi5U/2LkVePU7rFtN3Cnuzu+whgCkwjYL4xQSaIPcJQoC0PizQmM/y7SGZAtMCovCuiVVquDMq0b34WazCTOpy7DSBQomU0zdJcNyLKlb2VohJCCXP5BZCEBpZ9lyNO7U+fJ4yVjNxQoCwHtaqsKJjj9AE8AuF3++S93rQtM0D0Jv40v7gA/BJVtY06LCB/vOyL6NRyCPpdEoKUwLdhzH7u8pbZ5bCCBHmqJuzXc2X6TkNxFcaB6Q+IQMqhU5jo/OSRwn/X5yfEq+Xk7BOTNBvUb9VryBoizHcChraTE66h11GDYcSnnH3+zXcDi5vQin13+Prj6dUhovs2wZZmcnJ+Fp9jELz8/i45DRD+cf6Rnrp8v+X+SG2vxT5M1NNRUmQx2OHD8c9ButsrwSd5h6kG/hhaYlhtc+5+atEJPB5ej6dvx1fNXy4hUe/zDuHd9OW9Ra6qFMDxAydtwtzeqAjxVjaExWFf+Nu3tOQAydoWdoLYN9X0HrCTnbgmhZrqjNIQAuHteu6rl2JWx1hcGrKW6aeQAl2ly65qGk8SlyGAlEL3qJ8ZxtbVe6gARya5VJomhrUVBhm56ha14LywpZpT0my2g0vIyo4tG6DwGsqeZ02aWkVXlZhJ3ctfSMVoWF5CHHjffXIKs0t/XEBdViLanhzHXuvRCdb9CF7vb+jnvIpe/jh277S56yXGTS3+S2fec2RjISFrXS3CAZpygstzUZusD95LnFDDUKhvDb4TSURYHMSYjScs1T3DV3S3lhiMz81lRKSe1GXvtKhmRS+5PDXrwbjYfvXdZRm9Zyvxf3PJfdS5fUl0pHopet74nTe5Pj/zRcO3JYvLeRKqgbJkFL/W1XJrPnI3ceQO7qKJnBdrukBv/RRdM48c8KdQ3JbP5YCL6UUm7cOoUko4XBP2T+3W1X1+/Ja851QipqX2++xQAE3YD0PjfzZjfYvP32aNhaCacO4FH18FdCE+wgBoyhsq8o+9b8pN3cXE+mEMCy+zQp2w64hxzsb5LZvGmafwE5MXUI
+sidebar_class_name: "post api-method"
+info_path: eic/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete Delegate"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/deleteDelegate"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API is used to delete a specific delegate. 
+
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+Mandatory params: 
+
+`userName` - this is the user who is deleting the delegate,
+
+`key` - the is the delegatekey
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"path","in":"path","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/x-www-form-urlencoded"}
+    value={"application/x-www-form-urlencoded-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"key"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"27"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"userName"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"admin"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Delete Delegate
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Successful"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \"Successful\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Delete Delegate"}
+                  value={"Delete Delegate"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \"Successful\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

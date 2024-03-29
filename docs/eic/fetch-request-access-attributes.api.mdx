@@ -1,0 +1,438 @@
+---
+id: fetch-request-access-attributes
+title: "Fetch Request Access Attributes"
+description: "This method returns approval history details for a given 'RequestAccessKey'(provided in `requestaccesskey` parameter)"
+sidebar_label: "Fetch Request Access Attributes"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV0tv2zgQ/isETw0g+ZE6m0SLHhTFCYzGD9jyYoEkqGlpZLGRSJWk3KqG/vuClJzYiRM7xV4WW19MkfP4ZjgznFlhRRYSO7e402ghNwhASjSGbzlIhS3sE/kg6390CYrQROJ7C4cgA0EzRTnDDvZjKlEKKuYhEqBywSQiWSb4kiQoplJxUaCw4kYRF4igBV0CQ3e4VlUp/gzFHf6g+WgIIaIMzUR1Tsz5AxQzlBFBUlAgju7YHfNjQDM3VzEX9CfReGYozaVCMVkCml0AESBmKOJJwr9DiOYFmvn8Adisodn7hIXEwDNipXPHXqrEFuYZCCO9F2IHR6CCeAu5q5Sg81yBdlYt4IKHBXZWOOBMAVN6meaJohkRqhlxkdohUURvyyCG1KxUkQF2MJ9/hUD7PxNas6Ig9elzZBscUgnKFtjC8IOkWaK32i1cmp9GJDPOZCXluNXSf9tXeKVNWl/8Og62rIqBhCCMhEuiYCfuHSj6nFmo9Qdy8wU6brXP0PFH5+TcaXfQdd/HGtwExBLEofLcjAQx2B4vuIJmu9GuZSjb4/yBHozL8ybjK9sffu4OPkGndRrCGdgnZ6dgd04/zu3zzvG53emQ0/nJ6XkQttp/ohFR8aemUecLwmQEwu6ygIda9IFagzhnDxAaIX/bVzqS7aG5A3moiInb7w7HveveAJu73QgvkmUJDUycNr9Kfa+HxxYIwYXHQ3hbewuXFk7l4m0qmZsAivIEV9GXJ2qDgwhBCmxhqiCV+6G5njecDvzJF294M+0P3latFbq+P+5dTP3u9Xg4Hb2D/sa9uOm+g/7LwO3voa/BG8It1uHN5V/uzfRd6g5gWCR8QZhmu+xOvHFv5PeGe12m4+jx+3aHxzF+6dWtvdpzW3u1d7ZcsNsD22zrzdqUZ5Zol/zbCLuDy9GwN/DfBa99fii0IJeKp3VQF+32oVA9nmaEFciNIppQk9e70AcV2WtU++z4RSuOD7XC5zzZBVs93/8FoPelhSX9uVm0WJ7OQWwGeGczvk1F2ffaOSu8JEkOzwojbuG6+G1WuKcC9ztzfmfOfyZz1onTKddd4mNnLU0oM5LqmM+IivVbzZ7Wug+lAkLsKJGD9WrbUmot1VygmbkZKYwMBzf3NNHSdIUVklwk2MGxUpl0ms2VAkaYKhuSLGnBVJDwPGwEPG12vX6TZLS5PMEWXhJBybxO+IrlZdtb7+uBJiImhx/LRmnQSwhyQVUx0SZWsuZE0kCPHBsGa2y4doT+NjT6EZ6bAWQftSEyTSFlETeUVFXdXmUj6jIFIhNUAuqFwBRVBfK04cgd9dAYIhDAAsA7RzOPJwkEegfVw5VEKobHkYxH5lPmWcaFgrCe5apZTZ/sR/Gh2/OOtNdByErzSaPVMN2ivveUmGa0Dqn9w8aWERsj1P9g1KxjRMEP1cwSQk0vZzJgVefO7dsD6L2FY51qzi1ereZEwlQkZam3v+UgCuzc3j9lh8mvkEq9DrETkUTCG+7/MK5T/wi9BnXd47PCJKF5RXUBMvNqZYF5tqt50uivjrxKi+1rAU+su2ZmXWYrJm19pjbIX8xAWzVoNJzop2pej+Zp9axrwUau9bR0bu/LsvwHpRCIPQ==
+sidebar_class_name: "post api-method"
+info_path: eic/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Fetch Request Access Attributes"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/fetchRequestAccessAttributes"}
+>
+  
+</MethodEndpoint>
+
+
+
+This method returns approval history details for a given "RequestAccessKey"(provided in `requestaccesskey` parameter)
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+Mandatory params:
+`requestaccesskey`
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"path","in":"path","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"multipart/form-data"}
+    value={"multipart/form-data-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"requestaccesskey"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"10"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Fetch Request Access Attributes
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"successful"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                result
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object[]
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                              >
+                                Array [
+                              </div>
+                            </li><SchemaItem
+                              collapsible={false}
+                              name={"ACCOUNTS_COLUMN"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"ATTRIBUTEGROUP"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"ATTRIBUTELABLE"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"ATTRIBUTE_NAME"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"ACCOUNTNAME"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"ATTRIBUTE_OLDVALUE"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"ATTRIBUTE_VALUE"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"glogan"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"DESCRIPTION"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                              >
+                                ]
+                              </div>
+                            </li>
+                          </div>
+                        </details>
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"size"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":4}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \"successful\",\n  \"result\": [\n    {\n      \"ACCOUNTS_COLUMN\": \"\",\n      \"ATTRIBUTEGROUP\": \"\",\n      \"ATTRIBUTELABLE\": \"\",\n      \"ATTRIBUTE_NAME\": \"ACCOUNTNAME\",\n      \"ATTRIBUTE_OLDVALUE\": \"\",\n      \"ATTRIBUTE_VALUE\": \"glogan\",\n      \"DESCRIPTION\": \"\"\n    },\n    {\n      \"ACCOUNTS_COLUMN\": \"\",\n      \"ATTRIBUTEGROUP\": \"\",\n      \"ATTRIBUTELABLE\": \"\",\n      \"ATTRIBUTE_NAME\": \"ENDPOINT\",\n      \"ATTRIBUTE_OLDVALUE\": \"\",\n      \"ATTRIBUTE_VALUE\": \"19\",\n      \"DESCRIPTION\": \"\"\n    },\n    {\n      \"ACCOUNTS_COLUMN\": \"customproperty11\",\n      \"ATTRIBUTEGROUP\": \"\",\n      \"ATTRIBUTELABLE\": \"Company Affiliation\",\n      \"ATTRIBUTE_NAME\": \"companyAffiliation\",\n      \"ATTRIBUTE_OLDVALUE\": \"\",\n      \"ATTRIBUTE_VALUE\": \"\",\n      \"DESCRIPTION\": \"\"\n    },\n    {\n      \"ACCOUNTS_COLUMN\": \"customproperty12\",\n      \"ATTRIBUTEGROUP\": \"\",\n      \"ATTRIBUTELABLE\": \"Tool\",\n      \"ATTRIBUTE_NAME\": \"tool\",\n      \"ATTRIBUTE_OLDVALUE\": \"\",\n      \"ATTRIBUTE_VALUE\": \"\",\n      \"DESCRIPTION\": \"\"\n    }\n  ],\n  \"size\": 4\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Fetch Request Access Attributes"}
+                  value={"Fetch Request Access Attributes"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \"successful\",\n  \"result\": [\n    {\n      \"ACCOUNTS_COLUMN\": \"\",\n      \"ATTRIBUTEGROUP\": \"\",\n      \"ATTRIBUTELABLE\": \"\",\n      \"ATTRIBUTE_NAME\": \"ACCOUNTNAME\",\n      \"ATTRIBUTE_OLDVALUE\": \"\",\n      \"ATTRIBUTE_VALUE\": \"glogan\",\n      \"DESCRIPTION\": \"\"\n    },\n    {\n      \"ACCOUNTS_COLUMN\": \"\",\n      \"ATTRIBUTEGROUP\": \"\",\n      \"ATTRIBUTELABLE\": \"\",\n      \"ATTRIBUTE_NAME\": \"ENDPOINT\",\n      \"ATTRIBUTE_OLDVALUE\": \"\",\n      \"ATTRIBUTE_VALUE\": \"19\",\n      \"DESCRIPTION\": \"\"\n    },\n    {\n      \"ACCOUNTS_COLUMN\": \"customproperty11\",\n      \"ATTRIBUTEGROUP\": \"\",\n      \"ATTRIBUTELABLE\": \"Company Affiliation\",\n      \"ATTRIBUTE_NAME\": \"companyAffiliation\",\n      \"ATTRIBUTE_OLDVALUE\": \"\",\n      \"ATTRIBUTE_VALUE\": \"\",\n      \"DESCRIPTION\": \"\"\n    },\n    {\n      \"ACCOUNTS_COLUMN\": \"customproperty12\",\n      \"ATTRIBUTEGROUP\": \"\",\n      \"ATTRIBUTELABLE\": \"Tool\",\n      \"ATTRIBUTE_NAME\": \"tool\",\n      \"ATTRIBUTE_OLDVALUE\": \"\",\n      \"ATTRIBUTE_VALUE\": \"\",\n      \"DESCRIPTION\": \"\"\n    }\n  ],\n  \"size\": 4\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

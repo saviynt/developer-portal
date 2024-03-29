@@ -1,0 +1,423 @@
+---
+id: transport-status
+title: "Transport Status"
+description: "This API obtains the status of the transport request (import, export, or transfer), and helps in confirming whether the transport was completed successfully or failed."
+sidebar_label: "Transport Status"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV21P2zoU/itH/gQo6QuFMVLxgZVut/eKgWg3TQK0OslJ4zWxM9spdFX/+5XtpBQorJOmK11p/ZLGOT7n8fHxcx4viKYTRYJr0j5otGAkKVeFkJrceiRGFUlWaCY4CcgoZQpOLwcgQk0ZV6BTBKWpLhWIxL7pejZI/F6i0rDDcvPuAd67p5DOKkG56wHlMaSYFQoYh0jwhMmc8QncpahTlE+c3lEFkciLDDXGoMooQqWSMsvmxm1CWYZx44bf8L29j0Lj3l4AK9ASdSmfgRY8m4NOhcIasbGgGlI6QwgRORRSmDAYQ6kMNOOgz1PKI4wf0gUJUl1KtOFHKcL4tNSpkOwHNekbQ16qyuv4HVKJcgyJyDJxhzGEcxiPxBT52E4/pzymWsg5FFTSXAVmcCwKlJUvH5DrOjvzAm36n6e+Tnm9BeupB7jh44RlyGmOTzyuPBU0mtIJwg9WgLEFY2x2yuQcdhiPsjKuc9IwVnivkSsmuAtQQWHxeMf8ZRJjl3Lm6mW1JmCqgrn7CEu9lsEZTJAbY4whLmUdVJVhzpQJWJeg81JPJB5ZxRjEJCCrxQ1tDRCPVJbvRDwnwYJEgmvk2vylRZGxyM5tflPmDCyIilLMqflnEk8CIsJvGJk4hTSRNENlvtapXbNU2sAmHsF7amp4Hc1XGueMf91v7Xf8Vttvd762O/7+kX/Q2fk06u2a3JLl2lped+s2niyXy9WoBfVQrdXqgwWZ0azEx4h/DdYjVGuhbXSJqhBcufD7rZZ5PGGVJ5jAh3cZ5VO4etj6JmywGriN3vit71B4JEUao7TRezRK0e8JrqXINm7lhkwWks2oRmLW0hOcY1Rnf5vZU8TCpxmbOQdnxtOWU99L5kG7A39TDib90D4IOu2gfQwfzkfW2xC13xNiyrb22esNr977o4t/+h9POm/CiIZvEz+Kj9/4B8eHsU+PkmP/DT2gx+3joyTsvO3CZ5TmbJ20u3BJdXpyQ7r22ez+pXVxwbN594Z0YYhRKd0ah1qySPurPfHtN6bn24LM6b1PJ3jSPjzaP3jbanXB0QwOy/BM5Kbx2ECjisn8Po+EIaFtA0RpyacYWyefqdwa2KntNnUB+VV5+n9VFWbcfbFfkWt/NC/Qv7A1rrYNwIXiLEkqT+8lzX/ZxfD0vH9xNfgw+Fh5+TIc+pdS6F+r23YXchHjSZiJaOpo5DfRIkopZE/E67zIyzxEuQ6gvfRIriavgxzwGc1YvGoRl3SeCRoTN/dsnWRec3NVtyiIKOdCQ4gQGgL6OX1uoKpHjLq22Ha1oBdRPwf9KjJvE5iK9V6A0KohDJ1u2hTSCBfkMyYFz5E/CAAjvB7JLUfzGDdewuLY+T/B4jq+w1K1nRx1Kky7n6CtQapTEpDmqq9dOl8rDaBQzmybuF6QUmYkIKnWhQqazYVGTrleNhSdsTnXUSbKuBGJvNnvnTdpwZqzQ+KRGZWMhlWduCnPW101bnR1QstM23bp6nC5XN4aGI4rh+Y0OV8hVSwyUnKtig02A9pakcDZmLoPrbD8mbU1svtmTu/Vg/zp14fid4sBjzCeCIuJaUdULpvQN0qvkEwhDGLkmuk59EyKrWa/wgQl8gjJxrtIT2SZIzYj0mcsRifvY9SUZatLiSoLVyDgykJBIpy6/DmKnf6gt2v21zVCEpDDRqvRMksqhNI5texSZeqZvHqCek1c/rlM/blM/R8vUxWnaLzXzSKjjJuTYBlzUbHsNXmBZW89kgqljcViEVKFn2S2XJrh7yUaGXZ9+8Cj5m1Zy3dLy1OcGwm7pq8s7dre8lySLL16hpFthX7V9natYXzoj4hHwuoymNtuRSS9MxdFekcCckNuiKW5lTCz4wuSUT4p6cTYO7fm9y/jGhY4
+sidebar_class_name: "get api-method"
+info_path: eic/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Transport Status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/transportPackageStatus"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API obtains the status of the transport request (import, export, or transfer), and helps in confirming whether the transport was completed successfully or failed.
+
+**Note**: This API returns the status of only those requests that have been processed using the Enhanced Transport feature.
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+Mandatory params:
+
+`operation` - enter the type of transport request (export, import, or transfer)  
+`filename` - enter the transport package zip file name in full (including the .zip extension)  
+`requestid`(required only if the operation is import) - enter the request ID generated during the submission of the import request
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"filename"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"transport_admin_2023-01-13_13-27-43(UTC).zip"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"operation"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"export"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Transport Status - Blank Request ID / Transport Status - Import / Transport Status - Export
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Cache-Control
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Connection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Vary
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-XSS-Protection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":1}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Invalid request Payload"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msgDescription"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Requestid cannot be blank"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": 1,\n  \"msg\": \"Invalid request Payload\",\n  \"msgDescription\": \"Requestid cannot be blank\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Transport Status - Blank Request ID"}
+                  value={"Transport Status - Blank Request ID"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": 1,\n  \"msg\": \"Invalid request Payload\",\n  \"msgDescription\": \"Requestid cannot be blank\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Transport Status - Export"}
+                  value={"Transport Status - Export"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": 0,\n  \"msg\": \"Success\",\n  \"msgDescription\": \"The environment package was successfully exported.\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Transport Status - Import"}
+                  value={"Transport Status - Import"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": 0,\n  \"msg\": \"Success\",\n  \"msgDescription\": \"The environment package was successfully imported.\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

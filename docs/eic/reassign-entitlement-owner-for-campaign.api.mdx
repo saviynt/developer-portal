@@ -1,0 +1,590 @@
+---
+id: reassign-entitlement-owner-for-campaign
+title: "Reassign Entitlement Owner for Campaign"
+description: "This API reassigns Entitlement Owner for Campaign in SSM."
+sidebar_label: "Reassign Entitlement Owner for Campaign"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWFtP4zgU/iuWXwakhKYw0CUjHphOWbErLqJdaVaA1FPntPHUsTO2U8hU/e8rOykNTGm70r7sankhcc75bH/n3jm1MDE0vqedg4h0IcuBT6ShAe1Jy63ADKUlN08SNX0MaIKGaZ5briSN6SDlhpzfXhKNYIzTIz9pkbHSL7iES9LvXx08yAc5SJEMzwubKs1/gEMckqwwlqQwQzL8jKBRD8lYCaGeMCGjkgwHaopy6NWvQCZglS5JDhoyE7vFIas3kpDhkChNXlZ4MtzjYzJSNiWgkeRgDCbEpijJSoY8cSHICAlT0vAENSb7FTBqy8ec+YM20FHbKZYboCuBd3ElPlXUIQ79Aq4INH7lxrMN4tU9izwBi4VBXWmNCjGt1oZ7CY6hEJbMQBRIPlx/2H8RmYHgScX1e2JMZdXeNKAqR+2lLxMa06WRGyb2Fr5QemlfGlCN3ws09rNKShrPKVPSorTuEfJc1AS2vhnnQHNqWIoZuCdb5khjqkbfkFka0Fy73S1H476u7teQNVZzOaEBxWfIcuGWSroI6Oub7qCwsv9m4XbkpSuTbhE99qI1mZtll8RyOSFjrTIXUk676QoNBNAaShpQbjEz26lDacHucOCPJ3SxWDSW7l/pVgKPi4A2XHYzJGTApih/cHS3WbnsZi2TKT0B+eow/iJ3NU1bcowT9T791m+oI+2tb/jFpv2dkRs2doZs2nG9sd7aai11b5hr0vOanSYFngWNJlfSVDQcRpH79zoTv3BzvgqyddwENEVIUHukc8bQmLCrpNVKhOcu0YZdjYm7DAizNkDXWMzqAqk751rAG80nfH2wr8FKrc3jVksoBiJVxnrcLrAUl7C7IuXK2JClyKZnUUByjcsXD/mlTiW7IF1oHpB2h/xWCHIYHUbk8Cg+7MTHh+TXq4FH6z3nXOPOhPULGZAOuYKStE9Pj0n7MI6iOIpe8G41TCqQXeCkCpljyKve4Ri1Rh3eKsFZuSuGgQxDVZnKwfRRz6pI3UX7PK8tVCqLrfZBu8awYVepKd+Z6W63f3cRDm5+712fHePJSTs5wbDTYUfhxyNohzA6/Rh2TsfH+EtnhKPO6SdyCzY9a1XbWc2ZDQcapMmVtmEfWaG53ZmDDJ5DmODZUfv46CSKok+ESyaKBPvFKFEZcGn8Rn6HMeqwJ5lKHMqOG7C0kFNMPMhX788obTgocwyrKr+zB0llJB+Pa6QL7az3NyG+9K7/rPW/9vvhrVYW2bJg7gLQ/kQyleDZSCg2rdL1P1TtUWulmUq21BdfjTMz2eLZhc9KG+rJlpzZrCeNk1FXJ/zuzS2qhO1bNbQ+z97PqesXXUYCm7q6LVfPrlviGhMauyQavMv7wpWPDG2qkjq1OdIcRkxbjcbMH3958nPGetIJGh/M1VkKLeo0a+JWa25RgrSLAwMzXkrLhCqSA6ayVq971YKct2au/s1AcxjVvFUqP9eget0NCb6zpPGLFRb+/KaOx767ZN3XgeHMDQGNK7uz0ZoK9+5lfF/nR4Jt0l7IO7Zzu7tVO9pbusS/vi1wPjRWngSH7ipKZT7XGqHONTdILn0ZtyXpOpv6Mc3XBpQM6dpJrquEqFIAybWa8QSNG2JIgha4MESN/aspcpdeMSGVQxofLu7L9lPs9S67+86hUJtq5+OD6MAHsnPqDHy41fGya8P35jKNoeP/CfU/PqHWScDis23lArgPDp/i5nV6vKdb0uNjQH2jGd/T+XwEBv/QYrFwy98L1CWN7x9XCdDHcMKNe05oPAZhcIP77d3V+X2fvHfY5VAnS59nfZ2hNKBVivB38FNX1bf7/atPzfahofpT3V0ESw3Xnud2o2yzytze9AcuNdaTfFZVPQ1Prm7BE43pA32g/meCl8bDr8+pADkpYOLkK1z39xeSl2m+
+sidebar_class_name: "post api-method"
+info_path: eic/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Reassign Entitlement Owner for Campaign"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/reassignEntOwnerCampaignAccEnt"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API reassigns Entitlement Owner for Campaign in SSM.
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+Mandatory params:
+
+`campaignname` or `campaignid`(if both are passed then campaignid will be considered)
+
+`certificationname` or `certkey`(if both are passed then certkey will be considered)
+
+`newassignee`
+
+`entitlements`
+
+Optional params:
+
+`updateuser`
+
+`bulkupdate`(default value 'N')
+
+`bulkvalidation`(default value 'N')
+
+`comments`
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"path","in":"path","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"bulkupdate"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"y"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"bulkvalidation"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"y"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"campaignid"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"10"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"certkey"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"15"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"comments"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"reassigning from API"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={true}
+          className={"schemaItem"}
+        >
+          <details
+            style={{}}
+            className={"openapi-markdown__details"}
+          >
+            <summary
+              style={{}}
+            >
+              <span
+                className={"openapi-schema__container"}
+              >
+                <strong
+                  className={"openapi-schema__property"}
+                >
+                  entitlements
+                </strong><span
+                  className={"openapi-schema__name"}
+                >
+                   object[]
+                </span>
+              </span>
+            </summary><div
+              style={{"marginLeft":"1rem"}}
+            >
+              <li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                >
+                  Array [
+                </div>
+              </li><SchemaItem
+                collapsible={false}
+                name={"entattkey"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"146"}}
+              >
+                
+              </SchemaItem><li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                >
+                  ]
+                </div>
+              </li>
+            </div>
+          </details>
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"newassignee"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"amackenzie"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"updateuser"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"smorgan"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Reassign Application Owner for Campaign
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Credentials
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Origin
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Cache-Control
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Expires
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Pragma
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Referrer-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-XSS-Protection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorcode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"success"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorcode\": \"0\",\n  \"msg\": \"success\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Reassign Application Owner for Campaign"}
+                  value={"Reassign Application Owner for Campaign"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorcode\": \"0\",\n  \"msg\": \"success\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

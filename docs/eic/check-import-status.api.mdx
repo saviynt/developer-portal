@@ -1,0 +1,292 @@
+---
+id: check-import-status
+title: "Check Import Status"
+description: "This API is used to check the status of data import job."
+sidebar_label: "Check Import Status"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVVdtu2zgQ/ZXBPLWAbMtO0mZV9MHruoWxmwtiFyiQBvBIGkdMJFIlR956Df37gpTbXOomeV3AgGRqLmcu53CLQtcOk0scxv0YJqaqjIbPokolih1eRZizy6yqRRmNCS4K5WB8PgPloHGcgxjICs5uQQoGJySNA7OCnIRAVbWxAjcm7cNX/VWfGuEEpCAB/wNRFUdgdLkBo/meOWSkIWWwje57x0XBsBw3Uhir/iUPZQlV4wQKWjMs/2SybJewMmVp/uEc0g0sF+aW9bJLCzVZqhxGaGq2IcAsxwQD8llIOw/QMULLrjbascNki6M49o+HPZiEejs3+OlXMOVsg9cHEvZPlxVckX+TTc2YoBOr9DVGyN+pqksODW0iiEcwbq5hFA+PYRQnh8fJwQg+nSywbSOcs12zfWm8cU1Zwb2J2RjhwbA/3MWQ3sSYW/ViXJPJ/OJjb3H21/T0/dFqlMbx4ZveQZ4Oe4dHh3/0KB0e9NI3bw/eUkbpMdE7OCcp3g9CuoUl7VZse1OdmdyHfmHWrGj0LechyJfeR0sV985C391LQ8zHJ9Ozi9mn2Sm2PkxmtLAW70R1XaosjH9w4/ws94Q06Q1nghHW1i9LoEGyRbbW2InJ+ensMbZRZ3vCztH1M+beWt3fv6dncnZy/vd0Mf3QVbb7EJz27WSyxTWVDT+CjzE+hoj4GMbDXG3IF0jEEpb8couaKu9akxTeXd+9W/7WKMs5JmIbjn47tra9irBiKYwnY21caLuPkeBgHzddoEKXvrElJliI1C4ZDLbCmrS0fUdrtdGSlabJ+5mpBtPJyYBqNVgfYYRrsorSXc86l1/5vTv30reiphRMfs6gDZAdZ41Vspn7urpYKTmVeYW6V6XHhrvq/f9g4yeeBr16zjoYBSYovTLBUkm34l2NMNXCtrbKMcxy1qJkAxNfeFDoC16xZZ0x7hXxiSlLzvwJ1NasVc4uaHjOQqoMIh4kvan9CDiHblAOVsaGL8+jeDWdTV77rrN1XeajftwPFPHDrigwcLdH+1X1AfDtHZn/9xfRburC32VQl6S070rY6e2OApd7rqerCAtPk+QSt9uUHH+2Zdv6428N2w0ml1d3Sx5okivn33NMVlQ6fqKjry52tH0Nv8O3OyS9CVwK2uK145Y3P9jfXrU/7sKQv/s0zjKu5Z7TL1L8QArOz+b+7vsPqUHwwQ==
+sidebar_class_name: "post api-method"
+info_path: eic/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Check Import Status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/checkImportStatus"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API is used to check the status of data import job. 
+
+Note: that at a time, only one import job can be run.
+
+The `Authorization` must have `Bearer` followed by `Token`
+
+No params
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"path","in":"path","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Check Import Status
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"errorMessage"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":""}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"importStatus"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"COMPLETED"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"errorMessage\": \"\",\n  \"importStatus\": \"COMPLETED\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Check Import Status"}
+                  value={"Check Import Status"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"errorMessage\": \"\",\n  \"importStatus\": \"COMPLETED\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      
