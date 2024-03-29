@@ -4,8 +4,8 @@
   <ShortName>Saviynt Developer Portal</ShortName>
   <Description>Search Saviynt Developer Portal</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://saviynt.github.io/developer.saviynt.com/img/favicon.ico</Image>
-  <Url type="text/html" method="get" template="https://saviynt.github.io/developer.saviynt.com/search?q={searchTerms}"/>
-  <Url type="application/opensearchdescription+xml" rel="self" template="https://saviynt.github.io/developer.saviynt.com/opensearch.xml" />
-  <moz:SearchForm>https://saviynt.github.io/developer.saviynt.com/</moz:SearchForm>
+  <Image width="16" height="16" type="image/x-icon">https://saviynt.github.io/developer/img/favicon.ico</Image>
+  <Url type="text/html" method="get" template="https://saviynt.github.io/developer/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://saviynt.github.io/developer/opensearch.xml" />
+  <moz:SearchForm>https://saviynt.github.io/developer/</moz:SearchForm>
 </OpenSearchDescription>
