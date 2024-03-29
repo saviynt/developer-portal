@@ -9,7 +9,7 @@ const config: Config = {
   title: "Saviynt Developer Portal",
   tagline: "OpenAPI plugin for generating API reference docs in Docusaurus v2",
   url: "https://saviynt.github.io",
-  baseUrl: "/docs",
+  baseUrl: "/developer.saviynt.com",
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
