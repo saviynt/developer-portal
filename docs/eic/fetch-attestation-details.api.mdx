@@ -1,0 +1,522 @@
+---
+id: fetch-attestation-details
+title: "Fetch Attestation Details"
+description: "This API call can be used to fetch Attestation details for a particular attestation from SSM."
+sidebar_label: "Fetch Attestation Details"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV9tu2zgQ/RWCTy0g32K3TbXog+smhbFwEsRe7BZuAI+pUcRaIlVy5NY1/O8LUnIsN/HlfTeAEZKa+5kZDtec4NHycMr7RGgJSGpl+UPAI7TCyNztecgnibSsfzdkAtKUCVBsjqywGDHSLEYSCasJYBESyNSyWBsGLAdDUhQpGAY1otjojI3Ho+ZX81W53yRBNusXlGgjf3maGcsKSyyBJbLZRwSDZsZinab6B0ZsvmKziV6gmjXZVsYIVASkzcpphcyG7OnTrLBobiDDGWswcg5JyyhBJtCQjCUa55FRkGGwY5LR7+R1H2TEA65zNH47jHjIfTRqwfhUxoIH3OD3Ai191NGKh2sutCJU5JZZkZJ0YWrF2mSNCAjcsRUJZn5Fqxx5yPX8GwriAc+NU0oSrfsqoxqNJSPVIw84/oQsT91R9+0l3wR86/9x4mgOMsUV3/g/Z7XNtbKlpot22/3bT47rZ/jvfE4QIjSe9xMQvujVC0aMtApY+y3rF4/sot25ZJ1e2OuE7Uv2eTThzqwxmiWac+X1cxAJNgZ6pQlbnWankkGNgdYLebZdg8H4/roxuf3z6ubDRRu7l+97nUbn3fu40Ztj3IDeW2i8i7vveuIixvbF+z/YHVDyoeXVTQwoG6NpXCmhIyf6TK0iKdQCIy/kn8a1gQwbt3lZqmeKGPdHV7f3w8/DG+5RrSUf5HkqhQeu9c06RM/PvFotVDVf4wFjYMUDLgkze1rWtgxPJPNAuwW5cAQ7HkjT42x/a7Ow7FobNkLPqbMMFdnjXJ4y7xwnGt6VZBfnyOqeSFRBcglb7/LecWoX/JLwzYmgOapYGkvqZAMYJ6AkOIYUzqEfgfle4C/HQJog7Quhi/3IqiKbo6lzdV0/yiMgdF3puAIQWi+2Dey0PTbbGuQS/el8updhtTT6PYv2U6WeKZxX2eAgrxAvz7p70FXIlfBU6PAB30NgG+Z6lJ9C+SyS3f1oVSGpR6Tm9kOZ3t6946H6UlZCUTaCg2B1XByN0WagoxMS2z5vtFicKuMbR5jZxxNYFkKgtXGR7qHpc+vwtROu+RLSAg91qP9QKtQzgX/hT2h39hDlbb5Djd/wCpnfwl/OA36uQvKX+nTNK5U5UOJavdqt3bgjjZNIpsDg4DW1cVZmSIl2ynPtA+VlhLx1eJqyfgAojSiMAyshym3Yaq0JFSjaNC0s5UqRSHURNYXOWleDUQty2Vq+4QFfgpEwr5KpZHk+21Tnbh6OoUiJh0/ZufGGWxSFkbQaO+9KWXOwUrg5tuars41XMXB7T+NKYO6n2lPUnsjf/1LF2lNKKrt16SO7UoQmN9IiG0aoSNKKDZzjfmy/xxgNKoH8xcl+oNMUha+h3OiljLAcdbdzvI791hZ5rg1hxEq4ygHffTltxaur4eC1izoaW2p+02w3fbtwkGfg544qm45NlHvm16bo/98ox94oVWIR/qRWnoJU/j41fmgqa2168OXyEPDEVWU45ev1HCz+ZdLNxh1/L9CseDh92FWTr8dIWreOeBhDavEIaK/uqy7xmh2ycjtNqpUvWt/XXatd4GrbbPyVVz41vP7y06DU0pg4ATvWlx5bm2DL1BcCc6qRPxuP99rV3e14wgM+r950WdlOnWAvN9gtw+nDZrP5F/gNQrI=
+sidebar_class_name: "post api-method"
+info_path: eic/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Fetch Attestation Details"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/fetchAttestationDetails"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API call can be used to fetch Attestation details for a particular attestation from SSM.
+
+The `Authorization` must have `Bearer` followed by `Token`. 
+
+Mandatory params:  
+
+`userName` - this is the certifier username, 
+
+`id` - this is the attestation id
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"path","in":"path","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"multipart/form-data"}
+    value={"multipart/form-data-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"id"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"368"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"userName"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"dbailey"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Fetch Attestation Details
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                attestationdetails
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object[]
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                              >
+                                Array [
+                              </div>
+                            </li><SchemaItem
+                              collapsible={false}
+                              name={"certified"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Completed"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"certifiedall"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Works For Me"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"comments"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"cp1"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"IP"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"cp2"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"cp3"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Activated"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"cp4"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"test"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"cp5"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"C"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"firstname"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Shania"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"lastname"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Marquez"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"totalAccounts"}
+                              required={false}
+                              schemaName={"number"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"number","example":3}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"updateuser"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"acook"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"username"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"smarquez"}}
+                            >
+                              
+                            </SchemaItem><li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                              >
+                                ]
+                              </div>
+                            </li>
+                          </div>
+                        </details>
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"complete"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Y"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"count"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":1}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"locked"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"N"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"successful"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"attestationdetails\": [\n    {\n      \"certified\": \"Completed\",\n      \"certifiedall\": \"Works For Me\",\n      \"comments\": \"\",\n      \"cp1\": \"IP\",\n      \"cp2\": \"\",\n      \"cp3\": \"Activated\",\n      \"cp4\": \"test\",\n      \"cp5\": \"C\",\n      \"firstname\": \"Shania\",\n      \"lastname\": \"Marquez\",\n      \"totalAccounts\": 3,\n      \"updateuser\": \"acook\",\n      \"username\": \"smarquez\"\n    }\n  ],\n  \"complete\": \"Y\",\n  \"count\": 1,\n  \"errorCode\": \"0\",\n  \"locked\": \"N\",\n  \"msg\": \"successful\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Fetch Attestation Details"}
+                  value={"Fetch Attestation Details"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"attestationdetails\": [\n    {\n      \"certified\": \"Completed\",\n      \"certifiedall\": \"Works For Me\",\n      \"comments\": \"\",\n      \"cp1\": \"IP\",\n      \"cp2\": \"\",\n      \"cp3\": \"Activated\",\n      \"cp4\": \"test\",\n      \"cp5\": \"C\",\n      \"firstname\": \"Shania\",\n      \"lastname\": \"Marquez\",\n      \"totalAccounts\": 3,\n      \"updateuser\": \"acook\",\n      \"username\": \"smarquez\"\n    }\n  ],\n  \"complete\": \"Y\",\n  \"count\": 1,\n  \"errorCode\": \"0\",\n  \"locked\": \"N\",\n  \"msg\": \"successful\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

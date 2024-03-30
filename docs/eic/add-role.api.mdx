@@ -1,0 +1,342 @@
+---
+id: add-role
+title: "Add Role"
+description: "This API adds role to user."
+sidebar_label: "Add Role"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVk1v2zgQ/SvEnFpA8lebpNGiB9d1CmOROnC82AWcAB6L44iJRLIk5VQ19N8XpGTHQdMkBfawvpgacd6bGc48agsObywkC5ipnCxcR8DJpkZoJ5SEBOaZsGx4MWHIuWVG5cScYqUl07mSV3KeEVsOS5cpI36g91myorSOZbghtvxEaMgs2VrlubonzlYVW87VHcllcD9HydEpUzGNBgubeOPSo0ssaBldyaWnDA8QgdJkAsmEQwLIuQ8aIjD0rSTrPileQbKFVElH0vklap2LNPh0b63PaAs2zahAv3KVJkhArW4pdRCBNp7BCbL+7Y75YKd1RsgbiIC+Y6FzbzoThtiZuMkcGagj2AX/vNetyiRXBHVd782BdMg5C1klW9hgXtLjSB7THbIdQgZUQ1YraRvYQa/n/x6f7Z4rgoyQkwlbP6OjJ8v0RBp/E4/Y4D2bpo4Nev0PbNBP+idJ75R9OZ+Dj+KSzIbMa/GGGtOM4pGqlKNuv9NvMVw8UupOvDqu0ehydhbPp3+Ov348RVzx1SnFg8Eqjd/zwUl8SvwoHgyOj/vE0wG++/AHu0CXfewGurlBaddk4rFMFffQr2RNs1LeEQ8g/8SjpgvjeaUpnoaa29ciSWWlWK9bpDODxW9DXA7Px9PZ5Mvka9Nk/9FQFGQt3rzQ3WyO9s6y1BA64h02+WyThB2fvDs9OWKv7Pk90ctoTb8HBSEXunixhXYqNLoMIhDyYe3VQhjikDhTUvTLatb1dQQFuUx5tdHKhmp4jAS6yLlpRseGDm9IS5NDAplz2ibd7taRROnqjsWNqKRLc1XyTqqK7nh03kUtupsjiGCDRuCqrUXj8vOstnYvz2sscwfJvt51CNRSWhrhqkufTYO1QitSL84HufnYoM3ZP4c9XrdWQapf2h02hbb0jTN70N3x7vB/V6382axV4BSu6dymWmwsHRlthCU24SSdcBUb+RKG+2hGazIkU4Inr6yRynNKvYVpozaCk2UuI8bJocgtU+vwaEutlXHEWXPQlq2VCW9ejuLNeDJ668+PjG2Yjzq9Ts+n5JulwDBYbb4HWvso2oPb6v9117Yd4Oi76+ochQyXm+/vbTsEC9gNwXUEmR+PZAHb7Qot/WXyuvbmbyWZCpLF9UObh0Hhwvo1h2SNuaVnivJm1o7rW/arqFojyipMUxAQgAjuqNpNfX1d7y65wN+8OpToA9ef9LGOdh7DNCXtnt17KBoX08s5RLBqP0wKxb2PwXsvQ3gPCVzBFYQvm724B/sWcpQ3ZSOADa7//QvgFk4x
+sidebar_class_name: "post api-method"
+info_path: eic/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add Role"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/addrole"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API adds role to user.
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+Mandatory params:
+
+`username`,
+`rolename`
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"path","in":"path","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"rolename"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"Fire Fighter"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"username"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"johndoe"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Add Role
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":" Tasks created. IDs:: 673975 "}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"message\": \" Tasks created. IDs:: 673975 \"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Add Role"}
+                  value={"Add Role"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"message\": \" Tasks created. IDs:: 673975 \"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

@@ -28408,7 +28408,7 @@ paths:
   /createUserRequest:
     post:
       tags:
-        - Access Request
+        - User Request
       summary: Create User Request
       description: >-
         This API call can be used for creating update/create user request in the
@@ -28630,7 +28630,7 @@ paths:
   /updateUserRequest:
     put:
       tags:
-        - Access Request
+        - User Request
       summary: Update User Request
       description: |-
         This API call can be used for updating user request in the EIC.
@@ -28797,7 +28797,7 @@ paths:
   /getrequestableusers:
     get:
       tags:
-        - Access Request
+        - User Request
       summary: Get Requestable Users
       description: |-
         This API fetches the list of user for whom the requestor can request.
@@ -29083,7 +29083,7 @@ paths:
   /createEnterpriseRoleRequest:
     post:
       tags:
-        - Access Request
+        - Role Request
       summary: Create Role Request
       description: >-
         This API call can be used for creating a new role and assigning an owner
@@ -29330,7 +29330,7 @@ paths:
   /updateEnterpriseRoleRequest:
     post:
       tags:
-        - Access Request
+        - Role Request
       summary: Update Role Request
       description: >-
         This API call can be used to update the enterprise role that was already
@@ -30318,7 +30318,7 @@ paths:
   /createOrganizationRequest:
     post:
       tags:
-        - Access Request
+        - Organization Request
       summary: Create Organization Request
       description: "This API call can be used to create new organization requests.\r\nThe Create Organization request is shown in Request History.\r\n\r\nThe `Authorization` must have `Bearer` followed by `Token`. \r\n\r\nMandatory params:\r\n`organizationname`\r\n\r\nOptional params:\r\n\r\n`comments`, `organizationname`, `username`, `description`, `primarycontact`, `comments`, `customproperty(1..28)`, `organizationtype`(data security/grouping/request rules/company), `parentorganization`(organization name), `startdate`(MM-dd-yyyy format), `enddate`(MM-dd-yyyy format),\r\n\r\n\r\n`endpoints` - \r\n\r\n1. `endpointname`\r\n2. `cp(1..5)`\r\n\r\n`roles` - \r\n1. `rolename`\r\n\r\n`rules` - \r\n1. `name`\r\n2. `type`\r\n\r\n`entitlements` -\r\n1. `entitlementvalue`\r\n2. `entitlementtype`\r\n3. `endpoint`\r\n\r\n`owners` -\r\n1. `owner`\r\n2. `rank`\r\n3. `policy`(can be SUPERADMIN/ADMIN/BULKADMIN/READONLY)\r\n\r\n`attributes` -\r\n1. `attributegroupname`\r\n2. `attributes`\r\n3. `value`\r\n4. `attributevalues`\r\n\r\n`dynamicattrsvalidation`(can be true/false, default : true) - If true, dynamic attributes will be validated based on the conditions defined."
       operationId: createOrganizationRequest
@@ -30634,7 +30634,7 @@ paths:
   /updateOrganizationRequest:
     put:
       tags:
-        - Access Request
+        - Organization Request
       summary: Update Organization Request
       description: >-
         This API call can be used to create update organization requests.
@@ -31398,7 +31398,7 @@ paths:
   /fetchRequestHistory:
     post:
       tags:
-        - Access Request
+        - Request History
       summary: Fetch Request History (my pending requests)
       description: >-
         This API call can be used to fetch the request history of all the
@@ -31688,7 +31688,7 @@ paths:
   /fetchRequestHistoryDetails:
     post:
       tags:
-        - Access Request
+        - Request History
       summary: Fetch Request History Details
       description: "This API call can be used to fetch the request history details of a request.\r\n\r\nThe `Authorization` must have `Bearer` followed by `Token`. \r\n\r\nMandatory params:\r\n`requestkey`\r\n\r\nOptional params:\r\n`taskmetadatalength` - Modifies the character limit of provisioning comments and provisioning metadata upto maximum of 10000.\r\n`hideblankapprovername` - If true, prevents printing the firstname/lastname if null in the \"State\" field(Default : false)\r\n \r\n***Note*** - Provisioning comments in the response will be limited to 200 characters. Provisioning metadata in the response will be limited to 400 characters."
       operationId: fetchRequestHistoryDetails
@@ -59949,6 +59949,13 @@ tags:
   - name: Transport
   - name: Provisioning Policies
 x-tagGroups:
+  - name: Request Collection
+    tags:
+      - Access Request
+      - User Request
+      - Role Request
+      - Request History
+      - Request Approval
   - name: Applications Collection
     tags:
       - Endpoints

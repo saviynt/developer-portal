@@ -1,0 +1,384 @@
+---
+id: create-entitlement-type
+title: "Create Entitlement Type"
+description: "This API creates Entitlement Type in SSM."
+sidebar_label: "Create Entitlement Type"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVlFv4zYM/isCn+4AO4kP7dJ6uwG5LHcIhrRFk2ED2gJRZDrW1ZZ0kpyeF/i/D5Kd1m2Tthv2MmB5iUyJFPmJ/MgtWLo2EF/BRCRKcmEN3ASQoGGaK8ulgBgWGTdkdDElTCO1aMhEWG5zLFBYsqgUEi7IfD7rXYtrsciQLEelzaTmf1JnYUmK0liS0Q2S5SekGvWSpDLP5R0mZFWR5ULeolh69RkVCbVSV0RRTQsTO+ESHy4UtMBl4GWNw17gTp17f2l+SLMTlDfASmNlobRUqG3109nPSxKSx0ISESvJsTt9J/Vtmsu7JQTgNn1o0wRiaFDpYOIggQA0fivR2E8yqSDeApPCorBuSZXKOfMW+l+Nw3gLhmVYULeyTj0GufqKzEIArTMcjTfzyMGoo2Cs5mINAeB3WqjciZiKoA6gC9XLCrssaNX2YfeygQM6j6297odFYyfCnjjFHfIva8z9YkYFXaMeKaXlhuZQ1/X9IQ/f2D/Wswx2Wxual7gXYo/jUxg7WB2G6tDGHjgeYu6GfDguH5pGo6QwTWwfBgP399iBQwEHkCFNUHvNX6jFvUm4B+jfMQlINCTnzJIPg+iERMM4Oo6jY/JltgDn1Bz1BvVb7Y0UZRmGY1lJi/2oF7U2bDiW8pa/2a/xeH75OVyc/zo5+3h6ejpMWToMMUqH4VE0HIQnySoKWfIDW+HJ0RFNhj+SC2qzj31/3UJTYVLU4UQwmTjTb7yVZaW4xcQb+SMcNzUeOoTDho/MWy0JaQRP09bSZ02Lv21iPppNzi+nX6ZnTeL/S5SDWks9lskrNTtwxVqY9Ss+loyhMf+sMjuewADa27omm6rwDQCtT+6rLbT1pajNIAAuHtaOornGBGKrSwwOglzXNwEUaDPpCF9J40FyNmLoH+J/48ugcaHUOcSQWatM3O9vLQoqbN0zdMMrYVkuy6THZNGfjGd9qnh/cwwBbKjmdNXC06g8r+9W7np2SsvcOs5pwa692wZZqbmt5i62xtaKGs5cj+5E6nyDFgH37c+4F135jv3aaX/I567LrsuH1jfZvfx/g1ddfqTSR+rM+IP+jVxiolaaGyTTxN9SkbF7OD8aXWKKGgVD2Ds9jWWeI3MS4m7iCRpiMyQJWspzQ2TqP02plNQWE9IkmyGp1H7ndS/eTabj9y5rUJvm5uPeoOeL0iVsQX3Nt5gc7gpPOv09hfw/BT6dAttSsPjd9lVOuZ9yfKFvW264OjAb3gSQOQ6Jr2C7XVGDv+m8rp34W4m6gvjq5qH6PX8k3Lh1AnFKc4MvPNO7y5bT3pNDPrZCKipPMp5bAQK4xWpHjfVNvRsQ/P3NVre9dVSf9ZY62GmMGENlXzzbZdaL8/kCAli1I3PRML2md46rqSvba7gGP4HfN0Yv30JOxbqka3e+set+fwEKAIZz
+sidebar_class_name: "post api-method"
+info_path: eic/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create Entitlement Type"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/createEntitlementType"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API creates Entitlement Type in SSM.
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+Mandatory params:
+
+`entitlementname`,
+`endpointname`
+
+Optional params:
+
+`entitlementdescription`,
+`customproperty<N>` - customproperty 1 to 5,
+`workflow`
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"path","in":"path","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"customproperty1"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"cp1"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"endpointname"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"Endpoint1"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"entitlementdescription"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"entitlementdescription"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"entitlementname"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"testEnt8"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"workflow"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"SampleManagerApproval"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Create Entitlement Type
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Success"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \"Success\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Create Entitlement Type"}
+                  value={"Create Entitlement Type"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \"Success\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      
