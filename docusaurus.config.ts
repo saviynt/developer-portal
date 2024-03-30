@@ -192,7 +192,7 @@ const config: Config = {
             specPath: "static/api-specs/saviynt-eic-api.v3.yaml",
             outputDir: "docs/eic",
             sidebarOptions: {
-              groupPathsBy: "tag",
+              groupPathsBy: "tagGroup",
               categoryLinkSource: "tag",
             },
           },
