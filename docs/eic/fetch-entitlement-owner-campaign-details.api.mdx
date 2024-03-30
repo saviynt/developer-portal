@@ -1,0 +1,1071 @@
+---
+id: fetch-entitlement-owner-campaign-details
+title: "Fetch Entitlement Owner Campaign Details"
+description: "This API return details of a particular Entitlement Owner campaign in SSM."
+sidebar_label: "Fetch Entitlement Owner Campaign Details"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: eic/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Fetch Entitlement Owner Campaign Details"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/fetchEntOwnerCampaignDetails"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API return details of a particular Entitlement Owner campaign in SSM.
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+Mandatory params:
+
+`campaignId`
+
+Optional params:
+
+`max`
+
+`offset`
+
+`entitlementmax`
+
+`entitlementoffset`
+
+`certkey`
+
+`verifier`
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"path","in":"path","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"campaignId"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"10"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Fetch Entitlement Owner Campaign Details - SUCCESS
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Credentials
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Origin
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Cache-Control
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Expires
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Pragma
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Referrer-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-XSS-Protection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                campaignDetails
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object[]
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                              >
+                                Array [
+                              </div>
+                            </li><SchemaItem
+                              collapsible={false}
+                              name={"certificationame"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"testent_test - lmcneil (Logan McNeil)"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"certifier"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"lmcneil"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"certkey"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"6"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={true}
+                              className={"schemaItem"}
+                            >
+                              <details
+                                style={{}}
+                                className={"openapi-markdown__details"}
+                              >
+                                <summary
+                                  style={{}}
+                                >
+                                  <span
+                                    className={"openapi-schema__container"}
+                                  >
+                                    <strong
+                                      className={"openapi-schema__property"}
+                                    >
+                                      entitlement
+                                    </strong><span
+                                      className={"openapi-schema__name"}
+                                    >
+                                       object[]
+                                    </span>
+                                  </span>
+                                </summary><div
+                                  style={{"marginLeft":"1rem"}}
+                                >
+                                  <li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                                    >
+                                      Array [
+                                    </div>
+                                  </li><SchemaItem
+                                    collapsible={false}
+                                    name={"certfied"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"APPROVED"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"consulted"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"no"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"endpoint"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Workday"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"entitlement_value"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"1099 System (1099_System)"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"totalaccount"}
+                                    required={false}
+                                    schemaName={"number"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"number","example":0}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"totalentitlement2"}
+                                    required={false}
+                                    schemaName={"number"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"number","example":0}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"updateuser"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"admin"}}
+                                  >
+                                    
+                                  </SchemaItem><li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                                    >
+                                      ]
+                                    </div>
+                                  </li>
+                                </div>
+                              </details>
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"entitlementdisplaycount"}
+                              required={false}
+                              schemaName={"number"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"number","example":1}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"progress"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"100%"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"status"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Completed"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"totalentitlement"}
+                              required={false}
+                              schemaName={"number"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"number","example":1}}
+                            >
+                              
+                            </SchemaItem><li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                              >
+                                ]
+                              </div>
+                            </li>
+                          </div>
+                        </details>
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"campaignId"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"10"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"complete"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"No"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"displayCount"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":12}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"successful"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"totalCompleteCertification"}
+                        required={false}
+                        schemaName={"string[]"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"array","items":{"type":"string","example":"testent_test - lmcneil (Logan McNeil)"},"example":["testent_test - lmcneil (Logan McNeil)","testent_test - kkrishnan (Kshama Krishnan)-Reassigned-2020-07-15-234436","testent_test - bkaplan (Brian Kaplan)-Reassigned-2020-07-20-191707"]}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"totalCount"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":12}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"campaignDetails\": [\n    {\n      \"certificationame\": \"testent_test - lmcneil (Logan McNeil)\",\n      \"certifier\": \"lmcneil\",\n      \"certkey\": \"6\",\n      \"entitlement\": [\n        {\n          \"certfied\": \"APPROVED\",\n          \"consulted\": \"no\",\n          \"endpoint\": \"Workday\",\n          \"entitlement_value\": \"1099 System (1099_System)\",\n          \"totalaccount\": 0,\n          \"totalentitlement2\": 0,\n          \"updateuser\": \"admin\"\n        }\n      ],\n      \"entitlementdisplaycount\": 1,\n      \"progress\": \"100%\",\n      \"status\": \"Completed\",\n      \"totalentitlement\": 1\n    },\n    {\n      \"certificationame\": \"testent_test - kkrishnan (Kshama Krishnan)-Reassigned-2020-07-15-234436\",\n      \"certifier\": \"kkrishnan\",\n      \"certkey\": \"7\",\n      \"entitlement\": [\n        {\n          \"certfied\": \"APPROVED\",\n          \"comment\": \"[07/15/20-adminfname adminlname(admin)]<br> reassigning from API[07/16/20-Steve Morgan(smorgan)] approveComment\",\n          \"consulted\": \"no\",\n          \"endpoint\": \"Workday\",\n          \"entitlement_value\": \"Report Writer (Report_Writer)\",\n          \"totalaccount\": 0,\n          \"totalentitlement2\": 0,\n          \"updateuser\": \"smorgan\"\n        }\n      ],\n      \"entitlementdisplaycount\": 1,\n      \"progress\": \"100%\",\n      \"status\": \"Completed\",\n      \"totalentitlement\": 1\n    },\n    {\n      \"certificationame\": \"testent_test - mreddy (Mahesh Reddy)-Reassigned-2020-07-16-170550\",\n      \"certifier\": \"mreddy\",\n      \"certkey\": \"8\",\n      \"entitlementdisplaycount\": 0,\n      \"progress\": \"100%\",\n      \"status\": \"Fully Executed\",\n      \"totalentitlement\": 0\n    },\n    {\n      \"certificationame\": \"testent_test - rkumar (Rajiv Kumar)-Reassigned-2020-07-16-172607\",\n      \"certifier\": \"rkumar\",\n      \"certkey\": \"9\",\n      \"entitlementdisplaycount\": 0,\n      \"progress\": \"100%\",\n      \"status\": \"Fully Executed\",\n      \"totalentitlement\": 0\n    },\n    {\n      \"certificationame\": \"testent_test - abrennan (Abby Brennan)-Reassigned-2020-07-16-201654\",\n      \"certifier\": \"abrennan\",\n      \"certkey\": \"11\",\n      \"entitlementdisplaycount\": 0,\n      \"progress\": \"0%\",\n      \"status\": \"New\",\n      \"totalentitlement\": 0\n    },\n    {\n      \"certificationame\": \"testent_test - abhat (Arjun Bhat)-Reassigned-2020-07-16-202800\",\n      \"certifier\": \"abhat\",\n      \"certkey\": \"12\",\n      \"entitlementdisplaycount\": 0,\n      \"progress\": \"100%\",\n      \"status\": \"Fully Executed\",\n      \"totalentitlement\": 0\n    },\n    {\n      \"certificationame\": \"testent_test - abianchi (Angela Bianchi)-Reassigned-2020-07-16-203801\",\n      \"certifier\": \"abianchi\",\n      \"certkey\": \"13\",\n      \"entitlementdisplaycount\": 0,\n      \"progress\": \"100%\",\n      \"status\": \"Fully Executed\",\n      \"totalentitlement\": 0\n    },\n    {\n      \"certificationame\": \"testent_test - adubois (Alain DuBois)-Reassigned-2020-07-16-211255\",\n      \"certifier\": \"adubois\",\n      \"certkey\": \"14\",\n      \"entitlementdisplaycount\": 0,\n      \"progress\": \"100%\",\n      \"status\": \"Fully Executed\",\n      \"totalentitlement\": 0\n    },\n    {\n      \"certificationame\": \"testent_test - akapoor (Amit Kapoor)-Reassigned-2020-07-16-213238\",\n      \"certifier\": \"akapoor\",\n      \"certkey\": \"15\",\n      \"entitlementdisplaycount\": 0,\n      \"progress\": \"100%\",\n      \"status\": \"Fully Executed\",\n      \"totalentitlement\": 0\n    },\n    {\n      \"certificationame\": \"testent_test - amackenzie (Amanda Mackenzie)-Reassigned-2020-07-17-232752\",\n      \"certifier\": \"amackenzie\",\n      \"certkey\": \"21\",\n      \"entitlementdisplaycount\": 0,\n      \"progress\": \"100%\",\n      \"status\": \"Fully Executed\",\n      \"totalentitlement\": 0\n    },\n    {\n      \"certificationame\": \"testent_test - badams (Ben Adams)-Reassigned-2020-07-20-165843\",\n      \"certifier\": \"badams\",\n      \"certkey\": \"24\",\n      \"entitlementdisplaycount\": 0,\n      \"progress\": \"100%\",\n      \"status\": \"Fully Executed\",\n      \"totalentitlement\": 0\n    },\n    {\n      \"certificationame\": \"testent_test - bkaplan (Brian Kaplan)-Reassigned-2020-07-20-191707\",\n      \"certifier\": \"bkaplan\",\n      \"certkey\": \"25\",\n      \"entitlement\": [\n        {\n          \"certfied\": \"APPROVED\",\n          \"comment\": \"[07/16/20-adminfname adminlname(admin)]<br> reassigning from API[07/16/20-adminfname adminlname(admin)]<br> reassigning from API[07/16/20-adminfname adminlname(admin)]<br> reassigning from API[07/16/20-adminfname adminlname(admin)]<br> reassigning from API[07/16/20-adminfname adminlname(admin)]<br> reassigning from API[07/16/20-Steve Morgan(smorgan)]<br> reassigning from API[07/16/20-adminfname adminlname(admin)]<br> reassigning from API[07/17/20-Steve Morgan(smorgan)]<br> reassigning from API[07/20/20-adminfname adminlname(admin)]<br> reassigning from API[07/20/20-Steve Morgan(smorgan)] approveComment[07/20/20-adminfname adminlname(admin)]<br> reassigning from API[07/20/20-Steve Morgan(smorgan)] approveComment\",\n          \"consulted\": \"no\",\n          \"endpoint\": \"Workday\",\n          \"entitlement_value\": \"1099 Analyst (1099_Analyst)\",\n          \"totalaccount\": 0,\n          \"totalentitlement2\": 0,\n          \"updateuser\": \"smorgan\"\n        }\n      ],\n      \"entitlementdisplaycount\": 1,\n      \"progress\": \"100%\",\n      \"status\": \"Completed\",\n      \"totalentitlement\": 1\n    }\n  ],\n  \"campaignId\": \"10\",\n  \"complete\": \"No\",\n  \"displayCount\": 12,\n  \"errorCode\": \"0\",\n  \"msg\": \"successful\",\n  \"totalCompleteCertification\": [\n    \"testent_test - lmcneil (Logan McNeil)\",\n    \"testent_test - kkrishnan (Kshama Krishnan)-Reassigned-2020-07-15-234436\",\n    \"testent_test - bkaplan (Brian Kaplan)-Reassigned-2020-07-20-191707\"\n  ],\n  \"totalCount\": 12\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Fetch Entitlement Owner Campaign Details - SUCCESS"}
+                  value={"Fetch Entitlement Owner Campaign Details - SUCCESS"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"campaignDetails\": [\n    {\n      \"certificationame\": \"testent_test - lmcneil (Logan McNeil)\",\n      \"certifier\": \"lmcneil\",\n      \"certkey\": \"6\",\n      \"entitlement\": [\n        {\n          \"certfied\": \"APPROVED\",\n          \"consulted\": \"no\",\n          \"endpoint\": \"Workday\",\n          \"entitlement_value\": \"1099 System (1099_System)\",\n          \"totalaccount\": 0,\n          \"totalentitlement2\": 0,\n          \"updateuser\": \"admin\"\n        }\n      ],\n      \"entitlementdisplaycount\": 1,\n      \"progress\": \"100%\",\n      \"status\": \"Completed\",\n      \"totalentitlement\": 1\n    },\n    {\n      \"certificationame\": \"testent_test - kkrishnan (Kshama Krishnan)-Reassigned-2020-07-15-234436\",\n      \"certifier\": \"kkrishnan\",\n      \"certkey\": \"7\",\n      \"entitlement\": [\n        {\n          \"certfied\": \"APPROVED\",\n          \"comment\": \"[07/15/20-adminfname adminlname(admin)]<br> reassigning from API[07/16/20-Steve Morgan(smorgan)] approveComment\",\n          \"consulted\": \"no\",\n          \"endpoint\": \"Workday\",\n          \"entitlement_value\": \"Report Writer (Report_Writer)\",\n          \"totalaccount\": 0,\n          \"totalentitlement2\": 0,\n          \"updateuser\": \"smorgan\"\n        }\n      ],\n      \"entitlementdisplaycount\": 1,\n      \"progress\": \"100%\",\n      \"status\": \"Completed\",\n      \"totalentitlement\": 1\n    },\n    {\n      \"certificationame\": \"testent_test - mreddy (Mahesh Reddy)-Reassigned-2020-07-16-170550\",\n      \"certifier\": \"mreddy\",\n      \"certkey\": \"8\",\n      \"entitlementdisplaycount\": 0,\n      \"progress\": \"100%\",\n      \"status\": \"Fully Executed\",\n      \"totalentitlement\": 0\n    },\n    {\n      \"certificationame\": \"testent_test - rkumar (Rajiv Kumar)-Reassigned-2020-07-16-172607\",\n      \"certifier\": \"rkumar\",\n      \"certkey\": \"9\",\n      \"entitlementdisplaycount\": 0,\n      \"progress\": \"100%\",\n      \"status\": \"Fully Executed\",\n      \"totalentitlement\": 0\n    },\n    {\n      \"certificationame\": \"testent_test - abrennan (Abby Brennan)-Reassigned-2020-07-16-201654\",\n      \"certifier\": \"abrennan\",\n      \"certkey\": \"11\",\n      \"entitlementdisplaycount\": 0,\n      \"progress\": \"0%\",\n      \"status\": \"New\",\n      \"totalentitlement\": 0\n    },\n    {\n      \"certificationame\": \"testent_test - abhat (Arjun Bhat)-Reassigned-2020-07-16-202800\",\n      \"certifier\": \"abhat\",\n      \"certkey\": \"12\",\n      \"entitlementdisplaycount\": 0,\n      \"progress\": \"100%\",\n      \"status\": \"Fully Executed\",\n      \"totalentitlement\": 0\n    },\n    {\n      \"certificationame\": \"testent_test - abianchi (Angela Bianchi)-Reassigned-2020-07-16-203801\",\n      \"certifier\": \"abianchi\",\n      \"certkey\": \"13\",\n      \"entitlementdisplaycount\": 0,\n      \"progress\": \"100%\",\n      \"status\": \"Fully Executed\",\n      \"totalentitlement\": 0\n    },\n    {\n      \"certificationame\": \"testent_test - adubois (Alain DuBois)-Reassigned-2020-07-16-211255\",\n      \"certifier\": \"adubois\",\n      \"certkey\": \"14\",\n      \"entitlementdisplaycount\": 0,\n      \"progress\": \"100%\",\n      \"status\": \"Fully Executed\",\n      \"totalentitlement\": 0\n    },\n    {\n      \"certificationame\": \"testent_test - akapoor (Amit Kapoor)-Reassigned-2020-07-16-213238\",\n      \"certifier\": \"akapoor\",\n      \"certkey\": \"15\",\n      \"entitlementdisplaycount\": 0,\n      \"progress\": \"100%\",\n      \"status\": \"Fully Executed\",\n      \"totalentitlement\": 0\n    },\n    {\n      \"certificationame\": \"testent_test - amackenzie (Amanda Mackenzie)-Reassigned-2020-07-17-232752\",\n      \"certifier\": \"amackenzie\",\n      \"certkey\": \"21\",\n      \"entitlementdisplaycount\": 0,\n      \"progress\": \"100%\",\n      \"status\": \"Fully Executed\",\n      \"totalentitlement\": 0\n    },\n    {\n      \"certificationame\": \"testent_test - badams (Ben Adams)-Reassigned-2020-07-20-165843\",\n      \"certifier\": \"badams\",\n      \"certkey\": \"24\",\n      \"entitlementdisplaycount\": 0,\n      \"progress\": \"100%\",\n      \"status\": \"Fully Executed\",\n      \"totalentitlement\": 0\n    },\n    {\n      \"certificationame\": \"testent_test - bkaplan (Brian Kaplan)-Reassigned-2020-07-20-191707\",\n      \"certifier\": \"bkaplan\",\n      \"certkey\": \"25\",\n      \"entitlement\": [\n        {\n          \"certfied\": \"APPROVED\",\n          \"comment\": \"[07/16/20-adminfname adminlname(admin)]<br> reassigning from API[07/16/20-adminfname adminlname(admin)]<br> reassigning from API[07/16/20-adminfname adminlname(admin)]<br> reassigning from API[07/16/20-adminfname adminlname(admin)]<br> reassigning from API[07/16/20-adminfname adminlname(admin)]<br> reassigning from API[07/16/20-Steve Morgan(smorgan)]<br> reassigning from API[07/16/20-adminfname adminlname(admin)]<br> reassigning from API[07/17/20-Steve Morgan(smorgan)]<br> reassigning from API[07/20/20-adminfname adminlname(admin)]<br> reassigning from API[07/20/20-Steve Morgan(smorgan)] approveComment[07/20/20-adminfname adminlname(admin)]<br> reassigning from API[07/20/20-Steve Morgan(smorgan)] approveComment\",\n          \"consulted\": \"no\",\n          \"endpoint\": \"Workday\",\n          \"entitlement_value\": \"1099 Analyst (1099_Analyst)\",\n          \"totalaccount\": 0,\n          \"totalentitlement2\": 0,\n          \"updateuser\": \"smorgan\"\n        }\n      ],\n      \"entitlementdisplaycount\": 1,\n      \"progress\": \"100%\",\n      \"status\": \"Completed\",\n      \"totalentitlement\": 1\n    }\n  ],\n  \"campaignId\": \"10\",\n  \"complete\": \"No\",\n  \"displayCount\": 12,\n  \"errorCode\": \"0\",\n  \"msg\": \"successful\",\n  \"totalCompleteCertification\": [\n    \"testent_test - lmcneil (Logan McNeil)\",\n    \"testent_test - kkrishnan (Kshama Krishnan)-Reassigned-2020-07-15-234436\",\n    \"testent_test - bkaplan (Brian Kaplan)-Reassigned-2020-07-20-191707\"\n  ],\n  \"totalCount\": 12\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem><TabItem
+        label={"412"}
+        value={"412"}
+      >
+        <div>
+          
+          
+          Fetch Entitlement Owner Campaign Details - FAILURE
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Credentials
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Origin
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Cache-Control
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Connection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Expires
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Pragma
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Referrer-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-XSS-Protection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"1"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"certification with certkey 12802 not found for camapignId 282"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"1\",\n  \"msg\": \"certification with certkey 12802 not found for camapignId 282\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Fetch Entitlement Owner Campaign Details - FAILURE"}
+                  value={"Fetch Entitlement Owner Campaign Details - FAILURE"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"1\",\n  \"msg\": \"certification with certkey 12802 not found for camapignId 282\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

@@ -1,0 +1,496 @@
+---
+id: create-auto-approved-request
+title: "Create Auto-approved Request"
+description: "This API call can be used to auto-approve requests for a particular endpoint and security system. These requests can be used to create, update, or delete types of entitlement requests."
+sidebar_label: "Create Auto-approved Request"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: eic/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create Auto-approved Request"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/createautoapprovedrequest"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API call can be used to auto-approve requests for a particular endpoint and security system. These requests can be used to create, update, or delete types of entitlement requests.
+The auto-approved request is shown in Request History.
+
+Note: There should be a workflow with grant access already created with ‘AUTOAPPROVAL’ name and the workflow should be added to externalconfig.properties file with below details:
+sav.autoapprovalwfname=AUTOAPPROVAL.
+
+The `Authorization` must have `Bearer` followed by `Token`. 
+
+Mandatory params:
+`username`,
+`requestor`,
+`requestaccess` - [endpoint,securitysystem, requesttype, accountname]
+
+Optional params:
+`comments`,
+`requestaccess` - [entitlement (entitlement.ADD, entitlement.REMOVE), requestaccessattr]
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"path","in":"path","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"comments"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"add comment"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={true}
+          className={"schemaItem"}
+        >
+          <details
+            style={{}}
+            className={"openapi-markdown__details"}
+          >
+            <summary
+              style={{}}
+            >
+              <span
+                className={"openapi-schema__container"}
+              >
+                <strong
+                  className={"openapi-schema__property"}
+                >
+                  requestaccess
+                </strong><span
+                  className={"openapi-schema__name"}
+                >
+                   object[]
+                </span>
+              </span>
+            </summary><div
+              style={{"marginLeft":"1rem"}}
+            >
+              <li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                >
+                  Array [
+                </div>
+              </li><SchemaItem
+                collapsible={false}
+                name={"accountname"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"dbailey"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"endpoint"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"System1"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={true}
+                className={"schemaItem"}
+              >
+                <details
+                  style={{}}
+                  className={"openapi-markdown__details"}
+                >
+                  <summary
+                    style={{}}
+                  >
+                    <span
+                      className={"openapi-schema__container"}
+                    >
+                      <strong
+                        className={"openapi-schema__property"}
+                      >
+                        entitlement
+                      </strong><span
+                        className={"openapi-schema__name"}
+                      >
+                         object
+                      </span>
+                    </span>
+                  </summary><div
+                    style={{"marginLeft":"1rem"}}
+                  >
+                    <SchemaItem
+                      collapsible={false}
+                      name={"ADD"}
+                      required={false}
+                      schemaName={"string[]"}
+                      qualifierMessage={undefined}
+                      schema={{"type":"array","items":{"type":"string","example":"entitlementtype2####entitlementvalue2"},"example":["entitlementtype2####entitlementvalue2"]}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={false}
+                      name={"REMOVE"}
+                      required={false}
+                      schemaName={"string[]"}
+                      qualifierMessage={undefined}
+                      schema={{"type":"array","items":{"type":"string","example":"entitlementtype1####entitlementvalue1"},"example":["entitlementtype1####entitlementvalue1"]}}
+                    >
+                      
+                    </SchemaItem>
+                  </div>
+                </details>
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"requestaccessattr"}
+                required={false}
+                schemaName={"string[]"}
+                qualifierMessage={undefined}
+                schema={{"type":"array","items":{"type":"string","example":"DynamicAttr1####dynamicAttrValue1"},"example":["DynamicAttr1####dynamicAttrValue1","DynamicAttr2####dynamicAttrValue2"]}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"requesttype"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"2"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"securitysystem"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"System1"}}
+              >
+                
+              </SchemaItem><li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                >
+                  ]
+                </div>
+              </li>
+            </div>
+          </details>
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"requestor"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"admin"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"username"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"dbailey"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Create Auto-approved Request
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"RequestId"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"10122"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"SUCCESS"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"RequestId\": \"10122\",\n  \"errorCode\": \"0\",\n  \"message\": \"SUCCESS\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Create Auto-approved Request"}
+                  value={"Create Auto-approved Request"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"RequestId\": \"10122\",\n  \"errorCode\": \"0\",\n  \"message\": \"SUCCESS\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

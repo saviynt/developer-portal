@@ -1,0 +1,467 @@
+---
+id: delete-technical-rules
+title: "Delete Technical Rules"
+description: "Starting with Release v23.11, you can use the REST API to delete an inactive technical rules from the target system by specifying the `ruleId` parameter."
+sidebar_label: "Delete Technical Rules"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV21v2zYQ/isHfkkbSLacoAsqLwMyxxs8NE0Qe0CHJGho6mRxpkiVpJxohv/7QEpybNdBnc/bJ1vk3XMvPN49XBJLZ4bEd+RGqwU3XEkuZ3CjBGccDXkISIKGaV5YriSJydhSbZ3IE7cZ3KJAahAWJ6edXi+ASpXAqITSINgM4XY4nsDFzQisggQFWgQqgUvKLF8gWGSZ5IwK0KVAA6lWudezVM/QgqmMxRymFZgCGU8rZ9jtPzr5UfIIBdU0R4u6cy/v5fHxZ2UxPj52HyH81XijpKgOMN/Z0JHKthq7TvI0dvAAAGEdZCkQuIEatbO9ObqERKEBB4jP3Nid/dKghqdMQYE6VboOv7FcaMXQGIft1CncXn8afr24vBp99ij3cuJycVHaTGn+D3VH9Ah5aSxkdIHw+CtSjfoRUiWEesLEZfJxouYoHz3AFZUJtUpXdR59XG1qSUBUgdqDjhISk9qpSZsNF7UhAVmfgKuiJZE0RxITnpCAcFcw30rUFQmIYRnmlMRLYqvCiRiruZyRgOAzzQvhlnq9M7JaBWuUgtqsxWn+a/xWco0Jia0u8XXY1erBCZtCSYPG7Z9EkfvZLufLOtPrqKANK0Oa+JiW5IK5UwgHSlqtRHjhchkONCYoLafCyxwSnXPYhbcf8FrzmQv0MKzM2sLE3e43DJEzq0s5D+mT6Ri64JW0TKgy6TCVe3sDyjJszR1qoVDGhixDNj+PAig0th81pJISWZ3Ew/DmiEVIBV9gC2BR2nCMrNTcVqFvOdWhaFNqMCw1hyODIj2CPhhbCQyNZu0StDlKlbSmM1NqJpAW3Li8wFEpDU0x5FJwiUd9qKtiL4AxolEPqaSispzVIK3A09NTI+CWuxoZLSzLaHdbwlhqOdsV2fFk/Y0LKo76oKZ/I9vyqw85JpzuLFHJUzQ7gsDz2ebKDyPqQ+qu8z6dnSChD6wugm2TLtv71Peewn7sreVSFvPZ1mqD9JJNb1XnIfUF2RhuI6GSobFKm/V6giktxaaTviIvqcVDy29SYgC9M7hmFk6ik1Po9eLTKI5O4PeriUcbPhdc48G9YVzKAM7gilbQ+/jxA/RO4iiKo2iNd4M658bNZ/PGq/JdYfeB0Rw1hSOpJNbB32g6q4EOgZQqZK6neNVbTFFr1G90S9X9ziGM0YYDpeb84Py7qfnVDYnze3JP+tBk+3ySlQFEvfAPKsPex7MIfBLjns9jH26ozc67tU2rObPhRFNpCqVfGtGhLuT0OaQzPD/tfTj9KYqiPnDJRJnguJxeqpxyabwhbyFFHQ4lU4lDOdAAy0o5x8SDfAnbfjmpCgyv/fg6uLikMpKnaYP0m78Wb4QYX1wNr29Hv48+NyhfxuPwRiv7tiHQ60OuEjyfCsXmZOWgWB2Y18Nn2y0Ercdgo+VdfGVMx0uyoKJ0yJ6E1RQlgXHpJ2xaClE5K96QWR/w3ZJMPTNyzInEdw+OK+RoM/XCczyzcbuk62lfd00DHZdBvWgJT6nFxjxeWpRU2tV3g7g7HFx1acG7iw8kIAuqOZ02IdQq33OTZt0xcN+wSLzO5MrTmzaisct8jTWlhrM6rPU5ON9aAtbMTs7IKthKwuvSXsifOpep8pLc1kVRxwhDaVEXmhuEkSdFtoKBC9xTf98fUDIku2+JScYNDJQQdRE5vrvgCZqGA1vKhQGV+k9TFu6aYgL1QRnX8v3Oj714NxwN3rusoza15Q+dqBO5FDiWk1Nfbw3nfJURbvm+fKnb/59E/6EnUXNJNjrVKqhbwLLpF3dENwXz0jEeApIpY93mcumo659arFZuuX4duT6ScOM6QkLilAqDAZlj1T6k2iZH3K1ve8d+rVer9N1t83J6D6/F0SxSWW3abD3x4a0eVu3byNuvt9yDprAbSpu4m731cvhpOBmSgNDtptM0mbYleei93vxcnx/4E/tl7Zt1n8651epfjJXFiw==
+sidebar_class_name: "delete api-method"
+info_path: eic/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete Technical Rules"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/rules/technical"}
+>
+  
+</MethodEndpoint>
+
+
+
+Starting with Release v23.11, you can use the REST API to delete an inactive technical rules from the target system by specifying the `ruleId` parameter.
+
+**Note:**
+
+- You can only delete an inactive technical rules.
+- You cannot delete technical rules if:
+
+    - the Rule is active.
+
+    - the ID does not exist.
+
+    - the user who perform the delete process is not a ROLE_ADMIN.
+
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+Mandatory param:
+
+`ruleId`
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"path","in":"path","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Query Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"id","in":"query","schema":{"type":"string","example":"117"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Delete Technical Rules
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Credentials
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Origin
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Cache-Control
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Connection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Content-Security-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Expires
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Permissions-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Pragma
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Referrer-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-XSS-Protection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"text/plain"}
+              value={"text/plain"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      any
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Delete Technical Rules"}
+                  value={"Delete Technical Rules"}
+                >
+                  <ResponseSamples
+                    responseExample={"Rule deleted Successfully"}
+                    language={"shell"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

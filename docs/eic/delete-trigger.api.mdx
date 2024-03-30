@@ -1,0 +1,349 @@
+---
+id: delete-trigger
+title: "Delete Trigger"
+description: "This API call can be used to delete a trigger for a particular 'jobgroup' in SSM."
+sidebar_label: "Delete Trigger"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVttu2zgQ/RVinlpAvjUJ6mjRB1d1C3fhJoi9wAJxAI+kscVEIlWScqoK+vcFKdlR7nno4xowTJNzOTM8M8MKDG41+JfwXYZsjgK3lJEwcOVBTDpSPDdcCvBhmXDNJuczFmGasggFC4kVmmJmJIspJUMMmVF8uyXFNlIxZDkqw6MiRcVWcC3DrZJFvgLGBVss5v2VWgn7XSbE1pPCJFLx32j9rVlWaMMS3BFbfyZUpNZsI9NU3lLMwpKtl/KGxLrP9jbmKGI0UpXWKWbaP5ysr2UoMKP1fuPMhYTpXvIg2IK/J7zew16DBzIn5fDNYvChCXrZKIEHin4WpM1nGZfgVxBJYWwm/Qowz1MeOc3BtbbprEBHCWVoV6bMCXyQ4TVFBjzIlfVjOGl7uvffkdRGcbEFD+gXZnlqtwrDU25KqD1ow31ZvkUdJMjFdxlavU70r+gGk/MZ1HV92HRAvzQc2OfDr2CHaUH3YzgA7eB8BOYBljuHzqcinUuhG6cfhkP7c5+qX7oXo8GDhDC2K4sSDT2Z/qcCLchjw49sUmzZh+FozEZj/+jUPz5i3+ZLsFgWpHZNrG+xN8kxSqgXyFIaGoz6o9aG6QVS3vA34wqCxcXX3vLs7+mPTzQeHQ8/jsIehXjaOz7ZUO+U4qh3NKYjGh8dnx6f4l/sHE3yaeDcLRUKvSHVm4pIxtb0G71GSSFuKHZG/u19VZhRrykl/VYTi8l8enYx+zb70dDnD5UIKSVVIOMub0WRha4qD96HtQeZ3r6CsIgi0vo5dh841WV3x/2wddG107DW9RoyTveygpbZOZoEPODibm27CFcUg29UQd6zea3rKw8yMom0vSiX2uXF2vBh8LA1acfTxnWhUvAhMSbX/mBQGRIoTN3XuOOlMFEqi7gfyWwwDeYDzPlgdwIe7FBxDNtcNCqP667dt5Njg0VqwD9ktnZwNUWF4qZc2JgaWyFqHtne34nQYoM2cvvfydgWFbpJ8Jq0E3I0tUS6uOvK0/01/6mOZG9uIx0Wbhr+NFlkU2FI5YprYrOYhOGmZIFNrRuhF7QhRSIieHLKBjJNKbI7LFdyx2PSzCTEYjLIU83kxv3VRZ5LZShmDQ20m7r25HUU76az4L29V1K68XzSH/aHNiRLpQxdAbbRPujsDzB3Jt3/jwTLlIaWhn6ZQZ4iFzapruiqtj4vHzwdrjxIbP36l1BVIWr6R6V1bbd/FqRK8C+v7irQ1XDMtV3H4G8w1fTCjby7aPvJe/YctnYTRekK3XU1AA9uqNy3pfqq3k9R5785ChovvaU1cKf6qJXX3l5jEkWUmxdlu13t/GyxBA/C9kWVuR4LCm9tn8Rb8GEFK3APs8MccvsVpCi2BW6tfGPXfv4Di3PH4w==
+sidebar_class_name: "post api-method"
+info_path: eic/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete Trigger"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/deleteTrigger"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API call can be used to delete a trigger for a particular "jobgroup" in SSM.
+
+The `Authorization` must have `Bearer` followed by `Token`. 
+
+Mandatory params: 
+
+`jobname`
+
+Optional params:
+
+`triggername`
+
+`jobgroup`
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"path","in":"path","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"jobgroup"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"utility"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"jobname"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"TriggerChainJob"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"triggername"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"TCAPI"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          DeleteTriggers
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":0}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Success"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": 0,\n  \"msg\": \"Success\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"DeleteTriggers"}
+                  value={"DeleteTriggers"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": 0,\n  \"msg\": \"Success\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

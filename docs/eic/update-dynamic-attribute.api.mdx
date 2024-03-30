@@ -1,0 +1,718 @@
+---
+id: update-dynamic-attribute
+title: "Update Dynamic Attribute"
+description: "This API updates dynamic attributes in SSM."
+sidebar_label: "Update Dynamic Attribute"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "put api-method"
+info_path: eic/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update Dynamic Attribute"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/updateDynamicAttribute"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API updates dynamic attributes in SSM.
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+Mandatory params:
+
+`securitysystem`
+
+`endpoint`
+
+`updateuser`
+
+`dynamicattributes` - `attributename`
+
+Optional params:
+
+- `dynamicattributes` - other attributes of dynamic attributes
+- `attributetype`(BOOLEAN/NUMBER/STRING/ENUM/MULTIPLE SELECT FROM LIST/MULTIPLE SELECT FROM SQL QUERY/SINGLE SELECT FROM SQL QUERY/PASSWORD/LARGE TEXT/CHECK BOX/DATE)
+- `requesttype`(ACCOUNT/PROPOSED ENTITLEMENT OWNER/ENTITLEMENT OWNER ATTESTATION/ROLE/SERVICE ACCOUNT)
+- `attributelable`: Specify the name of the attribute, which you want to display in the Access Requests request form. You can apply following font styling to the label:
+    - **##SavBoldStart##**_**Attribute_Name**_**##SavBoldEnd##**
+    - **##SavItalicStart##**_**Attribute_Name**_**##SavItalicEnd##**
+    - **##SavUnderlineStart##**_**Attribute_Name**_**##SavItalicEnd##**
+    - **##SavUrlStart##**_**Attribute_Name**_**##SavUrlEnd##**
+    - **##SavAnchorStart####SavUrlStart##**[<b>https://exampleorg.com##SavUrlEnd####SavUrlTextStart##</b>]_**URL_Text**_**##SavUrlTextEnd####SavAnchorEnd##**
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"path","in":"path","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={true}
+          className={"schemaItem"}
+        >
+          <details
+            style={{}}
+            className={"openapi-markdown__details"}
+          >
+            <summary
+              style={{}}
+            >
+              <span
+                className={"openapi-schema__container"}
+              >
+                <strong
+                  className={"openapi-schema__property"}
+                >
+                  dynamicattributes
+                </strong><span
+                  className={"openapi-schema__name"}
+                >
+                   object[]
+                </span>
+              </span>
+            </summary><div
+              style={{"marginLeft":"1rem"}}
+            >
+              <li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                >
+                  Array [
+                </div>
+              </li><SchemaItem
+                collapsible={false}
+                name={"Parentattribute"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":""}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"accountscolumn"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"customproperty1"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"actionstring"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":""}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"actiontoperformwhenparentattributechanges"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":""}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"attributegroup"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":""}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"attributelable"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":""}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"attributename"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"air5"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"attributetype"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"BOOLEAN"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"attributevalue"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":""}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"defaultvalue"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":""}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"descriptionascsv"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":""}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"editable"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"true"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"hideoncreate"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"false"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"hideonupdate"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"false"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"orderindex"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":""}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"regex"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":""}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"requesttype"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"SERVICE ACCOUNT"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"required"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"false"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"showonchild"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"false"}}
+              >
+                
+              </SchemaItem><li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                >
+                  ]
+                </div>
+              </li>
+            </div>
+          </details>
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"endpoint"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"System1"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"securitysystem"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"System1"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"username"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"admin"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Update Dynamic Attribute
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Credentials
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Origin
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Cache-Control
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Expires
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Pragma
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Referrer-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-XSS-Protection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorcode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Success"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorcode\": \"0\",\n  \"msg\": \"Success\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Update Dynamic Attribute"}
+                  value={"Update Dynamic Attribute"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorcode\": \"0\",\n  \"msg\": \"Success\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      
