@@ -18,7 +18,7 @@ paths:
   /api/login:
     post:
       tags:
-        - 1.0 Authentication
+        - Authentication
       summary: Get Authorization Token
       description: >-
         The `Bearer Authentication scheme` is dedicated to the authentication
@@ -124,7 +124,7 @@ paths:
   /oauth/access_token:
     post:
       tags:
-        - 1.0 Authentication
+        - Authentication
       summary: Refresh Authorization Token
       description: >-
         Saviynt Enterprise Identity Cloud (EIC) supports OAuth2.0 . OAuth 2.0 is
@@ -5030,8 +5030,7 @@ paths:
   /createPrivilege:
     put:
       tags:
-        - Entitlements
-        - Privileges
+        - Entitlements and Privileges
       summary: Create Privilege
       description: >-
         This API updates an endpoint in EIC.
@@ -5261,8 +5260,7 @@ paths:
   /updatePrivilege:
     put:
       tags:
-        - Entitlements
-        - Privileges
+        - Entitlements and Privileges
       summary: Update Privilege
       description: >-
         This API updates an endpoint in EIC.  
@@ -5412,8 +5410,7 @@ paths:
   /deletePrivilege:
     put:
       tags:
-        - Entitlements
-        - Privileges
+        - Entitlements and Privileges
       summary: Delete Privilege
       description: |-
         https://yourdomain.saviyntcloud.com/ECM/v5/deletePrivilege  
@@ -5452,7 +5449,7 @@ paths:
   /getEntitlements:
     post:
       tags:
-        - Entitlements
+        - Entitlements and Privileges
       summary: Get Entitlements
       description: "This API can be used to get the list of all the entitlements.\r\n\r\nThis API call can be used to get the list and details of all the entitlements the user has access to. \r\n\r\nThis API will return only the entitlement attributes which are not null or not empty.\r\n\r\nThe `Authorization` must have `Bearer` followed by `Token`. \r\n\r\nOptional params:\r\n`username`,\r\n`entitlementtype`,\r\n`endpoint`,\r\n`requestedObject` -\"users\",\"userscount\",\r\n`max`,\r\n`offset`,\r\n`entitlementResponseFields`,\r\n`userResponseFields`,\r\n`userfiltercriteria`,\r\n`accountname`,\r\n`entownerwithrank` - if \"true\", returns the list of owners with owner rank for every entitlementValue,\r\n`returnentitlementmap`(true/false,default:false) - If true, entitlementmap details will be returned,\r\n`exactmatch` - Default is true. If given as false, it will search based on similar matches,\r\n\r\n`entitlementfiltercriteria`,\r\n\r\nOR \r\n\r\n`entQuery` - query to support only entitlement_values parameters. Sample - \"ent.description  = 'Desc' or ent.displayname like '%display%'\".\r\n\r\n***Note*** - Either pass param entitlementfiltercriteria (with or without exactmatch) OR entQuery. Both cannot be passed simultaneously."
       operationId: getEntitlements
@@ -11643,7 +11640,7 @@ paths:
   /getChildEntitlements:
     get:
       tags:
-        - Entitlements
+        - Entitlements and Privileges
       summary: Get Child Entitlements
       description: >-
         This API can be used to get the list of all child entitlements.
@@ -11926,7 +11923,7 @@ paths:
   /createUpdateEntitlement:
     post:
       tags:
-        - Entitlements
+        - Entitlements and Privileges
       summary: Create/Update Entitlement
       description: "This method creates a new \"entitlementvalue\" for an \"endpoint\" in SSM. All the input parameters it requires are attributes with which the new account record would get created.\r\n\r\nEnsure: The `Authorization` header variable must be set to `Bearer` followed by `Token`.\r\n\r\nMandatory params:\r\n\r\n`endpoint`,\r\n`entitlementtype`,\r\n`entitlement_value`\r\n\r\nOptional params:\r\n\r\n`attributes` for Entitlement_values,\r\n\r\n`entitlementowner<N>` - N is the rank, `entitlementowner` modifies entitlementowner with rank 1, `entitlementowner3` - modifies entitlementowner with rank 3,\r\n\r\n`entitlementID`,`newentitlement_value` - used to update the entitlement if multiple entitlements with same entitlement_value are present under the same entitlementtype and endpoint\r\n\r\n`entitlementcasecheck`(can be true or false, default : false) - If true, entitlement value search will be case sensitive during create or update.\r\n\r\n`entitlement_valuekey`\r\n\r\n`updatedentitlement_value` - new value for entitlement_value\r\n\r\n`entitlementmap` - \r\n1. `entitlementvalue`\r\n2. `entitlementtype`\r\n3. `endpoint`\r\n4. `requestfilter`\r\n5. `excludeentitlement`\r\n6. `adddependenttask`\r\n7. `removedependententtask`\r\n8. `updateType`(ADD/REMOVE, default : ADD)"
       operationId: createUpdateEntitlement
@@ -12100,7 +12097,7 @@ paths:
   /getEntitlementValuesForEndpoint:
     post:
       tags:
-        - Entitlements
+        - Entitlements and Privileges
       summary: Get Entitlement Values For Endpoint
       description: "This method returns a `List` of \"EntitlementValues\" for a specific endpoint in SSM. \r\n\r\nThe `Authorization` must have `Bearer` followed by `Token`.\r\n\r\nMandatory params:\r\n`endpoint`\r\n\r\nOptional params:\r\n`entitlementType`, `max`, `offset`,\r\n`entownerwithrank` - if \"true\", returns the list of owners with owner rank for every entitlementValue\r\n`returnentitlementmap`(true/false,default:false) - If true, entitlementmap details will be returned"
       operationId: getEntitlementValuesForEndpoint
@@ -18089,7 +18086,7 @@ paths:
   /getListofPrivileges:
     post:
       tags:
-        - Entitlements
+        - Entitlements and Privileges
       summary: Get List of Privileges for Entitlement Type
       description: "This API gives the list of privileges for an entitlement type.\r\n\r\nThe `Authorization` must have `Bearer` followed by `Token`. \r\n\r\nMandatory params:\r\n`endpoint`\r\n\r\nOptional params:\r\n`max`, `offset`, `entitlementType`"
       operationId: getListOfPrivilegesForEntitlementType
@@ -18469,7 +18466,7 @@ paths:
   /removeEntitlementsFromRole:
     post:
       tags:
-        - Entitlements
+        - Entitlements and Privileges
       summary: Remove Entitlement From Role
       description: >-
         This API removes entitlement from role.
@@ -26972,7 +26969,7 @@ paths:
   /fetchControlList:
     post:
       tags:
-        - 3.0 Analytics
+        - Analytics
       summary: Fetch List of Analytics
       description: >-
         This operation fetches a list of Analytic Controls by `Category` or
@@ -27115,7 +27112,7 @@ paths:
   /fetchControlDetails:
     post:
       tags:
-        - 3.0 Analytics
+        - Analytics
       summary: Fetch Analytics Details
       description: "This web service API is used to fetch the details of analytics controls.\r\n\r\nThe `Authorization` must have `Bearer` followed by `Token`. \r\n\r\nMandatory params: \r\n`controlId` - this is the ANALYTICSKEY\r\n\r\nOptional params:\r\n`max`, `offset`"
       operationId: fetchAnalyticsDetails
@@ -27196,7 +27193,7 @@ paths:
   /runAnalyticsControls:
     post:
       tags:
-        - 3.0 Analytics
+        - Analytics
       summary: Run Analytics Controls
       description: |-
         This API is used to run analytics job.
@@ -27351,7 +27348,7 @@ paths:
   /fetchRuntimeControlsData:
     post:
       tags:
-        - 3.0 Analytics
+        - Analytics
       summary: Fetch Runtime Controls Data
       description: "This API is used to fetch runtime analytics data from SSM.\n\nThe `Authorization` must have `Bearer` followed by `Token`.\n\nMandatory params: \n`analyticsid` ***OR*** `analyticsname`,\n`attributes` - runtime control params. \nSample : For this query - select * from users where manager = ${manager} and username = ${username}\n\"attributes\":{\n\t\"manager\":\"4\",\n\t\"username\":\"johndoe\"\n}\n\nOptional params:\n`max`,\n`offset`,\n`loggedinuser`"
       operationId: fetchRuntimeControlsData
@@ -27502,7 +27499,7 @@ paths:
   /fetchRuntimeControlsDataV2:
     post:
       tags:
-        - 3.0 Analytics
+        - Analytics
       summary: Fetch Runtime Controls Data V2
       description: "This API is used to fetch runtime analytics data from ES.\n\nThe `Authorization` must have `Bearer` followed by `Token`.\n\nMandatory params: \n`analyticsid` ***OR*** `analyticsname`((if both are passed then analyticsid will be considered),\n`attributes` - runtime control params. \nSample : For this query - SELECT u.username, u.firstname, u.lastname, u.email, u.manager AS 'USERCONTEXT',u.statuskey FROM users u WHERE u.statuskey is not null and u.statuskey not in (${statuskey}) and u.MANAGER is not null;\n\"attributes\":{\n\t\"statuskey\": \"0\"\n}\n\nOptional params:\n`max`,\n`offset`,\n`requestor`"
       operationId: fetchRuntimeControlsDataV2
@@ -27781,7 +27778,7 @@ paths:
   /fetchControlListES:
     get:
       tags:
-        - 3.0 Analytics
+        - Analytics
       summary: Fetch List of Analytics ES
       description: >-
         This method fetches a list of Analytic Controls in Elastic and support
@@ -28073,7 +28070,7 @@ paths:
   /fetchControlAttributes:
     post:
       tags:
-        - 3.0 Analytics
+        - Analytics
       summary: Fetch Control Attributes
       description: >-
         This API is used for fetching the details of dynamic attributes
@@ -28242,7 +28239,7 @@ paths:
   /fetchControlDetailsES:
     post:
       tags:
-        - 3.0 Analytics
+        - Analytics
       summary: Fetch Control Details ES
       description: >-
         This API performs the action specified under the
@@ -28411,9 +28408,7 @@ paths:
   /createUserRequest:
     post:
       tags:
-        - 4.0 Access Request
-        - Create Request
-        - Users1
+        - Access Request
       summary: Create User Request
       description: >-
         This API call can be used for creating update/create user request in the
@@ -28635,9 +28630,7 @@ paths:
   /updateUserRequest:
     put:
       tags:
-        - 4.0 Access Request
-        - Create Request
-        - Users1
+        - Access Request
       summary: Update User Request
       description: |-
         This API call can be used for updating user request in the EIC.
@@ -28804,9 +28797,7 @@ paths:
   /getrequestableusers:
     get:
       tags:
-        - 4.0 Access Request
-        - Create Request
-        - Users1
+        - Access Request
       summary: Get Requestable Users
       description: |-
         This API fetches the list of user for whom the requestor can request.
@@ -29092,9 +29083,7 @@ paths:
   /createEnterpriseRoleRequest:
     post:
       tags:
-        - 4.0 Access Request
-        - Create Request
-        - Roles1
+        - Access Request
       summary: Create Role Request
       description: >-
         This API call can be used for creating a new role and assigning an owner
@@ -29341,9 +29330,7 @@ paths:
   /updateEnterpriseRoleRequest:
     post:
       tags:
-        - 4.0 Access Request
-        - Create Request
-        - Roles1
+        - Access Request
       summary: Update Role Request
       description: >-
         This API call can be used to update the enterprise role that was already
@@ -29602,9 +29589,7 @@ paths:
   /getUserRequestableEntitlements:
     post:
       tags:
-        - 4.0 Access Request
-        - Create Request
-        - Entitlements1
+        - Access Request
       summary: Get User Requestable Entitlements
       description: "This API returns list of entitlements in an application that the user can request based on the existing access and entitlement map exclusion.\r\n\r\nThe `Authorization` must have `Bearer` followed by `Token`.\r\n\r\nMandatory params: `username`, `endpointname`\r\n\r\nOptional params: \r\n\r\n`max`,`offset`\r\n\r\n`entitlementtype`, \r\n\r\n`entitlementResponseFields` - Entitlement_value attributes required in the reponse, \r\n\r\n`endpointResponseFields` - Endpoint attributes required in the response,\r\n\r\n`includeinflightrequests` - If `includeinflightrequests` is true, API will also consider Entitlement requests in flight (requests that are submitted but not yet approved/rejected),\r\n\r\n`allowAssignedEntitlement` - if `allowAssignedEntitlement` is true, API will consider the entitlements (and excluded entitlements) that are assigned to the user as requestable."
       operationId: getUserRequestableEntitlements
@@ -29827,9 +29812,7 @@ paths:
   /validateEntitlementRequestData:
     post:
       tags:
-        - 4.0 Access Request
-        - Create Request
-        - Entitlements1
+        - Access Request
       summary: Validate Entitlement Request Data
       description: >-
         This API checks if a user is allowed to request for the entitlements
@@ -30056,9 +30039,7 @@ paths:
   /createrequest:
     post:
       tags:
-        - 4.0 Access Request
-        - Create Request
-        - Entitlement Based Role
+        - Access Request
       summary: Request to Create Entitlement Based Role
       description: >-
         This API is used to create role of roletype "Entitlement", such as
@@ -30337,9 +30318,7 @@ paths:
   /createOrganizationRequest:
     post:
       tags:
-        - 4.0 Access Request
-        - Create Request
-        - Organization1
+        - Access Request
       summary: Create Organization Request
       description: "This API call can be used to create new organization requests.\r\nThe Create Organization request is shown in Request History.\r\n\r\nThe `Authorization` must have `Bearer` followed by `Token`. \r\n\r\nMandatory params:\r\n`organizationname`\r\n\r\nOptional params:\r\n\r\n`comments`, `organizationname`, `username`, `description`, `primarycontact`, `comments`, `customproperty(1..28)`, `organizationtype`(data security/grouping/request rules/company), `parentorganization`(organization name), `startdate`(MM-dd-yyyy format), `enddate`(MM-dd-yyyy format),\r\n\r\n\r\n`endpoints` - \r\n\r\n1. `endpointname`\r\n2. `cp(1..5)`\r\n\r\n`roles` - \r\n1. `rolename`\r\n\r\n`rules` - \r\n1. `name`\r\n2. `type`\r\n\r\n`entitlements` -\r\n1. `entitlementvalue`\r\n2. `entitlementtype`\r\n3. `endpoint`\r\n\r\n`owners` -\r\n1. `owner`\r\n2. `rank`\r\n3. `policy`(can be SUPERADMIN/ADMIN/BULKADMIN/READONLY)\r\n\r\n`attributes` -\r\n1. `attributegroupname`\r\n2. `attributes`\r\n3. `value`\r\n4. `attributevalues`\r\n\r\n`dynamicattrsvalidation`(can be true/false, default : true) - If true, dynamic attributes will be validated based on the conditions defined."
       operationId: createOrganizationRequest
@@ -30655,9 +30634,7 @@ paths:
   /updateOrganizationRequest:
     put:
       tags:
-        - 4.0 Access Request
-        - Create Request
-        - Organization1
+        - Access Request
       summary: Update Organization Request
       description: >-
         This API call can be used to create update organization requests.
@@ -30965,8 +30942,7 @@ paths:
   /createautoapprovedrequest:
     post:
       tags:
-        - 4.0 Access Request
-        - Create Request
+        - Access Request
       summary: Create Auto-approved Request
       description: "This API call can be used to auto-approve requests for a particular endpoint and security system. These requests can be used to create, update, or delete types of entitlement requests.\r\nThe auto-approved request is shown in Request History.\r\n\r\nNote: There should be a workflow with grant access already created with ‘AUTOAPPROVAL’ name and the workflow should be added to externalconfig.properties file with below details:\r\nsav.autoapprovalwfname=AUTOAPPROVAL.\r\n\r\nThe `Authorization` must have `Bearer` followed by `Token`. \r\n\r\nMandatory params:\r\n`username`,\r\n`requestor`,\r\n`requestaccess` - [endpoint,securitysystem, requesttype, accountname]\r\n\r\nOptional params:\r\n`comments`,\r\n`requestaccess` - [entitlement (entitlement.ADD, entitlement.REMOVE), requestaccessattr]"
       operationId: createAutoApprovedRequest
@@ -31112,8 +31088,7 @@ paths:
   /createbirthrightrequest:
     post:
       tags:
-        - 4.0 Access Request
-        - Create Request
+        - Access Request
       summary: Create Birthright Request
       description: |-
         This method creates "Request" record for a new user in SSM. 
@@ -31217,8 +31192,7 @@ paths:
   /updateRequest:
     post:
       tags:
-        - 4.0 Access Request
-        - Update Existing Request
+        - Access Request
       summary: Add Approver to existing Request
       description: >-
         This API can be used to add approver to existing request in `SSM`.
@@ -31424,8 +31398,7 @@ paths:
   /fetchRequestHistory:
     post:
       tags:
-        - 4.0 Access Request
-        - Request History
+        - Access Request
       summary: Fetch Request History (my pending requests)
       description: >-
         This API call can be used to fetch the request history of all the
@@ -31715,8 +31688,7 @@ paths:
   /fetchRequestHistoryDetails:
     post:
       tags:
-        - 4.0 Access Request
-        - Request History
+        - Access Request
       summary: Fetch Request History Details
       description: "This API call can be used to fetch the request history details of a request.\r\n\r\nThe `Authorization` must have `Bearer` followed by `Token`. \r\n\r\nMandatory params:\r\n`requestkey`\r\n\r\nOptional params:\r\n`taskmetadatalength` - Modifies the character limit of provisioning comments and provisioning metadata upto maximum of 10000.\r\n`hideblankapprovername` - If true, prevents printing the firstname/lastname if null in the \"State\" field(Default : false)\r\n \r\n***Note*** - Provisioning comments in the response will be limited to 200 characters. Provisioning metadata in the response will be limited to 400 characters."
       operationId: fetchRequestHistoryDetails
@@ -32194,8 +32166,7 @@ paths:
   /cancelPendingRequest:
     post:
       tags:
-        - 4.0 Access Request
-        - Request History
+        - Access Request
       summary: Cancel Pending Request
       description: |-
         This API discontinues an open request in SSM.
@@ -32284,8 +32255,7 @@ paths:
   /getPendingRequests:
     post:
       tags:
-        - 4.0 Access Request
-        - Request Approval
+        - Access Request
       summary: Get List of Pending Requests for Approver
       description: |-
         This method returns a list of "Pending Requests" for approver in SSM
@@ -32529,8 +32499,7 @@ paths:
   /fetchRequestApprovalDetails:
     post:
       tags:
-        - 4.0 Access Request
-        - Request Approval
+        - Access Request
       summary: Fetch Request Approval Details
       description: "This method returns approval details for a given \"RequestId\" (provided in `requestKey` parameter) and approver (approver provided in `userName` parameter)\r\n\r\nThe `Authorization` must have `Bearer` followed by `Token`.\r\n\r\nMandatory params: \r\n\r\n`requestKey`,\r\n`userName` - approver username\r\n\r\nOptional params:\r\n\r\n`entresponsefields` - It can have syscritical, soxcritical, risk, privileged, confidentiality, status, displayname, description, any customproperty"
       operationId: fetchRequestApprovalDetails
@@ -33426,7 +33395,6 @@ paths:
   /ApproveRejectDetailRequest:
     post:
       tags:
-        - 4.0 Access Request
         - Request Approval
       summary: Approve/Reject each line item in a request
       description: "This API is used to approve/reject requests. Before running this call, first we need to run the API to retrieve request approval details in order to obtain the taskid and taskkey.\r\n\r\nThe `Authorization` must have `Bearer` followed by `Token`. \r\n\r\nMandatory params: \r\n`requestKey`,\r\n`approver`,\r\n`approvaldata` (taskid, taskkey, action); action:1/2, 1 - approve, 2 - reject\r\n\r\nOptional params:\r\n`comments`\r\n\r\n***Note***: enableapprovervalidationinapprovalapi flag(with true/false values) can be added in configuration table to enable/disable validations when approver approvers the request.Default value of enableapprovervalidationinapprovalapi flag is null."
@@ -33561,7 +33529,6 @@ paths:
   /getPendingApprovals:
     post:
       tags:
-        - 4.0 Access Request
         - Request Approval
       summary: Get Pending Approvals
       description: >-
@@ -34380,7 +34347,6 @@ paths:
   /approveRejectRequest:
     post:
       tags:
-        - 4.0 Access Request
         - Request Approval
       summary: Approve/Reject entire request
       description: "This API is used to approve/reject entire request.\r\n\r\nThe `Authorization` must have `Bearer` followed by `Token`. \r\n\r\nMandatory params: \r\n`requestid` or `requestkey` (if both are passed requestkey will be considered),\r\n`reqaction`:1/2, 1 - approve, 2 - reject\r\n\r\nOptional params:\r\n`approver` (if not passed, the token user is used)\r\n`comments`"
@@ -34499,9 +34465,7 @@ paths:
   /createtask:
     post:
       tags:
-        - 4.0 Access Request
         - Tasks
-        - Create Task
       summary: Create Task - Remove Entitlement
       description: >-
         Starting with Release v23.9, you can use the createtask API to create
@@ -34705,9 +34669,7 @@ paths:
   /completetask:
     post:
       tags:
-        - 4.0 Access Request
         - Tasks
-        - Update Task
       summary: Complete Single Task
       description: >-
         This method closes a single open task in SSM - both in "New" and
@@ -34887,9 +34849,7 @@ paths:
   /updateTasks:
     post:
       tags:
-        - 4.0 Access Request
         - Tasks
-        - Update Task
       summary: Update Tasks
       description: >-
         It can update certain params of a task as well as complete a task.
@@ -35083,9 +35043,7 @@ paths:
   /discontinueTask:
     post:
       tags:
-        - 4.0 Access Request
         - Tasks
-        - Update Task
       summary: Discontinue Tasks
       description: |-
         This method discontinues open tasks in SSM.
@@ -35234,9 +35192,7 @@ paths:
   /discontinueAllPendingTask:
     post:
       tags:
-        - 4.0 Access Request
         - Tasks
-        - Update Task
       summary: Discontinue All Pending Tasks
       description: "This API can be used to discontinue all pending tasks.\r\n\r\nThe `Authorization` must have `Bearer` followed by `Token`. \r\n\r\nOptional params: \r\n`updateuser`\r\n\r\n`commentsrequest`"
       operationId: discontinueAllPendingTasks
@@ -35342,9 +35298,7 @@ paths:
   /fetchTasks:
     post:
       tags:
-        - 4.0 Access Request
         - Tasks
-        - Task Details
       summary: Fetch Task Details
       description: "This method returns a `list` of provisioning tasks, that correspond to a particular IT Application (e.g Microsoft Active Directory) modeled in SSM as \"Endpoint\" of a \"Security System\".\r\n\r\nThe `Authorization` must have `Bearer` followed by `Token`.\r\n\r\nMandatory params:\r\n`TASKSTATUS` - PENDING/PENDINGCREATE/COMPLETED/COMPLETED_AND_DISCONTINUE/DISCONTINUE, \r\n\r\nOptional params:\r\n\r\n`endpoint` - endpoint key,\r\n`endpointname`, `endpointdescription`, \r\n\r\n`securitysystem` - securitysystem key,\r\n\r\n`loggedinusername` - username of user who wants to fetch the tasks,\r\n`upadteuser`, \r\n`requestedby`, \r\n`username`, \r\n`firstname`, \r\n`lastname`,\r\n`account` - accountname, \r\n\r\n`entitlement_value`, \r\n`entitlement_glossary`, \r\n`entitlementowner` - entitlementowner key,\r\n`entitlementtypekey`, \r\n\r\n`requestid`, \r\n`parenttaskid`, \r\n`taskid`, \r\n`taskowneruser` - userkey of owner,\r\n`taskownerusername` - username of owner, \r\n`taskownerusergroup` - usergroup key, \r\n`taskownerusergroupname` - usergroup name, \r\n`max`, `offset`,\r\n`statusint` - List of comma-seperated integer equivalent task status(3 - Complete, 4 - Discontinue and so on)\r\n`source` - List of comma-seperated source types(REQUEST/WEBSERVICE/CERTIFICATION and so on)\r\n`requestkey` - List of comma-seperated requestkeys\r\n`requestaccesskey` - List of comma-seperated requestaccesskey\r\n`tasktype` - List of comma-seperated integer equivalent task types(3 - New Account, 5 - Change Password and so on)\r\n`getEntitlementObj` - Values: true/false, if true returns the entitlement details associated with the task\r\n\r\n`getAccountObj` - Values: true/false, if true returns the account details asociated with the task,\r\n\r\n`taskmetadatalength` - Modifies the charcater limit of provisioning comments and provisioning metadata upto maximum of 10000.\r\n\r\n***Note*** - Provisioning comments in the response will be limited to 200 characters. Provisioning metadata in the response will be limited to 400 characters."
       operationId: fetchTaskDetails
@@ -35631,9 +35585,7 @@ paths:
   /fetchRequestAccessAttributes:
     post:
       tags:
-        - 4.0 Access Request
-        - Tasks
-        - Task Details
+        - Access Request
       summary: Fetch Request Access Attributes
       description: >-
         This method returns approval history details for a given
@@ -35793,9 +35745,7 @@ paths:
   /checkTaskStatus:
     post:
       tags:
-        - 4.0 Access Request
         - Tasks
-        - Task Details
       summary: Check Task Status
       description: "This API can be used to check the task status. Response can return task status as “New/Complete/In Progress/Discontinued”.\r\n\r\nThe `Authorization` must have `Bearer` followed by `Token`. \r\n\r\nMandatory params: \r\n`taskid`"
       operationId: checkTaskStatus
@@ -35873,7 +35823,7 @@ paths:
   /getDelegateUserList:
     get:
       tags:
-        - 5.0 Delegated Administration
+        - Delegated Administration
       summary: Get Delegate User List
       description: >-
         This API returns list of users that are allowed to be added as delegate
@@ -36008,7 +35958,7 @@ paths:
   /createDelegate:
     post:
       tags:
-        - 5.0 Delegated Administration
+        - Delegated Administration
       summary: Create Delegate
       description: >-
         This method creates a new delegate for a parent User. The input
@@ -36173,7 +36123,7 @@ paths:
   /fetchDelegatesList:
     post:
       tags:
-        - 5.0 Delegated Administration
+        - Delegated Administration
       summary: Fetch Existing Delegates List
       description: >-
         This API is used to retrieve the list of existing delegates and their
@@ -36381,7 +36331,7 @@ paths:
   /editDelegate:
     post:
       tags:
-        - 5.0 Delegated Administration
+        - Delegated Administration
       summary: Edit Delegate
       description: >-
         This method is used to edit a specific delegate. The input parameters of
@@ -36513,7 +36463,7 @@ paths:
   /deleteDelegate:
     post:
       tags:
-        - 5.0 Delegated Administration
+        - Delegated Administration
       summary: Delete Delegate
       description: |-
         This API is used to delete a specific delegate. 
@@ -36593,7 +36543,7 @@ paths:
   /fetchAttestationsList:
     post:
       tags:
-        - 6.0 Attestations
+        - Attestations
       summary: Fetch Attestation List
       description: "This API call can be used to fetch Attestation list from SSM for a given user.\r\n\r\nThe `Authorization` must have `Bearer` followed by `Token`. \r\n\r\nMandatory params: \r\n`userName`\r\n\r\nOptional params:\r\n`max`, `offset`"
       operationId: fetchAttestationList
@@ -36757,7 +36707,7 @@ paths:
   /fetchAttestationDetails:
     post:
       tags:
-        - 6.0 Attestations
+        - Attestations
       summary: Fetch Attestation Details
       description: "This API call can be used to fetch Attestation details for a particular attestation from SSM.\r\n\r\nThe `Authorization` must have `Bearer` followed by `Token`. \r\n\r\nMandatory params:  \r\n\r\n`userName` - this is the certifier username, \r\n\r\n`id` - this is the attestation id"
       operationId: fetchAttestationDetails
@@ -36906,7 +36856,7 @@ paths:
   /certifyUserManagerRequests:
     post:
       tags:
-        - 6.0 Attestations
+        - Attestations
       summary: Certify UserManager Requests
       description: "This API can be used to certify users employment status for user manager attestation.\r\n\r\nThe `Authorization` must have `Bearer` followed by `Token`. \r\n\r\nMandatory params: \r\n\r\n`verifications` - \r\n\r\n`employee` - Username to whom you want to certify\r\n\r\n`verifier` - Indicates the ‘username’ of the approver/verifier\r\n\t\r\n`action` - Specify the ‘Action’ you want to take for the respective Campaign. Possible values are ‘Works for me’, ‘Does not work for me’, ‘Terminated’, and ‘No response’\r\n    \r\n`id` - Indicates the attestation id for which you want to take action specified in the ‘Action’ parameter.  \r\n\r\n\r\nOptional params:\r\n\r\n`verifications` -\r\n\r\n`comments` - Specify the comments you want to mention for taking the respective action"
       operationId: certifyUsermanagerRequests
@@ -37026,7 +36976,7 @@ paths:
   /fetchAttAccEntDetails:
     post:
       tags:
-        - 6.0 Attestations
+        - Attestations
       summary: Fetch Attestation Account Entitlement Details
       description: "This API call can be used to get the details, status, and keys for accounts and entitlements within user manager attestation.\r\n\r\nThe `Authorization` must have `Bearer` followed by `Token`. \r\n\r\nMandatory params:  \r\n`id` - attestation id"
       operationId: fetchAttestationAccountEntitlementDetails
@@ -37437,7 +37387,7 @@ paths:
   /approveRejectAttAccEntDetails:
     post:
       tags:
-        - 6.0 Attestations
+        - Attestations
       summary: Approve Reject Attestation Account Details
       description: "This API can be used to approve or reject accounts or entitlements for a user manager attestation.\r\n\r\nThe `Authorization` must have `Bearer` followed by `Token`. \r\n\r\nMandatory params: \r\n\r\n`attid` - attestation id,\r\n\r\n`id` - same as attid,\r\n\r\n`verifier` - Indicates the approver/verifier username verifying the attestation request,\r\n\r\n`accounts` - \r\n\r\n  1.`accattkey` - Indicates the account id which you want to approve/reject\r\n  \r\n  2.`userattkey` - Indicates the user id which you want to approve\r\n  \r\n  3.`certified` - Select the action you want to perform. For approval, mention ‘Yes’ and for rejecting mention ‘No’\r\n  \r\n`entitlements` - \r\n\r\n  1.`accattkey` - Indicates the account id for which you want to approve/reject for the respective entitlement\r\n  \r\n  2.`userattkey` - Indicates the user id which you want to approve\r\n  \r\n  3.`certified` - Select the action you want to perform. For approval, mention ‘Yes’ and for rejecting mention ‘No’\r\n  \r\n  4.`entattkey` - Indicates the entitlement attribute key for which you want to approve/reject the respective entitlement\r\n  \r\n\r\nEither accounts or entitlements is mandatory.\r\n\r\nOptional params:\r\n\r\n`users` - \r\n\r\n  1.`userattkey` - Indicates the user id which you want to approve\r\n  \r\n  2.`certified` -  Specify the ‘Action’. Possible values are ‘Works for me’, ‘Does not work for me’, ‘Terminated’, and ‘No response’\r\n  \r\n`comments`"
       operationId: approveRejectAttestationAccountDetails
@@ -37577,7 +37527,7 @@ paths:
   /lockAttestation:
     post:
       tags:
-        - 6.0 Attestations
+        - Attestations
       summary: Lock Attestation
       description: "This API can be used to lock a completed attestation, which is not locked. Once the attestation is locked using lockAttestation, no changes can be made to the attestation.\r\n\r\nThe `Authorization` must have `Bearer` followed by `Token`. \r\n\r\nMandatory params: \r\n\r\n`verifier` - Indicates the approver/verifier username verifying the attestation request,\r\n\r\n`attid` - Indicates the attestation id\r\n\r\nOptional params:\r\n\r\n`comments`"
       operationId: lockAttestation
@@ -37645,8 +37595,7 @@ paths:
   /fetchCampaignList:
     post:
       tags:
-        - 7.0 Campaigns
-        - User Manager
+        - Campaigns
       summary: Fetch Campaign List
       description: |-
         This API returns list of all campaign's pending to be certified.
@@ -37908,7 +37857,7 @@ paths:
   /fetchCampaignDetails:
     post:
       tags:
-        - 7.0 Campaigns
+        - Campaigns
         - User Manager
       summary: Fetch Campaign Details
       description: >-
@@ -38259,8 +38208,7 @@ paths:
   /certifyUserManagerforCampaign:
     post:
       tags:
-        - 7.0 Campaigns
-        - User Manager
+        - User Manager Campaigns
       summary: Certify User Manager for Campaign
       description: >-
         This API will do employee verification for a particular campaign.
@@ -38457,8 +38405,7 @@ paths:
   /fetchCampaignAccEntDetails:
     post:
       tags:
-        - 7.0 Campaigns
-        - User Manager
+        - User Manager Campaigns
       summary: Fetch Account Entitlement Details
       description: >-
         This API returns user details, account-entitlement details of a
@@ -39492,8 +39439,7 @@ paths:
   /approverejectCampaignAccEntDetails:
     post:
       tags:
-        - 7.0 Campaigns
-        - User Manager
+        - User Manager Campaigns
       summary: Approve Reject Campaign Account Entitlement Details
       description: >-
         This API is used to certify/revoke the user's access (account,
@@ -39813,8 +39759,7 @@ paths:
   /lockCampaign:
     post:
       tags:
-        - 7.0 Campaigns
-        - User Manager
+        - Campaigns
       summary: Lock Campaign
       description: >-
         This API is used to lock campaign after validating whether campaign is
@@ -39932,8 +39877,7 @@ paths:
   /reassignUserManagerforCampaign:
     post:
       tags:
-        - 7.0 Campaigns
-        - User Manager
+        - User Manager Campaigns
       summary: Reassign UserManager Step 1 for Campaign
       description: >-
         This API reassigns UserManager for Campaign at Employment Verification
@@ -40097,8 +40041,7 @@ paths:
   /consultUserManagerforCampaign:
     post:
       tags:
-        - 7.0 Campaigns
-        - User Manager
+        - User Manager Campaigns
       summary: Consult UserManager Step 1 for Campaign
       description: >-
         This API consults UserManager for Campaign at Employment Verification
@@ -40264,8 +40207,7 @@ paths:
   /consultCampaignAccEntDetails:
     post:
       tags:
-        - 7.0 Campaigns
-        - User Manager
+        - User Manager Campaigns
       summary: Consult Campaign Account Entitlement Details
       description: >-
         This API consults User Manager for Campaign at Account and Access
@@ -40482,8 +40424,7 @@ paths:
   /reAssignUserManagerStep2AccEntDetails:
     post:
       tags:
-        - 7.0 Campaigns
-        - User Manager
+        - User Manager Campaigns
       summary: Reassign Certification at Account and Entitlement Level Copy
       description: >-
         This API reassigns accounts, roles, or entitlements to a different user
@@ -40771,8 +40712,7 @@ paths:
   /consultEOforCampaign:
     post:
       tags:
-        - 7.0 Campaigns
-        - Entitlement Owner
+        - Entitlement Owner Campaigns
       summary: Consult EntitlementOwner Step 1 for Campaign
       description: >-
         This API consults Entitltment Owner for Campaign at Employment
@@ -40940,8 +40880,7 @@ paths:
   /consultEOCampaignAccEntDetails:
     post:
       tags:
-        - 7.0 Campaigns
-        - Entitlement Owner
+        - Entitlement Owner Campaigns
       summary: Consult EntitlementOwner Step 2 for Campaign
       description: >-
         This API consults Entitltment Owner for Campaign at Account and Access
@@ -41133,8 +41072,7 @@ paths:
   /fetchEntOwnerCampaignAccEntDetails:
     post:
       tags:
-        - 7.0 Campaigns
-        - Entitlement Owner
+        - Entitlement Owner Campaigns
       summary: Fetch Account Entitlement Details
       description: >-
         This API returns user details, account-entitlement details of a
@@ -41620,8 +41558,7 @@ paths:
   /fetchEntOwnerCampaignDetails:
     post:
       tags:
-        - 7.0 Campaigns
-        - Entitlement Owner
+        - Entitlement Owner Campaigns
       summary: Fetch Entitlement Owner Campaign Details
       description: >-
         This API return details of a particular Entitlement Owner campaign in
@@ -42239,8 +42176,7 @@ paths:
   /getFlatResponseEntOwnerCampaignAccEntDetails:
     post:
       tags:
-        - 7.0 Campaigns
-        - Entitlement Owner
+        - Entitlement Owner Campaigns
       summary: Fetch Flat Response Entitlement Owner Campaign Details
       description: >-
         This API return flat details of a particular Entitlement Owner campaign
@@ -42896,8 +42832,7 @@ paths:
   /lockEntOwnerCampaign:
     post:
       tags:
-        - 7.0 Campaigns
-        - Entitlement Owner
+        - Entitlement Owner Campaigns
       summary: Lock Campaign
       description: >-
         This API is used to lock campaign after validating whether Entitlement
@@ -43131,8 +43066,7 @@ paths:
   /approverejectEntOwnerCampaignAccEntDetails:
     post:
       tags:
-        - 7.0 Campaigns
-        - Entitlement Owner
+        - Entitlement Owner Campaigns
       summary: Approve Reject Account Entitlement Details
       description: >-
         This API is used to certify/revoke the user's access (account,
@@ -43324,8 +43258,7 @@ paths:
   /certifyEntOwnerforCampaign:
     post:
       tags:
-        - 7.0 Campaigns
-        - Entitlement Owner
+        - Entitlement Owner Campaigns
       summary: Certify Entitlement Owner for Campaign
       description: >-
         This API will do entitlement  verification for a particular campaign.
@@ -43607,8 +43540,7 @@ paths:
   /reassignEntOwnerCampaignAccEnt:
     post:
       tags:
-        - 7.0 Campaigns
-        - Entitlement Owner
+        - Entitlement Owner Campaigns
       summary: Reassign Entitlement Owner for Campaign
       description: >-
         This API reassigns Entitlement Owner for Campaign in SSM.
@@ -43782,8 +43714,7 @@ paths:
   /reassignEntOwnerCampaignAccEntDetailsStep2:
     post:
       tags:
-        - 7.0 Campaigns
-        - Entitlement Owner
+        - Entitlement Owner Campaigns
       summary: Reassign Certification at Account Level
       description: >-
         This API reassigns accounts or child entitlements to a different user or
@@ -44018,8 +43949,7 @@ paths:
   /fetchAppOwnerCampaignAccEntDetails:
     post:
       tags:
-        - 7.0 Campaigns
-        - Application Owner
+        - Application Owner Campaigns
       summary: Fetch Account Entitlement Details
       description: >-
         This API returns user details, account-entitlement details of a
@@ -44503,8 +44433,7 @@ paths:
   /approverejectAppOwnerCampaignAccEntDetails:
     post:
       tags:
-        - 7.0 Campaigns
-        - Application Owner
+        - Application OwnerCampaigns
       summary: Approve Reject Account Entitlement Details
       description: >-
         This API is used to certify/revoke the user's access (account,
@@ -44802,8 +44731,7 @@ paths:
   /lockApplicationOwnerCampaign:
     post:
       tags:
-        - 7.0 Campaigns
-        - Application Owner
+        - Application Owner Campaigns
       summary: Lock Campaign
       description: >-
         This API is used to lock campaign after validating whether Application
@@ -44952,8 +44880,7 @@ paths:
   /consultAppOwnerCampaignAccEntDetails:
     post:
       tags:
-        - 7.0 Campaigns
-        - Application Owner
+        - Application Owner Campaigns
       summary: Consult AppOwner Account Entitlement Details
       description: >-
         This API consults Application Owner for Campaign at Account and Access
@@ -45149,8 +45076,7 @@ paths:
   /reAssignAppOwnerCampaignAccEntDetails:
     post:
       tags:
-        - 7.0 Campaigns
-        - Application Owner
+        - Application Owner Campaigns
       summary: Reassign Application Owner for Campaign
       description: >-
         This API reassigns Entitlement Owner for Campaign in SSM.
@@ -45350,7 +45276,7 @@ paths:
   /fetchCertificationList:
     post:
       tags:
-        - 7.0 Campaigns
+        - Campaigns
       summary: Fetch Certification List
       description: >-
         This API returns list of all the certifications for a certifier.
@@ -45620,7 +45546,7 @@ paths:
   /discontinueCampaign:
     post:
       tags:
-        - 7.0 Campaigns
+        - Campaigns
       summary: Discontinue Campaigns and Certifications
       description: |-
         This API discontinues certification and campaign.
@@ -45751,7 +45677,7 @@ paths:
   /reAssignCertification:
     post:
       tags:
-        - 7.0 Campaigns
+        - Campaigns
       summary: Reassign Certification
       description: >-
         This API is used to reassign certification to a different user or
@@ -45914,7 +45840,7 @@ paths:
   /sapSODEvaluation:
     post:
       tags:
-        - 8.0 Segregation of Duties
+        - Segregation of Duties
       summary: SoD Evaluation for SAP Functions
       description: >-
         This API can be used to evaluate SOD for new SAP role that is being
@@ -45990,7 +45916,7 @@ paths:
   /sodEvaluation:
     post:
       tags:
-        - 8.0 Segregation of Duties
+        - Segregation of Duties
       summary: SoD Evaluation for Non - SAP Functions
       description: "This API can be used to evaluate SODs for entitlements with the same name.\n\n**Mandatory Parameters**:\n\n\\* `user` - account name  \n\\* entitlement JSON\n\nStartFragment\n\n{\_\_\_\_\n\n\"user\":\_\"soduser971\",\n\n\"entitlementJSON\":\_{\_\n\n\_\"Data\":\_\\[\n\n\_{\n\n\_\"Endpoint\":\_\"SODendpoint2\",\n\n\_\_\"EntitlementType\":\_\"NewPandC\",\n\n\_\_\_\"ExistingEntitlementsKeys\":\_\\[\n\n\_\_\_\_\"635216\",\n\n\_\_\_\_\"635217\",\_\n\n\_\_\_\_\_\"635218\"\_\n\n\_\_\_\_\_\\],\n\n\_\"NewEntitlementsKeys\":\_\\[\n\n\_\"635215\",\n\n\_\"635214\"\_\_\n\n\_\_\_\\]\n\n\_\_\_},\n\n\_\_\_{\n\n\_\_\"Endpoint\":\_\"SODendpoint2\",\n\n\_\_\"EntitlementType\":\_\"NewPandC\",\_\_\_\n\n\_\_\_\"ExistingEntitlementsKeys\":\_\\[\_\_\_\n\n\_\_\_\_\"635216\",\_\_\n\n\_\_\_\_\_\"635217\",\_\_\_\_\n\n\_\_\_\_\_\"635218\"\_\_\_\_\n\n\_\_\_\_\_\_\\],\_\n\n\_\_\_\_\"NewEntitlementsKeys\":\_\\[\_\_\_\_\_\_\_\n\n\_\_\_\_\"635215\",\_\n\n\_\_\_\_\"635214\"\_\_\n\n\_\_\_\_\_\_\\]\_\_\_\_\n\n\_\_\_\_\_\_}\_\n\n\_\_\_\_\_\_\\]\_\n\n\_\_\_}\n\n}\n\nEndFragment\n\n  \n  \n**HEADERS**\n\nEndFragment\n\nThe `Authorization` must have `Bearer` followed by `Token`.\n\n**Optional parameters**:\n\n`Ruleset - ExistingEntitlementsKeys/NewEntitlementsKeys -`These parameters are available from Release v2022.0.  \nThe SODEvaluation API takes the input parameters in the following order:\n\n\\* Key of the entitlement  \n\\* Name of the entitlement\n\nThe Key of the entitlement takes precedence to check SODs during access request to avoid the failure of duplicate entitlements so that the SOD risks are displayed if exists. If the entitlement key is not passed in the API, then the entitlement name is considered."
       operationId: sodEvaluationForNonSapFunctions
@@ -47479,7 +47405,7 @@ paths:
   /addMCRiskAccount:
     post:
       tags:
-        - 8.0 Segregation of Duties
+        - Segregation of Duties
       summary: Add Mitigating Control Risk Account
       description: >-
         This API can be used to create a mitigating control association for a
@@ -47609,7 +47535,7 @@ paths:
   /uploadSODRuleset:
     post:
       tags:
-        - 8.0 Segregation of Duties
+        - Segregation of Duties
       summary: Upload SOD Ruleset
       description: >-
         The **uploadSODRuleset** API uses the Ruleset upload file to import
@@ -47782,8 +47708,7 @@ paths:
   /getSavSecurityQuestions:
     post:
       tags:
-        - 9.0 Password Reset
-        - Using SQA
+        - Password Management
       summary: Fetch Security Questions
       description: |-
         This API is used to get the Security Questions defined in SSM
@@ -47908,8 +47833,7 @@ paths:
   /fetchSavUserQuestions:
     post:
       tags:
-        - 9.0 Password Reset
-        - Using SQA
+        - Password Management
       summary: Fetch User Security Questions
       description: >-
         This API can be used to fetch the security questions selected by user
@@ -48018,8 +47942,7 @@ paths:
   /validateSecurityAnswers:
     post:
       tags:
-        - 9.0 Password Reset
-        - Using SQA
+        - Password Management
       summary: Validate User Security Answers
       description: >-
         This API is used to validate the security answers of user with answers
@@ -48130,8 +48053,7 @@ paths:
   /createSavSecurityQuestions:
     post:
       tags:
-        - 9.0 Password Reset
-        - Using SQA
+        - Password Management
       summary: Create Security Questions
       description: >-
         This API is used to create security questions in Saviynt.
@@ -48293,8 +48215,7 @@ paths:
   /createSavPasswordPolicy:
     post:
       tags:
-        - 9.0 Password Reset
-        - Password Policy
+        - Password Management
       summary: Create Password Policy
       description: "This API creates a password policy for your organization.\n\nThe `Authorization` must have a `Bearer` followed by a `Token`.\n\n**Mandatory Parameters**:\n\n- `policyname`: Specify a unique name for the policy. You can include names such as ApplicationPolicy to better identify the type of policy.\n- `expireafter`: Specify length of time until a user password expires and must be changed. You can enter only numeric values.\n    \n\n**Optional Parameters**:\n\n- `description`: StartFragmentSpecify an optional description for the policy.\n- `scope`: Specify the application or user you wish to apply the policy to.\n    - `APPLICATION`: Specify this option, if you want to assign the password policy to applications and cannot be used to validate passwords when users’ passwords are changed.\n    - `USER`: Specify this option, if you want to assign the password policy at the user level. To change or reset user passwords in EIC, at least one password policy with USER scope must be available. This policy is invoked when a user password change or reset is initiated.\n- `regex`: You can specify regular expressions (regex) to define specific password patterns.\n- `maxrepetedcharacters`: Specify the maximum number of duplicate characters that a password can contain. For example, if you specify `2`, then a password is not accepted if any character is repeated more than two times. You can set a value between `1` and `10` numeric characters.\n- `minimumnumericcharacters`: Specify the minimum number of numeric characters that a password must contain. For example: if you specify `3`, then password should have at least 3 numbers. StartFragmentYou can set a value between `1` and `10` numeric characters.\n- `minimumspecialcharacter`: Specify the minimum number of special characters that a password must contain.\n- `minimumalphanumericcharacters`: Specify the minimum number of alphanumeric characters that a password must contain. For example, if minimum alphanumeric characters specified is `8` and if the password specified is 'j`ohn12`' then the password is not accepted as it is short of two characters in this case with the configured value of `8` characters.\n- `minimumuniquecharacters`: Specify the minimum number of unique characters that a password must contain. Unique characters do not take into consideration duplicate characters.\n- `minimumalphabetcharacters`: Specify the minimum number of alphabetic characters that a password must contain.\n- `minimumuppercasecharacters`: Specify the minimum number of uppercase letters that a password must contain. For example, if minimum uppercase characters are specified as 2 and if password specified is John123 then the password is not accepted as only 1 Uppercase letter is specified in this case.\n    \n- `minimumlowercasecharacters`: Specify minimum number of lowercase letters that a password must contain. For example, if minimum lowercase characters are specified as 2 and if password specified is JOHn123 then the password is not accepted as only 1 lowercase letter is specified in this case.\n    \n- `disallowlastpassword`: Specify the frequency to prevent users from using any previous passwords whose change or reset process was initiated from EIC and not from the target applications. For example, if you specify 10, then users are allowed to reuse a password only after using 10 unique passwords. You can set a value between 1 and 25 numeric characters.\n    \n- `useblacklistdictionary`: Specify `YES` to enable the the password blacklist dictionary. A password is rejected if its value matches a term in a dictionary that you configure.\n    \n- `blacklistedattributes`: Specify the user attributes query to prevent users from using their user or account information.\n    \n- `minimumage`: Specify the minimum period, in hours to limit how frequently users can change the password. For example, if you enter\_2, then the user cannot change the password before\_2\_hours of creating the password.\n    \n- `regexdescription`: Specify a custom regular expression error message if the end user password does not match the regex password policy configuration.\n    \n- `sendnotification`: Specify `true` to send notifications to end users informing them of their upcoming password expiration. Notification emails can be sent to both user and account passwords.\n    \n- notificationemailtemplate:\n- `daystonotify`: Specify the days, before user passwords expire (including service account owners) to send expiry notification email.\n- `primaryidentificationattr`: Specify the parameter to validate the identity of the calling user and make their details visible to the Helpdesk users.\n- `secondaryidentificationattr`: Specify the parameter to validate the identity of the calling user and make their details visible to the Helpdesk users.\n- `resetpasswordnotification`: You can send user password change or password reset notifications to end users. Specify the email template to customize the notification that the user receives.\n    \n\n```\n, `minimumage`, `regexdescription`, `sendnotification`, `notificationemailtemplate`, `daystonotify`, `primaryidentificationattr`, `secondaryidentificationattr`, `resetpasswordnotification`\n\n ```\n\n\\-"
       operationId: createPasswordPolicy
@@ -48502,7 +48423,7 @@ paths:
   /changePassword:
     post:
       tags:
-        - 9.0 Password Reset
+        - Password Management
       summary: Change User Password
       description: >-
         This API reset the password for a user in EIC. Considering the input
@@ -48685,8 +48606,7 @@ paths:
   /createUpdateTrigger:
     post:
       tags:
-        - 10.0 Common Utilities
-        - Job Control
+        - Job Management
       summary: Create and Update Trigger
       description: >-
         This API call can be used to create and update a trigger for a
@@ -48869,8 +48789,7 @@ paths:
   /checkJobStatus:
     post:
       tags:
-        - 10.0 Common Utilities
-        - Job Control
+        - Job Management
       summary: Check Job Status
       description: "This API is used to fetch the status of any job other that Data Import Job.\r\n\r\nThe `Authorization` must have `Bearer` followed by `Token`. \r\n\r\nMandatory params: \r\n`jobgroup`,\r\n`jobname`"
       operationId: checkJobStatus
@@ -48935,8 +48854,7 @@ paths:
   /deleteTrigger:
     post:
       tags:
-        - 10.0 Common Utilities
-        - Job Control
+        - Job Management
       summary: Delete Trigger
       description: "This API call can be used to delete a trigger for a particular \"jobgroup\" in SSM.\r\n\r\nThe `Authorization` must have `Bearer` followed by `Token`. \r\n\r\nMandatory params: \r\n\r\n`jobname`\r\n\r\nOptional params:\r\n\r\n`triggername`\r\n\r\n`jobgroup`"
       operationId: deleteTrigger
@@ -49010,8 +48928,7 @@ paths:
   /runJobTrigger:
     post:
       tags:
-        - 10.0 Common Utilities
-        - Job Control
+        - Job Management
       summary: Run Job Trigger
       description: >-
         This API call can be used to run a job trigger in SSM.
@@ -49262,8 +49179,7 @@ paths:
   /fetchJobMetadata:
     post:
       tags:
-        - 10.0 Common Utilities
-        - Job Control
+        - Job Management
       summary: Fetch Job Metadata
       description: "This API call return job metadata for the last run of a job in SSM.\r\n\r\nThe `Authorization` must have `Bearer` followed by `Token`. \r\n\r\nMandatory params: \r\n\r\n`jobname`\r\n\r\nOptional params:\r\n\r\n`triggername`\r\n\r\n`jobgroup`\r\n\r\n***Note***: The structure of the result param in response can change based upon the Job History saved in SSM"
       operationId: fetchJobMetadata
@@ -49365,8 +49281,7 @@ paths:
   /createTriggers:
     post:
       tags:
-        - 10.0 Common Utilities
-        - Job Control
+        - Job Management
       summary: createTrigger
       description: createTrigger
       operationId: createtrigger
@@ -49520,8 +49435,7 @@ paths:
   /resumePauseJobs:
     post:
       tags:
-        - 10.0 Common Utilities
-        - Job Control
+        - Job Management
       summary: resumePauseJobs
       description: >-
         Starting with Release v23.10, the resumePauseJobs API enables you to
@@ -49668,9 +49582,7 @@ paths:
   /uploadSchemaFile:
     post:
       tags:
-        - 10.0 Common Utilities
-        - File Directory
-        - SAV
+        - Common Utilities
       summary: Upload New File
       description: >-
         This API call can be used to upload the file in a specific location
@@ -49786,7 +49698,7 @@ paths:
   /ECM/testConnection:
     post:
       tags:
-        - 10.0 Common Utilities
+        - Connection
       summary: Test Connection
       description: >-
         This API is used to save and test a connection.
@@ -50013,7 +49925,7 @@ paths:
   /importData:
     post:
       tags:
-        - 10.0 Common Utilities
+        - Common Utilities
       summary: Import Application Data
       description: "This API is used to run import data job for a specific application\r\n\r\nThe `Authorization` must have `Bearer` followed by `Token`\r\n\r\nMandatory params: \r\n\r\n`systemname`,\r\n`connectiontype`,\r\n`connectionName`\r\n\r\nOptional params:\r\n\r\n`fullorincremental` - full/incremental,\r\n`accountsoraccess` - accounts/access\r\n`CREATEUSERS`- Yes/No\r\n\r\nAdditional import parameters can also be passed - \r\n\r\nFor example, \r\n\r\n1. For SAP Import, provide the parameters - JCO_ASHOST, JCO_SYSNR, JCO_CLIENT, JCO_USER, PASSWORD\r\n2. For AWS Import, provide the parameters  - AWS_ACCESS_KEY,AWS_ACCESS_SECRET_PASSWORD,AWS_ACCOUNT_ID,CROSS_ACCOUNT_ROLE_ARN"
       operationId: importApplicationData
@@ -50085,7 +49997,7 @@ paths:
   /checkImportStatus:
     post:
       tags:
-        - 10.0 Common Utilities
+        - Common Utilities
       summary: Check Import Status
       description: |-
         This API is used to check the status of data import job. 
@@ -50149,7 +50061,7 @@ paths:
   /forceComplete:
     post:
       tags:
-        - 10.0 Common Utilities
+        - Common Utilities
       summary: Force Complete
       description: |-
         This API is used to terminate data import job.
@@ -50211,7 +50123,7 @@ paths:
   /sendEmail:
     post:
       tags:
-        - 10.0 Common Utilities
+        - Common Utilities
       summary: Send Email
       description: "This API can be used send an email from SSM.\r\n\r\nThe `Authorization` must have `Bearer` followed by `Token`. \r\n\r\nNote: Configure SMTP in SSM before using this API. \r\n\r\nMandatory params: \r\n\r\n`to`,\r\n`from`,\r\n`subject`,\r\n`body`\r\n\r\nOptional params:\r\n\r\n`cc`,`bcc`"
       operationId: sendEmail
@@ -50285,7 +50197,7 @@ paths:
   /mobileDashboard:
     post:
       tags:
-        - 11.0 Dashboard
+        - Dashboard
       summary: Retrieve Dashboard Tiles Data
       description: "This API call can be used to fetch details like number of open userrequests, number of attestations, number of delegates, and number of pending approvals for a specific user. \r\n\r\nThe `Authorization` must have `Bearer` followed by `Token`. \r\n\r\nMandatory params:\r\n`userName`"
       operationId: retrieveDashboardTilesData
@@ -50391,7 +50303,7 @@ paths:
   /retrieveDashboardAccountData:
     post:
       tags:
-        - 11.0 Dashboard
+        - Dashboard
       summary: Retrieve Dashboard Account Data
       description: |-
         The `Authorization` must have `Bearer` followed by `Token`. 
@@ -50452,7 +50364,7 @@ paths:
   /retrieveDashboardData:
     post:
       tags:
-        - 11.0 Dashboard
+        - Dashboard
       summary: Retrieve Dashboard Data
       description: "The `Authorization` must have `Bearer` followed by `Token`.\r\n\r\nNo params"
       operationId: retrieveDashboardData
@@ -50510,7 +50422,7 @@ paths:
   /getAccessRecommendations:
     post:
       tags:
-        - 13.0 PAA
+        - Access Recommendations
       summary: Get Access Recommendations
       description: >-
         This API provides the count and details of all the recommended
@@ -50719,7 +50631,7 @@ paths:
   /exportTransportPackage:
     post:
       tags:
-        - 14.0 Transport
+        - Transport
       summary: Export Package
       description: >-
         This API creates a compressed file containing objects specified for T2P
@@ -50895,7 +50807,7 @@ paths:
   /importTransportPackage:
     post:
       tags:
-        - 14.0 Transport
+        - Transport
       summary: Import Package
       description: >-
         This API imports a compressed file containing objects specified for T2P
@@ -51027,7 +50939,7 @@ paths:
   /transportPackageStatus:
     get:
       tags:
-        - 14.0 Transport
+        - Transport
       summary: Transport Status
       description: >-
         This API obtains the status of the transport request (import, export, or
@@ -51152,7 +51064,7 @@ paths:
   /rules/technical:
     get:
       tags:
-        - 15.0 Policies
+        - Provisioning Policies
       summary: Fetch Technical Rules
       description: >-
         Starting with Release v23.11, you can use the REST API to fetch all the
@@ -59251,7 +59163,7 @@ paths:
         - bearerAuth: []
     put:
       tags:
-        - 15.0 Policies
+        - Provisioning Policies
       summary: Update Technical Rules
       description: >-
         Starting with Release v23.11, you can use the REST API to update the
@@ -59556,7 +59468,7 @@ paths:
                     msg: Rule Updated Successfully
     post:
       tags:
-        - 15.0 Policies
+        - Provisioning Policies
       summary: Create Technical Rules
       description: >-
         Starting with Release v23.11, you can use this REST API to effortlessly
@@ -59865,7 +59777,7 @@ paths:
         - bearerAuth: []
     delete:
       tags:
-        - 15.0 Policies
+        - Provisioning Policies
       summary: Delete Technical Rules
       description: >-
         Starting with Release v23.11, you can use the REST API to delete an
@@ -60003,11 +59915,11 @@ components:
       type: http
       scheme: bearer
 tags:
-  - name: 1.0 Authentication
+  - name: Authentication
   - name: 2.0 Identity Administration
   - name: Users
   - name: Accounts
-  - name: Entitlements
+  - name: Entitlements and Privileges
   - name: Privileges
   - name: Roles
   - name: Endpoints
@@ -60017,46 +59929,22 @@ tags:
   - name: Connections
   - name: SAV Roles
   - name: Dataset
-  - name: 3.0 Analytics
-  - name: 4.0 Access Request
-  - name: Create Request
-  - name: Users1
-  - name: Roles1
-  - name: Entitlements1
-  - name: Accounts1
-  - name: AD Group Management
-  - name: Entitlement Based Role
-  - name: Organization1
+  - name: Analytics
+  - name: Access Request
   - name: Bulk Update
-  - name: Update Existing Request
-  - name: Request History
   - name: Request Approval
   - name: Tasks
-  - name: Create Task
-  - name: Update Task
-  - name: AD Group
-  - name: Task Details
-  - name: Delete Task
-  - name: 5.0 Delegated Administration
-  - name: 6.0 Attestations
-  - name: 7.0 Campaigns
-  - name: User Manager
-  - name: Entitlement Owner
-  - name: Application Owner
-  - name: 8.0 Segregation of Duties
-  - name: 9.0 Password Reset
-  - name: Using SQA
-  - name: Password Policy
-  - name: 10.0 Common Utilities
+  - name: Delegated Administration
+  - name: Attestations
+  - name: Campaigns
+  - name: User Manager Campaigns
+  - name: Entitlement Owner Campaigns
+  - name: Application Owner Campaigns
+  - name: Segregation of Duties
+  - name: Password Management
+  - name: Common Utilities
   - name: Job Control
-  - name: File Directory
-  - name: Datafiles
-  - name: SAV
-  - name: 11.0 Dashboard
-  - name: 12.0 LDAP
-    description: >-
-      This collection contains rest API's to read, write, or modify data
-      directly in LDAP via Saviynt.
-  - name: 13.0 PAA
-  - name: 14.0 Transport
-  - name: 15.0 Policies
+  - name: Dashboard
+  - name: Access Recommendations
+  - name: Transport
+  - name: Policies
