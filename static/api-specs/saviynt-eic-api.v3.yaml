@@ -59923,6 +59923,7 @@ tags:
   - name: Roles
   - name: Endpoints
   - name: Security Systems
+  - name: Connections
   - name: User Groups
   - name: Organization
   - name: Connections
@@ -59946,10 +59947,22 @@ tags:
   - name: Dashboard
   - name: Access Recommendations
   - name: Transport
-  - name: Policies
+  - name: Provisioning Policies
 x-tagGroups:
-  - name: Campaigns
+  - name: Applications Collection
     tags:
+      - Endpoints
+      - Security Systems
+      - Connections
+  - name: Campaigns Collection
+    tags:
+      - Attestations
+      - Campaigns
       - User Manager Campaigns
       - Entitlement Owner Campaigns
       - Application Owner Campaigns
+  - name: Analytics Collection
+    tags:
+      - Analytics
+      - Dashboard
+      - Access Recommendations
