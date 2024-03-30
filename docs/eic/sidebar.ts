@@ -8,10 +8,10 @@ const sidebar: SidebarsConfig = {
     },
     {
       type: "category",
-      label: "1.0 Authentication",
+      label: "Authentication",
       link: {
         type: "doc",
-        id: "eic/1-0-authentication",
+        id: "eic/authentication",
       },
       items: [
         {
@@ -164,10 +164,10 @@ const sidebar: SidebarsConfig = {
     },
     {
       type: "category",
-      label: "Entitlements",
+      label: "Entitlements and Privileges",
       link: {
         type: "doc",
-        id: "eic/entitlements",
+        id: "eic/entitlements-and-privileges",
       },
       items: [
         {
@@ -223,34 +223,6 @@ const sidebar: SidebarsConfig = {
           id: "eic/remove-entitlement-from-role",
           label: "Remove Entitlement From Role",
           className: "api-method post",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "Privileges",
-      link: {
-        type: "doc",
-        id: "eic/privileges",
-      },
-      items: [
-        {
-          type: "doc",
-          id: "eic/create-privilege",
-          label: "Create Privilege",
-          className: "api-method put",
-        },
-        {
-          type: "doc",
-          id: "eic/update-privilege",
-          label: "Update Privilege",
-          className: "api-method put",
-        },
-        {
-          type: "doc",
-          id: "eic/delete-privilege",
-          label: "Delete Privilege",
-          className: "api-method put",
         },
       ],
     },
@@ -542,10 +514,10 @@ const sidebar: SidebarsConfig = {
     },
     {
       type: "category",
-      label: "3.0 Analytics",
+      label: "Analytics",
       link: {
         type: "doc",
-        id: "eic/3-0-analytics",
+        id: "eic/analytics",
       },
       items: [
         {
@@ -600,10 +572,10 @@ const sidebar: SidebarsConfig = {
     },
     {
       type: "category",
-      label: "4.0 Access Request",
+      label: "Access Request",
       link: {
         type: "doc",
-        id: "eic/4-0-access-request",
+        id: "eic/access-request",
       },
       items: [
         {
@@ -716,304 +688,8 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "doc",
-          id: "eic/approve-reject-each-line-item-in-a-request",
-          label: "Approve/Reject each line item in a request",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/get-pending-approvals",
-          label: "Get Pending Approvals",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/approve-reject-entire-request",
-          label: "Approve/Reject entire request",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/create-task-remove-entitlement",
-          label: "Create Task - Remove Entitlement",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/complete-single-task",
-          label: "Complete Single Task",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/update-tasks",
-          label: "Update Tasks",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/discontinue-tasks",
-          label: "Discontinue Tasks",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/discontinue-all-pending-tasks",
-          label: "Discontinue All Pending Tasks",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/fetch-task-details",
-          label: "Fetch Task Details",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
           id: "eic/fetch-request-access-attributes",
           label: "Fetch Request Access Attributes",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/check-task-status",
-          label: "Check Task Status",
-          className: "api-method post",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "Create Request",
-      link: {
-        type: "doc",
-        id: "eic/create-request",
-      },
-      items: [
-        {
-          type: "doc",
-          id: "eic/create-user-request",
-          label: "Create User Request",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/update-user-request",
-          label: "Update User Request",
-          className: "api-method put",
-        },
-        {
-          type: "doc",
-          id: "eic/get-requestable-users",
-          label: "Get Requestable Users",
-          className: "api-method get",
-        },
-        {
-          type: "doc",
-          id: "eic/create-role-request",
-          label: "Create Role Request",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/update-role-request",
-          label: "Update Role Request",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/get-user-requestable-entitlements",
-          label: "Get User Requestable Entitlements",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/validate-entitlement-request-data",
-          label: "Validate Entitlement Request Data",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/request-to-create-entitlement-based-role",
-          label: "Request to Create Entitlement Based Role",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/create-organization-request",
-          label: "Create Organization Request",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/update-organization-request",
-          label: "Update Organization Request",
-          className: "api-method put",
-        },
-        {
-          type: "doc",
-          id: "eic/create-auto-approved-request",
-          label: "Create Auto-approved Request",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/create-birthright-request",
-          label: "Create Birthright Request",
-          className: "api-method post",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "Users1",
-      link: {
-        type: "doc",
-        id: "eic/users-1",
-      },
-      items: [
-        {
-          type: "doc",
-          id: "eic/create-user-request",
-          label: "Create User Request",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/update-user-request",
-          label: "Update User Request",
-          className: "api-method put",
-        },
-        {
-          type: "doc",
-          id: "eic/get-requestable-users",
-          label: "Get Requestable Users",
-          className: "api-method get",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "Roles1",
-      link: {
-        type: "doc",
-        id: "eic/roles-1",
-      },
-      items: [
-        {
-          type: "doc",
-          id: "eic/create-role-request",
-          label: "Create Role Request",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/update-role-request",
-          label: "Update Role Request",
-          className: "api-method post",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "Entitlements1",
-      link: {
-        type: "doc",
-        id: "eic/entitlements-1",
-      },
-      items: [
-        {
-          type: "doc",
-          id: "eic/get-user-requestable-entitlements",
-          label: "Get User Requestable Entitlements",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/validate-entitlement-request-data",
-          label: "Validate Entitlement Request Data",
-          className: "api-method post",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "Entitlement Based Role",
-      link: {
-        type: "doc",
-        id: "eic/entitlement-based-role",
-      },
-      items: [
-        {
-          type: "doc",
-          id: "eic/request-to-create-entitlement-based-role",
-          label: "Request to Create Entitlement Based Role",
-          className: "api-method post",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "Organization1",
-      link: {
-        type: "doc",
-        id: "eic/organization-1",
-      },
-      items: [
-        {
-          type: "doc",
-          id: "eic/create-organization-request",
-          label: "Create Organization Request",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/update-organization-request",
-          label: "Update Organization Request",
-          className: "api-method put",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "Update Existing Request",
-      link: {
-        type: "doc",
-        id: "eic/update-existing-request",
-      },
-      items: [
-        {
-          type: "doc",
-          id: "eic/add-approver-to-existing-request",
-          label: "Add Approver to existing Request",
-          className: "api-method post",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "Request History",
-      link: {
-        type: "doc",
-        id: "eic/request-history",
-      },
-      items: [
-        {
-          type: "doc",
-          id: "eic/fetch-request-history-my-pending-requests",
-          label: "Fetch Request History (my pending requests)",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/fetch-request-history-details",
-          label: "Fetch Request History Details",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/cancel-pending-request",
-          label: "Cancel Pending Request",
           className: "api-method post",
         },
       ],
@@ -1026,18 +702,6 @@ const sidebar: SidebarsConfig = {
         id: "eic/request-approval",
       },
       items: [
-        {
-          type: "doc",
-          id: "eic/get-list-of-pending-requests-for-approver",
-          label: "Get List of Pending Requests for Approver",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/fetch-request-approval-details",
-          label: "Fetch Request Approval Details",
-          className: "api-method post",
-        },
         {
           type: "doc",
           id: "eic/approve-reject-each-line-item-in-a-request",
@@ -1104,12 +768,6 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "doc",
-          id: "eic/fetch-request-access-attributes",
-          label: "Fetch Request Access Attributes",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
           id: "eic/check-task-status",
           label: "Check Task Status",
           className: "api-method post",
@@ -1118,88 +776,10 @@ const sidebar: SidebarsConfig = {
     },
     {
       type: "category",
-      label: "Create Task",
+      label: "Delegated Administration",
       link: {
         type: "doc",
-        id: "eic/create-task",
-      },
-      items: [
-        {
-          type: "doc",
-          id: "eic/create-task-remove-entitlement",
-          label: "Create Task - Remove Entitlement",
-          className: "api-method post",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "Update Task",
-      link: {
-        type: "doc",
-        id: "eic/update-task",
-      },
-      items: [
-        {
-          type: "doc",
-          id: "eic/complete-single-task",
-          label: "Complete Single Task",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/update-tasks",
-          label: "Update Tasks",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/discontinue-tasks",
-          label: "Discontinue Tasks",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/discontinue-all-pending-tasks",
-          label: "Discontinue All Pending Tasks",
-          className: "api-method post",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "Task Details",
-      link: {
-        type: "doc",
-        id: "eic/task-details",
-      },
-      items: [
-        {
-          type: "doc",
-          id: "eic/fetch-task-details",
-          label: "Fetch Task Details",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/fetch-request-access-attributes",
-          label: "Fetch Request Access Attributes",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/check-task-status",
-          label: "Check Task Status",
-          className: "api-method post",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "5.0 Delegated Administration",
-      link: {
-        type: "doc",
-        id: "eic/5-0-delegated-administration",
+        id: "eic/delegated-administration",
       },
       items: [
         {
@@ -1236,10 +816,10 @@ const sidebar: SidebarsConfig = {
     },
     {
       type: "category",
-      label: "6.0 Attestations",
+      label: "Attestations",
       link: {
         type: "doc",
-        id: "eic/6-0-attestations",
+        id: "eic/attestations",
       },
       items: [
         {
@@ -1282,10 +862,10 @@ const sidebar: SidebarsConfig = {
     },
     {
       type: "category",
-      label: "7.0 Campaigns",
+      label: "Campaigns",
       link: {
         type: "doc",
-        id: "eic/7-0-campaigns",
+        id: "eic/campaigns",
       },
       items: [
         {
@@ -1302,140 +882,8 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "doc",
-          id: "eic/certify-user-manager-for-campaign",
-          label: "Certify User Manager for Campaign",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/fetch-account-entitlement-details",
-          label: "Fetch Account Entitlement Details",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/approve-reject-campaign-account-entitlement-details",
-          label: "Approve Reject Campaign Account Entitlement Details",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
           id: "eic/lock-campaign",
           label: "Lock Campaign",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/reassign-usermanager-step-1-for-campaign",
-          label: "Reassign UserManager Step 1 for Campaign",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/consult-usermanager-step-1-for-campaign",
-          label: "Consult UserManager Step 1 for Campaign",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/consult-campaign-account-entitlement-details",
-          label: "Consult Campaign Account Entitlement Details",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/reassign-certification-at-account-and-entitlement-level-copy",
-          label: "Reassign Certification at Account and Entitlement Level Copy",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/consult-entitlementowner-step-1-for-campaign",
-          label: "Consult EntitlementOwner Step 1 for Campaign",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/consult-entitlementowner-step-2-for-campaign",
-          label: "Consult EntitlementOwner Step 2 for Campaign",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/fetch-account-entitlement-details-1",
-          label: "Fetch Account Entitlement Details",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/fetch-entitlement-owner-campaign-details",
-          label: "Fetch Entitlement Owner Campaign Details",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/fetch-flat-response-entitlement-owner-campaign-details",
-          label: "Fetch Flat Response Entitlement Owner Campaign Details",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/lock-campaign-1",
-          label: "Lock Campaign",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/approve-reject-account-entitlement-details",
-          label: "Approve Reject Account Entitlement Details",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/certify-entitlement-owner-for-campaign",
-          label: "Certify Entitlement Owner for Campaign",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/reassign-entitlement-owner-for-campaign",
-          label: "Reassign Entitlement Owner for Campaign",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/reassign-certification-at-account-level",
-          label: "Reassign Certification at Account Level",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/fetch-account-entitlement-details-2",
-          label: "Fetch Account Entitlement Details",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/approve-reject-account-entitlement-details-1",
-          label: "Approve Reject Account Entitlement Details",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/lock-campaign-2",
-          label: "Lock Campaign",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/consult-appowner-account-entitlement-details",
-          label: "Consult AppOwner Account Entitlement Details",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/reassign-application-owner-for-campaign",
-          label: "Reassign Application Owner for Campaign",
           className: "api-method post",
         },
         {
@@ -1460,24 +908,12 @@ const sidebar: SidebarsConfig = {
     },
     {
       type: "category",
-      label: "User Manager",
+      label: "User Manager Campaigns",
       link: {
         type: "doc",
-        id: "eic/user-manager",
+        id: "eic/user-manager-campaigns",
       },
       items: [
-        {
-          type: "doc",
-          id: "eic/fetch-campaign-list",
-          label: "Fetch Campaign List",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/fetch-campaign-details",
-          label: "Fetch Campaign Details",
-          className: "api-method post",
-        },
         {
           type: "doc",
           id: "eic/certify-user-manager-for-campaign",
@@ -1494,12 +930,6 @@ const sidebar: SidebarsConfig = {
           type: "doc",
           id: "eic/approve-reject-campaign-account-entitlement-details",
           label: "Approve Reject Campaign Account Entitlement Details",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/lock-campaign",
-          label: "Lock Campaign",
           className: "api-method post",
         },
         {
@@ -1530,10 +960,10 @@ const sidebar: SidebarsConfig = {
     },
     {
       type: "category",
-      label: "Entitlement Owner",
+      label: "Entitlement Owner Campaigns",
       link: {
         type: "doc",
-        id: "eic/entitlement-owner",
+        id: "eic/entitlement-owner-campaigns",
       },
       items: [
         {
@@ -1600,22 +1030,16 @@ const sidebar: SidebarsConfig = {
     },
     {
       type: "category",
-      label: "Application Owner",
+      label: "Application Owner Campaigns",
       link: {
         type: "doc",
-        id: "eic/application-owner",
+        id: "eic/application-owner-campaigns",
       },
       items: [
         {
           type: "doc",
           id: "eic/fetch-account-entitlement-details-2",
           label: "Fetch Account Entitlement Details",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/approve-reject-account-entitlement-details-1",
-          label: "Approve Reject Account Entitlement Details",
           className: "api-method post",
         },
         {
@@ -1640,10 +1064,10 @@ const sidebar: SidebarsConfig = {
     },
     {
       type: "category",
-      label: "8.0 Segregation of Duties",
+      label: "Segregation of Duties",
       link: {
         type: "doc",
-        id: "eic/8-0-segregation-of-duties",
+        id: "eic/segregation-of-duties",
       },
       items: [
         {
@@ -1674,10 +1098,10 @@ const sidebar: SidebarsConfig = {
     },
     {
       type: "category",
-      label: "9.0 Password Reset",
+      label: "Password Management",
       link: {
         type: "doc",
-        id: "eic/9-0-password-reset",
+        id: "eic/password-management",
       },
       items: [
         {
@@ -1720,114 +1144,16 @@ const sidebar: SidebarsConfig = {
     },
     {
       type: "category",
-      label: "Using SQA",
+      label: "Common Utilities",
       link: {
         type: "doc",
-        id: "eic/using-sqa",
+        id: "eic/common-utilities",
       },
       items: [
-        {
-          type: "doc",
-          id: "eic/fetch-security-questions",
-          label: "Fetch Security Questions",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/fetch-user-security-questions",
-          label: "Fetch User Security Questions",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/validate-user-security-answers",
-          label: "Validate User Security Answers",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/create-security-questions",
-          label: "Create Security Questions",
-          className: "api-method post",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "Password Policy",
-      link: {
-        type: "doc",
-        id: "eic/password-policy",
-      },
-      items: [
-        {
-          type: "doc",
-          id: "eic/create-password-policy",
-          label: "Create Password Policy",
-          className: "api-method post",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "10.0 Common Utilities",
-      link: {
-        type: "doc",
-        id: "eic/10-0-common-utilities",
-      },
-      items: [
-        {
-          type: "doc",
-          id: "eic/create-and-update-trigger",
-          label: "Create and Update Trigger",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/check-job-status",
-          label: "Check Job Status",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/delete-trigger",
-          label: "Delete Trigger",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/run-job-trigger",
-          label: "Run Job Trigger",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/fetch-job-metadata",
-          label: "Fetch Job Metadata",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/createtrigger",
-          label: "createTrigger",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/resumepausejobs",
-          label: "resumePauseJobs",
-          className: "api-method post",
-        },
         {
           type: "doc",
           id: "eic/upload-new-file",
           label: "Upload New File",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/test-connection",
-          label: "Test Connection",
           className: "api-method post",
         },
         {
@@ -1858,11 +1184,103 @@ const sidebar: SidebarsConfig = {
     },
     {
       type: "category",
-      label: "Job Control",
+      label: "Dashboard",
       link: {
         type: "doc",
-        id: "eic/job-control",
+        id: "eic/dashboard",
       },
+      items: [
+        {
+          type: "doc",
+          id: "eic/retrieve-dashboard-tiles-data",
+          label: "Retrieve Dashboard Tiles Data",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "eic/retrieve-dashboard-account-data",
+          label: "Retrieve Dashboard Account Data",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "eic/retrieve-dashboard-data",
+          label: "Retrieve Dashboard Data",
+          className: "api-method post",
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "Access Recommendations",
+      link: {
+        type: "doc",
+        id: "eic/access-recommendations",
+      },
+      items: [
+        {
+          type: "doc",
+          id: "eic/get-access-recommendations",
+          label: "Get Access Recommendations",
+          className: "api-method post",
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "Transport",
+      link: {
+        type: "doc",
+        id: "eic/transport",
+      },
+      items: [
+        {
+          type: "doc",
+          id: "eic/export-package",
+          label: "Export Package",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "eic/import-package",
+          label: "Import Package",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "eic/transport-status",
+          label: "Transport Status",
+          className: "api-method get",
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "User Manager",
+      items: [
+        {
+          type: "doc",
+          id: "eic/fetch-campaign-details",
+          label: "Fetch Campaign Details",
+          className: "api-method post",
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "Application OwnerCampaigns",
+      items: [
+        {
+          type: "doc",
+          id: "eic/approve-reject-account-entitlement-details-1",
+          label: "Approve Reject Account Entitlement Details",
+          className: "api-method post",
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "Job Management",
       items: [
         {
           type: "doc",
@@ -1910,115 +1328,19 @@ const sidebar: SidebarsConfig = {
     },
     {
       type: "category",
-      label: "File Directory",
-      link: {
-        type: "doc",
-        id: "eic/file-directory",
-      },
+      label: "Connection",
       items: [
         {
           type: "doc",
-          id: "eic/upload-new-file",
-          label: "Upload New File",
+          id: "eic/test-connection",
+          label: "Test Connection",
           className: "api-method post",
         },
       ],
     },
     {
       type: "category",
-      label: "SAV",
-      link: {
-        type: "doc",
-        id: "eic/sav",
-      },
-      items: [
-        {
-          type: "doc",
-          id: "eic/upload-new-file",
-          label: "Upload New File",
-          className: "api-method post",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "11.0 Dashboard",
-      link: {
-        type: "doc",
-        id: "eic/11-0-dashboard",
-      },
-      items: [
-        {
-          type: "doc",
-          id: "eic/retrieve-dashboard-tiles-data",
-          label: "Retrieve Dashboard Tiles Data",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/retrieve-dashboard-account-data",
-          label: "Retrieve Dashboard Account Data",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/retrieve-dashboard-data",
-          label: "Retrieve Dashboard Data",
-          className: "api-method post",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "13.0 PAA",
-      link: {
-        type: "doc",
-        id: "eic/13-0-paa",
-      },
-      items: [
-        {
-          type: "doc",
-          id: "eic/get-access-recommendations",
-          label: "Get Access Recommendations",
-          className: "api-method post",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "14.0 Transport",
-      link: {
-        type: "doc",
-        id: "eic/14-0-transport",
-      },
-      items: [
-        {
-          type: "doc",
-          id: "eic/export-package",
-          label: "Export Package",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/import-package",
-          label: "Import Package",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "eic/transport-status",
-          label: "Transport Status",
-          className: "api-method get",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "15.0 Policies",
-      link: {
-        type: "doc",
-        id: "eic/15-0-policies",
-      },
+      label: "Provisioning Policies",
       items: [
         {
           type: "doc",
