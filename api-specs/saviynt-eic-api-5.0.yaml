@@ -59949,7 +59949,7 @@ tags:
   - name: Provisioning Policies
   - name: Dataset
 x-tagGroups:
-  - name: Identity Collection
+  - name: 1Identity Administration
     tags:
       - Authentication
       - Users
@@ -59959,12 +59959,12 @@ x-tagGroups:
       - Roles
       - User Groups
       - Organization
-  - name: Policies
+  - name: Policies Collection
     tags:
       - Provisioning Policies
       - Segregation of Duties
       - Password Management
-  - name: Request Collection
+  - name: Request
     tags:
       - Access Request
       - User Request
