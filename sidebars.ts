@@ -9,27 +9,66 @@
  Create as many sidebars as you want.
  */
  import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
+ import eicVersions from "./docs/eic/versions.json";
 
  import {
    versionCrumb,
    versionSelector,
  } from "docusaurus-plugin-openapi-docs/lib/sidebars/utils";
  
-import eicSidebar from "./docs/eic/sidebar";
- 
+import eic_5_0_Sidebar from "./docs/eic/sidebar";
+import eic_2_0_Sidebar from "./docs/eic/2.0/sidebar";
+
  const sidebars: SidebarsConfig = {
-   eicSidebar: [
+  "eic-5.0.0": [
+    {
+      type: "html",
+      defaultStyle: true,
+      value: versionSelector(eicVersions),
+      className: "version-button",
+    },
+    {
+      type: "html",
+      defaultStyle: true,
+      value: versionCrumb(`v5.0.0`),
+    },
     {
       type: "category",
-      label: "eic",
+      label: "EIC",
       link: {
         type: "generated-index",
-        title: "Saviynt API",
+        title: "v5.0.0 (latest)",
         description:
-          "This is a sample server Saviynt server. ",
-        slug: "/api/eic/",
+          "This is a sample server Petstore server. You can find out more about Swagger at http://swagger.io or on irc.freenode.net, #swagger. For this sample, you can use the api key special-key to test the authorization filters.",
+        slug: "/eic/rest/5.0",
       },
-      items: eicSidebar,
+      items: eic_5_0_Sidebar,
+    },
+  ],
+
+  "eic-1.0.0": [
+    {
+      type: "html",
+      defaultStyle: true,
+      value: versionSelector(eicVersions),
+      className: "version-button",
+    },
+    {
+      type: "html",
+      defaultStyle: true,
+      value: versionCrumb(`v2.0.0`),
+    },
+    {
+      type: "category",
+      label: "EIC",
+      link: {
+        type: "generated-index",
+        title: "v2.0.0",
+        description:
+          "This is a Saviynt EIC API Spec for V2.0.  For this sample, you can use the api key special-key to test the authorization filters.",
+        slug: "/eic/rest/2.0",
+      },
+      items: eic_2_0_Sidebar,
     },
   ],
  };

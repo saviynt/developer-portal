@@ -1,0 +1,404 @@
+---
+id: edit-delegate
+title: "Edit Delegate"
+description: "This method is used to edit a specific delegate. The input parameters of this method contain the details of the Parent User as well as the one to whom the Delegation is carried out."
+sidebar_label: "Edit Delegate"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV1lv2zgQ/isEn1pA8pGz0aIPqeMWwSIHEgfYIA1gWhxHrCVSJSk7WkP/fTGkZMvO4Twv+mSKnOv7ZjgcL6llT4ZGD/TOgCZnkMITs0JJ+hhQDibWInefER0lwpAMbKI4EYYUBjixigAXljBicojFVMSEexPQIaMEiJB5YUnONMvAgjZETYltGYqVtExIYhMgHCwTaS0C5JppkJa4uJghC0hT/MUjJQFdLxKVue912BhZzLQWwIkqbOen/CkxjvFpYROlxb9OakyywliSsDmQ8TdgGvSYTFWaqgVwMinJeKRmIMdO/YJJzqzSpYdhIoK74xmUYxJ6MMLUADz0GZSBkykM6EuWQVsQ9zByt845s0I+tbWFkl5Z1or4i5w01v1p84Xm5JYLtLZyYxJVpJxMgDBjxJME3rDYmGgIzz3hqLnpw1imLWfWORGSTJXOmCUXF2dn9/f3m7Ig+ZuSKHjlyomlDZlO2Xt+C0orLjwOiJgSqbCqDNagsGQh0hRLyQgOmrRoZ4Zs2q5jXdX1mAZU5aAd7+ecRhTrua4noAHV8LsAY78pXtJoSbFeQVpcsjxPRewUu8/hYrEIEW1Y6BRkrDhwFDJxAhnDlS1zoBFVk18QWxrQXKNfK8Dg6RZ9LQVjtZBPNKDwzLI8xa1+r7+31+t/oVVAX+TofdXeSf9gW7Xh5n1NFis182qtrvCeBgaFCjMo3xfcO0ax3SE0ATeGN1O7Q3fCRAolqjXlsQMvz4SkVVWtNl2ihtjuVvURLemcpQW8msJ1nl5N0zoXr6Wi5nu7CTvoNaXIW0PbJjcvqVnhb8NfY3QwNZhcSeNx7vV6HlTb+yb4gCbAOGgnf1bT8aLgX6F2lBQB6e+TW8gJEkB6vah/HPVOyI+LEcVQbkHPQX/U3mnO4gTCgSqVhW6/069t2HCg1Ex8OK7B4Pbmezi6+nt4+XV/sn90eDzdD1l89CU8OJwchSd9vhf2YNLj7JAdnExP/iLXzCZfu87dSDNppqDDId5+NP1Br3FSyBlwZ+Sf8Du+lKHvkuajJm5PL4ZXN+c/zi99wb7RpX4Zf2U/2pRAa6UHiu/qKXipMvP0vtSqbsgdvnoO8IfvVisS2qO1t9dN+lpeTxw0elg2lyRnNqEBFXK9xv4uNDZrqwsI3qS7qh4D6ocWVFb1LbMJjWh3680wrnq950KnNKKJtbmJut2lBcmkrTqGzUUpbZyqgndilXWHg4suy0V3fkgDOmdasEnNild5eRnrfewQU1akFt+umu3KRWsgLrSw5S1C8rYmzIgYR6EWQIyN1sDx28lgSiduMNol7YRc8Qo5VU5SWF+VHiMZSgs618IAOecgrbAlGSBwcnp9Tm5gChpkDC96nRs4BypNIXajXa7VXHAwrw2LpshzpS3werA0OHq4k91RfBqeDz4j66CN93zY6XVcVWOeM+YuTV1C2y1w6zVc3bw/4/Kfcfn/OS7XjcDCs+3mKcMBIvBtblk3xIfNIfoxoAn2y+iBLpcTZuBOp1WF278L0CWNHh7XLc81TS4MrjmNpiw18M4t+3RT9+/P5K3Q6k0mS9dZ3YtCVzOUi7h6rJphxvn3RwPvJRyhgbXq7rm/ChoTp3EMuX1D2T3HG8/K9dXtiAZ0Uv/ZyPyD17IctD+ih8eqqv4DP+F8Qg==
+sidebar_class_name: "post api-method"
+info_path: eic/2.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Edit Delegate"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/editDelegate"}
+>
+  
+</MethodEndpoint>
+
+
+
+This method is used to edit a specific delegate. The input parameters of this method contain the details of the Parent User as well as the one to whom the Delegation is carried out.
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+Mandatory params: 
+
+`key` - this is the delegatekey,
+
+`userName` - this is user who is updating the delegation,
+
+`name` - name of delegate,
+
+`delegateusername` - this is the user who should be assigned as the delegate of the parent user,
+
+`delegatestartdate` - in format MMDDYYY,
+
+`delegateenddate` - in format MMDDYYY
+
+Optional params:
+
+`parentusername` - this is the parent username, if not passed it will consider `userName` as parentusername
+
+`description`
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"path","in":"path","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/x-www-form-urlencoded"}
+    value={"application/x-www-form-urlencoded-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"delegateenddate"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"10122018"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"delegatestartdate"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"09142018"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"delegateusername"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"acook"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"description"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"test"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"key"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"27"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"name"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"delegatetest"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"parentusername"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"dbailey"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"userName"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"admin"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Edit Delegate
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":" Delegate Updated"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \" Delegate Updated\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Edit Delegate"}
+                  value={"Edit Delegate"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \" Delegate Updated\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

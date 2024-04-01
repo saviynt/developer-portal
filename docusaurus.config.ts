@@ -7,7 +7,7 @@ import { DOCUSAURUS_VERSION } from "@docusaurus/utils";
 
 const config: Config = {
   title: "Saviynt Developer Portal",
-  tagline: "OpenAPI plugin for generating API reference docs in Docusaurus v2",
+  tagline: "Portal for helping developers build a rich ecosystem of tools and apps to support Saviynt",
   url: "https://saviynt.github.io",
   baseUrl: "/developer-portal/",
   onBrokenLinks: "warn",
@@ -54,7 +54,7 @@ const config: Config = {
       items: [
         {
           label: "Reference",
-          to: "/api/eic/",
+          to: "/eic/rest/5.0",
         },
         {
           href: "https://docs.saviyntcloud.com/",
@@ -86,14 +86,18 @@ const config: Config = {
           title: "Community",
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/saviynt",
+              label: "Forums",
+              href: "https://forums.saviynt.com/",
             },
           ],
         },
         {
           title: "More",
           items: [
+            {
+              label: "Twitter",
+              href: "https://twitter.com/saviynt",
+            },
             {
               label: "Forum",
               href: "https://forums.saviynt.com/",
@@ -190,12 +194,23 @@ const config: Config = {
         config: {
           saviynt:{
             specPath: "static/api-specs/saviynt-eic-api-5.0.yaml",
-            outputDir: "docs/eic",
+            outputDir: "docs/eic/",
             sidebarOptions: {
               groupPathsBy: "tagGroup",
               // categoryLinkSource: "tag",
             },
-          },
+            version: "5.0.0", // Current version
+            label: "v5.0.0", // Current version label
+            baseUrl: "/developer-portal/eic/rest/5.0", // Leading slash is important
+            versions: {
+              "2.0.0": {
+                specPath: "static/api-specs/saviynt-eic-api-2.0.yaml",
+                outputDir: "docs/eic/2.0", // No trailing slash
+                label: "v2.0.0",
+                baseUrl: "/developer-portal/eic/rest/2.0", // Leading slash is important
+              },
+            },
+          } satisfies OpenApiPlugin.Options,
         } satisfies Plugin.PluginOptions,
       },
     ],

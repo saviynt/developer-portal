@@ -1,0 +1,480 @@
+---
+id: update-privilege
+title: "Update Privilege"
+description: "This API updates an endpoint in EIC."
+sidebar_label: "Update Privilege"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "put api-method"
+info_path: eic/2.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update Privilege"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/updatePrivilege"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API updates an endpoint in EIC.  
+The Authorization must have a Bearer followed by a Token.  
+Mandatory parameters:  
+• Endpoint  
+• Securitysystem  
+• Entitlementtype  
+• attributename
+
+Optional parameters:  
+• attributetype((BOOLEAN/NUMBER/STRING/ENUM/MULTIPLE SELECT FROM LIST/MULTIPLE SELECT FROM SQL QUERY/SINGLE SELECT FROM SQL QUERY/PASSWORD/LARGE TEXT/CHECK BOX/DATE)),  
+• orderindex,  
+• defaultvalues,  
+• attributeconfig(entitlement-based/user-based),  
+• label,  
+• attributegroup,  
+• parentattribute,  
+• childaction,  
+• description,  
+• actionstring,  
+• required(true/false),  
+• requestable(true/false),  
+• hideoncreate(true/false),  
+• hideonupdate(true/false)
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"path","in":"path","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        any
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Update Privilege
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Credentials
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Origin
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Cache-Control
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Connection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Content-Language
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Content-Security-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Expires
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Permissions-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Pragma
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Referrer-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-XSS-Protection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"text/plain"}
+              value={"text/plain"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      any
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Update Privilege"}
+                  value={"Update Privilege"}
+                >
+                  <ResponseSamples
+                    responseExample={"\r\n\n<!DOCTYPE html>\n<!--[if IE 8]>\n<html lang=\"en\" class=\"ie8 no-js\">\n    <![endif]-->\n    <!--[if IE 9]>\n    <html lang=\"en\" class=\"ie9 no-js\">\n        <![endif]-->\n        <!--[if !IE]>\n        <!-->\n        <html lang=\"en\" class=\"no-js\">\n            <!--\n            <![endif]-->\n            <!-- BEGIN HEAD -->\n            <!-- BEGIN HEAD -->\n            <head>\n                <meta charset=\"utf-8\"/>\n                <title>Saviynt Security Manager Login</title>\n                <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n                <meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\"/>\n                <meta name=\"MobileOptimized\" content=\"320\">\n                <!-- BEGIN CORE PLUGINS -->\n                <!--[if lt IE 9]>\n                <script src=\"/ECM/assets/plugins/excanvas.min.js\"></script>\n                <script src=\"/ECM/assets/plugins/respond.min.js\"></script>\n                <![endif]-->\n                <script src=\"/ECM/assets/plugins/jquery-1.12.4.min.js\" type=\"text/javascript\"></script>\n                <script src=\"/ECM/assets/plugins/jquery-migrate-1.2.1.min.js\" type=\"text/javascript\"></script>\n                <script type=\"text/javascript\" src=\"/ECM/assets/plugins/jquery-ui/jquery-ui.js\"></script>\n                <script src=\"/ECM/assets/plugins/bootstrap/js/bootstrap.min.js\" type=\"text/javascript\"></script>\n                <script src=\"/ECM/assets/plugins/bootstrap-hover-dropdown/twitter-bootstrap-hover-dropdown.min.js\"\r\n            type=\"text/javascript\"></script>\n                <script src=\"/ECM/assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js\"\r\n            type=\"text/javascript\"></script>\n                <script src=\"/ECM/assets/plugins/jquery-slimscroll/jquery.slimscrollHorizontal.js\"\r\n            type=\"text/javascript\"></script>\n                <script src=\"/ECM/assets/plugins/jquery.blockui.min.js\" type=\"text/javascript\"></script>\n                <script src=\"/ECM/assets/plugins/jquery.cookie.min.js\" type=\"text/javascript\"></script>\n                <script src=\"/ECM/assets/plugins/uniform/jquery.uniform.min.js\" type=\"text/javascript\"></script>\n                <script src=\"/ECM/assets/plugins/bootbox.js\" type=\"text/javascript\"></script>\n                <link href=\"/ECM/assets/plugins/bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\"\r\n          type=\"text/css\"/>\n                <link href=\"/ECM/assets/plugins/bootstrap-modal/css/bootstrap-modal.css\" rel=\"stylesheet\"\r\n          type=\"text/css\"/>\n                <link href=\"/ECM/assets/plugins/bootstrap-modal/css/bootstrap-modal-bs3patch.css\"\r\n          rel=\"stylesheet\" type=\"text/css\"/>\n                <!-- BEGIN GLOBAL MANDATORY STYLES -->\n                <link href=\"/ECM/assets/plugins/font-awesome/css/font-awesome.min.css\" rel=\"stylesheet\"\r\n          type=\"text/css\"/>\n                <link href=\"/ECM/assets/plugins/uniform/css/uniform.default.css\" rel=\"stylesheet\"\r\n          type=\"text/css\"/>\n                <!-- END GLOBAL MANDATORY STYLES -->\n                <!-- BEGIN PAGE LEVEL STYLES -->\n                <link rel=\"stylesheet\" type=\"text/css\" href=\"/ECM/assets/plugins/select2/select2_metro.css\"/>\n                <!-- END PAGE LEVEL SCRIPTS -->\n                <!-- BEGIN THEME STYLES -->\n                <link href=\"/ECM/assets/css/style-metronic.css\" rel=\"stylesheet\" type=\"text/css\"/>\n                <link href=\"/ECM/assets/css/style.css\" rel=\"stylesheet\" type=\"text/css\"/>\n                <link href=\"/ECM/assets/css/style-responsive.css\" rel=\"stylesheet\" type=\"text/css\"/>\n                <link href=\"/ECM/assets/css/plugins.css\" rel=\"stylesheet\" type=\"text/css\"/>\n                <link href=\"/ECM/assets/css/themes/default.css\" rel=\"stylesheet\" type=\"text/css\"\r\n          id=\"style_color\"/>\n                <link href=\"/ECM/assets/css/pages/login-soft.css\" rel=\"stylesheet\" type=\"text/css\"/>\n                <link href=\"/ECM/assets/css/custom.css\" rel=\"stylesheet\" type=\"text/css\"/>\n                <!-- END THEME STYLES -->\n                <!DOCTYPE html>\n                <link rel=\"shortcut icon\" type=\"image/jpg\" href=\"/ECMv6/api/idw/resource/image/app/title.png\"/>\n                <style type=\"text/css\">\r\n    .redborder {\r\n        border: 1px solid red;\r\n    }\r\n\r\n    .normborder {\r\n        border: 1px solid #e5e5e5;\r\n    }\r\n    .footer{\r\n        position: absolute;\r\n        left: 0;\r\n        right: 0;\r\n        bottom: 0;\r\n    }\r\n    .login-footer {\r\n        position: absolute;\r\n        bottom: 0;\r\n        width: 100%;\r\n        padding-bottom: 10px;\r\n    }\r\n    .login-footer .login-copyright {\r\n        padding-left: 0;\r\n        margin-top: 6px;\r\n    }\r\n\r\n    .login-footer .login-copyright > p {\r\n        margin: 0;\r\n        font-size: 13px;\r\n        color: #000000;\r\n    }\r\n\r\n    .select2-container .select2-choice{\r\n        border: 1px solid #e5e5e5 !important;\r\n    }\r\n\r\n    .select2-container-active .select2-choice{\r\n        border: 1px solid #e5e5e5 !important;\r\n    }\r\n    </style>\n            </head>\n            <!-- END HEAD -->\n            <!-- BEGIN BODY -->\n            <body class=\"login\">\n                <div class=\"user-login\">\n                    <div class=\"row bs-reset\">\n                        <div class=\"col-md-7 bs-reset mt-login-bsfix\">\n                            <!DOCTYPE html>\n                            <div class=\"login-bg\" style=\"background-image: url('/ECMv6/api/idw/resource/image/app/bg1.jpg')\">\n                                <img class=\"login-logo\" src=\"/ECMv6/api/idw/resource/image/app/SaviyntR_White-Original.png\" alt=\"Saviynt\"  height=\"40\"/>\n                            </div>\n                        </div>\n                        <div class=\"col-md-5 login-container\">\n                            <div class=\"col-md-9 col-lg-8 login-content loginclass\" style=\"\">\n                                <h1>Sign in</h1>\n                                <!-- BEGIN LOGIN FORM -->\n                                <form class=\"login-form\" action='/ECM/j_spring_security_check' method=\"post\">\n                                    <div class=\"alert alert-danger display-hide\">\n                                        <button class=\"close\" data-close=\"alert\"></button>\n                                        <span>Enter Username And Password\r\n                            </span>\n                                    </div>\n                                    <div class=\"form-label-group\">\n                                        <span class=\"icon-placeholder\">\n                                            <svg data-name=\"user\" width=\"14px\" height=\"15px\" viewBox=\"0 0 14 15.57\" fill=\"#e9ebf2\">\n                                                <g>\n                                                    <path d=\"M7 7.44a3.72 3.72 0 1 0-3.73-3.72A3.73 3.73 0 0 0 7 7.44zM10.63 8.3a2.82 2.82 0 0 0-2.37.11 3.94 3.94 0 0 1-1.28.3 3.94 3.94 0 0 1-1.29-.33 2.86 2.86 0 0 0-2.39-.11C1.14 9.48-.01 11.8-.01 14.99v.55h14v-.55c-.01-3.17-1.16-5.5-3.36-6.69z\"></path>\n                                                </g>\n                                            </svg>\n                                        </span>\n                                        <input class=\"form-control form-control-solid placeholder-no-fix\" id=\"username\" type=\"text\" autocomplete=\"off\" placeholder=\"Username\" onkeypress=\"if (event.keyCode == 13) {document.forms[0].submit();}\" name=\"j_username\"/>\n                                        <span id=\"blankusername\" class=\"älert alert-danger\"></span>\n                                    </div>\n                                    <div class=\"form-label-group\">\n                                        <span class=\"icon-placeholder\">\n                                            <svg data-name=\"key\" width=\"14px\" height=\"14px\" viewBox=\"0 0 14 13.96\">\n                                                <path d=\"M5.23 6.59a3.82 3.82 0 1 0 1.29 6.25 3.78 3.78 0 0 0 .87-4l1-1 .31-1.82 1.73-.3.3-.3.27-1.69 1.73-.3L14 2.2V.02h-2.2zM3.6 11.65a.87.87 0 1 1 0-1.23.86.86 0 0 1 0 1.23z\" fill=\"#e9ebf2\"></path>\n                                            </svg>\n                                        </span>\n                                        <input class=\"form-control form-control-solid placeholder-no-fix\" type=\"password\" autocomplete=\"off\" placeholder=\"Password\" onkeypress=\"if (event.keyCode == 13) {document.forms[0].submit();}\"\r\n                                       name=\"j_password\"/>\n                                    </div>\n                                    <div class=\"row\">\n                                        <div class=\"col-sm-12 text-right\">\n                                            <div class=\"forgot-password\">\n                                                <a  href=\"javascript: submitForm('/ECM/maintenance/forgotpassword')\">\r\n                                        Forgot your password?</a>\n                                            </div>\n                                            <button class=\"btn blue\" type=\"submit\" onclick=\"showSpinner();\">\r\n                                    Login\r\n                                </button>\n                                        </div>\n                                    </div>\n                                </if>\n                            </form>\n                        </div>\n                        <div class=\"login-footer footer\">\n                            <div class=\"row bs-reset\">\n                                <div class=\"col-xs-12 bs-reset\">\n                                    <div class=\"login-copyright text-right\">\n                                        <p style=\"color:black\">  Saviynt veic-trunk, &copy;   Copyright 2023, Saviynt All Rights Reserved. Use is subject to license terms. </p>\n                                        <br>\n                                        <a  href=\"\" data-toggle=\"modal\" type=\"button\" id=\"showSendRequestForm\" onclick=\"showSendNewRequestForm()\">\n                                            <i class=\"icon-envelope\"></i>\r\n                                        Support Request\n                                        </a>\n                                    </p>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <!-- END LOGIN -->\n        <script src=\"/ECM/assets/plugins/backstretch/jquery.backstretch.min.js\"\r\n        type=\"text/javascript\"></script>\n        <script type=\"text/javascript\" src=\"/ECM/assets/plugins/select2/select2.min.js\"></script>\n        <script src=\"/ECM/assets/plugins/bootstrap-modal/js/bootstrap-modalmanager.js\" type=\"text/javascript\"></script>\n        <script src=\"/ECM/assets/plugins/bootstrap-modal/js/bootstrap-modal.js\" type=\"text/javascript\"></script>\n        <script src=\"/ECM/assets/plugins/backstretch/jquery.backstretch.min.js\" type=\"text/javascript\"></script>\n        <script src=\"/ECM/assets/scripts/app.js\" type=\"text/javascript\"></script>\n        <script src=\"/ECM/assets/scripts/login-soft.js\" type=\"text/javascript\"></script>\n        <!-- END PAGE LEVEL SCRIPTS -->\n        <script type=\"text/javascript\">\r\n    jQuery(document).ready(function () {\r\n        // $('.login-bg').backstretch([\r\n        //         \"../images/bg1.jpg\",\r\n        //         \"../images/bg2.jpg\",\r\n        //         \"../images/bg3.jpg\",\r\n        //         \"../images/bg4.jpg\",\r\n        //         \"../images/bg5.jpg\",\r\n        //         \"../images/bg6.jpg\",\r\n        //         \"../images/bg7.jpg\",\r\n        //         \"../images/bg8.jpg\",\r\n        //         \"../images/bg9.jpg\"\r\n        //     ], {\r\n        //         fade: 1000,\r\n        //         duration: 8000\r\n        //     }\r\n        // );\r\n        const isNewUISet=\"true\"\r\n        App.loadCarousel(isNewUISet);\r\n        App.init();\r\n        Login.init();\r\n    });\r\n    $('#selecteddomain').select2();\r\n    function ajaxLoader(el, options) {\r\n        // Becomes this.options\r\n        var defaults = {\r\n            bgColor:'#fff',\r\n            duration:800,\r\n            opacity:0.7,\r\n            classOveride:false\r\n        }\r\n        this.options = jQuery.extend(defaults, options);\r\n        this.container = $(el);\r\n        this.init = function () {\r\n            var container = this.container;\r\n            // Delete any other loaders\r\n            this.remove();\r\n            $(\"#newspinner\").css(\"display\", \"block\");\r\n            // Create the overlay\r\n            var overlay = $('\n            <div></div>').css({\r\n                'background-color':this.options.bgColor,\r\n                'opacity':this.options.opacity,\r\n                'width':container.width(),\r\n                'height':container.height(),\r\n                'position':'absolute',\r\n                'top':'0px',\r\n                'left':'0px',\r\n                'z-index':99999\r\n            }).addClass('ajax_overlay');\r\n            // add an overiding class name to set new loader style\r\n            if (this.options.classOveride) {\r\n                overlay.addClass(this.options.classOveride);\r\n            }\r\n            // insert overlay and loader into DOM\r\n            container.append(\r\n                overlay.append(\r\n                    $('\n            <div></div>').addClass('ajax_loader')\r\n                ).fadeIn(this.options.duration)\r\n            );\r\n        };\r\n\r\n        this.remove = function () {\r\n            var overlay = this.container.children(\".ajax_overlay\");\r\n            if (overlay.length) {\r\n                overlay.fadeOut(this.options.classOveride, function () {\r\n                    overlay.remove();\r\n                    document.getElementById('newspinner').style.display = 'none'\r\n                });\r\n            }\r\n        }\r\n\r\n        this.init();\r\n    }\r\n    var box1;\r\n    function showSpinner() {\r\n        box1 = new ajaxLoader(document.getElementById('newspinner'));\r\n    }\r\n    function hideSpinner() {\r\n        if (box1 == null) {\r\n\r\n        }\r\n        else {\r\n            box1.remove();\r\n        }\r\n\r\n    }\r\n    function showSendNewRequestForm() {\r\n        completepath = \"/ECM/maintenance/showSendNewRequestForm\";\r\n        $('.opened-dialogs').dialog(\"close\");\r\n\r\n        $('\n            <div class=\"opened-dialogs\">').html('loading...').dialog({\r\n            position:  ['center',25],\r\n            open: function () {\r\n                $(this).load(completepath);\r\n                $('.ui-widget-overlay').css('background', 'black'); //write background color change code here\r\n\r\n            },\r\n            close: function(event, ui) {\r\n                $(this).remove();\r\n            },\r\n\r\n            title:'',\r\n            minWidth: 600,\r\n            modal: true,\r\n            draggable: false,\r\n            resizable: false,\r\n            show: {effect: 'fade'},\r\n            hide: {effect: 'fade'},\r\n            width: 400,\r\n            dialogClass: 'ui-dialog-osx'\r\n        });\r\n    }\r\n    function handleSubmit(obj) {\r\n        var proceed = true;\r\n        if (document.getElementById('firstName').value == '') {\r\n\r\n            $('#firstName').removeClass(\"normborder\");\r\n            $('#firstName').addClass('redborder');\r\n            document.getElementById('blankfirstname').innerHTML = 'First Name cannot be blank';\r\n            proceed = false;\r\n        }\r\n        else {\r\n            $('#firstName').removeClass(\"redborder\");\r\n            $('#firstName').addClass('normborder');\r\n            document.getElementById('blankfirstname').innerHTML = ''\r\n\r\n        }\r\n\r\n        if (document.getElementById('lastName').value == '') {\r\n            $('#lastName').removeClass(\"normborder\");\r\n            $('#lastName').addClass('redborder');\r\n            document.getElementById('blanklastname').innerHTML = 'Last Name cannot be blank';\r\n            proceed = false;\r\n        }\r\n        else {\r\n            $('#lastName').removeClass(\"redborder\");\r\n            $('#lastName').addClass('normborder');\r\n            document.getElementById('blanklastname').innerHTML = ''\r\n\r\n        }\r\n\r\n        if (document.getElementById('email').value == '') {\r\n            $('#email').removeClass(\"normborder\");\r\n            $('#email').addClass('redborder');\r\n            document.getElementById('invalidemail').innerHTML = 'Email cannot be blank';\r\n            proceed = false;\r\n        }\r\n        else {\r\n            var email = document.getElementById('email').value;\r\n            var atpos = email.indexOf(\"@\");\r\n            var dotpos = email.lastIndexOf(\".\");\r\n            if (atpos\n                <1 || dotpos\n                    <atpos+2 || dotpos+2>=email.length) {\r\n                $('#email').removeClass(\"normborder\");\r\n                $('#email').addClass('redborder');\r\n                document.getElementById('invalidemail').innerHTML = 'Email is not valid';\r\n                proceed = false;\r\n            } else {\r\n                $('#email').removeClass(\"redborder\");\r\n                $('#email').addClass('normborder');\r\n                document.getElementById('invalidemail').innerHTML = ''\r\n            }\r\n        }\r\n\r\n        if (document.getElementById('company').value == '') {\r\n            $('#company').removeClass(\"normborder\");\r\n            $('#company').addClass('redborder');\r\n            document.getElementById('blankcompany').innerHTML = 'Company cannot be blank';\r\n            proceed = false;\r\n        }\r\n        else {\r\n            $('#company').removeClass(\"redborder\");\r\n            $('#company').addClass('normborder');\r\n            document.getElementById('blankcompany').innerHTML = ''\r\n\r\n        }\r\n\r\n        if (document.getElementById('phoneNumber').value == '') {\r\n            $('#phoneNumber').removeClass(\"normborder\");\r\n            $('#phoneNumber').addClass('redborder');\r\n            document.getElementById('invalidphonenubmer').innerHTML = 'Phone Number cannot be blank';\r\n            proceed = false;\r\n        }\r\n        else {\r\n            $('#phoneNumber').removeClass(\"redborder\");\r\n            $('#phoneNumber').addClass('normborder');\r\n            document.getElementById('invalidphonenubmer').innerHTML = ''\r\n\r\n        }\r\n\r\n        if (document.getElementById('description').value == '') {\r\n            $('#description').removeClass(\"normborder\");\r\n            $('#description').addClass('redborder');\r\n            document.getElementById('blankdescription').innerHTML = 'Comments cannot be blank';\r\n            proceed = false;\r\n        }\r\n        else {\r\n            $('#description').removeClass(\"redborder\");\r\n            $('#description').addClass('normborder');\r\n            document.getElementById('blankdescription').innerHTML = ''\r\n\r\n        }\r\n        //SD-1727 captcha condition check\r\n        var validate=false\r\n        validate=captchaValidation()\r\n        if(validate==false){\r\n            document.getElementById('blankCaptcha').innerHTML = 'Captcha cannot be blank or check your internet connectivity'\r\n            proceed= false\r\n        }else{\r\n            document.getElementById('blankCaptcha').innerHTML = ''\r\n        }\r\n        if (proceed == true){\r\n            obj.form.submit();\r\n        } else {\r\n            return false;\r\n        }\r\n    }\r\n    function submitForm() {\r\n            var form = $(document.createElement('form'));\r\n            $(form).attr(\"action\", \"/ECM/maintenance/forgotpassword\");\r\n            $(form).attr(\"method\", \"POST\");\r\n            var username = document.createElement('input')\r\n            $(username).attr(\"type\", \"text\")\r\n            $(username).attr(\"name\", \"username\")\r\n            $(username).val($('#username').val());\r\n\r\n            $(form).append($(username));\r\n            form.appendTo( document.body );\r\n            $(form).submit();\r\n    }\r\n\r\n    function processlogins() {\r\n\r\n        var usernameval = document.getElementById('domainusernameid').value\r\n        var selecteddomainvalue = document.getElementById('selecteddomain').value\r\n        if(!!usernameval.trim() == '' && !!selecteddomainvalue.trim() == \"\") {\r\n            alert('Please enter either username or select correct domain')\r\n            return false\r\n        } else {\r\n            document.forms.processlogin.submit()\r\n        }\r\n        //document.forms\r\n    }\r\n\r\n    function displayLocalLogin(){\r\n        document.getElementById(\"localLogin\").style.display=\"block\";\r\n    }\r\n    var searchingselect=\"Searching...\"\r\n\n                    </script>\n                    <!-- END JAVASCRIPTS -->\n                    <div class=\"box-1\" id=\"newspinner\" style=\"display: none\">\r\n</div>\n                </body>\n            </html>"}
+                    language={"shell"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      
