@@ -59914,40 +59914,6 @@ components:
     bearerAuth:
       type: http
       scheme: bearer
-tags:
-  - name: Authentication
-  - name: Users
-  - name: Accounts
-  - name: Entitlements
-  - name: Privileges
-  - name: Roles
-  - name: User Groups
-  - name: Security Systems
-  - name: Endpoints
-  - name: Connections
-  - name: Entitlement Types
-  - name: Dynamic Attributes
-  - name: Organization
-  - name: Connections
-  - name: Analytics
-  - name: Access Recommendations
-  - name: Dashboard
-  - name: Access Request
-  - name: Request Approval
-  - name: Tasks
-  - name: User Delegation
-  - name: Attestations
-  - name: Campaigns
-  - name: User Manager Campaigns
-  - name: Entitlement Owner Campaigns
-  - name: Application Owner Campaigns
-  - name: Segregation of Duties
-  - name: Password Management
-  - name: Common Utilities
-  - name: Job Management
-  - name: Transport
-  - name: Provisioning Policies
-  - name: Dataset
 x-tagGroups:
   - name: Identity Collection
     tags:
