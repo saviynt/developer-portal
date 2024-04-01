@@ -193,7 +193,7 @@ const config: Config = {
             outputDir: "docs/eic",
             sidebarOptions: {
               groupPathsBy: "tagGroup",
-              categoryLinkSource: "tag",
+              // categoryLinkSource: "tag",
             },
           },
         } satisfies Plugin.PluginOptions,

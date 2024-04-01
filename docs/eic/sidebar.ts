@@ -15,10 +15,6 @@ const sidebar: SidebarsConfig = {
         {
           type: "category",
           label: "Authentication",
-          link: {
-            type: "doc",
-            id: "eic/authentication",
-          },
           items: [
             {
               type: "doc",
@@ -37,10 +33,6 @@ const sidebar: SidebarsConfig = {
         {
           type: "category",
           label: "Users",
-          link: {
-            type: "doc",
-            id: "eic/users",
-          },
           items: [
             {
               type: "doc",
@@ -119,10 +111,6 @@ const sidebar: SidebarsConfig = {
         {
           type: "category",
           label: "Accounts",
-          link: {
-            type: "doc",
-            id: "eic/accounts",
-          },
           items: [
             {
               type: "doc",
@@ -171,10 +159,6 @@ const sidebar: SidebarsConfig = {
         {
           type: "category",
           label: "Entitlements",
-          link: {
-            type: "doc",
-            id: "eic/entitlements",
-          },
           items: [
             {
               type: "doc",
@@ -205,10 +189,6 @@ const sidebar: SidebarsConfig = {
         {
           type: "category",
           label: "Privileges",
-          link: {
-            type: "doc",
-            id: "eic/privileges",
-          },
           items: [
             {
               type: "doc",
@@ -239,10 +219,6 @@ const sidebar: SidebarsConfig = {
         {
           type: "category",
           label: "Roles",
-          link: {
-            type: "doc",
-            id: "eic/roles",
-          },
           items: [
             {
               type: "doc",
@@ -279,10 +255,6 @@ const sidebar: SidebarsConfig = {
         {
           type: "category",
           label: "User Groups",
-          link: {
-            type: "doc",
-            id: "eic/user-groups",
-          },
           items: [
             {
               type: "doc",
@@ -313,10 +285,6 @@ const sidebar: SidebarsConfig = {
         {
           type: "category",
           label: "Organization",
-          link: {
-            type: "doc",
-            id: "eic/organization",
-          },
           items: [
             {
               type: "doc",
@@ -1344,7 +1312,7 @@ const sidebar: SidebarsConfig = {
     },
     {
       type: "category",
-      label: "Policies",
+      label: "Policies Collection",
       collapsible: true,
       collapsed: true,
       items: [
@@ -1355,10 +1323,6 @@ const sidebar: SidebarsConfig = {
         {
           type: "category",
           label: "Segregation of Duties",
-          link: {
-            type: "doc",
-            id: "eic/segregation-of-duties",
-          },
           items: [
             {
               type: "doc",
@@ -1389,10 +1353,6 @@ const sidebar: SidebarsConfig = {
         {
           type: "category",
           label: "Password Management",
-          link: {
-            type: "doc",
-            id: "eic/password-management",
-          },
           items: [
             {
               type: "doc",
@@ -1435,10 +1395,6 @@ const sidebar: SidebarsConfig = {
         {
           type: "category",
           label: "Provisioning Policies",
-          link: {
-            type: "doc",
-            id: "eic/provisioning-policies",
-          },
           items: [
             {
               type: "doc",
@@ -2675,10 +2631,6 @@ const sidebar: SidebarsConfig = {
         {
           type: "category",
           label: "Access Request",
-          link: {
-            type: "doc",
-            id: "eic/access-request",
-          },
           items: [
             {
               type: "doc",
@@ -2745,10 +2697,6 @@ const sidebar: SidebarsConfig = {
         {
           type: "category",
           label: "Request Approval",
-          link: {
-            type: "doc",
-            id: "eic/request-approval",
-          },
           items: [
             {
               type: "doc",
@@ -2773,10 +2721,6 @@ const sidebar: SidebarsConfig = {
         {
           type: "category",
           label: "Tasks",
-          link: {
-            type: "doc",
-            id: "eic/tasks",
-          },
           items: [
             {
               type: "doc",
@@ -3995,10 +3939,6 @@ const sidebar: SidebarsConfig = {
         {
           type: "category",
           label: "Security Systems",
-          link: {
-            type: "doc",
-            id: "eic/security-systems",
-          },
           items: [
             {
               type: "doc",
@@ -4029,10 +3969,6 @@ const sidebar: SidebarsConfig = {
         {
           type: "category",
           label: "Endpoints",
-          link: {
-            type: "doc",
-            id: "eic/endpoints",
-          },
           items: [
             {
               type: "doc",
@@ -4057,10 +3993,6 @@ const sidebar: SidebarsConfig = {
         {
           type: "category",
           label: "Connections",
-          link: {
-            type: "doc",
-            id: "eic/connections",
-          },
           items: [
             {
               type: "doc",
@@ -4085,10 +4017,6 @@ const sidebar: SidebarsConfig = {
         {
           type: "category",
           label: "Entitlement Types",
-          link: {
-            type: "doc",
-            id: "eic/entitlement-types",
-          },
           items: [
             {
               type: "doc",
@@ -4119,10 +4047,6 @@ const sidebar: SidebarsConfig = {
         {
           type: "category",
           label: "Dynamic Attributes",
-          link: {
-            type: "doc",
-            id: "eic/dynamic-attributes",
-          },
           items: [
             {
               type: "doc",
@@ -5323,10 +5247,6 @@ const sidebar: SidebarsConfig = {
         {
           type: "category",
           label: "Attestations",
-          link: {
-            type: "doc",
-            id: "eic/attestations",
-          },
           items: [
             {
               type: "doc",
@@ -5369,10 +5289,6 @@ const sidebar: SidebarsConfig = {
         {
           type: "category",
           label: "Campaigns",
-          link: {
-            type: "doc",
-            id: "eic/campaigns",
-          },
           items: [
             {
               type: "doc",
@@ -5415,10 +5331,6 @@ const sidebar: SidebarsConfig = {
         {
           type: "category",
           label: "User Manager Campaigns",
-          link: {
-            type: "doc",
-            id: "eic/user-manager-campaigns",
-          },
           items: [
             {
               type: "doc",
@@ -5467,10 +5379,6 @@ const sidebar: SidebarsConfig = {
         {
           type: "category",
           label: "Entitlement Owner Campaigns",
-          link: {
-            type: "doc",
-            id: "eic/entitlement-owner-campaigns",
-          },
           items: [
             {
               type: "doc",
@@ -5537,10 +5445,6 @@ const sidebar: SidebarsConfig = {
         {
           type: "category",
           label: "Application Owner Campaigns",
-          link: {
-            type: "doc",
-            id: "eic/application-owner-campaigns",
-          },
           items: [
             {
               type: "doc",
@@ -6651,10 +6555,6 @@ const sidebar: SidebarsConfig = {
         {
           type: "category",
           label: "Analytics",
-          link: {
-            type: "doc",
-            id: "eic/analytics",
-          },
           items: [
             {
               type: "doc",
@@ -6709,10 +6609,6 @@ const sidebar: SidebarsConfig = {
         {
           type: "category",
           label: "Access Recommendations",
-          link: {
-            type: "doc",
-            id: "eic/access-recommendations",
-          },
           items: [
             {
               type: "doc",
@@ -6725,10 +6621,6 @@ const sidebar: SidebarsConfig = {
         {
           type: "category",
           label: "Dashboard",
-          link: {
-            type: "doc",
-            id: "eic/dashboard",
-          },
           items: [
             {
               type: "doc",
@@ -7971,10 +7863,6 @@ const sidebar: SidebarsConfig = {
         {
           type: "category",
           label: "User Delegation",
-          link: {
-            type: "doc",
-            id: "eic/user-delegation",
-          },
           items: [
             {
               type: "doc",
@@ -8011,10 +7899,6 @@ const sidebar: SidebarsConfig = {
         {
           type: "category",
           label: "Common Utilities",
-          link: {
-            type: "doc",
-            id: "eic/common-utilities",
-          },
           items: [
             {
               type: "doc",
@@ -8051,10 +7935,6 @@ const sidebar: SidebarsConfig = {
         {
           type: "category",
           label: "Job Management",
-          link: {
-            type: "doc",
-            id: "eic/job-management",
-          },
           items: [
             {
               type: "doc",
@@ -8103,10 +7983,6 @@ const sidebar: SidebarsConfig = {
         {
           type: "category",
           label: "Transport",
-          link: {
-            type: "doc",
-            id: "eic/transport",
-          },
           items: [
             {
               type: "doc",
@@ -8131,10 +8007,6 @@ const sidebar: SidebarsConfig = {
         {
           type: "category",
           label: "Dataset",
-          link: {
-            type: "doc",
-            id: "eic/dataset",
-          },
           items: [
             {
               type: "doc",
