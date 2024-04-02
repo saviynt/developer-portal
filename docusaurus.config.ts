@@ -197,8 +197,13 @@ const config: Config = {
             outputDir: "docs/eic/",
             sidebarOptions: {
               groupPathsBy: "tagGroup",
-              // categoryLinkSource: "tag",
+              categoryLinkSource: "tag",
             },
+            // template: "api.mustache", // Customize API MDX with mustache template
+            downloadUrl:
+              "https://github.com/saviynt/developer-portal/blob/main/static/api-specs/saviynt-eic-api-5.0.yaml",
+            hideSendButton: false,
+            showSchemas: true,
             version: "5.0.0", // Current version
             label: "v5.0.0", // Current version label
             baseUrl: "/developer-portal/eic/rest/5.0", // Leading slash is important
