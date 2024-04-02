@@ -4,17 +4,17 @@ import styles from "./styles.module.css";
 
 const FeatureList = [
   {
-    title: "Easy to Use",
+    title: "API Reference",
     Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        The EIC REST API enables you to interact with Saviynt programmatically. Use this API to build apps, script interactions with Saviynt, or develop any other type of integration. 
+        This page documents the REST resources available in Saviynt Cloud, including the HTTP response codes and example requests and responses.
       </>
     ),
   },
   {
-    title: "Focus on What Matters",
+    title: "Tools and Extensions",
     Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
     description: (
       <>
@@ -24,7 +24,7 @@ const FeatureList = [
     ),
   },
   {
-    title: "Powered by React",
+    title: "Connectors and Integrations",
     Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
     description: (
       <>
