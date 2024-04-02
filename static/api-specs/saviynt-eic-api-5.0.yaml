@@ -59932,12 +59932,6 @@ x-ignoredHeaderParameters:
   - Server
   - X-Frame-Options
 tags:
-  - name: Identity Management
-  - name: Policies Management
-  - name: Request Management
-  - name: Campaigns Management
-  - name: Analytics API
-  - name: Administration
   - name: Authentication
   - name: Users
   - name: Accounts
@@ -59972,7 +59966,7 @@ tags:
   - name: Provisioning Policies
   - name: Dataset
 x-tagGroups:
-  - name: Users
+  - name: Identity Repository
     tags:
       - Users
       - Authentication
