@@ -46,15 +46,23 @@ const config: Config = {
       },
     },
     navbar: {
-      title: "Developer Portal",
+      title: "DEVELOPER |",
       logo: {
         alt: "Keytar",
         src: "img/Saviynt_logo_Navy.svg",
       },
       items: [
         {
-          label: "Reference",
+          label: "REFERENCE",
           to: "/eic/rest/5.0",
+        },
+        {
+          label: "RESOURCES",
+          to: "/eic/resources",
+        },
+        {
+          label: "CHANGELOG",
+          to: "/eic/rest/changelog",
         },
         {
           href: "https://docs.saviyntcloud.com/",
