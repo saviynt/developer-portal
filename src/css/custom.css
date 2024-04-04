@@ -7,28 +7,28 @@
 /* You can override the default Infima variables here. */
 
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --site-primary-hue-saturation: 167 68%;
+  --ifm-color-primary: #0072ff; /* Your chosen bright blue as the primary color */
+  --ifm-color-primary-dark: #005ecc; /* A darker shade of the primary color */
+  --ifm-color-primary-darker: #004cac; /* Even darker for more depth */
+  --ifm-color-primary-darkest: #003c8c; /* The darkest shade for contrast */
+  --ifm-color-primary-light: #338bff; /* A lighter shade for less dominant elements */
+  --ifm-color-primary-lighter: #66a3ff; /* Even lighter for backgrounds or large areas */
+  --ifm-color-primary-lightest: #99bbff; /* The lightest shade, suitable for highlights or accents */
+  --ifm-code-font-size: 95%; /* No change here unless desired */
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1); /* No change, but you can adjust it */
+  --site-primary-hue-saturation: 211 100%; /* The hue and saturation might be adjusted if needed */
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* For dark mode, maintain the color contrast for readability */
 [data-theme="dark"] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #338bff; /* Lighter than the primary color for dark mode */
+  --ifm-color-primary-dark: #3079e1; /* A darker shade for hover states and borders */
+  --ifm-color-primary-darker: #2d67c3; /* Darker shade for active states or deep contrast */
+  --ifm-color-primary-darkest: #2a56a5; /* The darkest shade for depth */
+  --ifm-color-primary-light: #66a3ff; /* Lighter shade for UI elements */
+  --ifm-color-primary-lighter: #99bbff; /* A lighter variant for backgrounds */
+  --ifm-color-primary-lightest: #ccddff; /* The lightest variant for highlights */
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1); /* Lighter for dark mode readability */
 }
 
 /* Override --ifm text-decoration */
@@ -51,41 +51,52 @@ a:any-link:hover {
   font-weight: 600;
   border-radius: 0.25rem;
   border: 1px solid;
+  border-inline-start-width: 5px;
   margin-right: var(--ifm-spacing-horizontal);
   text-align: center;
   flex-shrink: 0;
-  border-color: transparent;
-  color: white;
 }
 
 .get > .menu__link::before {
   content: "get";
-  background-color: var(--ifm-color-primary);
+  background-color: var(--ifm-color-info-contrast-background);
+  color: var(--ifm-color-info-contrast-foreground);
+  border-color: var(--ifm-color-info-dark);
 }
 
 .post > .menu__link::before {
   content: "post";
-  background-color: var(--openapi-code-green);
+  background-color: var(--ifm-color-success-contrast-background);
+  color: var(--ifm-color-success-contrast-foreground);
+  border-color: var(--ifm-color-success-dark);
 }
 
 .delete > .menu__link::before {
   content: "del";
-  background-color: var(--openapi-code-red);
+  background-color: var(--ifm-color-danger-contrast-background);
+  color: var(--ifm-color-danger-contrast-foreground);
+  border-color: var(--ifm-color-danger-dark);
 }
 
 .put > .menu__link::before {
   content: "put";
-  background-color: var(--openapi-code-blue);
+  background-color: var(--ifm-color-warning-contrast-background);
+  color: var(--ifm-color-warning-contrast-foreground);
+  border-color: var(--ifm-color-warning-dark);
 }
 
 .patch > .menu__link::before {
   content: "patch";
-  background-color: var(--openapi-code-orange);
+  background-color: var(--ifm-color-success-contrast-background);
+  color: var(--ifm-color-success-contrast-foreground);
+  border-color: var(--ifm-color-success-dark);
 }
 
 .head > .menu__link::before {
   content: "head";
-  background-color: var(--ifm-color-secondary-darkest);
+  background-color: var(--ifm-color-secondary-contrast-background);
+  color: var(--ifm-color-secondary-contrast-foreground);
+  border-color: var(--ifm-color-secondary-dark);
 }
 
 .event > .menu__link::before {

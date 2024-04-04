@@ -197,7 +197,7 @@ const config: Config = {
             outputDir: "docs/eic/",
             sidebarOptions: {
               groupPathsBy: "tagGroup",
-              categoryLinkSource: "tag",
+              categoryLinkSource: "info",
             },
             // template: "api.mustache", // Customize API MDX with mustache template
             downloadUrl:
