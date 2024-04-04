@@ -1,0 +1,349 @@
+---
+id: lock-attestation
+title: "Lock Attestation"
+description: "This API can be used to lock a completed attestation, which is not locked. Once the attestation is locked using lockAttestation, no changes can be made to the attestation."
+sidebar_label: "Lock Attestation"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVlFv2zYQ/ivEPbWAZNmpm6Ya+uB6bmFsaYLEAwa4BkyTZ4uNRKrkya1m6L8PpOTESdwkz8MCGKHI43ffHT/ecQfENw7SOYyI0BEnZbSDRQQSnbCq9N+QwixTjo0up0xwzVbIKoeSkWG5ETeMM2GKMkdCyfgdTMR+ZEpkTDmmDQVTlD12oQUyyvDQ1Nu066xySm/Cx+gQShsmMq436PYUCi7RU3gA1ftqv2r/m2XIlqOKMmPVP2FpyYrKEcv4FtnyI3KLdsnWJs/ND5RsVbPlzNygXvbYHuOca8nJ2JqV3PLCpbcryy1atVYeIWZTLZXghK4lU5bWbNEmexOfLat5gSzM1D7Ahwmw+L1CR9EtPidS8gj4YdLk3voinBPP9zRvUYQpCtTklhCBKdGGjVMJKTzIMETQUfhoZA3pDoTRhJr8sKhyUiW3lKyNLWLJiftpJzIswojqEiEFs/qGgiCC0npnpND51RDKgZkjq/QGIsCf3OsGUhi8hyaCPdunbT1zn8LO2m/cZ/rpjVwWSkMT/ny4rjTatRRP+n3/777o//Tivp+jDLlEG7b8zgmPZuGI53Mv4f4pG1UbdtIfnLGTQTo8Swcn7PP5DDyba7Tblv9L8EYlFxnGY1MbwmTQG3QYFI+NuVEv5jUeX199imcXf0y+fDjFs/eD4aAfn/aHZ/FweHoSr1AM4zeDd/03wwE/e4Or39glp+xDEtzNLNdujTaeaGGkh36hV5FV+gZlAPk7/mR5gXGrYPdSiOvR+eTiavp5+gXCYR6IlZdl7i+MMjr55vxBvlypaK2xYyPxae99r7nCbZ7hWAmBzq2rvOXYrQRHj6SV7mDL8wofsIA+dJ4ewLUaDtcdKShyvgNfYyCFklMGESh9N/Z3W1mUkJKtMPpljptmEUGBlBlfI0rjQo48RgrJ45Lhgmpb55XNIYWMqHRpkuwINdfU9BzfqlqTyE0le8IUyWR8nvBSJdu3EMGWW8VXXVLaLY/vYTfve9KaVzlBepvlJhB2KCqrqL72UbVYK+6U8NX/IEbPDbrY/Xew8Ue5Cr3gOetgFESr9NoES0XtSbcxsokmtKVVDtlUoiZFNRv7wEPrvMI1WtQC4Wh3HZs8RxEKu+8fSnYVXyJxlTtm1uHTVWVprG+17TE5tjY2rDzP4tVkOn4NoVy61vPbXr8X1OyPuuBBh52KjlS/e6wPOsT/z4P/wPOgkz3hT0rKnPtOGbWXetdVgPmjR8MigszXiHQOu92KO/zL5k3jp79XaGtI54u7Ox6qhFTOjyWka547fEJTr666mvWa/YpdN8l1HUpJKJ8AEdxgvS99zaLZd+3gv10at17imQe423rsndNE+00jIbCkA/NHneZe8by8uJ5BBKvuOVW09dwDB9zobpjOF03T/AsWuQjx
+sidebar_class_name: "post api-method"
+info_path: eic/2.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Lock Attestation"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/lockAttestation"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API can be used to lock a completed attestation, which is not locked. Once the attestation is locked using lockAttestation, no changes can be made to the attestation.
+
+The `Authorization` must have `Bearer` followed by `Token`. 
+
+Mandatory params: 
+
+`verifier` - Indicates the approver/verifier username verifying the attestation request,
+
+`attid` - Indicates the attestation id
+
+Optional params:
+
+`comments`
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"path","in":"path","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"multipart/form-data"}
+    value={"multipart/form-data-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"attid"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"19"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"comments"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"locking comment"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"verifier"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"admin"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Lock Attestation
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Successful"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \"Successful\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Lock Attestation"}
+                  value={"Lock Attestation"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \"Successful\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

@@ -1,0 +1,1394 @@
+---
+id: get-role-details-for-user
+title: "Get Role Details for user"
+description: "This API can be used to get the list of all the roles."
+sidebar_label: "Get Role Details for user"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: eic/2.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Role Details for user"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/getRoles"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API can be used to get the list of all the roles.
+
+This API call can be used to get the list and details of all the roles associated to the user. 
+
+The `Authorization` must have `Bearer` followed by `Token`. 
+
+Optional params:
+
+`username`,
+`customproperty<1 to 60>`,
+`roletype`,
+`requestable`,
+`status`,
+`role_name`,
+`description`,
+`displayname`,
+`glossary`,
+`mininginstance`,
+`risk`,
+`updateuser`,
+`systemid`,
+`soxcritical`,
+`syscritical`,
+`level`,
+`priviliged`,
+`confidentiality`,
+`requestedObject` - contains users and/or entitlement_values
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"path","in":"path","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+  schemaType={"request"}
+>
+  <TabItem
+    label={"multipart/form-data"}
+    value={"multipart/form-data"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"max"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"5"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"offset"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"0"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"requestedObject"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"entitlement_values,users"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"roleQuery"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"r.role_name = 'Feb7th1988Role'"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"roletype"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"4"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"username"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"usngom"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Get Role Details for user / Get Role Details
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Credentials
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Origin
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Cache-Control
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Connection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Expires
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Pragma
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Referrer-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-XSS-Protection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                Roledetails
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object[]
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                              >
+                                Array [
+                              </div>
+                            </li><SchemaItem
+                              collapsible={false}
+                              name={"confidentiality"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"5"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty1"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"jjjjjjjjjjj"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty10"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"cp10"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty11"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty12"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty13"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty14"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty15"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty16"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty17"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty18"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty19"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty2"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty20"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty21"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty22"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty23"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty24"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty25"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty26"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty27"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty28"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty29"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty3"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty30"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"cp30bh"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty31"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"cp31"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty32"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty33"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty34"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty35"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty36"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"cp36"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty37"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty38"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty39"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty4"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty40"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty41"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty42"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty43"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty44"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty45"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty46"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty47"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty48"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty49"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty5"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty50"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty51"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty52"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty53"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty54"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty55"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty56"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty57"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty58"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty59"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty6"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty60"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty7"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty8"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty9"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"defaultTimeFrameHrs"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"description"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"this is description |  | EnterPriseEnterPrise  EnterPriseEnterPrise"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"displayname"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"endpointkey"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"13"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"glossary"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"maxTimeFrameHrs"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"owner"}
+                              required={false}
+                              schemaName={"string[]"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"array","items":{"type":"string","example":"dbailey"},"example":["dbailey","lkrause"]}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"priviliged"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"1"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"requestable"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"true"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"risk"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"role_name"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"EnterPrise"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"roletype"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"4"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"showDynamicAttrs"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"false"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"soxcritical"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"3"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"status"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"1"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"syscritical"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"3"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"updatedate"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"2019-02-01 00:04:21"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"updateuser"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"1"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={true}
+                              className={"schemaItem"}
+                            >
+                              <details
+                                style={{}}
+                                className={"openapi-markdown__details"}
+                              >
+                                <summary
+                                  style={{}}
+                                >
+                                  <span
+                                    className={"openapi-schema__container"}
+                                  >
+                                    <strong
+                                      className={"openapi-schema__property"}
+                                    >
+                                      userAccounts
+                                    </strong><span
+                                      className={"openapi-schema__name"}
+                                    >
+                                       object[]
+                                    </span>
+                                  </span>
+                                </summary><div
+                                  style={{"marginLeft":"1rem"}}
+                                >
+                                  <li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                                    >
+                                      Array [
+                                    </div>
+                                  </li><SchemaItem
+                                    collapsible={false}
+                                    name={"accountname"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"johndoe"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"enddate"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":""}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"startdate"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"2019-02-11 22:47:32"}}
+                                  >
+                                    
+                                  </SchemaItem><li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                                    >
+                                      ]
+                                    </div>
+                                  </li>
+                                </div>
+                              </details>
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"version"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"79"}}
+                            >
+                              
+                            </SchemaItem><li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                              >
+                                ]
+                              </div>
+                            </li>
+                          </div>
+                        </details>
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"displayCount"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":1}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Successful"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"totalCount"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":1}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"Roledetails\": [\n    {\n      \"confidentiality\": \"5\",\n      \"customproperty1\": \"jjjjjjjjjjj\",\n      \"customproperty10\": \"cp10\",\n      \"customproperty11\": \"\",\n      \"customproperty12\": \"\",\n      \"customproperty13\": \"\",\n      \"customproperty14\": \"\",\n      \"customproperty15\": \"\",\n      \"customproperty16\": \"\",\n      \"customproperty17\": \"\",\n      \"customproperty18\": \"\",\n      \"customproperty19\": \"\",\n      \"customproperty2\": \"\",\n      \"customproperty20\": \"\",\n      \"customproperty21\": \"\",\n      \"customproperty22\": \"\",\n      \"customproperty23\": \"\",\n      \"customproperty24\": \"\",\n      \"customproperty25\": \"\",\n      \"customproperty26\": \"\",\n      \"customproperty27\": \"\",\n      \"customproperty28\": \"\",\n      \"customproperty29\": \"\",\n      \"customproperty3\": \"\",\n      \"customproperty30\": \"cp30bh\",\n      \"customproperty31\": \"cp31\",\n      \"customproperty32\": \"\",\n      \"customproperty33\": \"\",\n      \"customproperty34\": \"\",\n      \"customproperty35\": \"\",\n      \"customproperty36\": \"cp36\",\n      \"customproperty37\": \"\",\n      \"customproperty38\": \"\",\n      \"customproperty39\": \"\",\n      \"customproperty4\": \"\",\n      \"customproperty40\": \"\",\n      \"customproperty41\": \"\",\n      \"customproperty42\": \"\",\n      \"customproperty43\": \"\",\n      \"customproperty44\": \"\",\n      \"customproperty45\": \"\",\n      \"customproperty46\": \"\",\n      \"customproperty47\": \"\",\n      \"customproperty48\": \"\",\n      \"customproperty49\": \"\",\n      \"customproperty5\": \"\",\n      \"customproperty50\": \"\",\n      \"customproperty51\": \"\",\n      \"customproperty52\": \"\",\n      \"customproperty53\": \"\",\n      \"customproperty54\": \"\",\n      \"customproperty55\": \"\",\n      \"customproperty56\": \"\",\n      \"customproperty57\": \"\",\n      \"customproperty58\": \"\",\n      \"customproperty59\": \"\",\n      \"customproperty6\": \"\",\n      \"customproperty60\": \"\",\n      \"customproperty7\": \"\",\n      \"customproperty8\": \"\",\n      \"customproperty9\": \"\",\n      \"defaultTimeFrameHrs\": \"\",\n      \"description\": \"this is description |  | EnterPriseEnterPrise  EnterPriseEnterPrise\",\n      \"displayname\": \"\",\n      \"endpointkey\": \"13\",\n      \"glossary\": \"\",\n      \"maxTimeFrameHrs\": \"\",\n      \"owner\": [\n        \"dbailey\",\n        \"lkrause\"\n      ],\n      \"priviliged\": \"1\",\n      \"requestable\": \"true\",\n      \"risk\": \"\",\n      \"role_name\": \"EnterPrise\",\n      \"roletype\": \"4\",\n      \"showDynamicAttrs\": \"false\",\n      \"soxcritical\": \"3\",\n      \"status\": \"1\",\n      \"syscritical\": \"3\",\n      \"updatedate\": \"2019-02-01 00:04:21\",\n      \"updateuser\": \"1\",\n      \"userAccounts\": [\n        {\n          \"accountname\": \"johndoe\",\n          \"enddate\": \"\",\n          \"startdate\": \"2019-02-11 22:47:32\"\n        }\n      ],\n      \"version\": \"79\"\n    }\n  ],\n  \"displayCount\": 1,\n  \"errorCode\": \"0\",\n  \"msg\": \"Successful\",\n  \"totalCount\": 1\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Get Role Details"}
+                  value={"Get Role Details"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"Roledetails\": [\n    {\n      \"Custom Property 1\": \"\",\n      \"Custom Property 10\": \"\",\n      \"Custom Property 11\": \"\",\n      \"Custom Property 12\": \"\",\n      \"Custom Property 13\": \"\",\n      \"Custom Property 14\": \"\",\n      \"Custom Property 15\": \"\",\n      \"Custom Property 16\": \"\",\n      \"Custom Property 17\": \"\",\n      \"Custom Property 18\": \"\",\n      \"Custom Property 19\": \"\",\n      \"Custom Property 2\": \"\",\n      \"Custom Property 20\": \"\",\n      \"Custom Property 21\": \"\",\n      \"Custom Property 22\": \"\",\n      \"Custom Property 23\": \"\",\n      \"Custom Property 24\": \"\",\n      \"Custom Property 25\": \"\",\n      \"Custom Property 26\": \"\",\n      \"Custom Property 27\": \"\",\n      \"Custom Property 28\": \"\",\n      \"Custom Property 29\": \"\",\n      \"Custom Property 3\": \"\",\n      \"Custom Property 30\": \"\",\n      \"Custom Property 31\": \"\",\n      \"Custom Property 32\": \"\",\n      \"Custom Property 33\": \"\",\n      \"Custom Property 34\": \"\",\n      \"Custom Property 35\": \"\",\n      \"Custom Property 36\": \"\",\n      \"Custom Property 37\": \"\",\n      \"Custom Property 38\": \"\",\n      \"Custom Property 39\": \"\",\n      \"Custom Property 4\": \"\",\n      \"Custom Property 40\": \"\",\n      \"Custom Property 41\": \"\",\n      \"Custom Property 42\": \"\",\n      \"Custom Property 43\": \"\",\n      \"Custom Property 44\": \"\",\n      \"Custom Property 45\": \"\",\n      \"Custom Property 46\": \"\",\n      \"Custom Property 47\": \"\",\n      \"Custom Property 48\": \"\",\n      \"Custom Property 49\": \"\",\n      \"Custom Property 5\": \"\",\n      \"Custom Property 50\": \"\",\n      \"Custom Property 51\": \"\",\n      \"Custom Property 52\": \"\",\n      \"Custom Property 53\": \"\",\n      \"Custom Property 54\": \"\",\n      \"Custom Property 55\": \"\",\n      \"Custom Property 56\": \"\",\n      \"Custom Property 57\": \"\",\n      \"Custom Property 58\": \"\",\n      \"Custom Property 59\": \"\",\n      \"Custom Property 6\": \"\",\n      \"Custom Property 60\": \"\",\n      \"Custom Property 7\": \"\",\n      \"Custom Property 8\": \"\",\n      \"Custom Property 9\": \"\",\n      \"UserDetails\": [\n        \"User Details Not Found\"\n      ],\n      \"confidentiality\": \"\",\n      \"defaultTimeFrameHrs\": \"\",\n      \"description\": \"\",\n      \"displayname\": \"\",\n      \"endpointkey\": \"396\",\n      \"entitlement_valueKey\": \"\",\n      \"glossary\": \"\",\n      \"lastReviewedBy\": \"\",\n      \"lastReviewedCampaignName\": \"\",\n      \"maxTimeFrameHrs\": \"\",\n      \"owner\": [\n        {\n          \"ownername\": \"admin\",\n          \"rank\": \"1\"\n        }\n      ],\n      \"priviliged\": \"\",\n      \"requestable\": \"true\",\n      \"risk\": \"\",\n      \"roleKey\": 1310,\n      \"roleState\": \"\",\n      \"role_name\": \"Feb7th1988Role\",\n      \"roletype\": \"4\",\n      \"showDynamicAttrs\": \"true\",\n      \"soxcritical\": \"\",\n      \"status\": \"1\",\n      \"syscritical\": \"\",\n      \"updatedate\": \"2023-02-08 09:18:08\",\n      \"updateuser\": \"1\",\n      \"version\": 8\n    }\n  ],\n  \"displayCount\": 1,\n  \"errorCode\": \"0\",\n  \"msg\": \"Successful\",\n  \"totalCount\": 1\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Get Role Details for user"}
+                  value={"Get Role Details for user"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"Roledetails\": [\n    {\n      \"confidentiality\": \"5\",\n      \"customproperty1\": \"jjjjjjjjjjj\",\n      \"customproperty10\": \"cp10\",\n      \"customproperty11\": \"\",\n      \"customproperty12\": \"\",\n      \"customproperty13\": \"\",\n      \"customproperty14\": \"\",\n      \"customproperty15\": \"\",\n      \"customproperty16\": \"\",\n      \"customproperty17\": \"\",\n      \"customproperty18\": \"\",\n      \"customproperty19\": \"\",\n      \"customproperty2\": \"\",\n      \"customproperty20\": \"\",\n      \"customproperty21\": \"\",\n      \"customproperty22\": \"\",\n      \"customproperty23\": \"\",\n      \"customproperty24\": \"\",\n      \"customproperty25\": \"\",\n      \"customproperty26\": \"\",\n      \"customproperty27\": \"\",\n      \"customproperty28\": \"\",\n      \"customproperty29\": \"\",\n      \"customproperty3\": \"\",\n      \"customproperty30\": \"cp30bh\",\n      \"customproperty31\": \"cp31\",\n      \"customproperty32\": \"\",\n      \"customproperty33\": \"\",\n      \"customproperty34\": \"\",\n      \"customproperty35\": \"\",\n      \"customproperty36\": \"cp36\",\n      \"customproperty37\": \"\",\n      \"customproperty38\": \"\",\n      \"customproperty39\": \"\",\n      \"customproperty4\": \"\",\n      \"customproperty40\": \"\",\n      \"customproperty41\": \"\",\n      \"customproperty42\": \"\",\n      \"customproperty43\": \"\",\n      \"customproperty44\": \"\",\n      \"customproperty45\": \"\",\n      \"customproperty46\": \"\",\n      \"customproperty47\": \"\",\n      \"customproperty48\": \"\",\n      \"customproperty49\": \"\",\n      \"customproperty5\": \"\",\n      \"customproperty50\": \"\",\n      \"customproperty51\": \"\",\n      \"customproperty52\": \"\",\n      \"customproperty53\": \"\",\n      \"customproperty54\": \"\",\n      \"customproperty55\": \"\",\n      \"customproperty56\": \"\",\n      \"customproperty57\": \"\",\n      \"customproperty58\": \"\",\n      \"customproperty59\": \"\",\n      \"customproperty6\": \"\",\n      \"customproperty60\": \"\",\n      \"customproperty7\": \"\",\n      \"customproperty8\": \"\",\n      \"customproperty9\": \"\",\n      \"defaultTimeFrameHrs\": \"\",\n      \"description\": \"this is description |  | EnterPriseEnterPrise  EnterPriseEnterPrise\",\n      \"displayname\": \"\",\n      \"endpointkey\": \"13\",\n      \"glossary\": \"\",\n      \"maxTimeFrameHrs\": \"\",\n      \"owner\": [\n        \"dbailey\",\n        \"lkrause\"\n      ],\n      \"priviliged\": \"1\",\n      \"requestable\": \"true\",\n      \"risk\": \"\",\n      \"role_name\": \"EnterPrise\",\n      \"roletype\": \"4\",\n      \"showDynamicAttrs\": \"false\",\n      \"soxcritical\": \"3\",\n      \"status\": \"1\",\n      \"syscritical\": \"3\",\n      \"updatedate\": \"2019-02-01 00:04:21\",\n      \"updateuser\": \"1\",\n      \"userAccounts\": [\n        {\n          \"accountname\": \"johndoe\",\n          \"enddate\": \"\",\n          \"startdate\": \"2019-02-11 22:47:32\"\n        }\n      ],\n      \"version\": \"79\"\n    }\n  ],\n  \"errorCode\": \"0\",\n  \"msg\": \"Successful\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

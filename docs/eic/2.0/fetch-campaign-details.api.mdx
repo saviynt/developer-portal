@@ -1,0 +1,610 @@
+---
+id: fetch-campaign-details
+title: "Fetch Campaign Details"
+description: "This API return details of a particular campaign required for employee verification."
+sidebar_label: "Fetch Campaign Details"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: eic/2.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Fetch Campaign Details"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/fetchCampaignDetails"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API return details of a particular campaign required for employee verification. 
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+Mandatory params:
+
+`campaignId`
+
+Optional params:
+
+`certifierUsername`
+
+`certkey`
+
+`max`
+
+`offset`
+
+`showCampaignConfig` (True/ False) Returns the campaign configuration details when set to True.
+
+***Note***: The user attributes in the response is driven by the attributes selected during the campaign launch.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"path","in":"path","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"campaignId"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"232"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Fetch Campaign Details
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"Total Preview Certification"}
+                        required={false}
+                        schemaName={"string[]"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"array","items":{"type":"string","example":"testLock2 - dbailey (Damien Bailey)"},"example":["testLock2 - dbailey (Damien Bailey)"]}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                campaignDetails
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object[]
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                              >
+                                Array [
+                              </div>
+                            </li><SchemaItem
+                              collapsible={false}
+                              name={"certificationame"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"testLock2 - dbailey (Damien Bailey)"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"certifier"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"dlogan"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"certkey"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"12258"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"progress"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"100%"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"status"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Locked And Task Created"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"usercount"}
+                              required={false}
+                              schemaName={"number"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"number","example":5}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={true}
+                              className={"schemaItem"}
+                            >
+                              <details
+                                style={{}}
+                                className={"openapi-markdown__details"}
+                              >
+                                <summary
+                                  style={{}}
+                                >
+                                  <span
+                                    className={"openapi-schema__container"}
+                                  >
+                                    <strong
+                                      className={"openapi-schema__property"}
+                                    >
+                                      users
+                                    </strong><span
+                                      className={"openapi-schema__name"}
+                                    >
+                                       object[]
+                                    </span>
+                                  </span>
+                                </summary><div
+                                  style={{"marginLeft":"1rem"}}
+                                >
+                                  <li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                                    >
+                                      Array [
+                                    </div>
+                                  </li><SchemaItem
+                                    collapsible={false}
+                                    name={"certfied"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"WORKSFORME"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"comment"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":""}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"comments"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":""}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"consulted"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"true"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"displayname"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Tabitha Bowers"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"firstname"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Tabitha"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"totalaccount"}
+                                    required={false}
+                                    schemaName={"number"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"number","example":5}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"updateuser"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"dbailey"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"username"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"tbowers"}}
+                                  >
+                                    
+                                  </SchemaItem><li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                                    >
+                                      ]
+                                    </div>
+                                  </li>
+                                </div>
+                              </details>
+                            </SchemaItem><li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                              >
+                                ]
+                              </div>
+                            </li>
+                          </div>
+                        </details>
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"campaignId"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"232"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"complete"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Yes"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"count"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":1}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"successful"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"Total Preview Certification\": [\n    \"testLock2 - dbailey (Damien Bailey)\"\n  ],\n  \"campaignDetails\": [\n    {\n      \"certificationame\": \"testLock2 - dbailey (Damien Bailey)\",\n      \"certifier\": \"dlogan\",\n      \"certkey\": \"12258\",\n      \"progress\": \"100%\",\n      \"status\": \"Locked And Task Created\",\n      \"usercount\": 5,\n      \"users\": [\n        {\n          \"certfied\": \"WORKSFORME\",\n          \"comment\": \"\",\n          \"comments\": \"\",\n          \"consulted\": \"true\",\n          \"displayname\": \"Tabitha Bowers\",\n          \"firstname\": \"Tabitha\",\n          \"totalaccount\": 5,\n          \"updateuser\": \"dbailey\",\n          \"username\": \"tbowers\"\n        },\n        {\n          \"certfied\": \"WORKSFORME\",\n          \"comment\": \"[02/26/19-(admin)] test comments for dbailey[02/26/19-(admin)] test comments for dbailey[02/26/19-(admin)] test comments for dbailey[02/26/19-(admin)] test comments for dbailey[02/26/19-(admin)] test comments for dbailey\",\n          \"comments\": \"\",\n          \"consulted\": \"true\",\n          \"displayname\": \"Ariana Hinton\",\n          \"firstname\": \"Ariana\",\n          \"totalaccount\": 1,\n          \"updateuser\": \"dbailey\",\n          \"username\": \"00039016-9acb-495d-8912-7bc289d0af1b\"\n        },\n        {\n          \"certfied\": \"WORKSFORME\",\n          \"comment\": \"[02/26/19-(admin)] test comments for DEWHE0\",\n          \"comments\": \"\",\n          \"consulted\": \"false\",\n          \"displayname\": \"\",\n          \"firstname\": \"Mathew\",\n          \"totalaccount\": 2,\n          \"updateuser\": \"dbailey\",\n          \"username\": \"194422\"\n        },\n        {\n          \"certfied\": \"WORKSFORME\",\n          \"comment\": \"\",\n          \"comments\": \"\",\n          \"consulted\": \"false\",\n          \"displayname\": \"\",\n          \"firstname\": \"Shania\",\n          \"totalaccount\": 2,\n          \"updateuser\": \"dbailey\",\n          \"username\": \"194445\"\n        },\n        {\n          \"certfied\": \"WORKSFORME\",\n          \"comment\": \"\",\n          \"comments\": \"\",\n          \"consulted\": \"false\",\n          \"displayname\": \"\",\n          \"firstname\": \"Cody\",\n          \"totalaccount\": 1,\n          \"updateuser\": \"dbailey\",\n          \"username\": \"194446\"\n        }\n      ]\n    }\n  ],\n  \"campaignId\": \"232\",\n  \"complete\": \"Yes\",\n  \"count\": 1,\n  \"errorCode\": \"0\",\n  \"msg\": \"successful\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Fetch Campaign Details"}
+                  value={"Fetch Campaign Details"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"Total Preview Certification\": [\n    \"testLock2 - dbailey (Damien Bailey)\"\n  ],\n  \"campaignDetails\": [\n    {\n      \"certificationame\": \"testLock2 - dbailey (Damien Bailey)\",\n      \"certifier\": \"dlogan\",\n      \"certkey\": \"12258\",\n      \"progress\": \"100%\",\n      \"status\": \"Locked And Task Created\",\n      \"usercount\": 5,\n      \"users\": [\n        {\n          \"certfied\": \"WORKSFORME\",\n          \"comment\": \"\",\n          \"comments\": \"\",\n          \"consulted\": \"true\",\n          \"displayname\": \"Tabitha Bowers\",\n          \"firstname\": \"Tabitha\",\n          \"totalaccount\": 5,\n          \"updateuser\": \"dbailey\",\n          \"username\": \"tbowers\"\n        },\n        {\n          \"certfied\": \"WORKSFORME\",\n          \"comment\": \"[02/26/19-(admin)] test comments for dbailey[02/26/19-(admin)] test comments for dbailey[02/26/19-(admin)] test comments for dbailey[02/26/19-(admin)] test comments for dbailey[02/26/19-(admin)] test comments for dbailey\",\n          \"comments\": \"\",\n          \"consulted\": \"true\",\n          \"displayname\": \"Ariana Hinton\",\n          \"firstname\": \"Ariana\",\n          \"totalaccount\": 1,\n          \"updateuser\": \"dbailey\",\n          \"username\": \"00039016-9acb-495d-8912-7bc289d0af1b\"\n        },\n        {\n          \"certfied\": \"WORKSFORME\",\n          \"comment\": \"[02/26/19-(admin)] test comments for DEWHE0\",\n          \"comments\": \"\",\n          \"consulted\": \"false\",\n          \"displayname\": \"\",\n          \"firstname\": \"Mathew\",\n          \"totalaccount\": 2,\n          \"updateuser\": \"dbailey\",\n          \"username\": \"194422\"\n        },\n        {\n          \"certfied\": \"WORKSFORME\",\n          \"comment\": \"\",\n          \"comments\": \"\",\n          \"consulted\": \"false\",\n          \"displayname\": \"\",\n          \"firstname\": \"Shania\",\n          \"totalaccount\": 2,\n          \"updateuser\": \"dbailey\",\n          \"username\": \"194445\"\n        },\n        {\n          \"certfied\": \"WORKSFORME\",\n          \"comment\": \"\",\n          \"comments\": \"\",\n          \"consulted\": \"false\",\n          \"displayname\": \"\",\n          \"firstname\": \"Cody\",\n          \"totalaccount\": 1,\n          \"updateuser\": \"dbailey\",\n          \"username\": \"194446\"\n        }\n      ]\n    }\n  ],\n  \"campaignId\": \"232\",\n  \"complete\": \"Yes\",\n  \"count\": 1,\n  \"errorCode\": \"0\",\n  \"msg\": \"successful\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

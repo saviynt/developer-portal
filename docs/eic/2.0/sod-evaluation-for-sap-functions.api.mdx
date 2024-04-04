@@ -1,0 +1,195 @@
+---
+id: sod-evaluation-for-sap-functions
+title: "SoD Evaluation for SAP Functions"
+description: "This API can be used to evaluate SOD for new SAP role that is being requested for a user based on the selected ruleset. (If no ruleset is selected, it uses the default ruleset)"
+sidebar_label: "SoD Evaluation for SAP Functions"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVs1u2zgQfpXB+JIAip0W6EU3N3GBANsmiLPYQ2rUtDi22FKkSlJ2vIaAPsjuy/VJFkNJtpy0TQ97zEnUcH6++ecOg1h5TO9xSitHKxGUNWCXcFkFRR5nCUrymVMlX2CKd7nyML65gkwYWBBUniQEC7QWuhKBYHp9CUvrwNAGpuMbcFYThFwEUB4WpMwKHH2tyAeSkVGwDgcLwZqsgZATeNKUMYOrNHkKQzi5WoKx3T/r6ngSUIFV+CgpaSkqHTrG04/mo3kvjBTBui2UwonCp0yce1HeWk1+Dmcw1jpKM+BIBElaFYohLLbw/ds/g8Hg+7d/G0c2Suu97+zC1F7CpAkAh+9EmbIKoJUP4HNbaQmZNUEoA/SgfOAYCA8b0pq/bJij5aLhaMFQE9UFQensWnllDcnTYQRuaNPHPj22cHCBkW1yleXRgiPPcWnxLAiWSgdyHD8arobtvYesu4+GZcyJ3nJiDG30FoRkWsTawCEjS6tMYCwfREFcPWxw0tIhs86RL62R7HiwTaQpq5wKW5hufaBiCKzrOlaZ0Ed5ajPJ6m/b7BtRUAKKKyLscSbgo6omPZWnH9VDA1lkma0axOPmGFUytkPAuuL1+3z3UhH13OUE83EVcuvU3zH1cygqHyAXa4L5WxKO3ByWVmu7aSppfme/kJkPMUFbkotCVxJT9FYeKuiddVNRvqtMxn8eE2xb5q2VW0x3yMkmE/goylKrLIqNHs42m83Z0rrirHKaTGYlSWbyWU6F4FPYloQp2sVnygImWDrGEXudlTXR6DH64JRZYYL0IIpSM+mzzY20hHWCXe5/LdCk+BUL9Gr31zIfJn99mo5vPt1e/zFhwTZ/v23o96x0Fl4NBoPu/Brrut4zRQWP+ju2/PgGDglKd8jXdBTDfaD6cdpjfBSLY4d7/vYEetw/BR6xN+3mG/Cvz8/5czzGkdlil1Egxwtgh9wCmGIpQo4JKnM4c/Upx6UUXEXJ03JqQ1vXswQLCrnlki6tjxXGOlIceVFOry8PYWSHyK0765XTmGIeQunT0WgXyAgT6qEXa7U1IdO2ksPMFqPJxfuRKNVo/QYTXAunxKJLcxR56mtL500WZwGm+wqoI2LfzqIpu9XoWgivMm7tnpOMDVvn+T/ycK0tYqM/xx2ZYtyVWdrIqUJThY2PMDGBXOmUJ7iSZAKPxwt2PC7cW1qSI5MR/nAnX1jN+5Drs52I3UIMQmnfTWVflaV1vNeaPDVrIs67Z1GcTK4uTjnq5Hxj+c3wfHjOIeBcF8KwV20ZPdszj7zoDbWXR8bLI+PlkfG/PDLaYRToIYxKLZThZo2jdtcO5nt8MphnCeY8u9N73O24Zf50uq6Z/LUit8X0fnYYvXF4S+X5LDFdCu3pF619ctvuklP4GbyWKMw2Tvi4VhET/ELbbiXVszrBnIQkF+03VxeNlbM7VnAQff6FdLS2bq6nd5jgon1qFVaykh530v9J72d1Xf8HIK2taQ==
+sidebar_class_name: "post api-method"
+info_path: eic/2.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"SoD Evaluation for SAP Functions"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/sapSODEvaluation"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API can be used to evaluate SOD for new SAP role that is being requested for a user based on the selected ruleset. (If no ruleset is selected, it uses the default ruleset)
+
+Mandatory params:
+
+`sapRoles` - All the SAP Roles delimited by “###” that will be used for SoD Evaluation (input list should contain existing as well as the new roles that need to be provisioned).
+
+`newsapRoles` - Should contain SAP Roles for which the result should be filtered, e.g. results could be provided only on newly added roles.
+
+`endpoint` - Name of the Endpoint corresponding to the Security System. 
+
+Optional params:
+
+`ruleset` - Ruleset name, if not provided, system will use the default ruleset.
+
+`account` - Account name to which the SAP roles will be provisioned.
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"path","in":"path","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/x-www-form-urlencoded"}
+    value={"application/x-www-form-urlencoded-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"account"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"johndoe"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"endpoint"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"System1"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"newsapRoles"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"NEW_SAP_ROLE"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"ruleset"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"System1"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"sapRoles"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"SAP_ROLE1###SAP_ROLE2"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          
+          
+          
+        </div><div>
+          
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      
