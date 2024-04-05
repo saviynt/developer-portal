@@ -213,13 +213,13 @@ const config: Config = {
             hideSendButton: false,
             showSchemas: true,
             version: "5.0.0", // Current version
-            label: "v5.0.0", // Current version label
+            label: "v5.0", // Current version label
             baseUrl: "/developer-portal/eic/rest/5.0", // Leading slash is important
             versions: {
               "2.0.0": {
                 specPath: "static/api-specs/saviynt-eic-api-2.0.yaml",
                 outputDir: "docs/eic/2.0", // No trailing slash
-                label: "v2.0.0",
+                label: "v2.0",
                 baseUrl: "/developer-portal/eic/rest/2.0", // Leading slash is important
               },
             },

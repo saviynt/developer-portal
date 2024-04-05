@@ -20,7 +20,7 @@ import eic_5_0_Sidebar from "./docs/eic/sidebar";
 import eic_2_0_Sidebar from "./docs/eic/2.0/sidebar";
 
  const sidebars: SidebarsConfig = {
-  "eic-5.0.0": [
+  "eic-5.0": [
     {
       type: "html",
       defaultStyle: true,
@@ -30,23 +30,23 @@ import eic_2_0_Sidebar from "./docs/eic/2.0/sidebar";
     {
       type: "html",
       defaultStyle: true,
-      value: versionCrumb(`v5.0.0`),
+      value: versionCrumb(`v5.0`),
     },
     {
       type: "category",
       label: "EIC",
       link: {
         type: "generated-index",
-        title: "v5.0.0 (latest)",
+        title: "v5.0 (latest)",
         description:
-          "This is a sample server Petstore server. You can find out more about Swagger at http://swagger.io or on irc.freenode.net, #swagger. For this sample, you can use the api key special-key to test the authorization filters.",
+          "This is a Saviynt EIC API Spec for V2.0.  For this sample, you can use the api key special-key to test the authorization filters.",
         slug: "/eic/rest/5.0",
       },
       items: eic_5_0_Sidebar,
     },
   ],
 
-  "eic-1.0.0": [
+  "eic-2.0": [
     {
       type: "html",
       defaultStyle: true,
@@ -56,14 +56,14 @@ import eic_2_0_Sidebar from "./docs/eic/2.0/sidebar";
     {
       type: "html",
       defaultStyle: true,
-      value: versionCrumb(`v2.0.0`),
+      value: versionCrumb(`v2.0`),
     },
     {
       type: "category",
       label: "EIC",
       link: {
         type: "generated-index",
-        title: "v2.0.0",
+        title: "v2.0",
         description:
           "This is a Saviynt EIC API Spec for V2.0.  For this sample, you can use the api key special-key to test the authorization filters.",
         slug: "/eic/rest/2.0",
