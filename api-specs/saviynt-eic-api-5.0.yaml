@@ -5,8 +5,18 @@ info:
     This Collection provides the details of the supported methods for the
     Saviynt Enterprise Identity Cloud (EIC)
   version: 5.0.0
+  termsOfService: https://saviynt.com/terms/
+  contact:
+    name: API Support
+    url: https://www.saviynt.com/support
+    email: support@saviynt.com
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  x-logo:
+    url: https://saviynt.com/wp-content/uploads/2019/04/Saviynt_logo_Navy.svg
 externalDocs:
-  description: Find out more about Saviynt 
+  description: Documentation
   url: https://docs.saviyntcloud.com/
 servers:
   - url: 'https://{tenant}.saviyntcloud.com/ECM/api/v5'
@@ -45,10 +55,10 @@ paths:
             schema:
               type: object
               properties:
-                password:
+                username:
                   type: string
                   example: ''
-                username:
+                password:
                   type: string
                   example: ''
             examples:
@@ -59914,57 +59924,159 @@ components:
     bearerAuth:
       type: http
       scheme: bearer
+x-ignoredHeaderParameters:
+  - Accept
+  - User-Agent
+  - Cache-Control
+  - Content-Length
+  - Server
+  - X-Frame-Options
 tags:
   - name: Authentication
+    x-displayName: Authentication
+    description: APIs for managing user login, logout, session management, and API token issuance. 
+    externalDocs: https://docs.saviyntcloud.com/
   - name: Users
+    x-displayName: Users
+    description: APIs for creating, retrieving, updating, and deleting user
+    externalDocs: https://docs.saviyntcloud.com/
   - name: Accounts
+    x-displayName: Accounts
+    description: APIs for managing user accounts , including creating, retrieving, updating, enabling,  disabling , suspending.
+    externalDocs: https://docs.saviyntcloud.com/
   - name: Entitlements
+    x-displayName: Entitlements
+    description: APIs for managing entitlements
+    externalDocs: https://docs.saviyntcloud.com/
   - name: Privileges
+    x-displayName: Privileges
+    description: APIs for managing Privileges
+    externalDocs: https://docs.saviyntcloud.com/
   - name: Roles
+    x-displayName: Roles
+    description: APIs for managing Roles
+    externalDocs: https://docs.saviyntcloud.com/
   - name: User Groups
+    x-displayName: User Groups
+    description: APIs for managing User Groups
+    externalDocs: https://docs.saviyntcloud.com/
   - name: Security Systems
+    x-displayName:
+    description: APIs for managing Security Systems
+    externalDocs: https://docs.saviyntcloud.com/
   - name: Endpoints
+    x-displayName: Endpoints
+    description: APIs for managing Endpoints
+    externalDocs: https://docs.saviyntcloud.com/
   - name: Connections
+    x-displayName: Connections
+    description: APIs for managing Connections
+    externalDocs: https://docs.saviyntcloud.com/
   - name: Entitlement Types
+    x-displayName: Entitlement Types
+    description: APIs for managing Entitlement Types
+    externalDocs: https://docs.saviyntcloud.com/
   - name: Dynamic Attributes
+    x-displayName: Dynamic Attributes
+    description: APIs for managing Dynamic Attributes
+    externalDocs: https://docs.saviyntcloud.com/
   - name: Organization
-  - name: Connections
+    x-displayName: Organization
+    description: APIs for managing Organization
+    externalDocs: https://docs.saviyntcloud.com/
   - name: Analytics
+    x-displayName: Analytics
+    description: APIs for managing Analytics
+    externalDocs: https://docs.saviyntcloud.com/
   - name: Access Recommendations
+    x-displayName: Access Recommendations
+    description: APIs for managing Access Recommendations
+    externalDocs: https://docs.saviyntcloud.com/
   - name: Dashboard
+    x-displayName: Dashboard
+    description: APIs for managing Dashboard
+    externalDocs: https://docs.saviyntcloud.com/
   - name: Access Request
+    x-displayName: Access Request
+    description: APIs for managing Access Request
+    externalDocs: https://docs.saviyntcloud.com/
   - name: Request Approval
+    x-displayName: Request Approval
+    description: APIs for managing Request Approval
+    externalDocs: https://docs.saviyntcloud.com/
   - name: Tasks
+    x-displayName: Tasks
+    description: APIs for managing Tasks
+    externalDocs: https://docs.saviyntcloud.com/
   - name: User Delegation
+    x-displayName: User Delegation
+    description: APIs for managing User Delegation
+    externalDocs: https://docs.saviyntcloud.com/
   - name: Attestations
+    x-displayName: Attestations
+    description: APIs for managing Attestations
+    externalDocs: https://docs.saviyntcloud.com/
   - name: Campaigns
+    x-displayName: Campaigns
+    description: APIs for managing Campaigns
+    externalDocs: https://docs.saviyntcloud.com/
   - name: User Manager Campaigns
+    x-displayName: User Manager Campaigns
+    description: APIs for managing User Manager Campaigns
+    externalDocs: https://docs.saviyntcloud.com/
   - name: Entitlement Owner Campaigns
+    x-displayName: Entitlement Owner Campaigns
+    description: APIs for managing Entitlement Owner Campaigns
+    externalDocs: https://docs.saviyntcloud.com/
   - name: Application Owner Campaigns
+    x-displayName: Application Owner Campaigns
+    description: APIs for managing Application Owner Campaigns
+    externalDocs: https://docs.saviyntcloud.com/
   - name: Segregation of Duties
+    x-displayName: Segregation of Duties
+    description: APIs for managing SODs
+    externalDocs: https://docs.saviyntcloud.com/
   - name: Password Management
+    x-displayName: Password Management
+    description: APIs for managing Password
+    externalDocs: https://docs.saviyntcloud.com/
   - name: Common Utilities
+    x-displayName: Common Utilities
+    description: APIs for common Utilities 
+    externalDocs: https://docs.saviyntcloud.com/
   - name: Job Management
+    x-displayName: Job Management
+    description: APIs for managing Job
+    externalDocs: https://docs.saviyntcloud.com/
   - name: Transport
+    x-displayName: Transport
+    description: APIs for managing Transport
+    externalDocs: https://docs.saviyntcloud.com/
   - name: Provisioning Policies
+    x-displayName: Provisioning Policies
+    description: APIs for managing 
+    externalDocs: https://docs.saviyntcloud.com/
   - name: Dataset
+    x-displayName: Dataset
+    description: APIs for managing Dataset
+    externalDocs: https://docs.saviyntcloud.com/
 x-tagGroups:
-  - name: 1Identity Administration
+  - name: Identity Repository
     tags:
-      - Authentication
       - Users
+      - Authentication
       - Accounts
       - Entitlements
       - Privileges
       - Roles
       - User Groups
       - Organization
-  - name: Policies Collection
+  - name: Policies
     tags:
       - Provisioning Policies
       - Segregation of Duties
       - Password Management
-  - name: Request
+  - name: Request Collection
     tags:
       - Access Request
       - User Request
@@ -59998,10 +60110,3 @@ x-tagGroups:
       - Transport
       - Dataset
       - Common Utilities
-x-ignoredHeaderParameters:
-  - Accept
-  - User-Agent
-  - Cache-Control
-  - Content-Length
-  - Server
-  - X-Frame-Options
