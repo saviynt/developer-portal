@@ -14,7 +14,7 @@
   --ifm-color-primary-light: #338bff; /* A lighter shade for less dominant elements */
   --ifm-color-primary-lighter: #66a3ff; /* Even lighter for backgrounds or large areas */
   --ifm-color-primary-lightest: #99bbff; /* The lightest shade, suitable for highlights or accents */
-  --ifm-code-font-size: 95%; /* No change here unless desired */
+  --ifm-code-font-size: 80%; /* No change here unless desired */
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1); /* No change, but you can adjust it */
   --site-primary-hue-saturation: 211 100%; /* The hue and saturation might be adjusted if needed */
 }
@@ -135,6 +135,19 @@ html[data-theme="dark"] .header-github-link:before {
 }
 
 div[class^="announcementBar_"] {
+  /* Replace the striped background with a solid color and some transparency */
+  background: rgba(255, 255, 255, 0.75); /* Adjust the alpha for desired transparency */
+
+  /* Apply the frosted glass effect */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); /* For Safari */
+
+  font-weight: bold;
+  /* Other styles you might want to keep or adjust */
+}
+
+
+/* div[class^="announcementBar_"] {
   --site-announcement-bar-stripe-color1: hsl(
     var(--site-primary-hue-saturation) 85%
   );
@@ -149,4 +162,4 @@ div[class^="announcementBar_"] {
     var(--site-announcement-bar-stripe-color2) 40px
   );
   font-weight: bold;
-}
+} */
