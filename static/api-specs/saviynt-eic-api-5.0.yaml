@@ -669,7 +669,7 @@ paths:
   /uploadUserRequest:
     post:
       tags:
-        - Users
+        - Users Request
       summary: Bulk Upload Users
       description: >-
         This API is used to create and update users using bulk upload.
@@ -1122,7 +1122,7 @@ paths:
   /addremoveuserfromrole:
     post:
       tags:
-        - Users
+        - Role Membership
       summary: Add/Remove User from SAV ROLE
       description: "This method grants/removes membership of a \"user\" to one or more roles in SSM.\r\n\r\nThe `Authorization` must have `Bearer` followed by `Token`. \r\n\r\nMandatory params: \r\n\r\n`username` - Username for the user to whom the roles are to be granted,\r\n\r\n`rolename` - comma separated values with names of roles that need to be granted,\r\n\r\n`operation` (0/1) - 0:Remove and 1:Add"
       operationId: addRemoveUserFromSavRole
@@ -1183,7 +1183,7 @@ paths:
   /getAccessDetailsForUser:
     post:
       tags:
-        - Users
+        - Access
       summary: Get Access Details For User
       description: "This API call can be used to get the user details, account details, and details of all the entitlements the user has access to. \r\n\r\nThis API will return only the entitlement attributes which are not null or not empty.\r\n\r\nThe `Authorization` must have `Bearer` followed by `Token`. \r\n\r\nMandatory params:\r\n`username`\r\n\r\nOptional params:\r\n`endpoint`, `max`, `offset`, `entitlementtype`\r\n\r\n***Note*** - This API supports GET HTTP method along with POST."
       operationId: getAccessDetailsForUser
@@ -2022,7 +2022,7 @@ paths:
   /getEntDetailsforUsers:
     get:
       tags:
-        - Users
+        - Access
       summary: Get Flat Response Entitlement Details For User
       description: "This API call can be used to get a flat response consisting of user details, account details, and details of all the entitlements the user has access to. \r\n\r\nThis API will return only the entitlement attributes which are not null or not empty.\r\n\r\nThe `Authorization` must have `Bearer` followed by `Token`. \r\n\r\nOptional params:\r\n`username`, `entitlementType`, `entitlement_value`, `endpoint`, `userQuery`, `accountQuery`, `entQuery`, `accEntQuery`, `max`(default - 100), `offset`(default - 0)"
       operationId: getFlatResponseEntitlementDetailsForUser
@@ -2279,7 +2279,7 @@ paths:
   /getRoleDetailsforUsers:
     get:
       tags:
-        - Users
+        - Role Membership
       summary: Get Flat Response Role Details For User
       description: "This API call can be used to get a flat response consisting of user details and details of all the roles the user has access to. \r\n\r\nThis API will return only the entitlement attributes which are not null or not empty.\r\n\r\nThe `Authorization` must have `Bearer` followed by `Token`. \r\n\r\nOptional params:\r\n`rolename`, `roletype`, `username`, `userQuery`, `roleQuery`, `roleUserAccQuery`, `max`(default - 100), `offset`(default - 0)"
       operationId: getFlatResponseRoleDetailsForUser
@@ -2662,7 +2662,7 @@ paths:
   /getSavRoles:
     get:
       tags:
-        - Users
+        - Sav Roles
       summary: Get SavRoles
       description: "StartFragment\n\nThis API returns the SavRoles of an user in SSM.\n\nThe\_`Authorization`\_must have\_`Bearer`\_followed by\_`Token`.\n\nOptional params:\n\n`max`,`offset`,`username`\n\nEndFragment"
       operationId: getSavroles
@@ -4819,7 +4819,7 @@ paths:
   /assignAccountToEntitlement:
     post:
       tags:
-        - Accounts
+        - Access
       summary: Assign Entitlement to Account
       description: >-
         This method provisions one or more "Entitlements" to an "Account". The
@@ -4929,7 +4929,7 @@ paths:
   /removeAccountToEntitlement:
     post:
       tags:
-        - Accounts
+        - Access
       summary: Remove Entitlement from Account
       description: >-
         This method deprovisions one or more "Entitlements" from an "Account".
@@ -59944,6 +59944,10 @@ tags:
     x-displayName: Accounts
     description: APIs for managing user accounts , including creating, retrieving, updating, enabling,  disabling , suspending.
     externalDocs: https://docs.saviyntcloud.com/
+  - name: Access
+    x-displayName: Access
+    description: APIs for managing user access, including adding and removing access on existing accounts.
+    externalDocs: https://docs.saviyntcloud.com/
   - name: Entitlements
     x-displayName: Entitlements
     description: APIs for managing entitlements
@@ -60066,17 +60070,19 @@ x-tagGroups:
       - Users
       - Authentication
       - Accounts
-      - Entitlements
-      - Privileges
-      - Roles
+      - Access
       - User Groups
       - Organization
+  - name: Roles
+    tags:
+      - Roles
+      - Role Membership
   - name: Policies
     tags:
       - Provisioning Policies
       - Segregation of Duties
       - Password Management
-  - name: Request Collection
+  - name: Request
     tags:
       - Access Request
       - User Request
@@ -60084,26 +60090,28 @@ x-tagGroups:
       - Request History
       - Request Approval
       - Tasks
-  - name: Applications Collection
+  - name: Applications
     tags:
       - Security Systems
       - Endpoints
       - Connections
       - Entitlement Types
+      - Entitlements
+      - Privileges
       - Dynamic Attributes
-  - name: Campaigns Collection
+  - name: Campaigns
     tags:
       - Attestations
       - Campaigns
       - User Manager Campaigns
       - Entitlement Owner Campaigns
       - Application Owner Campaigns
-  - name: Analytics Collection
+  - name: Analytics
     tags:
       - Analytics
       - Dashboard
       - Access Recommendations
-  - name: Admin Collection
+  - name: Administration
     tags:
       - User Delegation
       - Job Management
