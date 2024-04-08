@@ -53,8 +53,15 @@ const config: Config = {
       },
       items: [
         {
+          type: "dropdown",
           label: "API-REFERENCE",
-          to: "/api-reference/rest/5.0",
+          position: "left",
+          items: [
+            {
+              label: "v5.0",
+              to: "/api-reference/rest/5.0",
+            },
+          ],
         },
         {
           label: "CONNECTORS",
@@ -202,7 +209,7 @@ const config: Config = {
         config: {
           saviynt:{
             specPath: "static/api-specs/saviynt-eic-api-5.0.yaml",
-            outputDir: "docs/eic",
+            outputDir: "docs/api-reference",
             sidebarOptions: {
               groupPathsBy: "tagGroup",
               categoryLinkSource: "auto",
