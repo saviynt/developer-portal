@@ -9,7 +9,7 @@
  Create as many sidebars as you want.
  */
  import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
-import api_reference_sidebar from "./docs/api-reference/sidebar";
+import api_reference_5_0_sidebar from "./docs/api-reference/5.0/sidebar";
 
  const sidebars: SidebarsConfig = {
   "api-reference": [
@@ -23,7 +23,7 @@ import api_reference_sidebar from "./docs/api-reference/sidebar";
           "This is a Saviynt EIC API Spec for V2.0.  For this sample, you can use the api key special-key to test the authorization filters.",
         slug: "/api-reference/rest/5.0",
       },
-      items: api_reference_sidebar,
+      items: api_reference_5_0_sidebar,
     },
   ],
   "connectors": [
