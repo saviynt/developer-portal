@@ -72,6 +72,10 @@ const config: Config = {
           to: "/extensions/",
         },
         {
+          label: "Security",
+          to: "/security/",
+        },
+        {
           href: "https://docs.saviyntcloud.com/",
           position: "right",
           className: "header-medium-link",
