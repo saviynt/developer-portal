@@ -54,11 +54,11 @@ const config: Config = {
       items: [
         {
           type: "dropdown",
-          label: "API-REFERENCE",
+          label: "API",
           position: "left",
           items: [
             {
-              label: "v5.0",
+              label: "5.0",
               to: "/apis/rest/5.0",
             },
           ],

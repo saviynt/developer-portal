@@ -20,7 +20,7 @@ import {
     {
       type: "html",
       defaultStyle: true,
-      value: versionCrumb(`5.0.`),
+      value: versionCrumb(`5.0`),
     },
     {
       type: 'category',
@@ -33,12 +33,12 @@ import {
         },
         {
           type: "category",
-          label: "REST",
+          label: "REST API",
           link: {
             type: "generated-index",
-            title: "REST",
+            title: "REST API",
             description:
-              "This is a Saviynt EIC API Spec for V2.0.  For this sample, you can use the api key special-key to test the authorization filters.",
+              "This is a Saviynt REST API Specification for 5.0.",
             slug: "/apis/rest/5.0",
           },
           items: api_rest_5_0_sidebar,
