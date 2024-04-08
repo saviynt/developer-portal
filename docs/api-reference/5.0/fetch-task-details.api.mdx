@@ -1,0 +1,803 @@
+---
+id: fetch-task-details
+title: "Fetch Task Details"
+description: "This method returns a `list` of provisioning tasks, that correspond to a particular IT Application (e.g Microsoft Active Directory) modeled in SSM as 'Endpoint' of a 'Security System'."
+sidebar_label: "Fetch Task Details"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: api-reference/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Fetch Task Details"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/fetchTasks"}
+>
+  
+</MethodEndpoint>
+
+
+
+This method returns a `list` of provisioning tasks, that correspond to a particular IT Application (e.g Microsoft Active Directory) modeled in SSM as "Endpoint" of a "Security System".
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+Mandatory params:
+`TASKSTATUS` - PENDING/PENDINGCREATE/COMPLETED/COMPLETED_AND_DISCONTINUE/DISCONTINUE, 
+
+Optional params:
+
+`endpoint` - endpoint key,
+`endpointname`, `endpointdescription`, 
+
+`securitysystem` - securitysystem key,
+
+`loggedinusername` - username of user who wants to fetch the tasks,
+`upadteuser`, 
+`requestedby`, 
+`username`, 
+`firstname`, 
+`lastname`,
+`account` - accountname, 
+
+`entitlement_value`, 
+`entitlement_glossary`, 
+`entitlementowner` - entitlementowner key,
+`entitlementtypekey`, 
+
+`requestid`, 
+`parenttaskid`, 
+`taskid`, 
+`taskowneruser` - userkey of owner,
+`taskownerusername` - username of owner, 
+`taskownerusergroup` - usergroup key, 
+`taskownerusergroupname` - usergroup name, 
+`max`, `offset`,
+`statusint` - List of comma-seperated integer equivalent task status(3 - Complete, 4 - Discontinue and so on)
+`source` - List of comma-seperated source types(REQUEST/WEBSERVICE/CERTIFICATION and so on)
+`requestkey` - List of comma-seperated requestkeys
+`requestaccesskey` - List of comma-seperated requestaccesskey
+`tasktype` - List of comma-seperated integer equivalent task types(3 - New Account, 5 - Change Password and so on)
+`getEntitlementObj` - Values: true/false, if true returns the entitlement details associated with the task
+
+`getAccountObj` - Values: true/false, if true returns the account details asociated with the task,
+
+`taskmetadatalength` - Modifies the charcater limit of provisioning comments and provisioning metadata upto maximum of 10000.
+
+***Note*** - Provisioning comments in the response will be limited to 200 characters. Provisioning metadata in the response will be limited to 400 characters.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"path","in":"path","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"multipart/form-data"}
+    value={"multipart/form-data-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"source"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"WEBSERVICE"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"statusint"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"1"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"tasktype"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"5"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Fetch Task Details
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Credentials
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Origin
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Cache-Control
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Expires
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Pragma
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Referrer-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-XSS-Protection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Successful"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                tasks
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object[]
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                              >
+                                Array [
+                              </div>
+                            </li><SchemaItem
+                              collapsible={false}
+                              name={"ACCOUNT"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"bsimpson5"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"COMMENTS"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"add a comment"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"CREATIONDATE"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"2021-01-04 20:27:34"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"ENDDATE"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"ENDPOINT"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Active Directory Plus"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"ENDPOINTKEY"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"604"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"ENDPOINTNAME"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"ActiveDirectoryPlus"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"ENTITLEMENTTYPE"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"ENTITLEMENT_VALUEKEY"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"OWNERKEY"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"admin"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"PARENTTASK"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"PROVISIONINGCOMMENTS"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"PROVISIONINGMETADATA"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"REQUESTACCESSKEY"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"REQUESTID"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"REQUESTKEY"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"SECURITYSYSTEM"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Active Directory Plus"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"STARTDATE"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"STATUS"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"New"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"TASKID"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"10642653"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"TASKTYPE"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Change Password"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"UPDATEDATE"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"2021-01-04 20:27:34"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"USER"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"bsimpson5"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"upadteuser"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"bsimpson5(2021-01-04 20:27:34)"}}
+                            >
+                              
+                            </SchemaItem><li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                              >
+                                ]
+                              </div>
+                            </li>
+                          </div>
+                        </details>
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"totalrecords"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"2"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"totaltasks"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"2"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \"Successful\",\n  \"tasks\": [\n    {\n      \"ACCOUNT\": \"bsimpson5\",\n      \"COMMENTS\": \"add a comment\",\n      \"CREATIONDATE\": \"2021-01-04 20:27:34\",\n      \"ENDDATE\": \"\",\n      \"ENDPOINT\": \"Active Directory Plus\",\n      \"ENDPOINTKEY\": \"604\",\n      \"ENDPOINTNAME\": \"ActiveDirectoryPlus\",\n      \"ENTITLEMENTTYPE\": \"\",\n      \"ENTITLEMENT_VALUEKEY\": \"\",\n      \"OWNERKEY\": \"admin\",\n      \"PARENTTASK\": \"\",\n      \"PROVISIONINGCOMMENTS\": \"\",\n      \"PROVISIONINGMETADATA\": \"\",\n      \"REQUESTACCESSKEY\": \"\",\n      \"REQUESTID\": \"\",\n      \"REQUESTKEY\": \"\",\n      \"SECURITYSYSTEM\": \"Active Directory Plus\",\n      \"STARTDATE\": \"\",\n      \"STATUS\": \"New\",\n      \"TASKID\": \"10642653\",\n      \"TASKTYPE\": \"Change Password\",\n      \"UPDATEDATE\": \"2021-01-04 20:27:34\",\n      \"USER\": \"bsimpson5\",\n      \"upadteuser\": \"bsimpson5(2021-01-04 20:27:34)\"\n    },\n    {\n      \"ACCOUNT\": \"$1V9000-2LO73GT330CI\",\n      \"COMMENTS\": \"add a comment\",\n      \"CREATIONDATE\": \"2021-02-17 04:27:54\",\n      \"ENDDATE\": \"\",\n      \"ENDPOINT\": \"Active Directory Plus\",\n      \"ENDPOINTKEY\": \"604\",\n      \"ENDPOINTNAME\": \"ActiveDirectoryPlus\",\n      \"ENTITLEMENTTYPE\": \"\",\n      \"ENTITLEMENT_VALUEKEY\": \"\",\n      \"OWNERKEY\": \"admin\",\n      \"PARENTTASK\": \"\",\n      \"PROVISIONINGCOMMENTS\": \"\",\n      \"PROVISIONINGMETADATA\": \"\",\n      \"REQUESTACCESSKEY\": \"\",\n      \"REQUESTID\": \"\",\n      \"REQUESTKEY\": \"\",\n      \"SECURITYSYSTEM\": \"Active Directory Plus\",\n      \"STARTDATE\": \"\",\n      \"STATUS\": \"New\",\n      \"TASKID\": \"10642774\",\n      \"TASKTYPE\": \"Change Password\",\n      \"UPDATEDATE\": \"2021-02-17 04:27:54\",\n      \"USER\": \"\",\n      \"upadteuser\": \"admin(2021-02-17 04:27:54)\"\n    }\n  ],\n  \"totalrecords\": \"2\",\n  \"totaltasks\": \"2\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Fetch Task Details"}
+                  value={"Fetch Task Details"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \"Successful\",\n  \"tasks\": [\n    {\n      \"ACCOUNT\": \"bsimpson5\",\n      \"COMMENTS\": \"add a comment\",\n      \"CREATIONDATE\": \"2021-01-04 20:27:34\",\n      \"ENDDATE\": \"\",\n      \"ENDPOINT\": \"Active Directory Plus\",\n      \"ENDPOINTKEY\": \"604\",\n      \"ENDPOINTNAME\": \"ActiveDirectoryPlus\",\n      \"ENTITLEMENTTYPE\": \"\",\n      \"ENTITLEMENT_VALUEKEY\": \"\",\n      \"OWNERKEY\": \"admin\",\n      \"PARENTTASK\": \"\",\n      \"PROVISIONINGCOMMENTS\": \"\",\n      \"PROVISIONINGMETADATA\": \"\",\n      \"REQUESTACCESSKEY\": \"\",\n      \"REQUESTID\": \"\",\n      \"REQUESTKEY\": \"\",\n      \"SECURITYSYSTEM\": \"Active Directory Plus\",\n      \"STARTDATE\": \"\",\n      \"STATUS\": \"New\",\n      \"TASKID\": \"10642653\",\n      \"TASKTYPE\": \"Change Password\",\n      \"UPDATEDATE\": \"2021-01-04 20:27:34\",\n      \"USER\": \"bsimpson5\",\n      \"upadteuser\": \"bsimpson5(2021-01-04 20:27:34)\"\n    },\n    {\n      \"ACCOUNT\": \"$1V9000-2LO73GT330CI\",\n      \"COMMENTS\": \"add a comment\",\n      \"CREATIONDATE\": \"2021-02-17 04:27:54\",\n      \"ENDDATE\": \"\",\n      \"ENDPOINT\": \"Active Directory Plus\",\n      \"ENDPOINTKEY\": \"604\",\n      \"ENDPOINTNAME\": \"ActiveDirectoryPlus\",\n      \"ENTITLEMENTTYPE\": \"\",\n      \"ENTITLEMENT_VALUEKEY\": \"\",\n      \"OWNERKEY\": \"admin\",\n      \"PARENTTASK\": \"\",\n      \"PROVISIONINGCOMMENTS\": \"\",\n      \"PROVISIONINGMETADATA\": \"\",\n      \"REQUESTACCESSKEY\": \"\",\n      \"REQUESTID\": \"\",\n      \"REQUESTKEY\": \"\",\n      \"SECURITYSYSTEM\": \"Active Directory Plus\",\n      \"STARTDATE\": \"\",\n      \"STATUS\": \"New\",\n      \"TASKID\": \"10642774\",\n      \"TASKTYPE\": \"Change Password\",\n      \"UPDATEDATE\": \"2021-02-17 04:27:54\",\n      \"USER\": \"\",\n      \"upadteuser\": \"admin(2021-02-17 04:27:54)\"\n    }\n  ],\n  \"totalrecords\": \"2\",\n  \"totaltasks\": \"2\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

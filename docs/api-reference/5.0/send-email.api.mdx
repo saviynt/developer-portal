@@ -1,0 +1,370 @@
+---
+id: send-email
+title: "Send Email"
+description: "This API can be used send an email from SSM."
+sidebar_label: "Send Email"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVulu2zgQfhVifrWADjsH2mhRYFOtWxi7ORC7wAJpUFPkyGIikSpJOVENvfuClJwoadrkATaAEYqc+WY4xzfcgqVrA8klpKqqlCRfrCiFFWjgKgCOhmlRW6EkJLAshCHH53PCqCQZksYgJwYlJ1QSrKgoSa5VRRaLk+ir/irdb1kgWR03tlBa/KAOaEWqxlhS0A2S1UekGvWK5Kos1S1ykrVktVQ3KFcR2WGcKosJSZXMxbrRSBYny3MipLNDMsyVdq4IuSZ2cPBB9YRKTq3SLampppVJ7k9WVq0Cv3A+D0vTZNfI7PCVKd6udvJnPgq03AHd4zC2ClYZYysIQNWo/SXnHBJwoZm5sEAAGr83aOxHxVtItsCUtCitW1ZNaUVNtY1zpauQU0vdtmEFVn5l2xohAeVdgwBq7cz4FCVbyAbEQcpYLeQaAsA7WtWl27Jo7JAeL9wFwNgLKqL609CNaKWNmKqciovS75WuVSGfag0BfbWDO/kuAKteNhdxhY9N+j8XblMrafoQ7U0m7t/jYl64ut1lp0DKUXvhv6jFZ+P/jAvLognIdJ8ssCZ7k+l7Mpkm0/1k/x35fLIE58cC9Qb1a/GOa8oKDFPVKovxNJoOGDZMlboRr/YrTRcXn8Ll2d+z0w9HGaXvcj4Js0OWhwcHB3vh0ZTx8Ch7z47yKeP88N0f5Jza4kPszS01lSZHHc4kU9xBv9IqKxp5g9yD/Bt+0rTCsO8a81qIxfHJ7Oxi/nl+Cj6NozahdV0K5psrvjYuha/vEdRa6VRx/L31iSu7yqxf8LFhDI3Jm7L3cTjxhkZFlWxhQ8sGn9iHCQw2ngD1devJBa2vxcstSFo5nZraAgIQ8mHt+ERo5JBY3WDwy+h23VUAFdpCOUaqlfHRcRgJxGOCMr5Se7ONLiGBwtraJHG8tSiptF00NBorVcNdt8Wz9CSmtYg3hxDAhmpBsyEQvcrPXTfsu8mS06a0kNxHtvOuGmSNFrZduPsMDEeNYG6EjG7nfIPh1u7by7j0ZX6gvCTthXyhCpn3PCNsn93+jmQmLepaC4NkzlFaYVuSuov7AXiBOWqUDOHZGZmqskTmdkit1UZwNMQWSDhaKkpDVO4/TVPXSlvkpE+QIbnS/uRlL97M5ulbF3XUprd8GE0iV1wWdWXOcsc8guEojyOejL1QDH2H0Z6gh2Jz91v0nkHwpBRub2+jMYy5l8O+6GHYeToHSsFQGhyb8VxH9rzPP1uh/jhSeh0Puib+Z57OThezcC+aRIWtSgd8F5Zq7TP4GGPs5W0dDkQSN3WpKDfx3mR6FE8O4iHQ3xzIt1O6aSOzWfvCcK1SUTny+NHEeJT10Tz//5H04iNpaEqLdzauSyqky6PP3nZgpsvR0+kqgMKxVnIJ221GDX7RZde57e8N6haSy6sH7vHsxYVxaw5JTkuDv8nVm4uBRd+SX/k1bFLZeorzhA4QwA22OzLurrrdC8Lb74/S3kq4dAAPqs+99rpgp3TMGNZ2JP7T1HtE5+dniyUE90/Aqp8wDtjjBg/L5PKq67r/AEZYG8s=
+sidebar_class_name: "post api-method"
+info_path: api-reference/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Send Email"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/sendEmail"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API can be used send an email from SSM.
+
+The `Authorization` must have `Bearer` followed by `Token`. 
+
+Note: Configure SMTP in SSM before using this API. 
+
+Mandatory params: 
+
+`to`,
+`from`,
+`subject`,
+`body`
+
+Optional params:
+
+`cc`,`bcc`
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"path","in":"path","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"multipart/form-data"}
+    value={"multipart/form-data-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"body"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"test email body"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"cc"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"tim@saviynt.com"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"from"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"john@saviynt.com"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"subject"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"test email subject"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"to"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"john.doe@saviynt.com"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Send Email
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Successful"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \"Successful\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Send Email"}
+                  value={"Send Email"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \"Successful\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

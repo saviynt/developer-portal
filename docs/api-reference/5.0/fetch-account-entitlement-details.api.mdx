@@ -1,0 +1,932 @@
+---
+id: fetch-account-entitlement-details
+title: "Fetch Account Entitlement Details"
+description: "This API returns user details, account-entitlement details of a particular campaign required for certify/revoke API. If last certified actions and last certified comments are configured during campaign creation, then it is displayed in the API response. If the employmentStatus parameter is passed with this API, then only the match records in the certified field are displayed in the API response."
+sidebar_label: "Fetch Account Entitlement Details"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: api-reference/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Fetch Account Entitlement Details"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/fetchCampaignAccEntDetails"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API returns user details, account-entitlement details of a particular campaign required for certify/revoke API. If last certified actions and last certified comments are configured during campaign creation, then it is displayed in the API response. If the employmentStatus parameter is passed with this API, then only the match records in the certified field are displayed in the API response.
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+Mandatory params:
+
+`campaignId`
+
+Optional params:
+
+`certifierUsername`,
+
+`certkey`,
+
+`max`(default is 100),
+
+`offset`(default is 0),
+
+`returnFlatResponse`(can be true or false)
+
+`employmentStatus` (NORESPONSE/ WORKSFORME/ DOESNOTWORKFORME/ TERMINATED/ ENDDATE_EXTENDED)
+
+***Note***: The user attributes in the response is driven by the attributes selected during the campaign launch.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"path","in":"path","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"campaignId"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"64"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Fetch Account Entitlement Details
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Credentials
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Origin
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Cache-Control
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Expires
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Pragma
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Referrer-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-XSS-Protection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                campaignAccountEntDetails
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object[]
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                              >
+                                Array [
+                              </div>
+                            </li><SchemaItem
+                              collapsible={false}
+                              name={"certificationname"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"EPICUserMgrCampQ1Feb1 - admin (Saviynt AdminUser)"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"certkey"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"29292"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"status"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"New"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"usercount"}
+                              required={false}
+                              schemaName={"number"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"number","example":1}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={true}
+                              className={"schemaItem"}
+                            >
+                              <details
+                                style={{}}
+                                className={"openapi-markdown__details"}
+                              >
+                                <summary
+                                  style={{}}
+                                >
+                                  <span
+                                    className={"openapi-schema__container"}
+                                  >
+                                    <strong
+                                      className={"openapi-schema__property"}
+                                    >
+                                      users
+                                    </strong><span
+                                      className={"openapi-schema__name"}
+                                    >
+                                       object[]
+                                    </span>
+                                  </span>
+                                </summary><div
+                                  style={{"marginLeft":"1rem"}}
+                                >
+                                  <li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                                    >
+                                      Array [
+                                    </div>
+                                  </li><SchemaItem
+                                    collapsible={false}
+                                    name={"accountCount"}
+                                    required={false}
+                                    schemaName={"number"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"number","example":2}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={true}
+                                    className={"schemaItem"}
+                                  >
+                                    <details
+                                      style={{}}
+                                      className={"openapi-markdown__details"}
+                                    >
+                                      <summary
+                                        style={{}}
+                                      >
+                                        <span
+                                          className={"openapi-schema__container"}
+                                        >
+                                          <strong
+                                            className={"openapi-schema__property"}
+                                          >
+                                            accounts
+                                          </strong><span
+                                            className={"openapi-schema__name"}
+                                          >
+                                             object[]
+                                          </span>
+                                        </span>
+                                      </summary><div
+                                        style={{"marginLeft":"1rem"}}
+                                      >
+                                        <li>
+                                          <div
+                                            style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                                          >
+                                            Array [
+                                          </div>
+                                        </li><SchemaItem
+                                          collapsible={false}
+                                          name={"accountStatus"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"Active"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"accountname"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"154"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"certaccountkey"}
+                                          required={false}
+                                          schemaName={"number"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"number","example":190880}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"certfied"}
+                                          required={false}
+                                          schemaName={""}
+                                          qualifierMessage={undefined}
+                                          schema={{"nullable":true,"example":null}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"certified"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"Active"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"comments"}
+                                          required={false}
+                                          schemaName={""}
+                                          qualifierMessage={undefined}
+                                          schema={{"nullable":true,"example":null}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"consulted"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"true"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"endpoint"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"Epic"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"entitlementcount"}
+                                          required={false}
+                                          schemaName={"number"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"number","example":3}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={true}
+                                          className={"schemaItem"}
+                                        >
+                                          <details
+                                            style={{}}
+                                            className={"openapi-markdown__details"}
+                                          >
+                                            <summary
+                                              style={{}}
+                                            >
+                                              <span
+                                                className={"openapi-schema__container"}
+                                              >
+                                                <strong
+                                                  className={"openapi-schema__property"}
+                                                >
+                                                  entitlements
+                                                </strong><span
+                                                  className={"openapi-schema__name"}
+                                                >
+                                                   object[]
+                                                </span>
+                                              </span>
+                                            </summary><div
+                                              style={{"marginLeft":"1rem"}}
+                                            >
+                                              <li>
+                                                <div
+                                                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                                                >
+                                                  Array [
+                                                </div>
+                                              </li><SchemaItem
+                                                collapsible={false}
+                                                name={"certEntitlementkey"}
+                                                required={false}
+                                                schemaName={"number"}
+                                                qualifierMessage={undefined}
+                                                schema={{"type":"number","example":1469785}}
+                                              >
+                                                
+                                              </SchemaItem><SchemaItem
+                                                collapsible={false}
+                                                name={"consulted"}
+                                                required={false}
+                                                schemaName={"string"}
+                                                qualifierMessage={undefined}
+                                                schema={{"type":"string","example":"true"}}
+                                              >
+                                                
+                                              </SchemaItem><SchemaItem
+                                                collapsible={false}
+                                                name={"entStatus"}
+                                                required={false}
+                                                schemaName={"number"}
+                                                qualifierMessage={undefined}
+                                                schema={{"type":"number","example":1}}
+                                              >
+                                                
+                                              </SchemaItem><SchemaItem
+                                                collapsible={false}
+                                                name={"entcertified"}
+                                                required={false}
+                                                schemaName={""}
+                                                qualifierMessage={undefined}
+                                                schema={{"nullable":true,"example":null}}
+                                              >
+                                                
+                                              </SchemaItem><SchemaItem
+                                                collapsible={false}
+                                                name={"entcomments"}
+                                                required={false}
+                                                schemaName={""}
+                                                qualifierMessage={undefined}
+                                                schema={{"nullable":true,"example":null}}
+                                              >
+                                                
+                                              </SchemaItem><SchemaItem
+                                                collapsible={false}
+                                                name={"entcriticality"}
+                                                required={false}
+                                                schemaName={"number"}
+                                                qualifierMessage={undefined}
+                                                schema={{"type":"number","example":0}}
+                                              >
+                                                
+                                              </SchemaItem><SchemaItem
+                                                collapsible={false}
+                                                name={"entname"}
+                                                required={false}
+                                                schemaName={"string"}
+                                                qualifierMessage={undefined}
+                                                schema={{"type":"string","example":"T00010"}}
+                                              >
+                                                
+                                              </SchemaItem><SchemaItem
+                                                collapsible={false}
+                                                name={"enttype"}
+                                                required={false}
+                                                schemaName={"string"}
+                                                qualifierMessage={undefined}
+                                                schema={{"type":"string","example":"Template"}}
+                                              >
+                                                
+                                              </SchemaItem><li>
+                                                <div
+                                                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                                                >
+                                                  ]
+                                                </div>
+                                              </li>
+                                            </div>
+                                          </details>
+                                        </SchemaItem><li>
+                                          <div
+                                            style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                                          >
+                                            ]
+                                          </div>
+                                        </li>
+                                      </div>
+                                    </details>
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"certfied"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"WORKSFORME"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"certuserkey"}
+                                    required={false}
+                                    schemaName={"number"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"number","example":203136}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"comment"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":""}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"consulted"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"true"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"userStatus"}
+                                    required={false}
+                                    schemaName={"number"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"number","example":1}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"username"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Chammersmith"}}
+                                  >
+                                    
+                                  </SchemaItem><li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                                    >
+                                      ]
+                                    </div>
+                                  </li>
+                                </div>
+                              </details>
+                            </SchemaItem><li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                              >
+                                ]
+                              </div>
+                            </li>
+                          </div>
+                        </details>
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"campaignId"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"64"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"complete"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"No"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"count"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":5}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"successful"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"campaignAccountEntDetails\": [\n    {\n      \"certificationname\": \"EPICUserMgrCampQ1Feb1 - admin (Saviynt AdminUser)\",\n      \"certkey\": \"29292\",\n      \"status\": \"New\",\n      \"usercount\": 1,\n      \"users\": [\n        {\n          \"accountCount\": 2,\n          \"accounts\": [\n            {\n              \"accountStatus\": \"Active\",\n              \"accountname\": \"154\",\n              \"certaccountkey\": 190880,\n              \"certfied\": null,\n              \"certified\": \"Active\",\n              \"comments\": null,\n              \"consulted\": \"true\",\n              \"endpoint\": \"Epic\",\n              \"entitlementcount\": 3,\n              \"entitlements\": [\n                {\n                  \"certEntitlementkey\": 1469785,\n                  \"consulted\": \"true\",\n                  \"entStatus\": 1,\n                  \"entcertified\": null,\n                  \"entcomments\": null,\n                  \"entcriticality\": 0,\n                  \"entname\": \"T00010\",\n                  \"enttype\": \"Template\"\n                },\n                {\n                  \"certEntitlementkey\": 1469786,\n                  \"consulted\": \"false\",\n                  \"entStatus\": 1,\n                  \"entcertified\": null,\n                  \"entcomments\": null,\n                  \"entcriticality\": 0,\n                  \"entname\": \"T00918\",\n                  \"enttype\": \"Sub-Template\"\n                },\n                {\n                  \"certEntitlementkey\": 1469787,\n                  \"consulted\": \"true\",\n                  \"entStatus\": 1,\n                  \"entcertified\": null,\n                  \"entcomments\": null,\n                  \"entcriticality\": 0,\n                  \"entname\": \"T01138\",\n                  \"enttype\": \"Sub-Template\"\n                }\n              ]\n            },\n            {\n              \"accountStatus\": \"Active\",\n              \"accountname\": \"chammersmith\",\n              \"certaccountkey\": 190881,\n              \"certfied\": null,\n              \"certified\": \"Active\",\n              \"comments\": null,\n              \"consulted\": \"true\",\n              \"endpoint\": \"Epic\",\n              \"entitlementcount\": 2,\n              \"entitlements\": [\n                {\n                  \"certEntitlementkey\": 1469788,\n                  \"consulted\": \"true\",\n                  \"entStatus\": 1,\n                  \"entcertified\": null,\n                  \"entcomments\": null,\n                  \"entcriticality\": 0,\n                  \"entname\": \"TestSubTemplate\",\n                  \"enttype\": \"Sub-Template\"\n                },\n                {\n                  \"certEntitlementkey\": 1469789,\n                  \"consulted\": \"false\",\n                  \"entStatus\": 1,\n                  \"entcertified\": null,\n                  \"entcomments\": null,\n                  \"entcriticality\": 0,\n                  \"entname\": \"TestSubTemplate3\",\n                  \"enttype\": \"Sub-Template\"\n                }\n              ]\n            }\n          ],\n          \"certfied\": \"WORKSFORME\",\n          \"certuserkey\": 203136,\n          \"comment\": \"\",\n          \"consulted\": \"true\",\n          \"userStatus\": 1,\n          \"username\": \"Chammersmith\"\n        }\n      ]\n    },\n    {\n      \"certificationname\": \"EPICUserMgrCampQ1Feb1 - U045101 (Siu Han Chung)\",\n      \"certkey\": \"29293\",\n      \"status\": \"New\",\n      \"usercount\": 1,\n      \"users\": [\n        {\n          \"accountCount\": 1,\n          \"accounts\": [\n            {\n              \"accountStatus\": \"1\",\n              \"accountname\": \"21607\",\n              \"certaccountkey\": 190882,\n              \"certfied\": null,\n              \"certified\": \"1\",\n              \"comments\": null,\n              \"consulted\": \"true\",\n              \"endpoint\": \"Epic\",\n              \"entitlementcount\": 1,\n              \"entitlements\": [\n                {\n                  \"certEntitlementkey\": 1469790,\n                  \"consulted\": \"true\",\n                  \"entStatus\": 1,\n                  \"entcertified\": null,\n                  \"entcomments\": null,\n                  \"entcriticality\": 0,\n                  \"entname\": \"T00274\",\n                  \"enttype\": \"Template\"\n                }\n              ]\n            }\n          ],\n          \"certfied\": \"WORKSFORME\",\n          \"certuserkey\": 203137,\n          \"comment\": \"\",\n          \"consulted\": \"true\",\n          \"userStatus\": 1,\n          \"username\": \"G000706\"\n        }\n      ]\n    },\n    {\n      \"certificationname\": \"EPICUserMgrCampQ1Feb1 - jwen (Jim Wen)\",\n      \"certkey\": \"29295\",\n      \"status\": \"New\",\n      \"usercount\": 2,\n      \"users\": [\n        {\n          \"accountCount\": 1,\n          \"accounts\": [\n            {\n              \"accountStatus\": \"1\",\n              \"accountname\": \"63585\",\n              \"certaccountkey\": 190883,\n              \"certfied\": null,\n              \"certified\": \"1\",\n              \"comments\": null,\n              \"consulted\": \"true\",\n              \"endpoint\": \"Epic\",\n              \"entitlementcount\": 1,\n              \"entitlements\": [\n                {\n                  \"certEntitlementkey\": 1469791,\n                  \"consulted\": \"false\",\n                  \"entStatus\": 1,\n                  \"entcertified\": null,\n                  \"entcomments\": null,\n                  \"entcriticality\": 0,\n                  \"entname\": \"T00274\",\n                  \"enttype\": \"Template\"\n                }\n              ]\n            }\n          ],\n          \"certfied\": \"WORKSFORME\",\n          \"certuserkey\": 203138,\n          \"comment\": \"\",\n          \"consulted\": \"true\",\n          \"userStatus\": 1,\n          \"username\": \"U003961\"\n        },\n        {\n          \"accountCount\": 1,\n          \"accounts\": [\n            {\n              \"accountStatus\": \"Manually Provisioned\",\n              \"accountname\": \"U024789\",\n              \"certaccountkey\": 190884,\n              \"certfied\": null,\n              \"certified\": \"Manually Provisioned\",\n              \"comments\": null,\n              \"consulted\": \"true\",\n              \"endpoint\": \"Epic\",\n              \"entitlementcount\": 2,\n              \"entitlements\": [\n                {\n                  \"certEntitlementkey\": 1469792,\n                  \"consulted\": \"true\",\n                  \"entStatus\": 1,\n                  \"entcertified\": null,\n                  \"entcomments\": null,\n                  \"entcriticality\": 0,\n                  \"entname\": \"T01093\",\n                  \"enttype\": \"Template\"\n                },\n                {\n                  \"certEntitlementkey\": 1469793,\n                  \"consulted\": \"true\",\n                  \"entStatus\": 1,\n                  \"entcertified\": null,\n                  \"entcomments\": null,\n                  \"entcriticality\": 0,\n                  \"entname\": \"TestSubTemplate2\",\n                  \"enttype\": \"Sub-Template\"\n                }\n              ]\n            }\n          ],\n          \"certfied\": \"WORKSFORME\",\n          \"certuserkey\": 203139,\n          \"comment\": \"\",\n          \"consulted\": \"true\",\n          \"userStatus\": 1,\n          \"username\": \"U024789\"\n        }\n      ]\n    },\n    {\n      \"certificationname\": \"EPICUserMgrCampQ1Feb1 - Mr_Manager (Bobby Cox)\",\n      \"certkey\": \"29296\",\n      \"status\": \"New\",\n      \"usercount\": 2,\n      \"users\": [\n        {\n          \"accountCount\": 2,\n          \"accounts\": [\n            {\n              \"accountStatus\": \"Active\",\n              \"accountname\": \"166\",\n              \"certaccountkey\": 190885,\n              \"certfied\": null,\n              \"certified\": \"Active\",\n              \"comments\": null,\n              \"consulted\": \"true\",\n              \"endpoint\": \"Epic\",\n              \"entitlementcount\": 2,\n              \"entitlements\": [\n                {\n                  \"certEntitlementkey\": 1469794,\n                  \"consulted\": \"true\",\n                  \"entStatus\": 1,\n                  \"entcertified\": null,\n                  \"entcomments\": null,\n                  \"entcriticality\": 0,\n                  \"entname\": \"Epic_Demo_Template\",\n                  \"enttype\": \"Template\"\n                },\n                {\n                  \"certEntitlementkey\": 1469795,\n                  \"consulted\": \"false\",\n                  \"entStatus\": 1,\n                  \"entcertified\": null,\n                  \"entcomments\": null,\n                  \"entcriticality\": 0,\n                  \"entname\": \"T00918\",\n                  \"enttype\": \"Sub-Template\"\n                }\n              ]\n            },\n            {\n              \"accountStatus\": \"Active\",\n              \"accountname\": \"1256\",\n              \"certaccountkey\": 190887,\n              \"certfied\": null,\n              \"certified\": \"Active\",\n              \"comments\": null,\n              \"consulted\": \"true\",\n              \"endpoint\": \"Epic\",\n              \"entitlementcount\": 2,\n              \"entitlements\": [\n                {\n                  \"certEntitlementkey\": 1469797,\n                  \"consulted\": \"true\",\n                  \"entStatus\": 1,\n                  \"entcertified\": null,\n                  \"entcomments\": null,\n                  \"entcriticality\": 0,\n                  \"entname\": \"T00010\",\n                  \"enttype\": \"Template\"\n                },\n                {\n                  \"certEntitlementkey\": 1469798,\n                  \"consulted\": \"false\",\n                  \"entStatus\": 1,\n                  \"entcertified\": null,\n                  \"entcomments\": null,\n                  \"entcriticality\": 0,\n                  \"entname\": \"T01448\",\n                  \"enttype\": \"Sub-Template\"\n                }\n              ]\n            }\n          ],\n          \"certfied\": \"WORKSFORME\",\n          \"certuserkey\": 203140,\n          \"comment\": \"\",\n          \"consulted\": \"true\",\n          \"userStatus\": 1,\n          \"username\": \"JSMOLTZ\"\n        },\n        {\n          \"accountCount\": 1,\n          \"accounts\": [\n            {\n              \"accountStatus\": \"Active\",\n              \"accountname\": \"1112\",\n              \"certaccountkey\": 190886,\n              \"certfied\": null,\n              \"certified\": \"Active\",\n              \"comments\": null,\n              \"consulted\": \"true\",\n              \"endpoint\": \"Epic\",\n              \"entitlementcount\": 1,\n              \"entitlements\": [\n                {\n                  \"certEntitlementkey\": 1469798,\n                  \"consulted\": \"true\",\n                  \"entStatus\": 1,\n                  \"entcertified\": null,\n                  \"entcomments\": null,\n                  \"entcriticality\": 0,\n                  \"entname\": \"T01448\",\n                  \"enttype\": \"Sub-Template\"\n                }\n              ]\n            }\n          ],\n          \"certfied\": \"WORKSFORME\",\n          \"certuserkey\": 203141,\n          \"comment\": \"\",\n          \"consulted\": \"true\",\n          \"userStatus\": 1,\n          \"username\": \"GMADDUX\"\n        }\n      ]\n    },\n    {\n      \"certificationname\": \"EPICUserMgrCampQ1Feb1 - 320156 (Le Chang)\",\n      \"certkey\": \"29297\",\n      \"status\": \"New\",\n      \"usercount\": 1,\n      \"users\": [\n        {\n          \"accountCount\": 2,\n          \"accounts\": [\n            {\n              \"accountStatus\": \"1\",\n              \"accountname\": \"21172\",\n              \"certaccountkey\": 190888,\n              \"certfied\": null,\n              \"certified\": \"1\",\n              \"comments\": null,\n              \"consulted\": \"true\",\n              \"endpoint\": \"Epic\",\n              \"entitlementcount\": 1,\n              \"entitlements\": [\n                {\n                  \"certEntitlementkey\": 1469799,\n                  \"consulted\": \"true\",\n                  \"entStatus\": 1,\n                  \"entcertified\": null,\n                  \"entcomments\": null,\n                  \"entcriticality\": 0,\n                  \"entname\": \"T00274\",\n                  \"enttype\": \"Template\"\n                }\n              ]\n            },\n            {\n              \"accountStatus\": \"Active\",\n              \"accountname\": \"G000526\",\n              \"certaccountkey\": 190889,\n              \"certfied\": null,\n              \"certified\": \"Active\",\n              \"comments\": null,\n              \"consulted\": \"true\",\n              \"endpoint\": \"Epic\",\n              \"entitlementcount\": 1,\n              \"entitlements\": [\n                {\n                  \"certEntitlementkey\": 1469800,\n                  \"consulted\": \"false\",\n                  \"entStatus\": 1,\n                  \"entcertified\": null,\n                  \"entcomments\": null,\n                  \"entcriticality\": 0,\n                  \"entname\": \"TestSubTemplate2\",\n                  \"enttype\": \"Sub-Template\"\n                }\n              ]\n            }\n          ],\n          \"certfied\": \"WORKSFORME\",\n          \"certuserkey\": 203142,\n          \"comment\": \"\",\n          \"consulted\": \"true\",\n          \"userStatus\": 1,\n          \"username\": \"G000526\"\n        }\n      ]\n    }\n  ],\n  \"campaignId\": \"64\",\n  \"complete\": \"No\",\n  \"count\": 5,\n  \"errorCode\": \"0\",\n  \"msg\": \"successful\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Fetch Account Entitlement Details"}
+                  value={"Fetch Account Entitlement Details"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"campaignAccountEntDetails\": [\n    {\n      \"certificationname\": \"EPICUserMgrCampQ1Feb1 - admin (Saviynt AdminUser)\",\n      \"certkey\": \"29292\",\n      \"status\": \"New\",\n      \"usercount\": 1,\n      \"users\": [\n        {\n          \"accountCount\": 2,\n          \"accounts\": [\n            {\n              \"accountStatus\": \"Active\",\n              \"accountname\": \"154\",\n              \"certaccountkey\": 190880,\n              \"certfied\": null,\n              \"certified\": \"Active\",\n              \"comments\": null,\n              \"consulted\": \"true\",\n              \"endpoint\": \"Epic\",\n              \"entitlementcount\": 3,\n              \"entitlements\": [\n                {\n                  \"certEntitlementkey\": 1469785,\n                  \"consulted\": \"true\",\n                  \"entStatus\": 1,\n                  \"entcertified\": null,\n                  \"entcomments\": null,\n                  \"entcriticality\": 0,\n                  \"entname\": \"T00010\",\n                  \"enttype\": \"Template\"\n                },\n                {\n                  \"certEntitlementkey\": 1469786,\n                  \"consulted\": \"false\",\n                  \"entStatus\": 1,\n                  \"entcertified\": null,\n                  \"entcomments\": null,\n                  \"entcriticality\": 0,\n                  \"entname\": \"T00918\",\n                  \"enttype\": \"Sub-Template\"\n                },\n                {\n                  \"certEntitlementkey\": 1469787,\n                  \"consulted\": \"true\",\n                  \"entStatus\": 1,\n                  \"entcertified\": null,\n                  \"entcomments\": null,\n                  \"entcriticality\": 0,\n                  \"entname\": \"T01138\",\n                  \"enttype\": \"Sub-Template\"\n                }\n              ]\n            },\n            {\n              \"accountStatus\": \"Active\",\n              \"accountname\": \"chammersmith\",\n              \"certaccountkey\": 190881,\n              \"certfied\": null,\n              \"certified\": \"Active\",\n              \"comments\": null,\n              \"consulted\": \"true\",\n              \"endpoint\": \"Epic\",\n              \"entitlementcount\": 2,\n              \"entitlements\": [\n                {\n                  \"certEntitlementkey\": 1469788,\n                  \"consulted\": \"true\",\n                  \"entStatus\": 1,\n                  \"entcertified\": null,\n                  \"entcomments\": null,\n                  \"entcriticality\": 0,\n                  \"entname\": \"TestSubTemplate\",\n                  \"enttype\": \"Sub-Template\"\n                },\n                {\n                  \"certEntitlementkey\": 1469789,\n                  \"consulted\": \"false\",\n                  \"entStatus\": 1,\n                  \"entcertified\": null,\n                  \"entcomments\": null,\n                  \"entcriticality\": 0,\n                  \"entname\": \"TestSubTemplate3\",\n                  \"enttype\": \"Sub-Template\"\n                }\n              ]\n            }\n          ],\n          \"certfied\": \"WORKSFORME\",\n          \"certuserkey\": 203136,\n          \"comment\": \"\",\n          \"consulted\": \"true\",\n          \"userStatus\": 1,\n          \"username\": \"Chammersmith\"\n        }\n      ]\n    },\n    {\n      \"certificationname\": \"EPICUserMgrCampQ1Feb1 - U045101 (Siu Han Chung)\",\n      \"certkey\": \"29293\",\n      \"status\": \"New\",\n      \"usercount\": 1,\n      \"users\": [\n        {\n          \"accountCount\": 1,\n          \"accounts\": [\n            {\n              \"accountStatus\": \"1\",\n              \"accountname\": \"21607\",\n              \"certaccountkey\": 190882,\n              \"certfied\": null,\n              \"certified\": \"1\",\n              \"comments\": null,\n              \"consulted\": \"true\",\n              \"endpoint\": \"Epic\",\n              \"entitlementcount\": 1,\n              \"entitlements\": [\n                {\n                  \"certEntitlementkey\": 1469790,\n                  \"consulted\": \"true\",\n                  \"entStatus\": 1,\n                  \"entcertified\": null,\n                  \"entcomments\": null,\n                  \"entcriticality\": 0,\n                  \"entname\": \"T00274\",\n                  \"enttype\": \"Template\"\n                }\n              ]\n            }\n          ],\n          \"certfied\": \"WORKSFORME\",\n          \"certuserkey\": 203137,\n          \"comment\": \"\",\n          \"consulted\": \"true\",\n          \"userStatus\": 1,\n          \"username\": \"G000706\"\n        }\n      ]\n    },\n    {\n      \"certificationname\": \"EPICUserMgrCampQ1Feb1 - jwen (Jim Wen)\",\n      \"certkey\": \"29295\",\n      \"status\": \"New\",\n      \"usercount\": 2,\n      \"users\": [\n        {\n          \"accountCount\": 1,\n          \"accounts\": [\n            {\n              \"accountStatus\": \"1\",\n              \"accountname\": \"63585\",\n              \"certaccountkey\": 190883,\n              \"certfied\": null,\n              \"certified\": \"1\",\n              \"comments\": null,\n              \"consulted\": \"true\",\n              \"endpoint\": \"Epic\",\n              \"entitlementcount\": 1,\n              \"entitlements\": [\n                {\n                  \"certEntitlementkey\": 1469791,\n                  \"consulted\": \"false\",\n                  \"entStatus\": 1,\n                  \"entcertified\": null,\n                  \"entcomments\": null,\n                  \"entcriticality\": 0,\n                  \"entname\": \"T00274\",\n                  \"enttype\": \"Template\"\n                }\n              ]\n            }\n          ],\n          \"certfied\": \"WORKSFORME\",\n          \"certuserkey\": 203138,\n          \"comment\": \"\",\n          \"consulted\": \"true\",\n          \"userStatus\": 1,\n          \"username\": \"U003961\"\n        },\n        {\n          \"accountCount\": 1,\n          \"accounts\": [\n            {\n              \"accountStatus\": \"Manually Provisioned\",\n              \"accountname\": \"U024789\",\n              \"certaccountkey\": 190884,\n              \"certfied\": null,\n              \"certified\": \"Manually Provisioned\",\n              \"comments\": null,\n              \"consulted\": \"true\",\n              \"endpoint\": \"Epic\",\n              \"entitlementcount\": 2,\n              \"entitlements\": [\n                {\n                  \"certEntitlementkey\": 1469792,\n                  \"consulted\": \"true\",\n                  \"entStatus\": 1,\n                  \"entcertified\": null,\n                  \"entcomments\": null,\n                  \"entcriticality\": 0,\n                  \"entname\": \"T01093\",\n                  \"enttype\": \"Template\"\n                },\n                {\n                  \"certEntitlementkey\": 1469793,\n                  \"consulted\": \"true\",\n                  \"entStatus\": 1,\n                  \"entcertified\": null,\n                  \"entcomments\": null,\n                  \"entcriticality\": 0,\n                  \"entname\": \"TestSubTemplate2\",\n                  \"enttype\": \"Sub-Template\"\n                }\n              ]\n            }\n          ],\n          \"certfied\": \"WORKSFORME\",\n          \"certuserkey\": 203139,\n          \"comment\": \"\",\n          \"consulted\": \"true\",\n          \"userStatus\": 1,\n          \"username\": \"U024789\"\n        }\n      ]\n    },\n    {\n      \"certificationname\": \"EPICUserMgrCampQ1Feb1 - Mr_Manager (Bobby Cox)\",\n      \"certkey\": \"29296\",\n      \"status\": \"New\",\n      \"usercount\": 2,\n      \"users\": [\n        {\n          \"accountCount\": 2,\n          \"accounts\": [\n            {\n              \"accountStatus\": \"Active\",\n              \"accountname\": \"166\",\n              \"certaccountkey\": 190885,\n              \"certfied\": null,\n              \"certified\": \"Active\",\n              \"comments\": null,\n              \"consulted\": \"true\",\n              \"endpoint\": \"Epic\",\n              \"entitlementcount\": 2,\n              \"entitlements\": [\n                {\n                  \"certEntitlementkey\": 1469794,\n                  \"consulted\": \"true\",\n                  \"entStatus\": 1,\n                  \"entcertified\": null,\n                  \"entcomments\": null,\n                  \"entcriticality\": 0,\n                  \"entname\": \"Epic_Demo_Template\",\n                  \"enttype\": \"Template\"\n                },\n                {\n                  \"certEntitlementkey\": 1469795,\n                  \"consulted\": \"false\",\n                  \"entStatus\": 1,\n                  \"entcertified\": null,\n                  \"entcomments\": null,\n                  \"entcriticality\": 0,\n                  \"entname\": \"T00918\",\n                  \"enttype\": \"Sub-Template\"\n                }\n              ]\n            },\n            {\n              \"accountStatus\": \"Active\",\n              \"accountname\": \"1256\",\n              \"certaccountkey\": 190887,\n              \"certfied\": null,\n              \"certified\": \"Active\",\n              \"comments\": null,\n              \"consulted\": \"true\",\n              \"endpoint\": \"Epic\",\n              \"entitlementcount\": 2,\n              \"entitlements\": [\n                {\n                  \"certEntitlementkey\": 1469797,\n                  \"consulted\": \"true\",\n                  \"entStatus\": 1,\n                  \"entcertified\": null,\n                  \"entcomments\": null,\n                  \"entcriticality\": 0,\n                  \"entname\": \"T00010\",\n                  \"enttype\": \"Template\"\n                },\n                {\n                  \"certEntitlementkey\": 1469798,\n                  \"consulted\": \"false\",\n                  \"entStatus\": 1,\n                  \"entcertified\": null,\n                  \"entcomments\": null,\n                  \"entcriticality\": 0,\n                  \"entname\": \"T01448\",\n                  \"enttype\": \"Sub-Template\"\n                }\n              ]\n            }\n          ],\n          \"certfied\": \"WORKSFORME\",\n          \"certuserkey\": 203140,\n          \"comment\": \"\",\n          \"consulted\": \"true\",\n          \"userStatus\": 1,\n          \"username\": \"JSMOLTZ\"\n        },\n        {\n          \"accountCount\": 1,\n          \"accounts\": [\n            {\n              \"accountStatus\": \"Active\",\n              \"accountname\": \"1112\",\n              \"certaccountkey\": 190886,\n              \"certfied\": null,\n              \"certified\": \"Active\",\n              \"comments\": null,\n              \"consulted\": \"true\",\n              \"endpoint\": \"Epic\",\n              \"entitlementcount\": 1,\n              \"entitlements\": [\n                {\n                  \"certEntitlementkey\": 1469798,\n                  \"consulted\": \"true\",\n                  \"entStatus\": 1,\n                  \"entcertified\": null,\n                  \"entcomments\": null,\n                  \"entcriticality\": 0,\n                  \"entname\": \"T01448\",\n                  \"enttype\": \"Sub-Template\"\n                }\n              ]\n            }\n          ],\n          \"certfied\": \"WORKSFORME\",\n          \"certuserkey\": 203141,\n          \"comment\": \"\",\n          \"consulted\": \"true\",\n          \"userStatus\": 1,\n          \"username\": \"GMADDUX\"\n        }\n      ]\n    },\n    {\n      \"certificationname\": \"EPICUserMgrCampQ1Feb1 - 320156 (Le Chang)\",\n      \"certkey\": \"29297\",\n      \"status\": \"New\",\n      \"usercount\": 1,\n      \"users\": [\n        {\n          \"accountCount\": 2,\n          \"accounts\": [\n            {\n              \"accountStatus\": \"1\",\n              \"accountname\": \"21172\",\n              \"certaccountkey\": 190888,\n              \"certfied\": null,\n              \"certified\": \"1\",\n              \"comments\": null,\n              \"consulted\": \"true\",\n              \"endpoint\": \"Epic\",\n              \"entitlementcount\": 1,\n              \"entitlements\": [\n                {\n                  \"certEntitlementkey\": 1469799,\n                  \"consulted\": \"true\",\n                  \"entStatus\": 1,\n                  \"entcertified\": null,\n                  \"entcomments\": null,\n                  \"entcriticality\": 0,\n                  \"entname\": \"T00274\",\n                  \"enttype\": \"Template\"\n                }\n              ]\n            },\n            {\n              \"accountStatus\": \"Active\",\n              \"accountname\": \"G000526\",\n              \"certaccountkey\": 190889,\n              \"certfied\": null,\n              \"certified\": \"Active\",\n              \"comments\": null,\n              \"consulted\": \"true\",\n              \"endpoint\": \"Epic\",\n              \"entitlementcount\": 1,\n              \"entitlements\": [\n                {\n                  \"certEntitlementkey\": 1469800,\n                  \"consulted\": \"false\",\n                  \"entStatus\": 1,\n                  \"entcertified\": null,\n                  \"entcomments\": null,\n                  \"entcriticality\": 0,\n                  \"entname\": \"TestSubTemplate2\",\n                  \"enttype\": \"Sub-Template\"\n                }\n              ]\n            }\n          ],\n          \"certfied\": \"WORKSFORME\",\n          \"certuserkey\": 203142,\n          \"comment\": \"\",\n          \"consulted\": \"true\",\n          \"userStatus\": 1,\n          \"username\": \"G000526\"\n        }\n      ]\n    }\n  ],\n  \"campaignId\": \"64\",\n  \"complete\": \"No\",\n  \"count\": 5,\n  \"errorCode\": \"0\",\n  \"msg\": \"successful\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      
