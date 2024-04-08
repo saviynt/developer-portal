@@ -53,16 +53,16 @@ const config: Config = {
       },
       items: [
         {
-          label: "REFERENCE",
-          to: "/eic/rest/5.0",
+          label: "API-REFERENCE",
+          to: "/api-reference/rest/5.0",
         },
         {
-          label: "RESOURCES",
-          to: "/eic/resources",
+          label: "CONNECTORS",
+          to: "/connectors/",
         },
         {
-          label: "CHANGELOG",
-          to: "/eic/rest/changelog",
+          label: "EXTENSIONS",
+          to: "/extensions/",
         },
         {
           href: "https://docs.saviyntcloud.com/",
@@ -214,15 +214,7 @@ const config: Config = {
             showSchemas: true,
             version: "5.0", // Current version
             label: "v5.0", // Current version label
-            baseUrl: "/developer-portal/eic/rest/5.0", // Leading slash is important
-            versions: {
-              "2.0": {
-                specPath: "static/api-specs/saviynt-eic-api-2.0.yaml",
-                outputDir: "docs/eic/2.0", // No trailing slash
-                label: "v2.0",
-                baseUrl: "/developer-portal/eic/rest/2.0", // Leading slash is important
-              },
-            },
+            baseUrl: "/developer-portal/api-reference/rest/5.0", // Leading slash is important
           } satisfies OpenApiPlugin.Options,
         } satisfies Plugin.PluginOptions,
       },
