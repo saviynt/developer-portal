@@ -57,6 +57,10 @@ import {
             },
           ],
         },
+        {
+          type: 'doc',
+          id: 'apis/rest/changelog',
+        },
       ]
     },
   ],
