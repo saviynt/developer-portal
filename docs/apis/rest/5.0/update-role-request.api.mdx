@@ -1,0 +1,696 @@
+---
+id: update-role-request
+title: "Update Role Request"
+description: "This API call can be used to update the enterprise role that was already created in the Saviynt Security Manager."
+sidebar_label: "Update Role Request"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: apis/rest/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update Role Request"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/updateEnterpriseRoleRequest"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API call can be used to update the enterprise role that was already created in the Saviynt Security Manager.
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+Mandatory params:
+
+`roletype` Use the roletype as "ENTERPRISE" to Update Enterprise Role Request. (supported roletypes are - ENABLER/ TRANSACTIONAL/ FIREFIGHTER/ ENTERPRISE/ APPLICATION),
+
+`role_name`
+
+Optional params:
+
+`customproperty<1 to 60>`,  
+`endpointname`,
+
+`entitlements` -
+
+1. `entitlement_value`
+2. `entitlementType`
+3. `endpoint`
+4. `updateType` - ADD/REMOVE
+
+`owner` -
+
+1. `ownerName`
+2. `updateType` - ADD/REMOVE
+3. `rank`&lt;1 to 27&gt;
+
+`defaulttimeframe`,  
+`description`,  
+`displayname`,  
+`glossary`,  
+`risk`,  
+`level`,  
+`soxcritical`,  
+`syscritical`,  
+`priviliged`,  
+`confidentiality`,  
+`requestable`,  
+`showDynamicAttrs,   checksod:`Set this parameter to evaluate Segregation of Duties (SOD) violations. By default, the parameter is set to false.
+
+_**Note**_ : If config for auto approve is _**ON**_ then request will not be created
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"path","in":"path","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"customproperty36"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"cp36modified"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"endpointname"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"Workday"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={true}
+          className={"schemaItem"}
+        >
+          <details
+            style={{}}
+            className={"openapi-markdown__details"}
+          >
+            <summary
+              style={{}}
+            >
+              <span
+                className={"openapi-schema__container"}
+              >
+                <strong
+                  className={"openapi-schema__property"}
+                >
+                  entitlements
+                </strong><span
+                  className={"openapi-schema__name"}
+                >
+                   object[]
+                </span>
+              </span>
+            </summary><div
+              style={{"marginLeft":"1rem"}}
+            >
+              <li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                >
+                  Array [
+                </div>
+              </li><SchemaItem
+                collapsible={false}
+                name={"endpoint"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"Oracle"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"entitlementType"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"OEBS-Responsibility"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"entitlement_value"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"FIXED_ASSET_INQUIRY_TECH_IN"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"updateType"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"ADD"}}
+              >
+                
+              </SchemaItem><li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                >
+                  ]
+                </div>
+              </li>
+            </div>
+          </details>
+        </SchemaItem><SchemaItem
+          collapsible={true}
+          className={"schemaItem"}
+        >
+          <details
+            style={{}}
+            className={"openapi-markdown__details"}
+          >
+            <summary
+              style={{}}
+            >
+              <span
+                className={"openapi-schema__container"}
+              >
+                <strong
+                  className={"openapi-schema__property"}
+                >
+                  owner
+                </strong><span
+                  className={"openapi-schema__name"}
+                >
+                   object[]
+                </span>
+              </span>
+            </summary><div
+              style={{"marginLeft":"1rem"}}
+            >
+              <li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                >
+                  Array [
+                </div>
+              </li><SchemaItem
+                collapsible={false}
+                name={"ownerName"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"G000526"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"updateType"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"REMOVE"}}
+              >
+                
+              </SchemaItem><li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                >
+                  ]
+                </div>
+              </li>
+            </div>
+          </details>
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"requestor"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"admin"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"role_name"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"TestRoleEnt123"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"roletype"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"ENTERPRISE"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Update Role Request
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Credentials
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Origin
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Cache-Control
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Expires
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Pragma
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Referrer-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-XSS-Protection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":" Role TestRoleEnt123 Sent For Approval and requestid is 3820057"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"requestid"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"3820057"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"requestkey"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"4136"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"message\": \" Role TestRoleEnt123 Sent For Approval and requestid is 3820057\",\n  \"requestid\": \"3820057\",\n  \"requestkey\": \"4136\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Update Role Request"}
+                  value={"Update Role Request"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"message\": \" Role TestRoleEnt123 Sent For Approval and requestid is 3820057\",\n  \"requestid\": \"3820057\",\n  \"requestkey\": \"4136\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

@@ -1,0 +1,407 @@
+---
+id: create-birthright-request
+title: "Create Birthright Request"
+description: "This method creates 'Request' record for a new user in SSM."
+sidebar_label: "Create Birthright Request"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV1tv2zYU/isEn1pAsmS3WRoNBeaoamFsvsxSuhVJUNPSscVGIlWScqoZ+u8DKdlWmsTxwx6Xl5DUufI75+PxFiuylti7xsM4BinRHL6XIBW+tXACMha0UJQz7OEopRLloFKeoFgAUSDRDW7FbzASEHORoBUXiCAG96iUIBBlKAzHPXTDbliUAloMS5VyQf8h2uwC5aVUKCUbQItLIALEAq14lvF7SNCyQouI3wFb9LT61ERCMlQQQXLp3bBFOPx8FQbzyXAcLJCtnaVAEhDWDVvMgz+vgjCKvsyCRWcfzM3On47HwSQKzWZvQ2+kIkIlRIHZAUv26/BLGAXjvWAw+TCbjnY2gCmqMsiBKbMfzmbz6efW29D3p1eTyKhiC/MChMl/lGAPN5d5SYVKBV2naoeAhUWzuuRJhb0tjjlTwJRe5mWmaEGEclZc5HZCFNHHMk4hNytVFYA9zJffINamCqGdKgpSf+3E0xGWSlC2xhaGHyQvMn2ULAnNoMK1hXcJHVcgSU6ZFt9d8HFxpROtLby/y+PiYSUV5H2t0YH3uI6RPkB3soNdUZx8QZ0KeDlpLVSbPw2zLDiTDTQD19X/Hvaeb0oEHWoEHYqkqXij+4EoeLIMngjiL0gs1B+gEAo0cPvvkOt6A9d7c44+jSOswwpBbECcam9YkDgF2+cVV+D0e/3WhrJ9zu/oyXH5fjj/aEfT34PJ+8R1YbC6OLcJvOvbbwf9gb08c2M7hrPB+fLNO7LqX/yKZkSl7x3jLhKEyRUIO2AxT7TpE73GacnuIDFG/rY/CpKD3fCNPNVEOBwH0/no02iCDaqdbiVFkdHYdLzzTWpET29VEIILnydw3LurKzAHKcn6BcmwNESP6z2/aBY6pnF2fvHL2aDJqj01oT1fld4Wb0hWwk8JYBd3gtxH8iCQjremOwzbgzIlfr3FjORatyAqxRam7LDWRqiABHtKlGA9C1pd3+oo9EOmlbnpImPDw05Dxst9SmLfZ9K0QxNEKTLs4VSpQnqOs1XACFN1T5INrZiKM14mvZjnTuCPHVJQZ3OGLbwhgpJle3eNyuNOb8/147siZaawtweiNoFLiEtBVRXq7BpbSyJprN/VTq46Ntzegd4bGY350ryyL0kbIdMNlK24kdTcpkFrckQBUyAKQSWgUWKor0K+ThwNZyM0hxUIYDHgJ8cIn2cZxPoEFYJvaAISqRRQAorQTCK+MltZFgUXCpJ27pBmutBfXo7iVTDyX+tbByEbz2c9t6cLUIHI5XSl6Y3G0MGxhc8gZ4Qc3LQxiQ1Sbenp/MImMmz9VAr39/e9rhm5l4OcUC3ZnvzWkdKwZDQGJqHrxhAqGpiYH3sh5nOPi7XT6krnj5EfTMLAHvTcXqryTBv+YWd8bRB8aKMb5X1ht2zllEXGSSKdgdu/cNy3TnvRX7WRrxOyqXpyszaFoRsnJ6wT8bFX6kERdEaZ/8fK/26sbJtZwQ/lFBlp5jCD+rblt2v8HL/dWjjVTOhd4+12SSRciayu9fH3EkSFvevbA4MZDkyo1OsEeyuSSTgC8at5y8yv0XNRtoeEVYYozdOBsYXvoNoRfH1b74Yd47/55Dde7EgbOKg+NR/X1k5J/9QpVEf80QP94ImYTcMIW3jZjuF585Zpw8audVh617d1Xf8L/4mHhQ==
+sidebar_class_name: "post api-method"
+info_path: apis/rest/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create Birthright Request"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/createbirthrightrequest"}
+>
+  
+</MethodEndpoint>
+
+
+
+This method creates "Request" record for a new user in SSM. 
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+Optional params:
+`SAVUSERNAME` - in header,
+`REQUESTTYPE`,
+`REQUESTER`,
+`COMMENTS`,
+`USERNAME`,
+`startdate`,
+`enddate`,
+`SYSTEMNAME`,
+`ENDPOINTS`,
+`entitlement`,
+`APPROVER`,
+`ACCOUNTNAME`
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"path","in":"path","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"multipart/form-data"}
+    value={"multipart/form-data-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"ACCOUNTNAME"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"dbailey"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"APPROVER"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"admin"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"COMMENTS"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"test"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"ENDPOINTS"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"System1"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"REQUESTTYPE"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"1"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"SYSTEMNAME"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"System1"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"USERNAME"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"dbailey"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"entitlement"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"testent"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Create Birthright Request
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Success"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"requestId"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"579652"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"message\": \"Success\",\n  \"requestId\": \"579652\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Create Birthright Request"}
+                  value={"Create Birthright Request"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"message\": \"Success\",\n  \"requestId\": \"579652\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

@@ -9,21 +9,36 @@
  Create as many sidebars as you want.
  */
  import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
-import api_reference_5_0_sidebar from "./docs/api-reference/5.0/sidebar";
+import api_rest_5_0_sidebar from "./docs/apis/rest/5.0/sidebar";
 
  const sidebars: SidebarsConfig = {
-  "api-reference": [
+  "apis": [
     {
-      type: "category",
-      label: "API-Reference",
+      type: 'category',
+      label: 'APIs',
+      collapsible: false,
       link: {
-        type: "generated-index",
-        title: "5.0 (latest)",
-        description:
-          "This is a Saviynt EIC API Spec for V2.0.  For this sample, you can use the api key special-key to test the authorization filters.",
-        slug: "/api-reference/rest/5.0",
+        type: 'doc',
+        id: 'docs',
       },
-      items: api_reference_5_0_sidebar,
+      items: [
+        {
+          type: 'doc',
+          id: 'api/getting-started',
+        },
+        {
+          type: "category",
+          label: "5.0 (latest)",
+          link: {
+            type: "generated-index",
+            title: "5.0 (latest)",
+            description:
+              "This is a Saviynt EIC API Spec for V2.0.  For this sample, you can use the api key special-key to test the authorization filters.",
+            slug: "/apis/rest/5.0",
+          },
+          items: api_rest_5_0_sidebar,
+        },
+      ]
     },
   ],
   "connectors": [

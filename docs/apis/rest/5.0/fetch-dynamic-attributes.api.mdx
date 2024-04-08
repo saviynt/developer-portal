@@ -1,0 +1,719 @@
+---
+id: fetch-dynamic-attributes
+title: "Fetch Dynamic Attributes"
+description: "This API fetches the dynamic attributes in SSM."
+sidebar_label: "Fetch Dynamic Attributes"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "get api-method"
+info_path: apis/rest/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Fetch Dynamic Attributes"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/fetchDynamicAttribute"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API fetches the dynamic attributes in SSM.
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+Optional params:
+
+`securitysystem`
+
+`endpoint`
+
+`dynamicattributes`
+
+`max`, `offset`,
+
+`requesttype` - can be ['ACCOUNT', 'PROPOSED ENTITLEMENT OWNER', 'ENTITLEMENT OWNER ATTESTATION', 'ROLE', 'SERVICE ACCOUNT','USER'],
+
+`loggedinuser`
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"path","in":"path","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"dynamicattributes"}
+          required={false}
+          schemaName={"string[]"}
+          qualifierMessage={undefined}
+          schema={{"type":"array","items":{"type":"string","example":"parent"},"example":["parent","child"]}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"endpoint"}
+          required={false}
+          schemaName={"string[]"}
+          qualifierMessage={undefined}
+          schema={{"type":"array","items":{"type":"string","example":"System1"},"example":["System1"]}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"max"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"2"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"offset"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"0"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"securitysystem"}
+          required={false}
+          schemaName={"string[]"}
+          qualifierMessage={undefined}
+          schema={{"type":"array","items":{"type":"string","example":"System1"},"example":["System1"]}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Fetch Dynamic Attributes
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Credentials
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Origin
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Cache-Control
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Expires
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Pragma
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Referrer-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-XSS-Protection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"displaycount"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":2}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                dynamicattributes
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object[]
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                              >
+                                Array [
+                              </div>
+                            </li><SchemaItem
+                              collapsible={false}
+                              name={"accountscolumn"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"customproperty11"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"actiontoperformwhenparentattributechanges"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Mapping"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"attributelable"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Select Parent"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"attributename"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"parent"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"attributetype"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"SQL MULTISELECT"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"attributevalue"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"select 'ERS' as ID,'ers desc' as description UNION select 'FALCON' as ID, 'falcon desc' as description"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"editable"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"true"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"endpoint"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"System1"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"hideoncreate"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"false"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"hideonupdate"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"false"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"orderindex"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"1"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"parentattribute"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"parent"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"requesttype"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"ACCOUNT"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"required"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"false"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"securitysystem"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"System1"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"showonchild"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"false"}}
+                            >
+                              
+                            </SchemaItem><li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                              >
+                                ]
+                              </div>
+                            </li>
+                          </div>
+                        </details>
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"errorcode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"success"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"totalcount"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":2}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"displaycount\": 2,\n  \"dynamicattributes\": [\n    {\n      \"accountscolumn\": \"customproperty11\",\n      \"actiontoperformwhenparentattributechanges\": \"Mapping\",\n      \"attributelable\": \"Select Parent\",\n      \"attributename\": \"parent\",\n      \"attributetype\": \"SQL MULTISELECT\",\n      \"attributevalue\": \"select 'ERS' as ID,'ers desc' as description UNION select 'FALCON' as ID, 'falcon desc' as description\",\n      \"editable\": \"true\",\n      \"endpoint\": \"System1\",\n      \"hideoncreate\": \"false\",\n      \"hideonupdate\": \"false\",\n      \"orderindex\": \"1\",\n      \"requesttype\": \"ACCOUNT\",\n      \"required\": \"false\",\n      \"securitysystem\": \"System1\",\n      \"showonchild\": \"false\"\n    },\n    {\n      \"accountscolumn\": \"customproperty12\",\n      \"actiontoperformwhenparentattributechanges\": \"Mapping\",\n      \"attributelable\": \"Select Child\",\n      \"attributename\": \"child\",\n      \"attributetype\": \"SQL ENUM\",\n      \"attributevalue\": \"select customername as ID, CUSTOMPROPERTY1 as description from customer where customproperty12 in (${parent})\",\n      \"editable\": \"true\",\n      \"endpoint\": \"System1\",\n      \"hideoncreate\": \"false\",\n      \"hideonupdate\": \"false\",\n      \"orderindex\": \"2\",\n      \"parentattribute\": \"parent\",\n      \"requesttype\": \"ACCOUNT\",\n      \"required\": \"false\",\n      \"securitysystem\": \"System1\",\n      \"showonchild\": \"false\"\n    }\n  ],\n  \"errorcode\": \"0\",\n  \"msg\": \"success\",\n  \"totalcount\": 2\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Fetch Dynamic Attributes"}
+                  value={"Fetch Dynamic Attributes"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"displaycount\": 2,\n  \"dynamicattributes\": [\n    {\n      \"accountscolumn\": \"customproperty11\",\n      \"actiontoperformwhenparentattributechanges\": \"Mapping\",\n      \"attributelable\": \"Select Parent\",\n      \"attributename\": \"parent\",\n      \"attributetype\": \"SQL MULTISELECT\",\n      \"attributevalue\": \"select 'ERS' as ID,'ers desc' as description UNION select 'FALCON' as ID, 'falcon desc' as description\",\n      \"editable\": \"true\",\n      \"endpoint\": \"System1\",\n      \"hideoncreate\": \"false\",\n      \"hideonupdate\": \"false\",\n      \"orderindex\": \"1\",\n      \"requesttype\": \"ACCOUNT\",\n      \"required\": \"false\",\n      \"securitysystem\": \"System1\",\n      \"showonchild\": \"false\"\n    },\n    {\n      \"accountscolumn\": \"customproperty12\",\n      \"actiontoperformwhenparentattributechanges\": \"Mapping\",\n      \"attributelable\": \"Select Child\",\n      \"attributename\": \"child\",\n      \"attributetype\": \"SQL ENUM\",\n      \"attributevalue\": \"select customername as ID, CUSTOMPROPERTY1 as description from customer where customproperty12 in (${parent})\",\n      \"editable\": \"true\",\n      \"endpoint\": \"System1\",\n      \"hideoncreate\": \"false\",\n      \"hideonupdate\": \"false\",\n      \"orderindex\": \"2\",\n      \"parentattribute\": \"parent\",\n      \"requesttype\": \"ACCOUNT\",\n      \"required\": \"false\",\n      \"securitysystem\": \"System1\",\n      \"showonchild\": \"false\"\n    }\n  ],\n  \"errorcode\": \"0\",\n  \"msg\": \"success\",\n  \"totalcount\": 2\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

@@ -1,0 +1,1440 @@
+---
+id: get-pending-approvals
+title: "Get Pending Approvals"
+description: "This API returns pending approval details for an approver (approver provided in `username` parameter)."
+sidebar_label: "Get Pending Approvals"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: apis/rest/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Pending Approvals"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/getPendingApprovals"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API returns pending approval details for an approver (approver provided in `username` parameter).
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+Mandatory params:
+
+`username`
+
+Optional params:
+
+`requestkey`,  
+`max`, 
+`offset`,
+`requestid`,
+`requestedfor`,
+`requestedby`,
+`firstname`,
+`lastname`,
+`sort` - requestdate/duedate/requestid/requestkey,
+`order` - asc/desc,
+`submitdatestart`,
+`submitdateend`,
+`duedatestart`,
+`duedateend`,
+`requestcomments`,
+`requestorigin`,
+`endpoint` - list of endpoints,
+`securitysystem` - list of securitysystems,
+`assignee` - list of assignees,
+`assigneeusername` - list of usernames,
+`requesttype` - list of requesttypes,
+`entitlementvaluekey` - list of entitlement value keys,
+`hidecompletedapprovals` - true/ false (default is false).
+
+***Note*** : Searchable dates in the format MM/dd/yyyy.  
+Sample for list of items - ["value1","value2"]
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"path","in":"path","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"requestkey"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"3484"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"username"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"admin"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Get Pending Approvals - SUCCESS
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Credentials
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Origin
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Cache-Control
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Expires
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Pragma
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Referrer-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-XSS-Protection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"count"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":1}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"SUCCESS"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                results
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object[]
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                              >
+                                Array [
+                              </div>
+                            </li><SchemaItem
+                              collapsible={false}
+                              name={"accessRequestCount"}
+                              required={false}
+                              schemaName={"number"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"number","example":1}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={true}
+                              className={"schemaItem"}
+                            >
+                              <details
+                                style={{}}
+                                className={"openapi-markdown__details"}
+                              >
+                                <summary
+                                  style={{}}
+                                >
+                                  <span
+                                    className={"openapi-schema__container"}
+                                  >
+                                    <strong
+                                      className={"openapi-schema__property"}
+                                    >
+                                      accessRequestDetails
+                                    </strong><span
+                                      className={"openapi-schema__name"}
+                                    >
+                                       object[]
+                                    </span>
+                                  </span>
+                                </summary><div
+                                  style={{"marginLeft":"1rem"}}
+                                >
+                                  <li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                                    >
+                                      Array [
+                                    </div>
+                                  </li><SchemaItem
+                                    collapsible={false}
+                                    name={"accountname"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"edwardemployee"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={true}
+                                    className={"schemaItem"}
+                                  >
+                                    <details
+                                      style={{}}
+                                      className={"openapi-markdown__details"}
+                                    >
+                                      <summary
+                                        style={{}}
+                                      >
+                                        <span
+                                          className={"openapi-schema__container"}
+                                        >
+                                          <strong
+                                            className={"openapi-schema__property"}
+                                          >
+                                            childTasks
+                                          </strong><span
+                                            className={"openapi-schema__name"}
+                                          >
+                                             object[]
+                                          </span>
+                                        </span>
+                                      </summary><div
+                                        style={{"marginLeft":"1rem"}}
+                                      >
+                                        <li>
+                                          <div
+                                            style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                                          >
+                                            Array [
+                                          </div>
+                                        </li><SchemaItem
+                                          collapsible={false}
+                                          name={"Access"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"ACCOUNTNAME|edwardemployee@@ENDPOINT|624@@"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"access"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"testEntitlementPM"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={true}
+                                          className={"schemaItem"}
+                                        >
+                                          <details
+                                            style={{}}
+                                            className={"openapi-markdown__details"}
+                                          >
+                                            <summary
+                                              style={{}}
+                                            >
+                                              <span
+                                                className={"openapi-schema__container"}
+                                              >
+                                                <strong
+                                                  className={"openapi-schema__property"}
+                                                >
+                                                  accessdetails
+                                                </strong><span
+                                                  className={"openapi-schema__name"}
+                                                >
+                                                   object
+                                                </span>
+                                              </span>
+                                            </summary><div
+                                              style={{"marginLeft":"1rem"}}
+                                            >
+                                              <SchemaItem
+                                                collapsible={false}
+                                                name={"description"}
+                                                required={false}
+                                                schemaName={"string"}
+                                                qualifierMessage={undefined}
+                                                schema={{"type":"string","example":"This role is for employees needing access to EP"}}
+                                              >
+                                                
+                                              </SchemaItem><SchemaItem
+                                                collapsible={false}
+                                                name={"displayname"}
+                                                required={false}
+                                                schemaName={"string"}
+                                                qualifierMessage={undefined}
+                                                schema={{"type":"string","example":"testEntitlementPM"}}
+                                              >
+                                                
+                                              </SchemaItem><SchemaItem
+                                                collapsible={false}
+                                                name={"entitlement_value"}
+                                                required={false}
+                                                schemaName={"string"}
+                                                qualifierMessage={undefined}
+                                                schema={{"type":"string","example":"testEntitlementPM"}}
+                                              >
+                                                
+                                              </SchemaItem>
+                                            </div>
+                                          </details>
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"approvalstatus"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"NEW"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"approvaltype"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"Auto-Approve"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"assignee"}
+                                          required={false}
+                                          schemaName={"array[]"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"array","items":{"type":"array","items":{"type":"string","example":"Saviynt  AdminUser (admin)"},"example":["Saviynt  AdminUser (admin)"]},"example":[["Saviynt  AdminUser (admin)"]]}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"businessjustification"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"<span class=\"busjustformat\">[04/23/2020 UTC -Edward Employee(edwardemployee)] sdfsdf</span>"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"entTypeDescription"}
+                                          required={false}
+                                          schemaName={""}
+                                          qualifierMessage={undefined}
+                                          schema={{"nullable":true,"example":null}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"entTypeDisplayName"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"Access"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"entitlement"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"Access"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"parentRequestaccessKey"}
+                                          required={false}
+                                          schemaName={"number"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"number","example":6654}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"reqtype"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"RequestAccess"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"requestaccessComments"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"<span class=\"busjustformat\">[04/23/2020 UTC -Edward Employee(edwardemployee)] sdfsdf</span>"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"requestaccessEnddate"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":""}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"requestaccessKey"}
+                                          required={false}
+                                          schemaName={"number"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"number","example":6655}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"requestaccessStartdate"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"2020-04-23T09:47:56Z"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"requestaccessStatus"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"Pending Approval"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"requestdate"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"2020-04-23 09:47:56.0"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"taskid"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"2220058___810d1198-74b1-452f-8928-0f97a48ea04c"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"taskkey"}
+                                          required={false}
+                                          schemaName={"number"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"number","example":12247}}
+                                        >
+                                          
+                                        </SchemaItem><li>
+                                          <div
+                                            style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                                          >
+                                            ]
+                                          </div>
+                                        </li>
+                                      </div>
+                                    </details>
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"childTasksCount"}
+                                    required={false}
+                                    schemaName={"number"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"number","example":1}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"dynamicAttributes"}
+                                    required={false}
+                                    schemaName={"undefined[]"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"array","items":{},"example":[]}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"endpoint"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Amigopod"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"endpointdisplayname"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Amigopod"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"modifyTasks"}
+                                    required={false}
+                                    schemaName={"undefined[]"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"array","items":{},"example":[]}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"modifyTasksCount"}
+                                    required={false}
+                                    schemaName={"number"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"number","example":0}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={true}
+                                    className={"schemaItem"}
+                                  >
+                                    <details
+                                      style={{}}
+                                      className={"openapi-markdown__details"}
+                                    >
+                                      <summary
+                                        style={{}}
+                                      >
+                                        <span
+                                          className={"openapi-schema__container"}
+                                        >
+                                          <strong
+                                            className={"openapi-schema__property"}
+                                          >
+                                            parentTasks
+                                          </strong><span
+                                            className={"openapi-schema__name"}
+                                          >
+                                             object
+                                          </span>
+                                        </span>
+                                      </summary><div
+                                        style={{"marginLeft":"1rem"}}
+                                      >
+                                        <SchemaItem
+                                          collapsible={false}
+                                          name={"accountname"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"edwardemployee"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"approvalstatus"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"NEW"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"endpoint"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"Amigopod"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"endpointdisplayname"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"Amigopod"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"requestedby"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"edwardemployee"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"taskid"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"2220058___311217e8-d3c7-439e-821e-304bfdebc8b4"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"taskkey"}
+                                          required={false}
+                                          schemaName={"number"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"number","example":12246}}
+                                        >
+                                          
+                                        </SchemaItem>
+                                      </div>
+                                    </details>
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"requestedby"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"edwardemployee"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={true}
+                                    className={"schemaItem"}
+                                  >
+                                    <details
+                                      style={{}}
+                                      className={"openapi-markdown__details"}
+                                    >
+                                      <summary
+                                        style={{}}
+                                      >
+                                        <span
+                                          className={"openapi-schema__container"}
+                                        >
+                                          <strong
+                                            className={"openapi-schema__property"}
+                                          >
+                                            tasksList
+                                          </strong><span
+                                            className={"openapi-schema__name"}
+                                          >
+                                             object[]
+                                          </span>
+                                        </span>
+                                      </summary><div
+                                        style={{"marginLeft":"1rem"}}
+                                      >
+                                        <li>
+                                          <div
+                                            style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                                          >
+                                            Array [
+                                          </div>
+                                        </li><SchemaItem
+                                          collapsible={false}
+                                          name={"Access"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"ACCOUNTNAME|edwardemployee@@ENDPOINT|624@@"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"access"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"testEntitlementPM"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={true}
+                                          className={"schemaItem"}
+                                        >
+                                          <details
+                                            style={{}}
+                                            className={"openapi-markdown__details"}
+                                          >
+                                            <summary
+                                              style={{}}
+                                            >
+                                              <span
+                                                className={"openapi-schema__container"}
+                                              >
+                                                <strong
+                                                  className={"openapi-schema__property"}
+                                                >
+                                                  accessdetails
+                                                </strong><span
+                                                  className={"openapi-schema__name"}
+                                                >
+                                                   object
+                                                </span>
+                                              </span>
+                                            </summary><div
+                                              style={{"marginLeft":"1rem"}}
+                                            >
+                                              <SchemaItem
+                                                collapsible={false}
+                                                name={"description"}
+                                                required={false}
+                                                schemaName={"string"}
+                                                qualifierMessage={undefined}
+                                                schema={{"type":"string","example":"This role is for employees needing access to EP"}}
+                                              >
+                                                
+                                              </SchemaItem><SchemaItem
+                                                collapsible={false}
+                                                name={"displayname"}
+                                                required={false}
+                                                schemaName={"string"}
+                                                qualifierMessage={undefined}
+                                                schema={{"type":"string","example":"testEntitlementPM"}}
+                                              >
+                                                
+                                              </SchemaItem><SchemaItem
+                                                collapsible={false}
+                                                name={"entitlement_value"}
+                                                required={false}
+                                                schemaName={"string"}
+                                                qualifierMessage={undefined}
+                                                schema={{"type":"string","example":"testEntitlementPM"}}
+                                              >
+                                                
+                                              </SchemaItem>
+                                            </div>
+                                          </details>
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"approvalstatus"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"NEW"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"approvaltype"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"Auto-Approve"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"assignee"}
+                                          required={false}
+                                          schemaName={"array[]"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"array","items":{"type":"array","items":{"type":"string","example":"Saviynt  AdminUser (admin)"},"example":["Saviynt  AdminUser (admin)"]},"example":[["Saviynt  AdminUser (admin)"]]}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"businessjustification"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"<span class=\"busjustformat\">[04/23/2020 UTC -Edward Employee(edwardemployee)] sdfsdf</span>"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"entTypeDescription"}
+                                          required={false}
+                                          schemaName={""}
+                                          qualifierMessage={undefined}
+                                          schema={{"nullable":true,"example":null}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"entTypeDisplayName"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"Access"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"entitlement"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"Access"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"parentRequestaccessKey"}
+                                          required={false}
+                                          schemaName={"number"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"number","example":6654}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"reqtype"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"RequestAccess"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"requestaccessComments"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"<span class=\"busjustformat\">[04/23/2020 UTC -Edward Employee(edwardemployee)] sdfsdf</span>"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"requestaccessEnddate"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":""}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"requestaccessKey"}
+                                          required={false}
+                                          schemaName={"number"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"number","example":6655}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"requestaccessStartdate"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"2020-04-23T09:47:56Z"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"requestaccessStatus"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"Pending Approval"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"requestdate"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"2020-04-23 09:47:56.0"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"taskid"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"2220058___810d1198-74b1-452f-8928-0f97a48ea04c"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"taskkey"}
+                                          required={false}
+                                          schemaName={"number"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"number","example":12247}}
+                                        >
+                                          
+                                        </SchemaItem><li>
+                                          <div
+                                            style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                                          >
+                                            ]
+                                          </div>
+                                        </li>
+                                      </div>
+                                    </details>
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"tasksListCount"}
+                                    required={false}
+                                    schemaName={"number"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"number","example":1}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"typeOfRequest"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"NEW"}}
+                                  >
+                                    
+                                  </SchemaItem><li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                                    >
+                                      ]
+                                    </div>
+                                  </li>
+                                </div>
+                              </details>
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"activityname"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Auto-Approve"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"assignee"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Saviynt AdminUser (admin)"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"comments"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"duedate"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"2020-04-26 09:47:56"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"endpoints"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Amigopod"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"requestdate"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"2020-04-23 09:47:56"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"requestee"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Edward Employee (edwardemployee)"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"requestid"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"2210612"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"requestkey"}
+                              required={false}
+                              schemaName={"number"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"number","example":3484}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"requestor"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Edward Employee (edwardemployee)"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"requesttype"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"New Account"}}
+                            >
+                              
+                            </SchemaItem><li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                              >
+                                ]
+                              </div>
+                            </li>
+                          </div>
+                        </details>
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"totalApprovals"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"1"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"count\": 1,\n  \"errorCode\": \"0\",\n  \"msg\": \"SUCCESS\",\n  \"results\": [\n    {\n      \"accessRequestCount\": 1,\n      \"accessRequestDetails\": [\n        {\n          \"accountname\": \"edwardemployee\",\n          \"childTasks\": [\n            {\n              \"Access\": \"ACCOUNTNAME|edwardemployee@@ENDPOINT|624@@\",\n              \"access\": \"testEntitlementPM\",\n              \"accessdetails\": {\n                \"description\": \"This role is for employees needing access to EP\",\n                \"displayname\": \"testEntitlementPM\",\n                \"entitlement_value\": \"testEntitlementPM\"\n              },\n              \"approvalstatus\": \"NEW\",\n              \"approvaltype\": \"Auto-Approve\",\n              \"assignee\": [\n                [\n                  \"Saviynt  AdminUser (admin)\"\n                ]\n              ],\n              \"businessjustification\": \"<span class=\\\"busjustformat\\\">[04/23/2020 UTC -Edward Employee(edwardemployee)] sdfsdf</span>\",\n              \"entTypeDescription\": null,\n              \"entTypeDisplayName\": \"Access\",\n              \"entitlement\": \"Access\",\n              \"parentRequestaccessKey\": 6654,\n              \"reqtype\": \"RequestAccess\",\n              \"requestaccessComments\": \"<span class=\\\"busjustformat\\\">[04/23/2020 UTC -Edward Employee(edwardemployee)] sdfsdf</span>\",\n              \"requestaccessEnddate\": \"\",\n              \"requestaccessKey\": 6655,\n              \"requestaccessStartdate\": \"2020-04-23T09:47:56Z\",\n              \"requestaccessStatus\": \"Pending Approval\",\n              \"requestdate\": \"2020-04-23 09:47:56.0\",\n              \"taskid\": \"2220058___810d1198-74b1-452f-8928-0f97a48ea04c\",\n              \"taskkey\": 12247\n            }\n          ],\n          \"childTasksCount\": 1,\n          \"dynamicAttributes\": [],\n          \"endpoint\": \"Amigopod\",\n          \"endpointdisplayname\": \"Amigopod\",\n          \"modifyTasks\": [],\n          \"modifyTasksCount\": 0,\n          \"parentTasks\": {\n            \"accountname\": \"edwardemployee\",\n            \"approvalstatus\": \"NEW\",\n            \"endpoint\": \"Amigopod\",\n            \"endpointdisplayname\": \"Amigopod\",\n            \"requestedby\": \"edwardemployee\",\n            \"taskid\": \"2220058___311217e8-d3c7-439e-821e-304bfdebc8b4\",\n            \"taskkey\": 12246\n          },\n          \"requestedby\": \"edwardemployee\",\n          \"tasksList\": [\n            {\n              \"Access\": \"ACCOUNTNAME|edwardemployee@@ENDPOINT|624@@\",\n              \"access\": \"testEntitlementPM\",\n              \"accessdetails\": {\n                \"description\": \"This role is for employees needing access to EP\",\n                \"displayname\": \"testEntitlementPM\",\n                \"entitlement_value\": \"testEntitlementPM\"\n              },\n              \"approvalstatus\": \"NEW\",\n              \"approvaltype\": \"Auto-Approve\",\n              \"assignee\": [\n                [\n                  \"Saviynt  AdminUser (admin)\"\n                ]\n              ],\n              \"businessjustification\": \"<span class=\\\"busjustformat\\\">[04/23/2020 UTC -Edward Employee(edwardemployee)] sdfsdf</span>\",\n              \"entTypeDescription\": null,\n              \"entTypeDisplayName\": \"Access\",\n              \"entitlement\": \"Access\",\n              \"parentRequestaccessKey\": 6654,\n              \"reqtype\": \"RequestAccess\",\n              \"requestaccessComments\": \"<span class=\\\"busjustformat\\\">[04/23/2020 UTC -Edward Employee(edwardemployee)] sdfsdf</span>\",\n              \"requestaccessEnddate\": \"\",\n              \"requestaccessKey\": 6655,\n              \"requestaccessStartdate\": \"2020-04-23T09:47:56Z\",\n              \"requestaccessStatus\": \"Pending Approval\",\n              \"requestdate\": \"2020-04-23 09:47:56.0\",\n              \"taskid\": \"2220058___810d1198-74b1-452f-8928-0f97a48ea04c\",\n              \"taskkey\": 12247\n            }\n          ],\n          \"tasksListCount\": 1,\n          \"typeOfRequest\": \"NEW\"\n        }\n      ],\n      \"activityname\": \"Auto-Approve\",\n      \"assignee\": \"Saviynt AdminUser (admin)\",\n      \"comments\": \"\",\n      \"duedate\": \"2020-04-26 09:47:56\",\n      \"endpoints\": \"Amigopod\",\n      \"requestdate\": \"2020-04-23 09:47:56\",\n      \"requestee\": \"Edward Employee (edwardemployee)\",\n      \"requestid\": \"2210612\",\n      \"requestkey\": 3484,\n      \"requestor\": \"Edward Employee (edwardemployee)\",\n      \"requesttype\": \"New Account\"\n    }\n  ],\n  \"totalApprovals\": \"1\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Get Pending Approvals - SUCCESS"}
+                  value={"Get Pending Approvals - SUCCESS"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"count\": 1,\n  \"errorCode\": \"0\",\n  \"msg\": \"SUCCESS\",\n  \"results\": [\n    {\n      \"accessRequestCount\": 1,\n      \"accessRequestDetails\": [\n        {\n          \"accountname\": \"edwardemployee\",\n          \"childTasks\": [\n            {\n              \"Access\": \"ACCOUNTNAME|edwardemployee@@ENDPOINT|624@@\",\n              \"access\": \"testEntitlementPM\",\n              \"accessdetails\": {\n                \"description\": \"This role is for employees needing access to EP\",\n                \"displayname\": \"testEntitlementPM\",\n                \"entitlement_value\": \"testEntitlementPM\"\n              },\n              \"approvalstatus\": \"NEW\",\n              \"approvaltype\": \"Auto-Approve\",\n              \"assignee\": [\n                [\n                  \"Saviynt  AdminUser (admin)\"\n                ]\n              ],\n              \"businessjustification\": \"<span class=\\\"busjustformat\\\">[04/23/2020 UTC -Edward Employee(edwardemployee)] sdfsdf</span>\",\n              \"entTypeDescription\": null,\n              \"entTypeDisplayName\": \"Access\",\n              \"entitlement\": \"Access\",\n              \"parentRequestaccessKey\": 6654,\n              \"reqtype\": \"RequestAccess\",\n              \"requestaccessComments\": \"<span class=\\\"busjustformat\\\">[04/23/2020 UTC -Edward Employee(edwardemployee)] sdfsdf</span>\",\n              \"requestaccessEnddate\": \"\",\n              \"requestaccessKey\": 6655,\n              \"requestaccessStartdate\": \"2020-04-23T09:47:56Z\",\n              \"requestaccessStatus\": \"Pending Approval\",\n              \"requestdate\": \"2020-04-23 09:47:56.0\",\n              \"taskid\": \"2220058___810d1198-74b1-452f-8928-0f97a48ea04c\",\n              \"taskkey\": 12247\n            }\n          ],\n          \"childTasksCount\": 1,\n          \"dynamicAttributes\": [],\n          \"endpoint\": \"Amigopod\",\n          \"endpointdisplayname\": \"Amigopod\",\n          \"modifyTasks\": [],\n          \"modifyTasksCount\": 0,\n          \"parentTasks\": {\n            \"accountname\": \"edwardemployee\",\n            \"approvalstatus\": \"NEW\",\n            \"endpoint\": \"Amigopod\",\n            \"endpointdisplayname\": \"Amigopod\",\n            \"requestedby\": \"edwardemployee\",\n            \"taskid\": \"2220058___311217e8-d3c7-439e-821e-304bfdebc8b4\",\n            \"taskkey\": 12246\n          },\n          \"requestedby\": \"edwardemployee\",\n          \"tasksList\": [\n            {\n              \"Access\": \"ACCOUNTNAME|edwardemployee@@ENDPOINT|624@@\",\n              \"access\": \"testEntitlementPM\",\n              \"accessdetails\": {\n                \"description\": \"This role is for employees needing access to EP\",\n                \"displayname\": \"testEntitlementPM\",\n                \"entitlement_value\": \"testEntitlementPM\"\n              },\n              \"approvalstatus\": \"NEW\",\n              \"approvaltype\": \"Auto-Approve\",\n              \"assignee\": [\n                [\n                  \"Saviynt  AdminUser (admin)\"\n                ]\n              ],\n              \"businessjustification\": \"<span class=\\\"busjustformat\\\">[04/23/2020 UTC -Edward Employee(edwardemployee)] sdfsdf</span>\",\n              \"entTypeDescription\": null,\n              \"entTypeDisplayName\": \"Access\",\n              \"entitlement\": \"Access\",\n              \"parentRequestaccessKey\": 6654,\n              \"reqtype\": \"RequestAccess\",\n              \"requestaccessComments\": \"<span class=\\\"busjustformat\\\">[04/23/2020 UTC -Edward Employee(edwardemployee)] sdfsdf</span>\",\n              \"requestaccessEnddate\": \"\",\n              \"requestaccessKey\": 6655,\n              \"requestaccessStartdate\": \"2020-04-23T09:47:56Z\",\n              \"requestaccessStatus\": \"Pending Approval\",\n              \"requestdate\": \"2020-04-23 09:47:56.0\",\n              \"taskid\": \"2220058___810d1198-74b1-452f-8928-0f97a48ea04c\",\n              \"taskkey\": 12247\n            }\n          ],\n          \"tasksListCount\": 1,\n          \"typeOfRequest\": \"NEW\"\n        }\n      ],\n      \"activityname\": \"Auto-Approve\",\n      \"assignee\": \"Saviynt AdminUser (admin)\",\n      \"comments\": \"\",\n      \"duedate\": \"2020-04-26 09:47:56\",\n      \"endpoints\": \"Amigopod\",\n      \"requestdate\": \"2020-04-23 09:47:56\",\n      \"requestee\": \"Edward Employee (edwardemployee)\",\n      \"requestid\": \"2210612\",\n      \"requestkey\": 3484,\n      \"requestor\": \"Edward Employee (edwardemployee)\",\n      \"requesttype\": \"New Account\"\n    }\n  ],\n  \"totalApprovals\": \"1\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

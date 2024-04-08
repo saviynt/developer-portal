@@ -1,0 +1,625 @@
+---
+id: get-user-details
+title: "Get User Details"
+description: "This method returns a `List` of Users in SSM."
+sidebar_label: "Get User Details"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: apis/rest/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get User Details"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/getUser"}
+>
+  
+</MethodEndpoint>
+
+
+
+This method returns a `List` of Users in SSM. 
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+Optional params:
+
+`username` - Specify the username for which you want to get the user attribute details,
+
+`responsefields` - User attributes which you want to see in the response(for encrypted values, mention ecp&lt;1-5&gt;, and for hashed values, mention hcp&lt;1-5&gt;),
+
+`max`,
+
+`offset`,
+
+`sort`,
+
+`order` - asc/desc,
+
+`manager` - username,
+
+`secondarymanager` - userkey *OR* `secondaryManager` - username
+
+`showsecurityanswers` - "0"/"1" to display encrypted security answers for the user 
+
+&nbsp;
+
+
+`filtercriteria` - User fields based on which you want to get the user attribute details(including userkey),
+
+***OR***
+
+`searchCriteria` - search for a user based on the string passed (eg - “\*ab\*” or “\*ab” or “ab\*”) in their firstname, lastname, displayname and username only, example - "ab*" - This will return all users with firstname or lastname or username starting with "ab"
+
+***OR***
+
+`advsearchcriteria` - search for a user based on the string passed (eg - “\*ab\*” or “\*ab” or “ab\*”), example - \{"username":"a*", "firstname":"*b"\} - This will return all users with username starting with "a" AND firstname ending with "b". Exact match search is applicable for types boolean, users, customer. Date can be entered in format - yyyy-MM-dd.
+
+***OR***
+
+`userQuery` - Sample: “userQuery”:”user.customproperty1='abc' or user.displayname like '%display%'”.
+
+***Note*** - By default, if no responsefields param is passed, required attrs that will always return are username, email, statuskey, firstname, lastname, employeeid along with other attributes with nonblank values only.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={true}
+          className={"schemaItem"}
+        >
+          <details
+            style={{}}
+            className={"openapi-markdown__details"}
+          >
+            <summary
+              style={{}}
+            >
+              <span
+                className={"openapi-schema__container"}
+              >
+                <strong
+                  className={"openapi-schema__property"}
+                >
+                  filtercriteria
+                </strong><span
+                  className={"openapi-schema__name"}
+                >
+                   object
+                </span>
+              </span>
+            </summary><div
+              style={{"marginLeft":"1rem"}}
+            >
+              <SchemaItem
+                collapsible={false}
+                name={"username"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"lmcneil"}}
+              >
+                
+              </SchemaItem>
+            </div>
+          </details>
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"showsecurityanswers"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"1"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Get User Details / Get User Details 2
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Credentials
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Origin
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Cache-Control
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Expires
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Pragma
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Referrer-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-XSS-Protection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"displaycount"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"1"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Successful"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"totalcount"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"1"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                userlist
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object[]
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                              >
+                                Array [
+                              </div>
+                            </li><SchemaItem
+                              collapsible={false}
+                              name={"firstname"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"John"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"statuskey"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"1"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"userKey"}
+                              required={false}
+                              schemaName={"number"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"number","example":5}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"username"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"johndoe"}}
+                            >
+                              
+                            </SchemaItem><li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                              >
+                                ]
+                              </div>
+                            </li>
+                          </div>
+                        </details>
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"displaycount\": \"1\",\n  \"errorCode\": \"0\",\n  \"msg\": \"Successful\",\n  \"totalcount\": \"1\",\n  \"userlist\": [\n    {\n      \"firstname\": \"John\",\n      \"statuskey\": \"1\",\n      \"userKey\": 5,\n      \"username\": \"johndoe\"\n    }\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Get User Details"}
+                  value={"Get User Details"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"displaycount\": \"1\",\n  \"errorCode\": \"0\",\n  \"msg\": \"Successful\",\n  \"totalcount\": \"1\",\n  \"userlist\": [\n    {\n      \"firstname\": \"John\",\n      \"statuskey\": \"1\",\n      \"userKey\": 5,\n      \"username\": \"johndoe\"\n    }\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Get User Details 2"}
+                  value={"Get User Details 2"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"displaycount\": \"1\",\n  \"errorCode\": \"0\",\n  \"msg\": \"Successful\",\n  \"totalcount\": \"1\",\n  \"userlist\": [\n    {\n      \"accountExpired\": \"false\",\n      \"accountLocked\": \"false\",\n      \"city\": \"San Francisco\",\n      \"companyname\": \"Global Modern Services, Inc. (USA)\",\n      \"costcenter\": \"GMS USA\",\n      \"country\": \"USA\",\n      \"createdate\": \"06/08/2020T10:35:46+0000\",\n      \"customer\": \"testorg\",\n      \"customproperty1\": \"3aa5550b7fe348b98d7b5741afc65534\",\n      \"displayname\": \"Logan McNeil\",\n      \"email\": \"test@gmail.com\",\n      \"employeeType\": \"Regular\",\n      \"employeeid\": \"21001\",\n      \"enabled\": \"true\",\n      \"encryptedSecurityAnswers\": \"lhCSZZbYyxHaRZN6L9s4IPXAIwx86J87GEXwt5wIutPnEGkywv4W9UImm9u+qlk67bTNecLwHBClApo9olYBEceyC+h4gcLrjWwLOLlJ3Wc=\",\n      \"failedTries\": \"0\",\n      \"firstname\": \"Logan\",\n      \"lastPasswordUpdateDate\": \"07/23/2020T18:25:58+0000\",\n      \"lastname\": \"McNeil\",\n      \"location\": \"San Francisco\",\n      \"passwordExpired\": \"false\",\n      \"phonenumber\": \"415789-8904\",\n      \"preferedFirstName\": \"Logan\",\n      \"savUpdateDate\": \"06/08/2020T10:36:03+0000\",\n      \"statuskey\": \"1\",\n      \"systemUserName\": \"lmcneil\",\n      \"title\": \"Chief Human Resources Officer\",\n      \"updatedate\": \"07/23/2020T18:25:58+0000\",\n      \"updateuser\": \"admin\",\n      \"userKey\": 12444,\n      \"userSource\": \"127\",\n      \"username\": \"lmcneil\"\n    }\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

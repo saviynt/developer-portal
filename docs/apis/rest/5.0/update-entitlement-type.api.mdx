@@ -1,0 +1,545 @@
+---
+id: update-entitlement-type
+title: "Update Entitlement Type"
+description: "This API updates Entitlement Type in SSM."
+sidebar_label: "Update Entitlement Type"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "put api-method"
+info_path: apis/rest/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update Entitlement Type"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/updateEntitlementType"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API updates Entitlement Type in SSM.
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+Mandatory params:
+	`entitlementname`,
+	`endpointname`,
+	
+Optional params:
+	`entitlementdescription`,
+	`workflow`,
+	`customproperty<N>`,
+	`availableQueryServiceAccount`,
+	`selectedQueryServiceAccount`, 
+	`arsRequestableEntitlementQuery`, 
+	`arsSelectedEntitlementQuery` , 
+	`createTaskAction` - it can be one value or list of values. The values can be ["noAction","removeTaskForExistingEntitlements", "enableRollback"],
+	`requestDatesConfJson` , 
+	`startDateInRevokeRequest` , 
+	`startEndDateInRequest` ,
+	`allowRemoveAllEntitlementInRequest` , 
+	`orderindex` , 
+	`requiredinrequest` ,
+	`hiearchyrequired` , 
+	`requestoption`
+	
+	
+`requestoption` param values can be - 
+SHOW_BUT_NOTREUESTABLESINGLE/ 
+SHOW_BUT_NOTREUESTABLEMULTIPLE/ 
+NONE/ 
+SINGLE/ 
+MULTIPLE/ 
+TABLE/ 
+FREEFORMTEXT/ 
+TABLENOREMOVE/ 
+RADIOBUTN/ 
+CHECKBOXN/ 
+READONLYTABLE/ 
+NONE_BUT_CREATETASK
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"path","in":"path","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"allowRemoveAllEntitlementInRequest"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"false"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"arsRequestableEntitlementQuery"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"ev.status=1 and ev.customproperty1='TRUE'"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"arsSelectedEntitlementQuery"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"testsel"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"availableQueryServiceAccount"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"test qry"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"createTaskAction"}
+          required={false}
+          schemaName={"string[]"}
+          qualifierMessage={undefined}
+          schema={{"type":"array","items":{"type":"string","example":"noAction"},"example":["noAction","removeTaskForExistingEntitlements","bhav","enableRollback"]}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"createTaskAction1"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"removeTaskForExistingEntitlements"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"customproperty1"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"cp1"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"customproperty9"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"cp9"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"endpointname"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"AD Test"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"entitlementdescription"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"entitlementdescription"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"entitlementname"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"testEnt81"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"hiearchyrequired"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"false"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"orderindex"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"2"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"requestDatesConfJson"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"test date"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"requestoption"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"TABLENOREMOVE"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"requiredinrequest"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"false"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"selectedQueryServiceAccount"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"service acc qry"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"startDateInRevokeRequest"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"false"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"startEndDateInRequest"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"false"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"workflow"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"SampleManagerApproval"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Update Entitlement Type
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Success"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \"Success\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Update Entitlement Type"}
+                  value={"Update Entitlement Type"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \"Success\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

@@ -59,16 +59,16 @@ const config: Config = {
           items: [
             {
               label: "v5.0",
-              to: "/api-reference/rest/5.0",
+              to: "/apis/rest/5.0",
             },
           ],
         },
         {
-          label: "CONNECTORS",
+          label: "Connectors",
           to: "/connectors/",
         },
         {
-          label: "EXTENSIONS",
+          label: "Extensions",
           to: "/extensions/",
         },
         {
@@ -209,7 +209,7 @@ const config: Config = {
         config: {
           saviynt:{
             specPath: "static/api-specs/saviynt-eic-api-5.0.yaml",
-            outputDir: "docs/api-reference/5.0",
+            outputDir: "docs/apis/rest/5.0",
             sidebarOptions: {
               groupPathsBy: "tagGroup",
               categoryLinkSource: "auto",
@@ -220,7 +220,7 @@ const config: Config = {
             hideSendButton: false,
             showSchemas: true,
             version: "5.0", // Current version
-            label: "v5.0", // Current version label
+            label: "5.0", // Current version label
             baseUrl: "/developer-portal/api-reference/rest/5.0", // Leading slash is important
           } satisfies OpenApiPlugin.Options,
         } satisfies Plugin.PluginOptions,
