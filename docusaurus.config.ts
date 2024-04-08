@@ -209,7 +209,7 @@ const config: Config = {
         config: {
           saviynt:{
             specPath: "static/api-specs/saviynt-eic-api-5.0.yaml",
-            outputDir: "docs/api-reference",
+            outputDir: "docs/api-reference/5.0",
             sidebarOptions: {
               groupPathsBy: "tagGroup",
               categoryLinkSource: "auto",
