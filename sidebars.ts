@@ -17,14 +17,10 @@ import api_rest_5_0_sidebar from "./docs/apis/rest/5.0/sidebar";
       type: 'category',
       label: 'APIs',
       collapsible: false,
-      link: {
-        type: 'doc',
-        id: 'docs',
-      },
       items: [
         {
           type: 'doc',
-          id: 'api/getting-started',
+          id: 'apis/rest/getting-started',
         },
         {
           type: "category",
