@@ -5,8 +5,11 @@
  */
 
 /* You can override the default Infima variables here. */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
 
 :root {
+  --ifm-font-family-base: 'Roboto', sans-serif;
   --ifm-color-primary: #0072ff; /* Your chosen bright blue as the primary color */
   --ifm-color-primary-dark: #005ecc; /* A darker shade of the primary color */
   --ifm-color-primary-darker: #004cac; /* Even darker for more depth */
@@ -31,6 +34,10 @@
   --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1); /* Lighter for dark mode readability */
 }
 
+.navbar__item {
+  font-size: 14px; /* Adjust this value as needed */
+}
+
 /* Override --ifm text-decoration */
 a:any-link:hover {
   text-decoration: none;
@@ -48,7 +55,7 @@ a:any-link:hover {
   font-size: 12px;
   line-height: 20px;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 400;
   border-radius: 0.25rem;
   border: 1px solid;
   border-inline-start-width: 5px;
@@ -131,12 +138,12 @@ html[data-theme="dark"] .header-github-link:before {
 .header-medium-link:before {
   content: "\f23a";
   font-family: "Font Awesome 5 Brands";
-  font-size: x-large;
+  font-size: large;
 }
 
 div[class^="announcementBar_"] {
   /* Replace the striped background with a solid color and some transparency */
-  background: rgba(92, 7, 228, 0.75); /* Adjust the alpha for desired transparency */
+  background: rgba(4, 80, 221, 0.75); /* Adjust the alpha for desired transparency */
 
   /* Apply the frosted glass effect */
   backdrop-filter: blur(5px);

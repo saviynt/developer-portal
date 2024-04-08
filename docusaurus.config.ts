@@ -54,7 +54,7 @@ const config: Config = {
       items: [
         {
           type: "dropdown",
-          label: "APIS",
+          label: "APIs",
           position: "left",
           items: [
             {
@@ -234,7 +234,7 @@ const config: Config = {
   themes: ["docusaurus-theme-openapi-docs"],
   stylesheets: [
     {
-      href: "https://use.fontawesome.com/releases/v5.11.0/css/all.css",
+      href: "https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap",
       type: "text/css",
     },
   ],
