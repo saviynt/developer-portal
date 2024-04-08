@@ -38,7 +38,7 @@ import {
             type: "generated-index",
             title: "REST API",
             description:
-              "This is a Saviynt REST API Specification for 5.0.",
+              "This is a Saviynt REST API Specification for 5.0",
             slug: "/apis/rest/5.0",
           },
           items: api_rest_5_0_sidebar,
