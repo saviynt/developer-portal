@@ -54,7 +54,7 @@ const config: Config = {
       items: [
         {
           type: "dropdown",
-          label: "API",
+          label: "APIS",
           position: "left",
           items: [
             {
@@ -64,15 +64,15 @@ const config: Config = {
           ],
         },
         {
-          label: "Connectors",
+          label: "CONNECTORS",
           to: "/connectors/",
         },
         {
-          label: "Extensions",
+          label: "EXTENSIONS",
           to: "/extensions/",
         },
         {
-          label: "Security",
+          label: "SECURITY",
           to: "/security/",
         },
         {
