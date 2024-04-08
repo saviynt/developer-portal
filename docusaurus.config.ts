@@ -194,9 +194,9 @@ const config: Config = {
       },
     ],
     algolia: {
-      apiKey: "441074cace987cbf4640c039ebed303c",
-      appId: "J0EABTYI1A",
-      indexName: "docusaurus-openapi",
+      apiKey: "6591669591a0940e49253bf77dbc76c4",
+      appId: "FNGBPDRR4F",
+      indexName: "saviynt_dev",
     },
     announcementBar: {
       id: "announcementBar_1",
