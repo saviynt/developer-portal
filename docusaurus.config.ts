@@ -53,6 +53,10 @@ const config: Config = {
       },
       items: [
         {
+          label: "GUIDE",
+          to: "/guide/",
+        },
+        {
           type: "dropdown",
           label: "APIs",
           position: "left",
