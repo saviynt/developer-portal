@@ -5,7 +5,7 @@
  */
 
 /* You can override the default Infima variables here. */
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:200,600&display=swap');
 
 
 :root {
@@ -36,6 +36,13 @@
 
 .navbar__item {
   font-size: 14px; /* Adjust this value as needed */
+}
+
+/* Page content */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 /* Override --ifm text-decoration */
