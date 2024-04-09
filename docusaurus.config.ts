@@ -2,8 +2,8 @@ import type * as Preset from "@docusaurus/preset-classic";
 import type { Config } from "@docusaurus/types";
 import type * as Plugin from "@docusaurus/types/src/plugin";
 import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
-
 import { DOCUSAURUS_VERSION } from "@docusaurus/utils";
+
 
 const config: Config = {
   title: "Saviynt Developer Portal",
@@ -80,6 +80,10 @@ const config: Config = {
           to: "/security/",
         },
         {
+          label: "COMMUNITY",
+          to: "/community/",
+        },
+        {
           href: "https://docs.saviyntcloud.com/",
           position: "right",
           className: "header-medium-link",
@@ -92,7 +96,7 @@ const config: Config = {
           "aria-label": "GitHub repository",
         },
       ],
-    },
+  },
     footer: {
       style: "dark",
       links: [
@@ -235,7 +239,10 @@ const config: Config = {
       },
     ],
   ],
-  themes: ["docusaurus-theme-openapi-docs"],
+  markdown: {
+    mermaid: true,
+  },
+  themes: ["docusaurus-theme-openapi-docs", '@docusaurus/theme-mermaid'],
   stylesheets: [
     {
       href: "https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap",

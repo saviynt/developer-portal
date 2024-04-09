@@ -111,7 +111,7 @@ import {
         },
       ],
     },
-  ]
+  ],
  };
  
  export default sidebars;
