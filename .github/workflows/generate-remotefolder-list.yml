@@ -5,6 +5,9 @@ on:
     - cron: '*/5 * * * *'  # Runs at every 5th minute
   workflow_dispatch:  # Allows manual triggering
 
+permissions:
+  contents: write
+
 jobs:
   generate-and-commit-folder-list:
     runs-on: ubuntu-latest
