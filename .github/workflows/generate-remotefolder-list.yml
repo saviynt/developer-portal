@@ -10,23 +10,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: '14'  # Use the Node.js version that matches your project requirements
+          node-version: '20'  # Use the Node.js version that matches your project requirements
 
       - name: Install dependencies
         run: npm install
         
-      - name: Run the script to fetch folders and generate the .tsx file
+      - name: Run the script to fetch folders and generate the the JSON file
         run: node .scripts/fetchFolders.js
         
       - name: Commit and push changes if there are any
         run: |
-          git config --global user.email "your-email@example.com"
-          git config --global user.name "Your Name"
+          git config --global user.email "kundan.thelife@hotmail.com"
+          git config --global user.name "Kkundan"
           git add static/folderList.json
           git commit -m "Automatically update folder list" -a || echo "No changes to commit"
           git push

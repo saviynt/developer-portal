@@ -76,18 +76,6 @@ const config: Config = {
           ],
         },
         {
-          label: "CONNECTORS",
-          to: "/connectors/",
-        },
-        {
-          label: "EXTENSIONS",
-          to: "/extensions/",
-        },
-        {
-          label: "SECURITY",
-          to: "/security/",
-        },
-        {
           label: "COMMUNITY",
           to: "/community/",
         },
