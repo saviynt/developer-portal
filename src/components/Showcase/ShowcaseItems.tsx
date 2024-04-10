@@ -18,14 +18,14 @@ export interface ShowcaseItem {
     {
       title: "Beta Solution",
       description: "An all-encompassing solution designed to tackle industry-specific challenges, offering seamless integration and unparalleled efficiency.",
-      imageUrl: "https://www.shutterstock.com/image-vector/group-people-location-icon-gathering-place-1912470844",
+      imageUrl: "https://github.com/saviynt/developer-portal/blob/main/static/img/community.png",
       link: "https://example.com/project-beta",
       tags: ['integrations'],
     },
     {
       title: "Gamma Initiative",
       description: "A community-driven initiative that fosters collaboration and knowledge sharing, creating a vibrant ecosystem around our platform.",
-      imageUrl: "https://www.shutterstock.com/image-vector/group-people-location-icon-gathering-place-1912470844",
+      imageUrl: "https://github.com/saviynt/developer-portal/blob/main/static/img/community.png",
       link: "https://example.com/project-gamma",
       tags: ['templates'],
     },

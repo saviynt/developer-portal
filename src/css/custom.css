@@ -214,19 +214,19 @@ div[class^="announcementBar_"] {
 
 .demo-showcase-card__content {
   padding: 1rem; /* Add some padding around the content */
-  background-color: #8baad1; /* Light grey background for the content area */
+  background-color: #c9d9ec; /* Light grey background for the content area */
   flex-grow: 1; /* Ensure the content area takes up all available space */
 }
 
 .demo-showcase-card__title {
-  font-size: 1.25rem; /* Larger font size for the title */
+  font-size: 1rem; /* Larger font size for the title */
   font-weight: bold;
   color: #333; /* Darker color for the title */
   margin-bottom: 0.5rem; /* Space below the title */
 }
 
 .demo-showcase-card__description {
-  font-size: 1rem; /* Regular font size for the description */
+  font-size: 0.75rem; /* Regular font size for the description */
   margin-bottom: 0.5rem; /* Space below the description */
 }
 
