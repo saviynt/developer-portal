@@ -138,14 +138,18 @@ html[data-theme="dark"] .header-github-link:before {
 }
 
 /* Medium Header Link */
-.header-medium-link:hover {
+.header-blog-link:hover {
   opacity: 0.6;
 }
 
-.header-medium-link:before {
-  content: "\f23a";
-  font-family: "Font Awesome 5 Brands";
-  font-size: large;
+.header-blog-link:before {
+  font-family: 'Material Icons';
+  content: "\eb81"; /* Unicode for the "info" icon */
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  font-size: x-large; /* Adjust as needed */
 }
 
 div[class^="announcementBar_"] {
@@ -191,6 +195,7 @@ div[class^="announcementBar_"] {
   overflow: hidden;
   box-shadow: 0 4px 16px rgba(0,0,0,0.2);
   transition: box-shadow 0.3s ease-in-out;
+  margin-bottom: 2rem; /* Increased bottom margin */
 }
 
 .demo-showcase-card:hover,
@@ -214,10 +219,10 @@ div[class^="announcementBar_"] {
 
 .demo-showcase-card__content {
   padding: 1rem; /* Add some padding around the content */
-  background-color: #c9d9ec; /* Light grey background for the content area */
+  background-color: #ccddff; /* Light grey background for the content area */
   flex-grow: 1; /* Ensure the content area takes up all available space */
   height: 150px; /* Fixed height for the image */
-  
+
 }
 
 .demo-showcase-card__title {
