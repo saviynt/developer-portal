@@ -27,6 +27,6 @@ jobs:
         run: |
           git config --global user.email "kundan.thelife@hotmail.com"
           git config --global user.name "Kkundan"
-          git add static/folderList.json
-          git commit -m "Automatically update folder list" -a || echo "No changes to commit"
+          git add static/folderList.json || echo "folderList.json does not exist, skipping"
+          git diff --staged --quiet || git commit -m "Automatically update folder list"
           git push

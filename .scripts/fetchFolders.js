@@ -29,7 +29,17 @@ async function fetchFolders() {
 
 function generateJSONFile(folders) {
   const content = JSON.stringify(folders, null, 2);
-  fs.writeFileSync('static/folderList.json', content);
+  const outputPath = path.join(__dirname, 'static', 'folderList.json');
+  const outputDir = path.dirname(outputPath);
+  
+  // Ensure the output directory exists
+  if (!fs.existsSync(outputDir)) {
+    fs.mkdirSync(outputDir, { recursive: true });
+  }
+
+  const content = JSON.stringify(folders, null, 2);
+  fs.writeFileSync(outputPath, content);
+
   console.log('folderList.json has been created/updated');
 }
 
