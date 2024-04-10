@@ -184,30 +184,37 @@ div[class^="announcementBar_"] {
 /* src/css/custom.css */
 
 .demo-showcase-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: block;
+  color: inherit; /* This makes sure the text inherits its color rather than anchor tag's blue */
+  text-decoration: none; /* Removes the underline from the anchor tag */
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-  background-color: white;
-  margin-bottom: 1.5rem;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.demo-showcase-card:hover,
+.demo-showcase-card:focus {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  /* Optionally add other styles to indicate hover/focus state */
 }
 
 .demo-showcase-card__image {
   width: 100%;
+  height: 150px; /* Fixed height for the image */
+  overflow: hidden; /* This will ensure that the image does not overflow the container */
   display: block; /* Ensure the image container takes the full width */
 }
 
 .demo-showcase-card__image img {
   width: 100%;
-  height: auto; /* Adjust the image height automatically */
+  height: 100; /* Adjust the image height automatically */
   object-fit: cover; /* Cover the container with the image */
 }
 
 .demo-showcase-card__content {
   padding: 1rem; /* Add some padding around the content */
-  background-color: #f9f9f9; /* Light grey background for the content area */
+  background-color: #8baad1; /* Light grey background for the content area */
   flex-grow: 1; /* Ensure the content area takes up all available space */
 }
 

@@ -248,6 +248,10 @@ const config: Config = {
       href: "https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap",
       type: "text/css",
     },
+    {
+      href: "https://fonts.googleapis.com/icon?family=Material+Icons",
+      type: "text/css",
+    },
   ],
 };
 
