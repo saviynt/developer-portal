@@ -1,0 +1,32 @@
+name: Generate Folder List
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # Runs at every 5th minute
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  generate-and-commit-folder-list:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'  # Use the Node.js version that matches your project requirements
+
+      - name: Install dependencies
+        run: npm install
+        
+      - name: Run the script to fetch folders and generate the .tsx file
+        run: node .scripts/fetchFolders.js
+        
+      - name: Commit and push changes if there are any
+        run: |
+          git config --global user.email "your-email@example.com"
+          git config --global user.name "Your Name"
+          git add static/folderList.json
+          git commit -m "Automatically update folder list" -a || echo "No changes to commit"
+          git push

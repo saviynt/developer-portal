@@ -5,6 +5,9 @@ export interface ShowcaseItem {
     imageUrl: string;
     link: string;
     tags: string[];
+    readmeLink: string;
+    githubLink: string;
+    resourceLink: string;
   }
   
   export const showcaseItems: ShowcaseItem[] = [
