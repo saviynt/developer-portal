@@ -245,6 +245,14 @@ const config: Config = {
           } satisfies OpenApiPlugin.Options,
         } satisfies Plugin.PluginOptions,
       },
+      "posthog-docusaurus",
+      {
+        apiKey: "phc_hY9SucCm9FBhUQfWiNEQPhW8lQH0tjog12DWUQm3EAu",
+        appUrl: "https://app.posthog.com", // optional
+        enableInDevelopment: false, // optional
+        // other options are passed to posthog-js init as is
+        // NOTE: options are passed through JSON.stringify(), so functions (such as `sanitize_properties`) are not supported.
+      },
     ],
   ],
   markdown: {

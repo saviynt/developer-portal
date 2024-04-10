@@ -5,7 +5,6 @@ import GithubContent from '@site/src/components/GithubContent/GithubContent';
 
 const VaultConnectorPage: React.FC = () => (
   <div>
-    <h1>Vault Connector</h1>
     <GithubContent repoPath="saviynt/sampleVaultConnector" />
   </div>
 );

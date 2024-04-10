@@ -1,6 +1,8 @@
 // src/components/GithubContent.tsx
 
 import React, { useState, useEffect } from 'react';
+import {marked} from 'marked'; // Import marked for markdown to HTML conversion
+import DOMPurify from 'dompurify'; // Import DOMPurify for sanitizing HTML
 
 interface GithubContentProps {
   repoPath: string;
@@ -28,7 +30,10 @@ const GithubContent: React.FC<GithubContentProps> = ({ repoPath }) => {
 
         const data = await response.json();
         const readmeContent = atob(data.content); // Decode base64 content
-        setContent(readmeContent);
+        // setContent(readmeContent);
+        const htmlContent = marked(readmeContent); // Convert markdown to HTML
+        const sanitizedContent = DOMPurify.sanitize(htmlContent); // Sanitize the HTML content
+        setContent(sanitizedContent);
       } catch (error) {
         console.error("Failed to fetch GitHub content:", error);
         setContent(`Error: ${(error as Error).message}`);
@@ -44,8 +49,11 @@ const GithubContent: React.FC<GithubContentProps> = ({ repoPath }) => {
 
   return (
     <div>
-      <h2>Repository README</h2>
-      <pre>{content}</pre> {/* Displaying raw README content */}
+      {/* Displaying raw README content */}
+      {/* <h2>Repository README</h2>
+      <pre>{content}</pre>  */}
+      {/* Safely set the inner HTML to the sanitized, converted content */}
+      <div dangerouslySetInnerHTML={{ __html: content }} />
     </div>
   );
 };
