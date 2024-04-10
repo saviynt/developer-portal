@@ -230,11 +230,11 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "category",
-          label: "Users Request",
+          label: "User Request",
           link: {
             type: "generated-index",
-            title: "Users Request",
-            slug: "/category/apis/rest/5.0/5-0/users-request",
+            title: "User Request",
+            slug: "/category/apis/rest/5.0/5-0/user-request",
           },
           items: [
             {
@@ -242,6 +242,24 @@ const sidebar: SidebarsConfig = {
               id: "apis/rest/5.0/bulk-upload-users",
               label: "Bulk Upload Users",
               className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "apis/rest/5.0/create-user-request",
+              label: "Create User Request",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "apis/rest/5.0/update-user-request",
+              label: "Update User Request",
+              className: "api-method put",
+            },
+            {
+              type: "doc",
+              id: "apis/rest/5.0/get-requestable-users",
+              label: "Get Requestable Users",
+              className: "api-method get",
             },
           ],
         },
@@ -662,35 +680,6 @@ const sidebar: SidebarsConfig = {
               id: "apis/rest/5.0/fetch-control-details-es",
               label: "Fetch Control Details ES",
               className: "api-method post",
-            },
-          ],
-        },
-        {
-          type: "category",
-          label: "User Request",
-          link: {
-            type: "generated-index",
-            title: "User Request",
-            slug: "/category/apis/rest/5.0/5-0/user-request",
-          },
-          items: [
-            {
-              type: "doc",
-              id: "apis/rest/5.0/create-user-request",
-              label: "Create User Request",
-              className: "api-method post",
-            },
-            {
-              type: "doc",
-              id: "apis/rest/5.0/update-user-request",
-              label: "Update User Request",
-              className: "api-method put",
-            },
-            {
-              type: "doc",
-              id: "apis/rest/5.0/get-requestable-users",
-              label: "Get Requestable Users",
-              className: "api-method get",
             },
           ],
         },
@@ -1672,11 +1661,11 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "category",
-          label: "Users Request",
+          label: "User Request",
           link: {
             type: "generated-index",
-            title: "Users Request",
-            slug: "/category/apis/rest/5.0/5-0/users-request",
+            title: "User Request",
+            slug: "/category/apis/rest/5.0/5-0/user-request",
           },
           items: [
             {
@@ -1684,6 +1673,24 @@ const sidebar: SidebarsConfig = {
               id: "apis/rest/5.0/bulk-upload-users",
               label: "Bulk Upload Users",
               className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "apis/rest/5.0/create-user-request",
+              label: "Create User Request",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "apis/rest/5.0/update-user-request",
+              label: "Update User Request",
+              className: "api-method put",
+            },
+            {
+              type: "doc",
+              id: "apis/rest/5.0/get-requestable-users",
+              label: "Get Requestable Users",
+              className: "api-method get",
             },
           ],
         },
@@ -2209,35 +2216,6 @@ const sidebar: SidebarsConfig = {
               id: "apis/rest/5.0/fetch-control-details-es",
               label: "Fetch Control Details ES",
               className: "api-method post",
-            },
-          ],
-        },
-        {
-          type: "category",
-          label: "User Request",
-          link: {
-            type: "generated-index",
-            title: "User Request",
-            slug: "/category/apis/rest/5.0/5-0/user-request",
-          },
-          items: [
-            {
-              type: "doc",
-              id: "apis/rest/5.0/create-user-request",
-              label: "Create User Request",
-              className: "api-method post",
-            },
-            {
-              type: "doc",
-              id: "apis/rest/5.0/update-user-request",
-              label: "Update User Request",
-              className: "api-method put",
-            },
-            {
-              type: "doc",
-              id: "apis/rest/5.0/get-requestable-users",
-              label: "Get Requestable Users",
-              className: "api-method get",
             },
           ],
         },
@@ -3295,11 +3273,11 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "category",
-          label: "Users Request",
+          label: "User Request",
           link: {
             type: "generated-index",
-            title: "Users Request",
-            slug: "/category/apis/rest/5.0/5-0/users-request",
+            title: "User Request",
+            slug: "/category/apis/rest/5.0/5-0/user-request",
           },
           items: [
             {
@@ -3307,6 +3285,24 @@ const sidebar: SidebarsConfig = {
               id: "apis/rest/5.0/bulk-upload-users",
               label: "Bulk Upload Users",
               className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "apis/rest/5.0/create-user-request",
+              label: "Create User Request",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "apis/rest/5.0/update-user-request",
+              label: "Update User Request",
+              className: "api-method put",
+            },
+            {
+              type: "doc",
+              id: "apis/rest/5.0/get-requestable-users",
+              label: "Get Requestable Users",
+              className: "api-method get",
             },
           ],
         },
@@ -3873,35 +3869,6 @@ const sidebar: SidebarsConfig = {
               id: "apis/rest/5.0/fetch-control-details-es",
               label: "Fetch Control Details ES",
               className: "api-method post",
-            },
-          ],
-        },
-        {
-          type: "category",
-          label: "User Request",
-          link: {
-            type: "generated-index",
-            title: "User Request",
-            slug: "/category/apis/rest/5.0/5-0/user-request",
-          },
-          items: [
-            {
-              type: "doc",
-              id: "apis/rest/5.0/create-user-request",
-              label: "Create User Request",
-              className: "api-method post",
-            },
-            {
-              type: "doc",
-              id: "apis/rest/5.0/update-user-request",
-              label: "Update User Request",
-              className: "api-method put",
-            },
-            {
-              type: "doc",
-              id: "apis/rest/5.0/get-requestable-users",
-              label: "Get Requestable Users",
-              className: "api-method get",
             },
           ],
         },
@@ -4878,11 +4845,11 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "category",
-          label: "Users Request",
+          label: "User Request",
           link: {
             type: "generated-index",
-            title: "Users Request",
-            slug: "/category/apis/rest/5.0/5-0/users-request",
+            title: "User Request",
+            slug: "/category/apis/rest/5.0/5-0/user-request",
           },
           items: [
             {
@@ -4890,6 +4857,24 @@ const sidebar: SidebarsConfig = {
               id: "apis/rest/5.0/bulk-upload-users",
               label: "Bulk Upload Users",
               className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "apis/rest/5.0/create-user-request",
+              label: "Create User Request",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "apis/rest/5.0/update-user-request",
+              label: "Update User Request",
+              className: "api-method put",
+            },
+            {
+              type: "doc",
+              id: "apis/rest/5.0/get-requestable-users",
+              label: "Get Requestable Users",
+              className: "api-method get",
             },
           ],
         },
@@ -5456,35 +5441,6 @@ const sidebar: SidebarsConfig = {
               id: "apis/rest/5.0/fetch-control-details-es",
               label: "Fetch Control Details ES",
               className: "api-method post",
-            },
-          ],
-        },
-        {
-          type: "category",
-          label: "User Request",
-          link: {
-            type: "generated-index",
-            title: "User Request",
-            slug: "/category/apis/rest/5.0/5-0/user-request",
-          },
-          items: [
-            {
-              type: "doc",
-              id: "apis/rest/5.0/create-user-request",
-              label: "Create User Request",
-              className: "api-method post",
-            },
-            {
-              type: "doc",
-              id: "apis/rest/5.0/update-user-request",
-              label: "Update User Request",
-              className: "api-method put",
-            },
-            {
-              type: "doc",
-              id: "apis/rest/5.0/get-requestable-users",
-              label: "Get Requestable Users",
-              className: "api-method get",
             },
           ],
         },
@@ -6505,11 +6461,11 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "category",
-          label: "Users Request",
+          label: "User Request",
           link: {
             type: "generated-index",
-            title: "Users Request",
-            slug: "/category/apis/rest/5.0/5-0/users-request",
+            title: "User Request",
+            slug: "/category/apis/rest/5.0/5-0/user-request",
           },
           items: [
             {
@@ -6517,6 +6473,24 @@ const sidebar: SidebarsConfig = {
               id: "apis/rest/5.0/bulk-upload-users",
               label: "Bulk Upload Users",
               className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "apis/rest/5.0/create-user-request",
+              label: "Create User Request",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "apis/rest/5.0/update-user-request",
+              label: "Update User Request",
+              className: "api-method put",
+            },
+            {
+              type: "doc",
+              id: "apis/rest/5.0/get-requestable-users",
+              label: "Get Requestable Users",
+              className: "api-method get",
             },
           ],
         },
@@ -6850,35 +6824,6 @@ const sidebar: SidebarsConfig = {
               id: "apis/rest/5.0/fetch-control-details-es",
               label: "Fetch Control Details ES",
               className: "api-method post",
-            },
-          ],
-        },
-        {
-          type: "category",
-          label: "User Request",
-          link: {
-            type: "generated-index",
-            title: "User Request",
-            slug: "/category/apis/rest/5.0/5-0/user-request",
-          },
-          items: [
-            {
-              type: "doc",
-              id: "apis/rest/5.0/create-user-request",
-              label: "Create User Request",
-              className: "api-method post",
-            },
-            {
-              type: "doc",
-              id: "apis/rest/5.0/update-user-request",
-              label: "Update User Request",
-              className: "api-method put",
-            },
-            {
-              type: "doc",
-              id: "apis/rest/5.0/get-requestable-users",
-              label: "Get Requestable Users",
-              className: "api-method get",
             },
           ],
         },
@@ -8072,11 +8017,11 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "category",
-          label: "Users Request",
+          label: "User Request",
           link: {
             type: "generated-index",
-            title: "Users Request",
-            slug: "/category/apis/rest/5.0/5-0/users-request",
+            title: "User Request",
+            slug: "/category/apis/rest/5.0/5-0/user-request",
           },
           items: [
             {
@@ -8084,6 +8029,24 @@ const sidebar: SidebarsConfig = {
               id: "apis/rest/5.0/bulk-upload-users",
               label: "Bulk Upload Users",
               className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "apis/rest/5.0/create-user-request",
+              label: "Create User Request",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "apis/rest/5.0/update-user-request",
+              label: "Update User Request",
+              className: "api-method put",
+            },
+            {
+              type: "doc",
+              id: "apis/rest/5.0/get-requestable-users",
+              label: "Get Requestable Users",
+              className: "api-method get",
             },
           ],
         },
@@ -8650,35 +8613,6 @@ const sidebar: SidebarsConfig = {
               id: "apis/rest/5.0/fetch-control-details-es",
               label: "Fetch Control Details ES",
               className: "api-method post",
-            },
-          ],
-        },
-        {
-          type: "category",
-          label: "User Request",
-          link: {
-            type: "generated-index",
-            title: "User Request",
-            slug: "/category/apis/rest/5.0/5-0/user-request",
-          },
-          items: [
-            {
-              type: "doc",
-              id: "apis/rest/5.0/create-user-request",
-              label: "Create User Request",
-              className: "api-method post",
-            },
-            {
-              type: "doc",
-              id: "apis/rest/5.0/update-user-request",
-              label: "Update User Request",
-              className: "api-method put",
-            },
-            {
-              type: "doc",
-              id: "apis/rest/5.0/get-requestable-users",
-              label: "Get Requestable Users",
-              className: "api-method get",
             },
           ],
         },
@@ -9471,11 +9405,11 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "category",
-          label: "Users Request",
+          label: "User Request",
           link: {
             type: "generated-index",
-            title: "Users Request",
-            slug: "/category/apis/rest/5.0/5-0/users-request",
+            title: "User Request",
+            slug: "/category/apis/rest/5.0/5-0/user-request",
           },
           items: [
             {
@@ -9483,6 +9417,24 @@ const sidebar: SidebarsConfig = {
               id: "apis/rest/5.0/bulk-upload-users",
               label: "Bulk Upload Users",
               className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "apis/rest/5.0/create-user-request",
+              label: "Create User Request",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "apis/rest/5.0/update-user-request",
+              label: "Update User Request",
+              className: "api-method put",
+            },
+            {
+              type: "doc",
+              id: "apis/rest/5.0/get-requestable-users",
+              label: "Get Requestable Users",
+              className: "api-method get",
             },
           ],
         },
@@ -9990,35 +9942,6 @@ const sidebar: SidebarsConfig = {
               id: "apis/rest/5.0/updatedataset",
               label: "updateDataset",
               className: "api-method post",
-            },
-          ],
-        },
-        {
-          type: "category",
-          label: "User Request",
-          link: {
-            type: "generated-index",
-            title: "User Request",
-            slug: "/category/apis/rest/5.0/5-0/user-request",
-          },
-          items: [
-            {
-              type: "doc",
-              id: "apis/rest/5.0/create-user-request",
-              label: "Create User Request",
-              className: "api-method post",
-            },
-            {
-              type: "doc",
-              id: "apis/rest/5.0/update-user-request",
-              label: "Update User Request",
-              className: "api-method put",
-            },
-            {
-              type: "doc",
-              id: "apis/rest/5.0/get-requestable-users",
-              label: "Get Requestable Users",
-              className: "api-method get",
             },
           ],
         },
@@ -11124,11 +11047,11 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "category",
-          label: "Users Request",
+          label: "User Request",
           link: {
             type: "generated-index",
-            title: "Users Request",
-            slug: "/category/apis/rest/5.0/5-0/users-request",
+            title: "User Request",
+            slug: "/category/apis/rest/5.0/5-0/user-request",
           },
           items: [
             {
@@ -11136,6 +11059,24 @@ const sidebar: SidebarsConfig = {
               id: "apis/rest/5.0/bulk-upload-users",
               label: "Bulk Upload Users",
               className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "apis/rest/5.0/create-user-request",
+              label: "Create User Request",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "apis/rest/5.0/update-user-request",
+              label: "Update User Request",
+              className: "api-method put",
+            },
+            {
+              type: "doc",
+              id: "apis/rest/5.0/get-requestable-users",
+              label: "Get Requestable Users",
+              className: "api-method get",
             },
           ],
         },
@@ -11655,35 +11596,6 @@ const sidebar: SidebarsConfig = {
               id: "apis/rest/5.0/fetch-control-details-es",
               label: "Fetch Control Details ES",
               className: "api-method post",
-            },
-          ],
-        },
-        {
-          type: "category",
-          label: "User Request",
-          link: {
-            type: "generated-index",
-            title: "User Request",
-            slug: "/category/apis/rest/5.0/5-0/user-request",
-          },
-          items: [
-            {
-              type: "doc",
-              id: "apis/rest/5.0/create-user-request",
-              label: "Create User Request",
-              className: "api-method post",
-            },
-            {
-              type: "doc",
-              id: "apis/rest/5.0/update-user-request",
-              label: "Update User Request",
-              className: "api-method put",
-            },
-            {
-              type: "doc",
-              id: "apis/rest/5.0/get-requestable-users",
-              label: "Get Requestable Users",
-              className: "api-method get",
             },
           ],
         },
