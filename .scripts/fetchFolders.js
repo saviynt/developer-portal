@@ -28,7 +28,7 @@ async function fetchFolders() {
 }
 
 function generateJSONFile(folders) {
-  const content = JSON.stringify(folders, null, 2);
+  // const content = JSON.stringify(folders, null, 2);
   const outputPath = path.join(__dirname, 'static', 'folderList.json');
   const outputDir = path.dirname(outputPath);
   
