@@ -222,7 +222,7 @@ const config: Config = {
 
   plugins: [
     [
-      "docusaurus-plugin-openapi-docs",
+      "docusaurus-plugin-openapi-docs", 
       {
         id: "openapi",
         docsPluginId: "classic",
@@ -245,6 +245,7 @@ const config: Config = {
           } satisfies OpenApiPlugin.Options,
         } satisfies Plugin.PluginOptions,
       },
+    ],[
       "posthog-docusaurus",
       {
         apiKey: "phc_hY9SucCm9FBhUQfWiNEQPhW8lQH0tjog12DWUQm3EAu",

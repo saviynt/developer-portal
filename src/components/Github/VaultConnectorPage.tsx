@@ -1,7 +1,7 @@
 // Example usage in a Docusaurus TSX page or document
 
 import React from 'react';
-import GithubContent from '@site/src/components/GithubContent/GithubContent';
+import GithubContent from '@site/src/components/Github/GithubContent';
 
 const VaultConnectorPage: React.FC = () => (
   <div>
