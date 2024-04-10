@@ -160,7 +160,6 @@ div[class^="announcementBar_"] {
   /* Other styles you might want to keep or adjust */
 }
 
-
 /* div[class^="announcementBar_"] {
   --site-announcement-bar-stripe-color1: hsl(
     var(--site-primary-hue-saturation) 85%
@@ -177,3 +176,92 @@ div[class^="announcementBar_"] {
   );
   font-weight: bold;
 } */
+
+
+/* showcase css */
+
+/* src/css/custom.css */
+/* src/css/custom.css */
+
+.demo-showcase-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  background-color: white;
+  margin-bottom: 1.5rem;
+}
+
+.demo-showcase-card__image {
+  width: 100%;
+  display: block; /* Ensure the image container takes the full width */
+}
+
+.demo-showcase-card__image img {
+  width: 100%;
+  height: auto; /* Adjust the image height automatically */
+  object-fit: cover; /* Cover the container with the image */
+}
+
+.demo-showcase-card__content {
+  padding: 1rem; /* Add some padding around the content */
+  background-color: #f9f9f9; /* Light grey background for the content area */
+  flex-grow: 1; /* Ensure the content area takes up all available space */
+}
+
+.demo-showcase-card__title {
+  font-size: 1.25rem; /* Larger font size for the title */
+  font-weight: bold;
+  color: #333; /* Darker color for the title */
+  margin-bottom: 0.5rem; /* Space below the title */
+}
+
+.demo-showcase-card__description {
+  font-size: 1rem; /* Regular font size for the description */
+  margin-bottom: 0.5rem; /* Space below the description */
+}
+
+.demo-showcase-card__link {
+  font-size: 0.875rem; /* Smaller font size for the link */
+  color: #0056d2; /* Blue color for links */
+  margin-bottom: 1rem; /* Space below the link */
+}
+
+.demo-showcase-card__tags {
+  display: flex;
+  flex-wrap: wrap; /* Allow tags to wrap to the next line */
+  gap: 0.5rem; /* Space between tags */
+  padding: 0.5rem; /* Padding inside the tags area */
+  justify-content: center; /* Center tags horizontally */
+  background-color: #f0f0f0; /* Slightly different background for the tags section */
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: white; /* White text color for better contrast */
+  background-color: #625f6d; /* A neutral color for tags */
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* Custom colors for specific tags - these should match the 'tag' classes in your component */
+.tag--favorite {
+  background-color: #ff4081; /* Pink color for 'favorite' tags */
+}
+
+.tag--open-source {
+  background-color: #49afcd; /* Light blue color for 'open-source' tags */
+}
+
+.tag--product {
+  background-color: #f89406; /* Orange color for 'product' tags */
+}
+
