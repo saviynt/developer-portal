@@ -216,6 +216,8 @@ div[class^="announcementBar_"] {
   padding: 1rem; /* Add some padding around the content */
   background-color: #c9d9ec; /* Light grey background for the content area */
   flex-grow: 1; /* Ensure the content area takes up all available space */
+  height: 150px; /* Fixed height for the image */
+  
 }
 
 .demo-showcase-card__title {
