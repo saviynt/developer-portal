@@ -29,5 +29,12 @@ export interface ShowcaseItem {
       link: "https://example.com/project-gamma",
       tags: ['templates'],
     },
+    {
+      title: "Delta Project",
+      description: "A community-driven initiative that fosters collaboration and knowledge sharing, creating a vibrant ecosystem around our platform.",
+      imageUrl: "https://github.com/saviynt/developer-portal/blob/main/static/img/community.png",
+      link: "https://example.com/project-gamma",
+      tags: ['templates'],
+    },
     // Add more items as needed.
   ];

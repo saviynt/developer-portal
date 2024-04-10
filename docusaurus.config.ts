@@ -27,13 +27,15 @@ const config: Config = {
             "https://github.com/saviynt/developer-portal/tree/main",
           docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi
         },
-        blog: false,
+        blog: {
+          showReadingTime: true, // Shows the estimated time to read a blog post.
+          // Please change this to your site's blog directory.
+          blogSidebarTitle: 'All posts',
+          blogSidebarCount: 'ALL',
+          // Other blog configurations...
+        },
         theme: {
           customCss: "./src/css/custom.css",
-        },
-        gtag: {
-          trackingID: "GTM-THVM29S",
-          anonymizeIP: false,
         },
       } satisfies Preset.Options,
     ],
@@ -84,10 +86,9 @@ const config: Config = {
           to: "/community/",
         },
         {
-          href: "https://docs.saviyntcloud.com/",
           position: "right",
-          className: "header-medium-link",
-          "aria-label": "Saviynt Docs",
+          label: "BLOG",
+          to: "/blog/",
         },
         {
           href: "https://github.com/saviynt",
