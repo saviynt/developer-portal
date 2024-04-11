@@ -1,6 +1,5 @@
 # Internal Contributors
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
 
 ## **Collaborating on the Developer Portal**
@@ -26,6 +25,15 @@ This website is built using [Docusaurus](https://docusaurus.io/), a modern stati
    - Click `Commit new file`.
    - The new file or folder will automatically generate pages and menus in the developer portal after the GitHub build completes.
 
+### Editing the Content
+   - If you dont know MD format and looking for confluence type experince to edit from scratch or if you have the content and looking to convert it from text / html format to MarkDown(MD) or MDX format use https://holocron.so/. It also has AI support to reformat with the power of AI
+   - ![image](https://github.com/saviynt/developer-portal/assets/8769736/3c9d34e7-9f6e-43d0-a52b-f1b117d542ba)
+   - ![image](https://github.com/saviynt/developer-portal/assets/8769736/fb63fe08-8e66-47ac-a936-89ec083b30aa)
+
+
+
+##
+
 ### **Updating the Side Navigation**
 
 1. If you add a new file to the `docs/apis` folder, you will need to update the side navigation:
@@ -46,6 +54,8 @@ or it can even be a brand-new folder that doesn’t exist yet! ![image](https://
 - **Preview Changes:** Use the ‘Preview changes’ tab to see how the Markdown will render after the changes.
 - **Committing Changes:** Write a meaningful commit message and description. This helps maintainers understand the purpose of your changes.
 - **Pull Requests:** After committing your changes on a new branch, you can open a pull request for maintainers to review your changes.
+
+
 
 ### **Post-Commit**
 
