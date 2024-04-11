@@ -1,9 +1,7 @@
 ---
 slug: hello-world
 title: Hello, World!
-author: Kundan Kumar
-author_title: Director, Product Management @ Saviynt
-author_url: https://github.com/kkundan
+authors: Kkundan
 tags: [hello, developer-portal, saviynt]
 ---
 

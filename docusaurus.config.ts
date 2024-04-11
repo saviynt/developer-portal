@@ -80,9 +80,8 @@ const config: Config = {
           to: "/community/",
         },
         {
-          position: "right",
+          label: "BLOGS",
           to: "/blog/",
-          className: "header-blog-link",
         },
         {
           href: "https://github.com/saviynt",

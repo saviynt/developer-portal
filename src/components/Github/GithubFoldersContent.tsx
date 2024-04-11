@@ -9,6 +9,7 @@ const FolderList = () => {
       .then(response => {
         // Check if the response is ok (status in the range 200-299)
         if (!response.ok) {
+          console.log(response);
           throw new Error('Network response was not ok'); // Throw an error if not ok
         }
         return response.json();
