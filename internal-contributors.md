@@ -1,13 +1,11 @@
-# Internal Contributors
-
-
-
-## **Collaborating on the Developer Portal**
+# Collaborating on the Developer Portal
 
 ### **Prerequisites**
 
 - Ensure you have a GitHub account.
 - You should have the necessary permissions to contribute to the repository.
+
+## **Collaborating though GitHub UI**
 
 ### **Accessing the Repository**
 
@@ -32,7 +30,7 @@
 
 
 
-##
+## 
 
 ### **Updating the Side Navigation**
 
@@ -70,6 +68,7 @@ or it can even be a brand-new folder that doesn’t exist yet! ![image](https://
 - Use clear and descriptive commit messages.
 - Review your changes before committing.
 
+## **Contributing from your local setup **
 
 ```
 git clone https://github.com/saviynt/developer-portal.git
