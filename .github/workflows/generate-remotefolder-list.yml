@@ -2,7 +2,7 @@ name: Generate Folder List
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # Runs at every 5th minute
+    - cron: '*/55 * * * *'  # Runs at every 5th minute
   workflow_dispatch:  # Allows manual triggering
 
 permissions:
