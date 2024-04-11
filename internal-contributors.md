@@ -37,6 +37,12 @@ This website is built using [Docusaurus](https://docusaurus.io/), a modern stati
 ### **Using GitHub Editor Features**
 
 - **Editing Files:** You can edit files directly by navigating to them, clicking the pencil icon to open the editor.
+- **Renaming Files:**  Editing a file also lets you enter a new name for your file ![image](https://github.com/saviynt/developer-portal/assets/8769736/e59703ee-bdd3-4bb2-a46b-dbec562220db)
+- **Moving Files/Creating Folders:** You can also move files to entirely new locations using just the filename field.
+To navigate down into a folder, just type the name of the folder you want to move the
+file into followed by /. The folder can be one that’s already part of your repository,
+or it can even be a brand-new folder that doesn’t exist yet! ![image](https://github.com/saviynt/developer-portal/assets/8769736/cdef2f77-817d-4d89-8a8a-3ba127eef6df)
+
 - **Preview Changes:** Use the ‘Preview changes’ tab to see how the Markdown will render after the changes.
 - **Committing Changes:** Write a meaningful commit message and description. This helps maintainers understand the purpose of your changes.
 - **Pull Requests:** After committing your changes on a new branch, you can open a pull request for maintainers to review your changes.
