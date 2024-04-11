@@ -13,7 +13,7 @@ const BRANCH = 'main';
 
 async function fetchFolders() {
   const url = `${GITHUB_API_URL}/${REPO_OWNER}/${REPO_NAME}/contents?ref=${BRANCH}`;
-  const response = await fetch(url, { headers });
+  const response = await fetch(url);
   const data = await response.json();
 
   const directories = data.filter(item => item.type === 'dir').map(dir => ({
