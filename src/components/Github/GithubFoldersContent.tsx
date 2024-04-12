@@ -30,9 +30,15 @@ const FolderList = () => {
       });
   }, []);
 
-  const handleReadmeClick = (readmeLink) => {
+  const handleCardClick = (folder) => {
     // Navigate and pass the URL to be fetched in the new component
-    history.push('/developer-portal/community/connectors/readmepage', { readmeUrl: readmeLink });
+    history.push('/developer-portal/community/connectors/readmepage', 
+    { 
+      readmeUrl: folder.readmeLink, 
+      githubUrl: folder.githubLink, 
+      distLink: folder.distLink, 
+      name: folder.name 
+    });
   };
 
   if (error) {
@@ -40,23 +46,15 @@ const FolderList = () => {
   }
 
   return (
-    <div>
-      {folders.length > 0 ? (
-        folders.map(folder => (
-          <div key={folder.name}>
-            <h3>{folder.name}</h3>
-            <button onClick={(e) => {
-              e.preventDefault();
-              handleReadmeClick(folder.readmeLink);
-            }}>README</button>
+    <div className="card-list">
+      {folders.map(folder => (
+        <div key={folder.name} className="card" onClick={() => handleCardClick(folder)}>
+          <div className="card-body">
+            <h5 className="card-title">{folder.name}</h5>
+            <p className="card-text">{folder.description}</p>
           </div>
-        ))
-      ) : (
-        <div>Loading folders...</div>
-      )}
-      {/* {activeReadmeContent && (
-        <div className="readme-content" dangerouslySetInnerHTML={{ __html: activeReadmeContent }} />
-      )} */}
+        </div>
+      ))}
     </div>
   );
 };

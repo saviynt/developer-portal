@@ -6,6 +6,7 @@
 
 /* You can override the default Infima variables here. */
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,600&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 
 :root {
@@ -277,5 +278,45 @@ div[class^="announcementBar_"] {
 
 .tag--product {
   background-color: #f89406; /* Orange color for 'product' tags */
+}
+
+/* src/css/cardList.css */
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 -10px; /* Adjust spacing for visual consistency */
+}
+
+.card-list .card {
+  width: calc(25% - 20px); /* Subtract margin from the width */
+  margin: 10px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.card-list .card:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.material-icons {
+  font-size: 24px; /* Adjust icon size as necessary */
+  padding: 10px; /* Provide enough area for easy clicking */
+  display: inline-flex; /* Aligns the icon properly */
+  align-items: center; /* Centers icon vertically */
+  justify-content: center; /* Centers icon horizontally */
+  user-select: none; /* Prevents the icon text from being selectable */
+}
+
+.button-group .material-icons {
+  margin-right: 20px;
+}
+
+.button-group .material-icons:last-child {
+  margin-right: 0;
 }
 
