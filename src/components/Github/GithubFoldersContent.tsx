@@ -5,7 +5,7 @@ const FolderList = () => {
   const [error, setError] = useState(null); // Added state for error handling
 
   useEffect(() => {
-    fetch('/folderList.json')
+    fetch('developer-portal/folderList.json')
       .then(response => {
         // Check if the response is ok (status in the range 200-299)
         if (!response.ok) {
