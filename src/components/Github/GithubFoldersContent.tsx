@@ -5,19 +5,24 @@ const FolderList = () => {
   const [error, setError] = useState(null); // Added state for error handling
 
   useEffect(() => {
-    fetch('developer-portal/folderList.json')
+    fetch('/folderList.json', { cache: "no-cache" })
       .then(response => {
-        // Check if the response is ok (status in the range 200-299)
         if (!response.ok) {
-          console.log(response);
-          throw new Error('Network response was not ok'); // Throw an error if not ok
+          throw new Error('Network response was not ok');
         }
-        return response.json();
+        return response.text(); // First read text instead of JSON
+      })
+      .then(text => {
+        try {
+          return JSON.parse(text); // Try parsing text as JSON
+        } catch (e) {
+          throw new Error('Failed to parse JSON, possibly received HTML: ' + text.slice(0, 100)); // Provide part of the text to aid debugging
+        }
       })
       .then(data => setFolders(data))
       .catch(error => {
         console.error("Error fetching folder list:", error);
-        setError(error.toString()); // Update error state with error message
+        setError(error.toString());
       });
   }, []);
 
