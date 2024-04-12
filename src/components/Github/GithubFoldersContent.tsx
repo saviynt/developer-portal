@@ -5,7 +5,7 @@ const FolderList = () => {
   const [error, setError] = useState(null); // Added state for error handling
 
   useEffect(() => {
-    fetch('/folderList.json', { cache: "no-cache" })
+    fetch('https://github.com/saviynt/developer-portal/blob/main/static/community/connector/folderList.json', { cache: "no-cache" })
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
