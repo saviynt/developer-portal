@@ -32,6 +32,8 @@ const config: Config = {
           // Please change this to your site's blog directory.
           blogSidebarTitle: 'All posts',
           blogSidebarCount: 'ALL',
+          blogTagsListComponent: '@theme/BlogTagsListPage',
+          
           // Other blog configurations...
         },
         theme: {
