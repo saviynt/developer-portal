@@ -1,30 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import marked from 'marked'; // Import the marked library to parse Markdown
-import DOMPurify from 'dompurify'; // Import DOMPurify to sanitize HTML
+import { useHistory } from 'react-router-dom';
+import { marked } from 'marked';
+import DOMPurify from 'dompurify';
 
 const FolderList = () => {
   const [folders, setFolders] = useState([]);
   const [error, setError] = useState(null);
-  const [activeReadmeContent, setActiveReadmeContent] = useState(null); // Moved inside the component
-
-  const fetchReadmeContent = (url) => {
-    fetch(url, { cache: "no-cache" })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Failed to fetch README');
-        }
-        return response.text();
-      })
-      .then(markdown => {
-        const html = marked(markdown); // Convert markdown to HTML
-        const sanitizedHtml = DOMPurify.sanitize(html); // Sanitize the HTML content
-        setActiveReadmeContent(sanitizedHtml);
-      })
-      .catch(error => {
-        console.error("Error fetching README:", error);
-        setError(error.toString());
-      });
-  };
+  const history = useHistory();
 
   useEffect(() => {
     fetch('https://raw.githubusercontent.com/saviynt/developer-portal/main/static/community/connector/folderList.json', { cache: "no-cache" })
@@ -32,13 +14,13 @@ const FolderList = () => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
-        return response.text(); // First read text instead of JSON
+        return response.text();
       })
       .then(text => {
         try {
-          return JSON.parse(text); // Try parsing text as JSON
+          return JSON.parse(text);
         } catch (e) {
-          throw new Error('Failed to parse JSON, possibly received HTML: ' + text.slice(0, 100)); // Provide part of the text to aid debugging
+          throw new Error('Failed to parse JSON, possibly received HTML: ' + text.slice(0, 100));
         }
       })
       .then(data => setFolders(data))
@@ -48,9 +30,13 @@ const FolderList = () => {
       });
   }, []);
 
-  // Conditional rendering based on the existence of an error
+  const handleReadmeClick = (readmeLink) => {
+    // Navigate and pass the URL to be fetched in the new component
+    history.push('/developer-portal/community/connectors/readmepage', { readmeUrl: readmeLink });
+  };
+
   if (error) {
-    return <div>Error loading folder list: {error}</div>; // Display error message
+    return <div>Error loading folder list: {error}</div>;
   }
 
   return (
@@ -59,18 +45,18 @@ const FolderList = () => {
         folders.map(folder => (
           <div key={folder.name}>
             <h3>{folder.name}</h3>
-            <p><a href="#" onClick={(e) => {
+            <button onClick={(e) => {
               e.preventDefault();
-              fetchReadmeContent(folder.readmeLink);
-            }}>README</a></p>
+              handleReadmeClick(folder.readmeLink);
+            }}>README</button>
           </div>
         ))
       ) : (
-        <div>Loading folders...</div> // Display a loading message if folders array is empty
+        <div>Loading folders...</div>
       )}
-      {activeReadmeContent && (
+      {/* {activeReadmeContent && (
         <div className="readme-content" dangerouslySetInnerHTML={{ __html: activeReadmeContent }} />
-      )}
+      )} */}
     </div>
   );
 };
