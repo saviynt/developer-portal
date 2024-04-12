@@ -52,7 +52,7 @@ const GithubContent: React.FC<GithubContentProps> = ({ repoPath }) => {
       {/* Displaying raw README content */}
       {/* <h2>Repository README</h2>
       <pre>{content}</pre>  */}
-      {/* Safely set the inner HTML to the sanitized, converted content */}
+      {/* Safely set the inner HTML to the sanitized, converted  content */}
       <div dangerouslySetInnerHTML={{ __html: content }} />
     </div>
   );
