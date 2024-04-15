@@ -1,0 +1,44 @@
+---
+sidebar_position: 1
+hide_title: false
+sidebar_label: API Best Practices
+title: API Best Practices
+tags:
+  - rest api
+  - best practices
+---
+
+# API Best Practices
+
+1. Saviynt utilized JWT token for authentication, which is based on RFC6750. This token must be present as Bearer token to call any Saviynt API. This access_token is generated based on service account and access to token is granted based on SAV role linked to the service account.
+2. Follow a standard naming convention across all Saviynt API user identities. This will help in maintaining consistency and clarity throughout the system.
+    - As an example, adherence to a standardized naming convention such as– \[Prefix\]\_\[Unique Identifier\]\_\[Module Component\]
+3. Avoid assigning the "ROLE_ADMIN" SAV role to every API user identity by default. Instead, implement a least privilege approach by creating a custom SAV role that has no features accesses and only includes the necessary web service permissions.
+    - For instance, if the requirement involves managing Access Requests via Saviynt APIs, limit the webservice access permissions to specific APIs such as "/getToken", "/validatetoken", "/getUser", "/getAccount", "/getEndpoint", "/getEntitlement", and "/createRequest". On the other hand, if the goal is to manage user lifecycle through Saviynt APIs, restrict access to relevant user APIs like "/getToken", "/validatetoken", "/getUser", "/createUser", and "/updateUser".
+4. If the password expiration flag is set to true on the API user identity, it is not possible to generate a bearer token for authentication. Since API users do not have access to log into the Saviynt UI, the following steps should be followed.
+    - Maintain an ADMIN API user to manage the passwords of API users
+    - Set the password of the API user using the changePassword API \[{url}}/ECM/{{path}}/changePassword\].
+    - Update the passwordExpired flag to '0' through the updateUser API \[{{url}}/ECM/{{path}}/updateUser\].
+5. Assigning owners to take ownership of API user identities facilitates the process of conducting regular access reviews on API user identities along with regular reporting to meet an organization's compliance and audit requirements.
+6. If an API User identity is no longer being used, it is advisable to inactivate the identity and remove the SAV Role for security purposes.
+7. The password used API service account, should have complex password. Moreover, the password should be rotated periodically for security reasons.
+8. The Access token by default gets expired after 1 hours and a new access token needs to be generated to authenticate API calls. This expiration duration can be changed however it should be kept small for security reasons.
+9. Do not generate a new access token before every API calls, this can impact performance. Generate the access token only when existing access token is expired.
+10. The access security with API can be further enhanced by adding the endpoints to which APIs can be invoked. This configuration can be enabled by:
+    1.  Adding endpoint in linked Sav role field "Access to Endpoints"
+    2. Setting "Restrict API access based on SAV Role" to TRUE in Setting &gt; API
+11. Following could be a good practice while designing API security :
+    1. Create an API service account:
+       1. Which has complex password
+       2. Is linked to SAV role which has only access to required webservices
+       3. Do not have access to interactively login to Saviynt 
+       4. Has a owner defined
+       5. Follows naming convention based on organization standard
+    2. Set a small expiration duration to both access token and refresh token. As best practice access token expiration should be kept small like 1 hour
+    3. Design a process to periodically update the service account password
+    4. The custom application invoking Saviynt API should follow:
+       1. If the application is using service account to generate the access token, then keep the userid/password securely in the application
+       2. Once access token is generated, it should be reused instead of generating token every time
+       3.   If application is storing access token then it should be stored securely
+       4. If the access token call return access denied error then that means the access token is expired so need to generate a new access token
+       5. Use the new access token to call Saviynt APIs until it expires and then follow the same steps.
