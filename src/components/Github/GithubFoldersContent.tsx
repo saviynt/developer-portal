@@ -9,7 +9,7 @@ const FolderList = () => {
   const history = useHistory();
 
   useEffect(() => {
-    fetch('https://raw.githubusercontent.com/saviynt/developer-portal/main/static/community/connector/folderList.json', { cache: "no-cache" })
+    fetch('https://raw.githubusercontent.com/saviynt/developer-portal/main/static/community/connector/connectorList.json', { cache: "no-cache" })
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
