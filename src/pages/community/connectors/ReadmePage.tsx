@@ -48,13 +48,10 @@ const ReadmePage = () => {
                 </div>
               ) : (
                 <div>
-                <div className="button-row" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-                  <i className="material-icons" style={{ cursor: 'pointer' }} onClick={() => history.goBack()} aria-label="Go back">
-                    arrow_back
-                  </i>
-                </div>
-                <h1>{name} Community Connector</h1>
                   <div className="button-group">
+                    <i className="material-icons" style={{ cursor: 'pointer' }} onClick={() => history.goBack()} aria-label="Go back">
+                      arrow_back
+                    </i>
                     <a href={githubUrl} className="material-icons" aria-label="View source on GitHub" style={{ marginRight: '10px', cursor: 'pointer' }}>
                       code
                     </a>
@@ -65,7 +62,8 @@ const ReadmePage = () => {
                       bug_report
                     </a>
                   </div>
-                <div className="markdown" dangerouslySetInnerHTML={{ __html: readmeContent }} />
+                <h1>{name} Community Connector</h1>
+              <div className="markdown" dangerouslySetInnerHTML={{ __html: readmeContent }} />
               </div>
               )}
             </div>
