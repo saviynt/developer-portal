@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { marked } from 'marked';
-import DOMPurify from 'dompurify';
 
-const FolderList = () => {
-  const [folders, setFolders] = useState([]);
+const ConnectorList = () => {
+  const [connector, setconnector] = useState([]);
   const [error, setError] = useState(null);
   const history = useHistory();
 
@@ -23,21 +21,21 @@ const FolderList = () => {
           throw new Error('Failed to parse JSON, possibly received HTML: ' + text.slice(0, 100));
         }
       })
-      .then(data => setFolders(data))
+      .then(data => setconnector(data))
       .catch(error => {
         console.error("Error fetching folder list:", error);
         setError(error.toString());
       });
   }, []);
 
-  const handleCardClick = (folder) => {
+  const handleCardClick = (connector) => {
     // Navigate and pass the URL to be fetched in the new component
     history.push('/developer-portal/community/connectors/readmepage', 
     { 
-      readmeUrl: folder.readmeLink, 
-      githubUrl: folder.githubLink, 
-      distLink: folder.distLink, 
-      name: folder.name 
+      readmeUrl: connector.readmeLink, 
+      githubUrl: connector.githubLink, 
+      distLink: connector.distLink, 
+      name: connector.name 
     });
   };
 
@@ -47,11 +45,11 @@ const FolderList = () => {
 
   return (
     <div className="card-list">
-      {folders.map(folder => (
-        <div key={folder.name} className="card" onClick={() => handleCardClick(folder)}>
+      {connector.map(connector => (
+        <div key={connector.name} className="card" onClick={() => handleCardClick(connector)}>
           <div className="card-body">
-            <h5 className="card-title">{folder.name}</h5>
-            <p className="card-text">{folder.description}</p>
+            <h5 className="card-title">{connector.name}</h5>
+            <p className="card-text">{connector.description}</p>
           </div>
         </div>
       ))}
@@ -59,4 +57,4 @@ const FolderList = () => {
   );
 };
 
-export default FolderList;
+export default ConnectorList;
