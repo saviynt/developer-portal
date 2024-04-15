@@ -12,6 +12,8 @@ const ReadmePage = () => {
   const [readmeContent, setReadmeContent] = useState('');
   const [error, setError] = useState(null);
   const { readmeUrl, githubUrl, distLink, name } = location.state || {};
+  const issuesUrl = githubUrl ? `https://github.com/saviynt/community-connectors/issues/new?labels=${name}` : null;  // Ensuring no trailing slash
+
 
   useEffect(() => {
 
@@ -59,11 +61,12 @@ const ReadmePage = () => {
                     <a href={distLink} download={`${name}.zip`} className="material-icons" aria-label="Download" style={{ cursor: 'pointer' }}>
                       file_download
                     </a>
+                    <a href={issuesUrl} className="material-icons" target="_blank" rel="noopener noreferrer" aria-label="Issue" style={{ cursor: 'pointer' }}>
+                      bug_report
+                    </a>
                   </div>
                 <div className="markdown" dangerouslySetInnerHTML={{ __html: readmeContent }} />
               </div>
-              
-
               )}
             </div>
           </div>
