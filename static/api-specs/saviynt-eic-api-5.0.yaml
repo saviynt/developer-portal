@@ -129,8 +129,6 @@ paths:
                       - ROLE_ADMIN
                     token_type: Bearer
                     username: admin
-      security:
-        - bearerAuth: []
   /oauth/access_token:
     post:
       tags:
