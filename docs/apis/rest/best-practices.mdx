@@ -1,14 +1,6 @@
----
-sidebar_position: 1
-hide_title: false
-sidebar_label: API Best Practices
-title: API Best Practices
-tags:
-  - rest api
-  - best practices
----
+# Best Practices
 
-# API Best Practices
+The following are recommended best practices for using the Saviynt REST API.
 
 1. Saviynt utilized JWT token for authentication, which is based on RFC6750. This token must be present as Bearer token to call any Saviynt API. This access_token is generated based on service account and access to token is granted based on SAV role linked to the service account.
 2. Follow a standard naming convention across all Saviynt API user identities. This will help in maintaining consistency and clarity throughout the system.
@@ -17,8 +9,8 @@ tags:
     - For instance, if the requirement involves managing Access Requests via Saviynt APIs, limit the webservice access permissions to specific APIs such as "/getToken", "/validatetoken", "/getUser", "/getAccount", "/getEndpoint", "/getEntitlement", and "/createRequest". On the other hand, if the goal is to manage user lifecycle through Saviynt APIs, restrict access to relevant user APIs like "/getToken", "/validatetoken", "/getUser", "/createUser", and "/updateUser".
 4. If the password expiration flag is set to true on the API user identity, it is not possible to generate a bearer token for authentication. Since API users do not have access to log into the Saviynt UI, the following steps should be followed.
     - Maintain an ADMIN API user to manage the passwords of API users
-    - Set the password of the API user using the changePassword API \[{url}}/ECM/{{path}}/changePassword\].
-    - Update the passwordExpired flag to '0' through the updateUser API \[{{url}}/ECM/{{path}}/updateUser\].
+    - Set the password of the API user using the changePassword API `{url}/ECM/{path}/changePassword`.
+    - Update the passwordExpired flag to '0' through the updateUser API `{url}/ECM/{path}/updateUser`.
 5. Assigning owners to take ownership of API user identities facilitates the process of conducting regular access reviews on API user identities along with regular reporting to meet an organization's compliance and audit requirements.
 6. If an API User identity is no longer being used, it is advisable to inactivate the identity and remove the SAV Role for security purposes.
 7. The password used API service account, should have complex password. Moreover, the password should be rotated periodically for security reasons.
