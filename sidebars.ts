@@ -33,6 +33,10 @@ import {
         },
         {
           type: 'doc',
+          id: 'apis/rest/best-practices',
+        },
+        {
+          type: 'doc',
           id: 'apis/rest/authentication',
         },
         {
