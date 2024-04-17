@@ -1,0 +1,338 @@
+---
+id: fetch-user-security-questions
+title: "Fetch User Security Questions"
+description: "This API can be used to fetch the security questions selected by user during registration"
+sidebar_label: "Fetch User Security Questions"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV21v2zYQ/isEv3QDJMv2+pJoKLrUcwp3y8tiFx2QGPVFOllsJFIhKbua4f8+HCU7SuJ56Trs0/zFAnm8e+6Fzx1X3MLc8PCSn4MxS6VjdgIS5pijtHzq8RhNpEVhhZI85JNUGHZ0PmIRSHaNrDQYM6tYgjZKmU2RGYxKLWzFbks0dMowgxlGFmN2XdEBzeJSCzlnGufCWA0kdSWv5AnIGKzSFStAQ25CRqszOiIhx9mVPLu4krNCqwK1rawyCDpKZz47ko3mzR7LxA0yzEFkHsudQ9pjG00eS4Q2tv7MYPNVaExQY3xMm6duKSqNVflGK8GZpMhmR6VNlRZ/OOgzlpfGshQWyGZvETTqGUtUlqll7fNsom5Qzjrc46THHRrFPOQuah8M6nETtN82MeMe1+gi+FbFFQ9XPFLSUkrCFYeiyETk1ASfDeVlxU2UYg70ZasCecjV9WeMLPd4A16goV0XkpaYsZQK7nH8AnmR0dJnlcpOrPAnAwtRSduJVM7XW0XbuO/XUhtar9fbRWf/2BUK+cw2TrM7r8MVX0BWYgvpbji70NyZdFY1mkJJU5vtd7v0d7+Y92Jhwxp1nwXsSYI97vEUIUbtLP4MFncmZkesjrXwWO85G2PB+t3eAesdhN1e+EOPvTuZcHJmjHqB+qn6jgqIUvQHqlIWg16n1+iw/kCpG/FkXIPB+OLYn5z9Mjx9DREcvDzoH/hx0n/lP3/ZfeXDKzj0D3r9CJK4e3h42P+RnYNNXwfO3ESDNAlqfygjFZPqJ1qN0lLeYOyU/O4P6rr3J1WB/lmxrZOnaJLKSJEkjaZjDflXqxgfnQzPLkbvRqd1Lf9b11BrpQcqxv3Wu3TvbtvXo5EFraHiHhcWc7Nfx8cULBOGVarULIGF0sIiS5SK3/B1S/Byr6R3f7dA+8wwos1HW7myKepnhuUgYpS7hbbaI5Up/YZPv44o7u7cPca4Cyrv8nuBe+gcMTw7/2snHng/JXRPo4t/iug/D3fNkjnaVFEvKpRxZQqWqDRwrWkMC3K33ZWMIyLCv+KlJn5OrS1MGAQrixKkXXcano4yVcZE1sFwcBJAIYLFC+7xBWgB102S6yOPmblZp+kjgTKzRO5Nna7X6ynBqBPgcFy7nks9mYeX0/b2mK5jbaottL0uhJ2ccmI8bIS413wcK50DGX//saZhuuYXd315uLk739CtPC5kohwmYWvKqU+yobSoCy0MslGM0lK9DSiobgC7cLOKjJDvnNEGKqOhSyhJM9FCxGjceBajBZEZppJ6WiuLQmmazepCMCxR2u38PYrvhqPB95RR1Ka2/KLT7VCZW9S5OUuoaYkIWzXSCkrghAJeUypErgqoeKl/nY/YuEbGvQdltlwuO201Ziu3SUGz8nB8yUSE0mDbjGuTrO8wP7YCbruj9Dxozprg19FgeDoe+v1Ot5Pa3OXvi5+pucvgfR1tlMvCbzpHUBaZgtgE/W7vMOg+D5pAfyIln05hUXXMYu6qja5kDrKFeP/09KAQWjPj/3P7N87tDV9Y/GKDIgMhKfEu3auGMi/5bsqcejwlag0v+Wp1DQY/6Gy9puXbEjUR2PSOFB1/bcZIx203WNEg1hqCHIe6/vJ4All7mxNHUYSF3Ss7bbH/+dl4QrTXPDbyumVpWNJDBJY85Ff8irsHzHYUcesrnoGclzB3Lwenl35/Aj0kBkU=
+sidebar_class_name: "post api-method"
+info_path: apis/rest/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Fetch User Security Questions"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/fetchSavUserQuestions"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API can be used to fetch the security questions selected by user during registration
+
+Mandatory params: 
+
+`username`
+OR
+`propertytosearch`- Any user property like email, manager, username, firstname, lastname, preferedFirstName, customproperty
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"email"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"john.doe@saviynt.com"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"propertytosearch"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"email"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Fetch User Security Questions Example2 / Fetch User Security Questions Example1
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"questions"}
+                        required={false}
+                        schemaName={"string[]"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"array","items":{"type":"string","example":"What is your favorite food?"},"example":["What is your favorite food?","What is your pet's name?","What is your mother's maiden name?","What is your favorite color?"]}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"questions\": [\n    \"What is your favorite food?\",\n    \"What is your pet's name?\",\n    \"What is your mother's maiden name?\",\n    \"What is your favorite color?\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Fetch User Security Questions Example1"}
+                  value={"Fetch User Security Questions Example1"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"questions\": [\n    \"What is your first Pet's name?\",\n    \"What is your favorite food?\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Fetch User Security Questions Example2"}
+                  value={"Fetch User Security Questions Example2"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"questions\": [\n    \"What is your favorite food?\",\n    \"What is your pet's name?\",\n    \"What is your mother's maiden name?\",\n    \"What is your favorite color?\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

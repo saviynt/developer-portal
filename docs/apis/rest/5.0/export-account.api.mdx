@@ -1,0 +1,445 @@
+---
+id: export-account
+title: "Export Account"
+description: "This API call can be used to fetch all the existing accounts in a particular endpoint and security system along with the account attributes."
+sidebar_label: "Export Account"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWG1v2zYQ/isEP22AZDlOkzUaCsx13cHb8oLaRQckQX2WzhYbilRJyo5r+L8PR8mx8jLHxVD0w+pPMnm8e+6O9+hOK+5gZnl8ybtJokvlLL8OeIo2MaJwQise81EmLOteDFgCUrIEFJsgKy2mzGk2RZdkjDZchgxvhXVCzRjU2phQDFgBxomklGAYqrTQQjkGKmUWk9IIt2R2aR3mDKRWM7YQLvPaaiUMnDNiUjq0rSt1pUYZsnG3dJk24gsQyDHLS+tYBnNk49cIBs2YTbWUeoEpmyzZeKRvUI1bjM6fgkrBabMkXJDb+EqNN7DGLGRKO28+FbaQsGQKcgyu1HiDtgL7b5I84LpA43ENUh5zvC20cXV4ecANfi7Rutc6XfJ4xROtHCpHj3kpnaBYRVNt8jAFB7Rskwxz/+SWBfKY68knTEhVYciUE2hpd+MDPd/PYL7xmAcbHdYZoWY84HgLeSFpaej9OuDrgN939T8r9D/y3BZa2Qptp91+rLfvY8W2wcoQUjT+wBtw+GQ4nrD8AdOAtV+ybjljnfbBS9Zux4eduHPAfj8dccIyRDNHs6++bgFJhmFPL7XD6KB1UOtwYU/rG7E3rl5v+O5tODr/s3/2Cl4eH3aO02k4mR6l4Yuj9lF4kuAv4YuTk+PJpH2YTuHwV3YBLnsVeXMjA8pO0YR9leiUVO9pNclKdYOpV/J3+NZAjuG5D7ndV8Wwe9o/fzf4fXDGfSobtxaKQorE3/fok6U0fsWVNUabnk5xt/U23ckcrYXZM5LD971efzjk1W0rpXsew4aqGpJgDNDVFg5zu7eGwZvd2FQpJQGrxSvBnbeOpJtVvVftehLaKWxzMJ9L/OIr3YEr7W75ihK8heeVN4q+sXx5L0pVKB5Egnd509s7RRuPtrC3qDltN5E1ArGHxXpxl1E30QsioIbNU1AlSLlkF0bPhRVaYfqtYaQTEBKX3xtGnmRQ5KC+N46Z1LP7KL75RZA3BkqL+9m8XgfcaQdyd60c8/rNWC/5OnzwDoxXfA6yxAd0ydu8QYl3vNekvS2x/ai+H9X3f6q+u+LbVJgvshxdpqkjL7T1L3FwGY959LBBt741rMqmNKQlc66wcRStHCpQbt2yMBdL5RKpy7SV6Dzq904jKEQ0P+IBn4MRMKnLuTryuNWt12nYmoKv2DtiWK/JhU0P7nFM/FBDQw+PL6+b20NqtSpTTaE72iHs5JQX43EtxIP64a02OZDxPz5UjbFQU+2PC1e9zytXWV85NIURFtkgReVobOuR/340fIdTNKgS5E9Ojz0tJSa0wgq6pynaanBCB0Japqf+ry0LSgWmrMqVZVNt/M7zKH7qD3o/U/DR2MryUavdIpZ0aHJ7PqWOXyTYSGedRZ9ALxTxqrOFxCesvlfk37BCxoMHN2KxWLSaauydHOYgSLJe+a0hRe2UFAkqi00zfsZgHY/5sRXw2y1tZlF91kZ/DXr9s2E/7LTarczlvru8DaWe+Qze19FEuSjCuoGPykJqSG3UaR+cRO0XUR3oj6Tk4xnMly07n/mLQVVD5LNF/Ghau5f5xmj74xPC135CqIvX4a2LCglCUWp9Qlc1b10++LBwHfCMeC2+5KvVBCy+N3K9puXPJRpikestM3kS2UzXnmBucEnzaZWxcETmg03j8eSHCWL26lA3SbBwDfFHEyHx1R37XpwPR0Q/9fePvGpnSLHXG2wfCeR6/Q9qdGix
+sidebar_class_name: "post api-method"
+info_path: apis/rest/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Export Account"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/exportAccount"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API call can be used to fetch all the existing accounts in a particular endpoint and security system along with the account attributes.
+
+The `Authorization` must have `Bearer` followed by `Token`. 
+
+Mandatory params:
+`endpoint` - not the display name,
+`securitysystem` - not the display name
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"multipart/form-data"}
+    value={"multipart/form-data-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"endpoint"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"description":"mandatory","type":"string","example":"System1"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"securitysystem"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"description":"mandatory","type":"string","example":"System1"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Export Account
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"SUCCESS"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                result
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <SchemaItem
+                              collapsible={true}
+                              className={"schemaItem"}
+                            >
+                              <details
+                                style={{}}
+                                className={"openapi-markdown__details"}
+                              >
+                                <summary
+                                  style={{}}
+                                >
+                                  <span
+                                    className={"openapi-schema__container"}
+                                  >
+                                    <strong
+                                      className={"openapi-schema__property"}
+                                    >
+                                      accounts
+                                    </strong><span
+                                      className={"openapi-schema__name"}
+                                    >
+                                       object[]
+                                    </span>
+                                  </span>
+                                </summary><div
+                                  style={{"marginLeft":"1rem"}}
+                                >
+                                  <li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                                    >
+                                      Array [
+                                    </div>
+                                  </li><SchemaItem
+                                    collapsible={false}
+                                    name={"accountID"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"null"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"accounttype"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"A"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"endpoint"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"System1"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"name"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"smarquez"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"status"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"1"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"systemname"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"System1"}}
+                                  >
+                                    
+                                  </SchemaItem><li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                                    >
+                                      ]
+                                    </div>
+                                  </li>
+                                </div>
+                              </details>
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"total"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"6"}}
+                            >
+                              
+                            </SchemaItem>
+                          </div>
+                        </details>
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"message\": \"SUCCESS\",\n  \"result\": {\n    \"accounts\": [\n      {\n        \"accountID\": \"null\",\n        \"accounttype\": \"A\",\n        \"endpoint\": \"System1\",\n        \"name\": \"smarquez\",\n        \"status\": \"1\",\n        \"systemname\": \"System1\"\n      },\n      {\n        \"accountID\": \"null\",\n        \"accounttype\": \"null\",\n        \"endpoint\": \"System1\",\n        \"name\": \"tbowers\",\n        \"status\": \"Manually Provisioned\",\n        \"systemname\": \"System1\"\n      },\n      {\n        \"accountID\": \"null\",\n        \"accounttype\": \"null\",\n        \"endpoint\": \"System1\",\n        \"name\": \"dbailey\",\n        \"status\": \"Manually Provisioned\",\n        \"systemname\": \"System1\"\n      },\n      {\n        \"accountID\": \"null\",\n        \"accounttype\": \"null\",\n        \"endpoint\": \"System1\",\n        \"name\": \"mchapman\",\n        \"status\": \"Manually Provisioned\",\n        \"systemname\": \"System1\"\n      },\n      {\n        \"accountID\": \"null\",\n        \"accounttype\": \"null\",\n        \"endpoint\": \"System1\",\n        \"name\": \"glogan\",\n        \"status\": \"1\",\n        \"systemname\": \"System1\"\n      },\n      {\n        \"accountID\": \"null\",\n        \"accounttype\": \"null\",\n        \"endpoint\": \"System1\",\n        \"name\": \"lkrause\",\n        \"status\": \"1\",\n        \"systemname\": \"System1\"\n      }\n    ],\n    \"total\": \"6\"\n  }\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Export Account"}
+                  value={"Export Account"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"message\": \"SUCCESS\",\n  \"result\": {\n    \"accounts\": [\n      {\n        \"accountID\": \"null\",\n        \"accounttype\": \"A\",\n        \"endpoint\": \"System1\",\n        \"name\": \"smarquez\",\n        \"status\": \"1\",\n        \"systemname\": \"System1\"\n      },\n      {\n        \"accountID\": \"null\",\n        \"accounttype\": \"null\",\n        \"endpoint\": \"System1\",\n        \"name\": \"tbowers\",\n        \"status\": \"Manually Provisioned\",\n        \"systemname\": \"System1\"\n      },\n      {\n        \"accountID\": \"null\",\n        \"accounttype\": \"null\",\n        \"endpoint\": \"System1\",\n        \"name\": \"dbailey\",\n        \"status\": \"Manually Provisioned\",\n        \"systemname\": \"System1\"\n      },\n      {\n        \"accountID\": \"null\",\n        \"accounttype\": \"null\",\n        \"endpoint\": \"System1\",\n        \"name\": \"mchapman\",\n        \"status\": \"Manually Provisioned\",\n        \"systemname\": \"System1\"\n      },\n      {\n        \"accountID\": \"null\",\n        \"accounttype\": \"null\",\n        \"endpoint\": \"System1\",\n        \"name\": \"glogan\",\n        \"status\": \"1\",\n        \"systemname\": \"System1\"\n      },\n      {\n        \"accountID\": \"null\",\n        \"accounttype\": \"null\",\n        \"endpoint\": \"System1\",\n        \"name\": \"lkrause\",\n        \"status\": \"1\",\n        \"systemname\": \"System1\"\n      }\n    ],\n    \"total\": \"6\"\n  }\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

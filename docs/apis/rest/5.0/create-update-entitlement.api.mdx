@@ -1,0 +1,654 @@
+---
+id: create-update-entitlement
+title: "Create/Update Entitlement"
+description: "This method creates a new 'entitlementvalue' for an 'endpoint' in SSM. All the input parameters it requires are attributes with which the new account record would get created."
+sidebar_label: "Create/Update Entitlement"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: apis/rest/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create/Update Entitlement"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/createUpdateEntitlement"}
+>
+  
+</MethodEndpoint>
+
+
+
+This method creates a new "entitlementvalue" for an "endpoint" in SSM. All the input parameters it requires are attributes with which the new account record would get created.
+
+Ensure: The `Authorization` header variable must be set to `Bearer` followed by `Token`.
+
+Mandatory params:
+
+`endpoint`,
+`entitlementtype`,
+`entitlement_value`
+
+Optional params:
+
+`attributes` for Entitlement_values,
+
+`entitlementowner<N>` - N is the rank, `entitlementowner` modifies entitlementowner with rank 1, `entitlementowner3` - modifies entitlementowner with rank 3,
+
+`entitlementID`,`newentitlement_value` - used to update the entitlement if multiple entitlements with same entitlement_value are present under the same entitlementtype and endpoint
+
+`entitlementcasecheck`(can be true or false, default : false) - If true, entitlement value search will be case sensitive during create or update.
+
+`entitlement_valuekey`
+
+`updatedentitlement_value` - new value for entitlement_value
+
+`entitlementmap` - 
+1. `entitlementvalue`
+2. `entitlementtype`
+3. `endpoint`
+4. `requestfilter`
+5. `excludeentitlement`
+6. `adddependenttask`
+7. `removedependententtask`
+8. `updateType`(ADD/REMOVE, default : ADD)
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"endpoint"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"Workday"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"entitlement_value"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"Accounts Receivable Specialist (Unconstrained)"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"entitlementtype"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"Security-Groups"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"status"}
+          required={false}
+          schemaName={"number"}
+          qualifierMessage={undefined}
+          schema={{"type":"number","example":1}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"updatedentitlement_value"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"Accounts Receivable Specialist (Unconstrained) Test"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Create/Update Entitlement
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Credentials
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Origin
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Cache-Control
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Expires
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Pragma
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Referrer-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-XSS-Protection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                entitlementObj
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <SchemaItem
+                              collapsible={false}
+                              name={"description"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"displayname"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"endpoint"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Workday"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"entitlementID"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"3f9fc9e54e42458daa84ad725dcae8ff"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"entitlementOwner"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"entitlementType"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Security-Groups"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"entitlement_glossary"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"entitlement_value"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Accounts Receivable Specialist (Unconstrained) Test"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"entitlement_valuekey"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"296"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"requestForm"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Request Form Table"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"soxcritical"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"0"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"status"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"1"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"syscritical"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"0"}}
+                            >
+                              
+                            </SchemaItem>
+                          </div>
+                        </details>
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Successful in saving entitlement"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"entitlementObj\": {\n    \"description\": \"\",\n    \"displayname\": \"\",\n    \"endpoint\": \"Workday\",\n    \"entitlementID\": \"3f9fc9e54e42458daa84ad725dcae8ff\",\n    \"entitlementOwner\": \"\",\n    \"entitlementType\": \"Security-Groups\",\n    \"entitlement_glossary\": \"\",\n    \"entitlement_value\": \"Accounts Receivable Specialist (Unconstrained) Test\",\n    \"entitlement_valuekey\": \"296\",\n    \"requestForm\": \"Request Form Table\",\n    \"soxcritical\": \"0\",\n    \"status\": \"1\",\n    \"syscritical\": \"0\"\n  },\n  \"errorCode\": \"0\",\n  \"msg\": \"Successful in saving entitlement\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Create/Update Entitlement"}
+                  value={"Create/Update Entitlement"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"entitlementObj\": {\n    \"description\": \"\",\n    \"displayname\": \"\",\n    \"endpoint\": \"Workday\",\n    \"entitlementID\": \"3f9fc9e54e42458daa84ad725dcae8ff\",\n    \"entitlementOwner\": \"\",\n    \"entitlementType\": \"Security-Groups\",\n    \"entitlement_glossary\": \"\",\n    \"entitlement_value\": \"Accounts Receivable Specialist (Unconstrained) Test\",\n    \"entitlement_valuekey\": \"296\",\n    \"requestForm\": \"Request Form Table\",\n    \"soxcritical\": \"0\",\n    \"status\": \"1\",\n    \"syscritical\": \"0\"\n  },\n  \"errorCode\": \"0\",\n  \"msg\": \"Successful in saving entitlement\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

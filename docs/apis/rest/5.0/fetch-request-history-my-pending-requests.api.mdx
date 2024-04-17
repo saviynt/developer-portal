@@ -1,0 +1,690 @@
+---
+id: fetch-request-history-my-pending-requests
+title: "Fetch Request History (my pending requests)"
+description: "This API call can be used to fetch the request history of all the requests submitted by an user."
+sidebar_label: "Fetch Request History (my pending requests)"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: apis/rest/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Fetch Request History (my pending requests)"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/fetchRequestHistory"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API call can be used to fetch the request history of all the requests submitted by an user.
+
+The `Authorization` must have `Bearer` followed by `Token`. 
+
+Mandatory params:
+
+`username` - loggedinuser in Saviynt
+
+Optional params: 
+
+`status` - OPEN/DRAFT/INPROCESS/COMPLETED/EXPIRED/DISCONTINUED. For example: as a list ["open","expired"] or a single status like "open",
+
+`requestkey`,
+`requestedfor`,
+`requestedby`,
+
+`sort` - requestsubmittedon/duedate/requestid,
+
+`order` - asc or desc,
+
+`requestid`,
+`duedatestart`(MM/dd/yyyy),
+`duedateend`(MM/dd/yyyy),
+`submitdatestart`(MM/dd/yyyy),
+`submitdateend`(MM/dd/yyyy),
+`endpoint`,
+`securitysystem`,
+
+`firstname` (requestedfor user),
+
+`lastname` (requestedfor user),
+
+`assignee` - list of usernames,
+
+`requesttype` - list of requesttypes, (ADD,UPDATEACCOUNT,NEWACCOUNT,DEL,NEWROLEREQUEST,CREATEROLE,MODIFYROLE,CREATEUSER,UPDATEUSER,EXTENDACCESS etc),
+
+`approvedby` - list of usernames,
+
+`rejectedby` - list of usernames,
+
+`max`, `offset`,
+
+`showentitlementdetails` - true/false,
+
+`entresponsefields` - if `showentitlementdetails` is true, sample - "entresponsefields":["description","soxcritical","customproperty1","syscritical","risk","privileged","status","confidentiality"]
+
+`exactmatch`(true/false) -  If true, returns records for which value of requestedfor, firstname, lastname fields matches exactly.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"exactmatch"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"true"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"firstname"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"Mary"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"max"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"1"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"username"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"admin"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Fetch Request History (my pending requests) / Fetch Request History (my pending requests) - exactmatch param
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Credentials
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Origin
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Cache-Control
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Expires
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Pragma
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Referrer-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-XSS-Protection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"count"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":1}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Successful"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                requests
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object[]
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                              >
+                                Array [
+                              </div>
+                            </li><SchemaItem
+                              collapsible={false}
+                              name={"assignee"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"duedate"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"2017-07-31 06:22:50"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"endpointname"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Okta"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"endpoints"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Okta"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"reqkey"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"3"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"requestandtaskstatus"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Request completed, Task completed"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"requestedfor"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Abhishek Srinivasan (asrinivasan)"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"requestid"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"290037"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"requestor"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Saviynt AdminUser (admin)"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"requestsubmittedon"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"2017-07-21 06:22:50"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"requesttype"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"New Account"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"status"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Completed  "}}
+                            >
+                              
+                            </SchemaItem><li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                              >
+                                ]
+                              </div>
+                            </li>
+                          </div>
+                        </details>
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"totalcount"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":3693}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"count\": 1,\n  \"errorCode\": \"0\",\n  \"msg\": \"Successful\",\n  \"requests\": [\n    {\n      \"assignee\": \"\",\n      \"duedate\": \"2017-07-31 06:22:50\",\n      \"endpointname\": \"Okta\",\n      \"endpoints\": \"Okta\",\n      \"reqkey\": \"3\",\n      \"requestandtaskstatus\": \"Request completed, Task completed\",\n      \"requestedfor\": \"Abhishek Srinivasan (asrinivasan)\",\n      \"requestid\": \"290037\",\n      \"requestor\": \"Saviynt AdminUser (admin)\",\n      \"requestsubmittedon\": \"2017-07-21 06:22:50\",\n      \"requesttype\": \"New Account\",\n      \"status\": \"Completed  \"\n    }\n  ],\n  \"totalcount\": 3693\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Fetch Request History (my pending requests)"}
+                  value={"Fetch Request History (my pending requests)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"count\": 1,\n  \"errorCode\": \"0\",\n  \"msg\": \"Successful\",\n  \"requests\": [\n    {\n      \"assignee\": \"\",\n      \"duedate\": \"2017-07-31 06:22:50\",\n      \"endpointname\": \"Okta\",\n      \"endpoints\": \"Okta\",\n      \"reqkey\": \"3\",\n      \"requestandtaskstatus\": \"Request completed, Task completed\",\n      \"requestedfor\": \"Abhishek Srinivasan (asrinivasan)\",\n      \"requestid\": \"290037\",\n      \"requestor\": \"Saviynt AdminUser (admin)\",\n      \"requestsubmittedon\": \"2017-07-21 06:22:50\",\n      \"requesttype\": \"New Account\",\n      \"status\": \"Completed  \"\n    }\n  ],\n  \"totalcount\": 3693\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Fetch Request History (my pending requests) - exactmatch param"}
+                  value={"Fetch Request History (my pending requests) - exactmatch param"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"count\": 1,\n  \"errorCode\": \"0\",\n  \"msg\": \"Successful\",\n  \"requests\": [\n    {\n      \"assignee\": \"\",\n      \"duedate\": \"2017-09-03 09:48:06\",\n      \"endpointname\": \"ActiveDirectory, System\",\n      \"endpoints\": \"ActiveDirectory, System\",\n      \"reqkey\": \"84\",\n      \"requestandtaskstatus\": \"\",\n      \"requestedfor\": \"Mary Morse (U025357)\",\n      \"requestid\": \"390110\",\n      \"requestor\": \"Saviynt AdminUser (admin)\",\n      \"requestsubmittedon\": \"2017-08-24 09:48:06\",\n      \"requesttype\": \"Revoke Access\",\n      \"status\": \"Completed \"\n    }\n  ],\n  \"totalcount\": 1\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

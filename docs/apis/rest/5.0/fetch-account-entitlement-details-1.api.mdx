@@ -1,0 +1,1016 @@
+---
+id: fetch-account-entitlement-details-1
+title: "Fetch Account Entitlement Details"
+description: "This API returns user details, account-entitlement details of a particular campaign required for certify/revoke API. If last certified actions and last certified comments are configured during campaign creation, then it is displayed in the API response."
+sidebar_label: "Fetch Account Entitlement Details"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: apis/rest/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Fetch Account Entitlement Details"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/fetchEntOwnerCampaignAccEntDetails"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API returns user details, account-entitlement details of a particular campaign required for certify/revoke API. If last certified actions and last certified comments are configured during campaign creation, then it is displayed in the API response.
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+Mandatory params:
+
+`campaignId`
+
+Optional params:
+
+`certkey`
+
+`max`
+
+`offset`
+
+`entitlementmax`
+
+`entitlementoffset`
+
+`accountmax`
+
+`accountoffset`
+
+`entitlement2max`
+
+`entitlement2offset`
+
+`verifier`
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"accountmax"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"2"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"accountoffset"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"0"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"campaignId"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"178"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"certkey"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"33600"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"entitlement2max"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"2"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"entitlement2offset"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"0"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"entitlementmax"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"3"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"entitlementoffset"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"0"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"max"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"1"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"offset"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"0"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"verifier"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"admin"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Fetch Account Entitlement Details
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Credentials
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Origin
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Cache-Control
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Expires
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Pragma
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Referrer-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-XSS-Protection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                campaignAccountEntDetails
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object[]
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                              >
+                                Array [
+                              </div>
+                            </li><SchemaItem
+                              collapsible={false}
+                              name={"certificationname"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Linux Access Review - U006789 (Constance Bihner)"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"certkey"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"33600"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"entitlementDisplayCount"}
+                              required={false}
+                              schemaName={"number"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"number","example":1}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"entitlementTotalCount"}
+                              required={false}
+                              schemaName={"number"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"number","example":1}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={true}
+                              className={"schemaItem"}
+                            >
+                              <details
+                                style={{}}
+                                className={"openapi-markdown__details"}
+                              >
+                                <summary
+                                  style={{}}
+                                >
+                                  <span
+                                    className={"openapi-schema__container"}
+                                  >
+                                    <strong
+                                      className={"openapi-schema__property"}
+                                    >
+                                      entitlements
+                                    </strong><span
+                                      className={"openapi-schema__name"}
+                                    >
+                                       object[]
+                                    </span>
+                                  </span>
+                                </summary><div
+                                  style={{"marginLeft":"1rem"}}
+                                >
+                                  <li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                                    >
+                                      Array [
+                                    </div>
+                                  </li><SchemaItem
+                                    collapsible={false}
+                                    name={"accountdisplaycount"}
+                                    required={false}
+                                    schemaName={"number"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"number","example":2}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={true}
+                                    className={"schemaItem"}
+                                  >
+                                    <details
+                                      style={{}}
+                                      className={"openapi-markdown__details"}
+                                    >
+                                      <summary
+                                        style={{}}
+                                      >
+                                        <span
+                                          className={"openapi-schema__container"}
+                                        >
+                                          <strong
+                                            className={"openapi-schema__property"}
+                                          >
+                                            accounts
+                                          </strong><span
+                                            className={"openapi-schema__name"}
+                                          >
+                                             object[]
+                                          </span>
+                                        </span>
+                                      </summary><div
+                                        style={{"marginLeft":"1rem"}}
+                                      >
+                                        <li>
+                                          <div
+                                            style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                                          >
+                                            Array [
+                                          </div>
+                                        </li><SchemaItem
+                                          collapsible={false}
+                                          name={"accountStatus"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"1"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"accountname"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"admin"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"certaccountkey"}
+                                          required={false}
+                                          schemaName={"number"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"number","example":192406}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"certfied"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"NORESPONSE"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"comment"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","nullable":true,"example":null}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"consulted"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"no"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"endpoint"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"SaviyntLinuxServer"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"lastCertifiedCampaignName"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":""}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"lastCertifiedDate"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":""}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"lastCertifiedUser"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":""}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"systemUserName"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"admin"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"userStatus"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"1"}}
+                                        >
+                                          
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"username"}
+                                          required={false}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","example":"admin"}}
+                                        >
+                                          
+                                        </SchemaItem><li>
+                                          <div
+                                            style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                                          >
+                                            ]
+                                          </div>
+                                        </li>
+                                      </div>
+                                    </details>
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"accounttotalcount"}
+                                    required={false}
+                                    schemaName={"number"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"number","example":10}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"certentvalkey"}
+                                    required={false}
+                                    schemaName={"number"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"number","example":1530363}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"certfied"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"APPROVED"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"comment"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","nullable":true,"example":null}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"consulted"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"no"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"entitlement2displaycount"}
+                                    required={false}
+                                    schemaName={"number"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"number","example":0}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"entitlement2totalcount"}
+                                    required={false}
+                                    schemaName={"number"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"number","example":0}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"entitlementStatus"}
+                                    required={false}
+                                    schemaName={"number"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"number","example":1}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"entitlementType"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Groups"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"entitlement_value"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"audio"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"risk"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":""}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"soxcritical"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"0"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"status"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"1"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"syscritical"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"0"}}
+                                  >
+                                    
+                                  </SchemaItem><li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                                    >
+                                      ]
+                                    </div>
+                                  </li>
+                                </div>
+                              </details>
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"status"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"In progress"}}
+                            >
+                              
+                            </SchemaItem><li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                              >
+                                ]
+                              </div>
+                            </li>
+                          </div>
+                        </details>
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"campaignId"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"178"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"complete"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"No"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"displayCount"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":1}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"successful"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"totalCount"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":1}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"campaignAccountEntDetails\": [\n    {\n      \"certificationname\": \"Linux Access Review - U006789 (Constance Bihner)\",\n      \"certkey\": \"33600\",\n      \"entitlementDisplayCount\": 1,\n      \"entitlementTotalCount\": 1,\n      \"entitlements\": [\n        {\n          \"accountdisplaycount\": 2,\n          \"accounts\": [\n            {\n              \"accountStatus\": \"1\",\n              \"accountname\": \"admin\",\n              \"certaccountkey\": 192406,\n              \"certfied\": \"NORESPONSE\",\n              \"comment\": null,\n              \"consulted\": \"no\",\n              \"endpoint\": \"SaviyntLinuxServer\",\n              \"lastCertifiedCampaignName\": \"\",\n              \"lastCertifiedDate\": \"\",\n              \"lastCertifiedUser\": \"\",\n              \"systemUserName\": \"admin\",\n              \"userStatus\": \"1\",\n              \"username\": \"admin\"\n            },\n            {\n              \"accountStatus\": \"1\",\n              \"accountname\": \"U037787\",\n              \"certaccountkey\": 192407,\n              \"certfied\": \"NORESPONSE\",\n              \"comment\": null,\n              \"consulted\": \"no\",\n              \"endpoint\": \"SaviyntLinuxServer\",\n              \"lastCertifiedCampaignName\": \"\",\n              \"lastCertifiedDate\": \"\",\n              \"lastCertifiedUser\": \"\",\n              \"systemUserName\": \"jwallace\",\n              \"userStatus\": \"1\",\n              \"username\": \"U037787\"\n            }\n          ],\n          \"accounttotalcount\": 10,\n          \"certentvalkey\": 1530363,\n          \"certfied\": \"APPROVED\",\n          \"comment\": null,\n          \"consulted\": \"no\",\n          \"entitlement2displaycount\": 0,\n          \"entitlement2totalcount\": 0,\n          \"entitlementStatus\": 1,\n          \"entitlementType\": \"Groups\",\n          \"entitlement_value\": \"audio\",\n          \"risk\": \"\",\n          \"soxcritical\": \"0\",\n          \"status\": \"1\",\n          \"syscritical\": \"0\"\n        }\n      ],\n      \"status\": \"In progress\"\n    }\n  ],\n  \"campaignId\": \"178\",\n  \"complete\": \"No\",\n  \"displayCount\": 1,\n  \"errorCode\": \"0\",\n  \"msg\": \"successful\",\n  \"totalCount\": 1\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Fetch Account Entitlement Details"}
+                  value={"Fetch Account Entitlement Details"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"campaignAccountEntDetails\": [\n    {\n      \"certificationname\": \"Linux Access Review - U006789 (Constance Bihner)\",\n      \"certkey\": \"33600\",\n      \"entitlementDisplayCount\": 1,\n      \"entitlementTotalCount\": 1,\n      \"entitlements\": [\n        {\n          \"accountdisplaycount\": 2,\n          \"accounts\": [\n            {\n              \"accountStatus\": \"1\",\n              \"accountname\": \"admin\",\n              \"certaccountkey\": 192406,\n              \"certfied\": \"NORESPONSE\",\n              \"comment\": null,\n              \"consulted\": \"no\",\n              \"endpoint\": \"SaviyntLinuxServer\",\n              \"lastCertifiedCampaignName\": \"\",\n              \"lastCertifiedDate\": \"\",\n              \"lastCertifiedUser\": \"\",\n              \"systemUserName\": \"admin\",\n              \"userStatus\": \"1\",\n              \"username\": \"admin\"\n            },\n            {\n              \"accountStatus\": \"1\",\n              \"accountname\": \"U037787\",\n              \"certaccountkey\": 192407,\n              \"certfied\": \"NORESPONSE\",\n              \"comment\": null,\n              \"consulted\": \"no\",\n              \"endpoint\": \"SaviyntLinuxServer\",\n              \"lastCertifiedCampaignName\": \"\",\n              \"lastCertifiedDate\": \"\",\n              \"lastCertifiedUser\": \"\",\n              \"systemUserName\": \"jwallace\",\n              \"userStatus\": \"1\",\n              \"username\": \"U037787\"\n            }\n          ],\n          \"accounttotalcount\": 10,\n          \"certentvalkey\": 1530363,\n          \"certfied\": \"APPROVED\",\n          \"comment\": null,\n          \"consulted\": \"no\",\n          \"entitlement2displaycount\": 0,\n          \"entitlement2totalcount\": 0,\n          \"entitlementStatus\": 1,\n          \"entitlementType\": \"Groups\",\n          \"entitlement_value\": \"audio\",\n          \"risk\": \"\",\n          \"soxcritical\": \"0\",\n          \"status\": \"1\",\n          \"syscritical\": \"0\"\n        }\n      ],\n      \"status\": \"In progress\"\n    }\n  ],\n  \"campaignId\": \"178\",\n  \"complete\": \"No\",\n  \"displayCount\": 1,\n  \"errorCode\": \"0\",\n  \"msg\": \"successful\",\n  \"totalCount\": 1\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

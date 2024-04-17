@@ -1,0 +1,310 @@
+---
+id: check-job-status
+title: "Check Job Status"
+description: "This API is used to fetch the status of any job other that Data Import Job."
+sidebar_label: "Check Job Status"
+hide_title: true
+hide_table_of_contents: true
+api: eJzdVm1v2zYQ/isEP22AZClGkiYaCsx1ncBZEwexhw1Ig/pEnS0mEqmSJyea4f8+kJJT5wWrP8+AYZk83vPc20OtOcHS8uSWX+iUXYKCJZaoiN8FPEMrjKxIasUTPsulZYPrMZOW1RYzRpotkETOKEdmCai2TC8YqIbd65RpytEwyoHYZyBg47LShtiFTntfzVflvrMc2XxQU66N/AcczpyVtSWWwwrZ/BOCQTNnC10U+hEzljZsPtMPqOY9tvVxCSoD0qZhFRgobeJ35vc6XRpdV/Ng+1dBiXMecF2h8VjjjCdc5CgeLnQ69fx5wA1+r9HSJ501PFlzoRW5dCRrXtYFyQoMRQttyjADArdsRY6lf6KmQp5wnd6jIB7wyjgskmjd7pbRjqUlI9WSBxyfoKwKtzRQUDQkheWbgHes9zxxoVO+8R8Xha20si1yP47dz8tyDl3grhrsOfQcIUPjj3wGwneDe4fALK8DFvfZoF6yfnxwwvr9JD5Mjk7Z+eWMOzZTNCs0+/obVCByDIe60YTRQe+g80HhUOsHuTev4XB6cxbOJn+Mrj4en6RxeiiOwyPx4Tg8TD8chqfHh4swhpP0oA+nfdGPf2PXQPnHyMPNDCi7QBOOlNCZc70nqshr9YCZd/J3eGagxHDik273dTEdXI4mN+Pz8RX3xdzpQaiqQgrfvtG9dYXcvwHRGG2GOvtJP8Wu80q7/G+r8VV4fTM5vxlNpy3JbssjvemtZM1XUNT4igaPeQf12l/bxSVSrt2UVtr6eIBynvDozdBa32BOxta8NgVPeE5U2SSK1oQKFG16FlayUSQKXWc9octoNLyMoJLR6ogHfAVGQtrRb4+8HZlu3QnjAuqCePKckM1mc+doiNpIajyP1KuXUzee3N7tbk9dwVqoXaPndDvuLihvxpPOiAfdw5k2JTjwi7/a8ZJqof1xSW3/tKGykSI0lZEW2ThDRZIaNnTxexm/wQUaVAL5u0o/1EWBwq2wyuiVzNB6oc+QQBZe6b3u15WTdcxYWyzLFtr4nZ+z+GU0Hv7qko/GtshHvbjneoLQlHaycLohBe6Us6uiL6A3ing7HyB8wVq55C6+acuMB6864vHxsbfrxj7bYQnSWXYrv+9YuZkopEBlcRfGKxXre85vUcBv97RZRt1ZG30ZD0dX01HY78W9nMrCOX4KC730FXzpY5flYxV2MhDVVaEhs1E/PjiN4sOoS/Q35+TbFayanl0tfWO4sSlB7TB+R/Vf1H7nwvvfXPjdVBE+UVQVIJXLuc/0ulOU29evAXcBz53kJLd8vU7B4p+m2Gzc8vcajZvvux+a4cd7e3v60X/AxuW6zWQ4c/jBVgDffY3YBNtDAyGwoh3zN4rvlORZGK8n05kThu5tpWxl1Tn2foMfj47kZvMvJqVphQ==
+sidebar_class_name: "post api-method"
+info_path: apis/rest/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Check Job Status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/checkJobStatus"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API is used to fetch the status of any job other that Data Import Job.
+
+The `Authorization` must have `Bearer` followed by `Token`. 
+
+Mandatory params: 
+`jobgroup`,
+`jobname`
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"multipart/form-data"}
+    value={"multipart/form-data-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"jobgroup"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"Analytics"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"jobname"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"AnalyticsJob"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Check Job Status
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"IN-PROGRESS"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \"IN-PROGRESS\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Check Job Status"}
+                  value={"Check Job Status"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \"IN-PROGRESS\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

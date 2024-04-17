@@ -1,0 +1,149 @@
+---
+id: delete-privilege
+title: "Delete Privilege"
+description: "https://yourdomain.saviyntcloud.com/ECM/v5/deletePrivilege"
+sidebar_label: "Delete Privilege"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVVU2P2zYQ/SvEnFpAKzmL7qE6NXEcwEGbLmIHPewaAS2NLSYUyZAjeVVD/70YSuvV2kGaSw7xxRQ5H29mHh+PQHIfIL+DW69apXGPATYJlBgKrxwpayCHisiFPMs62/jS1lKZNMhWdYYKbZsyLWydLeZ/Ze1NVqJGwlMwIe7NulJBvLxdisaVkjAIaQSa0lllSCgjFst5em/YDsXLhirr1b+SM4u6CSQq2aKQ4hVKj17srNb2gKXYdkKKtf2MJoUErEMffZYl5HAGAhLw+KXBQK9s2UF+hMIaQkO8lM5pVUTf7FPgco8QigprySvqHEIOdvsJC4IEnOdMpDDw6WMVE8tAXpk9JIAPsnaat1ZdIKxfQJ8AGlKksUZDg/23/Eaj6OhOtXzTRRL5aB+waLyiLsTc34mv70/bsbzXsY3idpq7lbrB57WfAnylvqcintUwAr3EOQUT8XgMzpowALqezfjvOTmBzWqkyvLoXRPHJKmCHM7ZGBP6Fj0z/giN1xNyHwmNNNR/ndrSqay9gQRa6ZXcjh0aXC4xjft8j3ay0dykx373fb95qjvi2EZqM/Uhv9tMj1dMxCHV1Og0TcbORUUzyEcjSMbFG+trycnf/rOObWKCv3+6CotHDvz4cSagzM5G6BySj4Y2i4Uh9M6rgGJZxoydmHPvo2a8xx16NAXCuShFWZlbrbGIYuG8bVWJQVCFokSSSgdhd/EzNM5ZT1iKgShB7KyPJ/+P4pfFcv4rDx59GDLfpLN0BgkQ+jr8vVuhb1WBEyqNDIrkiUYZJFFzZBHJYmScFte3GpBBcsbGw+GQTsOEkx3WUrHluPPHxIrbrFWBJuA0jZNFheI6Yr7MIuNxav0+G31D9udyvni3Wlxdp7O0olpz4Icrbfdxgs9jTFEe3NUorVnjtJVlyK5nL37PZr9lY6M/cpCP72TbpaHdR1I6G6iWZoL4QnjOZj8R8J/gbRqvDuEDZU5LZbibsYfHUajuLl6sTQKVDcRHx+NWBvzgdd/z9pcGPcvG5kmKomokUKEs0UdF+Ywd5DAfmnS1ZgDJo3RfvnisOCcBvf2wZv0YH8raluzi5YEfUXmAHO7hHuKLywGiNMX9I2hp9o2MejCE5d9/CJLtfQ==
+sidebar_class_name: "put api-method"
+info_path: apis/rest/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete Privilege"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/deletePrivilege"}
+>
+  
+</MethodEndpoint>
+
+
+
+https://yourdomain.saviyntcloud.com/ECM/v5/deletePrivilege  
+This API updates an endpoint in EIC.
+
+The Authorization must have a Bearer followed by a Token.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"endpoint"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"System1"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"entitlementtype"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"enttype1"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"privilege"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"attr1"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"securitysystem"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"System1"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          
+          
+          
+        </div><div>
+          
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

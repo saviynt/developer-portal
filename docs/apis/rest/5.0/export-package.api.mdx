@@ -1,0 +1,486 @@
+---
+id: export-package
+title: "Export Package"
+description: "This API creates a compressed file containing objects specified for T2P migration."
+sidebar_label: "Export Package"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: apis/rest/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Export Package"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/exportTransportPackage"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API creates a compressed file containing objects specified for T2P migration.
+
+The `Authorization` must have `Bearer` followed by `Token`. 
+
+Mandatory params: 
+
+`exportonline`(can be true or false) - Determines if package needs to be exported online, 
+`exportpath`(if exportonline is false) - Local path where export package will be generated, 
+`environmentname`(if exportonline is true) - Name of the environment which can be created at the following path : Admin -&gt; Global Configurations -&gt; Misc -&gt; Transport -&gt; Add New Transport, 
+`objectstoexport` - Supported objects : `savRoles`, `emailTemplate`, `roles`, `analyticsV1`, `analyticsV2`, `globalConfig`, `workflows`, `connection`, `appOnboarding`, `userGroups`, `scanRules`, `organizations`, `securitySystems`
+
+Optional params:
+
+`updateuser` - username of the user exporting the package, 
+`transportmembers`(can be true or false) - option to transport members for selected objects such as SAV role, 
+`transportowner`(can be true or false) - option to transport owners for selected objects, 
+`businessjustification`
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"businessjustification"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"justified..."}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"exportonline"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"false"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"exportpath"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"/saviynt_shared/testexport/transportPackage"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={true}
+          className={"schemaItem"}
+        >
+          <details
+            style={{}}
+            className={"openapi-markdown__details"}
+          >
+            <summary
+              style={{}}
+            >
+              <span
+                className={"openapi-schema__container"}
+              >
+                <strong
+                  className={"openapi-schema__property"}
+                >
+                  objectstoexport
+                </strong><span
+                  className={"openapi-schema__name"}
+                >
+                   object
+                </span>
+              </span>
+            </summary><div
+              style={{"marginLeft":"1rem"}}
+            >
+              <SchemaItem
+                collapsible={false}
+                name={"emailTemplate"}
+                required={false}
+                schemaName={"string[]"}
+                qualifierMessage={undefined}
+                schema={{"type":"array","items":{"type":"string","example":"Account Password Expiry Email"},"example":["Account Password Expiry Email","Entitlement Expiry Email"]}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"savRoles"}
+                required={false}
+                schemaName={"string[]"}
+                qualifierMessage={undefined}
+                schema={{"type":"array","items":{"type":"string","example":"ROLE_ADMIN"},"example":["ROLE_ADMIN"]}}
+              >
+                
+              </SchemaItem>
+            </div>
+          </details>
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"transportmembers"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"true"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"transportowner"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"true"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"updateuser"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"admin"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Export Package - Success
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Connection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Vary
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-XSS-Protection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorcode"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":0}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"fileName"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"transport_admin_2023-01-13_10-19-11(UTC).zip"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"success"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msgDescription"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Export Requested. If other requests are currently processing, your export will begin after they complete. You can call /transportPackageStatus API to check the status of your export."}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorcode\": 0,\n  \"fileName\": \"transport_admin_2023-01-13_10-19-11(UTC).zip\",\n  \"msg\": \"success\",\n  \"msgDescription\": \"Export Requested. If other requests are currently processing, your export will begin after they complete. You can call /transportPackageStatus API to check the status of your export.\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Export Package - Success"}
+                  value={"Export Package - Success"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorcode\": 0,\n  \"fileName\": \"transport_admin_2023-01-13_10-19-11(UTC).zip\",\n  \"msg\": \"success\",\n  \"msgDescription\": \"Export Requested. If other requests are currently processing, your export will begin after they complete. You can call /transportPackageStatus API to check the status of your export.\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

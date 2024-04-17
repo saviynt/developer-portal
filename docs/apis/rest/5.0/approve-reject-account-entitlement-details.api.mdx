@@ -1,0 +1,376 @@
+---
+id: approve-reject-account-entitlement-details
+title: "Approve Reject Account Entitlement Details"
+description: "This API is used to certify/revoke the user's access (account, entitlement). When an approve or reject action is performed for a line item in an Entitlement Owner campaign, then only the latest comment sent through the API is retained in the comments field but all the comments (including actions) are stored in the audit trail/history."
+sidebar_label: "Approve Reject Account Entitlement Details"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: apis/rest/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Approve Reject Account Entitlement Details"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/approverejectEntOwnerCampaignAccEntDetails"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API is used to certify/revoke the user's access (account, entitlement). When an approve or reject action is performed for a line item in an Entitlement Owner campaign, then only the latest comment sent through the API is retained in the comments field but all the comments (including actions) are stored in the audit trail/history.
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+Mandatory params:
+
+`campaignid`
+
+`certkey`
+
+`verifier`
+
+`entitlements`
+1. `action`(APPROVED/REJECTED/DECOMMISSIONED/DOESNOTBELONGTOME)
+2. `entattkey`
+3. `certified`(Can be Yes/No/Reset)
+4. `comments`
+
+ OR 
+
+`accounts`
+ 1. `action`(APPROVED/REJECTED)
+ 2. `accattkey`
+ 3. `entattkey`
+ 4. `certified`(Can be Yes/No/Reset)
+ 5. `comments`
+
+ OR 
+
+`entitlements2`
+ 1. `action`(APPROVED/REJECTED)
+ 2. `entattkey`
+ 3. `ent2attkey`
+ 4. `certified`(Can be Yes/No/Reset)
+ 5. `comments`
+
+Optional params:
+
+`bulkUpdate`(Can be Y or N) If set to Y, approveComments or rejectComments will be considered at the global level.
+If set to 'N' then comments at the individual record/user level is considered.
+
+`approveComment`
+
+`rejectComment`
+
+`doesNotBelongToMeComment`
+
+`bulkValidations`(If 'Y' the code works as is and all validations happen, if bulkValidations=' N' the code will skip validations for all the records passed)
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={true}
+          className={"schemaItem"}
+        >
+          <details
+            style={{}}
+            className={"openapi-markdown__details"}
+          >
+            <summary
+              style={{}}
+            >
+              <span
+                className={"openapi-schema__container"}
+              >
+                <strong
+                  className={"openapi-schema__property"}
+                >
+                  accounts
+                </strong><span
+                  className={"openapi-schema__name"}
+                >
+                   object[]
+                </span>
+              </span>
+            </summary><div
+              style={{"marginLeft":"1rem"}}
+            >
+              <li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                >
+                  Array [
+                </div>
+              </li><SchemaItem
+                collapsible={false}
+                name={"accattkey"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"25290"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"action"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"APPROVED"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"entattkey"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"30897"}}
+              >
+                
+              </SchemaItem><li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                >
+                  ]
+                </div>
+              </li>
+            </div>
+          </details>
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"approveComment"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"Approve Comment Test123!!@#$%^&*"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"bulkUpdate"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"Y"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"bulkValidations"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"Y"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"campaignid"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"1112"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"certkey"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"5995"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"doesNotBelongToMeComment"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"DoesNotBelongToMeComment Test 123!!@#$%^&"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={true}
+          className={"schemaItem"}
+        >
+          <details
+            style={{}}
+            className={"openapi-markdown__details"}
+          >
+            <summary
+              style={{}}
+            >
+              <span
+                className={"openapi-schema__container"}
+              >
+                <strong
+                  className={"openapi-schema__property"}
+                >
+                  entitlements2
+                </strong><span
+                  className={"openapi-schema__name"}
+                >
+                   object[]
+                </span>
+              </span>
+            </summary><div
+              style={{"marginLeft":"1rem"}}
+            >
+              <li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                >
+                  Array [
+                </div>
+              </li><SchemaItem
+                collapsible={false}
+                name={"action"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"APPROVED"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"comments"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"Approve Comment Test123!!@#$%^&*"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"ent2attkey"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"30906"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"entattkey"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"30897"}}
+              >
+                
+              </SchemaItem><li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                >
+                  ]
+                </div>
+              </li>
+            </div>
+          </details>
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"rejectComment"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"Reject Comment Test123!!@#$%^&*"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"verifier"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"RO_Owner1"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          
+          
+          
+        </div><div>
+          
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

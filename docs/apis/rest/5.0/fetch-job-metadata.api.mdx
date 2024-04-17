@@ -1,0 +1,423 @@
+---
+id: fetch-job-metadata
+title: "Fetch Job Metadata"
+description: "This API call return job metadata for the last run of a job in SSM."
+sidebar_label: "Fetch Job Metadata"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV21v2zYQ/isEv3QLZEt2mgUThmGp63QO6qSIXWRAEtQUdZaYSqRKUnY8Q/99OEp25MRIsqHbpxkwbFB3x+eee9WaWpYYGl7TMxWRMZMsgRykpbcejcFwLQorlKQhnabCkJNPI8JZlhENttSS3KmI5GBZzCwjc6WJTYFkzFiiS0nUnDAnIiSZTMbdG30j8TtNgcxOSpsqLf5kaH9G8tJYkrIFkNk7YBr0jMxVlqklxCRakdlUfQU565KNjTGTMbNKr0jBNMtNuH0yu1ORZDnMNgcXzgWWbSS3glaLJAG9I4zaiVZlsT05ODg4VxYODg5CgsiN1SW3pQb0D/3VYMrM1tbRVQ2mUNIA4UwSnjKZAImYgZiUhZJOBcn+XRiH37AFxA1F1KOqAO04GcU0pHOwPD1T0bghmXpUw7cSjH2n4hUN15QraTFg4ZqyosgEd8r+ncGoranhKeQM/9lVATSkKroDbqlHC41XWQEGnzaktQSN1UIm1KNwz/Iiw6MpGDtQUgLHO8yZimjloaqxTNuY2Rf0+0E/6AS9Tu+YBMfh0XF4+BYNtOLwvL4FY7mSklZVtT138E+RJ0frlqlwTRcsK2HHu30uPPZgL8xHKHegODSbqDs4/SDAn90K2oPRoymwGLRTGtSR7HwEmdh0b/D2cBJQvP19w/1rNK4g9kivT04hIugq6R+GvSA87JMP46mzNgG9AP1aeycF4yl0BmqlLPi9bs/ZuLq66mCNg7SYk69GV1e/M/FH51SzHDp1AZvXWpicjIcXl6MPo/M6T75ThYDWSg9U3M5RWeYR6PbtQeXR3CQvICw5B2NonTZlZl++fU/evqgzlPFUvFRTp1qQMyZJk+xvw6Nj8nk6cJmBAM9UNFAoayF+3tKDWOXRy8d+7VH4JdK/vn+HngVBQELy4B85ZSKD2AlEcdQnIfksv0q1lATrBrspecOF4eoNXjbB4v0Hrh7+1HJ1U8h/o620UiJowr6NbTu0+4O3Dc/zMXgcghbPDzR/Jy53qHwVX8hYDjZViKxQxmUhw/ZF/T3Dy7jOggvHmpY6oyFNrS1M6PtrC5JJW3UNW4iVtDxTZdzlKveHg7HPCuEvjqhHF0wLFjXhqVWedtrmHFeYOav52WRBVVW3CIOXWtiVwxG5joO9iobXt+3HE2wN9VVtoW2OIXZ0yonRsBGiXvPnVOmc4eVnV3VfxZZz+TC+h5vM/HcHlEeFnCsHW9i6/9QUk6G0oAstDJBRjI3arsgAeXeL3iXMQYPkQPfuggOVZU2GFVotRAzG7TYxWCYys9mOTFkUSluISZ0mZrsnvozih+Fo8CMGHbSpbz7qBl0sCQs6NxdzHFSCQyuNmuxxieOEfFpPAMZdojTsoH+TGhn1HmXicrnsts2YrRzkTKBkc/JbSwppzgQHaaB9jRuNpO8wP72FucddpRO/0TX+x9FgeD4ZdvrdoJvaPEPD951MJS6CuzbaKJdFpxl0fllkisXG7we9n/3grd8Q/QWNfDlni1XXLBKXkFiwOZMtxHuXlJ3ot1bO/18K/qOXgqbfWLi3fpEx4ara5cK66bbXT18Vbj2aYkMOr+l6jXd91llV4fG3EjT2vtuHfupa32YddW3xK6zcsKmX0iki8Daj7+kiVXkbjRPOobDPyt62Zsani8kUO2bzOpO7aUo1W+IEZUsa0ht6Q92L0XYLdOdrmjGZlCxB+doufv4CTwcP2g==
+sidebar_class_name: "post api-method"
+info_path: apis/rest/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Fetch Job Metadata"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/fetchJobMetadata"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API call return job metadata for the last run of a job in SSM.
+
+The `Authorization` must have `Bearer` followed by `Token`. 
+
+Mandatory params: 
+
+`jobname`
+
+Optional params:
+
+`triggername`
+
+`jobgroup`
+
+***Note***: The structure of the result param in response can change based upon the Job History saved in SSM
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"jobname"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"TestConnectionsJob"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"jobstartdate"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"2020-01-17 07:57:34"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"triggername"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"testconn"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Fetch Job Metadata
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Content-Length
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  WWW-Authenticate
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":0}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Success"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                result
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <SchemaItem
+                              collapsible={true}
+                              className={"schemaItem"}
+                            >
+                              <details
+                                style={{}}
+                                className={"openapi-markdown__details"}
+                              >
+                                <summary
+                                  style={{}}
+                                >
+                                  <span
+                                    className={"openapi-schema__container"}
+                                  >
+                                    <strong
+                                      className={"openapi-schema__property"}
+                                    >
+                                      TestConnectionsJob
+                                    </strong><span
+                                      className={"openapi-schema__name"}
+                                    >
+                                       object
+                                    </span>
+                                  </span>
+                                </summary><div
+                                  style={{"marginLeft":"1rem"}}
+                                >
+                                  <SchemaItem
+                                    collapsible={false}
+                                    name={"EndTime"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Fri Jan 17 07:54:57 UTC 2020"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"JobCompleted"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Completed"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"Result"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"<br>DBTest000 : Connection Failed<br>Dbdb2 : Unknown database 'cisco'"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"StartTime"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Fri Jan 17 07:54:36 UTC 2020"}}
+                                  >
+                                    
+                                  </SchemaItem>
+                                </div>
+                              </details>
+                            </SchemaItem>
+                          </div>
+                        </details>
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": 0,\n  \"msg\": \"Success\",\n  \"result\": {\n    \"TestConnectionsJob\": {\n      \"EndTime\": \"Fri Jan 17 07:54:57 UTC 2020\",\n      \"JobCompleted\": \"Completed\",\n      \"Result\": \"<br>DBTest000 : Connection Failed<br>Dbdb2 : Unknown database 'cisco'\",\n      \"StartTime\": \"Fri Jan 17 07:54:36 UTC 2020\"\n    }\n  }\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Fetch Job Metadata"}
+                  value={"Fetch Job Metadata"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": 0,\n  \"msg\": \"Success\",\n  \"result\": {\n    \"TestConnectionsJob\": {\n      \"EndTime\": \"Fri Jan 17 07:54:57 UTC 2020\",\n      \"JobCompleted\": \"Completed\",\n      \"Result\": \"<br>DBTest000 : Connection Failed<br>Dbdb2 : Unknown database 'cisco'\",\n      \"StartTime\": \"Fri Jan 17 07:54:36 UTC 2020\"\n    }\n  }\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

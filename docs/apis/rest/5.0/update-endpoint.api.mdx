@@ -1,0 +1,522 @@
+---
+id: update-endpoint
+title: "Update Endpoint"
+description: "This API updates an endpoint within the Saviynt EIC."
+sidebar_label: "Update Endpoint"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWG1vG7kR/isDfnEb7OrNTu4s1UUdWbm6jV9qKegBlnGiuLMSz1xyQ3Il6wQB+SGXP5dfUpC7K61kJVGK+1AU8Rdrh8NnZsjh8OEsiaUTQ9r3pCejVHFpDXkISISGaZ5ariRpk8GUGzi/vYQsjahFA1QCFuow53bKJdgpQp/O+EJa6F12a0M5lIMpwug8s1Ol+W/UgY0gyYyFKZ0hUBi9RqpRjyBWQqg5RjBeOPFAPaIceYhrZbENb7RK4A4FUoMwax3XTgOgIHEOKdU0QYsaXrwYaXyfobF0LPBOCRwsUhy9eAHcAJdWqyhjGIFVRRje5coUUD5eAyoGCg4AYqWBOhuWs0xQvY7a+3ZFZUSt0ouNF6btBkalmqQJjgCGcqRLf6CfpanS1sCMCh4BowZDg9JYPkMwVnM5cUMZGjAZmwI1MCQ96TzUnz58DODTh98HmkpDmXOXilLYS1BPULLFOWNozFosLepUc4NeQmXkpOdpKjjze/Lpw0fn9E2awz0LxiDLNLcLszAWk1Hg44m4SQVdXLsAC8kmZQqJmkvUPujKd/Fbo1GZZnizo7MlL2QsM1YlqVYparsYQQjXbk/HaOeIEppuS48b+3Tf0jGKL0+gjKlMWhfIXSZKN6hfwvcZ6kUhQb8DXZUWy7tZBye/xvl5DnSXJ9RlXHz3nrixO9p3mKgZFgrbQ1cq4vFie2gsFHu8lLHgk2mJXwxlBnWh3FVao/A7WgmEaaQWe9IOqHmMlV6bLseVlOgTiSkZ8wnsOUOlLM8Qt5z/RQ5/+vD7tZJYZuWFVumFmss+lxOxlg6c2WqaesGNFIvzKPr04WORIu8zrjHa48hYKYFUlrapRrA6Q48WU2GwLBEY/cvtbd2gQFZ+Vc7mdgxcQqQyVyLeZ8qiIQFx+eXX+jIibZIXlLKCkoAUZl6raEHaS8KUtCit+0k3B6/+q3HldUkMm2JC3S+7SJG0iRr/iszhFInM0RQwW5tVmZE7TAKCTzRJhRMth25CPCTt++WQnF9cvOv37gY3vevBkLSH5M35235vSFZBPnjVu3q9b/hhRVYBqRa0L1vt+oQLqQzLOW7+s+P+ZZB3BjVZrVZrmQ//XV6218vcXhK/QfuX5o+Lfzf8fTHuDXEdxyogFp9sPRWU+x0/LCyyHEoAgOGWA0PShiGZsNRMdWZ5s3U8JEGpuOf4Ov37fNz9LTc/iykVvSGpXAxr2IputRLkE/wR/YyqO6ZOyx3Cz2EVhy8H07XiYnGBnh0Nh0dHFo19Wvzmf+8xs3WCPwtCxywqEDYAq+DgVdlcov/3i5L/fBjKlc/c/PCmSpo8W1uNhvu3TRB3UhjqsJvUAZkijVB7jPwGDbvKsTIRnjvyF3Y1Rigtp8LsrYl7yoRbQeI83At4o/mE76+ve7Cm1qamXa+/x5BmViX+BIR0bmomZ7VMqCyqMZV4i13KplgaPNRGqowN2RTZ41kjgFRj+ZFDrkvYoXiPiGlIBZ9hCeBumbBfELbwVgnOFoeijd0tnmkORwZFfAQdMHYhMDSalSIoVylW0praRKmJQJpy49YFjjJpaIwhl4JLPOpAniJ7AYwRxfSQSioWlrMcpFSYz+eFghPXNTKaWjal9W0NY6nlbFdlx5P1N86oOOpAfr1W/epAghGnOyIqeYxmRxF4MqlKvhpRB2JHqPfN2QkSOlDcY9sm3Wrvm753F/Zjb4kzmT5OtqQF0mY1vVWdhPkjozBcRkIlQ2OVNmt5hDHNRNVJn5EX1OKh6TfIMIBWC86zCbQarWNoNtonr9rNV/DT1cCj9Z5SrvHg6tDPZAA/wBVdQPP09CU0W+1Go91orPFuUSfcGPfm+8aj8iyxO8BogprCkVQS8+BvNZ3kQIdAShUyV1P81DuMUWvU3+iWyiueQ+ijDbtKPfKD17/b7d+9CQc3/+xdn53G9PRVC1vhj1FzHJ60Tk7CMZ7EYfNV60f6wzhqvmSNDvzd2tRx8w74ioMd6NME+9ziWd9qzmwHbqmdntU7uUteFvq3q2PZ6zp1qIcJfQrpBM+Omy+PXzUajQ5wyUQWYT8bX6iEcmm8IW8hRh32JFORQznQAJtm8hEjD/JzWJZTxwLC/HI/OPekMpLHcYH0xp+ab4Ton1/1bu4uf7q8LlB+7vfDW63st90RzQ4kKsIz/4jMOfUf9BpBrZXuqugrXL7h+H9ivvJY6Wf+Cv820l/xgDRIYaUKlfMXs86z+yUZ+5aTa0qR9v3D6iEgCdqpcq+4NPNBUjdE6s/edAb1zBOY+yXJtKhwhqVFSaVdPaMK9V73qk5TXp+9JAGZUc0dL/Rx5VOeU6lC7lpwvqSS9nqVVivnbhlN321TjlWNab3IzjnntVdz17tXIkHx443SCXXo//h3Xg3d9t9tnq29cmv+t99WAeEyVj5sbvNMKpuQa8oOl55Y2gV03cb4TqavsCgZkr3Nzq4SIg8ZUq1mPELj24URWsqFbxG6T5P3CzCCPImM7xhutUI/68WfepfdP7usQG1yyy9rjZpLY4s6MTdxH/WMsyo3LdLLZ5ZXqpP8NFPmM6lYQhdf0ckgwU6quuu/CmPWephQ7jQLyd8qWm6ZBWcoDVbNpO6+gpb3+bkV6odrSk/qxVxTf3vZ7V33e2Gr1qhNbSIc8FMo1MTv4DZG1ct5GhZFq56lQtHI1FuN5mm9cVIvFvoXB/LLNZ0tamY28Qnt2HZCZcXj54+Sra2v9Gm+t7y/t7y/t7y/t7y/t7w3Le+CV1Qamaui7i8L0nS/2wh/CMhUGetGlkvXX3inxWrlxD7PHAPb0CLPx8o+kWdZj7hwjKDCwz2Lynujz6jrKihnuHRN7Rd1q7zv9t3A0aKiV5/kfFLTuSMedE7aZEiGxPf81wTey5dEUDnJ6MTp57Du3qHbPGyHd/nAiiEqFxUn/5JfDeCvgr+SoAjGuk/HlVar/wCes2UV
+sidebar_class_name: "put api-method"
+info_path: apis/rest/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update Endpoint"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/updateEndpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API updates an endpoint within the Saviynt EIC.
+
+The `Authorization` must have a `Bearer` followed by a `Token`.
+
+Note: From Release v23.9, a new parameter **`requestableRoleType`** is introduced to update the requestable options of a Role for a particular endpoint.
+
+Mandatory parameters:
+
+`endpointname`  
+`roleType` Supports valid case-senstive string values such as "Enabler”, “Transactional”, “EmergencyAccess”, “Enterprise”, and “Application”
+
+Optional parameters:
+
+`securitysystem`,  
+`displayName`,  
+`description`,  
+`ownerType`,  
+`owner`,  
+`resourceOwnerType`,  
+`resourceOwner`,  
+`customproperty` - N is between 1 to 30,  
+`custompropertyLabel` - N is between 1 to 30,  
+`accountNameRule`,  
+`accessquery`,  
+`enableCopyAccess`,  
+`disableNewAccountRequestIfAccountExists`,  
+`disableRemoveAccount`,  
+`disableModifyAccount`,  
+`blockInflightRequest`,  
+`userAccountCorrelationRule`,  
+`createEntTaskforRemoveAcc`,  
+`connectionconfig requestableRoleType requestOption` - Supports valid case-senstive string values such as “None”, “DropDownSingle”, “Table”, and “TableOnlyAdd”  
+`required` - Supports valid boolean values are true and false`requestedQuery/selectedQuery` Supports string values in double quotes
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+  schemaType={"request"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"connectionconfig"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"{\"conf\":[{\"ADDUSERTOENT\":\"FALSE\"},{\"ADDMEMBERTOENT\":\"FALSE\"}]}"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"endpointname"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"Create-an-endpoint"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"resourceOwnerType"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"User"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Update Endpoint / Update Endpoint
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Credentials
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Origin
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Cache-Control
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Connection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Content-Security-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Expires
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Permissions-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Pragma
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Referrer-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-XSS-Protection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Success"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \"Success\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Update Endpoint"}
+                  value={"Update Endpoint"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \"Success\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

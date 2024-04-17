@@ -1,0 +1,456 @@
+---
+id: upload-new-file
+title: "Upload New File"
+description: "This API call can be used to upload the file in a specific location based on the property `job.ecm.imp.file.path` in InternalConfig.groovy."
+sidebar_label: "Upload New File"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV9tu2zgQ/RWCT22gm92kSVQE2FR1CnebOKjcbYE0qGlqZLGhSJWkbGsN//uClNw4idt1X/Zp/WKZmjlz5ZnxChsy0zi+wYksSynQR8M4Mww0vvVwBpoqVhkmBY7xuGAanV8PESWcI0oEmgKqNWTISFRXXJIMmQJQzjggJhBBugLKckYRl5RYFDQlVl4KJ1gpWYEyDZp8k9MAaBmwsgqselARU0wsyFAYUILwRIqczYKZknLeBF/EFzEuAE3Oa1NIxf526BNU1tqggswBTV4DUaAmKJecywVkaNqgyVjegZgEyOpfEpERI1WDKqJIqWN3OrHmJ8hvo1gwUyAiGgRLA0LbCJ4NlqSsODwQCaieh8GS6+W95HMHZwN530VvYdNC1jyzmdNgbOIODg7eEEMslj44OMAetklx8sMMx7hN7BUsLhgH7GEF32vQ5rXMGhyvMJXCgDD2say5YRVRJsylKv2MGGKPNS2gdE+mqQDHWE6/ATXYw13+bbHjFbYebElpo5iYYQ9bMGJwjKdMENXgtYe3g9qlAm2KcIzT87/w2n2s57qSQrfW+lFkvx522Me2ia5ggWy0KESPTrCHCyAZKIdxTilo7SdSGCW5f24L7ScKMhCGEa53Rr/DSaNqwNbDnYAjxWZM7ItVGFPpOAw1VXXp14b7vUCTOWuEoVzWWUBl6WwlhBawMbUveiW18WkB9O4s8lClYPOjhZRCAN0UZR+8O4DKJ5zN2/jfEAP7qn6CzEO9F2hEDepH/R7qncTRcdyP0NvLsUMbLCumYO8qpLXw0DG6JA3qnZ4eoV4/jqI4use7VmRW7m7pHXBC+tSm2Kl+gByUAuVfS85osy+GbEtvEVIwfiLlHds7QUmSfrjwx6M/B1dnhyf50TQ6eeEfAz31D1++pP7pCxr55Cg6IaeU9I+j3it0TUxxFrbmjGLU+GNFhK6kMn4KtFbM7O16SZY+mcFZ7+i4f3gSRa8QE5TXGaT19I0sCRPaGXIWclD+QFCZWZQ9DdCiFneQOZDPro9BGH/cVOCP3H3eu/BCasHyvEO6UKT8bYj0/HIw+jB8O7zqUD6nqX+tpPm969B7hUqZwdmUS3qHHWlt8SupKs5a0gu/6Z+g/oRcQSmpEpntZNh7ByLLrqWe/VrKzZ3UTrm0doyV15w3rb+dlDP6mDzjFZ4TXsMjh3CEO6O/QG4pvARTyKwjItwOAhzjsB1SqUtGx9Ma1Nzx9M0K14pvUePKgCDCrJ/wYjhILkNSsXB+hD08J4qRaRdKq/J0YnTndlXJSc3tmNrkab1e31o3NvfmZoWnbiewOwOOb263XzvXW1PbQj+qYH23QTkxOwudEPa6h4vNjHz3qeUqJnLp1JlpG7QNFQ3sOlMppgEN3ZgyDUps/G6xcjQFggLeuXslkvO2oe3qNGcZaLdHZWAI4xrJ3P3UdWUpAzLUlkujXCr35t+9eDYYJs9t8kHp1vJREAW2QQyoUo/yFNSc0QeTrgV1BXRCIW6vDaGuYIK4jNn40tYz7D3qiMViEWzD6B9yUBJmJbuTP7ak7FXhjILQsG2msqSP+s7np1aIex1INQs7XR2+HyaDq3Tg94MoKEzJLfDS53LmKvgQY9vLReV37ND1vw77Ue80jA7DLtFfLcjXKzJvAj2fucawF6ckYsvjpyvOg9JvrXj/b+D/0QbeXXoDSxNWnNgVoGumVUd5N/gJ5d16uLCsGN/g1cpm+aPi67U9/l6DsgR0e09qjn82y6zjpjto7NKwNUcdBzq63rnar72Nkl1bK7Ml/mRSWar7wd3Xo3Rsmav7B1G2Q8ACO1zv/tE6uV7/A0CC3JY=
+sidebar_class_name: "post api-method"
+info_path: apis/rest/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Upload New File"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/uploadSchemaFile"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API call can be used to upload the file in a specific location based on the property `job.ecm.imp.file.path` in InternalConfig.groovy.
+
+The `Authorization` must have `Bearer` followed by `Token`. 
+
+Mandatory params: 
+
+`file` - file with any extension (Example - file with .csv/.xlsx extension)
+
+`pathLocation` - Should be set to ***Datafiles***
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"multipart/form-data"}
+    value={"multipart/form-data-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"file"}
+          required={false}
+          schemaName={"binary"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","format":"binary"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"pathLocation"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"SAV"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Upload New File / Upload New File
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Credentials
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Origin
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Cache-Control
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Connection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Expires
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Pragma
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Referrer-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-XSS-Protection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"file Save Successfully"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \"file Save Successfully\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Upload New File"}
+                  value={"Upload New File"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \"file Save Successfully\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

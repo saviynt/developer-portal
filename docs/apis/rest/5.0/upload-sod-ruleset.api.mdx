@@ -1,0 +1,524 @@
+---
+id: upload-sod-ruleset
+title: "Upload SOD Ruleset"
+description: "The **uploadSODRuleset** API uses the Ruleset upload file to import rulesets into the User Interface (UI)."
+sidebar_label: "Upload SOD Ruleset"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWG1v2zgS/isDfkkbWLbsNLuNfTlc6ri7udvEQZ3iFkiD7YQa2WwoUiUpJ9rA/31BSnbll21d4L5d/cU2OfPMwxlyZshn5nBqWf+WTWhqaIpOaAU6hfPCCbLsrsUSstyI3E+wPruZERweFrnUmEzG5+8KSZbc4SGcXV9AYcmCmxHUw1DJQSokgdMgslwbB6aatSCU00H+vSUDF8qRSZETvHh/8bL9QX1QEXh7ZgcaPXGiRKhp0LfiT/Ksu/HlGxAWlHZgi9xbo6Ttcd5bAq1kCe0naUGb8P1UYaXaZOj8VwBbN9eGcx3wCkuAqoT2nyIPeoHh4eElqgSdNiXkaDAjR8b2Dw/95Mf3FePJ+Hzpko8QwYQkcecdcm/0o4eFF57OyxWdle2x4hRIhRlh6wlKWmFUYRbWvZJwM3RQ6gLQOeQzSrxOImwusQye+KA+0pOwTqhpk1FOXKRlwJmjLAjQQkkWRFqhGYLCLr29BFh6qoKt/1xhRpuQTZo7lQ8Px25GBq43PRjBx4QkORrVapfDM2s1F2Gj2q9x7yi9pP8o7My7u4IKUVzRyIQTfturKXCtnNHSAjZMtHeQeFso7if3pdKwveaCtMZZM9gCkpbA7sK60hUdbggdZcL6mIyUE05SRsp9k0WlCLUmUEP1G3ZZi+mcTOB4kbA+q3OATup9xFrM0OeCrHujk5L1n5n3Jynnf2aFdCJH4zr+sEUJOvTDls8oC79cmRPrM33/ibiHyo23FnKQRwq0L7fX21C1zgg1ZS1GT5jl0g+VZNnCZ7BvBe/rMEpvo6zvw330N47dPiqNI/V18Roz7nVjr1eFxieEXWpVumN9di8UmpItwsdHz+Za2crjvTj2X+vJfzudsRabESZkgtIZ52RtNKzOUXQmpX6MhoYSv89Q2p0h37EcZwpintJOwLERU6H2xZo5l9t+p/OZIhLcmUI9RPho2xbnolSOS10kba6zYG/oc+bS3L4Wcm1dxGfEH07jFuSGln8qSK0U8cqB++E9EOURSjGnJYA/RdGEeGGEK6NrLQUv90W7R0tRYQQcWJLpAQzAulJSZA1fDsHSR6lWzranWk8lYS6s9wscFMpiSpFQUig6GEC1I3YCWCtr9QgVytIJXoEsBR4fH2sBP9wxxDF3fIaddQnr0Am+KbLBZPWf5igPBlDljiavAWSUCNwYQiVSshuCILJpc+SbKxpA6mvVLp2NRcLAVxa1xc17e5f6zijsxl4bLlT+MF0brZG+eDNYNVmEVdmpDC9XgoqTddrY1XhCKRaySTLsyHN0tO/2uymoBfERjLmDXtw7gu5R/+ik/+oV/HJ5E9BGT7kwtHdumBSqBT/DJZbQPTk5hm6vH8f9OF7hXZMJ5U0r+51HZWtjD4BjRgbhQGlF1eKvDU6z3cVrZx6PuM8pQfUdpWQMme+kpat85xEm5KKh1g9ib/8Ph5N3b6Ob8X9GV6cYv37986u0Fx1jl0everwbveZpNzpOTtLeT108OeI4gF+dy8dKlgMIGYcGMMGMJsLR6cQZwd0ArtHNTjuDilIYi24MKuv77VWe2pdhhk8RTun0qHt89FMcxwMQissioUlxf64zFMoGQ8FCSiYaKa5957+vAT4r1AMlAeT3aJlOb8qconG+Kt/7RdMqkaY10ttwar4TYnJ2ORq/u/jl4qpG+X0yia6Ndt9XI7oDyHRCp/dS8wcWynej28I8l4KH1qTzyf4N6t+0Wpmdft30G+QPU6MLlcAnfQ8ztGAd+osWoEqAMhQSHoWUcE9gSTnA1FF1taoak4pvjRiM7mgs+s8stJ8rTv8jw1WvY1eb9PaZ3RMaMmeFm7H+7d3irsUycjOd1LXduwj9HOts3nuZRzLz0P7cPrPCyEbH8exIoXKLrVajMxpedjAXnfkxa7E5GoH3tSMqle3Oqx73XWhIyay/ishi4RkvFzTxYa6wmstaBdST86yDmG8PghBr1T/eLnvDf/+3yqZCpTqo+5bb799qLTDyl/XcCEtwEdo7V8LQLzA8BIRMR4oT234/EBaGWspqv0Nu9Fwk9bNBQg6Fv55XV8XVDR6qeNjVFf3bLF6MLoYvvXfJ2MrycTtux6zFHJnMjtMJmbngzQ6xDlOIUBDqsOpUIQ8RUaENZ359k4oZa22E3JfhJoxdyYXd6Q9UNfKvhpTv2KXgpCw1zeS+bkAvcN62gmG6rc20U+vazm8Xw9HVZBT12nF75jLpgZ8iqachgusYTZaPeVQnj3qD204v7p504led2tF/eJA/rnBetu18GjaGPxkZqgbjnbeDteg3roQ/HpJ+PCT9eEj6P31IqmuRoyfXySX65rbOcc91qb1lW6X2rsVmvhr3b9nzs7/VvjdysfDDnwsyvpLffSmmoZAv3yZCbX6g0rfDje4v1N7QYex8nlq0lkr+FSJ3DfGt/mqtZ7geT258Qa1fwXyfxvrh1SXgtr78rEjieoXeqMiBfD2Fqmyw+MebIAA3+oHUP1mrZuv8X7a4WywWfwEtYFfA
+sidebar_class_name: "post api-method"
+info_path: apis/rest/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Upload SOD Ruleset"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/uploadSODRuleset"}
+>
+  
+</MethodEndpoint>
+
+
+
+The **uploadSODRuleset** API uses the Ruleset upload file to import rulesets into the User Interface (UI).
+
+- The ruleset upload file exceeding the size of 10MB is not supported.
+- Use only .xls or .xlsx file format for the ruleset upload. Do not use any .zip file.
+
+**Mandatory parameters:**
+
+`Upload SOD Ruleset` - Select to browse a (.xls) file for upload. Once the file is uploaded, the name of the file that you attached is displayed.
+
+`existingRuleset` - Specify the value as yes if you are using the existing ruleset.
+
+`rulesetName` - Specify the name of the existing ruleset.
+
+**Other Parameters:**
+
+- `deleteExistingMCAssociations` - Specify the value as yes/no if you wish to delete any existing mitigating controls associations.
+- `deleteExistingFunctionAssociations` - Specify the value as yes to delete the existing function associations, else specify the value as No.
+- `createmissingEntitlements` - Specify the value as yes to create missing entitlements, else specify the value as No.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"multipart/form-data"}
+    value={"multipart/form-data-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"createMissingEntitlements"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"yes"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"deleteExistingFunctionAssociations"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"no"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"deleteExistingMCAssociations"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"no"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"existingRuleset"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"no"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"rulesetName"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"Ruleset0210"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"uploadfile"}
+          required={false}
+          schemaName={"binary"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","format":"binary"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Upload SOD Ruleset
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Credentials
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Origin
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Cache-Control
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Connection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Content-Security-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Expires
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Permissions-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Pragma
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Referrer-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-XSS-Protection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Background job has started and email will be sent after the upload"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"msg\": \"Background job has started and email will be sent after the upload\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Upload SOD Ruleset"}
+                  value={"Upload SOD Ruleset"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"msg\": \"Background job has started and email will be sent after the upload\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

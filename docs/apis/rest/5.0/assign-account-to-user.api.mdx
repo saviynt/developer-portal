@@ -1,0 +1,334 @@
+---
+id: assign-account-to-user
+title: "Assign Account to User"
+description: "This method provisions an 'Account' to a 'User' in SSM.  The 'Account' corresponds to a particular IT Application (e.g Microsoft Active Directory) which is modeled in SSM as 'Endpoint' of a 'Security System'."
+sidebar_label: "Assign Account to User"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVltv2zYU/isEn1pAt1y8pBoKzHXdwtuSFJWDDoiDmqaOLTYSqZKUHc/Qfx8OJTtykyzGHvbUJ8uH5/Kd+9lQyxaGxje0z7mqpDX01qMpGK5FaYWSNKbjTBhSgM1USkqtlsIIJQ1hkky2UhNKrCKMTOi1AT2hREiSJBcBIeMM9ti40hpMqWRqGpGSaSt4lTNNRmPSL8tccIaWySsIFuRCcK2MmlvS51YsgbwXGrhVev2arDLBM4LgVAo5pK1VwgyZ0KFMSyWcTTV30BLglRZ2TZK1sVBMaEAmciIvmEwZKkQorDAxEqemZTaOd0p8cskKQFU2A/KDKjJX2tE15LBk0v7oyj7AwFmAFuB0X/UWdydSQi4wVk8YbjSxJrqSFYBA22AT/L9DtkscpKTlb4QrA3ored1+b7HgG1peZapwhFaSZMxlb7an1+nDfE/7lc2UFn8756ekqAyKLIFM3wHToKdkrvJcrSAlszWZjtUdyGlAPapK0E5olNKYMmPEQrbujBWiox7V8L0CY9+pdE3jDeVKWpAWP9lDxMN7f7Va+XOlC7/SOUiuUkiRyfAMCoZfdl0CjamafQNuqUdLjeatAOOUPQS1w2ysFnJBPQr3rChzJH1TmfyS0Nqj24z+O3+TuSMU2C+yg8W2KXsZV6qA1nW9IzvP+i6suzKxyuUdX5Ysr+CR81sPuw7u4Dx2ovP0ALSLxgFqSts0iI6jCH/2x84zMD2aAUtBO8H3zMKTSX0iHl8g9Uh0TvrVghxHR+ckiuKT8/j0hHy8GFPElIBeNoE4RF+/ZDwDf6DWykJ4FBy1Oqw/UOpOHIxrMEg+f/DHV38ML9/y49Oz9Kz3xj+Zp5F/etaL/FnvzYk/n/UA+PkR/6UX/Uo+MZu9DZ25sWbSzEH7Q6xwVH2gVZ5V8g5Sp+Qv/4NmBfhXLvTmUBVJ/2J49Xn0cXTZ1NgznfjNYDoPbzzQWumBSl8o7wg7oQBj2OIFzuR6MBgmyX9qhA4YGtGOwa7WpqKbDUljWirjvGI2ozENn55ixtUabt4NrXROY5pZW5o4DDcWJJO2DgxbirW0PFdVGnBVhMPBRchKES571KNLpgWbtZ40Io97qKXjRp+zKsfG3calruvbh+Z1OGZuOOPwpvHNbfc5wdw1prpMu6gjdnTKsdG4ZaJe+/FB6YKh8d+/NJ0m5Fw5cWGbFDWukqG0oEstDJBRCtLiphug/6T/aUQ+wxw0SA70yRNloPIcuNu3biulYNzSSsEykZvtUjNVWSptIW1vGrPbkS+jeDUcDV5j8EGbxnIviAIsDAu6MFdzHCGCQyedbRZdAh1TSJtWYdwlrJ2P6F/SIMPBuVcRq9Uq6KoxOz4omEDOlvJbhwvbIxccpIGuGTe0yLHD/NgKc8+B0ouwlTXhn6PB8DIZ+sdBFGS2yFHxvZ+rhcvgvo4uylXptxMhrMpcsdSEx9HRmzA6DdtAf0UlXy/Zch2Y5cIVBvZOwWQX8XNrYK8COnfAz3v15736f92r7fizcG/DMmdCuvMMW2LTzv+bJ6/YW49muCXiG7rZzJiBa53XNZK/V6BxGt8+THg3jLdnjxvUd7DGw6GpeH+MILztzjrgCq69rYo+51DaZ4Td4sYtsNtsn66SMQ719vQumr3Y0ex1/yDsuv4HvLcCJA==
+sidebar_class_name: "post api-method"
+info_path: apis/rest/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Assign Account to User"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/assignAccountToUser"}
+>
+  
+</MethodEndpoint>
+
+
+
+This method provisions an "Account" to a "User" in SSM.  The "Account" corresponds to a particular IT Application (e.g Microsoft Active Directory) which is modeled in SSM as "Endpoint" of a "Security System". 
+
+Mandatory params:
+
+`securitysystem` - Name of the Security System for the relevant IT Application modeled in SSM.
+
+`endpoint`- Name of the Endpoint corresponding to the Security System.
+
+`accountname` - Account name for the provisioned account.
+
+`username` - Username of the user to whom the account has to be provisioned.
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/x-www-form-urlencoded"}
+    value={"application/x-www-form-urlencoded-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"accountname"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"johnWS"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"endpoint"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"System1"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"securitysystem"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"System1"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"username"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"johndoe"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Assign Account to User
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"SUCCESS"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"message\": \"SUCCESS\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Assign Account to User"}
+                  value={"Assign Account to User"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"message\": \"SUCCESS\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      
