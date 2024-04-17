@@ -24,9 +24,12 @@ servers:
       tenant:
         description: 'tenant'
         default: 'example'
+security:
+  - bearerAuth: []  # Applies bearerAuth globally to all operations
 paths:
   /api/login:
     post:
+      security: [] 
       tags:
         - Authentication
       summary: Get Authorization Token
@@ -42,7 +45,7 @@ paths:
         the HTTP Authorization header with the `Bearer` scheme.
 
 
-        > https://yourdomain.saviyntcloud.com/ECM/api/login 
+        > https://example.saviyntcloud.com/ECM/api/login 
         
         
         A `POST` request by passing 'username' and 'password' in `json` text in
@@ -130,6 +133,7 @@ paths:
                     token_type: Bearer
                     username: admin
   /oauth/access_token:
+    operationId: refreshAuthorizationToken
     post:
       tags:
         - Authentication
@@ -151,7 +155,8 @@ paths:
 
 
         [OAuth 2.0 documentation](https://oauth.net/2/)
-      operationId: refreshAuthorizationToken
+      security: 
+        - oauth2RefreshToken: []  # Applying the refresh token flow
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -17490,7 +17495,6 @@ paths:
                         updatedBy: '1'
                         useopenconnector: 'false'
                     totalCount: 1
-
   /deleteSecuritySystem:
     delete:
       tags:
@@ -17856,7 +17860,6 @@ paths:
                     errorCode: '1'
                     msg: ' user U003961 already present in usergroup. user M0014 does not exist in usergroup. entitlement FIXED_ASSET_INQUIRY_TECH_IN already present in usergroup. entitlement FIXED_ASSET_INQUIRY_SOFT_IN does not exist in usergroup. owner G000706 is already present. Owner U009075 does not exist in usergroup. owner G000526 is not present.'
                     usergroupkey: '2'
-
   /addRemoveUserFromUserGroup:
     post:
       tags:
@@ -17919,7 +17922,6 @@ paths:
                   value:
                     errorCode: '0'
                     message: saved successfully
-
   /deleteUserGroup:
     post:
       tags:
@@ -17996,7 +17998,6 @@ paths:
                   value:
                     errorCode: '0'
                     msg: Success
-
   /fetchUserGroup:
     post:
       tags:
@@ -18605,7 +18606,6 @@ paths:
                   value:
                     errorcode: 1
                     msg: user group not found  with groupid 100
-
   /createOrganization:
     post:
       tags:
@@ -18973,7 +18973,6 @@ paths:
                   value:
                     errorCode: '0'
                     msg: Success
-
   /updateOrganization:
     put:
       tags:
@@ -19381,7 +19380,6 @@ paths:
                   value:
                     errorCode: '0'
                     msg: Success
-
   /getOrganization:
     get:
       tags:
@@ -19729,7 +19727,6 @@ paths:
                             status: Active
                             username: '1000005'
                     totalcount: 1
-
   /deleteOrganization:
     post:
       tags:
@@ -19838,7 +19835,6 @@ paths:
                   value:
                     errorcode: '0'
                     msg: success
-
   /getConnections:
     post:
       tags:
@@ -19945,7 +19941,6 @@ paths:
                         UPDATEDON: '2017-08-18T04:18:19Z'
                     errorCode: '0'
                     msg: Successful
-
   /getConnectionDetails:
     post:
       tags:
@@ -20199,7 +20194,6 @@ paths:
                     msg: success
                     status: 1
                     updatedby: admin(adminfname adminlname)
-
   /deleteConnection:
     delete:
       tags:
@@ -20335,7 +20329,6 @@ paths:
                       - '8': Connection Deleted Sucessfully
                     errorcode: '0'
                     msg: success
-
   /createDataset:
     post:
       tags:
@@ -20436,7 +20429,6 @@ paths:
                   value:
                     errorCode: 0
                     msg: Success
-
   /getDatasetValues:
     get:
       tags:
@@ -20515,7 +20507,6 @@ paths:
                   value:
                     errorCode: 0
                     msg: Success
-
   /updateDatasetValues:
     post:
       tags:
@@ -20611,7 +20602,6 @@ paths:
                   value:
                     errorCode: 0
                     msg: Success
-
   /deleteDataset:
     post:
       tags:
@@ -20688,7 +20678,6 @@ paths:
                   value:
                     errorCode: '0'
                     msg: Successful
-
   /uploadDatasetCSV:
     post:
       tags:
@@ -20775,7 +20764,6 @@ paths:
                   value:
                     errorCode: 1
                     msg: Unexpected error occurred
-
   /updateDataset:
     post:
       tags:
@@ -20871,7 +20859,6 @@ paths:
                   value:
                     errorCode: '1'
                     msg: Unexpected error occurred
-
   /fetchControlList:
     post:
       tags:
@@ -21009,7 +20996,6 @@ paths:
                         risk: High
                     errorCode: '0'
                     msg: Success
-
   /fetchControlDetails:
     post:
       tags:
@@ -21085,7 +21071,6 @@ paths:
                     msg: Success
       security:
         - bearerAuth: []
-
   /runAnalyticsControls:
     post:
       tags:
@@ -53261,9 +53246,15 @@ components:
     basicAuth:
       type: http
       scheme: basic
-    bearerAuth:
+    bearerAuth:     # Arbitrary name for the security scheme
       type: http
       scheme: bearer
+      bearerFormat: JWT  # Optional, only if you use JWT tokens
+    oauth2RefreshToken:
+      type: oauth2
+      flows:
+        refresh:
+          refreshUrl: https://example.saviyntcloud.com/oauth/access_token
 x-ignoredHeaderParameters:
   - Accept
   - User-Agent
