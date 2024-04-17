@@ -6,8 +6,8 @@ import { DOCUSAURUS_VERSION } from "@docusaurus/utils";
 
 
 const config: Config = {
-  title: "Saviynt Developer Portal",
-  tagline: "Portal for helping developers build a rich ecosystem of tools and apps to support Saviynt",
+  title: "Saviynt for Developers",
+  tagline: "Helping developers build a rich ecosystem of tools and apps around Saviynt",
   url: "https://saviynt.github.io",
   baseUrl: "/developer-portal/",
   onBrokenLinks: "warn",
@@ -56,7 +56,7 @@ const config: Config = {
       },
     },
     navbar: {
-      title: "DEVELOPER |",
+      title: "FOR DEVELOPERS",
       logo: {
         alt: "Keytar",
         src: "img/Saviynt_logo_Navy.svg",
