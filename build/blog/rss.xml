@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Saviynt for Developers Blog</title>
+        <link>https://saviynt.github.io/developer-portal/blog</link>
+        <description>Saviynt for Developers Blog</description>
+        <lastBuildDate>Fri, 12 Apr 2024 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[New Phase of The Community Connectors]]></title>
+            <link>https://saviynt.github.io/developer-portal/blog/new-phase-community-connectors</link>
+            <guid>https://saviynt.github.io/developer-portal/blog/new-phase-community-connectors</guid>
+            <pubDate>Fri, 12 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Community Connector @ Developer Portal]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="community-connector--developer-portal"><strong><a href="https://saviynt.github.io/developer-portal/community/connectors" target="_blank" rel="noopener noreferrer">Community Connector @ Developer Portal</a></strong><a href="https://saviynt.github.io/developer-portal/blog/new-phase-community-connectors#community-connector--developer-portal" class="hash-link" aria-label="Direct link to community-connector--developer-portal" title="Direct link to community-connector--developer-portal">​</a></h2>
+<p>In the ever-evolving landscape of software development and integration, the ability to collaborate, innovate, and swiftly adapt to changes is paramount. This is why we have made a significant shift in how we handle our community connectors: moving them from traditional forums and exchange sites to our newly established Developer Portal, which leverages Git as its backend. This transition marks a strategic shift  in our approach to managing and disseminating these crucial resources. Here, we’ll explore the motivations behind this move and the benefits it brings to developers and system integrators.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="limitations-of-forums-and-exchange-sites"><strong>Limitations of Forums and Exchange Sites</strong><a href="https://saviynt.github.io/developer-portal/blog/new-phase-community-connectors#limitations-of-forums-and-exchange-sites" class="hash-link" aria-label="Direct link to limitations-of-forums-and-exchange-sites" title="Direct link to limitations-of-forums-and-exchange-sites">​</a></h3>
+<p>Previously, our community connectors were housed on forums and exchange sites. While these platforms provided a basic framework for sharing and downloading connectors, they had notable limitations. Users could browse available connectors and download them, but interaction was largely restricted to commenting within forums. This setup offered no facility for direct modification or enhancement of the connectors, which stifled collaboration and the organic growth of our tools.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="why-move-to-a-developer-portal-with-git"><strong>Why Move to a Developer Portal with Git?</strong><a href="https://saviynt.github.io/developer-portal/blog/new-phase-community-connectors#why-move-to-a-developer-portal-with-git" class="hash-link" aria-label="Direct link to why-move-to-a-developer-portal-with-git" title="Direct link to why-move-to-a-developer-portal-with-git">​</a></h3>
+<p>Our decision to transition to a Developer Portal using Git is rooted in our commitment to enhancing developer engagement and promoting a more vibrant ecosystem of tools. Git, a widely used version control system, allows for robust collaboration and version control, making it an ideal backbone for our Developer Portal. Here are the key reasons and benefits of this move:</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="enhanced-collaboration-and-ownership">Enhanced Collaboration and Ownership<a href="https://saviynt.github.io/developer-portal/blog/new-phase-community-connectors#enhanced-collaboration-and-ownership" class="hash-link" aria-label="Direct link to Enhanced Collaboration and Ownership" title="Direct link to Enhanced Collaboration and Ownership">​</a></h4>
+<p>By hosting our community connectors on a platform backed by Git, we empower developers to take ownership of the tools they use. Developers and system integrators can now fork connectors, make their own modifications, and suggest changes through pull requests. This open-source model encourages a more active role in the development process, fostering a community that contributes to the continuous improvement of connectors.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="streamlined-contribution-process">Streamlined Contribution Process<a href="https://saviynt.github.io/developer-portal/blog/new-phase-community-connectors#streamlined-contribution-process" class="hash-link" aria-label="Direct link to Streamlined Contribution Process" title="Direct link to Streamlined Contribution Process">​</a></h4>
+<p>The Git-based Developer Portal simplifies the process of contributing to connector development. Contributors can clone repositories, push updates, and merge changes with ease. This streamlined workflow not only makes it simpler to contribute but also speeds up the process of incorporating new features and fixes into connectors.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="transparency-and-issue-tracking">Transparency and Issue Tracking<a href="https://saviynt.github.io/developer-portal/blog/new-phase-community-connectors#transparency-and-issue-tracking" class="hash-link" aria-label="Direct link to Transparency and Issue Tracking" title="Direct link to Transparency and Issue Tracking">​</a></h4>
+<p>One of the significant advantages of using Git is the transparency it brings to community and issue tracking. Developers can report issues directly within the repository, and the history of changes, discussions, and resolutions are preserved and visible to all users. This openness improves the reliability of connectors and ensures that issues are addressed in a timely and effective manner.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="discoverability-and-accessibility">Discoverability and Accessibility<a href="https://saviynt.github.io/developer-portal/blog/new-phase-community-connectors#discoverability-and-accessibility" class="hash-link" aria-label="Direct link to Discoverability and Accessibility" title="Direct link to Discoverability and Accessibility">​</a></h4>
+<p>Our Developer Portal is designed with discoverability in mind. Developers can easily search for connectors, view documentation, and download the tools they need. The Git backend supports version control and release management, which means that users can access both current and previous versions of connectors, enhancing compatibility and testing across different environments.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="looking-ahead"><strong>Looking Ahead</strong><a href="https://saviynt.github.io/developer-portal/blog/new-phase-community-connectors#looking-ahead" class="hash-link" aria-label="Direct link to looking-ahead" title="Direct link to looking-ahead">​</a></h3>
+<p>This transition to a Developer Portal with a Git backend is more than just a change of platform; it is a fundamental shift in how we engage with and support our developer community. It encourages a more active, collaborative, and transparent approach to managing the development and utilization of community connectors.</p>
+<p>As we move forward, we will continue to refine these processes and enhance the capabilities of the Developer Portal to better serve the needs of developers and system integrators. We invite all users to join us in this new phase, to contribute, and to help shape the future of our connector ecosystem.</p>
+<p>As we move forward, we will continue to refine these processes and enhance the capabilities of the Developer Portal to better serve the needs of developers and system integrators. We invite all users to join us in this new phase, to contribute, and to help shape the future of our connector ecosystem.</p>]]></content:encoded>
+            <author>kundan.kumar@Saviynt (Kundan Kumar)</author>
+            <category>community-connectors</category>
+        </item>
+        <item>
+            <title><![CDATA[Hello, World!]]></title>
+            <link>https://saviynt.github.io/developer-portal/blog/hello-world</link>
+            <guid>https://saviynt.github.io/developer-portal/blog/hello-world</guid>
+            <pubDate>Wed, 10 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Welcome to my first blog post on Saviynt's Developer Portal!]]></description>
+            <content:encoded><![CDATA[<p>Welcome to my first blog post on Saviynt's Developer Portal!</p>]]></content:encoded>
+            <author>kundan.kumar@Saviynt (Kundan Kumar)</author>
+            <category>hello</category>
+            <category>developer-portal</category>
+            <category>saviynt</category>
+        </item>
+    </channel>
+</rss>
