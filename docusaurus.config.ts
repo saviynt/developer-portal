@@ -229,7 +229,7 @@ const config: Config = {
             showSchemas: true,
             version: "5.0", // Current version
             label: "5.0", // Current version label
-            baseUrl: "/developer-portal/api-reference/rest/5.0", // Leading slash is important
+            baseUrl: "/developer-portal/reference/rest/", // Leading slash is important
           } satisfies OpenApiPlugin.Options,
         } satisfies Plugin.PluginOptions,
       },
