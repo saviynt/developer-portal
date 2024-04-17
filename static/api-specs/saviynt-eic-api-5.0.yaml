@@ -28,6 +28,8 @@ security:
   - bearerAuth: []  # Applies bearerAuth globally to all operations
 paths:
   /api/login:
+    servers:
+    - url: 'https://{tenant}.saviyntcloud.com/ECM'
     post:
       security: [] 
       tags:
@@ -133,6 +135,8 @@ paths:
                     token_type: Bearer
                     username: admin
   /oauth/access_token:
+    servers:
+    - url: 'https://{tenant}.saviyntcloud.com/ECM'
     operationId: refreshAuthorizationToken
     post:
       tags:
