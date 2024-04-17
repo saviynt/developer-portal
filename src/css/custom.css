@@ -320,3 +320,75 @@ div[class^="announcementBar_"] {
   margin-right: 0;
 }
 
+
+/* blockquote {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  text-align: left;
+} */
+
+blockquote {
+  position: relative;
+  margin: 1em 0;
+  padding: 1em 1em 1em 2em;
+  border-left: 4px solid;
+  background: rgba(0, 0, 0, 0.05); /* A very light shade of grey */
+  border-radius: 4px;
+}
+
+blockquote::before {
+  content: ''; /* This will be replaced by the specific icons */
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-family: 'Material Icons';
+  font-size: 24px;
+}
+
+blockquote.note {
+  border-color: #007bff;
+  background: rgba(0, 123, 255, 0.1); /* A light blue background shade */
+}
+
+blockquote.note::before {
+  content: 'note'; /* Material Icons identifier for the note icon */
+}
+
+blockquote.tip {
+  border-color: #28a745;
+  background: rgba(40, 167, 69, 0.1); /* A light green background shade */
+}
+
+blockquote.tip::before {
+  content: 'lightbulb'; /* Material Icons identifier for the tip icon */
+}
+
+blockquote.warning {
+  border-color: #ffc107;
+  background: rgba(255, 193, 7, 0.1); /* A light yellow background shade */
+}
+
+blockquote.warning::before {
+  content: 'warning'; /* Material Icons identifier for the warning icon */
+}
+
+blockquote.important {
+  border-color: #dc3545;
+  background: rgba(220, 53, 69, 0.1); /* A light red background shade */
+}
+
+blockquote.important::before {
+  content: 'error'; /* Material Icons identifier for the important icon */
+}
+
+blockquote.caution {
+  border-color: #17a2b8;
+  background: rgba(23, 162, 184, 0.1); /* A light cyan background shade */
+}
+
+blockquote.caution::before {
+  content: 'report_problem'; /* Material Icons identifier for the caution icon */
+}

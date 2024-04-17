@@ -5,6 +5,48 @@ import { marked } from 'marked';
 import DOMPurify from 'dompurify';
 import Layout from '@theme/Layout'; // Assuming you are using the default Docusaurus theme
 
+// Create a custom renderer
+const customRenderer = {
+  /* custom rendering of 
+    > [!NOTE]  
+    > Highlights information that users should take into account, even when skimming.
+
+    > [!TIP]
+    > Optional information to help a user be more successful.
+
+    > [!IMPORTANT]  
+    > Crucial information necessary for users to succeed.
+
+    > [!WARNING]  
+    > Critical content demanding immediate user attention due to potential risks.
+
+    > [!CAUTION]
+    > Negative potential consequences of an action.
+  */
+    blockquote(quote) {
+      const quoteContent = quote.replace(/^\[!\w+\]\s*/gm, ''); // Remove the markers
+      if (quote.includes('[!NOTE]')) {
+        return `<blockquote class="note">${quoteContent}</blockquote>`;
+      } else if (quote.includes('[!TIP]')) {
+        return `<blockquote class="tip">${quoteContent}</blockquote>`;
+      } else if (quote.includes('[!WARNING]')) {
+        return `<blockquote class="warning">${quoteContent}</blockquote>`;
+      } else if (quote.includes('[!IMPORTANT]')) {
+        return `<blockquote class="important">${quoteContent}</blockquote>`;
+      } else if (quote.includes('[!CAUTION]')) {
+        return `<blockquote class="caution">${quoteContent}</blockquote>`;
+      }
+      return `<blockquote>${quoteContent}</blockquote>`;
+    },
+};
+
+// Set options
+marked.use({
+  pedantic: false,
+  gfm: true,
+},{ renderer: customRenderer }
+);
+
 
 const ReadmePage = () => {
   const location = useLocation();
