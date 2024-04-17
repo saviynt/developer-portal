@@ -1,0 +1,413 @@
+---
+id: updatedatasetvalues
+title: "updateDatasetValues"
+description: "This API is used to update the values of the DatasetValues."
+sidebar_label: "updateDatasetValues"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVV9tu2zgQ/RVinnYByVLcpElUBNhUdbvuNhfE7gVwgngkjS1uJFIlKTtew/++IKWkSuNtUqAv6yebHJ45c+EZeg0G5xqiCbxBg5oMXHmQkU4VrwyXAiIY51yz4/Mh45rVmjJmJKurDA0xkxNbYFGTZnLmfrUon9xi71JcinFObHpcm1wq/g9azCkra21YjgtiyKavCRWpKZvJopBLyliysstjeUNi6iBOUGRopFqxChWWZEjpiLFLMc0adwJLmrqFhhgao3hSG9JT8EBWpJzjYQYRNBbtwYY8eKDoa03avJbZCqI1pFIYEsZ+xaoqeOrOB39rm5E16DSnEu03s6oIIpDJ35Qa8KBS1pvhpO1uh17HWBvFxRw8oFssq8IufUBD2lzHqGDjQSEbf7HMnji3E1r774N+mljKzerHyMevY9jYz/2iO9i4elBlu+zy+CjibljfR2Wpb2fecPtGwFJQpCspdGPQD0Pn6kGXbiPmQU6YkXKnYikEpY31lgpuScENUeVjwRcElsMbNPTco58p81h4wN7XgvXDfp+FL6Od/ah/yN6djB3aiIwfS3nDn40Zx6OLt/747K/B6VGCafLyRfLCfzHLyN/d3z/wD5OdxD94SQd4uLt72M/2XrFzNPlR0LgziqfGHysUupLK+CNKa9V2wXO8l3jr45yOdvb2+7sHYfiKcZEWdUajOnkjS+RCO0fOw4yUPxCpzCzKMx2keS1uKHMgn1A9m9hxmpLWfiyFUbLwL5qL7P/ZVt7CfXG7JIw/XlXkn7me0c91IKQWfDZrkd5aAfpZiNHxyeDsYvhueNqifBmN/HMlzc815M4rVsqMjpJCpjfgLsYvEipSSqrv5EbUZUKqSyDceFDq+ROx1q4g8NPS0eEQtn66YI0QlGRyaWW8ktqFgSaHCILt11+TWrjrP1lDrQqIIDem0lEQrA0JFGbT07jgK2HSQtZZL5VlMIhPAqx4sNgDDxaoOCZtAM2Rx9LTrtu5OcO6MBDdp2Oz2VxZGnd3bbKGxI07OxAhmlx1t0e2WI2rBDVPG5v7XFvqNiZnBVFjY+W/i/jf1s4I7qzfSlWiZfr+89hiSKxN3r+gmSKdu9HbbRq3CR7MCrl0/FRj2Pn68UF62/gfZ9dBBeiqem2cn6awtmMvvg3hwV0//fqR4gEXM+nC46Zp2YYlGwhDqlJcExtmJAw3KxZb6u75c0EzUiRSgq0vpFgWRXOdWaXkgmek3YsoI4O8uH8g6bqy+ksZa1pZs5lUbudpFr8NhvHvtitJ6cbzXi/s2aANqVKfzUakFjylTiHaArjcO6MAGtHA1HVym1Ub36hhZlP4oJbL5bLXhdH3dlQit5btyh8dK/eM4SkJTV03FaY5sb7j/NgLuu2eVPOgPauDD8N4cDoa+P1e2MtNWVjgW7+Qc1fBhxhdlsvKb7UxqKtCYqaDfrhzGIS7QZvoawtyfYqLVU8v5q4xrKiUKDqMt+vKg/J3Xov//7dye+MN3ZqgKpAL9760WV63WjvZmpMrD3KryNEE1usENX1UxWZjl7/WZIf55Oqbmjrhu3ucOVG8IXs/u1Paia+bDI8H28a7O2GHf2V+aHvVGRrnZ6OxlcD2lV82sqFwaf8B4BIiuIRLcH8Z7ue7W19DgWJe49zaN7j28y/NWZc4
+sidebar_class_name: "post api-method"
+info_path: apis/rest/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"updateDatasetValues"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/updateDatasetValues"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API is used to update the values of the DatasetValues.
+
+The `Authorization` must have a `Bearer` followed by a `Token`.
+
+Mandatory parameters:  
+`datasetname`  
+`updateattributes`
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"datasetname"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"Latest_Car"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"locationCode"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"10"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={true}
+          className={"schemaItem"}
+        >
+          <details
+            style={{}}
+            className={"openapi-markdown__details"}
+          >
+            <summary
+              style={{}}
+            >
+              <span
+                className={"openapi-schema__container"}
+              >
+                <strong
+                  className={"openapi-schema__property"}
+                >
+                  updateattributes
+                </strong><span
+                  className={"openapi-schema__name"}
+                >
+                   object
+                </span>
+              </span>
+            </summary><div
+              style={{"marginLeft":"1rem"}}
+            >
+              <SchemaItem
+                collapsible={false}
+                name={"city"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"ABC"}}
+              >
+                
+              </SchemaItem>
+            </div>
+          </details>
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          updateDatasetValues
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Connection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Vary
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-XSS-Protection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":0}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Success"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": 0,\n  \"msg\": \"Success\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"updateDatasetValues"}
+                  value={"updateDatasetValues"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": 0,\n  \"msg\": \"Success\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

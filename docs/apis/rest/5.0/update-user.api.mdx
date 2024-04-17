@@ -1,0 +1,658 @@
+---
+id: update-user
+title: "Update User"
+description: "This method updates a specific 'user' record in SSM, based on the input parameter `username` of the relevant user."
+sidebar_label: "Update User"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: apis/rest/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update User"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/updateUser"}
+>
+  
+</MethodEndpoint>
+
+
+
+This method updates a specific "user" record in SSM, based on the input parameter `username` of the relevant user. 
+
+All the input parameters it requires are attributes which could be updated for the relevant user record. The attributes which are supplied with valid values as input to the method, will get updated, if the operation is successfully executed.
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+Mandatory params:
+
+`username`
+
+***OR***
+
+`propertytosearch`
+
+***Note*** - If both params are passed, propertytosearch will take precedence.
+
+Optional params:
+
+`validateagainstpolicy` - Values: Y/N, default is Y. Checks for the password policy,
+
+`allowpastdate` - true / false (default). If true, allows startdate to be less than current date,
+
+`statuskey` - Values:1/0, 0 - Inactive, 1 - Active,
+
+`updatedusername` - update username,
+
+`User params` like
+    firstname, 
+    preferedFirstName,
+    lastname,
+    middlename,
+    street,
+    city,
+    comments,
+    statuskey,
+    startdate(MM-dd-yyyy),
+    enddate(MM-dd-yyyy),
+    manager (manager username),
+    password,
+    location,
+    jobCode,
+    jobDescription,
+    employeeType,
+    systemUserName,
+    departmentNumber,
+    title,
+    state,
+    companyname,
+    costcenter,
+    departmentname,
+    employeeclass,
+    entity,
+    jobcodedesc,
+    locationdesc,
+    locationnumber,
+    siteid,
+    orgunitid,
+    region,
+    regioncode,
+    owner,
+    employeeid,
+    lastsyncdate,
+    createdate,
+    email,
+    phonenumber,
+    job_function,
+    country,
+    displayname,
+    enabled(can be "1"/"true" or "0"/"false"),
+    passwordExpired(can be "1"/"true" or "0"/"false"),
+	accountExpired(can be "1"/"true" or "0"/"false"),
+	accountLocked(can be "1"/"true" or "0"/"false"),
+    secondaryManager,
+    createdBy,
+    termDate,
+    vendorManager,
+    secondaryPhone,
+    secondaryEmail,
+    customproperty&lt;1-50&gt;,
+    hcp&lt;1-5&gt;,
+    ecp&lt;1-5&gt;,
+    customer(pass the organization name),
+    
+   `securityQuestions` - 
+
+Example: 
+"securityQuestions":[
+		\{
+			"securityQuestion":"What is your first Pet's name?",
+			"securityAnswer":"kitty"
+		\},
+		\{
+			"securityQuestion":"What is your favorite food?",
+			"securityAnswer":"food"
+		\}
+		],
+		
+`checkrules` - true/ false (default : true), if true, then rules will be evaluated immediately, if false rules will be evaluated by a job. If checkrulesforapi configuration(true/false/null) is set in the configuration table, then it will take precendence over checkrules parameter.
+
+`inlineruleevaluation` - true/ false (default is true), if true then rules will be evaluated immediately, if false rules will be evaluated by a job.
+
+***Note*** - UpdateUser API will not invoke workflow based on the ***User Modification Workflow*** configuration. Please use updateUserRequest API instead.
+
+***Note*** - Both `checkrules` and `inlineruleevaluation` need to be set as true for the user update rules to be evaluated immediately.
+
+`batchidentifier` - When inlineruleevaluation=false, this Rule Run Unique Identifier can be set and user update rules can be processed later by calling /api/processrules API
+
+***Note*** - This API supports PUT HTTP method along with POST.
+
+***It's highly recommended to pass inlineruleevaluation:"false" for bulk load and call processrules api to evaluate and run the rules after the load is done.***
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"customproperty1"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"customized value"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"email"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"test@sav.com"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"employeeType"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"RobotID11111"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"firstname"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"John"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"jobcodedesc"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"QA"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"lastname"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"Chipchase"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"manager"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"admin"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"middlename"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"kumar"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"preferedFirstName"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"RoboID111111"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"propertytosearch"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"lastname"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"statuskey"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"1"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Update User / Update User - Inactive Manager / Update User - propertytosearch param
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Credentials
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Origin
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Cache-Control
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Expires
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Pragma
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Referrer-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-XSS-Protection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"SUCCESS User Updated Successfully"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"message\": \"SUCCESS User Updated Successfully\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Update User"}
+                  value={"Update User"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"message\": \"SUCCESS User Updated Successfully\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Update User - Inactive Manager"}
+                  value={"Update User - Inactive Manager"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"message\": \" manager with username A007825 is inactive.  User Updated Successfully\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Update User - propertytosearch param"}
+                  value={"Update User - propertytosearch param"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"message\": \" User Updated Successfully\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

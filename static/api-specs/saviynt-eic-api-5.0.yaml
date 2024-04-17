@@ -53254,11 +53254,6 @@ components:
       type: http
       scheme: bearer
       bearerFormat: JWT  # Optional, only if you use JWT tokens
-    oauth2RefreshToken:
-      type: oauth2
-      flows:
-        refresh:
-          refreshUrl: https://example.saviyntcloud.com/oauth/access_token
 x-ignoredHeaderParameters:
   - Accept
   - User-Agent

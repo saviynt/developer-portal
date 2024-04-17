@@ -1,0 +1,610 @@
+---
+id: get-list-of-privileges-for-entitlement-type
+title: "Get List of Privileges for Entitlement Type"
+description: "This API gives the list of privileges for an entitlement type."
+sidebar_label: "Get List of Privileges for Entitlement Type"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: apis/rest/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get List of Privileges for Entitlement Type"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/getListofPrivileges"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API gives the list of privileges for an entitlement type.
+
+The `Authorization` must have `Bearer` followed by `Token`. 
+
+Mandatory params:
+`endpoint`
+
+Optional params:
+`max`, `offset`, `entitlementType`
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"multipart/form-data"}
+    value={"multipart/form-data-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"endpoint"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"System1"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"entitlementtype"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"Access"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Get List of Privileges for Entitlement Type / Get List of Privileges for Entitlement Type Copy
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                PrivilegeDetails
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object[]
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                              >
+                                Array [
+                              </div>
+                            </li><SchemaItem
+                              collapsible={false}
+                              name={"actionString"}
+                              required={false}
+                              schemaName={""}
+                              qualifierMessage={undefined}
+                              schema={{"nullable":true,"example":null}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"attribute"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Read"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"attribute_config"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"USER-BASED"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"attribute_type"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Boolean"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"attribute_values"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"attributegroup"}
+                              required={false}
+                              schemaName={""}
+                              qualifierMessage={undefined}
+                              schema={{"nullable":true,"example":null}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"childaction"}
+                              required={false}
+                              schemaName={""}
+                              qualifierMessage={undefined}
+                              schema={{"nullable":true,"example":null}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"defaultvalue"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"true"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"descriptionascsv"}
+                              required={false}
+                              schemaName={""}
+                              qualifierMessage={undefined}
+                              schema={{"nullable":true,"example":null}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"editable"}
+                              required={false}
+                              schemaName={"boolean"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"boolean","example":true}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={true}
+                              className={"schemaItem"}
+                            >
+                              <details
+                                style={{}}
+                                className={"openapi-markdown__details"}
+                              >
+                                <summary
+                                  style={{}}
+                                >
+                                  <span
+                                    className={"openapi-schema__container"}
+                                  >
+                                    <strong
+                                      className={"openapi-schema__property"}
+                                    >
+                                      entitlement_types
+                                    </strong><span
+                                      className={"openapi-schema__name"}
+                                    >
+                                       object
+                                    </span>
+                                  </span>
+                                </summary><div
+                                  style={{"marginLeft":"1rem"}}
+                                >
+                                  <SchemaItem
+                                    collapsible={false}
+                                    name={"endpointkey"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"System1"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"entitlementname"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Access"}}
+                                  >
+                                    
+                                  </SchemaItem>
+                                </div>
+                              </details>
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"entitlements_column"}
+                              required={false}
+                              schemaName={""}
+                              qualifierMessage={undefined}
+                              schema={{"nullable":true,"example":null}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"hideoncreate"}
+                              required={false}
+                              schemaName={"boolean"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"boolean","example":false}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"hideonupd"}
+                              required={false}
+                              schemaName={"boolean"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"boolean","example":false}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"label"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","nullable":true,"example":"Read"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"orderindex"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"0"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"parentattribute"}
+                              required={false}
+                              schemaName={""}
+                              qualifierMessage={undefined}
+                              schema={{"nullable":true,"example":null}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"regex"}
+                              required={false}
+                              schemaName={""}
+                              qualifierMessage={undefined}
+                              schema={{"nullable":true,"example":null}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"requestablerequired"}
+                              required={false}
+                              schemaName={"boolean"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"boolean","example":false}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"required"}
+                              required={false}
+                              schemaName={"boolean"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"boolean","example":true}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"sqlquery"}
+                              required={false}
+                              schemaName={""}
+                              qualifierMessage={undefined}
+                              schema={{"nullable":true,"example":null}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"updatedate"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"09/11/2018 02:18:49"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"updateuser"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"admin"}}
+                            >
+                              
+                            </SchemaItem><li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                              >
+                                ]
+                              </div>
+                            </li>
+                          </div>
+                        </details>
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Successful"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"PrivilegeDetails\": [\n    {\n      \"actionString\": null,\n      \"attribute\": \"Read\",\n      \"attribute_config\": \"USER-BASED\",\n      \"attribute_type\": \"Boolean\",\n      \"attribute_values\": \"\",\n      \"attributegroup\": null,\n      \"childaction\": null,\n      \"defaultvalue\": \"true\",\n      \"descriptionascsv\": null,\n      \"editable\": true,\n      \"entitlement_types\": {\n        \"endpointkey\": \"System1\",\n        \"entitlementname\": \"Access\"\n      },\n      \"entitlements_column\": null,\n      \"hideoncreate\": false,\n      \"hideonupd\": false,\n      \"label\": \"Read\",\n      \"orderindex\": \"0\",\n      \"parentattribute\": null,\n      \"regex\": null,\n      \"requestablerequired\": false,\n      \"required\": true,\n      \"sqlquery\": null,\n      \"updatedate\": \"09/11/2018 02:18:49\",\n      \"updateuser\": \"admin\"\n    },\n    {\n      \"actionString\": null,\n      \"attribute\": \"Write\",\n      \"attribute_config\": \"USER-BASED\",\n      \"attribute_type\": \"Boolean\",\n      \"attribute_values\": \"\",\n      \"attributegroup\": null,\n      \"childaction\": null,\n      \"defaultvalue\": \"false\",\n      \"descriptionascsv\": null,\n      \"editable\": true,\n      \"entitlement_types\": {\n        \"endpointkey\": \"System1\",\n        \"entitlementname\": \"Access\"\n      },\n      \"entitlements_column\": null,\n      \"hideoncreate\": false,\n      \"hideonupd\": false,\n      \"label\": null,\n      \"orderindex\": \"1\",\n      \"parentattribute\": null,\n      \"regex\": null,\n      \"requestablerequired\": false,\n      \"required\": true,\n      \"sqlquery\": null,\n      \"updatedate\": \"09/11/2018 02:18:56\",\n      \"updateuser\": \"admin\"\n    },\n    {\n      \"actionString\": null,\n      \"attribute\": \"Privilege1\",\n      \"attribute_config\": \"USER-BASED\",\n      \"attribute_type\": \"String\",\n      \"attribute_values\": \"\",\n      \"attributegroup\": null,\n      \"childaction\": null,\n      \"defaultvalue\": \"\",\n      \"descriptionascsv\": null,\n      \"editable\": true,\n      \"entitlement_types\": {\n        \"endpointkey\": \"System1\",\n        \"entitlementname\": \"Access\"\n      },\n      \"entitlements_column\": null,\n      \"hideoncreate\": false,\n      \"hideonupd\": false,\n      \"label\": \"Privilege1\",\n      \"orderindex\": \"0\",\n      \"parentattribute\": null,\n      \"regex\": null,\n      \"requestablerequired\": false,\n      \"required\": true,\n      \"sqlquery\": null,\n      \"updatedate\": \"09/11/2018 02:19:35\",\n      \"updateuser\": \"admin\"\n    }\n  ],\n  \"errorCode\": \"0\",\n  \"msg\": \"Successful\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Get List of Privileges for Entitlement Type"}
+                  value={"Get List of Privileges for Entitlement Type"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"PrivilegeDetails\": [\n    {\n      \"actionString\": null,\n      \"attribute\": \"Read\",\n      \"attribute_config\": \"USER-BASED\",\n      \"attribute_type\": \"Boolean\",\n      \"attribute_values\": \"\",\n      \"attributegroup\": null,\n      \"childaction\": null,\n      \"defaultvalue\": \"true\",\n      \"descriptionascsv\": null,\n      \"editable\": true,\n      \"entitlement_types\": {\n        \"endpointkey\": \"System1\",\n        \"entitlementname\": \"Access\"\n      },\n      \"entitlements_column\": null,\n      \"hideoncreate\": false,\n      \"hideonupd\": false,\n      \"label\": \"Read\",\n      \"orderindex\": \"0\",\n      \"parentattribute\": null,\n      \"regex\": null,\n      \"requestablerequired\": false,\n      \"required\": true,\n      \"sqlquery\": null,\n      \"updatedate\": \"09/11/2018 02:18:49\",\n      \"updateuser\": \"admin\"\n    },\n    {\n      \"actionString\": null,\n      \"attribute\": \"Write\",\n      \"attribute_config\": \"USER-BASED\",\n      \"attribute_type\": \"Boolean\",\n      \"attribute_values\": \"\",\n      \"attributegroup\": null,\n      \"childaction\": null,\n      \"defaultvalue\": \"false\",\n      \"descriptionascsv\": null,\n      \"editable\": true,\n      \"entitlement_types\": {\n        \"endpointkey\": \"System1\",\n        \"entitlementname\": \"Access\"\n      },\n      \"entitlements_column\": null,\n      \"hideoncreate\": false,\n      \"hideonupd\": false,\n      \"label\": null,\n      \"orderindex\": \"1\",\n      \"parentattribute\": null,\n      \"regex\": null,\n      \"requestablerequired\": false,\n      \"required\": true,\n      \"sqlquery\": null,\n      \"updatedate\": \"09/11/2018 02:18:56\",\n      \"updateuser\": \"admin\"\n    },\n    {\n      \"actionString\": null,\n      \"attribute\": \"Privilege1\",\n      \"attribute_config\": \"USER-BASED\",\n      \"attribute_type\": \"String\",\n      \"attribute_values\": \"\",\n      \"attributegroup\": null,\n      \"childaction\": null,\n      \"defaultvalue\": \"\",\n      \"descriptionascsv\": null,\n      \"editable\": true,\n      \"entitlement_types\": {\n        \"endpointkey\": \"System1\",\n        \"entitlementname\": \"Access\"\n      },\n      \"entitlements_column\": null,\n      \"hideoncreate\": false,\n      \"hideonupd\": false,\n      \"label\": \"Privilege1\",\n      \"orderindex\": \"0\",\n      \"parentattribute\": null,\n      \"regex\": null,\n      \"requestablerequired\": false,\n      \"required\": true,\n      \"sqlquery\": null,\n      \"updatedate\": \"09/11/2018 02:19:35\",\n      \"updateuser\": \"admin\"\n    }\n  ],\n  \"errorCode\": \"0\",\n  \"msg\": \"Successful\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Get List of Privileges for Entitlement Type Copy"}
+                  value={"Get List of Privileges for Entitlement Type Copy"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"PrivilegeDetails\": [\n    {\n      \"actionString\": null,\n      \"attribute\": \"Read\",\n      \"attribute_config\": \"USER-BASED\",\n      \"attribute_type\": \"Boolean\",\n      \"attribute_values\": \"\",\n      \"attributegroup\": null,\n      \"childaction\": null,\n      \"defaultvalue\": \"true\",\n      \"descriptionascsv\": null,\n      \"editable\": true,\n      \"entitlement_types\": {\n        \"endpointkey\": \"System1\",\n        \"entitlementname\": \"Access\"\n      },\n      \"entitlements_column\": null,\n      \"hideoncreate\": false,\n      \"hideonupd\": false,\n      \"label\": \"Read\",\n      \"orderindex\": \"0\",\n      \"parentattribute\": null,\n      \"regex\": null,\n      \"requestablerequired\": false,\n      \"required\": true,\n      \"sqlquery\": null,\n      \"updatedate\": \"09/11/2018 02:18:49\",\n      \"updateuser\": \"admin\"\n    },\n    {\n      \"actionString\": null,\n      \"attribute\": \"Write\",\n      \"attribute_config\": \"USER-BASED\",\n      \"attribute_type\": \"Boolean\",\n      \"attribute_values\": \"\",\n      \"attributegroup\": null,\n      \"childaction\": null,\n      \"defaultvalue\": \"false\",\n      \"descriptionascsv\": null,\n      \"editable\": true,\n      \"entitlement_types\": {\n        \"endpointkey\": \"System1\",\n        \"entitlementname\": \"Access\"\n      },\n      \"entitlements_column\": null,\n      \"hideoncreate\": false,\n      \"hideonupd\": false,\n      \"label\": null,\n      \"orderindex\": \"1\",\n      \"parentattribute\": null,\n      \"regex\": null,\n      \"requestablerequired\": false,\n      \"required\": true,\n      \"sqlquery\": null,\n      \"updatedate\": \"09/11/2018 02:18:56\",\n      \"updateuser\": \"admin\"\n    },\n    {\n      \"actionString\": null,\n      \"attribute\": \"Privilege1\",\n      \"attribute_config\": \"USER-BASED\",\n      \"attribute_type\": \"String\",\n      \"attribute_values\": \"\",\n      \"attributegroup\": null,\n      \"childaction\": null,\n      \"defaultvalue\": \"\",\n      \"descriptionascsv\": null,\n      \"editable\": true,\n      \"entitlement_types\": {\n        \"endpointkey\": \"System1\",\n        \"entitlementname\": \"Access\"\n      },\n      \"entitlements_column\": null,\n      \"hideoncreate\": false,\n      \"hideonupd\": false,\n      \"label\": \"Privilege1\",\n      \"orderindex\": \"0\",\n      \"parentattribute\": null,\n      \"regex\": null,\n      \"requestablerequired\": false,\n      \"required\": true,\n      \"sqlquery\": null,\n      \"updatedate\": \"09/11/2018 02:19:35\",\n      \"updateuser\": \"admin\"\n    }\n  ],\n  \"errorCode\": \"0\",\n  \"msg\": \"Successful\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

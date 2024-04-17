@@ -1,0 +1,469 @@
+---
+id: create-user
+title: "Create User"
+description: "This API onboard or create a new user."
+sidebar_label: "Create User"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: apis/rest/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create User"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/createUser"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API onboard or create a new user.
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+Optional Parameters:
+
+`validateagainstpolicy` - Values: Y/N, default is Y. Checks for the password policy,
+
+`statuskey` - Values:1/0, 0 - Inactive, 1 - Active (default),
+
+`allowpastdate` - true / false (default). If true, allows startdate to be less than current date,
+
+`User params` like  
+username,  
+firstname,  
+preferedFirstName,  
+lastname,  
+middlename,  
+street,  
+city,  
+comments,  
+statuskey,  
+startdate(MM-dd-yyyy),  
+enddate(MM-dd-yyyy),  
+manager (manager username),  
+password,  
+location,  
+jobCode,  
+jobDescription,  
+employeeType,  
+departmentNumber,  
+title,  
+state,  
+companyname,  
+costcenter,  
+departmentname,  
+employeeclass,  
+entity,  
+jobcodedesc,  
+locationdesc,  
+locationnumber,  
+siteid,  
+orgunitid,  
+region,  
+regioncode,  
+owner,  
+employeeid,  
+lastsyncdate,  
+createdate,  
+email,  
+phonenumber,  
+job_function,  
+country,  
+displayname,  
+enabled(can be "1"/"true" or "0"/"false"),  
+passwordExpired(can be "1"/"true" or "0"/"false"),  
+accountExpired(can be "1"/"true" or "0"/"false"),  
+accountLocked(can be "1"/"true" or "0"/"false"),  
+secondaryManager,  
+createdBy,  
+termDate,  
+vendorManager,  
+secondaryPhone,  
+secondaryEmail,  
+customproperty&lt;1-50&gt;,  
+hcp&lt;1-5&gt;,  
+ecp&lt;1-5&gt;,  
+customer(pass the organization name),
+
+`securityQuestions` -
+
+Example:  
+"securityQuestions":\[  
+\{  
+"securityQuestion":"What is your first Pet's name?",  
+"securityAnswer":"kitty"  
+\},  
+\{  
+"securityQuestion":"What is your favorite food?",  
+"securityAnswer":"food"  
+\}  
+\],
+
+`checkrules` - true/ false (default : true), if true, then rules will be evaluated immediately, if false rules will be evaluated by a job. If checkrulesforapi configuration(true/false/null) is set in the configuration table, then it will take precendence over checkrules parameter.
+
+`inlineruleevaluation` - true/ false (default is true), if true then rules will be evaluated immediately, if false rules will be evaluated by a job.
+
+_**Note**_ - CreateUser API will not invoke workflow based on the _**User Modification Workflow**_ configuration. Please use createUserRequest API instead.
+
+_**Note**_ - Both `checkrules` and `inlineruleevaluation` need to be set as true for the user update rules to be evaluated immediately.
+
+`batchidentifier` - When inlineruleevaluation=false, this Rule Run Unique Identifier can be set and user update rules can be processed later by calling /api/processrules API
+
+_**It's highly recommended to pass inlineruleevaluation:"false" for bulk load and call processrules api to evaluate and run the rules after the load is done.**_
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"accountExpired"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"true"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"accountLocked"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"false"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"allowpastdate"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"true"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"enabled"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"true"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"enddate"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"10-11-2019"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"firstname"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"myfirstname"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"passwordExpired"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"true"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"startdate"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"10-18-2018"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"statuskey"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"1"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"username"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"johndoe"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Create User
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":" Users created with username johndoe "}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"message\": \" Users created with username johndoe \"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Create User"}
+                  value={"Create User"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"message\": \" Users created with username johndoe \"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

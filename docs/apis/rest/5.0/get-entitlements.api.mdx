@@ -1,0 +1,1080 @@
+---
+id: get-entitlements
+title: "Get Entitlements"
+description: "This API can be used to get the list of all the entitlements."
+sidebar_label: "Get Entitlements"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: apis/rest/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Entitlements"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/getEntitlements"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API can be used to get the list of all the entitlements.
+
+This API call can be used to get the list and details of all the entitlements the user has access to. 
+
+This API will return only the entitlement attributes which are not null or not empty.
+
+The `Authorization` must have `Bearer` followed by `Token`. 
+
+Optional params:
+`username`,
+`entitlementtype`,
+`endpoint`,
+`requestedObject` -"users","userscount",
+`max`,
+`offset`,
+`entitlementResponseFields`,
+`userResponseFields`,
+`userfiltercriteria`,
+`accountname`,
+`entownerwithrank` - if "true", returns the list of owners with owner rank for every entitlementValue,
+`returnentitlementmap`(true/false,default:false) - If true, entitlementmap details will be returned,
+`exactmatch` - Default is true. If given as false, it will search based on similar matches,
+
+`entitlementfiltercriteria`,
+
+OR 
+
+`entQuery` - query to support only entitlement_values parameters. Sample - "ent.description  = 'Desc' or ent.displayname like '%display%'".
+
+***Note*** - Either pass param entitlementfiltercriteria (with or without exactmatch) OR entQuery. Both cannot be passed simultaneously.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"endpoint"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"AWS"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"entQuery"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"ent.entitlement_value like '%i-03d58cd60fa90b9a9%'"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"entownerwithrank"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"true"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"returnentitlementmap"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"true"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"username"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"jasorodriguez"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Get Entitlements / Get Entitlements
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Credentials
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Origin
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Cache-Control
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Expires
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Pragma
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Referrer-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-XSS-Protection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                Entitlementdetails
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object[]
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                              >
+                                Array [
+                              </div>
+                            </li><SchemaItem
+                              collapsible={true}
+                              className={"schemaItem"}
+                            >
+                              <details
+                                style={{}}
+                                className={"openapi-markdown__details"}
+                              >
+                                <summary
+                                  style={{}}
+                                >
+                                  <span
+                                    className={"openapi-schema__container"}
+                                  >
+                                    <strong
+                                      className={"openapi-schema__property"}
+                                    >
+                                      accounts
+                                    </strong><span
+                                      className={"openapi-schema__name"}
+                                    >
+                                       object[]
+                                    </span>
+                                  </span>
+                                </summary><div
+                                  style={{"marginLeft":"1rem"}}
+                                >
+                                  <li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                                    >
+                                      Array [
+                                    </div>
+                                  </li><SchemaItem
+                                    collapsible={false}
+                                    name={"accountname"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"jasorodriguez"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"enddate"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":""}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"startdate"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":""}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"updatedate"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":""}}
+                                  >
+                                    
+                                  </SchemaItem><li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                                    >
+                                      ]
+                                    </div>
+                                  </li>
+                                </div>
+                              </details>
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"childEntitlementCount"}
+                              required={false}
+                              schemaName={"number"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"number","example":0}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty1"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Code: 80,Name: stopped"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty10"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"false"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty13"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"N"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty15"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"2017-07-03 17:10:15"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty16"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"State: disabled"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty17"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"ami-0c2dfb1a"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty18"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"AWSSaviynt-6612acc"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty19"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"default"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty2"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"m3.xlarge"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty20"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"ip-172-31-19-127.ec2.internal"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty3"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Key: Owner,Value: Sagar Srikantaiah, Key: aws:cloudformation:stack-id,Value: arn:aws:cloudformation:us-east-1:661222050851:stack/IDMAMITest/b8c82f20-f8a8-11e6-845b-500c28903236, Key: aws:cloudformation:logical-id,Value: SaviyntAWSEC2, Key: Name,Value: IDMAMITest, Key: aws:cloudformation:stack-name,Value: IDMAMITest"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty4"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"172.31.19.127"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty5"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"vpc-60389904"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty6"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"subnet-3e9ea667"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty7"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"false"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty8"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Arn: arn:aws:iam::661222050851:instance-profile/IDMAMITest-SaviyntAWSInstanceProfile-PB8FBG9QPF8J,Id: AIPAI4Z55IKG4PEYTP622"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty9"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"us-east-1"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"description"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"displayname"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"endpoint"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"AWS"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"endpointKey"}
+                              required={false}
+                              schemaName={"number"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"number","example":1}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"entitlementID"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"i-03d58cd60fa90b9a9"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={true}
+                              className={"schemaItem"}
+                            >
+                              <details
+                                style={{}}
+                                className={"openapi-markdown__details"}
+                              >
+                                <summary
+                                  style={{}}
+                                >
+                                  <span
+                                    className={"openapi-schema__container"}
+                                  >
+                                    <strong
+                                      className={"openapi-schema__property"}
+                                    >
+                                      entitlementMapDetails
+                                    </strong><span
+                                      className={"openapi-schema__name"}
+                                    >
+                                       object[]
+                                    </span>
+                                  </span>
+                                </summary><div
+                                  style={{"marginLeft":"1rem"}}
+                                >
+                                  <li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                                    >
+                                      Array [
+                                    </div>
+                                  </li><SchemaItem
+                                    collapsible={false}
+                                    name={"addDependentTask"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":""}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"description"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Enable http, https, ssh access to the My ControlNode."}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"excludeEntitlement"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":""}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"exportPrimary"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"sg-4341773f"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"primary"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"sg-4341773f"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"primaryEntKey"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"189289"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"primaryEntType"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"AWSSecurityGroup"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"removeDependentEntTask"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":""}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"requestFilter"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":""}}
+                                  >
+                                    
+                                  </SchemaItem><li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                                    >
+                                      ]
+                                    </div>
+                                  </li>
+                                </div>
+                              </details>
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"entitlementOwner"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"entitlementType"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"EC2InstanceDisplay"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"entitlementTypeKey"}
+                              required={false}
+                              schemaName={"number"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"number","example":52}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"entitlementTypeName"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"EC2Instance"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"entitlement_glossary"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"entitlement_value"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"i-03d58cd60fa90b9a9"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"entitlement_valuekey"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"191373"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"requestForm"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Request Form None"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"soxcritical"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"0"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"status"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"1"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"syscritical"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"0"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"updatedate"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"2017-08-10 16:11:47"}}
+                            >
+                              
+                            </SchemaItem><li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                              >
+                                ]
+                              </div>
+                            </li>
+                          </div>
+                        </details>
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"entitlementsCount"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":1}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Successful"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"totalEntitlementCount"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":1}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"Entitlementdetails\": [\n    {\n      \"accounts\": [\n        {\n          \"accountname\": \"jasorodriguez\",\n          \"enddate\": \"\",\n          \"startdate\": \"\",\n          \"updatedate\": \"\"\n        },\n        {\n          \"accountname\": \"jasorodriguez\",\n          \"enddate\": \"\",\n          \"startdate\": \"\",\n          \"updatedate\": \"\"\n        },\n        {\n          \"accountname\": \"jasorodriguez\",\n          \"enddate\": \"\",\n          \"startdate\": \"\",\n          \"updatedate\": \"\"\n        }\n      ],\n      \"childEntitlementCount\": 0,\n      \"customproperty1\": \"Code: 80,Name: stopped\",\n      \"customproperty10\": \"false\",\n      \"customproperty13\": \"N\",\n      \"customproperty15\": \"2017-07-03 17:10:15\",\n      \"customproperty16\": \"State: disabled\",\n      \"customproperty17\": \"ami-0c2dfb1a\",\n      \"customproperty18\": \"AWSSaviynt-6612acc\",\n      \"customproperty19\": \"default\",\n      \"customproperty2\": \"m3.xlarge\",\n      \"customproperty20\": \"ip-172-31-19-127.ec2.internal\",\n      \"customproperty3\": \"Key: Owner,Value: Sagar Srikantaiah, Key: aws:cloudformation:stack-id,Value: arn:aws:cloudformation:us-east-1:661222050851:stack/IDMAMITest/b8c82f20-f8a8-11e6-845b-500c28903236, Key: aws:cloudformation:logical-id,Value: SaviyntAWSEC2, Key: Name,Value: IDMAMITest, Key: aws:cloudformation:stack-name,Value: IDMAMITest\",\n      \"customproperty4\": \"172.31.19.127\",\n      \"customproperty5\": \"vpc-60389904\",\n      \"customproperty6\": \"subnet-3e9ea667\",\n      \"customproperty7\": \"false\",\n      \"customproperty8\": \"Arn: arn:aws:iam::661222050851:instance-profile/IDMAMITest-SaviyntAWSInstanceProfile-PB8FBG9QPF8J,Id: AIPAI4Z55IKG4PEYTP622\",\n      \"customproperty9\": \"us-east-1\",\n      \"description\": \"\",\n      \"displayname\": \"\",\n      \"endpoint\": \"AWS\",\n      \"endpointKey\": 1,\n      \"entitlementID\": \"i-03d58cd60fa90b9a9\",\n      \"entitlementMapDetails\": [\n        {\n          \"addDependentTask\": \"\",\n          \"description\": \"Enable http, https, ssh access to the My ControlNode.\",\n          \"excludeEntitlement\": \"\",\n          \"exportPrimary\": \"sg-4341773f\",\n          \"primary\": \"sg-4341773f\",\n          \"primaryEntKey\": \"189289\",\n          \"primaryEntType\": \"AWSSecurityGroup\",\n          \"removeDependentEntTask\": \"\",\n          \"requestFilter\": \"\"\n        },\n        {\n          \"addDependentTask\": \"\",\n          \"description\": \"\",\n          \"excludeEntitlement\": \"\",\n          \"exportPrimary\": \"vol-011ca83c3d8894018\",\n          \"primary\": \"vol-011ca83c3d8894018\",\n          \"primaryEntKey\": \"192408\",\n          \"primaryEntType\": \"EBSVolume\",\n          \"removeDependentEntTask\": \"\",\n          \"requestFilter\": \"\"\n        },\n        {\n          \"addDependentTask\": \"\",\n          \"description\": \"\",\n          \"excludeEntitlement\": \"\",\n          \"exportPrimary\": \"arn:aws:iam::661222050851:policy/USFederalDemoStack-SaviyntAWSPolicy-EQ3LNR2RUGS7\",\n          \"primary\": \"arn:aws:iam::661222050851:policy/USFederalDemoStack-SaviyntAWSPolicy-EQ3LNR2RUGS7\",\n          \"primaryEntKey\": \"3932043\",\n          \"primaryEntType\": \"AWSPolicy\",\n          \"removeDependentEntTask\": \"\",\n          \"requestFilter\": \"\"\n        }\n      ],\n      \"entitlementOwner\": \"\",\n      \"entitlementType\": \"EC2InstanceDisplay\",\n      \"entitlementTypeKey\": 52,\n      \"entitlementTypeName\": \"EC2Instance\",\n      \"entitlement_glossary\": \"\",\n      \"entitlement_value\": \"i-03d58cd60fa90b9a9\",\n      \"entitlement_valuekey\": \"191373\",\n      \"requestForm\": \"Request Form None\",\n      \"soxcritical\": \"0\",\n      \"status\": \"1\",\n      \"syscritical\": \"0\",\n      \"updatedate\": \"2017-08-10 16:11:47\"\n    }\n  ],\n  \"entitlementsCount\": 1,\n  \"errorCode\": \"0\",\n  \"msg\": \"Successful\",\n  \"totalEntitlementCount\": 1\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Get Entitlements"}
+                  value={"Get Entitlements"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"Entitlementdetails\": [\n    {\n      \"accounts\": [\n        {\n          \"accountname\": \"jasorodriguez\",\n          \"enddate\": \"\",\n          \"startdate\": \"\",\n          \"updatedate\": \"\"\n        },\n        {\n          \"accountname\": \"jasorodriguez\",\n          \"enddate\": \"\",\n          \"startdate\": \"\",\n          \"updatedate\": \"\"\n        },\n        {\n          \"accountname\": \"jasorodriguez\",\n          \"enddate\": \"\",\n          \"startdate\": \"\",\n          \"updatedate\": \"\"\n        }\n      ],\n      \"childEntitlementCount\": 0,\n      \"customproperty1\": \"Code: 80,Name: stopped\",\n      \"customproperty10\": \"false\",\n      \"customproperty13\": \"N\",\n      \"customproperty15\": \"2017-07-03 17:10:15\",\n      \"customproperty16\": \"State: disabled\",\n      \"customproperty17\": \"ami-0c2dfb1a\",\n      \"customproperty18\": \"AWSSaviynt-6612acc\",\n      \"customproperty19\": \"default\",\n      \"customproperty2\": \"m3.xlarge\",\n      \"customproperty20\": \"ip-172-31-19-127.ec2.internal\",\n      \"customproperty3\": \"Key: Owner,Value: Sagar Srikantaiah, Key: aws:cloudformation:stack-id,Value: arn:aws:cloudformation:us-east-1:661222050851:stack/IDMAMITest/b8c82f20-f8a8-11e6-845b-500c28903236, Key: aws:cloudformation:logical-id,Value: SaviyntAWSEC2, Key: Name,Value: IDMAMITest, Key: aws:cloudformation:stack-name,Value: IDMAMITest\",\n      \"customproperty4\": \"172.31.19.127\",\n      \"customproperty5\": \"vpc-60389904\",\n      \"customproperty6\": \"subnet-3e9ea667\",\n      \"customproperty7\": \"false\",\n      \"customproperty8\": \"Arn: arn:aws:iam::661222050851:instance-profile/IDMAMITest-SaviyntAWSInstanceProfile-PB8FBG9QPF8J,Id: AIPAI4Z55IKG4PEYTP622\",\n      \"customproperty9\": \"us-east-1\",\n      \"description\": \"\",\n      \"displayname\": \"\",\n      \"endpoint\": \"AWS\",\n      \"endpointKey\": 1,\n      \"entitlementID\": \"i-03d58cd60fa90b9a9\",\n      \"entitlementMapDetails\": [\n        {\n          \"addDependentTask\": \"\",\n          \"description\": \"Enable http, https, ssh access to the My ControlNode.\",\n          \"excludeEntitlement\": \"\",\n          \"exportPrimary\": \"sg-4341773f\",\n          \"primary\": \"sg-4341773f\",\n          \"primaryEntKey\": \"189289\",\n          \"primaryEntType\": \"AWSSecurityGroup\",\n          \"removeDependentEntTask\": \"\",\n          \"requestFilter\": \"\"\n        },\n        {\n          \"addDependentTask\": \"\",\n          \"description\": \"\",\n          \"excludeEntitlement\": \"\",\n          \"exportPrimary\": \"vol-011ca83c3d8894018\",\n          \"primary\": \"vol-011ca83c3d8894018\",\n          \"primaryEntKey\": \"192408\",\n          \"primaryEntType\": \"EBSVolume\",\n          \"removeDependentEntTask\": \"\",\n          \"requestFilter\": \"\"\n        },\n        {\n          \"addDependentTask\": \"\",\n          \"description\": \"\",\n          \"excludeEntitlement\": \"\",\n          \"exportPrimary\": \"arn:aws:iam::661222050851:policy/ADAWSFFRoles-SaviyntAWSConfigPolicy-TVZXKOYNVMLC\",\n          \"primary\": \"arn:aws:iam::661222050851:policy/ADAWSFFRoles-SaviyntAWSConfigPolicy-TVZXKOYNVMLC\",\n          \"primaryEntKey\": \"193885\",\n          \"primaryEntType\": \"AWSPolicy\",\n          \"removeDependentEntTask\": \"\",\n          \"requestFilter\": \"\"\n        }\n      ],\n      \"entitlementOwner\": \"\",\n      \"entitlementType\": \"EC2InstanceDisplay\",\n      \"entitlementTypeKey\": 52,\n      \"entitlementTypeName\": \"EC2Instance\",\n      \"entitlement_glossary\": \"\",\n      \"entitlement_value\": \"i-03d58cd60fa90b9a9\",\n      \"entitlement_valuekey\": \"191373\",\n      \"requestForm\": \"Request Form None\",\n      \"soxcritical\": \"0\",\n      \"status\": \"1\",\n      \"syscritical\": \"0\",\n      \"updatedate\": \"2017-08-10 16:11:47\"\n    }\n  ],\n  \"entitlementsCount\": 1,\n  \"errorCode\": \"0\",\n  \"msg\": \"Successful\",\n  \"totalEntitlementCount\": 1\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

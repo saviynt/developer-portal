@@ -1,0 +1,603 @@
+---
+id: run-job-trigger
+title: "Run Job Trigger"
+description: "This API call can be used to run a job trigger in SSM."
+sidebar_label: "Run Job Trigger"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: apis/rest/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Run Job Trigger"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/runJobTrigger"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API call can be used to run a job trigger in SSM.
+
+The following cases illustrate different scenarios on the usage of the `analyticsAdvanceQuery` parameter in the API:
+
+Case 1: When you configure the `"analyticsAdvanceQuery"` within the payload, set the "defaultActionForAnalytics" as "true", and then execute the control from the API, it overrides the default action and the advanced query configuration within the job trigger.
+
+Case 2: When you configure the `"analyticsAdvanceQuery"` within the payload, set the "defaultActionForAnalytics" as "false", and then execute the control from the API without performing the default actions configured in the control, it overrides the default action and the advanced query configuration within the job trigger.
+
+Case 3: When you do not configure both the `"analyticsAdvanceQuery"` and the "defaultActionForAnalytics", the default action will depend on the configuration provided in the analytics job trigger.
+
+The following cases illustrate different scenarios on the usage of the `analyticsCategories` parameter in the API:
+
+Case 1: When you set the "defaultActionForAnalytics" as "true" to perform default actions for analytics controls by executing the control from job API, it will override the default action configuration within the job trigger.
+
+Case 2: When you set the "defaultActionForAnalytics" as "false" to not perform default actions for analytics controls by executing the control from job API, it will override the default action configuration within the job trigger.
+
+Case 3: When the defaultActionForAnalytics parameter is not set in the payload, the default action will depend on the configuration provided in the analytics job trigger.
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+Mandatory params:
+
+`jobname`
+
+`triggername`
+
+`jobgroup`
+
+Optional params:
+
+`valueMap`
+
+`createJobIfDoesNotExist` - true/false
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+  schemaType={"request"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"analyticsCategories"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"trigger"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"defaultActionForAnalytics"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"false"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"jobgroup"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"Analytics"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"jobname"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"RunAllAnalyticsJob"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"triggername"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"analytics_trigger"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Run Job Trigger / Runjobtrigger - class name package / Run Job Trigger - defaultActionForAnalytics set as true / Run Job Trigger - default action for analytics set as false in payload / Run Job Trigger - Not configuring "analyticsAdvanceQuery" and "defaultActionForAnalytics" / Analytics categories with default action set as true / Analytics categories with default action set as false / Analytics categories without adding default action for analytics
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Credentials
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Origin
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Cache-Control
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Connection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Expires
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Permissions-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Pragma
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Referrer-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-XSS-Protection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Starting Job"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"timestamp"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"2020-01-17 07:57:34"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \"Starting Job\",\n  \"timestamp\": \"2020-01-17 07:57:34\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Analytics categories with default action set as false"}
+                  value={"Analytics categories with default action set as false"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \"Starting Job\",\n  \"timestamp\": \"2023-05-15 10:31:40\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Analytics categories with default action set as true"}
+                  value={"Analytics categories with default action set as true"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \"Starting Job\",\n  \"timestamp\": \"2023-05-15 10:30:06\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Analytics categories without adding default action for analytics"}
+                  value={"Analytics categories without adding default action for analytics"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \"Starting Job\",\n  \"timestamp\": \"2023-05-15 10:33:13\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Run Job Trigger"}
+                  value={"Run Job Trigger"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \"Starting Job\",\n  \"timestamp\": \"2020-01-17 07:57:34\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Run Job Trigger - Not configuring \"analyticsAdvanceQuery\" and \"defaultActionForAnalytics\""}
+                  value={"Run Job Trigger - Not configuring \"analyticsAdvanceQuery\" and \"defaultActionForAnalytics\""}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \"Starting Job\",\n  \"timestamp\": \"2023-05-09 06:49:54\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Run Job Trigger - default action for analytics set as false in payload"}
+                  value={"Run Job Trigger - default action for analytics set as false in payload"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \"Starting Job\",\n  \"timestamp\": \"2023-05-09 06:47:26\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Run Job Trigger - defaultActionForAnalytics set as true"}
+                  value={"Run Job Trigger - defaultActionForAnalytics set as true"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \"Starting Job\",\n  \"timestamp\": \"2023-05-09 06:42:19\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Runjobtrigger - class name package"}
+                  value={"Runjobtrigger - class name package"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \"Starting Job\",\n  \"timestamp\": \"2023-04-15 17:18:34\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

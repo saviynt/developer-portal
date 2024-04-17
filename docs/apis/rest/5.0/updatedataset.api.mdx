@@ -1,0 +1,392 @@
+---
+id: updatedataset
+title: "updateDataset"
+description: "This API is used to update the Dataset details."
+sidebar_label: "updateDataset"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNV21v4jgQ/iuWP91JCQHabttUla7L0j12ty8CersSrWCIB+IlsbO2A+UQ//1kJ7Ap3HVZ6XS6fqL2vDzz4mcmK2pgqmk4oO/AgEZDnzzKUEeKZ4ZLQUPaj7kmV/cdwjXJNTJiJMkzBgaJiZGUeoShAZ7o2qN4FP0YyegqN7FU/E+wdkYkzbUhMcyRABm9RVCoRmQik0QukJHx0h735QzFyJm4AcHASLUkGShI0aDSob0YscKhgBRH1KMyQ+VcdBgNaQGsFKEeVfgtR23eSrak4YpGUhgUxv6ELEt45DSDr9pGuqI6ijEF+8ssM6QhleOvGFk7mbJ+DEdtbysQKsLaKC6m1KP4DGmW2KNPYFCbYQsUXXsbNbkQqF7Xu+petx4aTqdai9dU+ssMhzOeJE6L6yyB5Y8BMmBsOZzG03jYoOv1envn4iyyuemMcEXnkOS4l4FqmLtRbkLZ66ot3B20e5AcKoU6k0IXsJr1usPwwuBLrB6NERgqJ9+SQmC0SeFekf8mLTPEzIeEz5Fa7+/A4KGqn5F5pH5GPuSCNOvNJqm/CY9Ow6MGeX/Td9Z6aPyWlDN+sM1Wq9e99vt3H9u3l2OIxm+Oxkf+0YShf3x6euafjxtj/+wNnsH58fF5k51ckHsw8WVQuDOKR8bvKxA6k8r4PYxyxc3yUO8pPPswxcvGyWnz+KxevyBcREnOsJeP38kUuNDOkfMwQeW3RSSZtXKggyjOxQyZM/IHqIOBXUURau23pDBKJn63eOv+72Xlrbkv7haF8W3D+XeuW/ShDoTUgk8mpaVry0M/a6J3ddO+63bed25LK196Pf9eSfNzDdm4IKlkeDlOZDQrHuq/xGWolFQtyX5AFI6MUj19XepB4HOGkUFGnF0ioyhXytX2YG6pIKKWOJzX100XJJGiiaWdApnULlAwMQ1psEsNGtXcUcNgRXOV0JDGxmQ6DIKVQQHCrGsa5nwpTJTInNUimQbt1k0AGQ/mJ9Sjc1AcxmUghco+IZXnlvgmkCeGhttErdfrJwtj8w4HKzp2E9HOTBoOnqrXPVvIwtUYNI8KmW0VLHQbk5OiYSFji1W1+M/STohupK+lSsEi/fC5b21IyE3c7OJEoY7ddK42lLukHp0kcuHwqUKw8vPhRXrL+Pez60wF4N7z0Dg/RUltN3e/z/D2ptP+wwnkUS4m0sXNTfGmC/ikLQyqTHGNpMNQGG6WpGVjcutSFyeoUES479luVC2ZJAUHkEzJOWeo3T5V7lFETty/Os8saSMjRXdrMpHK3fwYxS/tTutX266odOH5pFav1alHDapU3016qOY8wkqFysq4ojihgBZMA5Fr8TJDNr5egYx6O29osVjUqmb0Vg5T4FayPPmtImXTnPAIhcaqmwyiGEnTYd73Au66JtU0KHV18KnTat/22n6zVq/FJnXb0LOfyKmr4EsbVZSLzC8JNcizRALTQbPeOA/qx0GZ6KE1MryF+bKm51PH5pZnUhAVxLtUs7O+bTn7/75Vl0/c4LMJsgS4sHl02VuVtDrYifXJo7Gl3XBAV6sxaHxQyXptj7/laGf64Ok7cTqO2+xojv9muLSLTmVYO551I2F/vq29jYbdATLzquxTZTLc3/X6lu3K74G0mDIKFvZbARY0pI/0kbrPiu2Yd+crmoCY5jC18oVd+/cXJfOV2A==
+sidebar_class_name: "post api-method"
+info_path: apis/rest/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"updateDataset"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/updateDataset"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API is used to update the Dataset details.
+
+The `Authorization` must have a `Bearer` followed by a `Token`.
+
+Mandatory parameters:
+
+`datasetname`
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"datasetname"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"Latest_Car"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"datasetowner"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"ARFCU1"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"description"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"Type_kill"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"displayname"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"daddy_ghgh_1"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          updateDataset
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Connection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Vary
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-XSS-Protection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"1"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Unexpected error occurred"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"1\",\n  \"msg\": \"Unexpected error occurred\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"updateDataset"}
+                  value={"updateDataset"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"1\",\n  \"msg\": \"Unexpected error occurred\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

@@ -1,0 +1,336 @@
+---
+id: check-task-status
+title: "Check Task Status"
+description: "This API can be used to check the task status. Response can return task status as “New/Complete/In Progress/Discontinued”."
+sidebar_label: "Check Task Status"
+hide_title: true
+hide_table_of_contents: true
+api: eJzlVttuGzcQ/RWCTy2wN8l2rWwRoI6iBGrrCywZKeAYEUWOtIx2yQ05K0UVBORD2p/LlxTkruxVZCd+rwHDa3LmzOHM8Aw3FNnc0vSWjpldWHoXUAGWG1mi1IqmdJxJS86uhoQzRaZAKguCoCY8A74gmAFBZhfEIsPKRuQabKmVBW9uACuj2gaEWfL1yz8XsIr7uihzQIiHilwZPTdgbfxaWq4VSlWB+Prl3+i9ea/c7zgDMjmrMNNG/s0ctQkpKoskY0sgk1fADJgJmek81ysQZLomk7FegJpEZIdxzpRgqM2alMywwqZ+Z+LYSTGhAdUlGI89FDSl/oAuKSPPnAbUwKcKLL7SYk3TDXVEQaH7LKocZckMxjNtilAwZG7Z8gwK/4XrEmhK9fQjcKQBLY0LhhKs3/UUWnYWjVRzGlD4zFyWaEq7p0lCt/7HMamz7L27SeL+7Jet78vj6JN7/hkwAcb7vGYIjzJ8JPI7EAFJeuSsmpNu0umRbidNjtKTU/L2fEwdnRGYJZjn4p2VjGcQ9vVaI8SdqNNgYNjXeiGfzavfH12/CceXfwwuXp7wX3qnXPTCzulJEh5PExH2xPFxOD2awvSX7mzKTtmv5Iph9jL24caGKTsDEw4U18JBPzMqzyq1AOFB/grfGFZAeOmzbp8LMTo7H1xeD98OL6ivZquRWFnmkvsmjD9aV8nnd1FfFwUotN8PjmCR8J3pNqBXRi+llVpJNW9DqCrP2dT5oKmgBeE2vvE7B2S7pv+RX9OO3y9tow2O300pGMKuYb9zQZJOL0x6YfKCJEdp90XaOYqSB4AbW3fo0wBMFFLVFWkW67Qe3KR0Q5csr2A/6d9k9qnEuiw8lbx6bxflIQv7SXjipPsHfThNrRgFYKadrJXa+tZhmNGUxocqZ/1ldiNhQyuT05RmiKVN43iDoJjCbWTZUq4V8lxXIuK6iAf985iVMl6e0IAumZGuAeoae5dDfWrW3bSZsSpHmt5XYrvd3jkavDIS157H1Ou703+a3t61t0fuctShpsxKXtvcl9lRd2fyVjStbVxTtBGftvZGdGf9RpuCOaa/vxs7DM0qzLrXMDNgMz9t2pfUb9KAznK98vxMbdj6vNlLb3P+w+x6qJhxDtZ+QB+nLqpUM+1DSqyFpfYkA4VgSiMtkKEAhRLXpO/g/CC/hhkYUBzoo7O+r/McuFshpetSAdaPeQHIZG6Jnvl/bVWW2iAIUreWJTNt/M6PWfw0GPZ/dp0CxtaRT6LEtzCCKezlzA0UyaGVnCYpPh/eKKa1cDLuu0sxXzF3vlHNjAbftO9qtYraMPbeDgomnWWz8lvLytU5lxyUhXYYP8JI13M+jML8dqTNPG58bfznsD+4GA3CbpREGRa5A/4c5nruK7iP0Wa5KsNmPsRVmWsmbNxNOi/i5DhuEv3BgXy4YMt1ZJdzP5jcJS+YajF+7D2wV/zWe+b/9OZrbivCZ4zLnDnJbCq6aTTy9uAleBfQzKloeks3mymzcGPy7dYtf6rAOMW6e1BBL1i7t5cXswWsvbj7bIdjRyDYDZRHX5LbYOd0xjmU2DI/eC84bbzX+qvL0dipV/NgLbRwPg7Y4wYPn47kdvsfAQMszA==
+sidebar_class_name: "post api-method"
+info_path: apis/rest/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Check Task Status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/checkTaskStatus"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API can be used to check the task status. Response can return task status as “New/Complete/In Progress/Discontinued”.
+
+The `Authorization` must have `Bearer` followed by `Token`. 
+
+Mandatory params: 
+`taskid`
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"multipart/form-data"}
+    value={"multipart/form-data-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"taskid"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"2700"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Check Task Status
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"Comments"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"test comments"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"ProvisioningComments"}
+                        required={false}
+                        schemaName={""}
+                        qualifierMessage={undefined}
+                        schema={{"nullable":true,"example":null}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"ProvisioningMetadata"}
+                        required={false}
+                        schemaName={""}
+                        qualifierMessage={undefined}
+                        schema={{"nullable":true,"example":null}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"Status"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Complete"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"UpdateDate"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"2018-08-09 03:29:13.0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"UpdateUser"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"admin"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"Comments\": \"test comments\",\n  \"ProvisioningComments\": null,\n  \"ProvisioningMetadata\": null,\n  \"Status\": \"Complete\",\n  \"UpdateDate\": \"2018-08-09 03:29:13.0\",\n  \"UpdateUser\": \"admin\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Check Task Status"}
+                  value={"Check Task Status"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"Comments\": \"test comments\",\n  \"ProvisioningComments\": null,\n  \"ProvisioningMetadata\": null,\n  \"Status\": \"Complete\",\n  \"UpdateDate\": \"2018-08-09 03:29:13.0\",\n  \"UpdateUser\": \"admin\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

@@ -1,0 +1,444 @@
+---
+id: fetch-list-of-analytics
+title: "Fetch List of Analytics"
+description: "This operation fetches a list of Analytic Controls by `Category` or `Application` ('EndpointName')."
+sidebar_label: "Fetch List of Analytics"
+hide_title: true
+hide_table_of_contents: true
+api: eJzlV1tv2zYU/isEn1ZAsiQnbhMNBeZqTuetTYrYxQYkQU1TRxYbilRJyo4X6L8PpGRHjnPxy162J1vi4XfO+c5V99iQhcbxFR4KwteGUY1vPJyCpoqVhkmBYzzNmUayBEXsC5SBoTloRBBn2iCZoc1dlEhhlOQazddolhADC6nWMyQVmg3LkjPqEGbop2s8EmkpmTDnpIBr/KaHrsW1uHAqCUclUaTQ8bWYkc4971rM6AbVPhTkzv3KLNNgZhZimgOaDSuTS8X+btUVlTYoJ0tAsw9AFKgZyiTncgWps3Qqb0HMetjDWy/HKY6x8/QT0+Yie6DHwwp+VKDNB5mucXyPqRQGhLF/O8YGd/5qtfIzqQq/UhwElSmkVkjTHApi/5l1CTjGcv4dqMEeLpXVbxjoR2AdYW0UEwvsYbgjRcntq8laGygiXHt4w87LF3Bd19tnp+vMeoo+PYqnO1oSXsGePVulXZ0O2GEr0KUUugHvh6H92U2qRmObME4z9nAOJAXlLv1KDDzJ1hP+TPPKQ2EfDasF6ofRCeqH8WAQD/ro4+cptvZMQC1BHYo3LAnNwU/kWhoIol7UYhg/kfKWHWxXkkwuz/zpxR+j8/ckA3o0gLc+fTeI/ONoTvxTchT5J0cDepK+Pe0PTk5/Rl+Iyd8HTt1UEaEzUP7Ipo6FPlArzStxC6kD+cs/U6QAvyksfSjEZPh5dHE5/jg+b1LlmRT/rpvUPDSjadseOpJEKbLGHmYGCn1ATWwyc5x2hEVVzEF1PTge1N6DsO0xr2QQaINcBf17VZdYN7INdsNqxhk1iawabp91Jzpug6AkZ85zUXFO5vbMqAo6ovagftTBX+4FHuZEm8vqFcFw4IeR3w+jd6gfxVEYh0fYVTqVRQEiJdsMe1mZYvr2Zanf2CLfaVE4vnoU+uPBXng3MfQOaVS7sdgLRXS8Q7fl9PFQxB3anuTmCWrspcb91scb66NSUiUyfSVDQ8tdoRevJGVFKWj9XIPfabfd3v5Qmf9VpneIxiFuyewy1oyuAkwu7fQvpZtJJTE5jnHgloGWwHZcaTdVGtIqxXGMc2NKHQfBvQFBhKl7mizZWhjKZZX2qCyCUfI5ICULlgPs4SVRzFZxUzbuyv6kbN9bWjJScYPjbcDr2jqmgVaKmbWzY+4WHLsA4fjqpns8sV26UTUnmtFGZptN1nTrk5PCcSNjk66L+Ly0E8Ib6TOpCmIt/f3PqcWQpDJ5/xIyBTp361a317tD7OGMy5WzTzWCnb9fd+ht/d9n10EFxIX0m3F6mqgykUmnkpmmUJqbaCQMqFIxDWicgjDMrFFi4dDwyxhdQgYKBAX85E6cSM6BuqW4VHLJUtDI5IBSMIRxbVcp+6irspTKQIqa3NIok8qdvG7FT6Nx8sZmCijdaB70wp5NXwOq0BeZ3WwYhQ45LSmODycUNGVnCHXZJZoitv5NGsuw9yh9V6tVrwujt3JQEGYl2ze/dKTcJGEUhIauGrdLob6zeV8Lccc9qRZBe1cHn8bJ6Hwy8vu9sJebglvgO5/LhYvgLkbXylXpt4tKUJVcklQH/TA6DcLjoCX6mwX5dk6W655eLtyGZKu8IKJj8XO78N5Q3W5F/6cvpLZmDdyZoOSEuU3GxeS+bZVXeK9V3ng4t900vsL393Oi4avidW1f/6jAjomrm4dm6PrW5lvA9bRbcJOkodufWgu8zew64Jur9jYQQ0qhNM9cdtusbZjbCfDlYjK1La390Cua2dFB9roP1uy6/geDmkI7
+sidebar_class_name: "post api-method"
+info_path: apis/rest/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Fetch List of Analytics"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/fetchControlList"}
+>
+  
+</MethodEndpoint>
+
+
+
+This operation fetches a list of Analytic Controls by `Category` or `Application` ("EndpointName"). 
+
+Optional params:
+`application`,
+`category`,
+`max`,
+`offset`
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/x-www-form-urlencoded"}
+    value={"application/x-www-form-urlencoded-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"application"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"System1"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"category"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":""}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Fetch Control List
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Transfer-Encoding
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                controls
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object[]
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                              >
+                                Array [
+                              </div>
+                            </li><SchemaItem
+                              collapsible={false}
+                              name={"analyticsId"}
+                              required={false}
+                              schemaName={"number"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"number","example":45}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"analyticsName"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Test 1"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"application"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"System1"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"category"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Certification"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"conflictCount"}
+                              required={false}
+                              schemaName={"number"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"number","example":14}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"controlid"}
+                              required={false}
+                              schemaName={""}
+                              qualifierMessage={undefined}
+                              schema={{"nullable":true,"example":null}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"description"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"lastRun"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"05-01-2017 21:10:03"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"recommendations"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"risk"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"High"}}
+                            >
+                              
+                            </SchemaItem><li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                              >
+                                ]
+                              </div>
+                            </li>
+                          </div>
+                        </details>
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Success"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"controls\": [\n    {\n      \"analyticsId\": 45,\n      \"analyticsName\": \"Test 1\",\n      \"application\": \"System1\",\n      \"category\": \"Certification\",\n      \"conflictCount\": 14,\n      \"controlid\": null,\n      \"description\": \"\",\n      \"lastRun\": \"05-01-2017 21:10:03\",\n      \"recommendations\": \"\",\n      \"risk\": \"High\"\n    }\n  ],\n  \"errorCode\": \"0\",\n  \"msg\": \"Success\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Fetch Control List"}
+                  value={"Fetch Control List"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"controls\": [\n    {\n      \"analyticsId\": 45,\n      \"analyticsName\": \"Test 1\",\n      \"application\": \"System1\",\n      \"category\": \"Certification\",\n      \"conflictCount\": 14,\n      \"controlid\": null,\n      \"description\": \"\",\n      \"lastRun\": \"05-01-2017 21:10:03\",\n      \"recommendations\": \"\",\n      \"risk\": \"High\"\n    }\n  ],\n  \"errorCode\": \"0\",\n  \"msg\": \"Success\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      
