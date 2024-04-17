@@ -31,7 +31,7 @@ paths:
     servers:
     - url: 'https://{tenant}.saviyntcloud.com/ECM'
     post:
-      security: [] 
+      security: [] # Override global security scheme for generating access token
       tags:
         - Authentication
       summary: Get Authorization Token
@@ -159,8 +159,7 @@ paths:
 
 
         [OAuth 2.0 documentation](https://oauth.net/2/)
-      security: 
-        - oauth2RefreshToken: []  # Applying the refresh token flow
+      security:  []  # Override global security scheme for refresh token
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -53246,10 +53245,6 @@ paths:
       security:
         - bearerAuth: []
 components:
-  securitySchemes:
-    basicAuth:
-      type: http
-      scheme: basic
     bearerAuth:     # Arbitrary name for the security scheme
       type: http
       scheme: bearer
