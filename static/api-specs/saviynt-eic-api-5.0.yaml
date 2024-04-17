@@ -137,8 +137,8 @@ paths:
   /oauth/access_token:
     servers:
     - url: 'https://{tenant}.saviyntcloud.com/ECM'
-    operationId: refreshAuthorizationToken
     post:
+      operationId: refreshAuthorizationToken
       tags:
         - Authentication
       summary: Refresh Authorization Token
