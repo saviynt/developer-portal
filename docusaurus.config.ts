@@ -68,11 +68,11 @@ const config: Config = {
         },
         {
           type: "dropdown",
-          label: "APIs",
+          label: "REFERENCE",
           position: "left",
           items: [
             {
-              label: "5.0",
+              label: "REST API 5.0",
               to: "/apis/rest/5.0",
             },
           ],
