@@ -35,6 +35,17 @@
   --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1); /* Lighter for dark mode readability */
 }
 
+.theme-icon .theme-path {
+  fill: #10123D; /* Default color suitable for light mode */
+}
+
+@media (prefers-color-scheme: dark) {
+  .theme-icon .theme-path {
+      fill: #fff; /* Change to a lighter color for dark mode */
+  }
+}
+
+
 .navbar__item {
   font-size: 14px; /* Adjust this value as needed */
 }
@@ -210,6 +221,7 @@ div[class^="announcementBar_"] {
   height: 150px; /* Fixed height for the image */
   overflow: hidden; /* This will ensure that the image does not overflow the container */
   display: block; /* Ensure the image container takes the full width */
+  background-color: #ffffff;
 }
 
 .demo-showcase-card__image img {
@@ -220,7 +232,7 @@ div[class^="announcementBar_"] {
 
 .demo-showcase-card__content {
   padding: 1rem; /* Add some padding around the content */
-  background-color: #ccddff; /* Light grey background for the content area */
+  background-color: #c9a225; /* Light grey background for the content area */
   flex-grow: 1; /* Ensure the content area takes up all available space */
   height: 150px; /* Fixed height for the image */
 
@@ -229,7 +241,6 @@ div[class^="announcementBar_"] {
 .demo-showcase-card__title {
   font-size: 1rem; /* Larger font size for the title */
   font-weight: bold;
-  color: #333; /* Darker color for the title */
   margin-bottom: 0.5rem; /* Space below the title */
 }
 
@@ -250,7 +261,7 @@ div[class^="announcementBar_"] {
   gap: 0.5rem; /* Space between tags */
   padding: 0.5rem; /* Padding inside the tags area */
   justify-content: center; /* Center tags horizontally */
-  background-color: #f0f0f0; /* Slightly different background for the tags section */
+  background-color: #ffffff; /* Slightly different background for the tags section */
 }
 
 .tag {
