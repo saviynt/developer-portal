@@ -23,6 +23,7 @@ const customRenderer = {
     > [!CAUTION]
     > Negative potential consequences of an action.
   */
+ 
     blockquote(quote) {
       const quoteContent = quote.replace(/^\[!\w+\]\s*/gm, ''); // Remove the markers
       if (quote.includes('[!NOTE]')) {
