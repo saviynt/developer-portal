@@ -4,7 +4,7 @@ import { useLocation, useHistory } from 'react-router-dom';
 import { marked } from 'marked';
 import DOMPurify from 'dompurify';
 import Layout from '@theme/Layout'; // Assuming you are using the default Docusaurus theme
-import GitHubDiscussions from '@site/src/components/GitHub/Discussions';
+import GitHubDiscussions from '../../../components/Github/Discussions';
 
 
 // Create a custom renderer
