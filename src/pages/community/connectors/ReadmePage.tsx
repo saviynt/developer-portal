@@ -4,6 +4,8 @@ import { useLocation, useHistory } from 'react-router-dom';
 import { marked } from 'marked';
 import DOMPurify from 'dompurify';
 import Layout from '@theme/Layout'; // Assuming you are using the default Docusaurus theme
+import GitHubDiscussions from '@site/src/components/GitHub/Discussions';
+
 
 // Create a custom renderer
 const customRenderer = {
@@ -23,7 +25,7 @@ const customRenderer = {
     > [!CAUTION]
     > Negative potential consequences of an action.
   */
- 
+
     blockquote(quote) {
       const quoteContent = quote.replace(/^\[!\w+\]\s*/gm, ''); // Remove the markers
       if (quote.includes('[!NOTE]')) {
@@ -107,6 +109,7 @@ const ReadmePage = () => {
                   </div>
                 <h1>{name} Community Connector</h1>
               <div className="markdown" dangerouslySetInnerHTML={{ __html: readmeContent }} />
+              <GitHubDiscussions repo="saviynt/community-connectors" issueTerm={name} label="connector" theme="github-light" />
               </div>
               )}
             </div>

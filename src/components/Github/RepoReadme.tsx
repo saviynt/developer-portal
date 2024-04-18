@@ -8,7 +8,7 @@ interface GithubContentProps {
   repoPath: string;
 }
 
-const GithubContent: React.FC<GithubContentProps> = ({ repoPath }) => {
+const RepoReadme: React.FC<GithubContentProps> = ({ repoPath }) => {
   const [content, setContent] = useState<string>('');
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
@@ -58,4 +58,4 @@ const GithubContent: React.FC<GithubContentProps> = ({ repoPath }) => {
   );
 };
 
-export default GithubContent;
+export default RepoReadme;

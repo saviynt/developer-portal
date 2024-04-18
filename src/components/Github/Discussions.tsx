@@ -1,44 +1,36 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
-const GitDiscussions = ({ repo }) => {
-    const [discussions, setDiscussions] = useState([]);
-    const [error, setError] = useState(null);
-
-    useEffect(() => {
-        const fetchDiscussions = async () => {
-            try {
-                const response = await fetch(`https://api.github.com/repos/${repo}/discussions`, {
-                    headers: { Authorization: `token YOUR_GITHUB_TOKEN` }
-                });
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                const data = await response.json();
-                setDiscussions(data);
-            } catch (error) {
-                setError(error.message);
-            }
-        };
-
-        fetchDiscussions();
-    }, [repo]);
-
-    if (error) {
-        return <div>Error: {error}</div>;
+const GitHubDiscussions = ({ repo, issueTerm = 'pathname', label = 'discussion', theme = 'github-light' }) => {
+  useEffect(() => {
+    // Cleanup existing script to reconfigure or reinitialize when props change
+    const existingScript = document.getElementById('github-discussion-script');
+    if (existingScript) {
+      existingScript.remove();
     }
 
-    return (
-        <div>
-            <h1>Discussions</h1>
-            <ul>
-                {discussions.map(discussion => (
-                    <li key={discussion.id}>
-                        {discussion.title} - {discussion.user.login}
-                    </li>
-                ))}
-            </ul>
-        </div>
-    );
+    const script = document.createElement('script');
+    script.id = 'github-discussion-script'; // Unique ID for the script tag
+    script.src = 'https://utteranc.es/client.js';
+    script.async = true;
+    script.setAttribute('repo', repo);
+    script.setAttribute('issue-term', issueTerm);
+    script.setAttribute('label', label);
+    script.setAttribute('theme', theme);
+    script.crossOrigin = 'anonymous';
+
+    const anchor = document.getElementById('github-discussions');
+    if (anchor) {
+      anchor.innerHTML = ''; // Clear previous content
+      anchor.appendChild(script);
+    }
+
+    // Cleanup function to remove script on component unmount
+    return () => {
+      script.remove();
+    };
+  }, [repo, issueTerm, label, theme]);  // Re-run the effect if these props change
+
+  return <div id="github-discussions"></div>;
 };
 
-export default GitDiscussions;
+export default GitHubDiscussions;
