@@ -30,7 +30,7 @@ const ConnectorList = () => {
 
   const handleCardClick = (connector) => {
     // Navigate and pass the URL to be fetched in the new component
-    history.push('/developer-portal/community/connectors/readmepage', 
+    history.push('/community/connectors/readmepage', 
     { 
       readmeUrl: connector.readmeLink, 
       githubUrl: connector.githubLink, 
