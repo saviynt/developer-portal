@@ -30,7 +30,7 @@ Saviynt's Enterprise Identity Cloud (EIC) can integrate with SCIM-based applicat
 
 For the purpose of this guide, we will use Zscaler and build the relevant jsons.
 
-Step 1 - ConnectionJSON
+### Step 1 - ConnectionJSON
 The ConnectionJSON in the context of Saviynt's REST connector is a structured JSON object used to configure the connection parameters for integrating with an external application via REST APIs. This JSON configuration includes details about how to authenticate, communicate, and handle errors when interacting with the application's endpoints.
 
 Refer to [ConnectionJSON In Depth](connection-json.mdx) for detailed information about various attributes of ConnectionJSON and what to use when.
@@ -133,4 +133,10 @@ The ConnectionJSON configuration will look like this -
 > - Elements like `<Base URL>` and `<Bearer Token>` suggest that this configuration should be dynamically populated with actual data during implementation.
 
 This `ConnectionJSON` sets up the necessary parameters and structures to securely and effectively communicate with Zscaler SCIM endpoint.
+
+
+### Step 2 - ImportAccountJSON
+
+Refer to [Zscaler SCIM Examples](https://help.zscaler.com/zia/scim-api-examples) for detailed Zscaler APIs for User Management
+
 
