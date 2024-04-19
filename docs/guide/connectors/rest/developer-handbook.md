@@ -1,4 +1,4 @@
-# Developers Handbook for integrating with REST based applications
+# Developers Handbook
 
 [ConnectionJSON In Depth](connection-json.mdx)
 
