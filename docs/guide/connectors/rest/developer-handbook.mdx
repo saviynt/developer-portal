@@ -1,0 +1,925 @@
+# Developers Handbook for integrating with REST based applications
+
+## ConnectionJSON
+
+This parameter is used to provide an authorization mechanism for target applications for making API calls. Each authentication is
+provided with a name such as userAuth. This name is referred in the ImportAccountEntJSON with the field name as a connection.
+
+The following table describes attributes in ConnectionJSON:
+
+| Attribute | Description |
+| --------- | ----------- | 
+| acctAuth | Use this attribute to specify the name of the connection.| 
+| authType | Use this attribute to specify the type of authentication used for the connection.<li>For Basic authentication type, you must specify username and password in the properties attribute. Ensure that the API supports Basic authentication type and tokenType is selected as Basic.</li><li>For OAuth2 authentication type, you must specify url, httpMethod, httpParams, httpParams, httpHeaders, httpContentType attributes to regenerate a token.</li><li>For BasicWithAccessToken authentication type, you must specify a valid accessToken.</li><li>For BasicWithHmac authentication type, you must specify IKEY and SKEY in the properties attribute.</li><li>For cookies authentication type, you must specify apiKey in the properties attribute.</li><li>For SignedHeaders authentication type, you must specify userId and keyFilePath in the properties attribute.</li><li>For JWT authentication type, you must specify jwtConfig, signedAlgorithm, key, and jwtExpiryDuration.</li>|
+| jwtConfig | Use this attribute to specify the jwtHeader and jwtPayload details of the JWT token. Sample header and payload details passed in the token are: <li>jwtHeader.alg: Specifies the type of algorithm used for signature or encryption.</li><li>jwtHeader.typ: Specifies the type of the token.</li><li>jwtHeader.kid: Specifies the key used to secure the JWS.</li><li>jwtPayload.iss: Specifies the issuer for the created and signed token.</li><li>jwtPayload.sub: Specifies the subject referred in the token.</li><li>jwtPayload.aud: Specifies the audience for the token.</li><li>jwtPayload.scope: Specifies the permission granted for the subject on the resource.</li>
+| signedAlgorithm | Use this attribute to specify the algorithm used for signing the token. The connector supports HMAC, RSA and ECDSA algorithms.| 
+| key | Use this attribute to specify the secret key or certificate used for the authentication. |
+| jwtExpiryDuration | Use this attribute to specify the duration for token expiry. |
+| username | Use this attribute to specify the username used for authentication. |
+| password | Use this attribute to specify the password used for authentication. |
+| client_id | The Client ID is considered public and is used to build login URLs. | 
+| client_secret | The Client Secret is confidential and private. Both, the Client ID and Client Secret are used for authenticating to the target application. The Client ID acts as a username and the Client Secret acts as a password. | 
+| scope | Based on the permissions assigned for access to various objects or components in the target application, a scope is generated. Specify the scope, for which you want to assign the permissions.| 
+| url | Use this attribute to specify the target application URL. Leave this blank for the Basic authentication type.|
+| httpMethod | Use this attribute to specify the method to call the REST API such as GET, POST, PUT, DELETE and GETWITHBODY.|
+| httpParams |  Use this attribute to specify additional attributes required to make a successful call. |
+| httpHeaders | Use this attribute to specify header parameters such as Authorization, Accept required to make the REST API call.|
+| httpContentType | The function header sends the http JSON header to the browser to indicate the type of content it expects. Use this attribute to specify content type of request parameters during regeneration of a token, it can be JSON, text, html, XML or application XML.| 
+| expiryError | Use this attribute to specify the error response to be displayed for an expiry error. |
+| authError | Use this attribute to specify the error response to be displayed for an authentication error. <br/> For Basic authentication type, if the authentication fails, the connector retries to authenticate the connection.|
+| timeOutError | Use this attribute to specify the error response to be displayed for a connection timeout error. |
+| errorPath |  Use this attribute to specify the path of error in the response JSON file. If error is returned in headers, then this attribute can be empty. Error may be in JSON, html, or xml format. If the error file name has a dot, then it must be preceded with a ~ and succeeded by a # sign. For example, odate~dot#error.code.| 
+| maxRefreshTryCount | Use this attribute to specify the maximum number of times to refresh and get the same token.<br/> For a Basic Authentication type, the connector retries the authentication again using user name and password.
+| tokenResponsePath | Use this attribute to specify the path as access_token as the access token is available in the path.
+| tokenType | Use this attribute to indicate the type of token, it can be either Basic or Bearer. |
+| accessToken | Use this attribute to specify the access token. Initially, you can specify a dummy value, blank value or any valid token. This value gets populated after the token gets refreshed. <br/> For a Basic Authentication type, specify accessToken as Base64.|
+| authHeaderName | For OAuth2 authentication type, the token is sent in the Authorization header which is specified in API headers as Authorization with the default value “${access_token}”. But there are target applications that use a different header names instead of Authorization. In this scenario, specify the authHeaderName in ConnectionJSON.|
+| refreshType | Use this attribute to save the latest refresh token for generating the token. |
+| refreshTokenResponsePath | Use this attribute to specify the path to obtain the refresh token in the API response when action to refresh or generate a token is initiated. |
+| refreshToken | Use this attribute to specify the valid refresh token to obtain the refreshed access or refresh token after the tokens are expired. |
+|refreshTokenAuthError | Use this attribute to specify the list of errors that can occur while refreshing the token. These errors will be received while calling the generate token API. If an error is encountered and it matches an error from this list, the system regenerates the refresh token for that authentication and stores it in the refreshToken attribute.|
+|refreshTokenErrorPath |  If the error returned from the token regeneration API call is in the form of JSON/HTML/XML, use this attribute to specify the path to look for the errors in the response. If an error is returned in headers, then this field is empty. |
+| refreshTokenCall | Use this attribute to invoke another API (Generate Refresh Token) for generating a new refresh token and save it for subsequent API calls. To regenerate a token, specify the values for the following attributes: url, httpMethod, httpParams, httpHeaders, and httpContentType. |
+| maskInLogs | Use this attribute to specify the list of sensitive attributes whose values must be masked in the logs. Specify the attribute names as comma separated values. |
+| retryAfterCalls | Use this attribute to specify the number calls after which the API throws exceptions. |
+| retryWaitSeconds | Use this attribute to specify the sleep time interval between the two blocks of calls, so that the dependent second call is processed after completing the calls in the first block.|
+| cleanUpTextContent | Use this attribute to instruct the connector to map the attributes returned in the API response to IGA if the response contains special characters. When set to true, the connector clears the text that disrupts the traversing flow of the API response and successfully maps the attributes.|
+| retryFailureStatusCode | Use this attribute to specify the codes in a list format if the authentication failure is returned as a set of http status codes in the response body. This instructs to perform system refresh or regenerate tokens. It stores new tokens in the accessToken attribute.|
+| keyFile | Use this attribute to specify the absolute path of the keystore which contains the public-private keypair. For example, /saviynt_shared/saviynt/ConnectorFiles/filename.pem. <br/> > From Release v23.8, the REST connector uses the default path of key file that you upload under Admin > Settings > File Directory > Connector Files for creating a connection. Instead of the absolute path, specify the file name that contains the public-private keypair. |
+| keyFilePassword | Use this attribute to specify the password of the keystore. |
+| keyManagerAlgorithm | Use this attribute to specify the algorithm used to create the keystore. |
+| keyStoreType | Use this attribute to specify the type of keystore. |
+| sslAlgorithmName | Use this attribute to specify the algorithm used to create the SSL context using this keystore. |
+
+
+Sample ConnectionJSON:
+
+JSON
+
+```
+{
+  "authentications": {
+    "userAuth": {
+      "authType": "oauth2",
+      "url": "https://<domain name>/api/v18.2/auth",
+      "httpMethod": "POST",
+      "httpParams": {
+        "username": "<Username>",
+        "password": "<Password>"
+      },
+      "httpHeaders": {
+        "contentType": "application/x-www-form-urlencoded"
+      },
+      "httpContentType": "application/x-www-form-urlencoded",
+      "expiryError": "ExpiredAuthenticationToken",
+      "authError": [
+        "InvalidAuthenticationToken",
+        "AuthenticationFailed",
+        "FAILURE",
+        "INVALID_SESSION_ID"
+      ],
+      "timeOutError": "Read timed out",
+      "errorPath": "errors.type",
+      "maxRefreshTryCount": 5,
+      "tokenResponsePath": "sessionId",
+      "tokenType": "Bearer",
+      "accessToken": "<access token>"
+    }
+  }
+}
+```
+Sample ConnectionJSON when the access token is available as part of response headers:
+
+JSON
+
+```
+{
+  "authentications": {
+    "acctAuth": {
+      "authType": "oauth2",
+      "url": "",
+      "httpMethod": "POST",
+      "httpParams": {
+      },
+      "httpHeaders": {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "httpContentType": "application/x-www-form-urlencoded",
+      "expiryError": "ExpiredAuthenticationToken",
+      "authError": [
+        "USER_AUTHENTICATION_FAILED"
+      ],
+      "timeOutError": "error",
+      "errorPath": "error",
+      "maxRefreshTryCount": 3,
+      "tokenResponsePath": "#HEADERS#Set-Cookie",
+      "tokenType": "",
+      "authHeaderName": "Cookie",
+      "retryFailureStatusCode": [
+      ],
+      "accessToken": "sdfghjk"
+    }
+  }
+}
+```
+
+> Note
+>
+> #HEADERS# is mandatory, if access token is present in the response headers.
+
+### Common Features
+
+#### Multiple Authentications 
+Supports multiple authentications where more than one authentication mechanism is required. For example, for Azure AD, there are graph.windows.net APIs and [http://graph.microsoft.com](http://graph.microsoft.com) APIs and each API has a different authentication mechanism and hence two authentication constructs are used in ConnectionJSON.
+
+Example:
+
+``` JSON
+{
+  "authentications": {
+    "userAuth": {
+      "authType": "oauth2",
+      "url": "https://<domain name>/<<TenantID>>/oauth2/token",
+      "httpMethod": "POST",
+      "httpParams": {
+        "grant_type": "client_credentials",
+        "client_secret": "<<ClientSecret>>",
+        "client_id": "<<ClientID>>",
+        "resource": "https://graph.microsoft.com/"
+      },
+      "httpHeaders": {
+        "contentType": "application/x-www-form-urlencoded"
+      },
+      "httpContentType": "application/x-www-form-urlencoded",
+      "expiryError": "ExpiredAuthenticationToken",
+      "authError": [
+        "InvalidAuthenticationToken"
+      ],
+      "timeOutError": "Read timed out",
+      "errorPath": "error.code",
+      "maxRefreshTryCount": 5,
+      "tokenResponsePath": "access_token",
+      "tokenType": "Bearer",
+      "accessToken": "Bearer abc"
+    },
+    "entAuth": {
+      "authType": "oauth2",
+      "url": "https://<domain name>/<<TenantID>>/oauth2/token",
+      "httpMethod": "POST",
+      "httpParams": {
+        "grant_type": "client_credentials",
+        "client_secret": "<<ClientSecret>>",
+        "client_id": "<<ClientID>>",
+        "resource": "https://graph.windows.net/"
+      },
+      "httpHeaders": {
+        "contentType": "application/x-www-form-urlencoded"
+      },
+      "httpContentType": "application/x-www-form-urlencoded",
+      "expiryError": "ExpiredAuthenticationToken",
+      "authError": [
+        "InvalidAuthenticationToken",
+        "Authentication_MissingOrMalformed"
+      ],
+      "timeOutError": "Read timed out",
+      "errorPath": "odata~dot#error.code",
+      "maxRefreshTryCount": 3,
+      "tokenResponsePath": "access_token",
+      "tokenType": "Bearer",
+      "accessToken": "Bearer abcde"
+    }
+  }
+}
+```
+#### SSL Parameter
+Installing SSL certificates is sufficient to make https API calls, however, if target applications expect customizations such as the TLS version, you can pass SSL parameters while making API calls.
+
+``` JSON
+{
+  "authentications": {
+    "acctAuth": {
+      "authType": "oauth2",
+      "url": "XXXXXXXXXXXX",
+      "httpMethod": "POST",
+      "httpParams": {
+        "grant_type": "client_cert"
+      },
+      "httpContentType": "application/x-www-form-urlencoded",
+      "ssl": {
+        "keyFile": "opt/java/jdk1.8.0_181/jre/lib/security/cacerts",
+        "keyFilePassword": "changeit",
+        "keyManagerAlgorithm": "SunX509",
+        "keyStoreType": "JKS",
+        "sslAlgorithmName": "TLSv1.2"
+      },
+      "httpHeaders": {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Authorization": "Basic xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+      },
+      "retryFailureStatusCode": [401],
+      "expiryError": "ExpiredAuthenticationToken",
+      "authError": [
+        "SESSION_NOT_VALID",
+        "AuthenticationFailed",
+        "ExpiredJwtException",
+        "401 Unauthorized"
+      ],
+      "timeOutError": "Read timed out",
+      "errorPath": "code",
+      "maxRefreshTryCount": 6,
+      "tokenResponsePath": "access_token",
+      "tokenType": "Bearer",
+      "accessToken": "Bearer xxxxxxxxxxxxxxxxx"
+    }
+  }
+}
+```
+#### Connection JSON Validation 
+The connector supports validating authType as oauth2. To do this, populate the http parameters in the **testConnectionParams** attribute. It validates the connection parameters and prompts Successful or Failed status based on the provided credentials while saving the connection.
+
+From Release v23.10 onwards, if you specify an incorrect value or blank value for the testConnectionParams attribute in the ConnectionJSON parameter and then click Save & Test Connection, the connector displays a detailed error message in the debug log file and the Job Log Detail page of the Test Connections Job. The message includes the name of the failed connection, type of error with exception that occurred in the target, and any additional details that might help in troubleshooting the connection issue.
+
+For more information about troubleshooting issues encountered during saving and testing a connection, see Errors while Saving and Testing a Connection under Troubleshooting Issues in the REST Integration Guide.
+
+
+Example:
+
+JSON
+
+```
+{
+  "authentications": {
+    "acctAuth": {
+      "authType": "Basic",
+      "url": "https://<domain name>",
+      "httpMethod": "POST",
+      "httpParams": {},
+      "httpHeaders": {},
+      "httpContentType": "text/html",
+      "properties": {
+        "userName": "username",
+        "password": "password"
+      },
+      "expiryError": "Couldn't authenticate you",
+      "authError": [
+        "Couldn't authenticate you"
+      ],
+      "timeOutError": "Read timed out",
+      "errorPath": "error",
+      "maxRefreshTryCount": 5,
+      "tokenResponsePath": "access_token",
+      "tokenType": "Basic",
+      "accessToken": "Basic asdfghjkl",
+      "testConnectionParams": {
+        "http": {
+          "url": "https://<domain name>/api/v2/users.json",
+          "httpHeaders": {
+            "Authorization": "${access_token}"
+          },
+          "httpContentType": "application/json",
+          "httpMethod": "GET"
+        },
+        "successResponse": [],
+        "successResponsePath": "",
+        "errors": [
+          "Couldn't authenticate you"
+        ],
+        "errorPath": "error"
+      }
+    }
+  }
+  }
+```
+### Authentication Types
+The following authentication types are supported:
+#### Basic 
+Used for authentication where only username and password are required to authorize the REST API calls. Values for username or password fields must be provided in the properties attribute. You can leave the HTTP related parameters empty.
+
+Example:
+
+JSON
+```
+{
+  "authentications": {
+    "acctAuth": {
+      "authType": "Basic",
+      "url": "<URL>",
+      "httpMethod": "POST",
+      "httpParams": {},
+      "httpHeaders": {},
+      "httpContentType": "text/html",
+      "properties": {
+        "userName":"<<USERNAME>>/token",
+        "password":"<<PASSWORD>>"
+      },
+      "expiryError": "ExpiredAuthenticationToken",
+      "authError": [
+        "InvalidAuthenticationToken",
+        "AuthenticationFailed"
+      ],
+      "timeOutError": "Read timed out",
+      "testname": "<test URL>",
+      "errorPath": "error.code",
+      "maxRefreshTryCount": 5,
+      "tokenResponsePath": "access_token",
+      "tokenType": "Basic",
+      "accessToken": "Basic <<TOKEN>>",
+"apiRateLimitConfig": {"retryAfterCalls": 100,"retryWaitSeconds": 60}
+    }
+  }
+}
+```
+
+#### BasicWithAccessToken
+Used for authentication when the access token is obtained using the basic username and password credentials. In this type, the primary http parameters are **url** , **httpHeaders** , **httpMethod** and **httpContentType**.
+
+
+> Note
+> The refresh token for applications such as Hydra expires once it is used or the time-period is elapsed. The refreshTokenFlag is added to refresh the token based on your selection such as set it to 'true' refreshes the refresh token immediately after generating new access token for subsequent use. The refresh token calls the refresh token API right after the access token generation.
+
+Example 1:
+
+```
+{
+  "authentications": {
+    "acctAuth": {
+      "authType": "BasicWithAccessToken",
+      "url": "{url}}",
+      "httpMethod": "POST",
+      "httpHeaders": {"Accept": "application/json"},
+      "properties": {"userName": "<username>","password": "<password>"},
+      "httpContentType": "application/json",
+      "expiryError": "ExpiredAuthenticationToken",
+      "retryFailureStatusCode": [403,401,500],
+      "authError": [
+        "InvalidAuthenticationToken",
+        "AuthenticationFailed",
+        "Authentication_MissingOrMalformed",
+        "Authentication_ExpiredToken"
+      ],
+      "timeOutError": "Read timed out",
+      "errorPath": "error.code",
+      "maxRefreshTryCount": 5,
+      "tokenResponsePath": "access_token",
+      "tokenType": "Bearer",
+      "accessToken": "Bearer xyz"
+    }
+  }
+}
+```
+Example 2: To refresh the token for BasicwithAccesToken auth type when the import job fails with 417 error code, use a format similar to the following:
+
+```
+{
+  "authentications": {
+    "user": {
+      "authType": "BasicWithAccessToken",
+      "url": "<URL>",
+      "httpMethod": "POST",
+      "httpHeaders": {
+        "Accept": "application/json"
+      },
+      "httpParams": {
+        "UserId": "<user ID>",
+        "Password": "<password>",
+        "Server": "<Server name>"
+      },
+      "properties": {
+        "userName": "<user name>",
+        "password": "<password>"
+      },
+      "httpContentType": "application/json",
+      "expiryError": "ExpiredAuthenticationToken",
+      "retryFailureStatusCode": [403,401,417,],
+      "authError": [
+        "InvalidAuthenticationToken",
+        "AuthenticationFailed",
+        "Authentication_MissingOrMalformed",
+        "Authentication_ExpiredToken"
+      ],
+      "timeOutError": "Read timed out",
+      "errorPath": "error.code",
+      "maxRefreshTryCount": 5,
+      "tokenResponsePath": "token",
+      "tokenType": "",
+      "accessToken": "Bearer xyz"
+    }
+  }
+}
+```
+
+#### BasicWithHMAC
+Used when authentication requires Hash-based Message Authentication Code (HMAC) signed signature using the credentials passed in the **properties** attribute such as **“properties”:{“IKEY”: “xyz”, “SKEY” : “abc”}**.
+
+Example:
+```
+JSON
+{
+  "authentications": {
+    "acctAuth": {
+      "authType": "BasicWithHmac",
+      "url": "<url>",
+      "httpMethod": "POST",
+      "properties": {
+        "IKEY": "<<IKEY>>",
+        "SKEY": "<<SKEY>>"
+      },
+      "authError": [
+        "InvalidAuthenticationToken",
+        "AuthenticationFailed",
+        "Authentication_MissingOrMalformed",
+        "Authentication_ExpiredToken"
+     ],
+      "errorPath": "error.code",
+      "maxRefreshTryCount": 5,
+      "tokenResponsePath": "access_token",
+      "tokenType": "Basic",
+      "accessToken": "Basic xyz"
+    }
+  }
+}
+```
+#### Cookies
+Used for authentication using cookies.
+
+Example 
+```
+{
+  "authentications": {
+    "acctAuth": {
+      "authType": "cookies",
+      "url": "",
+      "httpMethod": "POST",
+      "httpParams": {
+        "username": "<specify username>",
+        "password": "<specify password>",
+        "apiKey": "${apiKey}",
+        "timestamp": "${timestamp}"
+      },
+      "httpHeaders": {
+        "contentType": "application/json"
+      },
+      "cookies": "${cookies}",
+      "properties": {
+        "apiKey": "${apiKey}"
+      },
+      "httpContentType": "application/json",
+      "expiryError": "ExpiredAuthenticationToken",
+      "authError": [
+        "SESSION_NOT_VALID",
+        "AuthenticationFailed",
+        "HTTP error code : 401"
+      ],
+      "timeOutError": "Read timed out",
+      "errorPath": "code",
+      "maxRefreshTryCount": 5,
+      "tokenResponsePath": "",
+      "tokenType": "",
+      "accessToken": "<specify access token>",
+      "retryFailureStatusCode": [
+        500,
+        502,
+        401
+      ]
+    }
+  }
+}
+```
+
+#### SignedHeaders
+Used for authentication using SignedHeaders.
+
+Example  JSON
+```
+{
+  "authentications": {
+    "acctAuth": {
+      "authType": "SignedHeaders",
+      "httpMethod": "POST",
+      "httpHeaders": {
+        "contentType": "application/x-www-form-urlencoded"
+      },
+      "httpContentType": "application /x-www-form-urlencoded",
+      "properties": {
+        "userId": "pivotal",
+        "keyFilePath": "<specify key file path>"
+      },
+      "expiryError": "ExpiredAuthenticationToken",
+      "authError": [
+        "InvalidAuthenticationToken",
+        "AuthenticationFailed"
+      ],
+      "timeOutError": "Read timed out",
+      "errorPath": "message",
+      "maxRefreshTryCount": 5,
+      "tokenResponsePath": "access_token",
+      "tokenType": "Bearer",
+      "accessToken": "<specify access token>"
+    }
+  }
+}
+```
+#### JWT 
+Used for authentication using JSON Web Tokens (JWT). For this authentication, specify the values for the following attributes: **httpParamsName** , **jwtConfig** , **signedAlgorithm** , **key** , and **jwtExpiryDuration**.
+
+
+To specify **httpParamsName** as assertion, use the following format:
+
+Example JSON
+
+```
+{
+  "authentications": {
+    "acctAuth": {
+      "authType": "Jwt",
+      "httpParamsName": "assertion",
+"jwtConfig": {
+        "jwtHeader": {
+          "alg": "<specify algorithm>",
+          "typ": "JWT",
+          "kid": "<specify key ID>"
+        },
+        "jwtPayload": {
+          "iss": "<specify ISS>",
+          "sub": "<specify subject>",
+          "aud": "<specify audience>",
+          "scope": "https://www.googleapis.com/auth/admin.directory.user https://www.googleapis.com/auth/admin.directory.group https://www.googleapis.com/auth/admin.directory.domain"
+        },
+        "signedAlgorithm": "<specify signed algorithm>",
+        "key": "<specify key>",
+        "jwtExpiryDuration": 120
+      },
+      "url": "<specify URL>",
+      "httpMethod": "POST",
+      "httpParams": {
+        "grant_type": "urn:ietf:params:oauth:grant-type:jwt-bearer"
+      },
+      "httpContentType": "application/x-www-form-urlencoded",
+      "retryFailureStatusCode": [
+        401,
+        500,
+        400
+      ],
+      "authError": [
+        "SESSION_NOT_VALID",
+        "AuthenticationFailed",
+        "ExpiredJwtException",
+        "401 Unauthorized",
+        "401",
+        "You couldn't be authenticated"
+      ],
+      "errorPath": "code",
+      "maxRefreshTryCount": 5,
+      "tokenResponsePath": "access_token",
+      "tokenType": "Bearer",
+      "accessToken": ""
+    }
+  }
+}
+```
+To specify **httpParamsName** as jwt_token, use the following format:
+
+Example JSON
+```
+{
+  "authentications": {
+    "acctAuth": {
+      "authType": "Jwt",
+      "httpParamsName": "jwt_token",
+"jwtConfig": {
+        "jwtHeader": {
+          "alg": "<specify algorithm>",
+          "typ": "JWT"
+        },
+        "jwtPayload": {
+          "exp": 1675754298,
+          "iss": "<specify ISS>",
+          "sub": "<specify subject>",
+          "aud": "<specify audience>"
+        },
+        "signedAlgorithm": "<specify signed algorithm>",
+        "key": "<specify key>",
+        "jwtExpiryDuration": 120
+      },
+      "url": "<specify URL>",
+      "httpMethod": "POST",
+      "httpParams": {
+        "client_id": "<client_id>",
+        "client_secret": "<client_secret>"
+      },
+      "httpContentType": "multipart/form-data",
+      "retryFailureStatusCode": [
+        401,
+        500,
+        400
+      ],
+      "authError": [
+        "SESSION_NOT_VALID",
+        "AuthenticationFailed",
+        "ExpiredJwtException",
+        "401 Unauthorized",
+        "401",
+        "You couldn't be authenticated"
+      ],
+      "errorPath": "code",
+      "maxRefreshTryCount": 5,
+      "tokenResponsePath": "access_token",
+      "tokenType": "Bearer",
+      "accessToken": "Bearer abcd"
+    }
+  }
+}
+```
+#### OAuth2
+Supports OAuth protocol for API authorization with various types of OAuth2 mechanisms. You must provide the token that the connector must regenerate when a wrong token is specified or existing token has expired.
+
+
+> To regenerate the token, provide the values for the following attributes: url , httpMethod , httpParams , httpHeaders , and httpContentType.
+
+The following tokens are used for OAuth:
+
+##### Static Access Token
+Some cloud applications support hardcoded access token that never expires until it is manually revoked from the target application. In this case, an attribute named **accessToken** is populated with the hardcoded token and other parameters are left with dummy values.
+
+Example JSON
+  ```
+       {
+         "authentications": {
+           "userAuth": {
+             "authType": "oauth2",
+             "url": "<URL>",
+             "httpMethod": "POST",
+             "httpParams": {},
+             "httpHeaders": {
+               "contentType": "application/x-www-form-urlencoded"
+             },
+             "httpContentType": "application/x-www-form-urlencoded",
+             "expiryError": "ExpiredAuthenticationToken",
+             "authError": [
+               "InvalidAuthenticationToken",
+               "AuthenticationFailed",
+               "FAILURE",
+               "INVALID_SESSION_ID"
+             ],
+        "timeOutError": "Read timed out",
+        "errorPath": "errors.type",
+        "maxRefreshTryCount": 5,
+        "tokenResponsePath": "sessionId",
+        "tokenType": "Bearer",
+        "accessToken": "Bearer <token>"
+          }
+        }
+      }
+  ```
+##### Static Refresh Token
+In this scenario, access tokens expire after a specific time period but refresh tokens never expire. Therefore, refresh tokens are used as new access tokens. To regenerate a refresh token, specify values for the following attributes: **url** , **httpMethod** , **httpParams** , **httpHeaders** , and **httpContentType**.
+
+Example:
+``` json
+{
+  "authentications": {
+    "acctAuth": {
+      "authType": "oauth2",
+      "url": "https://<domain name>/oauth/v2/token",
+      "httpMethod": "POST",
+      "httpParams": {
+        "grant_type": "refresh_token",
+        "client_id": "",
+        "client_secret": "",
+        "redirect_uri": "",
+        "refresh_token": "<refresh token>"
+      },
+      "expiryError": "ExpiredAuthenticationToken",
+      "retryFailureStatusCode": [401],
+      "timeOutError": "Read timed out",
+      "errorPath": "error",
+      "maxRefreshTryCount": 3,
+      "tokenResponsePath": "access_token",
+      "tokenType": "Bearer",
+      "accessToken": "Bearer abcd"
+    }
+  }
+}
+```
+
+##### Renew Access Token and Refresh Token using Single API
+In this OAuth mechanism, the access and refresh tokens expire after a time period, and the latest refresh token is used to regenerate new access and refresh tokens. To regenerate these tokens, specify the values for the following attributes: **refreshType** , **refreshTokenResponsePath** , and **refreshToken**.
+
+Example:
+   ``` JSON
+  {
+    "authentications": {
+      "userAuth": {
+        "authType": "oauth2",
+        "url": "https://<domain name>/v1/access_token",
+        "httpMethod": "POST",
+        "httpParams": {
+          "client_id": "<client ID>",
+          "client_secret": "<client secret>",
+          "grant_type": "refresh_token",
+          "refresh_token": "${refresh_token}"
+        },
+        "httpHeaders": {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "httpContentType": "application/x-www-form-urlencoded",
+        "expiryError": "ExpiredAuthenticationToken",
+        "authError": [
+          "USER_AUTHENTICATION_FAILED",
+          "PARTNER_AUTHENTICATION_FAILED",
+          "AuthenticationFailed"
+        ],
+        "refreshType": "RefreshToken",
+        "refreshTokenResponsePath": "refresh_token",
+        "refreshToken": "<refresh token>",
+        "timeOutError": "Read timed out",
+        "errorPath": "errorCode",
+        "maxRefreshTryCount": 5,
+        "tokenResponsePath": "access_token",
+        "tokenType": "Bearer",
+        "retryFailureStatusCode": [401],
+        "accessToken": "Bearer <token>"
+      }
+    }
+  }
+   ```
+
+##### Renew Access Token and Refresh Token using Different API
+In some OAuth mechanisms, access token and refresh token both expire after a certain time period. After the refresh token is renewed, you need to place a call to obtain the new refresh token to use it for obtaining the new access token. To regenerate a token, specify the values for the following attributes: **refreshType** , **refreshTokenResponsePath** , **refreshToken** , **refrshTokenAuthError** , **refreshTokenErrorPath** , and **refreshTokenCall**.
+
+Example:
+``` JSON
+  {
+    "authentications": {
+      "userAuth": {
+        "authType": "oauth2",
+        "url": "https://<domain name>/oauth/token",
+        "httpMethod": "POST",
+        "httpParams": {
+          "company_id": "<company_id>",
+          "client_id": "<client_id>",
+          "grant_type": "<grant_type>",
+          "assertion": "${refresh_token}"
+        },
+        "httpHeaders": {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "httpContentType": "application/x-www-form-urlencoded",
+        "authError": [
+          "Unable to authenticate the client",
+          "Invalid OAuth token Bearer"
+        ],
+        "retryFailureStatusCode": [401],
+        "errorPath": "",
+        "maxRefreshTryCount": 5,
+        "tokenResponsePath": "access_token",
+        "refreshType": "RefreshToken",
+        "tokenType": "Bearer",
+        "accessToken": "Bearer asdsdfghjk",
+        "refreshToken": "<refreshToken>",
+        "refreshTokenAuthError": [
+          "Unable to retrieve SAML assertion",
+          "The provided SAML assertion is expired"
+        ],
+        "refreshTokenErrorPath": "errorMessage",
+        "refreshTokenCall": {
+          "refreshTokenResponsePath": "",
+          "url": "https://<domain name>/oauth",
+          "httpMethod": "POST",
+          "httpParams": {
+            "client_id": "<client_id>",
+            "user_id": "<user_id>",
+            "token_url": "https://<domain name>/oauth/token",
+            "private_key": "<private_key>"
+          },
+          "httpHeaders": {
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "httpContentType": "application/x-www-form-urlencoded"
+        }
+      }
+    }
+  }
+```
+###  Mask values of sensitive attributes in logs
+
+The connector supports masking values of sensitive attributes in logs using the **mask** **InLogs** attribute.
+
+Example:
+
+``` JSON
+{
+  "authentications": {
+    "acctAuth": {
+      "authType": "Basic",
+      "url": "<URL>",
+      "httpMethod": "POST",
+      "httpParams": {},
+      "httpHeaders": {},
+      "httpContentType": "text/html",
+      "properties": {
+        "userName": "<<USERNAME>>/token",
+        "password": "<<PASSWORD>>"
+      },
+      "expiryError": "ExpiredAuthenticationToken",
+      "authError": [
+        "InvalidAuthenticationToken",
+        "AuthenticationFailed"
+      ],
+      "timeOutError": "Read timed out",
+      "testname": "<test URL>",
+      "maskInLogs": [
+        "password",
+        "username",
+        "access_token",
+        "refresh_token"
+      ],
+      "errorPath": "error.code",
+      "maxRefreshTryCount": 5,
+      "tokenResponsePath": "access_token",
+      "tokenType": "Basic",
+      "accessToken": "Basic <<TOKEN>>",
+      "apiRateLimitConfig": {
+        "retryAfterCalls": 100,
+        "retryWaitSeconds": 60
+      }
+    }
+  }
+}
+
+```
+### Clear special characters 
+> The connector supports clearing special characters in API response using the **cleanUpTextContent** attribute.
+
+
+Example:
+
+```  JSON
+{
+  "authentications": {
+    "accAuth": {
+      "authType": "oauth2",
+      "url": "<url>",
+      "httpMethod": "POST",
+      "httpParams": {
+        "organization": "<specify organization>",
+        "username": "aabcd",
+        "password": "12345",
+        "culture": "en-US"
+      },
+      "httpHeaders": {
+        "Accept": "application/json"
+      },
+      "httpContentType": "application/x-www-form-urlencoded",
+      "retryFailureStatusCode": [
+        401
+      ],
+      "errorPath": "",
+      "maxRefreshTryCount": 3,
+      "cleanUpTextContent": true,
+      "tokenResponsePath": "token",
+      "tokenType": "",
+      "accessToken": "<specify access token>"
+    }
+  }
+}
+
+```
+### Handle space in httpParams 
+The connector replaces space in the **httpParams** attribute with %20 before sending the request to hit the connection API. From Release v23.5 onwards, a new content type named as application/x-www-form-urlencoded-pws is introduced.
+
+Example:
+
+``` JSON
+{
+  "authentications": {
+    "userAuth": {
+      "authType": "oauth2",
+      "url": "<URL>",
+      "httpMethod": "POST",
+      "httpParams": {
+        "grant_type": "password",
+        "scope": "<scope>",
+        "client_secret": "<client secret>",
+        "username": "<user name>",
+        "client_ID": "<client ID>",
+        "password": "<password>"
+      },
+      "httpContentType": "application/x-www-form-urlencoded-pws",
+      "expiryError": "ExpiredAuthenticationToken",
+      "authError": [
+        "USER_AUTHENTICATION_FAILED",
+        "PARTNER_AUTHENTICATION_FAILED",
+        "AuthenticationFailed"
+      ],
+      "timeOutError": "Read timed out",
+      "errorPath": "errorCode",
+      "maxRefreshTryCount": 5,
+      "tokenResponsePath": "access_token",
+      "tokenType": "Bearer",
+      "retryFailureStatusCode": [401],
+      "accessToken": "Bearer abc"
+    }
+  }
+}
+```
