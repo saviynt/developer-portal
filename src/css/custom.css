@@ -11,6 +11,7 @@
 
 :root {
   --ifm-font-family-base: 'Roboto', sans-serif;
+  --ifm-background-color: #ffffff;
   --ifm-color-primary: #10123d; /* Your chosen bright blue as the primary color */
   --ifm-color-primary-dark: #0e1037; /* A darker shade of the primary color */
   --ifm-color-primary-darker: #0e0f34; /* Even darker for more depth */
@@ -25,6 +26,7 @@
 
 /* For dark mode, maintain the color contrast for readability */
 [data-theme="dark"] {
+  --ifm-background-color: #121546;
   --ifm-color-primary: #efede4; /* Lighter than the primary color for dark mode */
   --ifm-color-primary-dark: #ded9c7; /* A darker shade for hover states and borders */
   --ifm-color-primary-darker: #d5d0b8; /* Darker shade for active states or deep contrast */

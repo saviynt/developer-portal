@@ -8,11 +8,11 @@ import { DOCUSAURUS_VERSION } from "@docusaurus/utils";
 const config: Config = {
   title: "Saviynt for Developers",
   tagline: "Helping developers build a rich ecosystem of tools and apps around Saviynt",
-  url: "https://saviynt.github.io",
-  baseUrl: "/developer-portal/",
+  url: "https://developers.saviynt.com",
+  baseUrl: "/",
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/favicon.ico",
+  favicon: "img/saviynt_favicon.ico",
   organizationName: "Saviynt",
   projectName: "developer-portal",
 
@@ -94,46 +94,55 @@ const config: Config = {
       ],
   },
     footer: {
-      style: "dark",
       links: [
         {
-          title: "Docs",
+          title: 'PRODUCTS',
           items: [
-            {
-              label: "Saviynt Developer Portal",
-              to: "/",
-            },
+            { label: 'Enterprise Identity Cloud', href: 'https://saviynt.com/enterprise-identity-cloud/' },
+            { label: 'Identity Governance & Administration', href: 'https://saviynt.com/solutions/identity-governance-and-administration/' },
+            { label: 'Cloud Privileged Access Management', href: 'https://saviynt.com/solutions/cloud-privileged-access-management/' },
+            { label: 'Third-Party Access Governance', href: 'https://saviynt.com/solutions/third-party-access-governance/' },
+            { label: 'Application Access Governance', href: 'https://saviynt.com/solutions/application-access-governance/' },
+            { label: 'Data Access Governance', href: 'https://saviynt.com/solutions/data-access-governance/' },
+            { label: 'Key Integrations', href: 'https://saviynt.com/integrations/' },
           ],
         },
         {
-          title: "Community",
+          title: 'CUSTOMERS',
           items: [
-            {
-              label: "Forums",
-              href: "https://forums.saviynt.com/",
-            },
+            { label: 'Saviynt + Gordon Food Services', href: 'https://saviynt.com/customers/gordon-food-service-modernizing-identity-enhancing-security/' },
+            { label: 'Saviynt + Origin Energy', href: 'https://saviynt.com/customers/origin-energy-continuous-compliance/' },
+            { label: 'Saviynt + Wienerberger', href: 'https://saviynt.com/customers/wienerberger-legacy-iga-modernization/' },
+            { label: 'Saviynt + First Solar', href: 'https://saviynt.com/customers/first-solar-digital-transformation/' },
+            { label: 'Explore Customer Successes', href: 'https://saviynt.com/customers/' },
           ],
         },
         {
-          title: "More",
+          title: 'RESOURCES',
           items: [
-            {
-              label: "Twitter",
-              href: "https://twitter.com/saviynt",
-            },
-            {
-              label: "Forum",
-              href: "https://forums.saviynt.com/",
-            },
-            {
-              label: "GitHub",
-              href: "https://github.com/saviynt",
-            },
+            { label: 'Content Hub', href: 'https://saviynt.com/content-hub/' },
+            { label: 'Events & Live Webinars', href: 'https://saviynt.com/events/' },
+            { label: 'Identity Security Glossary', href: 'https://saviynt.com/glossary/' },
+            { label: 'Analyst Reports', href: 'https://saviynt.com/content-hub-term/content-type/analyst-reports/' },
+            { label: 'Customer Support', href: 'https://saviynt.com/customer-support/' },
+            { label: 'Forrester TEI Estimator', href: 'https://saviynt.com/2020-forrester-total-economic-impact-report/' },
+            { label: 'Saviynt Blog', href: 'https://saviynt.com/blog/' },
+          ],
+        },
+        {
+          title: 'COMPANY',
+          items: [
+            { label: 'About Saviynt', href: 'https://saviynt.com/about-saviynt/' },
+            { label: 'Leadership', href: 'https://saviynt.com/leadership-team/' },
+            { label: 'Partners', href: 'https://saviynt.com/global-partnership-program/' },
+            { label: 'Newsroom', href: 'https://saviynt.com/newsroom/' },
+            { label: 'Careers', href: 'https://saviynt.com/careers/' },
+            { label: 'Community', href: 'https://saviynt.com/saviynt-community/' },
+            { label: 'Contact Us', href: 'https://saviynt.com/contact-us/' },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Saviynt Inc. All Rights Reserved.`,
-
+      copyright: 'Copyright © 2024. Saviynt Inc. All Rights Reserved.',
     },
     prism: {
       additionalLanguages: [
