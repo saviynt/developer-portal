@@ -226,19 +226,19 @@ const config: Config = {
         config: {
           saviynt:{
             specPath: "static/api-specs/saviynt-eic-api-5.0.yaml",
-            outputDir: "docs/apis/rest/5.0",
+            outputDir: "docs/reference/rest-api/5.0",
             sidebarOptions: {
               groupPathsBy: "tagGroup",
               categoryLinkSource: "auto",
             },
-            // template: "api.mustache", // Customize API MDX with mustache template
+            template: "api.mustache", // Customize API MDX with mustache template
             downloadUrl:
-              "https://github.com/saviynt/developer-portal/blob/main/static/api-specs/saviynt-eic-api-5.0.yaml",
+              "https://github.com/saviynt/developer-portal/blob/main/static/api-specs/saviynt-rest-api-5.0-bundle.yaml",
             hideSendButton: false,
             showSchemas: true,
             version: "5.0", // Current version
             label: "5.0", // Current version label
-            baseUrl: "/developer-portal/reference/rest/", // Leading slash is important
+            baseUrl: "/reference/rest/", // Leading slash is important
           } satisfies OpenApiPlugin.Options,
         } satisfies Plugin.PluginOptions,
       },
