@@ -130,33 +130,9 @@ tags:
     externalDocs:
       description: Product Documentation
       url: https://docs.saviyntcloud.com/
-  - name: request-history
-    x-displayName: Request History
-    description: APIs for managing Request History
-    externalDocs:
-      description: Product Documentation
-      url: https://docs.saviyntcloud.com/
   - name: request-approval
     x-displayName: Request Approval
     description: APIs for managing Request Approval
-    externalDocs:
-      description: Product Documentation
-      url: https://docs.saviyntcloud.com/
-  - name: request-user
-    x-displayName: Request User
-    description: APIs for managing User Request
-    externalDocs:
-      description: Product Documentation
-      url: https://docs.saviyntcloud.com/
-  - name: request-role
-    x-displayName: Request Role
-    description: APIs for managing Role Request
-    externalDocs:
-      description: Product Documentation
-      url: https://docs.saviyntcloud.com/
-  - name: request-organization
-    x-displayName: Request Organization
-    description: APIs for managing Organization Requests
     externalDocs:
       description: Product Documentation
       url: https://docs.saviyntcloud.com/
@@ -22555,7 +22531,7 @@ paths:
   /certifyUserManagerforCampaign:
     post:
       tags:
-        - campaigns-user-manager
+        - campaign-user-manager
       summary: Certify User Manager for Campaign
       description: |-
         This API will do employee verification for a particular campaign.
@@ -22717,7 +22693,7 @@ paths:
   /fetchCampaignAccEntDetails:
     post:
       tags:
-        - campaigns-user-manager
+        - campaign-user-manager
       summary: Fetch Account Entitlement Details
       description: |-
         This API returns user details, account-entitlement details of a particular campaign required for certify/revoke API. If last certified actions and last certified comments are configured during campaign creation, then it is displayed in the API response. If the employmentStatus parameter is passed with this API, then only the match records in the certified field are displayed in the API response.
@@ -23703,7 +23679,7 @@ paths:
   /approverejectCampaignAccEntDetails:
     post:
       tags:
-        - campaigns-user-manager
+        - campaign-user-manager
       summary: Approve Reject Campaign Account Entitlement Details
       description: |-
         This API is used to certify/revoke the user's access (account, entitlement) along with employment verification. When an approve or reject action is performed for a line item in a User Manager campaign, then only the latest comment sent through the API is retained in the comments field but all the comments (including actions) are stored in the audit trail/history.
@@ -24021,7 +23997,7 @@ paths:
   /reassignUserManagerforCampaign:
     post:
       tags:
-        - campaigns-user-manager
+        - campaign-user-manager
       summary: Reassign UserManager Step 1 for Campaign
       description: |-
         This API reassigns UserManager for Campaign at Employment Verification Stage in SSM.
@@ -24281,7 +24257,7 @@ paths:
   /consultCampaignAccEntDetails:
     post:
       tags:
-        - campaigns-user-manager
+        - campaign-user-manager
       summary: Consult Campaign Account Entitlement Details
       description: |-
         This API consults User Manager for Campaign at Account and Access Certification Stage in SSM. 
@@ -24445,7 +24421,7 @@ paths:
   /reAssignUserManagerStep2AccEntDetails:
     post:
       tags:
-        - campaigns-user-manager
+        - campaign-user-manager
       summary: Reassign Certification at Account and Entitlement Level Copy
       description: |-
         This API reassigns accounts, roles, or entitlements to a different user or certifier. The associated users for accounts, roles, or entitlements that are being reassigned, must be certified in Step 1.
@@ -24670,7 +24646,7 @@ paths:
   /consultEOforCampaign:
     post:
       tags:
-        - campaigns-entitlement-owner
+        - campaign-entitlement-owner
       summary: Consult EntitlementOwner Step 1 for Campaign
       description: |-
         This API consults Entitltment Owner for Campaign at Employment Verification Stage in SSM.
@@ -24795,7 +24771,7 @@ paths:
   /consultEOCampaignAccEntDetails:
     post:
       tags:
-        - campaigns-entitlement-owner
+        - campaign-entitlement-owner
       summary: Consult EntitlementOwner Step 2 for Campaign
       description: |-
         This API consults Entitltment Owner for Campaign at Account and Access Certification Stage in SSM.
@@ -24938,7 +24914,7 @@ paths:
   /fetchEntOwnerCampaignAccEntDetails:
     post:
       tags:
-        - campaigns-entitlement-owner
+        - campaign-entitlement-owner
       summary: Fetch Account Entitlement Details
       description: |-
         This API returns user details, account-entitlement details of a particular campaign required for certify/revoke API. If last certified actions and last certified comments are configured during campaign creation, then it is displayed in the API response.
@@ -25375,7 +25351,7 @@ paths:
   /fetchEntOwnerCampaignDetails:
     post:
       tags:
-        - campaigns-entitlement-owner
+        - campaign-entitlement-owner
       summary: Fetch Entitlement Owner Campaign Details
       description: |-
         This API return details of a particular Entitlement Owner campaign in SSM.
@@ -25840,7 +25816,7 @@ paths:
   /getFlatResponseEntOwnerCampaignAccEntDetails:
     post:
       tags:
-        - campaigns-entitlement-owner
+        - campaign-entitlement-owner
       summary: Fetch Flat Response Entitlement Owner Campaign Details
       description: |-
         This API return flat details of a particular Entitlement Owner campaign in SSM. If last certified actions and last certified comments are configured during campaign creation, then it is displayed in the API response.
@@ -26443,7 +26419,7 @@ paths:
   /lockEntOwnerCampaign:
     post:
       tags:
-        - campaigns-entitlement-owner
+        - campaign-entitlement-owner
       summary: Lock Campaign
       description: |-
         This API is used to lock campaign after validating whether Entitlement Owner campaign is completed or not.
@@ -26620,7 +26596,7 @@ paths:
   /approverejectEntOwnerCampaignAccEntDetails:
     post:
       tags:
-        - campaigns-entitlement-owner
+        - campaign-entitlement-owner
       summary: Approve Reject Account Entitlement Details
       description: |-
         This API is used to certify/revoke the user's access (account, entitlement). When an approve or reject action is performed for a line item in an Entitlement Owner campaign, then only the latest comment sent through the API is retained in the comments field but all the comments (including actions) are stored in the audit trail/history.
@@ -26764,7 +26740,7 @@ paths:
   /certifyEntOwnerforCampaign:
     post:
       tags:
-        - campaigns-entitlement-owner
+        - campaign-entitlement-owner
       summary: Certify Entitlement Owner for Campaign
       description: |-
         This API will do entitlement  verification for a particular campaign.
@@ -26997,7 +26973,7 @@ paths:
   /reassignEntOwnerCampaignAccEnt:
     post:
       tags:
-        - campaigns-entitlement-owner
+        - campaign-entitlement-owner
       summary: Reassign Entitlement Owner for Campaign
       description: |-
         This API reassigns Entitlement Owner for Campaign in SSM.
@@ -27129,7 +27105,7 @@ paths:
   /reassignEntOwnerCampaignAccEntDetailsStep2:
     post:
       tags:
-        - campaigns-entitlement-owner
+        - campaign-entitlement-owner
       summary: Reassign Certification at Account Level
       description: |-
         This API reassigns accounts or child entitlements to a different user or certifier. The associated entitlements for accounts or child entitlements that are being reassigned, must be certified in Step 1.
@@ -27316,7 +27292,7 @@ paths:
   /fetchAppOwnerCampaignAccEntDetails:
     post:
       tags:
-        - campaigns-application-owner
+        - campaign-application-owner
       summary: Fetch Account Entitlement Details
       description: |-
         This API returns user details, account-entitlement details of a particular campaign required for certify/revoke API. If last certified actions and last certified comments are configured during campaign creation, then it is displayed in the API response.
@@ -27756,7 +27732,7 @@ paths:
   /approverejectAppOwnerCampaignAccEntDetails:
     post:
       tags:
-        - campaigns-application-owner
+        - campaign-application-owner
       summary: Approve Reject Account Entitlement Details
       description: |-
         This API is used to certify/revoke the user's access (account, entitlement). When an approve or reject action is performed for a line item in an Application Owner campaign, then only the latest comment sent through the API is retained in the comments field but all the comments (including actions) are stored in the audit trail/history.
@@ -27978,7 +27954,7 @@ paths:
   /lockApplicationOwnerCampaign:
     post:
       tags:
-        - campaigns-application-owner
+        - campaign-application-owner
       summary: Lock Campaign
       description: |-
         This API is used to lock campaign after validating whether Application Owner campaign is completed or not.
@@ -28092,7 +28068,7 @@ paths:
   /consultAppOwnerCampaignAccEntDetails:
     post:
       tags:
-        - campaigns-application-owner
+        - campaign-application-owner
       summary: Consult AppOwner Account Entitlement Details
       description: |-
         This API consults Application Owner for Campaign at Account and Access Certification Stage in SSM.
@@ -28237,7 +28213,7 @@ paths:
   /reAssignAppOwnerCampaignAccEntDetails:
     post:
       tags:
-        - campaigns-application-owner
+        - campaign-application-owner
       summary: Reassign Application Owner for Campaign
       description: |-
         This API reassigns Entitlement Owner for Campaign in SSM.
@@ -28725,7 +28701,7 @@ paths:
   /reAssignCertification:
     post:
       tags:
-        - campaigns
+        - Campaigns
       summary: Reassign Certification
       description: |-
         This API is used to reassign certification to a different user or certifier. The user making this update must be an administrator, a campaign owner or its delegates.
@@ -31869,7 +31845,7 @@ paths:
                     errorCode: '0'
                     errorMessage: ''
                     status: SUCCESS
-  /testConnection:
+  /ECM/testConnection:
     post:
       tags:
         - connections
@@ -40615,7 +40591,7 @@ paths:
         - bearerAuth: []
     put:
       tags:
-        - policies
+        - Provisioning Policies
       summary: Update Technical Rules
       description: |-
         Starting with Release v23.11, you can use the REST API to update the existing technical rules in a readable and organized manner.
@@ -40868,7 +40844,7 @@ paths:
                     msg: Rule Updated Successfully
     post:
       tags:
-        - policies
+        - Provisioning Policies
       summary: Create Technical Rules
       description: |-
         Starting with Release v23.11, you can use this REST API to effortlessly create new technical rules.
@@ -41115,7 +41091,7 @@ paths:
         - bearerAuth: []
     delete:
       tags:
-        - policies
+        - Provisioning Policies
       summary: Delete Technical Rules
       description: |-
         Starting with Release v23.11, you can use the REST API to delete an inactive technical rules from the target system by specifying the `ruleId` parameter.
