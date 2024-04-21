@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdemo=self.webpackChunkdemo||[]).push([[89116],{2342:e=>{e.exports=JSON.parse('{"label":"job","permalink":"/developer-portal/tags/job","allTagsPath":"/developer-portal/tags","count":1,"items":[{"id":"guide/extensions/job-extension","title":"Job Extensions","description":"","permalink":"/developer-portal/extensions/job"}],"unlisted":false}')}}]);

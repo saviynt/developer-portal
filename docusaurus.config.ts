@@ -73,7 +73,7 @@ const config: Config = {
           items: [
             {
               label: "REST API 5.0",
-              to: "/apis/rest/5.0",
+              to: "/reference/rest/5.0",
             },
           ],
         },

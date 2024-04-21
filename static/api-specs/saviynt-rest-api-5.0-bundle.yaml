@@ -130,9 +130,33 @@ tags:
     externalDocs:
       description: Product Documentation
       url: https://docs.saviyntcloud.com/
+  - name: request-history
+    x-displayName: Request History
+    description: APIs for managing Request History
+    externalDocs:
+      description: Product Documentation
+      url: https://docs.saviyntcloud.com/
   - name: request-approval
     x-displayName: Request Approval
     description: APIs for managing Request Approval
+    externalDocs:
+      description: Product Documentation
+      url: https://docs.saviyntcloud.com/
+  - name: request-user
+    x-displayName: Request User
+    description: APIs for managing User Request
+    externalDocs:
+      description: Product Documentation
+      url: https://docs.saviyntcloud.com/
+  - name: request-role
+    x-displayName: Request Role
+    description: APIs for managing Role Request
+    externalDocs:
+      description: Product Documentation
+      url: https://docs.saviyntcloud.com/
+  - name: request-organization
+    x-displayName: Request Organization
+    description: APIs for managing Organization Requests
     externalDocs:
       description: Product Documentation
       url: https://docs.saviyntcloud.com/
@@ -759,6 +783,89 @@ paths:
                         username:
                           type: string
                           example: johndoe
+                        accountExpired:
+                          type: string
+                        accountLocked:
+                          type: string
+                          example: 'false'
+                        city:
+                          type: string
+                          example: San Francisco
+                        companyname:
+                          type: string
+                          example: Global Modern Services, Inc. (USA)
+                        costcenter:
+                          type: string
+                          example: GMS USA
+                        country:
+                          type: string
+                          example: USA
+                        createdate:
+                          type: string
+                          example: 06/08/2020T10:35:46+0000
+                        customer:
+                          type: string
+                          example: testorg
+                        customproperty1:
+                          type: string
+                          example: 3aa5550b7fe348b98d7b5741afc65534
+                        displayname:
+                          type: string
+                          example: Logan McNeil
+                        email:
+                          type: string
+                          example: test@gmail.com
+                        employeeType:
+                          type: string
+                          example: Regular
+                        employeeid:
+                          type: string
+                          example: '21001'
+                        enabled:
+                          type: string
+                          example: 'true'
+                        encryptedSecurityAnswers:
+                          type: string
+                          example: lhCSZZbYyxHaRZN6L9s4IPXAIwx86J87GEXwt5wIutPnEGkywv4W9UImm9u+qlk67bTNecLwHBClApo9olYBEceyC+h4gcLrjWwLOLlJ3Wc=
+                        failedTries:
+                          type: string
+                          example: '0'
+                        lastPasswordUpdateDate:
+                          type: string
+                          example: 07/23/2020T18:25:58+0000
+                        lastname:
+                          type: string
+                          example: McNeil
+                        location:
+                          type: string
+                          example: San Francisco
+                        passwordExpired:
+                          type: string
+                          example: 'false'
+                        phonenumber:
+                          type: string
+                          example: 415789-8904
+                        preferedFirstName:
+                          type: string
+                          example: Logan
+                        savUpdateDate:
+                          type: string
+                          example: 06/08/2020T10:36:03+0000
+                        systemUserName:
+                          type: string
+                          example: lmcneil
+                        title:
+                          type: string
+                          example: Chief Human Resources Officer
+                        updatedate:
+                          type: string
+                          example: 07/23/2020T18:25:58+0000
+                        updateuser:
+                          type: string
+                          example: admin
+                        userSource:
+                          type: string
+                          example: '127'
                     example:
                       - firstname: John
                         statuskey: '1'
@@ -1939,10 +2046,14 @@ paths:
                           type: string
                           example: AWS
                         entdescription:
-                          type: string
+                          type:
+                            - string
+                            - 'null'
                           example: null
                         entdisplayname:
-                          type: string
+                          type:
+                            - string
+                            - 'null'
                           example: null
                         entitlementType:
                           type: string
@@ -7148,160 +7259,304 @@ paths:
                       type: string
                       example: com.saviynt.ecm.identitywarehouse.domain.Roles
                     confidentiality:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty1:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty10:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty11:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty12:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty13:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty14:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty15:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty16:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty17:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty18:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty19:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty2:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty20:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty21:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty22:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty23:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty24:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty25:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty26:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty27:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty28:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty29:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty3:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty30:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty31:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty32:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty33:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty34:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty35:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty36:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty37:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty38:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty39:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty4:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty40:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty41:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty42:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty43:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty44:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty45:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty46:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty47:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty48:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty49:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty5:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty50:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty51:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty52:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty53:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty54:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty55:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty56:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty57:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty58:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty59:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty6:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty60:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty7:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty8:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     customproperty9:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     defaultTimeFrameHrs:
-                      type: number
+                      type:
+                        - number
+                        - 'null'
                       example: 8
                     description:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                       example: desc
                     displayname:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     endpointkey:
-                      type: number
+                      type:
+                        - number
+                        - 'null'
                     flagexportedtoOIA:
                       type: boolean
                       example: false
                     glossary:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     id:
                       type: number
                       example: 125
                     level:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     maxTimeFrameHrs:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     mininginstance:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     parentroles:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     priviliged:
-                      type: number
+                      type:
+                        - number
+                        - 'null'
                     requestable:
                       type: boolean
                       example: true
                     risk:
-                      type: string
+                      type:
+                        - string
+                        - 'null'
                     role_name:
                       type: string
                       example: Data Administrator
@@ -7323,7 +7578,9 @@ paths:
                       type: number
                       example: 3
                     showDynamicAttrs:
-                      type: boolean
+                      type:
+                        - boolean
+                        - 'null'
                     sodflag:
                       type: boolean
                       example: false
@@ -7337,12 +7594,16 @@ paths:
                       type: number
                       example: 0
                     systemid:
-                      type: number
+                      type:
+                        - number
+                        - 'null'
                     updatedate:
                       type: string
                       example: '2017-03-24T20:16:11Z'
                     updateuser:
-                      type: number
+                      type:
+                        - number
+                        - 'null'
                 example:
                   - class: com.saviynt.ecm.identitywarehouse.domain.Roles
                     confidentiality: null
@@ -14084,6 +14345,9 @@ paths:
                     items:
                       type: object
                       properties:
+                        actionJson:
+                          type: string
+                          example: '{"sendEmail":"false","saveToDBElastic":{"version":"v2","checked":"true"},"saveToFile":"false"}'
                         allowedAction:
                           type: string
                           example: 1:Accept,2:Revoke,3:Further Review
@@ -14340,7 +14604,9 @@ paths:
                           type: string
                           example: String
                         orderIndex:
-                          type: number
+                          type:
+                            - number
+                            - 'null'
                           example: null
                     example:
                       - attributeDefaultValue: '''Enter Account ID here'''
@@ -14477,7 +14743,7 @@ paths:
       tags:
         - request-user
       summary: Create User Request
-      description: 'This API call can be used for creating update/create user request in the EIC. The `Authorization` must have `Bearer` followed by `Token`. Optional params: `statuskey` - Values:1/0, 0 - Inactive, 1 - Active `User params` can be passed. Example: email, manager, username, firstname, lastname, preferedFirstName, customproperty<1 to 40> `Roles`\- Specifies the rolename (#### separated) that will be assigned to the newly created user `requestor`'
+      description: 'This API call can be used for creating update/create user request in the EIC. The `Authorization` must have `Bearer` followed by `Token`. Optional params: `statuskey` - Values:1/0, 0 - Inactive, 1 - Active `User params` can be passed. Example: email, manager, username, firstname, lastname, preferedFirstName, customproperty<1 to 40> `Roles`- Specifies the rolename (#### separated) that will be assigned to the newly created user `requestor`'
       operationId: createUserRequest
       requestBody:
         content:
@@ -15140,7 +15406,7 @@ paths:
       tags:
         - request-role
       summary: Create Role Request
-      description: 'This API call can be used for creating a new role and assigning an owner to the role. The `Authorization` must have `Bearer` followed by `Token`. Mandatory params: `roletype` - Use the roletype as "ENTERPRISE" to Create Enterprise Role Request. (supported roletypes - ENABLER/ TRANSACTIONAL/ FIREFIGHTER/ ENTERPRISE/ APPLICATION), `role_name`,   `requestor`,   `owner`   1\. `ownerName`   2\. `rank`<1 to 27>, Optional params:   `customproperty<1 to 60>`,   `endpointname`,   `defaulttimeframe`,   `description`,   `displayname`,   `glossary`,   `risk`,   `level`,   `soxcritical`,   `syscritical`,   `priviliged`,   `confidentiality`,   `requestable`,   `showDynamicAttrs,   checksod:`Set this parameter to evaluate Segregation of Duties (SOD) violations. By default, the parameter is set to false.'
+      description: 'This API call can be used for creating a new role and assigning an owner to the role. The `Authorization` must have `Bearer` followed by `Token`. Mandatory params: `roletype` - Use the roletype as "ENTERPRISE" to Create Enterprise Role Request. (supported roletypes - ENABLER/ TRANSACTIONAL/ FIREFIGHTER/ ENTERPRISE/ APPLICATION), `role_name`,   `requestor`,   `owner`   1. `ownerName`   2. `rank`<1 to 27>, Optional params:   `customproperty<1 to 60>`,   `endpointname`,   `defaulttimeframe`,   `description`,   `displayname`,   `glossary`,   `risk`,   `level`,   `soxcritical`,   `syscritical`,   `priviliged`,   `confidentiality`,   `requestable`,   `showDynamicAttrs,   checksod:`Set this parameter to evaluate Segregation of Duties (SOD) violations. By default, the parameter is set to false.'
       operationId: createRoleRequest
       requestBody:
         content:
@@ -22531,7 +22797,7 @@ paths:
   /certifyUserManagerforCampaign:
     post:
       tags:
-        - campaign-user-manager
+        - campaigns-user-manager
       summary: Certify User Manager for Campaign
       description: |-
         This API will do employee verification for a particular campaign.
@@ -22641,6 +22907,9 @@ paths:
                         employee:
                           type: string
                           example: acook
+                        action:
+                          type: string
+                          example: acook
                         errorCode:
                           type: string
                           example: '0'
@@ -22648,6 +22917,12 @@ paths:
                           type: string
                           example: '227'
                         msg:
+                          type: string
+                          example: success
+                        campaignId:
+                          type: string
+                          example: success
+                        verifier:
                           type: string
                           example: success
                     example:
@@ -22693,7 +22968,7 @@ paths:
   /fetchCampaignAccEntDetails:
     post:
       tags:
-        - campaign-user-manager
+        - campaigns-user-manager
       summary: Fetch Account Entitlement Details
       description: |-
         This API returns user details, account-entitlement details of a particular campaign required for certify/revoke API. If last certified actions and last certified comments are configured during campaign creation, then it is displayed in the API response. If the employmentStatus parameter is passed with this API, then only the match records in the certified field are displayed in the API response.
@@ -23679,7 +23954,7 @@ paths:
   /approverejectCampaignAccEntDetails:
     post:
       tags:
-        - campaign-user-manager
+        - campaigns-user-manager
       summary: Approve Reject Campaign Account Entitlement Details
       description: |-
         This API is used to certify/revoke the user's access (account, entitlement) along with employment verification. When an approve or reject action is performed for a line item in a User Manager campaign, then only the latest comment sent through the API is retained in the comments field but all the comments (including actions) are stored in the audit trail/history.
@@ -23997,7 +24272,7 @@ paths:
   /reassignUserManagerforCampaign:
     post:
       tags:
-        - campaign-user-manager
+        - campaigns-user-manager
       summary: Reassign UserManager Step 1 for Campaign
       description: |-
         This API reassigns UserManager for Campaign at Employment Verification Stage in SSM.
@@ -24257,7 +24532,7 @@ paths:
   /consultCampaignAccEntDetails:
     post:
       tags:
-        - campaign-user-manager
+        - campaigns-user-manager
       summary: Consult Campaign Account Entitlement Details
       description: |-
         This API consults User Manager for Campaign at Account and Access Certification Stage in SSM. 
@@ -24421,7 +24696,7 @@ paths:
   /reAssignUserManagerStep2AccEntDetails:
     post:
       tags:
-        - campaign-user-manager
+        - campaigns-user-manager
       summary: Reassign Certification at Account and Entitlement Level Copy
       description: |-
         This API reassigns accounts, roles, or entitlements to a different user or certifier. The associated users for accounts, roles, or entitlements that are being reassigned, must be certified in Step 1.
@@ -24646,7 +24921,7 @@ paths:
   /consultEOforCampaign:
     post:
       tags:
-        - campaign-entitlement-owner
+        - campaigns-entitlement-owner
       summary: Consult EntitlementOwner Step 1 for Campaign
       description: |-
         This API consults Entitltment Owner for Campaign at Employment Verification Stage in SSM.
@@ -24771,7 +25046,7 @@ paths:
   /consultEOCampaignAccEntDetails:
     post:
       tags:
-        - campaign-entitlement-owner
+        - campaigns-entitlement-owner
       summary: Consult EntitlementOwner Step 2 for Campaign
       description: |-
         This API consults Entitltment Owner for Campaign at Account and Access Certification Stage in SSM.
@@ -24914,7 +25189,7 @@ paths:
   /fetchEntOwnerCampaignAccEntDetails:
     post:
       tags:
-        - campaign-entitlement-owner
+        - campaigns-entitlement-owner
       summary: Fetch Account Entitlement Details
       description: |-
         This API returns user details, account-entitlement details of a particular campaign required for certify/revoke API. If last certified actions and last certified comments are configured during campaign creation, then it is displayed in the API response.
@@ -25305,7 +25580,7 @@ paths:
                                 accountname: admin
                                 certaccountkey: 192406
                                 certfied: NORESPONSE
-                                comment: null
+                                comment: ''
                                 consulted: 'no'
                                 endpoint: SaviyntLinuxServer
                                 lastCertifiedCampaignName: ''
@@ -25318,7 +25593,7 @@ paths:
                                 accountname: U037787
                                 certaccountkey: 192407
                                 certfied: NORESPONSE
-                                comment: null
+                                comment: ''
                                 consulted: 'no'
                                 endpoint: SaviyntLinuxServer
                                 lastCertifiedCampaignName: ''
@@ -25330,7 +25605,7 @@ paths:
                             accounttotalcount: 10
                             certentvalkey: 1530363
                             certfied: APPROVED
-                            comment: null
+                            comment: ''
                             consulted: 'no'
                             entitlement2displaycount: 0
                             entitlement2totalcount: 0
@@ -25351,7 +25626,7 @@ paths:
   /fetchEntOwnerCampaignDetails:
     post:
       tags:
-        - campaign-entitlement-owner
+        - campaigns-entitlement-owner
       summary: Fetch Entitlement Owner Campaign Details
       description: |-
         This API return details of a particular Entitlement Owner campaign in SSM.
@@ -25816,7 +26091,7 @@ paths:
   /getFlatResponseEntOwnerCampaignAccEntDetails:
     post:
       tags:
-        - campaign-entitlement-owner
+        - campaigns-entitlement-owner
       summary: Fetch Flat Response Entitlement Owner Campaign Details
       description: |-
         This API return flat details of a particular Entitlement Owner campaign in SSM. If last certified actions and last certified comments are configured during campaign creation, then it is displayed in the API response.
@@ -25928,37 +26203,61 @@ paths:
                           type: number
                           example: 0
                         Ent_entitlement_value:
-                          type: string
+                          type:
+                            - string
+                            - 'null'
                           example: audio
                         Ent_risk:
-                          type: string
+                          type:
+                            - string
+                            - 'null'
                         Ent_status:
                           type: number
                           example: 1
                         User_lastCertifiedCampaignName:
-                          type: string
+                          type:
+                            - string
+                            - 'null'
                         User_lastCertifiedDate:
-                          type: string
+                          type:
+                            - string
+                            - 'null'
                         User_lastCertifiedUser:
-                          type: string
+                          type:
+                            - string
+                            - 'null'
                         User_systemUserName:
-                          type: string
+                          type:
+                            - string
+                            - 'null'
                           example: admin
                         User_username:
-                          type: string
+                          type:
+                            - string
+                            - 'null'
                           example: admin
                         accComment:
-                          type: string
+                          type:
+                            - string
+                            - 'null'
                         accHistory:
-                          type: string
+                          type:
+                            - string
+                            - 'null'
                         accStatus:
-                          type: string
+                          type:
+                            - string
+                            - 'null'
                           example: '1'
                         accountCertfied:
-                          type: string
+                          type:
+                            - string
+                            - 'null'
                           example: NORESPONSE
                         accountCount:
-                          type: number
+                          type:
+                            - number
+                            - 'null'
                           example: 10
                         accountname:
                           type: string
@@ -25967,7 +26266,9 @@ paths:
                           type: number
                           example: 192406
                         certentval2key:
-                          type: number
+                          type:
+                            - number
+                            - 'null'
                           example: null
                         certentvalkey:
                           type: number
@@ -25982,33 +26283,53 @@ paths:
                           type: string
                           example: SaviyntLinuxServer
                         ent2History:
-                          type: string
+                          type:
+                            - string
+                            - 'null'
                         ent2Status:
-                          type: number
+                          type:
+                            - number
+                            - 'null'
                           example: null
                         ent2certified:
-                          type: string
+                          type:
+                            - string
+                            - 'null'
                         ent2comments:
-                          type: string
+                          type:
+                            - string
+                            - 'null'
                         ent2name:
-                          type: string
+                          type:
+                            - string
+                            - 'null'
                           example: null
                         entCertfied:
                           type: string
                           example: APPROVED
                         entComment:
-                          type: string
+                          type:
+                            - string
+                            - 'null'
                           example: null
                         entStatus:
-                          type: number
+                          type:
+                            - number
+                            - 'null'
                           example: 1
                         entcriticality:
-                          type: number
+                          type:
+                            - number
+                            - 'null'
                           example: 0
                         entitlement2count:
-                          type: number
+                          type:
+                            - number
+                            - 'null'
                         entitlementcount:
-                          type: number
+                          type:
+                            - number
+                            - 'null'
                           example: 1
                         enttype:
                           type: string
@@ -26020,7 +26341,9 @@ paths:
                           type: string
                           example: In progress
                         userStatus:
-                          type: number
+                          type:
+                            - number
+                            - 'null'
                     example:
                       - Ent_SOX_CRITICAL: 0
                         Ent_SYS_CRITICAL: 0
@@ -26419,7 +26742,7 @@ paths:
   /lockEntOwnerCampaign:
     post:
       tags:
-        - campaign-entitlement-owner
+        - campaigns-entitlement-owner
       summary: Lock Campaign
       description: |-
         This API is used to lock campaign after validating whether Entitlement Owner campaign is completed or not.
@@ -26596,7 +26919,7 @@ paths:
   /approverejectEntOwnerCampaignAccEntDetails:
     post:
       tags:
-        - campaign-entitlement-owner
+        - campaigns-entitlement-owner
       summary: Approve Reject Account Entitlement Details
       description: |-
         This API is used to certify/revoke the user's access (account, entitlement). When an approve or reject action is performed for a line item in an Entitlement Owner campaign, then only the latest comment sent through the API is retained in the comments field but all the comments (including actions) are stored in the audit trail/history.
@@ -26740,7 +27063,7 @@ paths:
   /certifyEntOwnerforCampaign:
     post:
       tags:
-        - campaign-entitlement-owner
+        - campaigns-entitlement-owner
       summary: Certify Entitlement Owner for Campaign
       description: |-
         This API will do entitlement  verification for a particular campaign.
@@ -26973,7 +27296,7 @@ paths:
   /reassignEntOwnerCampaignAccEnt:
     post:
       tags:
-        - campaign-entitlement-owner
+        - campaigns-entitlement-owner
       summary: Reassign Entitlement Owner for Campaign
       description: |-
         This API reassigns Entitlement Owner for Campaign in SSM.
@@ -27105,7 +27428,7 @@ paths:
   /reassignEntOwnerCampaignAccEntDetailsStep2:
     post:
       tags:
-        - campaign-entitlement-owner
+        - campaigns-entitlement-owner
       summary: Reassign Certification at Account Level
       description: |-
         This API reassigns accounts or child entitlements to a different user or certifier. The associated entitlements for accounts or child entitlements that are being reassigned, must be certified in Step 1.
@@ -27292,7 +27615,7 @@ paths:
   /fetchAppOwnerCampaignAccEntDetails:
     post:
       tags:
-        - campaign-application-owner
+        - campaigns-application-owner
       summary: Fetch Account Entitlement Details
       description: |-
         This API returns user details, account-entitlement details of a particular campaign required for certify/revoke API. If last certified actions and last certified comments are configured during campaign creation, then it is displayed in the API response.
@@ -27406,11 +27729,17 @@ paths:
                                 type: number
                                 example: 227493
                               certified:
-                                type: string
+                                type:
+                                  - string
+                                  - 'null'
                               comments:
-                                type: string
+                                type:
+                                  - string
+                                  - 'null'
                               displayname:
-                                type: string
+                                type:
+                                  - string
+                                  - 'null'
                               endpoint:
                                 type: string
                                 example: Banking Application
@@ -27425,11 +27754,17 @@ paths:
                                 type: string
                                 example: Ohjae
                               lastCertifiedCampaignName:
-                                type: string
+                                type:
+                                  - string
+                                  - 'null'
                               lastCertifiedUser:
-                                type: number
+                                type:
+                                  - number
+                                  - 'null'
                               securitySystem:
-                                type: string
+                                type:
+                                  - string
+                                  - 'null'
                                 example: Banking Application
                               systemUserName:
                                 type: string
@@ -27732,7 +28067,7 @@ paths:
   /approverejectAppOwnerCampaignAccEntDetails:
     post:
       tags:
-        - campaign-application-owner
+        - campaigns-application-owner
       summary: Approve Reject Account Entitlement Details
       description: |-
         This API is used to certify/revoke the user's access (account, entitlement). When an approve or reject action is performed for a line item in an Application Owner campaign, then only the latest comment sent through the API is retained in the comments field but all the comments (including actions) are stored in the audit trail/history.
@@ -27954,7 +28289,7 @@ paths:
   /lockApplicationOwnerCampaign:
     post:
       tags:
-        - campaign-application-owner
+        - campaigns-application-owner
       summary: Lock Campaign
       description: |-
         This API is used to lock campaign after validating whether Application Owner campaign is completed or not.
@@ -28068,7 +28403,7 @@ paths:
   /consultAppOwnerCampaignAccEntDetails:
     post:
       tags:
-        - campaign-application-owner
+        - campaigns-application-owner
       summary: Consult AppOwner Account Entitlement Details
       description: |-
         This API consults Application Owner for Campaign at Account and Access Certification Stage in SSM.
@@ -28213,7 +28548,7 @@ paths:
   /reAssignAppOwnerCampaignAccEntDetails:
     post:
       tags:
-        - campaign-application-owner
+        - campaigns-application-owner
       summary: Reassign Application Owner for Campaign
       description: |-
         This API reassigns Entitlement Owner for Campaign in SSM.
@@ -28701,7 +29036,7 @@ paths:
   /reAssignCertification:
     post:
       tags:
-        - Campaigns
+        - campaigns
       summary: Reassign Certification
       description: |-
         This API is used to reassign certification to a different user or certifier. The user making this update must be an administrator, a campaign owner or its delegates.
@@ -31845,7 +32180,7 @@ paths:
                     errorCode: '0'
                     errorMessage: ''
                     status: SUCCESS
-  /ECM/testConnection:
+  /testConnection:
     post:
       tags:
         - connections
@@ -40591,7 +40926,7 @@ paths:
         - bearerAuth: []
     put:
       tags:
-        - Provisioning Policies
+        - policies
       summary: Update Technical Rules
       description: |-
         Starting with Release v23.11, you can use the REST API to update the existing technical rules in a readable and organized manner.
@@ -40844,7 +41179,7 @@ paths:
                     msg: Rule Updated Successfully
     post:
       tags:
-        - Provisioning Policies
+        - policies
       summary: Create Technical Rules
       description: |-
         Starting with Release v23.11, you can use this REST API to effortlessly create new technical rules.
@@ -41091,7 +41426,7 @@ paths:
         - bearerAuth: []
     delete:
       tags:
-        - Provisioning Policies
+        - policies
       summary: Delete Technical Rules
       description: |-
         Starting with Release v23.11, you can use the REST API to delete an inactive technical rules from the target system by specifying the `ruleId` parameter.
@@ -41183,59 +41518,61 @@ x-ignoredHeaderParameters:
   - Server
   - X-Frame-Options
 x-tagGroups:
+  - name: auth
+    tags:
+    - auth
   - name: Identity Repository
     tags:
-      - users
-      - auth
-      - accounts
-      - access
-      - groups
-      - organizations
+    - users
+    - accounts
+    - access
+    - groups
+    - organizations
   - name: roles
     tags:
-      - roles
-      - role-membership
+    - roles
+    - role-membership
   - name: policies
     tags:
-      - policies
+    - policies
   - name: sod
     tags:
-      - sod
+    - sod
   - name: request
     tags:
-      - request-access
-      - request-user
-      - request-role
-      - request-history
-      - request-approval
-      - tasks
+    - request-access
+    - request-user
+    - request-role
+    - request-history
+    - request-approval
   - name: applications
     tags:
-      - systems
-      - endpoints
-      - connections
-      - entitlement-types
-      - entitlements
-      - privileges
-      - dynamic-attributes
+    - systems
+    - endpoints
+    - connections
+    - entitlement-types
+    - entitlements
+    - privileges
+    - dynamic-attributes
   - name: campaigns
     tags:
-      - attestations
-      - campaigns
-      - campaign-user-manager
-      - campaign-entitlement-owner
-      - campaign-application-owner
+    - attestations
+    - campaigns
+    - campaigns-user-manager
+    - campaigns-entitlement-owner
+    - campaigns-application-owner
   - name: analytics
     tags:
-      - analytics
-      - dashboard
-      - access-recommendations
+    - analytics
+    - dashboard
+    - access-recommendations
   - name: admin
     tags:
-      - delegates
-      - jobs
-      - transport
-      - datasets
-      - utils
-      - security
-      - sav-roles
+    - delegates
+    - jobs
+    - transport
+    - datasets
+    - utils
+    - security
+    - sav-roles
+    - tasks

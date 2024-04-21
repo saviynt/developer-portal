@@ -1,0 +1,163 @@
+---
+id: sod-evaluation-for-sap-functions
+title: "SoD Evaluation for SAP Functions"
+description: "This API can be used to evaluate SOD for new SAP role that is being requested for a user based on the selected ruleset. (If no ruleset is selected, it uses the default ruleset)"
+sidebar_label: "SoD Evaluation for SAP Functions"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVs1u2zgQfpUBc0kAWXKC7WF1WjdxAS/aJIiy6CEJYloaW2wpkiUpK65hoA+y+3J9ksVQsq0k3TbYc06SqPn5Zr754Zp5vnAsvWFOF+wuYgW63ArjhVYsZdelcDC6nEDOFcwQaocFeA245LLmHiG7OIO5tqCwgWx0CVZLBF9yD8LBDIVagMUvNTqPRRDkZMPCjJMlrcCXCA4l5iRga4kOfQyHkzkovf0mW1uZCIQnEy5oFjjntfRbwaNb9YGrgnttV2C45ZVLb9XUcXOlJbopDGAkZdAksOEQCpSiEuR+toLv3/4+ODj4/u2fNohGSLmLm+Bn+gzGbfBCKzgUytQepHAeXKlrWUCuledCAT4I5yl+7qBBKelJjilTNjgOHhS2GZ0hGKuXwgmtsDiKb9VUYdNHnj22vw+AcDWlyMtg36KjjHRoZghzIT1ayhzGi7j77yDf/g9ui8CGXBElChu5Al7QWUBKYFAVRgvlCck5rxD0PLgbd+eQa2vRGa0KCtrrNsuY11b4FWQr57GK4VZdhNrissdPxx6ZvuoYV7zCCARVgd8hjMAFMy0ttcMf1QCB5Xmu6xbrqH0NBgnVPlHbcnU7lnsExLfqukSYjmpfaiu+BrqnUNXOQ8mXCNO3yC3aKcy1lLppq2d6rT+jmsYsYtqgDUqTgqXUXPuqeadtxs27WuX05VjEuhZ5q4sVS9eMKEbl6ZUbI0Ue1JKHQdM0g7m21aC2ElWuCyxIyOUlVpze/MogS5mefcLcs4gZSzi8QBeMtbnoCTpvhVqwiOEDr4yko0+6VIVGtonYlvOfK7TUHpNCr2J/rnM+/nifjS7vry7ej0mx4+7Fjl7mZevh+ODgYPt+wjabzU4oGHjS06HNR5ewJyhdM/qNj3K4S1Q/TzuMT3LxOOBevD2FnvR/Ag/Y2zZzLfiT4ZAej8c2I7EKfamp+Ix2oRa4L1nKEsdNdnG2D5hco12ipTWwZrWVLGWl98alSbL2qLjym9jxpVgpn0tdF3Guq2R8+iHhRiTLNyxiS24Fn20JCSrPUXXntGNCx7J0x9Vms7kjGO20CDhmob+o/1h6c9f/nVG5t676QrtKIOwUVBBjaSfEou7lnbYVJ+d/frwOiRJqroO68G3ZtKHCWHm0xgqHMClQeZpjpxR/2IhXOEeLKkf2w6V5qiUtLCqobnxtN5bnQrrt+HS1MdrS8mnpaqd5GE+/RHE4npweUfLRutbzm3gYD1nEPNrKXcwztEuRY4/OjsVAYBBKWBTGDc8DYTQlWcoovqxFxqInFdE0Tdw343ZyWHFBkt3JHz0p6lkpclQO+24Mz0uEk4D5uRcefsfaLpJO1yXvJ6fj82w8OImHcekrSYYfBlIvAoOPbfRRNmbQTdWkNlLzwiUnw+Pfk+FvSZfoezJyf86Xq9gtF6EwqHEqrnqIfzkqntRCb5a/3qVe71Kvd6n/dZfq5rrHB58YyYWirg+9vu622g17ttXuIlbS4ktv2HpNLfKXlZsNHX+p0dKOudvvrbBiIlYiL9CG9fMZVyxlp233Dq4JQbS9BbzgVkb7areALy+ya1o/3fWu0gUZ6UlH/Q+Cstn8CwmAygc=
+sidebar_class_name: "post api-method"
+info_path: reference/rest/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"SoD Evaluation for SAP Functions"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/sapSODEvaluation"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API can be used to evaluate SOD for new SAP role that is being requested for a user based on the selected ruleset. (If no ruleset is selected, it uses the default ruleset)
+Mandatory params:
+`sapRoles` - All the SAP Roles delimited by “###” that will be used for SoD Evaluation (input list should contain existing as well as the new roles that need to be provisioned).
+`newsapRoles` - Should contain SAP Roles for which the result should be filtered, e.g. results could be provided only on newly added roles.
+`endpoint` - Name of the Endpoint corresponding to the Security System. 
+Optional params:
+`ruleset` - Ruleset name, if not provided, system will use the default ruleset.
+`account` - Account name to which the SAP roles will be provisioned.
+The `Authorization` must have `Bearer` followed by `Token`.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/x-www-form-urlencoded"}
+    value={"application/x-www-form-urlencoded-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"account"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"johndoe"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"endpoint"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"System1"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"newsapRoles"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"NEW_SAP_ROLE"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"ruleset"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"System1"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"sapRoles"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"SAP_ROLE1###SAP_ROLE2"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          
+          
+          
+        </div><div>
+          
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

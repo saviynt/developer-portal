@@ -1,0 +1,286 @@
+---
+id: authenticate-user
+title: "Authenticate User"
+description: "This API call can be used to authenticate the user in SSM"
+sidebar_label: "Authenticate User"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVVt9v2zYQ/leIe9oAyZKcpE00FJjrOUO25QdqF31IgvpMnS0mEqmSlB3P8P8+kJJTNXGavC4vocnj3Xf33X3UBiwuDKTXgLXN4TaAjAzXorJCSUhhkgvDBldnjGNRMI6SzYjVhjJmFXNXSFrB0RKzuT/QTEg2Hp/fyElObDqoba60+Bedvykra2NZjkti04+EmvSUzVVRqBVlbLZm04m6JzllN/IcZYZW6TW7Qo2lSW/k1HmXWNI0uJHTCo1ZKZ1NIQBVkfYBzjJIoYvqsyENAWj6VpOxH1W2hnQDXElL0rplWRdWVKhtNFe6DDO06LYNz6n0K7uuCFJQszviFgKotItmBRl3ukPRsTRWC7mAAOgBy6pwWzurZADbAHZp/PzOncplpgi2/s+lYColTRO2H8fu349UDbpsuMTZKYqi1sQi9vxsXHNOxkAAOWFG2vv9Ay3tTX8PwC+UBSw+ZoN6wfpxcsziJO2fpAcJ+/N8Ag7ymPSS9Fv9DSrkOYVDtVaWoqSXtD5sOFTqXrwZ13A4/nQaTi7/Hl186POY8H3yLsSDd+/DQ354FB73j5Lw3Ywfcjw+iY8P6Dd2hTb/EIEvc6c1sKoKVzChZHRnXInf3hektdJDlb1CcuL6oSRjcPGKZYdAoaRnlrIGcmvk477YA+5wiUVNT9BBAh0EL4YJ9njeddBLnuOfeW4vz+ui7XBfCJsrN8GVMr6kaHNIIdoz0Ma3ltOtDdS6gBRyayuTRtHGkkRptz2DS7GWlheqznpcldFoeB5hJaLlEQSwRC1w1latufJ8otp9p4lzrAsL6SMj2+321sHgtRZ27XHMvKC5PCG9vu0ej13XNKG6Ro98O+wuKW8GaWsEQbs4VbpEF/yvL81gCTlX/rqwvjnGTapsJC3pSgtD7CxzFbNrNnT5ewX/RHPSJDnBXpEfqqIg7smptFqKjIzX9IwsisIwNfc/TV1VSlvKWEOXYXOl/cnrKH4ZnQ1/dcUnbZrIR7245/rEki7N5dwphuDUobNl0RPojSJohhS5J6wRUnD5jRtkEDzpiNVq1eu6MY92VKJwlu3O7x0rN5iF4CQNdcN4jWJ9j/l5FPTHPaUXUXvXRP+cDUcX41HY78W93JaFc/wQFmrhGfzRRxflqgpbLYrqqlCYmagfJydRfBi1hf7qnHy9wOW6Z5YL3xhucEqUXcRPx/Yp+Z3X8P/x2LczY+nBRlWBQvo31dVx0yrG9fNPgNsAcicq6TVsNjM09FkX263b/laTdvN7+10T/Pju3kU/2ve0di9LU6hw4hAEO9Hb+wmxDXaXBpxTZTvmz54VpxSP0nd1OZ64wW+/VMpGSp1j7zf4vnQgt9v/AAg6YH8=
+sidebar_class_name: "post api-method"
+info_path: reference/rest/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Authenticate User"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/authenticateUser"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API call can be used to authenticate the user in SSM
+The `Authorization` must have `Bearer` followed by `Token` 
+Mandatory Params:
+`username`,
+`password`
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"multipart/form-data"}
+    value={"multipart/form-data-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"password"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"password1A"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"username"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"johndoe"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Authenticate User Failure / Authenticate User Success
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"1"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Authentication Failed"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"1\",\n  \"message\": \"Authentication Failed\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Authenticate User Failure"}
+                  value={"Authenticate User Failure"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"1\",\n  \"message\": \"Authentication Failed\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Authenticate User Success"}
+                  value={"Authenticate User Success"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"message\": \"Authentication Successful\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

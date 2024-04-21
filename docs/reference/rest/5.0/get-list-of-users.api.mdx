@@ -1,0 +1,391 @@
+---
+id: get-list-of-users
+title: "Get List of Users"
+description: "This API returns the user information from SSM. This API will return only the user attributes which are not null or blank."
+sidebar_label: "Get List of Users"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV1Fv2zYQ/ivEPW2AbMlOiqYaCixz3SJbkxR1imFIgvosnSw2FKmQlB3P8H8fSEm2vGaJkZc9bA+GJeruu+Pdx7vjGizODcTXUBnSBm4DSMkkmpeWKwkxXOXcsNNPZ0yTrbQ0zObEnCzjMlO6QCfHMq0KNpmc99lWfsmFaJSYkmK1U0RrNZ9Vlgxb5jzJGWpiUlkmKyGY0mwmUN71b/SNdL8/VMUSlMwQ6iRnmdIMa6AZGkqZkgzlipWosSBL2rA5X5BkMxJqyVCmHnvPBYkFbfGvcmLT08rmSvM//XamrKiMZTkuiE1/IdSkpyxTQqglpWy2YtMrdUdy2mctxjnKFK3SjRsmdovT+2n7/dKHE8XeZ5Vlhuw08C8FPjRPRul2UemUdPOcqEpat4vmPeMkUjOtVXK1NJRUmtsVSrMkbaasx24guoHwBgY3wKxiKTelwBUjmehVaSllrQ5rlHxw2yBBAKok7SNylkIMc7IfubGX2RdPlQB2IYf4eg0uqhDDPQTAHXXuK9IrCMAkORUI8RrsqnQSxmou5xAAPWBRCreEid/f+KHkmtI4gs0m2CLWW30JbMa1sQ4lENg8tPnfs+Bi/hL8R8F81l6C5k7ePpJnyEughns4BT68FOQ2AE2mVNKQcdLDKHJ/+0XiA1n2paZMTph6QqzhHVpy/4eYuqooYNFrdlrN2TAanLBhFEcn8fCIfTi/cnuBCekF6UPxTktMcuqN1EpZCgf9QYNheyOl7vjBfo1Gk8/ve1eXv40v3h7TSXo0eHPUS45fvekd03DQw1n2ujfMIqLBCWJ6lP3EPqHN34awcfYSJS1J60xgWQqe+MMUfjMuao84oGbfKHH5LrU7epbXMfdHoyMmq2Lmg731c7gJgLRWeqRSenpHEWwCKMz8aalJlSRkTFYJJ97w8DmyBA31DyC5Z1UlrOkIo9boqMktFeb5qHxEY9mFJ/hT9t4pcuYcPQ+Q/qZymdYa29rxtMavKpd1trdr13vOeQ/2HNha2TPSIAXPKqOkR5RREmxuN0Fdyw6tWju3fUy3BzlewwJFRR36DfcoBhE0NOpyZUcVGMKWDnXOOyn/FwPUxmcvCBsfiIJsrppG57ubzSGGsOmFxtef2vlKC4ght7Y0cRiuLUmUdtM3uOAraROhqrSfqCIcj85DLHm4eAUBLFBznDWBrlW+r6TNupvCMqyEc7TN28YX47Zlez9mfjZxswvE17fdzxNXWmpTXaEtK5zvbRdw77UQBM3Dez/Zuaj9XldfN+x5dW7r+lBvlY2lJV1qboidpSStGyZGbv9+BvxMGWmSCcGjY+VICUGJHyBLrRY8pXq8TMkiF4apzL+aqiyVdvNKnaHdmPK8Fz+Mz0Y/uuCTNrXlV/2o77hrSRfmMnNthSfUSWeTRZ9ALxRCXckx8Qlr+OT2N6k9g+BvjFgul/0ujNnKUYHcSTYrP3ekXM0RPCFpqGvGNzI29D5/bwX9577S87DRNeHHs9H4YjLuDftRP7eFr+APPaHmPoP7GF0vl2WvaVhhVQqFqQmH0eBNGB2HTaC/OpCvF7hY9c1i7olRKmMLlB2PXQ1xc6JLXzsp7iV/veuL/18v/svXi6YWWXqwYSmQu+Je83PdVN/6Wupupbky1r2v1y4tX7TYbNxyPc66Wphy46prCnGGwlAAd7RqbiNNJwPfO/5BbnvHOES4uS4cItpeBg6Sbcf9Q4TrmX4nebvrML4ZtKO4D06tcpokVHbxvxtKHcq2DX4Yu9r/F6yPiVs=
+sidebar_class_name: "get api-method"
+info_path: reference/rest/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get List of Users"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/user"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API returns the user information from SSM. This API will return only the user attributes which are not null or blank.
+
+You can search for a user based on any parameters given below and not only the username.
+
+The `Authorization` must have `Bearer` followed by `Token`. 
+
+Mandatory params:
+`q`
+
+Optional params:
+`offset`,
+`max`,
+`sort`,
+`order`,
+`countonly`,
+`fields`
+`showsecurityanswers` - "0"/"1" to display encrypted security answers for the user
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Query Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"q","in":"query","schema":{"type":"string","example":"accountExpired:0"}}}
+      >
+        
+      </ParamsItem><ParamsItem
+        className={"paramsItem"}
+        param={{"name":"fields","in":"query","schema":{"type":"string","example":"firstname,lastname,username"}}}
+      >
+        
+      </ParamsItem><ParamsItem
+        className={"paramsItem"}
+        param={{"name":"sort","in":"query","schema":{"type":"string","example":"username"}}}
+      >
+        
+      </ParamsItem><ParamsItem
+        className={"paramsItem"}
+        param={{"name":"order","in":"query","schema":{"type":"string","example":"desc"}}}
+      >
+        
+      </ParamsItem><ParamsItem
+        className={"paramsItem"}
+        param={{"name":"offset","in":"query","schema":{"type":"string","example":"2"}}}
+      >
+        
+      </ParamsItem><ParamsItem
+        className={"paramsItem"}
+        param={{"name":"max","in":"query","schema":{"type":"string","example":"2"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Get User
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"count"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":2}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Successful"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"offset"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"2"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"order"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"desc"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                results
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object[]
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                              >
+                                Array [
+                              </div>
+                            </li><SchemaItem
+                              collapsible={false}
+                              name={"Last Name"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Doe"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"User Name"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"johndoe"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"firstname"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"John"}}
+                            >
+                              
+                            </SchemaItem><li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                              >
+                                ]
+                              </div>
+                            </li>
+                          </div>
+                        </details>
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"sort"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"username"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"count\": 2,\n  \"errorCode\": \"0\",\n  \"msg\": \"Successful\",\n  \"offset\": \"2\",\n  \"order\": \"desc\",\n  \"results\": [\n    {\n      \"Last Name\": \"Doe\",\n      \"User Name\": \"johndoe\",\n      \"firstname\": \"John\"\n    },\n    {\n      \"Last Name\": \"Doe\",\n      \"User Name\": \"janedoe\",\n      \"firstname\": \"Jane\"\n    }\n  ],\n  \"sort\": \"username\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Get User"}
+                  value={"Get User"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"count\": 2,\n  \"errorCode\": \"0\",\n  \"msg\": \"Successful\",\n  \"offset\": \"2\",\n  \"order\": \"desc\",\n  \"results\": [\n    {\n      \"Last Name\": \"Doe\",\n      \"User Name\": \"johndoe\",\n      \"firstname\": \"John\"\n    },\n    {\n      \"Last Name\": \"Doe\",\n      \"User Name\": \"janedoe\",\n      \"firstname\": \"Jane\"\n    }\n  ],\n  \"sort\": \"username\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

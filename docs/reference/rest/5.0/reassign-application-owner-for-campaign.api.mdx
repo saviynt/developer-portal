@@ -1,0 +1,570 @@
+---
+id: reassign-application-owner-for-campaign
+title: "Reassign Application Owner for Campaign"
+description: "This API reassigns Entitlement Owner for Campaign in SSM."
+sidebar_label: "Reassign Application Owner for Campaign"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: reference/rest/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Reassign Application Owner for Campaign"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/reAssignAppOwnerCampaignAccEntDetails"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API reassigns Entitlement Owner for Campaign in SSM.
+The `Authorization` must have `Bearer` followed by `Token`.
+Mandatory params:
+`campaignname` or `campaignid`(if both are passed then campaignid will be considered)
+`certificationname` or `certkey`(if both are passed then certkey will be considered)
+`newassignee`
+`accounts`(needs to contain accattkey)
+`entitlements`(needs to contain entattkey and accattkey)
+`roles`(needs to contain roleattkey and accattkey)
+Optional params:
+`updateuser`
+`bulkUpdate`(default value 'N')
+`bulkValidation`(default value 'N')
+`bulkConsultAssociatedData`
+`reassignComments`
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={true}
+          className={"schemaItem"}
+        >
+          <details
+            style={{}}
+            className={"openapi-markdown__details"}
+          >
+            <summary
+              style={{}}
+            >
+              <span
+                className={"openapi-schema__container"}
+              >
+                <strong
+                  className={"openapi-schema__property"}
+                >
+                  accounts
+                </strong><span
+                  className={"openapi-schema__name"}
+                >
+                   object[]
+                </span>
+              </span>
+            </summary><div
+              style={{"marginLeft":"1rem"}}
+            >
+              <li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                >
+                  Array [
+                </div>
+              </li><SchemaItem
+                collapsible={false}
+                name={"accattkey"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"18"}}
+              >
+                
+              </SchemaItem><li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                >
+                  ]
+                </div>
+              </li>
+            </div>
+          </details>
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"bulkConsultAssociatedData"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"n"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"bulkUpdate"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"y"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"bulkValidation"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"N"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"campaignid"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"12"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"certkey"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"23"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={true}
+          className={"schemaItem"}
+        >
+          <details
+            style={{}}
+            className={"openapi-markdown__details"}
+          >
+            <summary
+              style={{}}
+            >
+              <span
+                className={"openapi-schema__container"}
+              >
+                <strong
+                  className={"openapi-schema__property"}
+                >
+                  entitlements
+                </strong><span
+                  className={"openapi-schema__name"}
+                >
+                   object[]
+                </span>
+              </span>
+            </summary><div
+              style={{"marginLeft":"1rem"}}
+            >
+              <li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                >
+                  Array [
+                </div>
+              </li><SchemaItem
+                collapsible={false}
+                name={"accattkey"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"18"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"entattkey"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"150"}}
+              >
+                
+              </SchemaItem><li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                >
+                  ]
+                </div>
+              </li>
+            </div>
+          </details>
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"newassignee"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"cgibson"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"reassignComments"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"Reassign Comment"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Reassign Application Owner for Campaign
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Credentials
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Origin
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Cache-Control
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Expires
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Referrer-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorcode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"success"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorcode\": \"0\",\n  \"msg\": \"success\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Reassign Application Owner for Campaign"}
+                  value={"Reassign Application Owner for Campaign"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorcode\": \"0\",\n  \"msg\": \"success\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

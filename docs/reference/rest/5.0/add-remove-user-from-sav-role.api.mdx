@@ -1,0 +1,241 @@
+---
+id: add-remove-user-from-sav-role
+title: "Add/Remove User from SAV ROLE"
+description: "This method grants/removes membership of a 'user' to one or more roles in SSM."
+sidebar_label: "Add/Remove User from SAV ROLE"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVm1vGzcM/iuEvqQF7sXnJl17Q4E5nlNka14Qu9uHJKjpE+1Te3e6Sjo7nuH/PlB3cd0mbfNxH2bAsExR5EORfKiNcLiwIr0WRhcUllTOyNhc1eI2EJJsZlTtlK5EKia5slCSy7WEhcHK2dhQqZfE0vtjoOeAcCMaS+ZGgNOgKwJtoNSGgH1YUBWMx2fRjbmp+DvJCaaDxuXaqH+QnU2hbKyDHJcE02NCQ2YKc10UekUSZmuYTvQnqqYR3Ns4w0qi02YNNRosbbrbmTKSCkuaQgjvuzXMtQGXE/Amg1zluvSCFiEaYumM2kBJBjtzrHBvLtNliWCJfTqSsMSiIQsr5XJgHcu30Vp0OTqoiOT37OqaTBf8s16cPIcQeumVv1/ASkKSDqQUgdjpnUqRCpSy1eHITowux7i80gWJQBj63JB1x1quRboRma4cVY6XZVM4VaNx8VybMpTokMU2y6n0K7euSaRCzz5S5kQgasNenSIr0s2WP2ze1rqyXiT6vR7/fF0vAymhC4DRwdzoEsa4BAYIIYybLCNrIYaBlPFDzcFfcHXxbgQhnKAqGsNB5YSSjPf5Ozp6FLZ1RlULEQi6w7IuWDRpKIAkgTHV0O8lr6CXpMkv6VEf3p5NBIczJrMk81R7gxqznMKhXmtHcRIlnQ0XDrX+pJ6MazgcX52Ek4s/R+dvXsz7yYteloRHRxmGh/MEw1cvsR8mR4cvZ1nv9evDQ/wVLtHlb2LhU7CXUqzrQmW+LuKPlq//yfkUZIw2Qy3px1h7YhuIkqzFxU80bZvYFmQn9p6eWBGs6lvpG3SiJ/YQ7LkJxFMr6HuWk68sHyPj9O0TwcBanSl/tXBMbkVUtT4OPuq8kpoOfH9ym8MBu/twNjgfvB1dHQAWhlCuge6UdTYS223XPC2LilTU2vqEoMtFKmKUsqVU5iWOwbS9bH11Mk1vRGMKkYrcudqmcbxxVGHltpHFpVpXLit0I6NMl/FoeBZjreLlkQjEEo3CWZeG9sjDhu3kzPtzbAon0l1St9vtLcPIGqPc2uOYeV5m3hbp9e3+9pgLr3W1r7QrGcbOQXk1kXZKIugWJ9qUyM7/+LvtTVXNtT+unK+vcRsqjCpHpjbKEpxKqpxyaxhy/DC4PIUrmpOhKiPx6CAb6qKgzGe1NnqppCdpAkkOVeGZm//apq61YXJvc2Z3o+PnKJ6NTofP+fLJ2NbzUdSLuIgdmdJezJl0VEZ76eyy6BPolWLR9jlmPmE8VZh/Lk9h3CITwTcVsVqton0zdqdHJarCN46X/Lanxb1dqIwqS/tuPM1B32N+6AX9dqTNIu7O2vjd6XB0Ph6F/agX5a4s2PBdWOiFz+DXNvZRruqwo7O4qQuN0sb9XvI67h3G3UV/YCMfznG5juxy4QuDu6fEah/xj3jg20LYG4r/P27+E4+bjiAc3bm4LlBVXD6+aDYdR16LxznyNhA5c2l6LTabGVp6b4rtlsWfGzLMWLdfWNAT1v1jwpPZJ1rzOG7LIZwwjOB+Ujz6XtoG94cGWUa121N/MIuZG3eMf3kxnjDVdc+ysp0/bNjbDb4sGeR2+y9+IgOD
+sidebar_class_name: "post api-method"
+info_path: reference/rest/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add/Remove User from SAV ROLE"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/addremoveuserfromrole"}
+>
+  
+</MethodEndpoint>
+
+
+
+This method grants/removes membership of a "user" to one or more roles in SSM.
+
+The `Authorization` must have `Bearer` followed by `Token`. 
+
+Mandatory params: 
+
+`username` - Username for the user to whom the roles are to be granted,
+
+`rolename` - comma separated values with names of roles that need to be granted,
+
+`operation` (0/1) - 0:Remove and 1:Add
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Add Remove User from Sav Role - Success / Add/Remove User from SAV ROLE - Failure
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"success"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"message\": \"success\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Add Remove User from Sav Role - Success"}
+                  value={"Add Remove User from Sav Role - Success"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"message\": \"success\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Add/Remove User from SAV ROLE - Failure"}
+                  value={"Add/Remove User from SAV ROLE - Failure"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"1\",\n  \"message\": \"Bad Request. Association Between User 'johndoe' and role 'ROLE_MANAGER' already exists.\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

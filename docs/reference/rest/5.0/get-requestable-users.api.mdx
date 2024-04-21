@@ -1,0 +1,647 @@
+---
+id: get-requestable-users
+title: "Get Requestable Users"
+description: "This API fetches the list of user for whom the requestor can request."
+sidebar_label: "Get Requestable Users"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "get api-method"
+info_path: reference/rest/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Requestable Users"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/getrequestableusers"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API fetches the list of user for whom the requestor can request.
+The `Authorization` must have `Bearer` followed by `Token`.
+Mandatory params: 
+`requestor`
+Optional params:
+`max`, `offset`
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"max"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"2"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"requestor"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"jdwad"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Get Requestable User
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Credentials
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Origin
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Cache-Control
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Expires
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Referrer-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"displaycount"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":2}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Success"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"totalcount"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":151543}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                users
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object[]
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                              >
+                                Array [
+                              </div>
+                            </li><SchemaItem
+                              collapsible={false}
+                              name={"city"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Miami"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"companyname"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"costcenter"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"departmentname"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"departmentnumber"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"displayname"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Ln, Fn"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"email"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"fn.ln@saviynt.com"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"enddate"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"2018-12-03 07:40:21"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"firstname"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"fn"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"jobCode"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"jobcodedesc"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"jobdesc"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"lastname"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"ln"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"lastsyncdate"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"location"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"manager"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"acook"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"region"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"secmanager"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"startdate"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"statuskey"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Active"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"systemusername"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"admin"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"username"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"admin"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"vendormanager"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                              >
+                                ]
+                              </div>
+                            </li>
+                          </div>
+                        </details>
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"displaycount\": 2,\n  \"errorCode\": \"0\",\n  \"msg\": \"Success\",\n  \"totalcount\": 151543,\n  \"users\": [\n    {\n      \"city\": \"Miami\",\n      \"companyname\": \"\",\n      \"costcenter\": \"\",\n      \"departmentname\": \"\",\n      \"departmentnumber\": \"\",\n      \"displayname\": \"Ln, Fn\",\n      \"email\": \"fn.ln@saviynt.com\",\n      \"enddate\": \"2018-12-03 07:40:21\",\n      \"firstname\": \"fn\",\n      \"jobCode\": \"\",\n      \"jobcodedesc\": \"jobdesc\",\n      \"lastname\": \"ln\",\n      \"lastsyncdate\": \"\",\n      \"location\": \"\",\n      \"manager\": \"acook\",\n      \"region\": \"\",\n      \"secmanager\": \"\",\n      \"startdate\": \"\",\n      \"statuskey\": \"Active\",\n      \"systemusername\": \"admin\",\n      \"username\": \"admin\",\n      \"vendormanager\": \"\"\n    },\n    {\n      \"city\": \"New York\",\n      \"companyname\": \"\",\n      \"costcenter\": \"\",\n      \"departmentname\": \"\",\n      \"departmentnumber\": \"\",\n      \"displayname\": \"\",\n      \"email\": \"awsadmin@saviynt.com\",\n      \"enddate\": \"\",\n      \"firstname\": \"aws\",\n      \"jobCode\": \"\",\n      \"jobcodedesc\": \"jobdesc\",\n      \"lastname\": \"admin\",\n      \"lastsyncdate\": \"\",\n      \"location\": \"\",\n      \"manager\": \"acook\",\n      \"region\": \"\",\n      \"secmanager\": \"\",\n      \"startdate\": \"\",\n      \"statuskey\": \"Active\",\n      \"systemusername\": \"aadmin\",\n      \"username\": \"awsadmin\",\n      \"vendormanager\": \"\"\n    }\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Get Requestable User"}
+                  value={"Get Requestable User"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"displaycount\": 2,\n  \"errorCode\": \"0\",\n  \"msg\": \"Success\",\n  \"totalcount\": 151543,\n  \"users\": [\n    {\n      \"city\": \"Miami\",\n      \"companyname\": \"\",\n      \"costcenter\": \"\",\n      \"departmentname\": \"\",\n      \"departmentnumber\": \"\",\n      \"displayname\": \"Ln, Fn\",\n      \"email\": \"fn.ln@saviynt.com\",\n      \"enddate\": \"2018-12-03 07:40:21\",\n      \"firstname\": \"fn\",\n      \"jobCode\": \"\",\n      \"jobcodedesc\": \"jobdesc\",\n      \"lastname\": \"ln\",\n      \"lastsyncdate\": \"\",\n      \"location\": \"\",\n      \"manager\": \"acook\",\n      \"region\": \"\",\n      \"secmanager\": \"\",\n      \"startdate\": \"\",\n      \"statuskey\": \"Active\",\n      \"systemusername\": \"admin\",\n      \"username\": \"admin\",\n      \"vendormanager\": \"\"\n    },\n    {\n      \"city\": \"New York\",\n      \"companyname\": \"\",\n      \"costcenter\": \"\",\n      \"departmentname\": \"\",\n      \"departmentnumber\": \"\",\n      \"displayname\": \"\",\n      \"email\": \"awsadmin@saviynt.com\",\n      \"enddate\": \"\",\n      \"firstname\": \"aws\",\n      \"jobCode\": \"\",\n      \"jobcodedesc\": \"jobdesc\",\n      \"lastname\": \"admin\",\n      \"lastsyncdate\": \"\",\n      \"location\": \"\",\n      \"manager\": \"acook\",\n      \"region\": \"\",\n      \"secmanager\": \"\",\n      \"startdate\": \"\",\n      \"statuskey\": \"Active\",\n      \"systemusername\": \"aadmin\",\n      \"username\": \"awsadmin\",\n      \"vendormanager\": \"\"\n    }\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

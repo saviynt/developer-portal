@@ -1,0 +1,302 @@
+---
+id: cancel-pending-request
+title: "Cancel Pending Request"
+description: "This API discontinues an open request in SSM."
+sidebar_label: "Cancel Pending Request"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVVttu4zYQ/RVinlpAN3s3NxULNKt6i7TNBbGLFoiNNS2NLG4kkktSdlTD/16Qkh25uTRo+1K/WKKGcw6Hh2e4AUOXGuI7UPi1Rm18mqaoNcw8yFCniknDBIcYJgXT5PzmgmRMp4IbxmvUhHIiJHLSzSaMk/H4MpjySYFkfl6bQij2B7U55qSqtSEFXSGZf0SqUM1JLspSrDEji4bMJ+Ie+TyY8kvKM2qEaoikilY6nvJ5h3CPzZzsXoSaT/m1Y0jLXmwqqgq50XPwQEhUDv8igxhSylMsb5BnjC9v2yzg7Rb/UWQNxBuw60Nu7COVsmSpSxB+0bYSG9BpgRW1T6aRCDGIxRdMbR6pLJxhqNs0LY1epDaK8SV4gA+0kqUdMqgN40vCxRq2eyr32Lw+bXh28q4XL9Tr4TSrGIftdrsfdLQSVw/SFYTsKhJvYEXLGg9XcUD1kGlL54DNI6RDVail4LqFHUaR/TtU2AtcPCiQZqjcxB+owWe34JklXwrukeiUXKeGDKPBKRmcxYOT+OiY/Hg5ActpjGqF6q35ziVNC/QT0QiD4SAYdDmMnwhxz97MK0nGt5/8yfXPo6sPw+FxFA2H7/zFSZT5708WuX+WD3J/cJzRBQ6PomM8/Y7cUFN8CB3c737SitOfNBL9Vvz6rdBcaM7yvNXBf6RyVEqoRGT4OnRkxVrp5etR47q1n38i1B4RiKAD62dshVihKYT1AimcuiQ1BcQQvmAN2mnEWuQGalVCDIUxUsdhuDHIKTfbQNMVa7hJS1FnQSqqcJRchlSycHUEHqyoYnTRLaOd8lT73bg13ZzWpYF4X5TtdjuzNNJaMdM4HgvnntZdIb6b9T+P7aa1UP2gfcktd7soFwZxFwRe9/BJqIpa8J9+a0+IFcPtozmOdhv1723BA8Zz4agx0+59W0Yy4gaVVEwjuciQG2YaktjauvZzizkq5CnCsx0qEWWJqR0hUokVy1ATUyDJ0FBWaiJy96prKYUymJFWDprkQrkvf8/im9FF8q3dWFS6RT4KosAqzqCq9HVubYWl2JNKpxAnDhcUQnv+aOrEwKnbDbu+ccsMvL+obb1eB/00eh+HFWU2shv5vhdly1yyFLnGPowzMjJ0nJ+iUPc5EGoZdnN1+MtFMroaj/xhEAWFqUqb+MEvxdLt4GGOPsu19DubCWtZCprpcBgNzsLofdgV+rNN8vmKrppAr5ZOdPZgVpT3GL/YGg4U0Gvc/9vrSndODT6YUJa0PSmuvpvOqe6ev8TMPCisocV3sNksqMZfVbnd2uGvNSrrG7NHL3K2sWuszlLa49rvLc66nLU+bQ9bbzfjPE1RmldjZz3PvbkeT6zbdBetqnVrRZ1x0DXEMIUpuGvbvrG58Q2UlC9rurTxbV77+xPsHrm7
+sidebar_class_name: "post api-method"
+info_path: reference/rest/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Cancel Pending Request"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/cancelPendingRequest"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API discontinues an open request in SSM.
+The `Authorization` must have `Bearer` followed by `Token`.
+Mandatory params:
+`requestkey` `requestor`
+Optional params:
+`comments`
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"comments"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"testing now"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"requestkey"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"2973"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"requestor"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"admin"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Cancel Pending Request
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Success"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \"Success\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Cancel Pending Request"}
+                  value={"Cancel Pending Request"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \"Success\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      
