@@ -226,6 +226,7 @@ const config: Config = {
         config: {
           saviynt:{
             specPath: "static/api-specs/saviynt-rest-api-5.0-bundle.yaml",
+            proxy: "https://cors.pan.dev",
             outputDir: "docs/reference/rest/5.0", // No trailing slash
             sidebarOptions: {
               groupPathsBy: "tag",
