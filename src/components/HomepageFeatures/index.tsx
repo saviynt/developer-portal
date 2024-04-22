@@ -16,9 +16,7 @@ const FeatureList = [
     title: "Tools and Extensions",
     Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
     description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+      <> Whether you’re looking to extend the functionality of Saviynt through custom extensions, build reports, extend workflows, build email templates, or tap into advanced features, our curated selection of resources is here to support your journey. Explore our comprehensive suite of developer resources and start building more powerful, efficient, and seamless solutions today.
       </>
     ),
   },
@@ -26,9 +24,7 @@ const FeatureList = [
     title: "Connectors and Integrations",
     Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
     description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+      <> Dive into our comprehensive collection of connectors, apps, and integrations from Saviynt and our community. Harness seamless integrations that bridge on-premises systems and modern cloud applications. Effortlessly explore, implement, and customize to enhance your Saviynt Identity Cloud and achieve greater efficiency and control.
       </>
     ),
   },
