@@ -40,7 +40,7 @@ const config: Config = {
           customCss: "./src/css/custom.css",
         },
         sitemap: {
-          changefreq: 'weekly',
+          changefreq: 'daily',
           priority: 0.5,
           ignorePatterns: ['/tags/**'],
           filename: 'sitemap.xml',
@@ -228,8 +228,8 @@ const config: Config = {
             specPath: "static/api-specs/saviynt-rest-api-5.0-bundle.yaml",
             outputDir: "docs/reference/rest/5.0", // No trailing slash
             sidebarOptions: {
-              groupPathsBy: "tagGroup",
-              categoryLinkSource: "auto",
+              groupPathsBy: "tag",
+              categoryLinkSource: "tag",
             },
             hideSendButton: false,
             showSchemas: true,

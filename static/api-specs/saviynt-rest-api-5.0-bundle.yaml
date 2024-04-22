@@ -21,7 +21,12 @@ servers:
         default: example
 security:
   - bearerAuth: []
+externalDocs:
+  description: Documentation
+  url: https://docs.saviyntcloud.com/
 tags:
+  - name: test
+    description: APIs
   - name: auth
     x-displayName: Authentication
     description: APIs for managing user login, logout, session management, and API token issuance.
@@ -256,9 +261,65 @@ tags:
     externalDocs:
       description: Product Documentation
       url: https://docs.saviyntcloud.com/
-externalDocs:
-  description: Documentation
-  url: https://docs.saviyntcloud.com/
+x-tagGroups:
+  - name: Authentication
+    tags:
+    - auth
+  - name: Repository
+    tags:
+    - users
+    - accounts
+    - access
+    - groups
+    - organizations
+  - name: Roles
+    tags:
+    - roles
+    - role-membership
+  - name: Policies
+    tags:
+    - policies
+  - name: SOD
+    tags:
+    - sod
+  - name: Requests
+    tags:
+    - request-access
+    - request-user
+    - request-role
+    - request-history
+    - request-approval
+  - name: Applications
+    tags:
+    - systems
+    - endpoints
+    - connections
+    - entitlement-types
+    - entitlements
+    - privileges
+    - dynamic-attributes
+  - name: Campaigns
+    tags:
+    - attestations
+    - campaigns
+    - campaigns-user-manager
+    - campaigns-entitlement-owner
+    - campaigns-application-owner
+  - name: Analytics
+    tags:
+    - analytics
+    - dashboard
+    - access-recommendations
+  - name: Admin
+    tags:
+    - delegates
+    - jobs
+    - transport
+    - datasets
+    - utils
+    - security
+    - sav-roles
+    - tasks
 paths:
   /api/login:
     servers:
@@ -41517,62 +41578,3 @@ x-ignoredHeaderParameters:
   - Content-Length
   - Server
   - X-Frame-Options
-x-tagGroups:
-  - name: auth
-    tags:
-    - auth
-  - name: Identity Repository
-    tags:
-    - users
-    - accounts
-    - access
-    - groups
-    - organizations
-  - name: roles
-    tags:
-    - roles
-    - role-membership
-  - name: policies
-    tags:
-    - policies
-  - name: sod
-    tags:
-    - sod
-  - name: request
-    tags:
-    - request-access
-    - request-user
-    - request-role
-    - request-history
-    - request-approval
-  - name: applications
-    tags:
-    - systems
-    - endpoints
-    - connections
-    - entitlement-types
-    - entitlements
-    - privileges
-    - dynamic-attributes
-  - name: campaigns
-    tags:
-    - attestations
-    - campaigns
-    - campaigns-user-manager
-    - campaigns-entitlement-owner
-    - campaigns-application-owner
-  - name: analytics
-    tags:
-    - analytics
-    - dashboard
-    - access-recommendations
-  - name: admin
-    tags:
-    - delegates
-    - jobs
-    - transport
-    - datasets
-    - utils
-    - security
-    - sav-roles
-    - tasks
