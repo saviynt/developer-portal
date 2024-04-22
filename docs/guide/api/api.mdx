@@ -1,0 +1,31 @@
+---
+sidebar_position: 1
+title: REST API
+description: API
+---
+
+# API
+
+## Overview
+
+Saviynt Security Manager web-service APIs are organized around REST protocol, to promote innovation among the developer community. These APIs are designed to have predictable, resource-oriented URLs and use HTTP response codes to indicate API errors.
+
+## API Coverage
+
+Saviynt offers a variety of API calls, using which developers can build bespoke applications on top of, or automate various IGA-centric operations within an enterprise:
+
+* **Identity Administration** – APIs for Create-Read-Update-Delete (CRUD) operations for user, account and entitlement records in Saviynt. This set also includes password management and access provisioning related operations
+* **Identity Analytics** – APIs for Identity analytics oriented operations, for managing dashboards and analytic controls
+* **Access Request** – APIs for managing access requests and approval workflow instances, tracking history of request processing
+* **Delegated Administration** – APIs for executing managing operations related to assignment of delegates for parent users, to perform relevant identity-administration operations
+* **Rule Engineering** – APIs for managing rules and their evaluation, for executing automated birth-right provisioning or address other events in the continuing Identity Lifecycle management
+* **Segregation of Duties (SoD)** – APIs for managing SoD Policies (RuleSets), SoD Analysis and violations resulting from the SoD evaluation
+* **Common Utilities** – APIs for common utility operations helpful while building bespoke IGA applications
+
+## Authentication
+
+Authentication to Saviynt API is by using a service account in Saviynt that should have read/write access to the application. The service account username and password need to be provided for authenticating into Saviynt before any APIs can be executed. All API requests must be made over HTTPS.
+
+## Tutorials
+
+1. SIEM Integration
