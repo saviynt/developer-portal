@@ -24,7 +24,7 @@ If you are creating Elasticsearch-based analytics records, you can view and expo
 
 The following diagram illustrates the components involved in the integration and the communication between EIC and the SIEM application.
 
-![](/img/guide/api/siem-integration/saviynt-eic_siem-integration_reference-architecture_SA77.png)
+![](/img/guide/api/siem-integration/saviynt_api_siem_reference-architecture_SA77.png)
 
 Figure: Reference Architecture for Integration with SIEM Application
 
@@ -51,7 +51,7 @@ This section provides high-level details about the configuration steps that you 
 
 ### Step 1: Creating an Analytics Record
 
-Create a new runtime analytics control (V2) using an SQL query. For more information, see Creating Elasticsearch-based Analytics Controls (Version 2). While creating an analytics control, copy the following query in the Analytics Query parameter.
+Create a new runtime analytics control (V2) using an SQL query. For more information, see [Creating Elasticsearch-based Analytics Controls (Version 2)](https://docs.saviyntcloud.com/bundle/EIC-Admin-v24x/page/Content/Chapter17-EIC-Analytics/Managing-Analytics-v232-Earlier/Creating-Elasticsearch-based-Analytics-Controls-Analytics-V2.htm). While creating an analytics control, copy the following query in the Analytics Query parameter.
 
 `select ua.TYPEOFACCESS as 'Object Type',ua.ActionType as 'Action Taken',u.username as 'Accessed By', ua.IPADDRESS as 'IP Address',ua.ACCESSTIME as 'Event Time',ua.DETAIL as 'Message' from users u , userlogin_access ua, userlogins l where l.loginkey = ua.LOGINKEY and l.USERKEY = u.userkey and ua.AccessTime >= (NOW() - INTERVAL ${timeFrame} Minute) and ua.Detail is not NULL`
 
@@ -61,13 +61,13 @@ Saviynt recommends that you create a dedicated user with least privileges requir
 
 Perform the following steps to set up permissions:
 
-1. Create a user, for example, siem-sid. For more information, see Creating Users.
-1. Change the password for the user. For more information, see Administrator Functions.
+1. Create a user, for example, siem-sid. For more information, see [Creating Users](https://docs.saviyntcloud.com/bundle/EIC-Admin-v24x/page/Content/Chapter03-User-Management/Creating-Users.htm).
+1. Change the password for the user. For more information, see [Administrator Functions](https://docs.saviyntcloud.com/bundle/EIC-Admin-v24x/page/Content/Chapter07-General-Administrator/Administrator-Functions.htm).
 1. Create a SAV role, for example, ROLE_SIEM.
 1. Assign permissions to the newly created SAV role.
-    1. Assign the permission to access the web service URL of the Saviynt fetchRuntimeControlsDataV2 API. For more information, see Understanding the SAV Role Parameters.
-    1. Assign the permission to verify the analytics record that you created. For more information, see Understanding the SAV Role Parameters.
-1. Associate the SAV role with the user created in Step1. For more information, see Understanding the SAV Role Parameters.
+    1. Assign the permission to access the web service URL of the Saviynt fetchRuntimeControlsDataV2 API. For more information, see [Understanding the SAV Role Parameters](https://docs.saviyntcloud.com/bundle/EIC-Admin-v24x/page/Content/Chapter09-SAV-Roles/Understanding-the-SAV-Role-Parameters.htm).
+    1. Assign the permission to verify the analytics record that you created. For more information, see [Understanding the SAV Role Parameters](https://docs.saviyntcloud.com/bundle/EIC-Admin-v24x/page/Content/Chapter09-SAV-Roles/Understanding-the-SAV-Role-Parameters.htm).
+1. Associate the SAV role with the user created in Step1. For more information, see [Understanding the SAV Role Parameters](https://docs.saviyntcloud.com/bundle/EIC-Admin-v24x/page/Content/Chapter09-SAV-Roles/Understanding-the-SAV-Role-Parameters.htm).
 
 > Note: If you want to associate the ROLE_ADMIN SAV role with a user, you need not perform steps 4a and 4b.
 
@@ -77,9 +77,9 @@ EIC maintains an audit log of all security activities performed by a user within
 
 Perform the following steps to create a REST-based integration with the SIEM application:
 
-1. Invoke the authentication API to obtain the authorization token to make a REST API call.<br />Method: POST<br />Endpoint: `{{url}}/ECM/api/login`<br/><br/>Syntax used in the API URLs:<br/>`{{url}}/ECM/{{path}}/apiName`<br/>Example:<br/>`{{url}}` - https://example.saviyntcloud.com<br/>`{{path}}` - Use api/v5 for Release v5.2 onwards and api for older versions of the product.<br/><br/>Body:<br/>`{"username":"admin","password":"password"}`<br/>For more information about the request and response details, see the Saviynt REST API documentation. To check if you have passed the details correctly, refer to the below sample screenshot taken from the Postman tool.
+1. Invoke the authentication API to obtain the authorization token to make a REST API call.<br />Method: POST<br />Endpoint: `{{url}}/ECM/api/login`<br/><br/>Syntax used in the API URLs:<br/>`{{url}}/ECM/{{path}}/apiName`<br/>Example:<br/>`{{url}}` - https://example.saviyntcloud.com<br/>`{{path}}` - Use `api/v5` for Release v5.2 onwards and `api` for older versions of the product.<br/><br/>Body:<br/>`{"username":"admin","password":"password"}`<br/>For more information about the request and response details, see the Saviynt REST API documentation. To check if you have passed the details correctly, refer to the below sample screenshot taken from the Postman tool.<br/>![](/img/guide/api/siem-integration/saviynt_api_siem_step3.1_postman-token-response.png)
 1. Invoke the fetchRuntimeControlsDataV2 API to fetch data.<br/>Method: POST<br/>Endpoint: `{{url}}/ECM/{{path}}/fetchRuntimeControlsDataV2`<br/>Body:<br/>`{"analyticsname": "<Analytics Name>","attributes": {"timeFrame": "<INTERVAL in minutes>"}}`
-1. Ensure that you add the following in the body of the API:
+1. Ensure that you add the following in the body of the API:<table><tr><td><b>Variable</b></td><td><b>Details</b></td></tr><tr ><td>analyticsname</td><td>Specify the name of the analytic control created in [Step 1: Creating an Analytics Record](https://docs.saviyntcloud.com/bundle/EIC-Admin-v24x/page/Content/Chapter20-EIC-Integrations/Saviynt-SIEM-Integration.htm#Step).</td></tr></table>For more information about the request and response details, see the [Saviynt REST API documentation](https://docs.saviyntcloud.com/bundle/API-Reference-Guide/page/Content/API-References.htm).<br/>To check if you have passed the details correctly, refer to the below sample screenshot taken from the Postman tool.<img src="/img/guide/api/siem-integration/saviynt_api_siem_step3.3.1_postman_fetch-runtime-controls-v2-req-headers.png"/><img src="/img/guide/api/siem-integration/saviynt_api_siem_step3.3.1_postman_fetch-runtime-controls-v2-req-headers.png"/>
 
 ## Sample Log Messages
 
@@ -130,7 +130,7 @@ Sample response:
 
 Sample response:
 
-```
+```json
 {
   "Action Taken": "Create",
   "IP Address": "xx.xxx.xx.xx",
@@ -145,7 +145,8 @@ Sample response:
 
 Sample response:
 
-```json{
+```json
+{
   "Action Taken": "Delete",
   "IP Address": "xx.xxx.xx.xx",
   "Event Time": "2022-02-03 13:59:12",
@@ -166,17 +167,11 @@ Sample response:
     * **Description**: Specify the description for the SAV role.
     * **Whom to Request**: Select as Request for self and direct reports.
     * **For Whom Can the Role User Approve the Request**: Select as Approve all request assigned to me.
-1. **Click Create**. The SAV Role details are displayed as shown below:
+1. **Click Create**. The SAV Role details are displayed as shown below:<br/>![](/img/guide/api/siem-integration/saviynt_api_siem_perm6_sav-role-detail.png)
 1. Click **Feature Access**.
-1. Click **Actions** and select the **Home** access.
+1. Click **Actions** and select the **Home** access.<br/>![](/img/guide/api/siem-integration/saviynt_api_siem_perm8_feature-access-home.png)
 1. Click **Web Service Access**x    .
-1. Click **Actions** and select the following accesses:
-    * `webservice_api_authenticateUser`
-    * `api_v5_fetchRuntimeControlsData`
-    * `webservice_api_v5_authenticateUser`
-    * `api_v5_fetchRuntimeControlsDataV2`
-
-You must add only these accesses, other accesses are added by default as shown below.
+1. Click **Actions** and select the following accesses:<ul><li>`webservice_api_authenticateUser`</li><li>`api_v5_fetchRuntimeControlsData`</li><li>`webservice_api_v5_authenticateUser`</li><li>`api_v5_fetchRuntimeControlsDataV2`</li></ul>You must add only these accesses, other accesses are added by default as shown below.<br/>![](/img/guide/api/siem-integration/saviynt_api_siem_perm10_accesses-default.png)
 
 > **Note**: The `webservice_api_authenticateUser` and `api_v5_fetchRuntimeControlsData` accesses are required only if you have created a non Elasticsearch-based analytics record.
 
