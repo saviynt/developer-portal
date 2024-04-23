@@ -22,6 +22,10 @@
   --ifm-code-font-size: 95%; /* No change here unless desired */
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1); /* No change, but you can adjust it */
   --site-primary-hue-saturation: 211 100%; /* The hue and saturation might be adjusted if needed */
+
+  --ifm-color-secondary: #2f8921; /* Replace with your secondary color code */
+
+  --ifm-color-tertiary: #c9a225; /* Replace with your tertiary color code */
 }
 
 /* For dark mode, maintain the color contrast for readability */
@@ -51,6 +55,12 @@
 .navbar__item {
   font-size: 14px; /* Adjust this value as needed */
 }
+
+/* Top Navigation Menu Item Hover */
+/* .navbar__link:hover,
+.navbar__item--active:hover {
+  text-underline-offset : var(--ifm-color-secondary); 
+} */
 
 /* Page content */
 body {

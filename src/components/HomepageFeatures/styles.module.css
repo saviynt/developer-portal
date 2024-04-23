@@ -9,3 +9,14 @@
   height: 200px;
   width: 200px;
 }
+
+
+.featureIcon {
+  color: #fff; /* White color for the icon */
+  background-color: #4285f4; /* Google's blue color */
+  border-radius: 50%; /* Makes the icon circular */
+  padding: 20px;
+  font-size: 48px; /* Adjust size as needed */
+  display: inline-block;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26); /* Optional shadow for depth */
+}

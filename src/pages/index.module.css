@@ -4,10 +4,17 @@
  */
 
 .heroBanner {
+  height: 400px;
   padding: 4rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
+}
+
+.heroBackgroundImage {
+  background-image: url('/static/img/homepage/background.png'); /* Update with your actual image path */
+  background-size: cover;
+  background-position: center;
 }
 
 @media screen and (max-width: 996px) {
