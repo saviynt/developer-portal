@@ -9,7 +9,8 @@ const FeatureList = [
     iconName: "auto_stories", // This is an example icon name
     description: (
       <>
-        Designed to empower developers, Saviynt's robust API facilitates the creation of custom applications, automation of interactions, and crafting of integrations that leverage the advanced capabilities of Saviynt Cloud. Here, you will find comprehensive documentation detailing the available RESTful resources, complete with guidance on HTTP response codes as well as illustrative examples of requests and responses to ensure a smooth development experience. 
+        The EIC REST API enables you to interact with Saviynt programmatically. Use this API to build apps, script interactions with Saviynt, or develop any other type of integration. 
+        This page documents the REST resources available in Saviynt Cloud, including the HTTP response codes and example requests and responses.
       </>
     ),
   },
@@ -29,8 +30,7 @@ const FeatureList = [
     iconName: "webhook", // This is an example icon name
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+       Dive into our comprehensive collection of connectors, apps, and integrations from Saviynt and our community. Harness seamless integrations that bridge on-premises systems and modern cloud applications. Effortlessly explore, implement, and customize to enhance your Saviynt Identity Cloud and achieve greater efficiency and control.
       </>
     ),
   },
