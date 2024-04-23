@@ -53,7 +53,21 @@ This section provides high-level details about the configuration steps that you 
 
 Create a new runtime analytics control (V2) using an SQL query. For more information, see [Creating Elasticsearch-based Analytics Controls (Version 2)](https://docs.saviyntcloud.com/bundle/EIC-Admin-v24x/page/Content/Chapter17-EIC-Analytics/Managing-Analytics-v232-Earlier/Creating-Elasticsearch-based-Analytics-Controls-Analytics-V2.htm). While creating an analytics control, copy the following query in the Analytics Query parameter.
 
-`select ua.TYPEOFACCESS as 'Object Type',ua.ActionType as 'Action Taken',u.username as 'Accessed By', ua.IPADDRESS as 'IP Address',ua.ACCESSTIME as 'Event Time',ua.DETAIL as 'Message' from users u , userlogin_access ua, userlogins l where l.loginkey = ua.LOGINKEY and l.USERKEY = u.userkey and ua.AccessTime >= (NOW() - INTERVAL ${timeFrame} Minute) and ua.Detail is not NULL`
+```sql
+select ua.TYPEOFACCESS as 'Object Type',
+     ua.ActionType as 'Action Taken',
+     u.username as 'Accessed By',
+     ua.IPADDRESS as 'IP Address',
+     ua.ACCESSTIME as 'Event Time',
+     ua.DETAIL as 'Message'
+from users u,
+     userlogin_access ua,
+     userlogins l
+where l.loginkey = ua.LOGINKEY and
+     l.USERKEY = u.userkey and
+     ua.AccessTime >= (NOW() - INTERVAL ${timeFrame} Minute) and
+     ua.Detail is not NULL
+```
 
 ### Step 2: Setting up Permissions
 
