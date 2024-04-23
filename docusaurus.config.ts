@@ -7,7 +7,7 @@ import { DOCUSAURUS_VERSION } from "@docusaurus/utils";
 
 const config: Config = {
   title: "Saviynt for Developers",
-  tagline: "Helping developers build a rich ecosystem of tools and apps around Saviynt",
+  tagline: "For Developers By Developers",
   url: "https://developers.saviynt.com",
   baseUrl: "/",
   onBrokenLinks: "warn",
