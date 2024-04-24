@@ -25,27 +25,15 @@ This framework establishes the standard OpenAPI specification. Customers can uti
 | -------- | --------- | ----------- | ---------- |
 | Import | User | Full import | Yes |
 | Import | Account | Full import | Yes |
+| Import | Group (Entitlement) | Full import | Yes |
+| Import | Role (Entitlement) | Full import | Yes |
 | Provisioning | Account | Create account | Yes |
 | Provisioning | Account | Update account | Yes |
 | Provisioning | Account | Enable account | Yes |
 | Provisioning | Account | Disable account | Yes |
 | Provisioning | Account | Change Password | Yes |
+| Provisioning | Account | Add Access | Yes |
+| Provisioning | Account | Remove Access | Yes |
 | Provisioning | User | Create user | No |
 | Provisioning | User | Update user | Yes |
 | Provisioning | User | Delete user | No |
-
-- Accounts
-  - Adding Group membership
-  - Removing Group membership
-  - Adding Role membership
-  - Removing Role membership
-
-- Entitlements
-
-  - Group
-    - Importing all groups
-    - Importing group-account associations
-  - Role
-    - Importing all roles
-    - Importing role-account associations
-    - Getting Memberships
