@@ -21,21 +21,20 @@ This framework establishes the standard OpenAPI specification. Customers can uti
 - Technology flexibility: The framework defines a language-agnostic API specification, enabling the development of custom connectors in any preferred programming language.
 
 ## **Supported Use Cases:**
-
-- Users
-
-  - Importing all users
-  - Updating a user
+| Category | Object(s) | Use-case(s) | Supported? |
+| -------- | --------- | ----------- | ---------- |
+| Import | User | Full import | Yes |
+| Import | Account | Full import | Yes |
+| Provisioning | Account | Create account | Yes |
+| Provisioning | Account | Update account | Yes |
+| Provisioning | Account | Enable account | Yes |
+| Provisioning | Account | Disable account | Yes |
+| Provisioning | Account | Change Password | Yes |
+| Provisioning | User | Create user | No |
+| Provisioning | User | Update user | Yes |
+| Provisioning | User | Delete user | No |
 
 - Accounts
-
-  - Importing all accounts
-  - Creating an account
-  - Updating an account
-  - Enabling an account
-  - Disabling an account
-  - Deleting an account
-  - Changing an account password
   - Adding Group membership
   - Removing Group membership
   - Adding Role membership
