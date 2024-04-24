@@ -10,13 +10,15 @@
  */
  import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
 import api_rest_5_0_sidebar from "./docs/reference/rest/5.0/sidebar";
+import api_ecf_sidebar from "./docs/reference/ecf/sidebar";
+
 import {
   versionCrumb,
   versionSelector,
 } from "docusaurus-plugin-openapi-docs/lib/sidebars/utils";
 
  const sidebars: SidebarsConfig = {
-  "api_5_0": [
+  "rest": [
     {
       type: "html",
       defaultStyle: true,
@@ -80,6 +82,20 @@ import {
           ],
         },
       ]
+    },
+  ],
+  "ecf": [
+    {
+      type: "category",
+      label: "ECF API",
+      link: {
+        type: "generated-index",
+        title: "ECF API",
+        description:
+          "This is a Saviynt REST API Specification External Connector Framework",
+        slug: "/reference/ecf",
+      },
+      items: api_ecf_sidebar,
     },
   ],
   "Community": [

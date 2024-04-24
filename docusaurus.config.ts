@@ -72,8 +72,12 @@ const config: Config = {
           position: "left",
           items: [
             {
-              label: "REST API 5.0",
+              label: "REST API",
               to: "/reference/rest/5.0",
+            },
+            {
+              label: "ECF API",
+              to: "/reference/ecf",
             },
           ],
         },
@@ -237,6 +241,19 @@ const config: Config = {
             downloadUrl:
               "https://github.com/saviynt/developer-portal/blob/main/static/api-specs/saviynt-rest-api-5.0-bundle.yaml",
             baseUrl: "/reference/rest/5.0", // Leading slash is important
+          } satisfies OpenApiPlugin.Options,
+          ecf:{
+            specPath: "static/api-specs/saviynt-ecf-api-bundle.yaml",
+            // proxy: "https://cors-anywhere.herokuapp.com",
+            outputDir: "docs/reference/ecf", // No trailing slash
+            sidebarOptions: {
+              groupPathsBy: "tag",
+              categoryLinkSource: "tag",
+            },
+            hideSendButton: false,
+            showSchemas: true,
+            // downloadUrl:"https://github.com/saviynt/developer-portal/blob/main/static/api-specs/saviynt-rest-api-5.0-bundle.yaml",
+            baseUrl: "/reference/ecf", // Leading slash is important
           } satisfies OpenApiPlugin.Options,
         } satisfies Plugin.PluginOptions,
       },
