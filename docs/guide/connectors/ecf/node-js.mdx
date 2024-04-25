@@ -1,30 +1,205 @@
+# Tutorial - Custom connector development in Node-JS 
+
 Follow below steps to create a node-js based web server adhering ECF spec.
+
+## Pre-requisite:
+
+1. Install nodejs from <b>[nodejs.org](https://nodejs.org/en/download)</b>
+2. Download <b>[Open API Spec](https://github.com/saviynt/ExternalConnectorFramework-APISpec/blob/main/spec/OpenAPISpec.yaml)</b>.
+3. Install IDE of your preference for e.g. Visual Studio to develop Node-JS project.
 
 ## Steps to generate node-js server bundle.
 
-1. Open Swagger Editor in web broswer by navigating to [https://editor.swagger.io/](https://github.com/saviynt/ExternalConnectorFramework-APISpec/blob/main/README.md#steps-to-generate-node-js-server-bundle)
-2. In the editor window, click on File --&gt; Import file and select the OpenAPISpec.yaml from the spec directory of ExternalConnectorFramework-apispec project (ensure that you have already checked this out)
+1. Open Swagger Editor in web broswer by navigating to <b>[swagger.io](https://editor.swagger.io/)</b>
+2. In the editor window, click on File --&gt; Import file and select the OpenAPISpec.yaml.
 3. You should be able to render the API specification on right panel.
 4. Now go to Generate Server -&gt; nodejs-server
 5. This will generate a zip file.
 
 ## Steps to start node-js server.
 
-1. Install nodejs from [https://nodejs.org/en/download](https://github.com/saviynt/ExternalConnectorFramework-APISpec/blob/main/README.md#steps-to-generate-node-js-server-bundle).
+1. Unzip the generated zip file. (This will be base location of your node js project)
+2. Go to base location and run ```npm start``` command.
+3. You should be able to see below message.
 
-2. Unzip the generated zip file. (This will be base location of your node js project)
+Your server is listening on port 8080 <b>[localhost](http://localhost:8080)</b>
+Swagger-ui is available on <b>[/docs](http://localhost:8080/docs)</b>
 
-3. Go to base location and run “npm start” command.
+This will mean you have successfully started the node-js server.
 
-4. You should be able to see below message.
+## Steps to explore the API spec.
 
-   Your server is listening on port 8080 ([http://localhost:8080](https://github.com/saviynt/ExternalConnectorFramework-APISpec/blob/main/README.md#steps-to-generate-node-js-server-bundle)). Swagger-ui is available on [http://localhost:8080/docs](https://github.com/saviynt/ExternalConnectorFramework-APISpec/blob/main/README.md#steps-to-generate-node-js-server-bundle).
-
-   This will mean you have successfully started the node-js server.
-
-## Steps to navigate the API spec.
-
-1. Go to web browser and navigate to [http://localhost:8080/docs](https://github.com/saviynt/ExternalConnectorFramework-APISpec/blob/main/README.md#steps-to-generate-node-js-server-bundle).
+1. Go to web browser and navigate to <b>[/docs](http://localhost:8080/docs)</b>
 2. This will list all API spec supported by External Connector Framework.
-3. There are various operations listed, as per your requirement, you can go to that specific API and use "Try it out" option to explore the API specification, which will list request type, request parameters, body and response. Note:
-4. "Try it out" will require you to authorize with a bearer token, so you should first click on Authorize button at the top provide a value, this is a sample spec and there is no actual token validation, so you can provide any string value for e.g. MyBearerToken and click on Authorize -&gt; Close.
+3. There are various operations listed, as per your requirement, you can go to that specific API and use "Try it out" option to explore the API specification, which will list request type, request parameters, body and response. 
+
+Note: "Try it out" will require you to authorize with a static token, so you should first click on Authorize button at the top provide a value, this is a sample spec and there is no actual token validation, so you can provide any string value for e.g. MyBearerToken and click on Authorize -&gt; Close.
+
+## Customize the connector:
+
+Import the generated Node-JS project to Visual Studio/your preferred IDE. Once developer is done with project setup, project can be customized further as required. End goal here is to ensure this custom connector is able to connect with actual target application, fetch/provision data as per given ECF specification and expose rest endpoints, so same can be called from EIC ensuring end to end integration.
+
+Below are few examples given considering project is being developed in Node-JS.
+
+### Add static bearer token authentication:
+
+The server utility by default has bearer token authentication enabled for all API calls. So any API call without passing authorization header will fail. However since it is sample specification, there is no token defined and using any random value will also work for authorization.
+
+As part of connector development, developer should implement valid authorization logic. Below is example of how a developer can support authorization by updating controllers/AccountImport.js as below:
+
+```javascript
+module.exports.apiV1AccountsPOST = function apiV1AccountsPOST (req, res, next, body, offSet, pageSize) {
+
+// sample custom code here to perform authorization
+const authHeader = req.headers['authorization'] &&
+            req.headers['authorization'].toLowerCase();
+
+if (!(authHeader.toLowerCase() === "bearer <token value>")) {
+            throw Error(`Authorization token not correct`);
+		}
+// sample code completed
+
+Default.apiV1AccountsPOST(body)
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
+};
+```
+
+### Decode and encode bearer token:  
+
+Below is sample code for developer to use, in case developer wants to encode the token (this encoded token can be configured in EIC for authorization) and decode same for server side authorization validation.
+
+```javascript
+const stringToEncode = 'Hello@12345$';
+// Encoding the string to Base64 using ASCII encoding
+const encodedString = Buffer.from(stringToEncode).toString('base64');
+console.log('Base64 Encoded (UTF-8):', encodedString);
+const decodedString = Buffer.from(encodedString, 'base64').toString('utf-8');
+console.log('Base64 Decoded:', decodedString);
+```
+
+### Add logger:
+
+Developer can refer below sample way of adding logger in custom connector.
+
+1. Create a logger.js file under utils folder. In this file developer can define log level, log file location etc.
+
+```javascript
+// logger.js
+const winston = require('winston');
+// Configure Winston logger
+const logger = winston.createLogger({
+  level: 'info', // Set the minimum log level (e.g., 'info', 'warn', 'error')
+  format: winston.format.simple(), // Use a simple log format
+  transports: [
+    new winston.transports.Console(), // Log to console
+    new winston.transports.File({ filename: 'application.log' }) // Log to file
+  ]
+});
+module.exports = logger;
+```
+
+2. Logging in /controllers/AccountProvisioning.js file
+
+```javascript
+module.exports.apiV1CreateAccountPOST = function apiV1CreateAccountPOST (req, res, next, body) {
+    //Sample logger statement
+    const logger = require('../utils/logger');
+    logger.info("This is info message, calling create accounts API");
+    //sample code complete
+    Default.apiV1CreateAccountPOST(body)
+      .then(function (response) {
+        utils.writeJson(res, response);
+      })
+      .catch(function (response) {
+        utils.writeJson(res, response);
+    });
+};
+```  
+
+Note: When you start the server with this configuration, this will create a application.log file at base project folder.
+
+### Sample custom logic:
+
+As a developer you can add custom logic and validations as your requirement, below is just a sample, for e.g. if a developer wants to throw an error if firstName parameter value is missing in request body during account provisioning request.
+
+Under Services/AccountProvisioningService.js → under Create Account API implementation, add below sample logic:
+
+```javascript
+exports.apiV1CreateAccountPOST = function(body) {
+  return new Promise(function(resolve, reject) {
+	  //sample code
+   if (!body.hasOwnProperty('firstname')) {
+      const errorResponse = {
+        errorCode: "400",
+        message: "Bad Request: Missing 'firstname' parameter in request body"
+      };
+      reject(errorResponse);
+    }
+    ...// rest code continues here
+```
+
+Note: Above is just an example of validation, developer has to ensure appropriate custom implementation logic is added in code. For e.g. if customer use case is to provision account to a target application, this custom connector code should be able to connect with target application, read the request body data, provision the account in actual target and return 200 status code.
+
+Please refer appendix section, that contains few node-js based sample code which shows how custom implementation can be done to integrate Google Sheets (consider google sheet is a target application) and you need to write a ECF based custom connector which will act as intermediary for EIC and Google Sheets.
+Developer should also consider implementing pageSize and offSet while writing logic for import operations for better performance. Sample code in Appendix section has references around how to use offset and pagesize to support pagination as well. 
+
+## Deploy Server:
+
+1. In Visual studio. Go to view → terminal → go to project base folder and execute “npm start” command.
+2. You should be able to see a success message as below and web service up and running.
+
+Your server is listening on port <port> (http://<server>:<port>)
+Swagger-ui is available on http://<server>:<port>/docs
+
+You can open http://<server>:<port>/docs in web browser and explore the Rest API exposed and validate is server is up and running.
+
+Above steps will start the server. However this uses http protocal and default starts over 8080 port. To customize these settings, follow below section.
+
+### Customize port number:
+
+1. Open index.js file available in project base folder.
+2. Search for line as var serverPort = 8080;
+3. Update above line with your preferred port number.
+
+### Use https instead of http:
+
+In actual production environment you are recommended to run your server over https. Below are high level steps to run server over https (below steps use a self signed certificate, however you may use a CA signed certificate as well). 
+
+#### Generate self signed certificate:
+
+1. Install openssl.
+2. Run command ```openssl req -nodes -new -x509 -keyout server.key -out server.cert```
+3. Follow the wizard and it will generate a certificate and key.
+4. Place this certificate and key into your project base folder.
+5. Configure index.js file under project base folder to use ssl certificate for https deployment of web server:
+
+Below is sample updated index.js file
+
+```javascript
+const fs = require("fs");
+var https = require('https');
+var serverPort = 443; // you can specify the port number
+// add certificate details in options:
+var options = {
+    routing: {
+        controllers: path.join(__dirname, './controllers')
+    },
+	key: fs.readFileSync("server.key"),
+        cert: fs.readFileSync("server.cert"),
+};
+// pass the options while creating server
+https.createServer(options, app).listen(serverPort, function () {
+    console.log('Your server is listening on port %d (https://localhost:%d)', serverPort, serverPort);
+    console.log('Swagger-ui is available on https://localhost:%d/docs', serverPort);
+});
+```
+
+6. Run “npm start“ after enabling https as above, you should get below message:
+Your server is listening on port <port> (https://<server>:<port>)
+Swagger-ui is available on https://<server>:<port>/docs
+7. You can open https://<server>:<port>/docs in web browser and explore the Rest API exposed and validate is server is up and running over https.
