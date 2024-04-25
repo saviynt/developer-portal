@@ -32,7 +32,7 @@ The above flow diagram lists out the various steps of the development lifecycle.
 2.	Start the server, This step may vary depending on language which was selected to generate the server in earlier step. 
 3.	you should be able to get successful message around server is running and swagger-ui available with URL information.
 
-Note: Server is by default started on 8080 port, in case there is already some other application running on this port, server startup may fail. You need to change server port to other than 8080 and then start same. Configuration file which contains port number should be available under unzipped folder.
+Note: Default generated server uses http protocol and starts on 8080 port, in case there is already some other application running on this port, server startup may fail. You need to change server port to other than 8080 and then start same. Configuration file which contains port number should be available under unzipped folder.
 
 ## Explore ECF API Specification:
 
@@ -45,6 +45,10 @@ Note: Server is by default started on 8080 port, in case there is already some o
 2. Customize the connector as per your requirement, implement logic for authentication, for each API operation handle request body processing, response generation etc.
 3. Once complete customization is done.
 4. Start the server.
+
+Recommendations:
+1. As part of customization you should also setup ssl certificate to enable running the server over https. 
+2. You should implement pagination for import operations.
 
 ## Unit Testing:
 
