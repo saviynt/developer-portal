@@ -7,8 +7,24 @@ description: Overview of ECF
 
 ## Overview
 This document outlines the steps for creating a connector using the External Connector Framework (ECF). Prior to jumping into the various details of connector creation, let's look into a high-level overview of the steps involved.
-![](../../../../static/img/ecf_dev_flow.svg)
+![](../../../../static/img/DeveloperFlow.png)
 The above flow diagram lists out the various steps of the development lifecycle.
 
 
 [Image](/static/Saviynt_logo_Nav.svg)
+
+##Pre-Requisite:
+
+1.	Identify the target application which needs to be integrated using ECF.
+2.	Identify your preferred language for development and setup corresponding IDE.
+3.	Ensure required libraries are installed for customizing the connector.
+
+##Generate Server:
+
+1.	Download https://github.com/saviynt/ExternalConnectorFramework-APISpec/blob/main/spec/OpenAPISpec.yaml file.
+2.	Open Swagger Editor in web browser by navigating to https://editor.swagger.io/
+3.	In the editor window, click on File --> Import file and select the OpenAPISpec.yaml from your system.
+4.	You should be able to render the API specification on right panel.
+5.	Now go to Generate Server -> select your preferred development language
+6.	This will generate a zip file.
+
