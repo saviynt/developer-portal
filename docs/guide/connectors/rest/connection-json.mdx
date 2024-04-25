@@ -63,9 +63,11 @@ The following table describes all the attributes in ConnectionJSON:
 #### Sample 1
 This **ConnectionJSON** is a comprehensive setup for authenticating via OAuth2 using username and password as credentials. It covers various error handling scenarios, specifies how to process and interpret API responses, and includes robust retry logic to handle token expiration effectively. This configuration is essential for maintaining secure and efficient access to APIs requiring OAuth2 authentication.
 
-JSON
 
-```
+<details>
+<summary> JSON </summary>
+<p>
+``` json
 {
   "authentications": {
     "userAuth": {
@@ -97,6 +99,8 @@ JSON
   }
 }
 ```
+</p>
+</details>
 **Authentication Configuration Details**
 
 - **Authentication Type (`authType`)**: `oauth2`
