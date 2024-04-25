@@ -101,6 +101,7 @@ const logger = winston.createLogger({
   ]
 });
 module.exports = logger;
+```
 
 2. Logging in /controllers/AccountProvisioning.js file
 
@@ -146,3 +147,59 @@ Note: Above is just an example of validation, developer has to ensure appropriat
 
 Please refer appendix section, that contains few node-js based sample code which shows how custom implementation can be done to integrate Google Sheets (consider google sheet is a target application) and you need to write a ECF based custom connector which will act as intermediary for EIC and Google Sheets.
 Developer should also consider implementing pageSize and offSet while writing logic for import operations for better performance. Sample code in Appendix section has references around how to use offset and pagesize to support pagination as well. 
+
+## Deploy Server:
+
+1. In Visual studio. Go to view → terminal → go to project base folder and execute “npm start” command.
+2. You should be able to see a success message as below and web service up and running.
+
+Your server is listening on port <port> (http://<server>:<port>)
+Swagger-ui is available on http://<server>:<port>/docs
+
+You can open http://<server>:<port>/docs in web browser and explore the Rest API exposed and validate is server is up and running.
+
+Above steps will start the server. However this uses http protocal and default starts over 8080 port. To customize these settings, follow below section.
+
+### Customize port number:
+
+1. Open index.js file available in project base folder.
+2. Search for line as var serverPort = 8080;
+3. Update above line with your preferred port number.
+
+### Use https instead of http:
+
+In actual production environment you are recommended to run your server over https. Below are high level steps to run server over https (below steps use a self signed certificate, however you may use a CA signed certificate as well). 
+
+#### Generate self signed certificate:
+
+1. Install openssl.
+2. Run command ```openssl req -nodes -new -x509 -keyout server.key -out server.cert```
+3. Follow the wizard and it will generate a certificate and key.
+4. Place this certificate and key into your project base folder.
+5. Configure index.js file under project base folder to use ssl certificate for https deployment of web server:
+
+Below is sample updated index.js file
+
+```javascript
+const fs = require("fs");
+var https = require('https');
+var serverPort = 443; // you can specify the port number
+// add certificate details in options:
+var options = {
+    routing: {
+        controllers: path.join(__dirname, './controllers')
+    },
+	key: fs.readFileSync("server.key"),
+        cert: fs.readFileSync("server.cert"),
+};
+// pass the options while creating server
+https.createServer(options, app).listen(serverPort, function () {
+    console.log('Your server is listening on port %d (https://localhost:%d)', serverPort, serverPort);
+    console.log('Swagger-ui is available on https://localhost:%d/docs', serverPort);
+});
+```
+
+6. Run “npm start“ after enabling https as above, you should get below message:
+Your server is listening on port <port> (https://<server>:<port>)
+Swagger-ui is available on https://<server>:<port>/docs
+7. You can open https://<server>:<port>/docs in web browser and explore the Rest API exposed and validate is server is up and running over https.
