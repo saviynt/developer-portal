@@ -203,3 +203,348 @@ https.createServer(options, app).listen(serverPort, function () {
 Your server is listening on port \<port\> (http://\<server\>:\<port\>)
 Swagger-ui is available on https://\<server\>:\<port\>/docs
 7. You can open https://\<server\>:\<port\>/docs in web browser and explore the Rest API exposed and validate is server is up and running over https.
+
+## Sample code to integrate Google Sheets as target application:
+
+This section contains sample node-js code, which connects with Google Sheets, and performs import/provision operations. In this case it is considered that actual target application is google sheet, and developer wants to write a ECF based custom connector to integrate Google sheet with EIC.
+
+### Accounts Import:
+
+Consider below is accounts data stored in sheet.
+
+![](../../../../static/img/ECF_Account_Import.png)
+
+Below is sample code to read and return this data in ECF response format.
+
+```javascript
+const { google } = require('googleapis');
+const fs = require('fs');
+const readline = require('readline');
+
+// Load credentials from JSON file
+const credentials = require('./utils/external-connector-framework-09842e2d8788.json');
+
+// Create a new JWT client using the credentials
+const auth = new google.auth.JWT(
+  credentials.client_email,
+  null,
+  credentials.private_key,
+  ['https://www.googleapis.com/auth/spreadsheets']
+);
+
+// Create a new instance of Google Sheets API
+const sheets = google.sheets({ version: 'v4', auth });
+
+// ID of the Google Sheet
+const spreadsheetId = '1tZyExhNelfLaI68oBI3DwWly2p1xfY7VJ1k_CaOzoP0';
+
+// Function to read data from the Google Sheet with offset and pageSize
+async function readData(offset, pageSize) {
+  try {
+    const headerRange = 'Accounts!1:1'; // Range for header row
+    const headerResponse = await sheets.spreadsheets.values.get({
+      spreadsheetId,
+      range: headerRange,
+    });
+    const headers = headerResponse.data.values[0];
+    
+// Calculate range based on offset and pageSize
+const dataStartRow = offset + 2; // Offset starts from data row 1 (after header)
+const range = `Accounts!A${dataStartRow}:F${dataStartRow + pageSize - 1}`;
+
+const response = await sheets.spreadsheets.values.get({
+  spreadsheetId,
+  range,
+});
+
+const rows = response.data.values;
+if (rows.length) {
+  const totalCount = rows.length;
+  const accounts = rows.map(row =\> {
+    const account = {};
+    headers.forEach((header, index) =\> {
+      account[header] = row[index] || ''; // Ensure each header has a corresponding value
+    });
+    return account;
+  });
+  console.log(JSON.stringify({
+    offset: offset,
+    totalCount: totalCount,
+    accounts: accounts
+  }, null, 2));
+
+} else {
+  console.log(JSON.stringify({
+    offset: offset,
+    totalCount: 0,
+    accounts: []
+  }, null, 2));
+}
+} catch (err) {
+    console.error('The API returned an error:', err);
+  }
+}
+
+// Call the function with offset and pageSize
+readData(0, 2);
+```
+
+### Role Entitlement Import:
+
+Consider below is role entitlement data stored in sheet.
+
+![](../../../../static/img/ECF_Role_Ent_Import.png)
+
+below is sample code to read and return this data in ECF format:
+
+```javascript
+const { google } = require('googleapis');
+const fs = require('fs');
+const readline = require('readline');
+
+// Load credentials from JSON file
+const credentials = require('./utils/external-connector-framework-09842e2d8788.json');
+
+// Create a new JWT client using the credentials
+const auth = new google.auth.JWT(
+  credentials.client_email,
+  null,
+  credentials.private_key,
+  ['https://www.googleapis.com/auth/spreadsheets']
+);
+
+// Create a new instance of Google Sheets API
+const sheets = google.sheets({ version: 'v4', auth });
+
+// ID of the Google Sheet
+const spreadsheetId = '1tZyExhNelfLaI68oBI3DwWly2p1xfY7VJ1k_CaOzoP0';
+
+// Function to read data from the Google Sheet with offset and pageSize
+async function readData(offset, pageSize) {
+  try {
+    const headerRange = 'Entitlements_Roles!1:1'; // Range for header row
+    const headerResponse = await sheets.spreadsheets.values.get({
+      spreadsheetId,
+      range: headerRange,
+    });
+    const headers = headerResponse.data.values[0];
+// Calculate range based on offset and pageSize
+const dataStartRow = offset + 2; // Offset starts from data row 1 (after header)
+const range = `Entitlements_Roles!A${dataStartRow}:F${dataStartRow + pageSize - 1}`;
+
+const response = await sheets.spreadsheets.values.get({
+  spreadsheetId,
+  range,
+});
+
+const rows = response.data.values;
+
+if (rows.length) {
+  const totalCount = rows.length;
+  const roles = rows.map(row =\> {
+    const role = {};
+    headers.forEach((header, index) =\> {
+      if (header === 'childEntitlements') {
+        // Parse multi-valued data into an array of objects
+        const childEntitlements = row[index].split(',').map(value =\> {
+          return { entitlementID: value.trim() };
+        });
+        role[header] = { roles: childEntitlements };
+      } else if (header === 'owners') {
+        // Parse multi-valued data into an array of strings
+        role[header] = row[index].split(',').map(value =\> value.trim());
+      } else {
+        role[header] = row[index];
+      }
+	});
+    return role;
+  });
+  console.log(JSON.stringify({
+    offset: offset,
+    totalCount: totalCount,
+    roles: roles
+  }, null, 2));
+
+} else {
+  console.log(JSON.stringify({
+    offset: offset,
+    totalCount: 0,
+    roles: []
+  }, null, 2));
+}
+} catch (err) {
+    console.error('The API returned an error:', err);
+  }
+}
+
+// Call the function with offset and pageSize
+readData(0, 2);
+```
+
+### Role-Accounts membership import:
+
+Consider below is role-account membership data stored in sheet.
+
+![](../../../../static/img/ECF_Acct_Ent_Import.png)
+
+below is sample code to read and return this data in ECF format:
+
+```javascript
+const { google } = require('googleapis');
+const fs = require('fs');
+const readline = require('readline');
+// Load credentials from JSON file
+const credentials = require('./utils/external-connector-framework-09842e2d8788.json');
+// Create a new JWT client using the credentials
+const auth = new google.auth.JWT(
+  credentials.client_email,
+  null,
+  credentials.private_key,
+  ['https://www.googleapis.com/auth/spreadsheets']
+);
+// Create a new instance of Google Sheets API
+const sheets = google.sheets({ version: 'v4', auth });
+// ID of the Google Sheet
+const spreadsheetId = '1tZyExhNelfLaI68oBI3DwWly2p1xfY7VJ1k_CaOzoP0';
+// Function to read data from the Google Sheet with offset and pageSize
+async function readData() {
+  try {
+    const headerRange = 'Roles_Memberships!1:1'; // Range for header row
+    const headerResponse = await sheets.spreadsheets.values.get({
+      spreadsheetId,
+      range: headerRange,
+    });
+    const headers = headerResponse.data.values[0];
+// Calculate range based on offset and pageSize
+const dataStartRow = 2; // Offset starts from data row 1 (after header)
+const range = `Roles_Memberships!A${dataStartRow}:F`;
+const response = await sheets.spreadsheets.values.get({
+  spreadsheetId,
+  range,
+});
+const rows = response.data.values;
+if (rows.length) {
+  const count = rows.length;
+  const role_memberships = rows.map(row =\> {
+    const membership = {};
+    headers.forEach((header, index) =\> {
+      membership[header] = Number(row[index]);
+    });
+    return membership;
+  });
+  console.log(JSON.stringify({
+    count: count,
+    role_memberships: role_memberships
+  }, null, 2));
+} else {
+  console.log(JSON.stringify({
+    count: 0,
+    role_memberships: []
+  }, null, 2));
+}
+} catch (err) {
+    console.error('The API returned an error:', err);
+  }
+}
+// Call the function with offset and pageSize
+readData(0, 2);
+```
+
+### Account Provisioning:
+
+Below is sample code which can be used to provision an account. This uses sample hardcoded account data, ideally this will be received by your custom connector from EIC when create account task is provisioned, you should read this account data from request body and process it further.
+
+```javascript
+const { google } = require('googleapis');
+const fs = require('fs');
+// Load credentials from JSON file
+const credentials = require('./utils/external-connector-framework-09842e2d8788.json');
+// Create a new JWT client using the credentials
+const auth = new google.auth.JWT(
+  credentials.client_email,
+  null,
+  credentials.private_key,
+  ['https://www.googleapis.com/auth/spreadsheets']
+);
+// Create a new instance of Google Sheets API
+const sheets = google.sheets({ version: 'v4', auth });
+// ID of the Google Sheet
+const spreadsheetId = '1tZyExhNelfLaI68oBI3DwWly2p1xfY7VJ1k_CaOzoP0';
+// Function to write data to the Google Sheet
+async function writeDataToSheet(data) {
+  try {
+    const values = [Object.values(data)];
+  const response = await sheets.spreadsheets.values.append({
+  spreadsheetId: spreadsheetId,
+  range: 'Accounts!A:A', // Assuming data will be written to Sheet1
+  valueInputOption: 'RAW',
+  requestBody: {
+    values: values
+  }
+});
+console.log(`${response.data.updates.updatedCells} cells appended.`);
+} catch (err) {
+    console.error('The API returned an error:', err);
+    throw err;
+  }
+}
+// Example data to write to the Google Sheet
+const data = {
+  "accountID": "1006",
+  "accountClass": "NA",
+  "accountType": "NoType",
+  "customproperty1": "McNeil",
+  "displayname": "N",
+  "name": "MNeil"
+};
+// Call the function to write data to the Google Sheet
+writeDataToSheet(data);
+```
+
+### Provision Account-Role membership (Access provisioning):
+
+Below is sample code which can be used to provision a role access to an account. This uses sample hardcoded input data, ideally this will be received by your custom connector from EIC when add access task for role is provisioned, you should read this data from request body and process it further.
+
+```javascript
+const { google } = require('googleapis');
+const fs = require('fs');
+// Load credentials from JSON file
+const credentials = require('./utils/external-connector-framework-09842e2d8788.json');
+// Create a new JWT client using the credentials
+const auth = new google.auth.JWT(
+  credentials.client_email,
+  null,
+  credentials.private_key,
+  ['https://www.googleapis.com/auth/spreadsheets']
+);
+// Create a new instance of Google Sheets API
+const sheets = google.sheets({ version: 'v4', auth });
+// ID of the Google Sheet
+const spreadsheetId = '1tZyExhNelfLaI68oBI3DwWly2p1xfY7VJ1k_CaOzoP0';
+// Function to write data to the Google Sheet
+async function writeDataToSheet(data) {
+  try {
+    const values = [Object.values(data)];
+    const response = await sheets.spreadsheets.values.append({
+  spreadsheetId: spreadsheetId,
+  range: 'Roles_Memberships!A:A', // Assuming data will be written to Sheet1
+  valueInputOption: 'RAW',
+  requestBody: {
+    values: values
+  }
+});
+console.log(`${response.data.updates.updatedCells} cells appended.`);
+  } catch (err) {
+    console.error('The API returned an error:', err);
+    throw err;
+  }
+}
+// Example data to write to the Google Sheet
+const data = {
+  "accountID": "15553759289495",
+  "entitlementID": "15553692240530"
+};
+// Call the function to write data to the Google Sheet
+writeDataToSheet(data);
+```
+
