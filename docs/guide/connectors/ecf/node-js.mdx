@@ -59,7 +59,9 @@ By default, the server runs on port 8080 using the HTTP protocol. Here's how to 
 
 ### Using HTTPS (Optional)
 In production environments, it's crucial to secure communication between your server and clients. The HTTPS protocol encrypts data transmission, protecting sensitive information and ensuring data integrity. This section provides a high-level overview of enabling HTTPS with a self-signed certificate (for development purposes only).
+
 <b><u>Important Note:</u></b> Using a self-signed certificate is not recommended for production due to security concerns. Browsers will display warnings to users when they encounter self-signed certificates. For production environments, you should obtain a valid certificate issued by a trusted Certificate Authority (CA).
+
 #### Enabling HTTPS with Self-Signed Certificate (Development Only):
 1. <b><u>Generate a Self-Signed Certificate:</u></b>
 	* Install OpenSSL if it's not already available on your system. You can find installation instructions online for your specific operating system.
@@ -103,7 +105,7 @@ https.createServer(options, app).listen(serverPort, function () {
 5. <b><u>Access the Server:</u></b>
 	* You can now access your server securely using HTTPS. Open ```https://localhost:<port number>/docs``` (replace \<port number\> with the port you specified) in your web browser. However, due to the self-signed certificate, your browser will likely display a warning message. This is expected for development purposes.
 
-<b><u>Remember:</u></b> This approach is for development and testing only. In production, you should obtain a valid certificate from a trusted CA to ensure secure communication and avoid browser warnings.
+	<b><u>Remember:</u></b> This approach is for development and testing only. In production, you should obtain a valid certificate from a trusted CA to ensure secure communication and avoid browser warnings.
 
 ## Customize the connector
 Import the generated Node-JS project to Visual Studio/your preferred IDE. Once developer is done with project setup, project can be customized further as required. End goal here is to ensure this custom connector is able to connect with actual target application, fetch/provision data as per given ECF specification and expose rest endpoints, so same can be called from EIC ensuring end to end integration.
