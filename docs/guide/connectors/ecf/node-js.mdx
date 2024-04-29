@@ -36,35 +36,43 @@ This indicates that your Node.js server is running and accessible.
 
 ## Deploying the Server
 
-1. In Visual studio. Go to view → terminal → go to project base folder and execute “npm start” command.
-2. You should be able to see a success message as below and web service up and running.
+This section guides you through launching your Node.js server locally and customizing its configuration. It also briefly touches upon considerations for production deployment.
 
-Your server is listening on port \<port\> (http://\<server\>:\<port\>)
-Swagger-ui is available on http://\<server\>:\<port\>/docs
+### Starting the Server Locally
+1. <b><u>Open Terminal:</u></b> Launch your terminal or command prompt application.
+2. <b><u>Navigate to Project Directory:</u></b> Use the cd command to change directories and navigate to the root directory of your unzipped project.
+3. <b><u>Run Server:</u></b> Execute the command npm start to initiate the server.
+4. <b><u>Server Confirmation:</u></b> Upon successful execution, you'll see a message similar to:
+```
+Your server is listening on port 8080 (http://localhost:8080)
+Swagger-ui is available on [/docs](http://localhost:8080/docs)
+```
+This indicates that your Node.js server is running locally on port 8080 and accessible at <b>[/docs](http://localhost:8080/docs)</b>. You can open this URL in your web browser to explore the available APIs using Swagger UI.
 
-You can open http://\<server\>:\<port\>/docs in web browser and explore the Rest API exposed and validate is server is up and running.
+### Customizing Server Configuration (Optional):
+By default, the server runs on port 8080 using the HTTP protocol. Here's how to modify these settings:
+1. <b><u>Locate package.json:</u></b> Open the package.json file within your project directory using a text editor.
+2. <b><u>Edit Configuration:</u></b> Search for the scripts section within the file. You'll find properties like "start" that define commands used to start the server. Look for properties controlling port and protocol configurations (these might vary depending on the generated server code).
+3. <b><u>Update Values:</u></b> Modify the values for port and protocol as needed. Common properties might include ```"start": "node index.js -p <port number>"```, where ```<port number>``` is the desired port. Refer to the specific documentation for your generated code if the properties have different names.
+4. <b><u>Save Changes:</u></b> Save your modifications to the package.json file.
+5. <b><u>Restart Server:</u></b> After making changes, stop the server using Ctrl+C in your terminal and then restart it using npm start again. The server will now run with your updated configuration.
 
-Above steps will start the server. However this uses http protocal and default starts over 8080 port. To customize these settings, follow below section.
-
-### Customize port number
-
-1. Open index.js file available in project base folder.
-2. Search for line as var serverPort = 8080;
-3. Update above line with your preferred port number.
-
-### Use https instead of http
-
-In actual production environment you are recommended to run your server over https. Below are high level steps to run server over https (below steps use a self signed certificate, however you may use a CA signed certificate as well). 
-
-#### Generate self signed certificate
-
-1. Install openssl.
-2. Run command ```openssl req -nodes -new -x509 -keyout server.key -out server.cert```
-3. Follow the wizard and it will generate a certificate and key.
-4. Place this certificate and key into your project base folder.
-5. Configure index.js file under project base folder to use ssl certificate for https deployment of web server:
-
-Below is sample updated index.js file
+### Using HTTPS (Optional)
+In production environments, it's crucial to secure communication between your server and clients. The HTTPS protocol encrypts data transmission, protecting sensitive information and ensuring data integrity. This section provides a high-level overview of enabling HTTPS with a self-signed certificate (for development purposes only).
+<b><u>Important Note:</u></b> Using a self-signed certificate is not recommended for production due to security concerns. Browsers will display warnings to users when they encounter self-signed certificates. For production environments, you should obtain a valid certificate issued by a trusted Certificate Authority (CA).
+#### Enabling HTTPS with Self-Signed Certificate (Development Only):
+1. <b><u>Generate a Self-Signed Certificate:</b></u>
+	* Install OpenSSL if it's not already available on your system. You can find installation instructions online for your specific operating system.
+	* Run the following command in your terminal to generate a self-signed certificate and key:
+```bash
+openssl req -nodes -new -x509 -keyout server.key -out server.cert
+```
+	* Follow the prompts to provide information like your organization name and location. This information is embedded within the certificate.
+2. <b><u>Place the Certificate and Key Files:</b></u>
+	* Move the generated ```server.key``` and ```server.cert``` files to your project's base directory.
+3. <b><u>Configure ```index.js``` for HTTPS:</b></u>
+	* Locate the index.js file in your project.
+	* Update the code to use the generated certificate and key for HTTPS. Here's an example:
 
 <details>
 <summary> Using SSL </summary>
@@ -90,13 +98,14 @@ https.createServer(options, app).listen(serverPort, function () {
 </p>
 </details>
 
-6. Run “npm start“ after enabling https as above, you should get below message:
-Your server is listening on port \<port\> (http://\<server\>:\<port\>)
-Swagger-ui is available on https://\<server\>:\<port\>/docs
-7. You can open https://\<server\>:\<port\>/docs in web browser and explore the Rest API exposed and validate is server is up and running over https.
+4. <b><u>Start the Server:</b></u>
+	* Run npm start in your terminal to launch the server with HTTPS enabled.
+5. <b><u>Access the Server:</b></u>
+	* You can now access your server securely using HTTPS. Open https://localhost:<port number>/docs (replace <port number> with the port you specified) in your web browser. However, due to the self-signed certificate, your browser will likely display a warning message. This is expected for development purposes.
+
+<b><u>Remember:</b></u> This approach is for development and testing only. In production, you should obtain a valid certificate from a trusted CA to ensure secure communication and avoid browser warnings.
 
 ## Customize the connector
-
 Import the generated Node-JS project to Visual Studio/your preferred IDE. Once developer is done with project setup, project can be customized further as required. End goal here is to ensure this custom connector is able to connect with actual target application, fetch/provision data as per given ECF specification and expose rest endpoints, so same can be called from EIC ensuring end to end integration.
 
 Below are few examples given considering project is being developed in Node-JS.
