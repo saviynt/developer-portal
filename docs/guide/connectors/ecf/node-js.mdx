@@ -6,26 +6,27 @@ This tutorial guides you through creating a Node.js-based web server that adhere
 
 1. <b><u>Node.js:</u></b> Download and install Node.js from the official website: <b>[nodejs.org](https://nodejs.org/en/download)</b>
 2. <b><u>Open API Specification:</u></b> Download the ECF Open API specification file from GitHub: <b>[Open API Spec](https://github.com/saviynt/ExternalConnectorFramework-APISpec/blob/main/spec/OpenAPISpec.yaml)</b>.
-3. <b><u>IDE:</u></b> Choose your preferred IDE (Integrated Development Environment) for Node.js development, such as Visual Studio.
+3. <b><u>IDE:</u></b> Choose your preferred IDE (Integrated Development Environment) for Node.js development, such as <b>[Visual Studio](https://visualstudio.microsoft.com/downloads/)</b>.
 
 ## Steps to generate node-js server bundle.
 
-1. Open Swagger Editor in web broswer by navigating to <b>[swagger.io](https://editor.swagger.io/)</b>
-2. In the editor window, click on File --&gt; Import file and select the OpenAPISpec.yaml.
-3. You should be able to render the API specification on right panel.
-4. Now go to Generate Server -&gt; nodejs-server
-5. This will generate a zip file.
+1. <b><u>Open Swagger Editor:</u></b> Launch the Swagger Editor in your web browser by visiting: <b>[swagger.io](https://editor.swagger.io/)</b>
+2. <b><u>Import Open API Spec:</u></b> In the editor window, click File > Import File and select the downloaded OpenAPISpec.yaml file.
+3. <b><u>Render API Specification:</u></b> The API specification should be displayed on the right panel.
+4. <b><u>Generate Server Code:</u></b> Go to Generate Server > nodejs-server.
+5. <b><u>Download Server Bundle:</u></b> This action will generate a ZIP file containing the Node.js server code.
 
 ## Steps to start node-js server.
 
-1. Unzip the generated zip file. (This will be base location of your node js project)
-2. Go to base location and run ```npm start``` command.
-3. You should be able to see below message.
-
-Your server is listening on port 8080 <b>[localhost](http://localhost:8080)</b>
+1. <b><u>Unzip Server Bundle:</u></b> Extract the downloaded ZIP file to create your Node.js project directory.
+2. <b><u>Navigate to Project Directory:</u></b> Open your terminal or command prompt and navigate to the unzipped project directory.
+3. <b><u>Run Server:</u></b> Execute the command npm start to start the server.
+4. <b><u>Server Confirmation:</u></b> Upon successful execution, you should see a message similar to:
+```
+Your server is listening on port 8080 (http://localhost:8080)
 Swagger-ui is available on <b>[/docs](http://localhost:8080/docs)</b>
-
-This will mean you have successfully started the node-js server.
+```
+This indicates that your Node.js server is running and accessible.
 
 ## Steps to explore the API spec.
 
