@@ -4,7 +4,6 @@ hide_title: true
 sidebar_label: Job Extensions
 title: Job Extensions
 slug: /extensions/job
-draft: true
 tags:
   - documentation
   - extension
@@ -12,3 +11,81 @@ tags:
 ---
 
 # Job Extensions
+
+## **Introduction**
+
+Extension allow a customer to develop custom code which is invoked from the core EIC application allowing customer to include their specific logic as part of the core business flows.
+
+Currently custom extensions are supported at following flows:
+
+1. Job Control Panel - “Invoke Custom Extension Jar Job”
+
+Additional flows are being worked.
+
+ 
+
+## **Framework Overview**
+
+The objective of custom extension framework is to execute the customer written custom code extensions in an environment that is isolated from the EIC execution environment. Some key points to note for custom extensions:
+
+- the custom extensions do not have access any classes or third party jars that are part of the ECM application
+
+- the custom extensions do not have access to any environment variables that are available to ECM application
+
+- the custom extension will need to upload the jar file and any dependent jars using the new “Custom Extensions” menu available under “File Directory” menu. It provides the ability to perform following jar management actions upload, delete, revert to old version. Any changes made will only be effective on clicking of “Reload” button.
+
+- Once the jar(s) are loaded and “Reload” button is clicked, the classes available in the jar are ready to be invoked by configuring them.
+
+
+### Technical stack
+
+
+As seen in the above picture, the custom jars run as part of a springboot 3.2.2 application on java 17. So custom jars must ensure that any code written is compatible with that stack. For example, any custom jar compiled with a jdk version &gt; 17 will not run.
+
+## **Jar Packaging Considerations**
+
+Since the custom jars are deployed as part of a springboot 3.2.2 application, any jars that are available as part of that platform must not be uploaded as that can cause class loader conflicts and failure to run custom extensions.
+
+Special attention must be paid to any dependent jars, all uploaded custom extension jars become part of the same classpath, so multiple versions of the same 3rd party jar must not be uploaded. For example, CustomJob1 which is packaged as part of MyJob1.jar depends on version 9 of ojdbc14.jar, and CustomJob2 which is packages as part of MyJob2.jar depends on version 10 of ojdbc14.jar. Having both version 9 and 10 of ojdbc14.jar can cause classloading conflicts. So developers must be aware of all jars loaded into an environment and ensure that compatible versions are uploaded.
+
+Here are some packaging options:
+
+### Individual Jars
+
+The custom extension code can be included into one or many jars and any 3rd party classes referred from 3rd party jars are uploaded as individual jars. This option is more applicable to the cases where multiple development teams are building extension classes so each team is creating their own jars and is uploading them to EIC.
+
+### Uber Jar
+
+Include all extension classes and any 3rd party jars as part of a single jar. This option will be best suited if there is a single source code repository for all custom extensions, it automatically help address the issue of multiple version of a third party jars listed above. This will mean the size of the jar can become large and need to be aware that it does not exceed max allowed size for a custom jar.
+
+## **Setting Development Environment**
+
+It is highly recommended to create a source code repository where all custom extensions created for Saviynt are maintained.
+
+The attached zip file can be used to create a project.Sav-Custom-Extensions.zip
+
+It has an example of how to create a custom extension that can be invoked using job control panel.
+
+`package com.example.saviynt.jobs; import com.google.gson.Gson; import org.slf4j.Logger; import org.slf4j.LoggerFactory; import java.util.Map; public class MyJob1 { private final Logger logger = LoggerFactory.getLogger(this.getClass()); public String concatenate(Map<String, String> input) { if (input == null || input.isEmpty()) { logger.error("Invalid inputs, input can't be empty"); } StringBuilder concatenatedValue = new StringBuilder(); // Iterate through the map entries for (Map.Entry<String, String> entry : input.entrySet()) { String value = entry.getValue(); logger.trace("appending {} to {}", value, concatenatedValue); concatenatedValue.append(value); concatenatedValue.append(","); } Gson gson = new Gson(); return gson.toJson(concatenatedValue); } }`
+
+The pom.xml provided can be used to add dependencies as required by your project.
+
+When executing pom goal `package`, it will create a jar containing classes for your project.
+
+In the given example, `<your-project-root>/taget/SavCustomExtension-1.jar `and the dependent jars at `<your-project-root>/target/provided-libs/`.
+
+Only the mentioned jars will have to be uploaded so that extensions included in those classes can be invoked.
+
+## **Properties Needed by Custom Extensions**
+
+Custom extensions would need some configurable parameters to access an external URL or tuning of values as a custom job is executed. Such properties must be part of the one of jars uploaded so that custom extension class can read them.
+
+## **Troubleshooting**
+
+The logs generated by custom extension are viewable via “logViewer” by selecting the Custom Extension as service name.
+
+## **Logging**
+
+Custom extension developers can add `org.slf4j.Logger` to log any messages that would be helpful while troubleshooting.
+
+Any Custom extension invocations and failures are by default logged by the framework.
