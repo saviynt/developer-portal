@@ -68,9 +68,9 @@ In production environments, it's crucial to secure communication between your se
 	openssl req -nodes -new -x509 -keyout server.key -out server.cert
 	```
 	* Follow the prompts to provide information like your organization name and location. This information is embedded within the certificate.
-2. <b><u>Place the Certificate and Key Files:</b></u>
+2. <b><u>Place the Certificate and Key Files:</u></b>
 	* Move the generated ```server.key``` and ```server.cert``` files to your project's base directory.
-3. <b><u>Configure ```index.js``` for HTTPS:</b></u>
+3. <b><u>Configure ```index.js``` for HTTPS:</u></b>
 	* Locate the index.js file in your project.
 	* Update the code to use the generated certificate and key for HTTPS. Here's an example:
 
@@ -98,12 +98,12 @@ https.createServer(options, app).listen(serverPort, function () {
 </p>
 </details>
 
-4. <b><u>Start the Server:</b></u>
+4. <b><u>Start the Server:</u></b>
 	* Run npm start in your terminal to launch the server with HTTPS enabled.
-5. <b><u>Access the Server:</b></u>
+5. <b><u>Access the Server:</u></b>
 	* You can now access your server securely using HTTPS. Open https://localhost:<port number>/docs (replace <port number> with the port you specified) in your web browser. However, due to the self-signed certificate, your browser will likely display a warning message. This is expected for development purposes.
 
-<b><u>Remember:</b></u> This approach is for development and testing only. In production, you should obtain a valid certificate from a trusted CA to ensure secure communication and avoid browser warnings.
+<b><u>Remember:</u></b> This approach is for development and testing only. In production, you should obtain a valid certificate from a trusted CA to ensure secure communication and avoid browser warnings.
 
 ## Customize the connector
 Import the generated Node-JS project to Visual Studio/your preferred IDE. Once developer is done with project setup, project can be customized further as required. End goal here is to ensure this custom connector is able to connect with actual target application, fetch/provision data as per given ECF specification and expose rest endpoints, so same can be called from EIC ensuring end to end integration.
