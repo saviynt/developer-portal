@@ -1,4 +1,7 @@
 // src/components/ShowcaseItems.tsx
+import React, { useState, useEffect } from 'react';
+
+
 export interface ShowcaseItem {
     title: string;
     description: string;
@@ -9,6 +12,23 @@ export interface ShowcaseItem {
     githubLink: string;
     resourceLink: string;
   }
+  
+  // export const showcaseItems = (): ShowcaseItem[] => {
+  //   const [items, setItems] = useState<ShowcaseItem[]>([]);
+  
+  //   useEffect(() => {
+  //     fetch('/showcaseItems.json')
+  //       .then((response) => response.json())
+  //       .then((data: ShowcaseItem[]) => {
+  //         setItems(data);
+  //       })
+  //       .catch((error) => {
+  //         console.error('Error fetching showcase items:', error);
+  //       });
+  //   }, []);
+  
+  //   return items;
+  // };
   
   export const showcaseItems: ShowcaseItem[] = [
     {
