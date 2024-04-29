@@ -1,1 +1,45 @@
-# Authentication
+## Prerequisites
+
+Before generating OAuth tokens using the user interface or API, ensure you have the necessary permissions and understand the process for obtaining and refreshing tokens.
+
+## Permissions Required
+
+To generate tokens using the UI or API, specific permissions are required based on the roles assigned. Ensure the appropriate permissions are granted to access the token generation functionalities.
+
+#### Permissions Required for Generating WebService Token
+
+Your SAV roles must have specific permissions to access the **Webservice Token** page, as described in the following table.
+
+| Action                                                    | OOTB SAV Role                                                                                                                                                                 | Feature Access                                                                                                                                                                                                                                                                                                                           |
+| --------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Generate OAuth tokens from the **Webservice Token** page. | **ROLE_ADMIN**For more information, see [ROLE_ADMIN](https://docs.saviyntcloud.com/bundle/EIC-Admin-v24x/page/Content/Chapter09-SAV-Roles/Out-of-Box-SAV-Roles.htm#ROLE_ADM). | If you are using a custom SAV role, the role must have the **Admin: Webservice Authentation Setting** feature access assigned to it.For more information, see [Creating and Managing Custom SAV Roles](https://docs.saviyntcloud.com/bundle/EIC-Admin-v24x/page/Content/Chapter09-SAV-Roles/Creating-and-Managing-Custom-SAV-Roles.htm). |
+
+## Generating Token Using User Interface
+
+To generate OAuth tokens through the user interface, follow these steps:
+
+1. Log in to Saviynt Enterprise Identity Cloud (EIC).
+2. Navigate to **Admin &gt; Settings &gt; Webservice Auth Configuration** or search for **Webservice Auth Configuration** and select it.
+3. Click on **Generate Token** to create the access token.
+4. Record the access token by clicking on **Copy** for future authentication purposes.
+
+The access token remains valid for up to 3600 seconds (60 minutes) and can be used to make API requests within the designated environment.
+
+## Generating OAuth Access Token Using API
+
+To obtain an OAuth access token via the API, follow these steps:
+
+1. Make a `POST` request to [https://example.saviyntcloud.com/ECM/api/login](https://example.saviyntcloud.com/ECM/api/login).
+2. Include `username` and `password` as JSON data in the request body.
+3. Upon successful authentication, the response will contain a Token that should be used as a Bearer token in the Authorization header for subsequent API calls.
+
+## Refreshing an Authorization Token
+
+To refresh an authorization token, follow these steps:
+
+1. Make a `POST` request to [https://example.saviyntcloud.com/ECM/oauth/access_token](https://example.saviyntcloud.com/ECM/oauth/access_token).
+2. The refresh token expiration can be configured based on `grails.plugin.springsecurity.rest.refreshtoken.storage.jwt.expiration` in `Config.groovy`.
+3. Setting `grails.plugin.springsecurity.rest.refreshtoken.new` to true will generate a new refresh token for each request.
+4. If left blank or null, the `oauth/access_token` request will return the same refresh token provided.
+
+By following these steps, you can efficiently manage OAuth tokens for authentication and authorization purposes in Saviynt Enterprise Identity Cloud.
