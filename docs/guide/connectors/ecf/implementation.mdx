@@ -30,7 +30,7 @@ The above flow diagram lists out the various steps of the development lifecycle.
 
 1.	Unzip the downloaded server zip file.
 2.	Start the server, This step may vary depending on language which was selected to generate the server in earlier step. 
-3.	you should be able to get successful message around server is running and swagger-ui available with URL information.
+3.	You should be able to get successful message around server is running and swagger-ui available with URL information.
 
 Note: Default generated server uses http protocol and starts on 8080 port, in case there is already some other application running on this port, server startup may fail. You need to change server port to other than 8080 and then start same. Configuration file which contains port number should be available under unzipped folder.
 
@@ -41,7 +41,7 @@ Note: Default generated server uses http protocol and starts on 8080 port, in ca
 
 ## Customize the connector:
 
-1. Open the generated project in your preferred IDE.
+1. Import the generated project in your preferred IDE.
 2. Customize the connector as per your requirement, implement logic for authentication, for each API operation handle request body processing, response generation etc.
 3. Once complete customization is done.
 4. Start the server.
@@ -52,7 +52,7 @@ Recommendations:
 
 ## Unit Testing:
 
-1.Go to swagger UI URL. You should be able to access the API specification as per your custom connector.
+1. Go to swagger UI URL. You should be able to access the API specification as per your custom connector.
 2. You can use "Try it out" feature of Swagger UI to perform quick unit testing of each implemented endpoints. 
 3. Ensure the responses are in ECF specification format.
 
@@ -64,14 +64,14 @@ Once custom connector unit testing is successful, you should work with EIC admin
 
 ### Create connection:
 1. Login to EIC.
-2. Go to Admin -> Connections -> New Connection.
+2. Go to Admin -> Connections -> Actions -> Create Connection.
 3. Select connection type as ECF.
 4. Update connection details as per your server host URL and credentials.
 5. There is no need to update any other json on connections page, these are preconfigured as per ECF specification.
 6. Save connection.
 
 ### Create Security System and EndPoint:
-1. Create a security system and use connection create in previous step as external connection and provisioning connection.
+1. Create a security system and use connection created in previous step as connection and provisioning connection.
 2. Create an endpoint for security system created in step 1.
 3. Configure workflows as needed for provisioning operations.
 
@@ -85,8 +85,8 @@ As part of this step, you will perform integration testing to ensure that the EI
 
 ### Provisioning validation.
 1. Use ARS/Rules to request various operations on accounts. 
-2. Corresponding pening task should be created.
+2. Corresponding pending task should be created.
 3. Configure and execute WSRetry provisioning job and validate if operation is performed as expected to target application.
 4. Ensure EIC is correctly representing the state.
 
-As part of integration testing perform testing of all required operations which are supported by your custom connector through EIC. Successfuly completion of same will conclude that connector development is succesfully completed.
+As part of integration testing perform testing of all required operations which are supported by your custom connector through EIC. Successful completion of same will conclude that connector development is succesfully completed.
