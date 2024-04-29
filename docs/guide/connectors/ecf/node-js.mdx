@@ -64,9 +64,9 @@ In production environments, it's crucial to secure communication between your se
 1. <b><u>Generate a Self-Signed Certificate:</b></u>
 	* Install OpenSSL if it's not already available on your system. You can find installation instructions online for your specific operating system.
 	* Run the following command in your terminal to generate a self-signed certificate and key:
-```bash
-openssl req -nodes -new -x509 -keyout server.key -out server.cert
-```
+	```
+	openssl req -nodes -new -x509 -keyout server.key -out server.cert
+	```
 	* Follow the prompts to provide information like your organization name and location. This information is embedded within the certificate.
 2. <b><u>Place the Certificate and Key Files:</b></u>
 	* Move the generated ```server.key``` and ```server.cert``` files to your project's base directory.
