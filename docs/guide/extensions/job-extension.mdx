@@ -5,7 +5,6 @@ sidebar_label: Job Extensions
 title: Job Extensions
 slug: /extensions/job
 tags:
-  - documentation
   - extension
   - job
 ---
@@ -39,8 +38,8 @@ The objective of custom extension framework is to execute the customer written c
 
 ### Technical stack
 
-
-As seen in the above picture, the custom jars run as part of a springboot 3.2.2 application on java 17. So custom jars must ensure that any code written is compatible with that stack. For example, any custom jar compiled with a jdk version &gt; 17 will not run.
+As seen in the below picture, the custom jars run as part of a springboot 3.2.2 application on java 17. So custom jars must ensure that any code written is compatible with that stack. For example, any custom jar compiled with a jdk version &gt; 17 will not run.
+![](/img/guide/extensions/jobs-extension-framework.png)
 
 ## **Jar Packaging Considerations**
 
@@ -66,7 +65,38 @@ The attached zip file can be used to create a project.Sav-Custom-Extensions.zip
 
 It has an example of how to create a custom extension that can be invoked using job control panel.
 
-`package com.example.saviynt.jobs; import com.google.gson.Gson; import org.slf4j.Logger; import org.slf4j.LoggerFactory; import java.util.Map; public class MyJob1 { private final Logger logger = LoggerFactory.getLogger(this.getClass()); public String concatenate(Map<String, String> input) { if (input == null || input.isEmpty()) { logger.error("Invalid inputs, input can't be empty"); } StringBuilder concatenatedValue = new StringBuilder(); // Iterate through the map entries for (Map.Entry<String, String> entry : input.entrySet()) { String value = entry.getValue(); logger.trace("appending {} to {}", value, concatenatedValue); concatenatedValue.append(value); concatenatedValue.append(","); } Gson gson = new Gson(); return gson.toJson(concatenatedValue); } }`
+``` java
+package com.example.saviynt.jobs;
+
+import com.google.gson.Gson;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.Map;
+
+public class MyJob1 {
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
+    public String concatenate(Map<String, String> input) {
+
+        if (input == null || input.isEmpty()) {
+            logger.error("Invalid inputs, input can't be empty");
+        }
+        StringBuilder concatenatedValue = new StringBuilder();
+
+        // Iterate through the map entries
+        for (Map.Entry<String, String> entry : input.entrySet()) {
+            String value = entry.getValue();
+            logger.trace("appending {} to {}", value, concatenatedValue);
+            concatenatedValue.append(value);
+            concatenatedValue.append(",");
+        }
+        Gson gson = new Gson();
+        return gson.toJson(concatenatedValue);
+    }
+
+}
+```
 
 The pom.xml provided can be used to add dependencies as required by your project.
 
