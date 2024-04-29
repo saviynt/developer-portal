@@ -78,6 +78,9 @@ Default.apiV1AccountsPOST(body)
 
 Below is sample code for developer to use, in case developer wants to encode the token (this encoded token can be configured in EIC for authorization) and decode same for server side authorization validation.
 
+<details>
+<summary> Encoding/decoding bearer token </summary>
+<p>
 ```javascript
 const stringToEncode = 'Hello@12345$';
 // Encoding the string to Base64 using ASCII encoding
@@ -86,6 +89,8 @@ console.log('Base64 Encoded (UTF-8):', encodedString);
 const decodedString = Buffer.from(encodedString, 'base64').toString('utf-8');
 console.log('Base64 Decoded:', decodedString);
 ```
+</p>
+</details>
 
 ### Add logger:
 
@@ -93,6 +98,9 @@ Developer can refer below sample way of adding logger in custom connector.
 
 1. Create a logger.js file under utils folder. In this file developer can define log level, log file location etc.
 
+<details>
+<summary> Adding logger </summary>
+<p>
 ```javascript
 // logger.js
 const winston = require('winston');
@@ -107,9 +115,14 @@ const logger = winston.createLogger({
 });
 module.exports = logger;
 ```
+</p>
+</details>
 
 2. Logging in /controllers/AccountProvisioning.js file
 
+<details>
+<summary> Logging </summary>
+<p>
 ```javascript
 module.exports.apiV1CreateAccountPOST = function apiV1CreateAccountPOST (req, res, next, body) {
     //Sample logger statement
@@ -125,6 +138,8 @@ module.exports.apiV1CreateAccountPOST = function apiV1CreateAccountPOST (req, re
     });
 };
 ```  
+</p>
+</details>
 
 Note: When you start the server with this configuration, this will create a application.log file at base project folder.
 
@@ -134,6 +149,9 @@ As a developer you can add custom logic and validations as your requirement, bel
 
 Under Services/AccountProvisioningService.js → under Create Account API implementation, add below sample logic:
 
+<details>
+<summary> Implementing business logic </summary>
+<p>
 ```javascript
 exports.apiV1CreateAccountPOST = function(body) {
   return new Promise(function(resolve, reject) {
@@ -147,6 +165,8 @@ exports.apiV1CreateAccountPOST = function(body) {
     }
     ...// rest code continues here
 ```
+</p>
+</details>
 
 Note: Above is just an example of validation, developer has to ensure appropriate custom implementation logic is added in code. For e.g. if customer use case is to provision account to a target application, this custom connector code should be able to connect with target application, read the request body data, provision the account in actual target and return 200 status code.
 
@@ -185,6 +205,9 @@ In actual production environment you are recommended to run your server over htt
 
 Below is sample updated index.js file
 
+<details>
+<summary> Using SSL </summary>
+<p>
 ```javascript
 const fs = require("fs");
 var https = require('https');
@@ -203,6 +226,8 @@ https.createServer(options, app).listen(serverPort, function () {
     console.log('Swagger-ui is available on https://localhost:%d/docs', serverPort);
 });
 ```
+</p>
+</details>
 
 6. Run “npm start“ after enabling https as above, you should get below message:
 Your server is listening on port \<port\> (http://\<server\>:\<port\>)
@@ -221,6 +246,9 @@ Consider below is accounts data stored in sheet.
 
 Below is sample code to read and return this data in ECF response format.
 
+<details>
+<summary> Transforming Response </summary>
+<p>
 ```javascript
 const { google } = require('googleapis');
 const fs = require('fs');
@@ -293,6 +321,8 @@ if (rows.length) {
 // Call the function with offset and pageSize
 readData(0, 2);
 ```
+</p>
+</details>
 
 ### Role Entitlement Import:
 
