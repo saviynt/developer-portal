@@ -143,9 +143,9 @@ module.exports.apiV1CreateAccountPOST = function apiV1CreateAccountPOST (req, re
 
 Note: When you start the server with this configuration, this will create a application.log file at base project folder.
 
-### Sample custom logic:
+### Adding business logic:
 
-As a developer you can add custom logic and validations as your requirement, below is just a sample, for e.g. if a developer wants to throw an error if firstName parameter value is missing in request body during account provisioning request.
+As a developer you can add business logic and validations as per requirement, below is just a sample, for e.g. if a developer wants to throw an error if firstName parameter value is missing in request body during account provisioning request.
 
 Under Services/AccountProvisioningService.js → under Create Account API implementation, add below sample logic:
 
