@@ -96,7 +96,7 @@ const config: Config = {
           "aria-label": "GitHub repository",
         },
       ],
-  },
+    },
     footer: {
       links: [
         {
@@ -219,6 +219,7 @@ const config: Config = {
       id: "announcementBar_1",
       content: "Saviynt Developer Portal (Preview)",
     },
+    
   } satisfies Preset.ThemeConfig,
 
   plugins: [
@@ -257,7 +258,8 @@ const config: Config = {
           } satisfies OpenApiPlugin.Options,
         } satisfies Plugin.PluginOptions,
       },
-    ],[
+    ],
+    [
       "posthog-docusaurus",
       {
         apiKey: "phc_hY9SucCm9FBhUQfWiNEQPhW8lQH0tjog12DWUQm3EAu",
@@ -265,6 +267,15 @@ const config: Config = {
         enableInDevelopment: false, // optional
         // other options are passed to posthog-js init as is
         // NOTE: options are passed through JSON.stringify(), so functions (such as `sanitize_properties`) are not supported.
+      },
+    ],
+    [
+      'docusaurus-plugin-image-zoom',
+      {
+        // options like selector, background, zIndex, etc.
+        selector: '.markdown :not(a) > img',
+        background: 'rgba(0,0,0,0.8)',
+        zIndex: 9999,
       },
     ],
   ],
