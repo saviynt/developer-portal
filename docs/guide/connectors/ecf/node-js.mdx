@@ -2,13 +2,13 @@
 
 This tutorial guides you through creating a Node.js-based web server that adheres to the ECF specification. By following these steps, you'll establish a connection between EIC and your target application, enabling data exchange and task execution.
 
-## Pre-requisite:
+## Pre-requisite(s)
 
 1. <b><u>Node.js:</u></b> Download and install Node.js from the official website: <b>[nodejs.org](https://nodejs.org/en/download)</b>
 2. <b><u>Open API Specification:</u></b> Download the ECF Open API specification file from GitHub: <b>[Open API Spec](https://github.com/saviynt/ExternalConnectorFramework-APISpec/blob/main/spec/OpenAPISpec.yaml)</b>.
 3. <b><u>IDE:</u></b> Choose your preferred IDE (Integrated Development Environment) for Node.js development, such as <b>[Visual Studio](https://visualstudio.microsoft.com/downloads/)</b>.
 
-## Steps to generate node-js server bundle.
+## Steps to generate node-js server bundle
 
 1. <b><u>Open Swagger Editor:</u></b> Launch the Swagger Editor in your web browser by visiting: <b>[swagger.io](https://editor.swagger.io/)</b>
 2. <b><u>Import Open API Spec:</u></b> In the editor window, click File > Import File and select the downloaded OpenAPISpec.yaml file.
@@ -16,7 +16,7 @@ This tutorial guides you through creating a Node.js-based web server that adhere
 4. <b><u>Generate Server Code:</u></b> Go to Generate Server > nodejs-server.
 5. <b><u>Download Server Bundle:</u></b> This action will generate a ZIP file containing the Node.js server code.
 
-## Steps to start node-js server.
+## Steps to start node-js server
 
 1. <b><u>Unzip Server Bundle:</u></b> Extract the downloaded ZIP file to create your Node.js project directory.
 2. <b><u>Navigate to Project Directory:</u></b> Open your terminal or command prompt and navigate to the unzipped project directory.
@@ -34,7 +34,7 @@ This indicates that your Node.js server is running and accessible.
 2. <b><u>API Spec Listing:</u></b> This page will display a list of all API specifications supported by the ECF.
 3. <b><u>Explore Individual APIs:</u></b> Click on a specific API to explore its details, including request types, request parameters, body structure, and response formats. Utilize the "Try it out" option to test the API with sample data (note: you may need to provide a valid authorization token for some APIs).
 
-## Deploying the Server:
+## Deploying the Server
 
 1. In Visual studio. Go to view → terminal → go to project base folder and execute “npm start” command.
 2. You should be able to see a success message as below and web service up and running.
@@ -46,17 +46,17 @@ You can open http://\<server\>:\<port\>/docs in web browser and explore the Rest
 
 Above steps will start the server. However this uses http protocal and default starts over 8080 port. To customize these settings, follow below section.
 
-### Customize port number:
+### Customize port number
 
 1. Open index.js file available in project base folder.
 2. Search for line as var serverPort = 8080;
 3. Update above line with your preferred port number.
 
-### Use https instead of http:
+### Use https instead of http
 
 In actual production environment you are recommended to run your server over https. Below are high level steps to run server over https (below steps use a self signed certificate, however you may use a CA signed certificate as well). 
 
-#### Generate self signed certificate:
+#### Generate self signed certificate
 
 1. Install openssl.
 2. Run command ```openssl req -nodes -new -x509 -keyout server.key -out server.cert```
@@ -95,13 +95,13 @@ Your server is listening on port \<port\> (http://\<server\>:\<port\>)
 Swagger-ui is available on https://\<server\>:\<port\>/docs
 7. You can open https://\<server\>:\<port\>/docs in web browser and explore the Rest API exposed and validate is server is up and running over https.
 
-## Customize the connector:
+## Customize the connector
 
 Import the generated Node-JS project to Visual Studio/your preferred IDE. Once developer is done with project setup, project can be customized further as required. End goal here is to ensure this custom connector is able to connect with actual target application, fetch/provision data as per given ECF specification and expose rest endpoints, so same can be called from EIC ensuring end to end integration.
 
 Below are few examples given considering project is being developed in Node-JS.
 
-### Add static bearer token authentication:
+### Add static bearer token authentication
 
 The server utility by default has bearer token authentication enabled for all API calls. So any API call without passing authorization header will fail. However since it is sample specification, there is no token defined and using any random value will also work for authorization.
 
@@ -134,7 +134,7 @@ Default.apiV1AccountsPOST(body)
 </p>
 </details>
 
-### Decode and encode bearer token:  
+### Decode and encode bearer token 
 
 Below is sample code for developer to use, in case developer wants to encode the token (this encoded token can be configured in EIC for authorization) and decode same for server side authorization validation.
 
@@ -203,7 +203,7 @@ module.exports.apiV1CreateAccountPOST = function apiV1CreateAccountPOST (req, re
 
 Note: When you start the server with this configuration, this will create a application.log file at base project folder.
 
-### Adding business logic:
+### Adding business logic
 
 As a developer you can add business logic and validations as per requirement, below is just a sample, for e.g. if a developer wants to throw an error if firstName parameter value is missing in request body during account provisioning request.
 
@@ -233,11 +233,11 @@ Note: Above is just an example of validation, developer has to ensure appropriat
 Please refer appendix section, that contains few node-js based sample code which shows how custom implementation can be done to integrate Google Sheets (consider google sheet is a target application) and you need to write a ECF based custom connector which will act as intermediary for EIC and Google Sheets.
 Developer should also consider implementing pageSize and offSet while writing logic for import operations for better performance. Sample code in Appendix section has references around how to use offset and pagesize to support pagination as well. 
 
-## Sample code to integrate Google Sheets as target application:
+## Sample code to integrate Google Sheets as target application
 
 This section contains sample node-js code, which connects with Google Sheets, and performs import/provision operations. In this case it is considered that actual target application is google sheet, and developer wants to write a ECF based custom connector to integrate Google sheet with EIC.
 
-### Accounts Import:
+### Accounts Import
 
 Consider below is accounts data stored in sheet.
 
