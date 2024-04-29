@@ -47,6 +47,9 @@ The server utility by default has bearer token authentication enabled for all AP
 
 As part of connector development, developer should implement valid authorization logic. Below is example of how a developer can support authorization by updating controllers/AccountImport.js as below:
 
+<details>
+<summary> Setting up Authentication </summary>
+<p>
 ```javascript
 module.exports.apiV1AccountsPOST = function apiV1AccountsPOST (req, res, next, body, offSet, pageSize) {
 
@@ -68,6 +71,8 @@ Default.apiV1AccountsPOST(body)
     });
 };
 ```
+</p>
+</details>
 
 ### Decode and encode bearer token:  
 
