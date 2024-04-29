@@ -107,10 +107,22 @@ https.createServer(options, app).listen(serverPort, function () {
 
 	<b><u>Remember:</u></b> This approach is for development and testing only. In production, you should obtain a valid certificate from a trusted CA to ensure secure communication and avoid browser warnings.
 
-## Customize the connector
-Import the generated Node-JS project to Visual Studio/your preferred IDE. Once developer is done with project setup, project can be customized further as required. End goal here is to ensure this custom connector is able to connect with actual target application, fetch/provision data as per given ECF specification and expose rest endpoints, so same can be called from EIC ensuring end to end integration.
+## Customizing the Connector for Target Application Integration
+Once you've generated the Node.js server project and imported it into your preferred IDE (like Visual Studio), you can customize it to integrate with your specific target application. This customization process involves establishing a connection, data exchange, and endpoint exposure as outlined in the ECF specification.
 
-Below are few examples given considering project is being developed in Node-JS.
+<b><u>Key Objectives:</u></b>
+	* <b><u>Target Application Connection:</u></b> Develop logic to establish a secure connection with your target application using appropriate authentication methods and protocols.
+	* <b><u>Data Fetching and Provisioning:</u></b> Implement functionality to retrieve data from the target application based on ECF API requests. Conversely, you might need to implement functionalities to provision data to the target application as dictated by ECF API calls.
+	* <b><u>REST Endpoint update:</u></b> Update the REST endpoints that adhere to the ECF specification. These endpoints will be invoked by EIC to interact with your custom connector and facilitate data exchange.
+<b><u>Example Considerations for Node.js Development:</u></b>
+	* <b><u>Utilize Third-Party Libraries:</u></b> Depending on your target application's API and communication protocols, you might leverage Node.js libraries like axios for making HTTP requests or libraries like socket.io for real-time communication.
+	* <b><u>Data Transformation and Validation:</u></b> Implement logic to handle potential data format differences between your connector and the target application. You might need to transform or validate data before sending it to or receiving it from the target application.
+	* <b><u>Error Handling and Logging:</u></b> Design a robust error handling mechanism to capture and log any issues encountered during communication with the target application or data processing. This will aid in troubleshooting and debugging.
+<b><u>Additional Notes:</u></b>
+	* Refer to the ECF specification documentation for detailed information about supported API calls, request structures, response formats, and authentication mechanisms.
+Secure your connector implementation by following best practices for handling sensitive data and credentials.
+
+<b><u>Remember:</u></b> This section provides a high-level overview of the customization process. The specific implementation details will vary depending on your target application and the functionality required by the ECF integration.
 
 ### Add static bearer token authentication
 
