@@ -332,6 +332,9 @@ Consider below is role entitlement data stored in sheet.
 
 below is sample code to read and return this data in ECF format:
 
+<details>
+<summary> Entitlement import - Role data </summary>
+<p>
 ```javascript
 const { google } = require('googleapis');
 const fs = require('fs');
@@ -415,6 +418,8 @@ if (rows.length) {
 // Call the function with offset and pageSize
 readData(0, 2);
 ```
+</p>
+</details>
 
 ### Role-Accounts membership import:
 
@@ -424,6 +429,9 @@ Consider below is role-account membership data stored in sheet.
 
 below is sample code to read and return this data in ECF format:
 
+<details>
+<summary> Entitlement import - Role to Accounts </summary>
+<p>
 ```javascript
 const { google } = require('googleapis');
 const fs = require('fs');
@@ -484,11 +492,16 @@ if (rows.length) {
 // Call the function with offset and pageSize
 readData(0, 2);
 ```
+</p>
+</details>
 
 ### Account Provisioning:
 
 Below is sample code which can be used to provision an account. This uses sample hardcoded account data, ideally this will be received by your custom connector from EIC when create account task is provisioned, you should read this account data from request body and process it further.
 
+<details>
+<summary> Account provisioning </summary>
+<p>
 ```javascript
 const { google } = require('googleapis');
 const fs = require('fs');
@@ -535,11 +548,16 @@ const data = {
 // Call the function to write data to the Google Sheet
 writeDataToSheet(data);
 ```
+</p>
+</details>
 
 ### Provision Account-Role membership (Access provisioning):
 
 Below is sample code which can be used to provision a role access to an account. This uses sample hardcoded input data, ideally this will be received by your custom connector from EIC when add access task for role is provisioned, you should read this data from request body and process it further.
 
+<details>
+<summary> Access provisioning </summary>
+<p>
 ```javascript
 const { google } = require('googleapis');
 const fs = require('fs');
@@ -582,4 +600,6 @@ const data = {
 // Call the function to write data to the Google Sheet
 writeDataToSheet(data);
 ```
+</p>
+</details>
 
