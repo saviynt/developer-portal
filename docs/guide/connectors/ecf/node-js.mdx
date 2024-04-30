@@ -302,21 +302,39 @@ Your custom connector will likely require various business logic and data valida
 
 By incorporating business logic and validations, you ensure your custom connector operates reliably and handles data effectively within the ECF ecosystem.
 
-## Sample code to integrate Google Sheets as target application
+## Sample Code for Google Sheets Integration (Informational)
 
-This section contains sample node-js code, which connects with Google Sheets, and performs import/provision operations. In this case it is considered that actual target application is google sheet, and developer wants to write a ECF based custom connector to integrate Google sheet with EIC.
+This section provides a high-level overview and code samples demonstrating how a custom connector might interact with Google Sheets. It's important to note that this is for informational purposes only. You'll need to adapt and secure the code based on your specific use case and Google Sheets API authentication requirements.
+
+### Prerequisites
+
+1. A Google Cloud project with the Google Sheets API enabled.
+2. Service account credentials created for your project and downloaded as a JSON file.
+<b><u>Steps:</u></b>
+	<b><u>Set up Google Sheets API:</u></b>
+		1. Enable the Google Sheets API for your project in the Google Cloud Console.
+		2. Create service account credentials and download the JSON key file.
+		3. Install Required Packages:
+		```
+		npm install googleapis fs readline
+		```
+	<b><u>Implement Google Sheets Interaction:</u></b>
+	The provided code snippets demonstrate how to:
+		* Read data from specific ranges in a Google Sheet.
+		* Parse and format the data according to ECF response requirements (including offset and pagination for large datasets).
+	
+	<b><u>Important Security Note:</u></b>
+	* Do not store your service account credentials directly in your code. Consider environment variables or a secure credential store.
+	* Refer to Google's documentation for secure authentication practices with the Google Sheets API: [https://nishothan-17.medium.com/google-sheet-apis-using-google-cloud-platform-gcp-credentials-8bca55521af](https://nishothan-17.medium.com/google-sheet-apis-using-google-cloud-platform-gcp-credentials-8bca55521af)
 
 ### Accounts Import
 
-Consider below is accounts data stored in sheet.
+Refer to the figure below for a list of accounts present in your google sheet.
 
 ![](../../../../static/img/ECF_Account_Import.png)
 
-Below is sample code to read and return this data in ECF response format.
+The provided code for readData is a good starting point for fetching account data from Google Sheets and transforming it into an ECF response format. Here's an improved version with explanations and security considerations:
 
-<details>
-<summary> Transforming Response </summary>
-<p>
 ```javascript
 const { google } = require('googleapis');
 const fs = require('fs');
@@ -389,8 +407,24 @@ if (rows.length) {
 // Call the function with offset and pageSize
 readData(0, 2);
 ```
-</p>
-</details>
+
+<b><u>Explanation:</u></b>
+
+* The function now takes ```spreadsheetId``` as an argument, allowing for flexibility in reading data from different sheets.
+* Default values are provided for ```offset``` and ```pageSize``` for clarity and optional customization.
+* Error handling is included to catch potential issues during API calls and data retrieval.
+* The function returns an object containing ```offset```, ```totalCount```, and ```accounts``` in the ECF response format.
+
+<b><u>Security Considerations:</u></b>
+
+* Remember to implement the authenticate function securely, as mentioned in the previous section.
+* Consider validating the ```spreadsheetId``` to prevent unauthorized access to unintended sheets.
+* Sanitize or validate user-provided input (e.g., ```offset``` and ```pageSize```) to mitigate potential injection attacks.
+
+<b><u>Additional Considerations:</u></b>
+
+* You might want to add logic to handle scenarios where the number of rows returned exceeds the requested ```pageSize```. This could involve making additional API calls with adjusted offsets.
+* Explore advanced techniques like batching requests to improve performance when dealing with large datasets.
 
 ### Role Entitlement Import:
 
@@ -488,6 +522,8 @@ readData(0, 2);
 ```
 </p>
 </details>
+
+
 
 ### Role-Accounts membership import:
 
