@@ -162,7 +162,7 @@ Default.apiV1AccountsPOST(body)
 
 <b><u>Explanation:</u></b>
 	1. The code retrieves the Authorization header from the incoming request.
-	2. It checks if the header exists and is in lowercase format "bearer <token value>".
+	2. It checks if the header exists and is in lowercase format "bearer \<token value\>".
 	3. It compares the extracted token value with a pre-defined static value (your_actual_token_value).
 	4. If there's a mismatch, an error is thrown.
 	5. If the token matches (insecure in production), the code proceeds with default functionality.
