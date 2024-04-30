@@ -76,29 +76,24 @@ In production environments, it's crucial to secure communication between your se
 	* Locate the index.js file in your project.
 	* Update the code to use the generated certificate and key for HTTPS. Here's an example:
 
-<details>
-<summary> Using SSL </summary>
-<p>
-```javascript
-const fs = require("fs");
-var https = require('https');
-var serverPort = 443; // you can specify the port number
-// add certificate details in options:
-var options = {
-    routing: {
-        controllers: path.join(__dirname, './controllers')
-    },
-	key: fs.readFileSync("server.key"),
-        cert: fs.readFileSync("server.cert"),
-};
-// pass the options while creating server
-https.createServer(options, app).listen(serverPort, function () {
-    console.log('Your server is listening on port %d (https://localhost:%d)', serverPort, serverPort);
-    console.log('Swagger-ui is available on https://localhost:%d/docs', serverPort);
-});
-```
-</p>
-</details>
+	```javascript
+	const fs = require("fs");
+	var https = require('https');
+	var serverPort = 443; // you can specify the port number
+	// add certificate details in options:
+	var options = {
+	    routing: {
+	        controllers: path.join(__dirname, './controllers')
+	    },
+		key: fs.readFileSync("server.key"),
+	        cert: fs.readFileSync("server.cert"),
+	};
+	// pass the options while creating server
+	https.createServer(options, app).listen(serverPort, function () {
+	    console.log('Your server is listening on port %d (https://localhost:%d)', serverPort, serverPort);
+	    console.log('Swagger-ui is available on https://localhost:%d/docs', serverPort);
+	});
+	```
 
 4. <b><u>Start the Server:</u></b>
 	* Run npm start in your terminal to launch the server with HTTPS enabled.
@@ -133,9 +128,6 @@ The default server implementation includes bearer token authentication for all A
 
 This example demonstrates how a developer might implement a basic (and insecure) authentication check by modifying the controllers/AccountImport.js file:
 
-<details>
-<summary> Setting up Authentication </summary>
-<p>
 ``` javascript
 module.exports.apiV1AccountsPOST = function apiV1AccountsPOST (req, res, next, body, offSet, pageSize) {
 
@@ -157,8 +149,6 @@ Default.apiV1AccountsPOST(body)
     });
 };
 ```
-</p>
-</details>
 
 <b><u>Explanation:</u></b>
 	1. The code retrieves the Authorization header from the incoming request.
@@ -190,9 +180,6 @@ While the previous section discussed basic authentication using a static token v
 <b><u>Example: Base64 Encoding/Decoding (for illustration only):</u></b>
 This example demonstrates basic Base64 encoding and decoding, which can be a preliminary step for working with tokens. However, it's crucial to understand that this approach is not secure for production use.
 
-<details>
-<summary> Encoding/decoding bearer token </summary>
-<p>
 ```javascript
 const stringToEncode = 'Hello@12345$';
 // Encoding the string to Base64 using ASCII encoding
@@ -201,8 +188,6 @@ console.log('Base64 Encoded (UTF-8):', encodedString);
 const decodedString = Buffer.from(encodedString, 'base64').toString('utf-8');
 console.log('Base64 Decoded:', decodedString);
 ```
-</p>
-</details>
 
 <b><u>Remember:</u></b> This section provides a high-level overview. For secure token management, explore established libraries like jsonwebtoken and follow best practices for token generation, validation, and storage. Refer to the documentation of these libraries for detailed usage instructions.
 
