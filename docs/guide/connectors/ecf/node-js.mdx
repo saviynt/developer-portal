@@ -643,7 +643,7 @@ This code assumes all data in the sheet represents numeric IDs. You might need t
 
 ### Account Provisioning:
 
-Below is sample code which can be used to provision an account. This uses sample hardcoded account data, ideally this will be received by your custom connector from EIC when create account task is provisioned, you should read this account data from request body and process it further.
+This section provides an example of account provisioning. This uses sample hardcoded account data. Ideally this will be received by your custom connector from EIC when create account task is provisioned. You should read this account data from request body and use it for creating the account in the target application.
 
 ```javascript
 const { google } = require('googleapis');
@@ -691,6 +691,37 @@ const data = {
 // Call the function to write data to the Google Sheet
 writeDataToSheet(data);
 ```
+<b><u>Explanation</u></b>
+The code utilizes the Google Sheets API to write data to a specific spreadsheet. Here's a summary:
+
+1. Setup:
+
+	* Imports necessary libraries for Google Sheets API, file system access, and JSON parsing.
+	* Loads credentials for authentication from a JSON file (```external-connector-framework-09842e2d8788.json```).
+	* Creates a JWT client using the loaded credentials to authorize API calls.
+	* Initializes a Google Sheets API v4 client instance.
+
+2. Configuration:
+
+	* Defines the ID of the target Google Sheet (```spreadsheetId```).
+
+3. Data Writing Function (```writeDataToSheet```):
+
+	* Takes a data object as input.
+	* Converts the data object's values into a two-dimensional array (```values```).
+	* Uses the Google Sheets API (```sheets.spreadsheets.values.append```) to append the data to the specified spreadsheet:
+	* ```spreadsheetId```: ID of the target spreadsheet.
+	* ```range```: Target range for writing data (```Accounts!A:A``` in this case, assuming ```Sheet1``` and ```column A```).
+	* ```valueInputOption```: Sets the format of the provided data (RAW in this case).
+	* ```requestBody```: Contains the data to be written (values array).
+	* Logs the number of cells successfully updated in the console.
+	* Includes error handling to catch potential API errors and log them to the console.
+
+4. Example Usage:
+
+* Defines a sample data object with various account properties. This would be the task data that you receive from the API body.
+* Calls the ```writeDataToSheet``` function with the sample data object.
+* This code demonstrates how to connect to Google Sheets via the API, authenticate, and write data to a specific sheet in a specific format. You can modify the data object and target range (```Accounts!A:A```) to suit your needs.
 
 ### Provision Account-Role membership (Access provisioning):
 
