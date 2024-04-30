@@ -174,9 +174,21 @@ Default.apiV1AccountsPOST(body)
 
 	For production-grade security, explore established authentication frameworks and libraries for Node.js, such as Passport.js or JSON Web Tokens (JWT).
 
-### Decode and encode bearer token 
+### Bearer Token Encoding and Decoding (Optional)
+While the previous section discussed basic authentication using a static token value, real-world scenarios require more secure approaches. Bearer tokens are commonly used for authorization in REST APIs. These tokens are typically issued by an authorization server and contain encoded information about the user or application making the request.
 
-Below is sample code for developer to use, in case developer wants to encode the token (this encoded token can be configured in EIC for authorization) and decode same for server side authorization validation.
+<b><u>Understanding Bearer Tokens:</u></b>
+	* Bearer tokens are typically sent in the Authorization header of an HTTP request with the format Bearer ```<token value>```.
+	* The token value itself might be a Base64-encoded string containing user information, claims, and an expiration timestamp.
+	* The server receiving the request decodes the token and validates its claims against an authorization server or a local token store.
+
+<b><u>Important Note:</u></b> Base64 encoding does not provide encryption. It simply encodes binary data into a human-readable format. To ensure token security, you should:
+	* Use a library like jsonwebtoken (JWT) to create and validate tokens signed with a secret key. JWT tokens are self-contained and include expiration times, making them a secure choice for authorization.
+	* Store secret keys securely (e.g., environment variables) and never expose them in your code.
+	* Implement token refresh mechanisms to handle token expiration.
+
+<b><u>Example: Base64 Encoding/Decoding (for illustration only):</u></b>
+This example demonstrates basic Base64 encoding and decoding, which can be a preliminary step for working with tokens. However, it's crucial to understand that this approach is not secure for production use.
 
 <details>
 <summary> Encoding/decoding bearer token </summary>
@@ -191,6 +203,8 @@ console.log('Base64 Decoded:', decodedString);
 ```
 </p>
 </details>
+
+<b><u>Remember:</u></b> This section provides a high-level overview. For secure token management, explore established libraries like jsonwebtoken and follow best practices for token generation, validation, and storage. Refer to the documentation of these libraries for detailed usage instructions.
 
 ### Add logger:
 
