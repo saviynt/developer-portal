@@ -692,18 +692,18 @@ writeDataToSheet(data);
 <b><u>Explanation</u></b>
 The code utilizes the Google Sheets API to write data to a specific spreadsheet. Here's a summary:
 
-1. Setup:
+1. <b><u>Setup:</u></b>
 
 	* Imports necessary libraries for Google Sheets API, file system access, and JSON parsing.
 	* Loads credentials for authentication from a JSON file (```external-connector-framework-09842e2d8788.json```).
 	* Creates a JWT client using the loaded credentials to authorize API calls.
 	* Initializes a Google Sheets API v4 client instance.
 
-2. Configuration:
+2. <b><u>Configuration:</u></b>
 
 	* Defines the ID of the target Google Sheet (```spreadsheetId```).
 
-3. Data Writing Function (```writeDataToSheet```):
+3. <b><u>Data Writing Function (```writeDataToSheet```):</u></b>
 
 	* Takes a data object as input.
 	* Converts the data object's values into a two-dimensional array (```values```).
@@ -715,7 +715,7 @@ The code utilizes the Google Sheets API to write data to a specific spreadsheet.
 	* Logs the number of cells successfully updated in the console.
 	* Includes error handling to catch potential API errors and log them to the console.
 
-4. Example Usage:
+4. <b><u>Example Usage:</u></b>
 
 * Defines a sample data object with various account properties. This would be the task data that you receive from the API body.
 * Calls the ```writeDataToSheet``` function with the sample data object.
