@@ -551,15 +551,13 @@ Here's a breakdown of the steps:
 
 ### Role-Accounts membership import:
 
-Consider below is role-account membership data stored in sheet.
+The provided image shows a sample role to account membership data stored in Google sheet.
 
 ![](../../../../static/img/ECF_Acct_Ent_Import.png)
 
-below is sample code to read and return this data in ECF format:
+The code below reads the data in the sheet and transforms it into a response as per the API spec defined by ECF.
 
-<details>
-<summary> Entitlement import - Role to Accounts </summary>
-<p>
+
 ```javascript
 const { google } = require('googleapis');
 const fs = require('fs');
@@ -620,8 +618,28 @@ if (rows.length) {
 // Call the function with offset and pageSize
 readData(0, 2);
 ```
-</p>
-</details>
+
+<b><u>Explanation:</u></b>
+This code reads role-account membership data from a Google Sheet and converts it into a JSON format suitable for ECF (External Connector Framework).
+
+Here's a breakdown of the key steps:
+
+* <b><u>Authentication:</u></b> It authenticates with the Google Sheets API using a service account (credentials loaded from a JSON file).
+* <b><u>Data Retrieval:</u></b>
+	* It retrieves the header row to get column names.
+	* It defines the data range starting from the second row (after the header).
+	* It fetches the data from the specified range in the Google Sheet.
+* <b><u>Data Processing:</u></b>
+	* It checks if any data exists.
+	* If data exists, it iterates through each row and creates a membership object.
+	* It iterates through each header and assigns the corresponding cell value (converted to a number) as a property in the membership object.
+* <b><u>Output and Error Handling:</u></b>
+	* It converts the processed data (including total count and an array of membership objects) into JSON format and logs it to the console.
+	* It includes basic error handling to log any issues during the process.
+
+<b><u>Important Note:</u></b>
+
+This code assumes all data in the sheet represents numeric IDs. You might need to modify the conversion step ```(Number(row[index]))``` if your data has different types.
 
 ### Account Provisioning:
 
