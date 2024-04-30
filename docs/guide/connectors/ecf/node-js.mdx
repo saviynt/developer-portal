@@ -124,11 +124,14 @@ Secure your connector implementation by following best practices for handling se
 
 <b><u>Remember:</u></b> This section provides a high-level overview of the customization process. The specific implementation details will vary depending on your target application and the functionality required by the ECF integration.
 
-### Add static bearer token authentication
+### Implementing Bearer Token Authentication (Optional)
+The default server implementation includes bearer token authentication for all API calls. Any request without an authorization header will result in a failed request. However, since this is a sample specification, there's no defined token value. You can provide any random value for authorization during development.
 
-The server utility by default has bearer token authentication enabled for all API calls. So any API call without passing authorization header will fail. However since it is sample specification, there is no token defined and using any random value will also work for authorization.
+<b><u>Important Note:</u></b> In a real-world scenario, static token values pose a security risk. You should implement a proper authorization mechanism to secure your server.
 
-As part of connector development, developer should implement valid authorization logic. Below is example of how a developer can support authorization by updating controllers/AccountImport.js as below:
+<b><u>Example:</u></b> Modifying controllers/AccountImport.js
+
+This example demonstrates how a developer might implement a basic (and insecure) authentication check by modifying the controllers/AccountImport.js file:
 
 <details>
 <summary> Setting up Authentication </summary>
@@ -156,6 +159,20 @@ Default.apiV1AccountsPOST(body)
 ```
 </p>
 </details>
+
+<b><u>Explanation:</u></b>
+	1. The code retrieves the Authorization header from the incoming request.
+	2. It checks if the header exists and is in lowercase format "bearer <token value>".
+	3. It compares the extracted token value with a pre-defined static value (your_actual_token_value).
+	4. If there's a mismatch, an error is thrown.
+	5. If the token matches (insecure in production), the code proceeds with default functionality.
+
+<b><u>Remember:</u></b> This is a simplified example for demonstration purposes only. In a production environment, you should implement a robust authorization mechanism. This might involve:
+	* Issuing tokens to authorized users or applications.
+	* Validating tokens against a centralized authentication server.
+	* Implementing token expiration and refresh mechanisms.
+
+	For production-grade security, explore established authentication frameworks and libraries for Node.js, such as Passport.js or JSON Web Tokens (JWT).
 
 ### Decode and encode bearer token 
 
