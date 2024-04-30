@@ -645,9 +645,6 @@ This code assumes all data in the sheet represents numeric IDs. You might need t
 
 Below is sample code which can be used to provision an account. This uses sample hardcoded account data, ideally this will be received by your custom connector from EIC when create account task is provisioned, you should read this account data from request body and process it further.
 
-<details>
-<summary> Account provisioning </summary>
-<p>
 ```javascript
 const { google } = require('googleapis');
 const fs = require('fs');
@@ -694,16 +691,11 @@ const data = {
 // Call the function to write data to the Google Sheet
 writeDataToSheet(data);
 ```
-</p>
-</details>
 
 ### Provision Account-Role membership (Access provisioning):
 
 Below is sample code which can be used to provision a role access to an account. This uses sample hardcoded input data, ideally this will be received by your custom connector from EIC when add access task for role is provisioned, you should read this data from request body and process it further.
 
-<details>
-<summary> Access provisioning </summary>
-<p>
 ```javascript
 const { google } = require('googleapis');
 const fs = require('fs');
@@ -746,6 +738,4 @@ const data = {
 // Call the function to write data to the Google Sheet
 writeDataToSheet(data);
 ```
-</p>
-</details>
 
