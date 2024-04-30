@@ -206,56 +206,67 @@ console.log('Base64 Decoded:', decodedString);
 
 <b><u>Remember:</u></b> This section provides a high-level overview. For secure token management, explore established libraries like jsonwebtoken and follow best practices for token generation, validation, and storage. Refer to the documentation of these libraries for detailed usage instructions.
 
-### Add logger:
+### Implementing Logging for Debugging and Monitoring
 
-Developer can refer below sample way of adding logger in custom connector.
+Adding a logging mechanism to your custom connector is essential for debugging, troubleshooting, and monitoring its behavior. Logs provide valuable insights into request/response data, errors, and application events.
 
-1. Create a logger.js file under utils folder. In this file developer can define log level, log file location etc.
+<b><u>Choosing a Logging Library:</u></b>
 
-<details>
-<summary> Adding logger </summary>
-<p>
-```javascript
-// logger.js
-const winston = require('winston');
-// Configure Winston logger
-const logger = winston.createLogger({
-  level: 'info', // Set the minimum log level (e.g., 'info', 'warn', 'error')
-  format: winston.format.simple(), // Use a simple log format
-  transports: [
-    new winston.transports.Console(), // Log to console
-    new winston.transports.File({ filename: 'application.log' }) // Log to file
-  ]
-});
-module.exports = logger;
-```
-</p>
-</details>
+Node.js offers a variety of logging libraries. This example utilizes the popular winston library due to its flexibility and ease of use.
 
-2. Logging in /controllers/AccountProvisioning.js file
+	<b><u>Steps to Add Logging:</u></b>
 
-<details>
-<summary> Logging </summary>
-<p>
-```javascript
-module.exports.apiV1CreateAccountPOST = function apiV1CreateAccountPOST (req, res, next, body) {
-    //Sample logger statement
-    const logger = require('../utils/logger');
-    logger.info("This is info message, calling create accounts API");
-    //sample code complete
-    Default.apiV1CreateAccountPOST(body)
-      .then(function (response) {
-        utils.writeJson(res, response);
-      })
-      .catch(function (response) {
-        utils.writeJson(res, response);
-    });
-};
-```  
-</p>
-</details>
+		1. <b><u>Install</u></b> ```winston```:
 
-Note: When you start the server with this configuration, this will create a application.log file at base project folder.
+		```Bash
+		npm install winston
+		```
+
+		2. <b><u>Create a logger.js File:</u></b>
+
+			* Create a new file named logger.js within your project's utils folder (or a similar location for utility functions).
+			* Add the following code to configure a basic Winston logger:
+		
+			```JavaScript
+			const winston = require('winston');
+			
+			const logger = winston.createLogger({
+			  level: 'info', // Set the minimum log level (e.g., 'info', 'warn', 'error')
+			  format: winston.format.combine(
+			    winston.format.timestamp(),
+			    winston.format.printf(log => {
+			      return `<span class="math-inline">\{log\.timestamp\} \[</span>{log.level}] - ${log.message}`;
+			    })
+			  ),
+			  transports: [
+			    new winston.transports.Console(), // Log to console
+			    new winston.transports.File({ filename: 'application.log' }) // Log to file
+			  ]
+			});
+
+			module.exports = logger;
+			```
+			* This code defines a logger that outputs messages to the console and a file named application.log in the project's base directory. You can customize the log level (e.g., debug, info, warn, error) to control the detail of logged messages.
+		
+		3. <b><u>Utilize the Logger in Your Controllers:</u></b>
+
+			* Import the logger instance into your controller files (e.g., controllers/AccountProvisioning.js).
+			* Use the logger to record messages at appropriate points in your code:
+			```JavaScript
+			const logger = require('../utils/logger');
+			
+			module.exports.apiV1CreateAccountPOST = function apiV1CreateAccountPOST (req, res, next, body) {
+			  logger.info("Calling create accounts API with request body:", body);
+			  // ... your existing code here ...
+			};
+			```
+			* In this example, the code logs an informational message before processing the apiV1CreateAccountPOST request. You can add additional log statements throughout your code to track data flow, errors, and other events.
+<b><u>Benefits of Logging:</u></b>
+	<b><u>Debugging:</u></b> Logs help identify issues during development and troubleshooting.
+	<b><u>Monitoring:</u></b> Analyzing log files provides insights into application behavior and potential problems.
+	<b><u>Auditing:</u></b> Logs can be used to track user activity and API usage.
+
+<b><u>Remember:</u></b> This is a basic example. You can explore advanced Winston features like custom log levels, transport options, and formatting to tailor your logging needs.
 
 ### Adding business logic
 
