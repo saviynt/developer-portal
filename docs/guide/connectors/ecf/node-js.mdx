@@ -1,5 +1,13 @@
 # Tutorial - Custom connector development in Node-JS 
 
+<Alert variant="information">
+
+<b><u>Target Audience:</u></b>
+
+This tutorial is intended for developers familiar with JavaScript and the basics of working with APIs.  We'll assume you have a Google Cloud project set up and a Google Sheet containing role entitlement data.
+
+</Alert>
+
 This tutorial guides you through creating a Node.js-based web server that adheres to the ECF specification. By following these steps, you'll establish a connection between EIC and your target application, enabling data exchange and task execution.
 
 ## Pre-requisite(s)
@@ -436,15 +444,13 @@ readData(0, 2);
 
 ### Role Entitlement Import:
 
+The provided image shows a sample role entitlement table in a Google Sheet. Each row represents a role, and columns contain details like role name, description, child entitlements (which are other roles), and owners (users or groups with access).
 Consider below is role entitlement data stored in sheet.
 
 ![](../../../../static/img/ECF_Role_Ent_Import.png)
 
-below is sample code to read and return this data in ECF format:
+The code below reads the data in the sheet and transforms it into a response as per the API spec defined by ECF.
 
-<details>
-<summary> Entitlement import - Role data </summary>
-<p>
 ```javascript
 const { google } = require('googleapis');
 const fs = require('fs');
@@ -528,9 +534,19 @@ if (rows.length) {
 // Call the function with offset and pageSize
 readData(0, 2);
 ```
-</p>
-</details>
+<b><u>Explanation:</u></b>
 
+This code reads role entitlement data from a Google Sheet and converts it into a JSON format suitable for ECF (External Connector Framework).
+
+Here's a breakdown of the steps:
+
+	* <b><u>Authentication:</u></b> It authenticates with the Google Sheets API using a service account.
+	* <b><u>Data Retrieval:</u></b> It retrieves data from a specified Google Sheet and defines the starting row and number of rows to read.
+	* <b><u>Header Processing:</u></b> It extracts the header row names from the sheet.
+	* <b><u>Data Processing:</u></b> It iterates through each data row and creates a role object.
+	* <b><u>Multi-valued Data Handling:</u></b> It handles comma-separated values in specific columns (child entitlements and owners) by converting them into arrays.
+	* <b><u>Output:</u></b> It converts the processed data (including offset, total count, and roles) into JSON format and logs it to the console.
+	* <b><u>Error Handling:</u></b> It includes basic error handling to log any issues during the process.
 
 
 ### Role-Accounts membership import:
