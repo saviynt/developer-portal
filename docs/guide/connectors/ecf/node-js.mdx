@@ -177,7 +177,8 @@ While the previous section discussed basic authentication using a static token v
 	* Store secret keys securely (e.g., environment variables) and never expose them in your code.
 	* Implement token refresh mechanisms to handle token expiration.
 
-<b><u>Example: Base64 Encoding/Decoding (for illustration only):</u></b>
+<b><u>Example:</u></b> Base64 Encoding/Decoding (for illustration only)
+
 This example demonstrates basic Base64 encoding and decoding, which can be a preliminary step for working with tokens. However, it's crucial to understand that this approach is not secure for production use.
 
 ```javascript
@@ -253,35 +254,53 @@ Node.js offers a variety of logging libraries. This example utilizes the popular
 
 <b><u>Remember:</u></b> This is a basic example. You can explore advanced Winston features like custom log levels, transport options, and formatting to tailor your logging needs.
 
-### Adding business logic
+### Implementing Business Logic and Validations
 
-As a developer you can add business logic and validations as per requirement, below is just a sample, for e.g. if a developer wants to throw an error if firstName parameter value is missing in request body during account provisioning request.
+Your custom connector will likely require various business logic and data validations to ensure data integrity and handle edge cases. This section provides a general overview and an example.
 
-Under Services/AccountProvisioningService.js → under Create Account API implementation, add below sample logic:
+<b><u>Understanding Business Logic:</u></b>
 
-<details>
-<summary> Implementing business logic </summary>
-<p>
-```javascript
-exports.apiV1CreateAccountPOST = function(body) {
-  return new Promise(function(resolve, reject) {
-	  //sample code
-   if (!body.hasOwnProperty('firstname')) {
-      const errorResponse = {
-        errorCode: "400",
-        message: "Bad Request: Missing 'firstname' parameter in request body"
-      };
-      reject(errorResponse);
-    }
-    ...// rest code continues here
-```
-</p>
-</details>
+	1. Business logic refers to the application-specific rules that govern how your connector processes and manipulates data.
+	2. It might involve data transformations, validations, error handling, and interaction with external systems.
 
-Note: Above is just an example of validation, developer has to ensure appropriate custom implementation logic is added in code. For e.g. if customer use case is to provision account to a target application, this custom connector code should be able to connect with target application, read the request body data, provision the account in actual target and return 200 status code.
+<b><u>Adding Validations:</u></b>
 
-Please refer appendix section, that contains few node-js based sample code which shows how custom implementation can be done to integrate Google Sheets (consider google sheet is a target application) and you need to write a ECF based custom connector which will act as intermediary for EIC and Google Sheets.
-Developer should also consider implementing pageSize and offSet while writing logic for import operations for better performance. Sample code in Appendix section has references around how to use offset and pagesize to support pagination as well. 
+	1. Validations ensure that incoming data adheres to expected formats and constraints.
+	2. This helps prevent errors during data processing and integration with target applications.
+		
+	<b><u>Example:</u></b> Validating ```firstName``` in Account Provisioning:
+
+	This example demonstrates how to validate the presence of a firstName parameter in the request body during account provisioning:
+
+	```JavaScript
+	const { ApiError } = require('./errors'); // Assuming an error class is defined
+	
+	exports.apiV1CreateAccountPOST = function(body) {
+	  return new Promise(function(resolve, reject) {
+	    if (!body.hasOwnProperty('firstName')) {
+	      const errorResponse = new ApiError(400, "Missing 'firstname' parameter in request body");
+	      reject(errorResponse);
+	    }
+	
+	    // Rest of your code continues here...
+	  });
+	};
+	```
+<b><u>Explanation:</u></b>
+
+	* The code checks if the request body object has a property named firstName.
+	* If firstName is missing, an ApiError object is created with appropriate error code and message.
+	* The promise is rejected with the error object, signaling invalid data.
+
+<b><u>Remember:</u></b> This is a basic example. You'll need to implement additional validations and business logic specific to your target application and ECF requirements.
+
+<b><u>Additional Considerations:</u></b>
+
+	* Error Handling: Develop a robust error handling mechanism to capture and handle errors gracefully. Define custom error classes or utilize existing libraries for error handling.
+	* Data Transformation: Your connector might need to transform data between the ECF format and the format expected by your target application.
+	* Pagination: Consider implementing support for pagination (using pageSize and offset parameters) for large datasets in import operations. Refer to the provided code samples in the appendix for guidance.
+
+By incorporating business logic and validations, you ensure your custom connector operates reliably and handles data effectively within the ECF ecosystem.
 
 ## Sample code to integrate Google Sheets as target application
 
