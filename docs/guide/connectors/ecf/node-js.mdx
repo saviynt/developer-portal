@@ -51,10 +51,10 @@ This indicates that your Node.js server is running locally on port 8080 and acce
 
 ### Customizing Server Configuration (Optional):
 By default, the server runs on port 8080 using the HTTP protocol. Here's how to modify these settings:
-1. <b><u>Locate package.json:</u></b> Open the package.json file within your project directory using a text editor.
-2. <b><u>Edit Configuration:</u></b> Search for the scripts section within the file. You'll find properties like "start" that define commands used to start the server. Look for properties controlling port and protocol configurations (these might vary depending on the generated server code).
+1. <b><u>Locate ```package.json```:</u></b> Open the ```package.json``` file within your project directory using a text editor.
+2. <b><u>Edit Configuration:</u></b> Search for the scripts section within the file. You'll find properties like ```start``` that define commands used to start the server. Look for properties controlling port and protocol configurations (these might vary depending on the generated server code).
 3. <b><u>Update Values:</u></b> Modify the values for port and protocol as needed. Common properties might include ```"start": "node index.js -p <port number>"```, where ```<port number>``` is the desired port. Refer to the specific documentation for your generated code if the properties have different names.
-4. <b><u>Save Changes:</u></b> Save your modifications to the package.json file.
+4. <b><u>Save Changes:</u></b> Save your modifications to the ```package.json``` file.
 5. <b><u>Restart Server:</u></b> After making changes, stop the server using Ctrl+C in your terminal and then restart it using npm start again. The server will now run with your updated configuration.
 
 ### Using HTTPS (Optional)
@@ -73,7 +73,7 @@ In production environments, it's crucial to secure communication between your se
 2. <b><u>Place the Certificate and Key Files:</u></b>
 	* Move the generated ```server.key``` and ```server.cert``` files to your project's base directory.
 3. <b><u>Configure ```index.js``` for HTTPS:</u></b>
-	* Locate the index.js file in your project.
+	* Locate the ```index.js``` file in your project.
 	* Update the code to use the generated certificate and key for HTTPS. Here's an example:
 
 	```javascript
@@ -124,9 +124,9 @@ The default server implementation includes bearer token authentication for all A
 
 <b><u>Important Note:</u></b> In a real-world scenario, static token values pose a security risk. You should implement a proper authorization mechanism to secure your server.
 
-<b><u>Example:</u></b> Modifying controllers/AccountImport.js
+<b><u>Example:</u></b> Modifying ```controllers/AccountImport.js```
 
-This example demonstrates how a developer might implement a basic (and insecure) authentication check by modifying the controllers/AccountImport.js file:
+This example demonstrates how a developer might implement a basic (and insecure) authentication check by modifying the ```controllers/AccountImport.js``` file:
 
 ``` javascript
 module.exports.apiV1AccountsPOST = function apiV1AccountsPOST (req, res, next, body, offSet, pageSize) {
@@ -207,7 +207,7 @@ Node.js offers a variety of logging libraries. This example utilizes the popular
 		npm install winston
 		```
 
-		2. <b><u>Create a logger.js File:</u></b>
+		2. <b><u>Create a ```logger.js``` file:</u></b>
 
 			* Create a new file named logger.js within your project's utils folder (or a similar location for utility functions).
 			* Add the following code to configure a basic Winston logger:
@@ -235,7 +235,7 @@ Node.js offers a variety of logging libraries. This example utilizes the popular
 		
 		3. <b><u>Utilize the Logger in Your Controllers:</u></b>
 
-			* Import the logger instance into your controller files (e.g., controllers/AccountProvisioning.js).
+			* Import the logger instance into your controller files (e.g., ```controllers/AccountProvisioning.js```).
 			* Use the logger to record messages at appropriate points in your code:
 			```JavaScript
 			const logger = require('../utils/logger');
