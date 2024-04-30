@@ -2,3 +2,7 @@
 title: Community
 description: Highlighting some of the best projects built with our platform.
 ---
+import DocCardList from '@theme/DocCardList';
+import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
+
+<DocCardList items={useCurrentSidebarCategory().items}/>
