@@ -1,10 +1,20 @@
 // ShowcaseCard.tsx
 
 import React from 'react';
-import { ShowcaseItem } from './ShowcaseItems';
 
 interface ShowcaseCardProps {
   item: ShowcaseItem;
+}
+
+export interface ShowcaseItem {
+  title: string;
+  description: string;
+  imageUrl: string;
+  link: string;
+  tags: string[];
+  readmeLink: string;
+  githubLink: string;
+  resourceLink: string;
 }
 
 const ShowcaseCard: React.FC<ShowcaseCardProps> = ({ item }) => {
