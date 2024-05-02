@@ -4,7 +4,7 @@ import styles from "./styles.module.css";
 
 const FeatureList = [
   {
-    title: "Guide",
+    title: "APIs",
     // Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
     iconName: "auto_stories", // This is an example icon name
     description: (
@@ -15,7 +15,7 @@ const FeatureList = [
     ),
   },
   {
-    title: "Tools and Extensions",
+    title: "Extensions",
     //Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
     iconName: "api", // This is an example icon name
     description: (
@@ -25,7 +25,7 @@ const FeatureList = [
     ),
   },
   {
-    title: "Connectors and Integrations",
+    title: "Connectors",
     //Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
     iconName: "webhook", // This is an example icon name
     description: (
