@@ -122,9 +122,9 @@ const config: Config = {
       },
     ],
     algolia: {
-      apiKey: "6591669591a0940e49253bf77dbc76c4",
-      appId: "FNGBPDRR4F",
-      indexName: "saviynt_dev",
+      apiKey: "5e8ea811a09238e62f7676f12b71ef11",
+      appId: "DAQRKAMANH",
+      indexName: "developers-saviynt",
     },
     announcementBar,
     zoom: {
