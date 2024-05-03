@@ -150,7 +150,7 @@ const config: Config = {
           saviynt:{
             specPath: "static/api-specs/saviynt-rest-api-5.0-bundle.yaml",
             proxy: "https://cors-api-18af4d883f64.herokuapp.com",
-            outputDir: "docs/apis/rest/5.0/reference", // No trailing slash
+            outputDir: "docs/reference/rest/5.0", // No trailing slash
             sidebarOptions: {
               groupPathsBy: "tag",
               categoryLinkSource: "tag",
@@ -159,12 +159,12 @@ const config: Config = {
             showSchemas: true,
             downloadUrl:
               "https://github.com/saviynt/developer-portal/blob/main/static/api-specs/saviynt-rest-api-5.0-bundle.yaml",
-            baseUrl: "/apis/rest/5.0/reference", // Leading slash is important
+            baseUrl: "/reference/rest/5.0", // Leading slash is important
           } satisfies OpenApiPlugin.Options,
           ecf:{
             specPath: "static/api-specs/saviynt-ecf-api-bundle.yaml",
             // proxy: "https://cors-anywhere.herokuapp.com",
-            outputDir: "docs/connectors/ecf/1.0/reference", // No trailing slash
+            outputDir: "docs/reference/ecf", // No trailing slash
             sidebarOptions: {
               groupPathsBy: "tag",
               categoryLinkSource: "tag",
@@ -172,7 +172,7 @@ const config: Config = {
             hideSendButton: false,
             showSchemas: true,
             // downloadUrl:"https://github.com/saviynt/developer-portal/blob/main/static/api-specs/saviynt-rest-api-5.0-bundle.yaml",
-            baseUrl: "/connectors/ecf/1.0/reference", // Leading slash is important
+            baseUrl: "/reference/ecf", // Leading slash is important
           } satisfies OpenApiPlugin.Options,
         } satisfies Plugin.PluginOptions,
       },

@@ -1,0 +1,637 @@
+---
+id: get-savroles
+title: "Get SavRoles"
+description: "StartFragment"
+sidebar_label: "Get SavRoles"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "get api-method"
+info_path: apis/rest/5.0/reference/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+proxy: https://cors-api-18af4d883f64.herokuapp.com
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get SavRoles"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/getSavRoles"}
+>
+  
+</MethodEndpoint>
+
+
+
+StartFragment
+
+This API returns the SavRoles of an user in SSM.
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+Optional params:
+
+`max`,`offset`,`username`
+
+EndFragment
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"text/plain"}
+    value={"text/plain-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        any
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Get SavRoles
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Cache-Control
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Expires
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Referrer-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Vary
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-XSS-Protection
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                savroles
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object[]
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                              >
+                                Array [
+                              </div>
+                            </li><SchemaItem
+                              collapsible={false}
+                              name={"CUSTOMPROPERTY1"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"null"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"CUSTOMPROPERTY10"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"null"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"CUSTOMPROPERTY11"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"null"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"CUSTOMPROPERTY12"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"null"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"CUSTOMPROPERTY13"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"null"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"CUSTOMPROPERTY14"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"null"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"CUSTOMPROPERTY15"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"null"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"CUSTOMPROPERTY16"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"null"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"CUSTOMPROPERTY17"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"null"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"CUSTOMPROPERTY18"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"null"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"CUSTOMPROPERTY19"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"null"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"CUSTOMPROPERTY2"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"null"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"CUSTOMPROPERTY20"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"null"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"CUSTOMPROPERTY3"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"null"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"CUSTOMPROPERTY4"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"null"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"CUSTOMPROPERTY5"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"null"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"CUSTOMPROPERTY6"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"null"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"CUSTOMPROPERTY7"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"null"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"CUSTOMPROPERTY8"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"null"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"CUSTOMPROPERTY9"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"null"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"HOMEPAGE"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"null"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"ISOOTB"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"true"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"READONLY"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"false"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"ROLEDESCRIPTION"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"ADMIN USER"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"ROLENAME"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"ROLE_ADMIN"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"STATUSKEY"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Active"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"UPDATEDATE"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"2021-06-01 06:47:27.0"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"UPDATEUSER"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"admin"}}
+                            >
+                              
+                            </SchemaItem><li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                              >
+                                ]
+                              </div>
+                            </li>
+                          </div>
+                        </details>
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"savroles\": [\n    {\n      \"CUSTOMPROPERTY1\": \"null\",\n      \"CUSTOMPROPERTY10\": \"null\",\n      \"CUSTOMPROPERTY11\": \"null\",\n      \"CUSTOMPROPERTY12\": \"null\",\n      \"CUSTOMPROPERTY13\": \"null\",\n      \"CUSTOMPROPERTY14\": \"null\",\n      \"CUSTOMPROPERTY15\": \"null\",\n      \"CUSTOMPROPERTY16\": \"null\",\n      \"CUSTOMPROPERTY17\": \"null\",\n      \"CUSTOMPROPERTY18\": \"null\",\n      \"CUSTOMPROPERTY19\": \"null\",\n      \"CUSTOMPROPERTY2\": \"null\",\n      \"CUSTOMPROPERTY20\": \"null\",\n      \"CUSTOMPROPERTY3\": \"null\",\n      \"CUSTOMPROPERTY4\": \"null\",\n      \"CUSTOMPROPERTY5\": \"null\",\n      \"CUSTOMPROPERTY6\": \"null\",\n      \"CUSTOMPROPERTY7\": \"null\",\n      \"CUSTOMPROPERTY8\": \"null\",\n      \"CUSTOMPROPERTY9\": \"null\",\n      \"HOMEPAGE\": \"null\",\n      \"ISOOTB\": \"true\",\n      \"READONLY\": \"false\",\n      \"ROLEDESCRIPTION\": \"ADMIN USER\",\n      \"ROLENAME\": \"ROLE_ADMIN\",\n      \"STATUSKEY\": \"Active\",\n      \"UPDATEDATE\": \"2021-06-01 06:47:27.0\",\n      \"UPDATEUSER\": \"admin\"\n    },\n    {\n      \"CUSTOMPROPERTY1\": \"null\",\n      \"CUSTOMPROPERTY10\": \"null\",\n      \"CUSTOMPROPERTY11\": \"null\",\n      \"CUSTOMPROPERTY12\": \"null\",\n      \"CUSTOMPROPERTY13\": \"null\",\n      \"CUSTOMPROPERTY14\": \"null\",\n      \"CUSTOMPROPERTY15\": \"null\",\n      \"CUSTOMPROPERTY16\": \"null\",\n      \"CUSTOMPROPERTY17\": \"null\",\n      \"CUSTOMPROPERTY18\": \"null\",\n      \"CUSTOMPROPERTY19\": \"null\",\n      \"CUSTOMPROPERTY2\": \"null\",\n      \"CUSTOMPROPERTY20\": \"null\",\n      \"CUSTOMPROPERTY3\": \"null\",\n      \"CUSTOMPROPERTY4\": \"null\",\n      \"CUSTOMPROPERTY5\": \"null\",\n      \"CUSTOMPROPERTY6\": \"null\",\n      \"CUSTOMPROPERTY7\": \"null\",\n      \"CUSTOMPROPERTY8\": \"null\",\n      \"CUSTOMPROPERTY9\": \"null\",\n      \"HOMEPAGE\": \"null\",\n      \"ISOOTB\": \"true\",\n      \"READONLY\": \"false\",\n      \"ROLEDESCRIPTION\": \"ROLE_ADMIN_SAVIYNTSUPPORT USER\",\n      \"ROLENAME\": \"ROLE_ADMIN_SAVIYNTSUPPORT\",\n      \"STATUSKEY\": \"Active\",\n      \"UPDATEDATE\": \"2021-06-01 06:58:24.0\",\n      \"UPDATEUSER\": \"admin\"\n    },\n    {\n      \"CUSTOMPROPERTY1\": \"\",\n      \"CUSTOMPROPERTY10\": \"\",\n      \"CUSTOMPROPERTY11\": \"\",\n      \"CUSTOMPROPERTY12\": \"\",\n      \"CUSTOMPROPERTY13\": \"\",\n      \"CUSTOMPROPERTY14\": \"\",\n      \"CUSTOMPROPERTY15\": \"\",\n      \"CUSTOMPROPERTY16\": \"\",\n      \"CUSTOMPROPERTY17\": \"\",\n      \"CUSTOMPROPERTY18\": \"\",\n      \"CUSTOMPROPERTY19\": \"\",\n      \"CUSTOMPROPERTY2\": \"\",\n      \"CUSTOMPROPERTY20\": \"\",\n      \"CUSTOMPROPERTY3\": \"\",\n      \"CUSTOMPROPERTY4\": \"\",\n      \"CUSTOMPROPERTY5\": \"\",\n      \"CUSTOMPROPERTY6\": \"\",\n      \"CUSTOMPROPERTY7\": \"\",\n      \"CUSTOMPROPERTY8\": \"\",\n      \"CUSTOMPROPERTY9\": \"\",\n      \"HOMEPAGE\": \"null\",\n      \"ISOOTB\": \"true\",\n      \"READONLY\": \"false\",\n      \"ROLEDESCRIPTION\": \"PAM END USER ROLE\",\n      \"ROLENAME\": \"ROLE_SAV_PAMENDUSER\",\n      \"STATUSKEY\": \"Active\",\n      \"UPDATEDATE\": \"2022-11-02 04:21:26.0\",\n      \"UPDATEUSER\": \"admin\"\n    },\n    {\n      \"CUSTOMPROPERTY1\": \"\",\n      \"CUSTOMPROPERTY10\": \"\",\n      \"CUSTOMPROPERTY11\": \"\",\n      \"CUSTOMPROPERTY12\": \"\",\n      \"CUSTOMPROPERTY13\": \"\",\n      \"CUSTOMPROPERTY14\": \"\",\n      \"CUSTOMPROPERTY15\": \"\",\n      \"CUSTOMPROPERTY16\": \"\",\n      \"CUSTOMPROPERTY17\": \"\",\n      \"CUSTOMPROPERTY18\": \"\",\n      \"CUSTOMPROPERTY19\": \"\",\n      \"CUSTOMPROPERTY2\": \"\",\n      \"CUSTOMPROPERTY20\": \"\",\n      \"CUSTOMPROPERTY3\": \"\",\n      \"CUSTOMPROPERTY4\": \"\",\n      \"CUSTOMPROPERTY5\": \"\",\n      \"CUSTOMPROPERTY6\": \"\",\n      \"CUSTOMPROPERTY7\": \"\",\n      \"CUSTOMPROPERTY8\": \"\",\n      \"CUSTOMPROPERTY9\": \"\",\n      \"HOMEPAGE\": \"null\",\n      \"ISOOTB\": \"true\",\n      \"READONLY\": \"false\",\n      \"ROLEDESCRIPTION\": \"PAM MANAGEMENT ROLE\",\n      \"ROLENAME\": \"ROLE_SAV_PAMOWNER\",\n      \"STATUSKEY\": \"Active\",\n      \"UPDATEDATE\": \"2022-11-02 04:21:26.0\",\n      \"UPDATEUSER\": \"admin\"\n    },\n    {\n      \"CUSTOMPROPERTY1\": \"null\",\n      \"CUSTOMPROPERTY10\": \"null\",\n      \"CUSTOMPROPERTY11\": \"null\",\n      \"CUSTOMPROPERTY12\": \"null\",\n      \"CUSTOMPROPERTY13\": \"null\",\n      \"CUSTOMPROPERTY14\": \"null\",\n      \"CUSTOMPROPERTY15\": \"null\",\n      \"CUSTOMPROPERTY16\": \"null\",\n      \"CUSTOMPROPERTY17\": \"null\",\n      \"CUSTOMPROPERTY18\": \"null\",\n      \"CUSTOMPROPERTY19\": \"null\",\n      \"CUSTOMPROPERTY2\": \"null\",\n      \"CUSTOMPROPERTY20\": \"null\",\n      \"CUSTOMPROPERTY3\": \"null\",\n      \"CUSTOMPROPERTY4\": \"null\",\n      \"CUSTOMPROPERTY5\": \"null\",\n      \"CUSTOMPROPERTY6\": \"null\",\n      \"CUSTOMPROPERTY7\": \"null\",\n      \"CUSTOMPROPERTY8\": \"null\",\n      \"CUSTOMPROPERTY9\": \"null\",\n      \"HOMEPAGE\": \"null\",\n      \"ISOOTB\": \"true\",\n      \"READONLY\": \"false\",\n      \"ROLEDESCRIPTION\": \"END USER ROLE\",\n      \"ROLENAME\": \"ROLE_SAV_ENDUSER\",\n      \"STATUSKEY\": \"Active\",\n      \"UPDATEDATE\": \"2022-11-02 04:21:28.0\",\n      \"UPDATEUSER\": \"admin\"\n    },\n    {\n      \"CUSTOMPROPERTY1\": \"null\",\n      \"CUSTOMPROPERTY10\": \"null\",\n      \"CUSTOMPROPERTY11\": \"null\",\n      \"CUSTOMPROPERTY12\": \"null\",\n      \"CUSTOMPROPERTY13\": \"null\",\n      \"CUSTOMPROPERTY14\": \"null\",\n      \"CUSTOMPROPERTY15\": \"null\",\n      \"CUSTOMPROPERTY16\": \"null\",\n      \"CUSTOMPROPERTY17\": \"null\",\n      \"CUSTOMPROPERTY18\": \"null\",\n      \"CUSTOMPROPERTY19\": \"null\",\n      \"CUSTOMPROPERTY2\": \"null\",\n      \"CUSTOMPROPERTY20\": \"null\",\n      \"CUSTOMPROPERTY3\": \"null\",\n      \"CUSTOMPROPERTY4\": \"null\",\n      \"CUSTOMPROPERTY5\": \"null\",\n      \"CUSTOMPROPERTY6\": \"null\",\n      \"CUSTOMPROPERTY7\": \"null\",\n      \"CUSTOMPROPERTY8\": \"null\",\n      \"CUSTOMPROPERTY9\": \"null\",\n      \"HOMEPAGE\": \"null\",\n      \"ISOOTB\": \"true\",\n      \"READONLY\": \"false\",\n      \"ROLEDESCRIPTION\": \"MANAGER ROLE\",\n      \"ROLENAME\": \"ROLE_SAV_MANAGER\",\n      \"STATUSKEY\": \"Active\",\n      \"UPDATEDATE\": \"2022-11-02 04:21:28.0\",\n      \"UPDATEUSER\": \"admin\"\n    },\n    {\n      \"CUSTOMPROPERTY1\": \"null\",\n      \"CUSTOMPROPERTY10\": \"null\",\n      \"CUSTOMPROPERTY11\": \"null\",\n      \"CUSTOMPROPERTY12\": \"null\",\n      \"CUSTOMPROPERTY13\": \"null\",\n      \"CUSTOMPROPERTY14\": \"null\",\n      \"CUSTOMPROPERTY15\": \"null\",\n      \"CUSTOMPROPERTY16\": \"null\",\n      \"CUSTOMPROPERTY17\": \"null\",\n      \"CUSTOMPROPERTY18\": \"null\",\n      \"CUSTOMPROPERTY19\": \"null\",\n      \"CUSTOMPROPERTY2\": \"null\",\n      \"CUSTOMPROPERTY20\": \"null\",\n      \"CUSTOMPROPERTY3\": \"null\",\n      \"CUSTOMPROPERTY4\": \"null\",\n      \"CUSTOMPROPERTY5\": \"null\",\n      \"CUSTOMPROPERTY6\": \"null\",\n      \"CUSTOMPROPERTY7\": \"null\",\n      \"CUSTOMPROPERTY8\": \"null\",\n      \"CUSTOMPROPERTY9\": \"null\",\n      \"HOMEPAGE\": \"null\",\n      \"ISOOTB\": \"true\",\n      \"READONLY\": \"false\",\n      \"ROLEDESCRIPTION\": \"SOD OWNER ROLE\",\n      \"ROLENAME\": \"ROLE_SAV_SODOWNER\",\n      \"STATUSKEY\": \"Active\",\n      \"UPDATEDATE\": \"2022-11-02 04:21:28.0\",\n      \"UPDATEUSER\": \"admin\"\n    },\n    {\n      \"CUSTOMPROPERTY1\": \"null\",\n      \"CUSTOMPROPERTY10\": \"null\",\n      \"CUSTOMPROPERTY11\": \"null\",\n      \"CUSTOMPROPERTY12\": \"null\",\n      \"CUSTOMPROPERTY13\": \"null\",\n      \"CUSTOMPROPERTY14\": \"null\",\n      \"CUSTOMPROPERTY15\": \"null\",\n      \"CUSTOMPROPERTY16\": \"null\",\n      \"CUSTOMPROPERTY17\": \"null\",\n      \"CUSTOMPROPERTY18\": \"null\",\n      \"CUSTOMPROPERTY19\": \"null\",\n      \"CUSTOMPROPERTY2\": \"null\",\n      \"CUSTOMPROPERTY20\": \"null\",\n      \"CUSTOMPROPERTY3\": \"null\",\n      \"CUSTOMPROPERTY4\": \"null\",\n      \"CUSTOMPROPERTY5\": \"null\",\n      \"CUSTOMPROPERTY6\": \"null\",\n      \"CUSTOMPROPERTY7\": \"null\",\n      \"CUSTOMPROPERTY8\": \"null\",\n      \"CUSTOMPROPERTY9\": \"null\",\n      \"HOMEPAGE\": \"null\",\n      \"ISOOTB\": \"true\",\n      \"READONLY\": \"false\",\n      \"ROLEDESCRIPTION\": \"SAV Role to provide access to all the OOTB personas shipped with Control Center. This won’t have access to PAM Owner persona.\",\n      \"ROLENAME\": \"ROLE_SAV_CONTROLCENTER_IGAOWNER\",\n      \"STATUSKEY\": \"Active\",\n      \"UPDATEDATE\": \"2022-11-02 04:21:28.0\",\n      \"UPDATEUSER\": \"admin\"\n    },\n    {\n      \"CUSTOMPROPERTY1\": \"null\",\n      \"CUSTOMPROPERTY10\": \"null\",\n      \"CUSTOMPROPERTY11\": \"null\",\n      \"CUSTOMPROPERTY12\": \"null\",\n      \"CUSTOMPROPERTY13\": \"null\",\n      \"CUSTOMPROPERTY14\": \"null\",\n      \"CUSTOMPROPERTY15\": \"null\",\n      \"CUSTOMPROPERTY16\": \"null\",\n      \"CUSTOMPROPERTY17\": \"null\",\n      \"CUSTOMPROPERTY18\": \"null\",\n      \"CUSTOMPROPERTY19\": \"null\",\n      \"CUSTOMPROPERTY2\": \"null\",\n      \"CUSTOMPROPERTY20\": \"null\",\n      \"CUSTOMPROPERTY3\": \"null\",\n      \"CUSTOMPROPERTY4\": \"null\",\n      \"CUSTOMPROPERTY5\": \"null\",\n      \"CUSTOMPROPERTY6\": \"null\",\n      \"CUSTOMPROPERTY7\": \"null\",\n      \"CUSTOMPROPERTY8\": \"null\",\n      \"CUSTOMPROPERTY9\": \"null\",\n      \"HOMEPAGE\": \"null\",\n      \"ISOOTB\": \"true\",\n      \"READONLY\": \"true\",\n      \"ROLEDESCRIPTION\": \"ROLE SAV AUDITOR READONLY\",\n      \"ROLENAME\": \"ROLE_SAV_AUDITOR_READONLY\",\n      \"STATUSKEY\": \"Active\",\n      \"UPDATEDATE\": \"2022-11-02 04:21:28.0\",\n      \"UPDATEUSER\": \"admin\"\n    },\n    {\n      \"CUSTOMPROPERTY1\": \"null\",\n      \"CUSTOMPROPERTY10\": \"null\",\n      \"CUSTOMPROPERTY11\": \"null\",\n      \"CUSTOMPROPERTY12\": \"null\",\n      \"CUSTOMPROPERTY13\": \"null\",\n      \"CUSTOMPROPERTY14\": \"null\",\n      \"CUSTOMPROPERTY15\": \"null\",\n      \"CUSTOMPROPERTY16\": \"null\",\n      \"CUSTOMPROPERTY17\": \"null\",\n      \"CUSTOMPROPERTY18\": \"null\",\n      \"CUSTOMPROPERTY19\": \"null\",\n      \"CUSTOMPROPERTY2\": \"null\",\n      \"CUSTOMPROPERTY20\": \"null\",\n      \"CUSTOMPROPERTY3\": \"null\",\n      \"CUSTOMPROPERTY4\": \"null\",\n      \"CUSTOMPROPERTY5\": \"null\",\n      \"CUSTOMPROPERTY6\": \"null\",\n      \"CUSTOMPROPERTY7\": \"null\",\n      \"CUSTOMPROPERTY8\": \"null\",\n      \"CUSTOMPROPERTY9\": \"null\",\n      \"HOMEPAGE\": \"null\",\n      \"ISOOTB\": \"true\",\n      \"READONLY\": \"false\",\n      \"ROLEDESCRIPTION\": \"UI ADMIN USER ROLE\",\n      \"ROLENAME\": \"ROLE_UIADMIN\",\n      \"STATUSKEY\": \"Active\",\n      \"UPDATEDATE\": \"2022-11-02 04:21:28.0\",\n      \"UPDATEUSER\": \"admin\"\n    },\n    {\n      \"CUSTOMPROPERTY1\": \"\",\n      \"CUSTOMPROPERTY10\": \"\",\n      \"CUSTOMPROPERTY11\": \"\",\n      \"CUSTOMPROPERTY12\": \"\",\n      \"CUSTOMPROPERTY13\": \"\",\n      \"CUSTOMPROPERTY14\": \"\",\n      \"CUSTOMPROPERTY15\": \"\",\n      \"CUSTOMPROPERTY16\": \"\",\n      \"CUSTOMPROPERTY17\": \"\",\n      \"CUSTOMPROPERTY18\": \"\",\n      \"CUSTOMPROPERTY19\": \"\",\n      \"CUSTOMPROPERTY2\": \"\",\n      \"CUSTOMPROPERTY20\": \"\",\n      \"CUSTOMPROPERTY3\": \"\",\n      \"CUSTOMPROPERTY4\": \"\",\n      \"CUSTOMPROPERTY5\": \"\",\n      \"CUSTOMPROPERTY6\": \"\",\n      \"CUSTOMPROPERTY7\": \"\",\n      \"CUSTOMPROPERTY8\": \"\",\n      \"CUSTOMPROPERTY9\": \"\",\n      \"HOMEPAGE\": \"null\",\n      \"ISOOTB\": \"true\",\n      \"READONLY\": \"false\",\n      \"ROLEDESCRIPTION\": \"Used by PAM extended solution\",\n      \"ROLENAME\": \"ROLE_SAV_PAM_EXTENSIONS\",\n      \"STATUSKEY\": \"Active\",\n      \"UPDATEDATE\": \"2022-11-02 04:21:32.0\",\n      \"UPDATEUSER\": \"admin\"\n    },\n    {\n      \"CUSTOMPROPERTY1\": \"null\",\n      \"CUSTOMPROPERTY10\": \"null\",\n      \"CUSTOMPROPERTY11\": \"null\",\n      \"CUSTOMPROPERTY12\": \"null\",\n      \"CUSTOMPROPERTY13\": \"null\",\n      \"CUSTOMPROPERTY14\": \"null\",\n      \"CUSTOMPROPERTY15\": \"null\",\n      \"CUSTOMPROPERTY16\": \"null\",\n      \"CUSTOMPROPERTY17\": \"null\",\n      \"CUSTOMPROPERTY18\": \"null\",\n      \"CUSTOMPROPERTY19\": \"null\",\n      \"CUSTOMPROPERTY2\": \"null\",\n      \"CUSTOMPROPERTY20\": \"null\",\n      \"CUSTOMPROPERTY3\": \"null\",\n      \"CUSTOMPROPERTY4\": \"null\",\n      \"CUSTOMPROPERTY5\": \"null\",\n      \"CUSTOMPROPERTY6\": \"null\",\n      \"CUSTOMPROPERTY7\": \"null\",\n      \"CUSTOMPROPERTY8\": \"null\",\n      \"CUSTOMPROPERTY9\": \"null\",\n      \"HOMEPAGE\": \"null\",\n      \"ISOOTB\": \"true\",\n      \"READONLY\": \"false\",\n      \"ROLEDESCRIPTION\": \"SAV4SAV ROLE\",\n      \"ROLENAME\": \"ROLE_SAV4SAV_ADMIN\",\n      \"STATUSKEY\": \"Active\",\n      \"UPDATEDATE\": \"2022-11-02 04:22:07.0\",\n      \"UPDATEUSER\": \"admin\"\n    },\n    {\n      \"CUSTOMPROPERTY1\": \"null\",\n      \"CUSTOMPROPERTY10\": \"null\",\n      \"CUSTOMPROPERTY11\": \"null\",\n      \"CUSTOMPROPERTY12\": \"null\",\n      \"CUSTOMPROPERTY13\": \"null\",\n      \"CUSTOMPROPERTY14\": \"null\",\n      \"CUSTOMPROPERTY15\": \"null\",\n      \"CUSTOMPROPERTY16\": \"null\",\n      \"CUSTOMPROPERTY17\": \"null\",\n      \"CUSTOMPROPERTY18\": \"null\",\n      \"CUSTOMPROPERTY19\": \"null\",\n      \"CUSTOMPROPERTY2\": \"null\",\n      \"CUSTOMPROPERTY20\": \"null\",\n      \"CUSTOMPROPERTY3\": \"null\",\n      \"CUSTOMPROPERTY4\": \"null\",\n      \"CUSTOMPROPERTY5\": \"null\",\n      \"CUSTOMPROPERTY6\": \"null\",\n      \"CUSTOMPROPERTY7\": \"null\",\n      \"CUSTOMPROPERTY8\": \"null\",\n      \"CUSTOMPROPERTY9\": \"null\",\n      \"HOMEPAGE\": \"null\",\n      \"ISOOTB\": \"false\",\n      \"READONLY\": \"false\",\n      \"ROLEDESCRIPTION\": \"SOD AUDITOR\",\n      \"ROLENAME\": \"ROLE_SOD_AUDITOR\",\n      \"STATUSKEY\": \"Active\",\n      \"UPDATEDATE\": \"2022-11-04 09:27:39.0\",\n      \"UPDATEUSER\": \"admin\"\n    },\n    {\n      \"CUSTOMPROPERTY1\": \"null\",\n      \"CUSTOMPROPERTY10\": \"null\",\n      \"CUSTOMPROPERTY11\": \"null\",\n      \"CUSTOMPROPERTY12\": \"null\",\n      \"CUSTOMPROPERTY13\": \"null\",\n      \"CUSTOMPROPERTY14\": \"null\",\n      \"CUSTOMPROPERTY15\": \"null\",\n      \"CUSTOMPROPERTY16\": \"\",\n      \"CUSTOMPROPERTY17\": \"\",\n      \"CUSTOMPROPERTY18\": \"\",\n      \"CUSTOMPROPERTY19\": \"\",\n      \"CUSTOMPROPERTY2\": \"null\",\n      \"CUSTOMPROPERTY20\": \"\",\n      \"CUSTOMPROPERTY3\": \"null\",\n      \"CUSTOMPROPERTY4\": \"null\",\n      \"CUSTOMPROPERTY5\": \"null\",\n      \"CUSTOMPROPERTY6\": \"null\",\n      \"CUSTOMPROPERTY7\": \"null\",\n      \"CUSTOMPROPERTY8\": \"null\",\n      \"CUSTOMPROPERTY9\": \"null\",\n      \"HOMEPAGE\": \"null\",\n      \"ISOOTB\": \"false\",\n      \"READONLY\": \"null\",\n      \"ROLEDESCRIPTION\": \"Role service account\",\n      \"ROLENAME\": \"ROLE_SERVICE_ACCOUNT\",\n      \"STATUSKEY\": \"Active\",\n      \"UPDATEDATE\": \"2022-11-03 13:37:20.0\",\n      \"UPDATEUSER\": \"admin\"\n    },\n    {\n      \"CUSTOMPROPERTY1\": \"null\",\n      \"CUSTOMPROPERTY10\": \"null\",\n      \"CUSTOMPROPERTY11\": \"null\",\n      \"CUSTOMPROPERTY12\": \"null\",\n      \"CUSTOMPROPERTY13\": \"null\",\n      \"CUSTOMPROPERTY14\": \"null\",\n      \"CUSTOMPROPERTY15\": \"null\",\n      \"CUSTOMPROPERTY16\": \"null\",\n      \"CUSTOMPROPERTY17\": \"null\",\n      \"CUSTOMPROPERTY18\": \"null\",\n      \"CUSTOMPROPERTY19\": \"null\",\n      \"CUSTOMPROPERTY2\": \"null\",\n      \"CUSTOMPROPERTY20\": \"null\",\n      \"CUSTOMPROPERTY3\": \"null\",\n      \"CUSTOMPROPERTY4\": \"null\",\n      \"CUSTOMPROPERTY5\": \"null\",\n      \"CUSTOMPROPERTY6\": \"null\",\n      \"CUSTOMPROPERTY7\": \"null\",\n      \"CUSTOMPROPERTY8\": \"null\",\n      \"CUSTOMPROPERTY9\": \"null\",\n      \"HOMEPAGE\": \"null\",\n      \"ISOOTB\": \"false\",\n      \"READONLY\": \"false\",\n      \"ROLEDESCRIPTION\": \"test\",\n      \"ROLENAME\": \"ROLE_TEST\",\n      \"STATUSKEY\": \"Active\",\n      \"UPDATEDATE\": \"2022-11-04 12:30:18.0\",\n      \"UPDATEUSER\": \"admin\"\n    },\n    {\n      \"CUSTOMPROPERTY1\": \"null\",\n      \"CUSTOMPROPERTY10\": \"null\",\n      \"CUSTOMPROPERTY11\": \"null\",\n      \"CUSTOMPROPERTY12\": \"null\",\n      \"CUSTOMPROPERTY13\": \"null\",\n      \"CUSTOMPROPERTY14\": \"null\",\n      \"CUSTOMPROPERTY15\": \"null\",\n      \"CUSTOMPROPERTY16\": \"null\",\n      \"CUSTOMPROPERTY17\": \"null\",\n      \"CUSTOMPROPERTY18\": \"null\",\n      \"CUSTOMPROPERTY19\": \"null\",\n      \"CUSTOMPROPERTY2\": \"null\",\n      \"CUSTOMPROPERTY20\": \"null\",\n      \"CUSTOMPROPERTY3\": \"null\",\n      \"CUSTOMPROPERTY4\": \"null\",\n      \"CUSTOMPROPERTY5\": \"null\",\n      \"CUSTOMPROPERTY6\": \"null\",\n      \"CUSTOMPROPERTY7\": \"null\",\n      \"CUSTOMPROPERTY8\": \"null\",\n      \"CUSTOMPROPERTY9\": \"null\",\n      \"HOMEPAGE\": \"null\",\n      \"ISOOTB\": \"false\",\n      \"READONLY\": \"false\",\n      \"ROLEDESCRIPTION\": \"COPY OF ADMIN USER\",\n      \"ROLENAME\": \"ROLE_ADMIN -COPY\",\n      \"STATUSKEY\": \"Active\",\n      \"UPDATEDATE\": \"2022-11-11 15:46:29.0\",\n      \"UPDATEUSER\": \"admin\"\n    }\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Get SavRoles"}
+                  value={"Get SavRoles"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"savroles\": [\n    {\n      \"CUSTOMPROPERTY1\": \"null\",\n      \"CUSTOMPROPERTY10\": \"null\",\n      \"CUSTOMPROPERTY11\": \"null\",\n      \"CUSTOMPROPERTY12\": \"null\",\n      \"CUSTOMPROPERTY13\": \"null\",\n      \"CUSTOMPROPERTY14\": \"null\",\n      \"CUSTOMPROPERTY15\": \"null\",\n      \"CUSTOMPROPERTY16\": \"null\",\n      \"CUSTOMPROPERTY17\": \"null\",\n      \"CUSTOMPROPERTY18\": \"null\",\n      \"CUSTOMPROPERTY19\": \"null\",\n      \"CUSTOMPROPERTY2\": \"null\",\n      \"CUSTOMPROPERTY20\": \"null\",\n      \"CUSTOMPROPERTY3\": \"null\",\n      \"CUSTOMPROPERTY4\": \"null\",\n      \"CUSTOMPROPERTY5\": \"null\",\n      \"CUSTOMPROPERTY6\": \"null\",\n      \"CUSTOMPROPERTY7\": \"null\",\n      \"CUSTOMPROPERTY8\": \"null\",\n      \"CUSTOMPROPERTY9\": \"null\",\n      \"HOMEPAGE\": \"null\",\n      \"ISOOTB\": \"true\",\n      \"READONLY\": \"false\",\n      \"ROLEDESCRIPTION\": \"ADMIN USER\",\n      \"ROLENAME\": \"ROLE_ADMIN\",\n      \"STATUSKEY\": \"Active\",\n      \"UPDATEDATE\": \"2021-06-01 06:47:27.0\",\n      \"UPDATEUSER\": \"admin\"\n    },\n    {\n      \"CUSTOMPROPERTY1\": \"null\",\n      \"CUSTOMPROPERTY10\": \"null\",\n      \"CUSTOMPROPERTY11\": \"null\",\n      \"CUSTOMPROPERTY12\": \"null\",\n      \"CUSTOMPROPERTY13\": \"null\",\n      \"CUSTOMPROPERTY14\": \"null\",\n      \"CUSTOMPROPERTY15\": \"null\",\n      \"CUSTOMPROPERTY16\": \"null\",\n      \"CUSTOMPROPERTY17\": \"null\",\n      \"CUSTOMPROPERTY18\": \"null\",\n      \"CUSTOMPROPERTY19\": \"null\",\n      \"CUSTOMPROPERTY2\": \"null\",\n      \"CUSTOMPROPERTY20\": \"null\",\n      \"CUSTOMPROPERTY3\": \"null\",\n      \"CUSTOMPROPERTY4\": \"null\",\n      \"CUSTOMPROPERTY5\": \"null\",\n      \"CUSTOMPROPERTY6\": \"null\",\n      \"CUSTOMPROPERTY7\": \"null\",\n      \"CUSTOMPROPERTY8\": \"null\",\n      \"CUSTOMPROPERTY9\": \"null\",\n      \"HOMEPAGE\": \"null\",\n      \"ISOOTB\": \"true\",\n      \"READONLY\": \"false\",\n      \"ROLEDESCRIPTION\": \"ROLE_ADMIN_SAVIYNTSUPPORT USER\",\n      \"ROLENAME\": \"ROLE_ADMIN_SAVIYNTSUPPORT\",\n      \"STATUSKEY\": \"Active\",\n      \"UPDATEDATE\": \"2021-06-01 06:58:24.0\",\n      \"UPDATEUSER\": \"admin\"\n    },\n    {\n      \"CUSTOMPROPERTY1\": \"\",\n      \"CUSTOMPROPERTY10\": \"\",\n      \"CUSTOMPROPERTY11\": \"\",\n      \"CUSTOMPROPERTY12\": \"\",\n      \"CUSTOMPROPERTY13\": \"\",\n      \"CUSTOMPROPERTY14\": \"\",\n      \"CUSTOMPROPERTY15\": \"\",\n      \"CUSTOMPROPERTY16\": \"\",\n      \"CUSTOMPROPERTY17\": \"\",\n      \"CUSTOMPROPERTY18\": \"\",\n      \"CUSTOMPROPERTY19\": \"\",\n      \"CUSTOMPROPERTY2\": \"\",\n      \"CUSTOMPROPERTY20\": \"\",\n      \"CUSTOMPROPERTY3\": \"\",\n      \"CUSTOMPROPERTY4\": \"\",\n      \"CUSTOMPROPERTY5\": \"\",\n      \"CUSTOMPROPERTY6\": \"\",\n      \"CUSTOMPROPERTY7\": \"\",\n      \"CUSTOMPROPERTY8\": \"\",\n      \"CUSTOMPROPERTY9\": \"\",\n      \"HOMEPAGE\": \"null\",\n      \"ISOOTB\": \"true\",\n      \"READONLY\": \"false\",\n      \"ROLEDESCRIPTION\": \"PAM END USER ROLE\",\n      \"ROLENAME\": \"ROLE_SAV_PAMENDUSER\",\n      \"STATUSKEY\": \"Active\",\n      \"UPDATEDATE\": \"2022-11-02 04:21:26.0\",\n      \"UPDATEUSER\": \"admin\"\n    },\n    {\n      \"CUSTOMPROPERTY1\": \"\",\n      \"CUSTOMPROPERTY10\": \"\",\n      \"CUSTOMPROPERTY11\": \"\",\n      \"CUSTOMPROPERTY12\": \"\",\n      \"CUSTOMPROPERTY13\": \"\",\n      \"CUSTOMPROPERTY14\": \"\",\n      \"CUSTOMPROPERTY15\": \"\",\n      \"CUSTOMPROPERTY16\": \"\",\n      \"CUSTOMPROPERTY17\": \"\",\n      \"CUSTOMPROPERTY18\": \"\",\n      \"CUSTOMPROPERTY19\": \"\",\n      \"CUSTOMPROPERTY2\": \"\",\n      \"CUSTOMPROPERTY20\": \"\",\n      \"CUSTOMPROPERTY3\": \"\",\n      \"CUSTOMPROPERTY4\": \"\",\n      \"CUSTOMPROPERTY5\": \"\",\n      \"CUSTOMPROPERTY6\": \"\",\n      \"CUSTOMPROPERTY7\": \"\",\n      \"CUSTOMPROPERTY8\": \"\",\n      \"CUSTOMPROPERTY9\": \"\",\n      \"HOMEPAGE\": \"null\",\n      \"ISOOTB\": \"true\",\n      \"READONLY\": \"false\",\n      \"ROLEDESCRIPTION\": \"PAM MANAGEMENT ROLE\",\n      \"ROLENAME\": \"ROLE_SAV_PAMOWNER\",\n      \"STATUSKEY\": \"Active\",\n      \"UPDATEDATE\": \"2022-11-02 04:21:26.0\",\n      \"UPDATEUSER\": \"admin\"\n    },\n    {\n      \"CUSTOMPROPERTY1\": \"null\",\n      \"CUSTOMPROPERTY10\": \"null\",\n      \"CUSTOMPROPERTY11\": \"null\",\n      \"CUSTOMPROPERTY12\": \"null\",\n      \"CUSTOMPROPERTY13\": \"null\",\n      \"CUSTOMPROPERTY14\": \"null\",\n      \"CUSTOMPROPERTY15\": \"null\",\n      \"CUSTOMPROPERTY16\": \"null\",\n      \"CUSTOMPROPERTY17\": \"null\",\n      \"CUSTOMPROPERTY18\": \"null\",\n      \"CUSTOMPROPERTY19\": \"null\",\n      \"CUSTOMPROPERTY2\": \"null\",\n      \"CUSTOMPROPERTY20\": \"null\",\n      \"CUSTOMPROPERTY3\": \"null\",\n      \"CUSTOMPROPERTY4\": \"null\",\n      \"CUSTOMPROPERTY5\": \"null\",\n      \"CUSTOMPROPERTY6\": \"null\",\n      \"CUSTOMPROPERTY7\": \"null\",\n      \"CUSTOMPROPERTY8\": \"null\",\n      \"CUSTOMPROPERTY9\": \"null\",\n      \"HOMEPAGE\": \"null\",\n      \"ISOOTB\": \"true\",\n      \"READONLY\": \"false\",\n      \"ROLEDESCRIPTION\": \"END USER ROLE\",\n      \"ROLENAME\": \"ROLE_SAV_ENDUSER\",\n      \"STATUSKEY\": \"Active\",\n      \"UPDATEDATE\": \"2022-11-02 04:21:28.0\",\n      \"UPDATEUSER\": \"admin\"\n    },\n    {\n      \"CUSTOMPROPERTY1\": \"null\",\n      \"CUSTOMPROPERTY10\": \"null\",\n      \"CUSTOMPROPERTY11\": \"null\",\n      \"CUSTOMPROPERTY12\": \"null\",\n      \"CUSTOMPROPERTY13\": \"null\",\n      \"CUSTOMPROPERTY14\": \"null\",\n      \"CUSTOMPROPERTY15\": \"null\",\n      \"CUSTOMPROPERTY16\": \"null\",\n      \"CUSTOMPROPERTY17\": \"null\",\n      \"CUSTOMPROPERTY18\": \"null\",\n      \"CUSTOMPROPERTY19\": \"null\",\n      \"CUSTOMPROPERTY2\": \"null\",\n      \"CUSTOMPROPERTY20\": \"null\",\n      \"CUSTOMPROPERTY3\": \"null\",\n      \"CUSTOMPROPERTY4\": \"null\",\n      \"CUSTOMPROPERTY5\": \"null\",\n      \"CUSTOMPROPERTY6\": \"null\",\n      \"CUSTOMPROPERTY7\": \"null\",\n      \"CUSTOMPROPERTY8\": \"null\",\n      \"CUSTOMPROPERTY9\": \"null\",\n      \"HOMEPAGE\": \"null\",\n      \"ISOOTB\": \"true\",\n      \"READONLY\": \"false\",\n      \"ROLEDESCRIPTION\": \"MANAGER ROLE\",\n      \"ROLENAME\": \"ROLE_SAV_MANAGER\",\n      \"STATUSKEY\": \"Active\",\n      \"UPDATEDATE\": \"2022-11-02 04:21:28.0\",\n      \"UPDATEUSER\": \"admin\"\n    },\n    {\n      \"CUSTOMPROPERTY1\": \"null\",\n      \"CUSTOMPROPERTY10\": \"null\",\n      \"CUSTOMPROPERTY11\": \"null\",\n      \"CUSTOMPROPERTY12\": \"null\",\n      \"CUSTOMPROPERTY13\": \"null\",\n      \"CUSTOMPROPERTY14\": \"null\",\n      \"CUSTOMPROPERTY15\": \"null\",\n      \"CUSTOMPROPERTY16\": \"null\",\n      \"CUSTOMPROPERTY17\": \"null\",\n      \"CUSTOMPROPERTY18\": \"null\",\n      \"CUSTOMPROPERTY19\": \"null\",\n      \"CUSTOMPROPERTY2\": \"null\",\n      \"CUSTOMPROPERTY20\": \"null\",\n      \"CUSTOMPROPERTY3\": \"null\",\n      \"CUSTOMPROPERTY4\": \"null\",\n      \"CUSTOMPROPERTY5\": \"null\",\n      \"CUSTOMPROPERTY6\": \"null\",\n      \"CUSTOMPROPERTY7\": \"null\",\n      \"CUSTOMPROPERTY8\": \"null\",\n      \"CUSTOMPROPERTY9\": \"null\",\n      \"HOMEPAGE\": \"null\",\n      \"ISOOTB\": \"true\",\n      \"READONLY\": \"false\",\n      \"ROLEDESCRIPTION\": \"SOD OWNER ROLE\",\n      \"ROLENAME\": \"ROLE_SAV_SODOWNER\",\n      \"STATUSKEY\": \"Active\",\n      \"UPDATEDATE\": \"2022-11-02 04:21:28.0\",\n      \"UPDATEUSER\": \"admin\"\n    },\n    {\n      \"CUSTOMPROPERTY1\": \"null\",\n      \"CUSTOMPROPERTY10\": \"null\",\n      \"CUSTOMPROPERTY11\": \"null\",\n      \"CUSTOMPROPERTY12\": \"null\",\n      \"CUSTOMPROPERTY13\": \"null\",\n      \"CUSTOMPROPERTY14\": \"null\",\n      \"CUSTOMPROPERTY15\": \"null\",\n      \"CUSTOMPROPERTY16\": \"null\",\n      \"CUSTOMPROPERTY17\": \"null\",\n      \"CUSTOMPROPERTY18\": \"null\",\n      \"CUSTOMPROPERTY19\": \"null\",\n      \"CUSTOMPROPERTY2\": \"null\",\n      \"CUSTOMPROPERTY20\": \"null\",\n      \"CUSTOMPROPERTY3\": \"null\",\n      \"CUSTOMPROPERTY4\": \"null\",\n      \"CUSTOMPROPERTY5\": \"null\",\n      \"CUSTOMPROPERTY6\": \"null\",\n      \"CUSTOMPROPERTY7\": \"null\",\n      \"CUSTOMPROPERTY8\": \"null\",\n      \"CUSTOMPROPERTY9\": \"null\",\n      \"HOMEPAGE\": \"null\",\n      \"ISOOTB\": \"true\",\n      \"READONLY\": \"false\",\n      \"ROLEDESCRIPTION\": \"SAV Role to provide access to all the OOTB personas shipped with Control Center. This won’t have access to PAM Owner persona.\",\n      \"ROLENAME\": \"ROLE_SAV_CONTROLCENTER_IGAOWNER\",\n      \"STATUSKEY\": \"Active\",\n      \"UPDATEDATE\": \"2022-11-02 04:21:28.0\",\n      \"UPDATEUSER\": \"admin\"\n    },\n    {\n      \"CUSTOMPROPERTY1\": \"null\",\n      \"CUSTOMPROPERTY10\": \"null\",\n      \"CUSTOMPROPERTY11\": \"null\",\n      \"CUSTOMPROPERTY12\": \"null\",\n      \"CUSTOMPROPERTY13\": \"null\",\n      \"CUSTOMPROPERTY14\": \"null\",\n      \"CUSTOMPROPERTY15\": \"null\",\n      \"CUSTOMPROPERTY16\": \"null\",\n      \"CUSTOMPROPERTY17\": \"null\",\n      \"CUSTOMPROPERTY18\": \"null\",\n      \"CUSTOMPROPERTY19\": \"null\",\n      \"CUSTOMPROPERTY2\": \"null\",\n      \"CUSTOMPROPERTY20\": \"null\",\n      \"CUSTOMPROPERTY3\": \"null\",\n      \"CUSTOMPROPERTY4\": \"null\",\n      \"CUSTOMPROPERTY5\": \"null\",\n      \"CUSTOMPROPERTY6\": \"null\",\n      \"CUSTOMPROPERTY7\": \"null\",\n      \"CUSTOMPROPERTY8\": \"null\",\n      \"CUSTOMPROPERTY9\": \"null\",\n      \"HOMEPAGE\": \"null\",\n      \"ISOOTB\": \"true\",\n      \"READONLY\": \"true\",\n      \"ROLEDESCRIPTION\": \"ROLE SAV AUDITOR READONLY\",\n      \"ROLENAME\": \"ROLE_SAV_AUDITOR_READONLY\",\n      \"STATUSKEY\": \"Active\",\n      \"UPDATEDATE\": \"2022-11-02 04:21:28.0\",\n      \"UPDATEUSER\": \"admin\"\n    },\n    {\n      \"CUSTOMPROPERTY1\": \"null\",\n      \"CUSTOMPROPERTY10\": \"null\",\n      \"CUSTOMPROPERTY11\": \"null\",\n      \"CUSTOMPROPERTY12\": \"null\",\n      \"CUSTOMPROPERTY13\": \"null\",\n      \"CUSTOMPROPERTY14\": \"null\",\n      \"CUSTOMPROPERTY15\": \"null\",\n      \"CUSTOMPROPERTY16\": \"null\",\n      \"CUSTOMPROPERTY17\": \"null\",\n      \"CUSTOMPROPERTY18\": \"null\",\n      \"CUSTOMPROPERTY19\": \"null\",\n      \"CUSTOMPROPERTY2\": \"null\",\n      \"CUSTOMPROPERTY20\": \"null\",\n      \"CUSTOMPROPERTY3\": \"null\",\n      \"CUSTOMPROPERTY4\": \"null\",\n      \"CUSTOMPROPERTY5\": \"null\",\n      \"CUSTOMPROPERTY6\": \"null\",\n      \"CUSTOMPROPERTY7\": \"null\",\n      \"CUSTOMPROPERTY8\": \"null\",\n      \"CUSTOMPROPERTY9\": \"null\",\n      \"HOMEPAGE\": \"null\",\n      \"ISOOTB\": \"true\",\n      \"READONLY\": \"false\",\n      \"ROLEDESCRIPTION\": \"UI ADMIN USER ROLE\",\n      \"ROLENAME\": \"ROLE_UIADMIN\",\n      \"STATUSKEY\": \"Active\",\n      \"UPDATEDATE\": \"2022-11-02 04:21:28.0\",\n      \"UPDATEUSER\": \"admin\"\n    },\n    {\n      \"CUSTOMPROPERTY1\": \"\",\n      \"CUSTOMPROPERTY10\": \"\",\n      \"CUSTOMPROPERTY11\": \"\",\n      \"CUSTOMPROPERTY12\": \"\",\n      \"CUSTOMPROPERTY13\": \"\",\n      \"CUSTOMPROPERTY14\": \"\",\n      \"CUSTOMPROPERTY15\": \"\",\n      \"CUSTOMPROPERTY16\": \"\",\n      \"CUSTOMPROPERTY17\": \"\",\n      \"CUSTOMPROPERTY18\": \"\",\n      \"CUSTOMPROPERTY19\": \"\",\n      \"CUSTOMPROPERTY2\": \"\",\n      \"CUSTOMPROPERTY20\": \"\",\n      \"CUSTOMPROPERTY3\": \"\",\n      \"CUSTOMPROPERTY4\": \"\",\n      \"CUSTOMPROPERTY5\": \"\",\n      \"CUSTOMPROPERTY6\": \"\",\n      \"CUSTOMPROPERTY7\": \"\",\n      \"CUSTOMPROPERTY8\": \"\",\n      \"CUSTOMPROPERTY9\": \"\",\n      \"HOMEPAGE\": \"null\",\n      \"ISOOTB\": \"true\",\n      \"READONLY\": \"false\",\n      \"ROLEDESCRIPTION\": \"Used by PAM extended solution\",\n      \"ROLENAME\": \"ROLE_SAV_PAM_EXTENSIONS\",\n      \"STATUSKEY\": \"Active\",\n      \"UPDATEDATE\": \"2022-11-02 04:21:32.0\",\n      \"UPDATEUSER\": \"admin\"\n    },\n    {\n      \"CUSTOMPROPERTY1\": \"null\",\n      \"CUSTOMPROPERTY10\": \"null\",\n      \"CUSTOMPROPERTY11\": \"null\",\n      \"CUSTOMPROPERTY12\": \"null\",\n      \"CUSTOMPROPERTY13\": \"null\",\n      \"CUSTOMPROPERTY14\": \"null\",\n      \"CUSTOMPROPERTY15\": \"null\",\n      \"CUSTOMPROPERTY16\": \"null\",\n      \"CUSTOMPROPERTY17\": \"null\",\n      \"CUSTOMPROPERTY18\": \"null\",\n      \"CUSTOMPROPERTY19\": \"null\",\n      \"CUSTOMPROPERTY2\": \"null\",\n      \"CUSTOMPROPERTY20\": \"null\",\n      \"CUSTOMPROPERTY3\": \"null\",\n      \"CUSTOMPROPERTY4\": \"null\",\n      \"CUSTOMPROPERTY5\": \"null\",\n      \"CUSTOMPROPERTY6\": \"null\",\n      \"CUSTOMPROPERTY7\": \"null\",\n      \"CUSTOMPROPERTY8\": \"null\",\n      \"CUSTOMPROPERTY9\": \"null\",\n      \"HOMEPAGE\": \"null\",\n      \"ISOOTB\": \"true\",\n      \"READONLY\": \"false\",\n      \"ROLEDESCRIPTION\": \"SAV4SAV ROLE\",\n      \"ROLENAME\": \"ROLE_SAV4SAV_ADMIN\",\n      \"STATUSKEY\": \"Active\",\n      \"UPDATEDATE\": \"2022-11-02 04:22:07.0\",\n      \"UPDATEUSER\": \"admin\"\n    },\n    {\n      \"CUSTOMPROPERTY1\": \"null\",\n      \"CUSTOMPROPERTY10\": \"null\",\n      \"CUSTOMPROPERTY11\": \"null\",\n      \"CUSTOMPROPERTY12\": \"null\",\n      \"CUSTOMPROPERTY13\": \"null\",\n      \"CUSTOMPROPERTY14\": \"null\",\n      \"CUSTOMPROPERTY15\": \"null\",\n      \"CUSTOMPROPERTY16\": \"null\",\n      \"CUSTOMPROPERTY17\": \"null\",\n      \"CUSTOMPROPERTY18\": \"null\",\n      \"CUSTOMPROPERTY19\": \"null\",\n      \"CUSTOMPROPERTY2\": \"null\",\n      \"CUSTOMPROPERTY20\": \"null\",\n      \"CUSTOMPROPERTY3\": \"null\",\n      \"CUSTOMPROPERTY4\": \"null\",\n      \"CUSTOMPROPERTY5\": \"null\",\n      \"CUSTOMPROPERTY6\": \"null\",\n      \"CUSTOMPROPERTY7\": \"null\",\n      \"CUSTOMPROPERTY8\": \"null\",\n      \"CUSTOMPROPERTY9\": \"null\",\n      \"HOMEPAGE\": \"null\",\n      \"ISOOTB\": \"false\",\n      \"READONLY\": \"false\",\n      \"ROLEDESCRIPTION\": \"SOD AUDITOR\",\n      \"ROLENAME\": \"ROLE_SOD_AUDITOR\",\n      \"STATUSKEY\": \"Active\",\n      \"UPDATEDATE\": \"2022-11-04 09:27:39.0\",\n      \"UPDATEUSER\": \"admin\"\n    },\n    {\n      \"CUSTOMPROPERTY1\": \"null\",\n      \"CUSTOMPROPERTY10\": \"null\",\n      \"CUSTOMPROPERTY11\": \"null\",\n      \"CUSTOMPROPERTY12\": \"null\",\n      \"CUSTOMPROPERTY13\": \"null\",\n      \"CUSTOMPROPERTY14\": \"null\",\n      \"CUSTOMPROPERTY15\": \"null\",\n      \"CUSTOMPROPERTY16\": \"\",\n      \"CUSTOMPROPERTY17\": \"\",\n      \"CUSTOMPROPERTY18\": \"\",\n      \"CUSTOMPROPERTY19\": \"\",\n      \"CUSTOMPROPERTY2\": \"null\",\n      \"CUSTOMPROPERTY20\": \"\",\n      \"CUSTOMPROPERTY3\": \"null\",\n      \"CUSTOMPROPERTY4\": \"null\",\n      \"CUSTOMPROPERTY5\": \"null\",\n      \"CUSTOMPROPERTY6\": \"null\",\n      \"CUSTOMPROPERTY7\": \"null\",\n      \"CUSTOMPROPERTY8\": \"null\",\n      \"CUSTOMPROPERTY9\": \"null\",\n      \"HOMEPAGE\": \"null\",\n      \"ISOOTB\": \"false\",\n      \"READONLY\": \"null\",\n      \"ROLEDESCRIPTION\": \"Role service account\",\n      \"ROLENAME\": \"ROLE_SERVICE_ACCOUNT\",\n      \"STATUSKEY\": \"Active\",\n      \"UPDATEDATE\": \"2022-11-03 13:37:20.0\",\n      \"UPDATEUSER\": \"admin\"\n    },\n    {\n      \"CUSTOMPROPERTY1\": \"null\",\n      \"CUSTOMPROPERTY10\": \"null\",\n      \"CUSTOMPROPERTY11\": \"null\",\n      \"CUSTOMPROPERTY12\": \"null\",\n      \"CUSTOMPROPERTY13\": \"null\",\n      \"CUSTOMPROPERTY14\": \"null\",\n      \"CUSTOMPROPERTY15\": \"null\",\n      \"CUSTOMPROPERTY16\": \"null\",\n      \"CUSTOMPROPERTY17\": \"null\",\n      \"CUSTOMPROPERTY18\": \"null\",\n      \"CUSTOMPROPERTY19\": \"null\",\n      \"CUSTOMPROPERTY2\": \"null\",\n      \"CUSTOMPROPERTY20\": \"null\",\n      \"CUSTOMPROPERTY3\": \"null\",\n      \"CUSTOMPROPERTY4\": \"null\",\n      \"CUSTOMPROPERTY5\": \"null\",\n      \"CUSTOMPROPERTY6\": \"null\",\n      \"CUSTOMPROPERTY7\": \"null\",\n      \"CUSTOMPROPERTY8\": \"null\",\n      \"CUSTOMPROPERTY9\": \"null\",\n      \"HOMEPAGE\": \"null\",\n      \"ISOOTB\": \"false\",\n      \"READONLY\": \"false\",\n      \"ROLEDESCRIPTION\": \"test\",\n      \"ROLENAME\": \"ROLE_TEST\",\n      \"STATUSKEY\": \"Active\",\n      \"UPDATEDATE\": \"2022-11-04 12:30:18.0\",\n      \"UPDATEUSER\": \"admin\"\n    },\n    {\n      \"CUSTOMPROPERTY1\": \"null\",\n      \"CUSTOMPROPERTY10\": \"null\",\n      \"CUSTOMPROPERTY11\": \"null\",\n      \"CUSTOMPROPERTY12\": \"null\",\n      \"CUSTOMPROPERTY13\": \"null\",\n      \"CUSTOMPROPERTY14\": \"null\",\n      \"CUSTOMPROPERTY15\": \"null\",\n      \"CUSTOMPROPERTY16\": \"null\",\n      \"CUSTOMPROPERTY17\": \"null\",\n      \"CUSTOMPROPERTY18\": \"null\",\n      \"CUSTOMPROPERTY19\": \"null\",\n      \"CUSTOMPROPERTY2\": \"null\",\n      \"CUSTOMPROPERTY20\": \"null\",\n      \"CUSTOMPROPERTY3\": \"null\",\n      \"CUSTOMPROPERTY4\": \"null\",\n      \"CUSTOMPROPERTY5\": \"null\",\n      \"CUSTOMPROPERTY6\": \"null\",\n      \"CUSTOMPROPERTY7\": \"null\",\n      \"CUSTOMPROPERTY8\": \"null\",\n      \"CUSTOMPROPERTY9\": \"null\",\n      \"HOMEPAGE\": \"null\",\n      \"ISOOTB\": \"false\",\n      \"READONLY\": \"false\",\n      \"ROLEDESCRIPTION\": \"COPY OF ADMIN USER\",\n      \"ROLENAME\": \"ROLE_ADMIN -COPY\",\n      \"STATUSKEY\": \"Active\",\n      \"UPDATEDATE\": \"2022-11-11 15:46:29.0\",\n      \"UPDATEUSER\": \"admin\"\n    }\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

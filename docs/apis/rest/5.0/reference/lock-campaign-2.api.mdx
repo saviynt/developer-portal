@@ -1,0 +1,418 @@
+---
+id: lock-campaign-2
+title: "Lock Campaign"
+description: "This API is used to lock campaign after validating whether Application Owner campaign is completed or not."
+sidebar_label: "Lock Campaign"
+hide_title: true
+hide_table_of_contents: true
+api: eJzlV21v2kgQ/iur/dRKNjZuEoqrSEddekrbhKhQ9U4QhcEe8Db2rru7hnCI/37atSGmiRIq3bfLl5j1zDOv+8x4QzUsFA3HNIa8ALbgyoWiyFgMmgnuihVHSW8cmqCKJSvMIQ3pKGWK9K4vCFOkVJgQLUgm4juyQyEw1yjJEjKWgGZ8QVYp6hQl6T2gk4FBf9BhisQiLzLUmBAhCRe6NeGjFMm0V+pUSPaP1ZuSvFSapLBEMn2PIFFOyVxkmVhhQmZrMh2JO+TT1oRfAk9AC7kmBUjIVTjh0529i2Q64dMlSjZnKKcTPrDhQdaURanvcD2lDhUFSmv+IqEhNdFGNVBAHSrxZ4lKvxfJmoYbGguukWvz2Ein90OZ9G2oilPMwTzpdYE0pGL2A2NNHVpIY0czVBZm72pDVmnJ+II6FO/BZIuG9I1/SrcO3cXyvDAkOeN0u93uD62tL6Z+u5DMwRKyEn/1wppqWnqAs4gSVSG4qiAD3zf/DnvnwA5xyfBbFPWHQ+rQFCFBaTV7cYxKuZHgWorM7ZnaupHEBLlmkKknk/hErFqWSI1fTwIOJFuwpwvyBFaqdRF6XiZiyFKhtMWNIE5xB3ssUiGUduMU47tz3yGFxN0PC/kBNB6L9B0Th7Q75FPJSeAHPvGD0G+H7TPy5+XIovXvCybx6IQNS+6QDrmENWl3u6ekHYS+H/r+Hu8rzlFKlO61yFi8PhZXQY6uqPJtYIao3UiIO3Z0qFE0/PrRHQ0+96/O8Sw4TU67p243niXuid/tuG8xOXVPgu5Z8DZ4c+LHJ+/INej03KvMacli7Y4kcFUIqd0hxqVk+mj/c7h3YYHnnU7nzPf9d4TxOCsTHJazROTAuLJ2/rKtgFy7o3WBbsUoRyefC8XZfF4jfZQmZ78J8aF/9Xd1t/8jChoJDRm54DtmJoYS2byGa+iDlLCmDmUac6O5bbg1vtk6NZIhTkyORnkm1N5ghEr7Z23/9rZNXNK7CvwgIK96VxqVJt8UyuroNT3w5XcUjd8opZCRSPB5d3xjpYqunhpHhMXLfIayidMO3nY6B/7aE+NIrhYvXV7Lci9we4Nzmyz/UqHHN8+X8PfyepBW6tNHqavDrqNuhlYNmhx1KpKaTE3Xgk5pSA093zV2DLti7KeaQxXKpZ0x4w0tZVbTugo9b6ORA9fbloIlW3MdZ6JMWrHIvX506UHBvKWdfCAZzOq8ViqPZ1x9btamOZSZpuG+Stvt9sa4saOf8YbO7ApjVhx7Uxqvh+aSVqaaQvseML6boKwYDWsh6tQPH4XMwRj/9L0ib3P5vz5sKv1d5xw54x3K+FxY+0xXHVflivS5RllIppBc2Bmt1yQyCbRbop0ZyGOkTy6SkcgyjO1GWEixZAkqolMkCWpgmSJibn+qsjDUjQmpaq/IXEj75mUvXvUvotdVTKqyfNryW6btNMpcDeZDlEsWY6Mf6jawHWCFPFqRKsS24hxsyk18w8oz6vzSUqvVqtWEUXs5zIEZyfrkj4aUpREWI1fYNFOYRYME1ufHVsC+bgm58Gpd5X25iPpXw74btPxWqvPMAN+7mVjYCh5iNL1cFW49O7yyyAQkygv8dtfzT7w60bcG5PYKluuWWi5sZ5lbmANveHy4T/5S+MaG/L/8mKjvr8Z77RUZVJfLlmRTM9mYPstkNw61O2g4ppvNDBR+k9l2a45/lijXFV3vuKoewNV+bSnHUixt7iqW2uwoeLwubJ2dhlmjC/2s7E2Dm68Hw5Fho/qrKK/YXsLKfDHBioZ0QifUflzttxx7vqEZ8EUJCyNf4Zq/fwG6NgWD
+sidebar_class_name: "post api-method"
+info_path: apis/rest/5.0/reference/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+proxy: https://cors-api-18af4d883f64.herokuapp.com
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Lock Campaign"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/lockApplicationOwnerCampaign"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API is used to lock campaign after validating whether Application Owner campaign is completed or not.
+The `Authorization` must have `Bearer` followed by `Token`.
+Mandatory params:
+`campaignId`
+`verifier`
+Optional params:
+`certkey`
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"campaignId"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"305"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"verifier"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"admin"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Lock Campaign - SUCCESS
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Credentials
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Origin
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Cache-Control
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Expires
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Referrer-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"Total Incomplete certification"}
+                        required={false}
+                        schemaName={"undefined[]"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"array","items":{},"example":[]}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"Total locked certification"}
+                        required={false}
+                        schemaName={"string[]"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"array","items":{"type":"string","example":"AOTest0610__1 - AN2022 (ANtest UserAN2022)"},"example":["AOTest0610__1 - AN2022 (ANtest UserAN2022)"]}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"lockedcertkey"}
+                        required={false}
+                        schemaName={"number[]"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"array","items":{"type":"number","example":12877},"example":[12877]}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Success"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"Total Incomplete certification\": [],\n  \"Total locked certification\": [\n    \"AOTest0610__1 - AN2022 (ANtest UserAN2022)\"\n  ],\n  \"errorCode\": \"0\",\n  \"lockedcertkey\": [\n    12877\n  ],\n  \"msg\": \"Success\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Lock Campaign - SUCCESS"}
+                  value={"Lock Campaign - SUCCESS"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"Total Incomplete certification\": [],\n  \"Total locked certification\": [\n    \"AOTest0610__1 - AN2022 (ANtest UserAN2022)\"\n  ],\n  \"errorCode\": \"0\",\n  \"lockedcertkey\": [\n    12877\n  ],\n  \"msg\": \"Success\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

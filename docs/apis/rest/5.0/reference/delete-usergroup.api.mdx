@@ -1,0 +1,293 @@
+---
+id: delete-usergroup
+title: "Delete UserGroup"
+description: "This API delete usergroup in SSM."
+sidebar_label: "Delete UserGroup"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVl1v2zYU/SvEfdoAfdlNsFhDgaWqW2RrPhC72IDYqGnp2mIjkQxJ2VEN/feBlOwoTdCkwB6Wl8jU5T2H9557qB0YutYQ38BaiUpqmHuQoU4Vk4YJDjFMc6bJ6dUZybBAg6TSqFwsYZxMJufBjE9zJIvTyuRCsW/U7luQstKG5HSDZPEOqUK1ICtRFGKLGVnWZDEVt8gXwYyfU55RI1RNJFW01PGMLywGpyUuvO6HA1yAB0KicghnGcTQUvq8DwAPFN5VqM07kdUQ7yAV3CA39pFKWbDU7Q2/anu0Heg0x5LaJ1NLhBjE8iumBjyQyiIZhtq+PVDohWqjGF+DB3hPS1nYJYPanEo2hMaD/RF+vEOXVN1V+A2apjmsO8j3bbXt2T7ukTe0qPA7Pg+gfcxHiV1uhVoKrtvkwyiy/x43+gmiBznSDFXLhxp8tmTPnGpCjUeGI/IeUzKMBickGsRHb+LBMfl4PgXLZoJqg+q1+U4lTXP0E1ELg+EgGHQ5jJ8IcctezStJJtcf/OnlX+OLt0fZanCUZpEfDQe/+UfLEfono+jEH43S4XCAb0aY4e/kipr8bejg/vGTVkz+tJboX7qy6ddCc6E5W63aPv9HqkSlhEpE9oLGIivHUq9f6FmVpqj1TwqxRwEi6GD6uVrxlWhyYQdWCu3OQU0OMYQP87tXnHbCsIa0g0oVEENujNRxGO4McspNE2i6YTU3aSGqLEhFGY6T85BKFm6OwYMNVYwuO+7tlqdS79at1a1oVRiID5VommZuaaSVYqZ2PJbOv6y/QXwz77+e2E61UP2gQ50td3soFwZxFwRe9/BBqJJa8D//bsfCKuD6wcHG++783MR7wPhKOBrMdAPpSkbG3KCSimkkZxlyw0xNEltHZ/DXuEKFPEV49g5IRFFgaleIVGLDMtTE5EgyNJQVmoiV+6krKYUymJG265qshHJvXmbxy/gs+dU2EZVukY+DKLDCMqhKfbmyvsFS7MmiU4MTggsKoR0wmrrGd9Wx55u0zGzZHilru90G/TT6EIclZTayW/mjF2XLXLAUucY+jHMqMnScn6JQ9zoQah12e3X46SwZX0zG/jCIgtyUhU187xdi7Tr4OEef5Vb6nY+ElSwEzXQ4jAajMDoKu0J/sUm+XNBNHejN2gnMzl9JeY/xM67/qPe9O/R/9inQzZjBexPKgjLurl1br11nMDfwvcHMPcitBcU3sNstqcbPqmgau3xXobLjPn+wEDft+0vQOcEt1vYa6d0DznGcGT618sbb7zhNU5Tmh7HznkteXU6m1iS6j5iy9VdFt/YDh24hhhnMwH0NHS4ht76DgvJ1Rdc2vs1r//4F8Fdrvw==
+sidebar_class_name: "post api-method"
+info_path: apis/rest/5.0/reference/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+proxy: https://cors-api-18af4d883f64.herokuapp.com
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete UserGroup"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/deleteUserGroup"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API delete usergroup in SSM.
+The `Authorization` must have `Bearer` followed by `Token`.
+Mandatory params:
+`username`,
+`usergroup`
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"usergroup"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"testApi2"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"username"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"smarquez"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Delete UserGroup
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Success"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \"Success\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Delete UserGroup"}
+                  value={"Delete UserGroup"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \"Success\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

@@ -1,0 +1,434 @@
+---
+id: discontinue-campaigns-and-certifications
+title: "Discontinue Campaigns and Certifications"
+description: "This API discontinues certification and campaign."
+sidebar_label: "Discontinue Campaigns and Certifications"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVV21v2zYQ/ivEfdoAyZKVuktUBFiqukPa5QW1h21IgpqmzhYbilRJyo5n+L8PpGRHbYzU3Ydhy5fI1PG5u+eOD09rsHRuIL0BRsuK8rk0cBdAjoZpXlmuJKQwLrghZ9fnJOeGKWm5rNEQhtryGWfUWREqc7KF6N3KcYFkclbbQmn+l7eYkLI2lhR0gWTyGqlGPSEzJYRaYk6mKzIZq3uUk96tvKAyp1bpFamopqVJb+Vki83zya2cLFDzGUc9uZVXPkoqurao7T2uJhCAqlB79+c5pNCJP9umeybzrJuJgQA0fq7R2NcqX0G6BrcHpXWPtKpEaxh9Mo6dNRhWYEndk11VCCmo6SdkFgKotPNvORoPs0uhY2us5nIOAeADLSvhlhLYBNDm8Lxl31luuXjelOYll7DZbHaLPqY3j4yQHSW+mF+Rkq5hQUWNXycCCXSChT50A3r06h1rNJWSpvGcxLH792WnHRxOAAXSHLWHOmMMjQkzJa1WIjxzPRVmGnOUllNh9hZpD0dW1wgu0L2AV5rP+f6C78EqrK3SKBKKUVEoYz1uRlmBW9hDkSplbMgKZPencUAqjdsfHvINtXgo0rioA5IckXe1IEmcxCRJ0sHLND4iv1yMPdrwoeIaDyZsVMuA/EQu6Ir0T04GpJ+kcZzG8Q7vA85Qa9ThtRKcrQ7FNbTEUDV8O5gR6kXT4IfsPqtamlfKYtTv9VsMG2ZK3fOD6cqy0Ye34fjq/fDy9OTF4Phkenwcsmk8CF9gPAhpv5+HOXuZ4PFgOk2Ojl+Ra2qL06hxZzVnNhxrKk2ltA1HyGrN7cEclPQhpHM8PeoPjl7GcfyKcMlEneOonuaqpFwa7+gP308obTheVRg2cnhwBaUyks9mLdJb7Yj/Tog3w8s/G2H5b+skaq10pnJ83jZ2tqWZfyPpR6HK/x1V7YQPMbQhPomjEdoSbaHyVjscv9QWkEK05/6DAIw/XW4IWEOtRSteJo2itUVJpd30DF3wlbRMqDrvMVVGw+wiohWPFgMn+FRzOm1zb7Y8lfZ23c0WM1oLC+mOzs1mc+fC2B6QmzVM/YDgBghIb+66r0euixpXXaNdsVzsLilvBmlrBEH78Fbpkjrn735vJMp154fH+364LfE/uOYC4HKmfCzcNgLZ8EaG0qKuNDdIzv2tZFckc2T6scqrJEqGsHfyypQQyPyUVWm14DkaYgskOVrKhSFq5n+aunJCgzlpym/ITGn/5ttR/DA8z35scjKN50Ev7rk2s6hLczVzCswZdnqjbQnfDd4ogkYBKPPVl9TT7/IbNZFB8FV7LZfLXhfG7OywpNxZtis/d6wczYIzlAa7brzmk8TH/NQL9a97Ss+jdq+Jfj3PhpejYZj04l5hS+GAH0Kh5r6CX2J0o1xWYSt0UV0JRXMTJXH/JIpfRC3RHx3Ix0u6WPXMYu67zB3EkspOxN8x6nzRE51x9P88mLen1eKDjSpBm+PjSV+3cnWzb1x3Hyd+nEpvYL2eUoO/abHZuOXPNWonHnePguS1Yzsqel1pjm/3xvT65SX46aW1CbY73ERY2Wdt7zq6e301GjvJaT8gyka2NV26jwu6hBRu4Rb898nuIvDraxBUzms6d/YNrvv7Gx+Wtwg=
+sidebar_class_name: "post api-method"
+info_path: apis/rest/5.0/reference/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+proxy: https://cors-api-18af4d883f64.herokuapp.com
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Discontinue Campaigns and Certifications"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/discontinueCampaign"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API discontinues certification and campaign.
+The `Authorization` must have `Bearer` followed by `Token`.
+Mandatory params:
+`campaignid`
+`verifier`
+Optional params:
+`certkey`
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"campaignid"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"2"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"certkey"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"1"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"verifier"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"admin"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Discontinue Campaigns and Certifications
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Credentials
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Origin
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Cache-Control
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Expires
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Referrer-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"campaignid"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"2"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"certkey"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"1"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Discontinued"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"campaignid\": \"2\",\n  \"certkey\": \"1\",\n  \"errorCode\": \"0\",\n  \"msg\": \"Discontinued\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Discontinue Campaigns and Certifications"}
+                  value={"Discontinue Campaigns and Certifications"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"campaignid\": \"2\",\n  \"certkey\": \"1\",\n  \"errorCode\": \"0\",\n  \"msg\": \"Discontinued\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

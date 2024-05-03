@@ -1,0 +1,937 @@
+---
+id: fetch-request-history-details
+title: "Fetch Request History Details"
+description: "This API call can be used to fetch the request history details of a request."
+sidebar_label: "Fetch Request History Details"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: apis/rest/5.0/reference/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+proxy: https://cors-api-18af4d883f64.herokuapp.com
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Fetch Request History Details"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/fetchRequestHistoryDetails"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API call can be used to fetch the request history details of a request.
+
+The `Authorization` must have `Bearer` followed by `Token`. 
+
+Mandatory params:
+`requestkey`
+
+Optional params:
+`taskmetadatalength` - Modifies the character limit of provisioning comments and provisioning metadata upto maximum of 10000.
+`hideblankapprovername` - If true, prevents printing the firstname/lastname if null in the "State" field(Default : false)
+ 
+***Note*** - Provisioning comments in the response will be limited to 200 characters. Provisioning metadata in the response will be limited to 400 characters.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"multipart/form-data"}
+    value={"multipart/form-data-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"requestkey"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"387"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Fetch Request History Details
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Credentials
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Origin
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Cache-Control
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Expires
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Referrer-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"count"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":8}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"SUCCESS"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                requestHistoryDetails
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <SchemaItem
+                              collapsible={true}
+                              className={"schemaItem"}
+                            >
+                              <details
+                                style={{}}
+                                className={"openapi-markdown__details"}
+                              >
+                                <summary
+                                  style={{}}
+                                >
+                                  <span
+                                    className={"openapi-schema__container"}
+                                  >
+                                    <strong
+                                      className={"openapi-schema__property"}
+                                    >
+                                      Owner
+                                    </strong><span
+                                      className={"openapi-schema__name"}
+                                    >
+                                       object[]
+                                    </span>
+                                  </span>
+                                </summary><div
+                                  style={{"marginLeft":"1rem"}}
+                                >
+                                  <li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                                    >
+                                      Array [
+                                    </div>
+                                  </li><SchemaItem
+                                    collapsible={false}
+                                    name={"Access"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Account Operators"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"Approve Date"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":""}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"Assignee"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Saviynt AdminUser (admin)"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"Business Justification"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Entitlement added as part of Modify Role-[ProjectManager] Request Auto Approved  CREATED_SNOW::::REQ0010161::::555cfda30f0363007c378f8ce1050e70::::625cfda30f0363007c378f8ce1050ea2:::: null"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"Endpoint"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Office365"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"Entitlement Type"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"AADGroup"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"Entitlement value"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"CN=Account Operators,CN=Builtin,DC=corpAD,DC=saviynt,DC=com"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"Request Type"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Request for Access"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"Start Date"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"2018-08-23 06:12:25"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"State"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Rejected (Saviynt AdminUser(admin))"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"endpointname"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Office365"}}
+                                  >
+                                    
+                                  </SchemaItem><li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                                    >
+                                      ]
+                                    </div>
+                                  </li>
+                                </div>
+                              </details>
+                            </SchemaItem><SchemaItem
+                              collapsible={true}
+                              className={"schemaItem"}
+                            >
+                              <details
+                                style={{}}
+                                className={"openapi-markdown__details"}
+                              >
+                                <summary
+                                  style={{}}
+                                >
+                                  <span
+                                    className={"openapi-schema__container"}
+                                  >
+                                    <strong
+                                      className={"openapi-schema__property"}
+                                    >
+                                      Owners Manager
+                                    </strong><span
+                                      className={"openapi-schema__name"}
+                                    >
+                                       object[]
+                                    </span>
+                                  </span>
+                                </summary><div
+                                  style={{"marginLeft":"1rem"}}
+                                >
+                                  <li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                                    >
+                                      Array [
+                                    </div>
+                                  </li><SchemaItem
+                                    collapsible={false}
+                                    name={"Access"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Account Operators"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"Approve Date"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"2018-08-23 06:12:25"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"Assignee"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"aws Rachels (awsadmin)"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"Business Justification"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Entitlement added as part of Modify Role-[ProjectManager] Request Auto Approved  CREATED_SNOW::::REQ0010161::::555cfda30f0363007c378f8ce1050e70::::625cfda30f0363007c378f8ce1050ea2:::: null"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"Endpoint"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Office365"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"Entitlement Type"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"AADGroup"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"Entitlement value"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"CN=Account Operators,CN=Builtin,DC=corpAD,DC=saviynt,DC=com"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"Request Type"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Request for Access"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"Start Date"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"2018-08-23 06:11:53"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"State"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Rejected (Saviynt AdminUser(admin))"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"endpointname"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Office365"}}
+                                  >
+                                    
+                                  </SchemaItem><li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                                    >
+                                      ]
+                                    </div>
+                                  </li>
+                                </div>
+                              </details>
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"comments"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"dynamicattributes"}
+                              required={false}
+                              schemaName={"undefined[]"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"array","items":{},"example":[]}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={true}
+                              className={"schemaItem"}
+                            >
+                              <details
+                                style={{}}
+                                className={"openapi-markdown__details"}
+                              >
+                                <summary
+                                  style={{}}
+                                >
+                                  <span
+                                    className={"openapi-schema__container"}
+                                  >
+                                    <strong
+                                      className={"openapi-schema__property"}
+                                    >
+                                      requestAccessDetails
+                                    </strong><span
+                                      className={"openapi-schema__name"}
+                                    >
+                                       object[]
+                                    </span>
+                                  </span>
+                                </summary><div
+                                  style={{"marginLeft":"1rem"}}
+                                >
+                                  <li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                                    >
+                                      Array [
+                                    </div>
+                                  </li><SchemaItem
+                                    collapsible={false}
+                                    name={"Access"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Account Operators"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"End Date"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":""}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"Endpoint"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Office365"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"Entitlement Type"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"AADGroup"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"Entitlement value"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"CN=Account Operators,CN=Builtin,DC=corpAD,DC=saviynt,DC=com"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"Request Type"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Request for Access"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"Start Date"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"2018-08-23 06:11:53"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"comments"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Entitlement added as part of Modify Role-[ProjectManager] Request Auto Approved  CREATED_SNOW::::REQ0010161::::555cfda30f0363007c378f8ce1050e70::::625cfda30f0363007c378f8ce1050ea2:::: null"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"endpointname"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Office365"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"parentrequestkey"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"724"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"request_accesskey"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"725"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"requestkey"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"387"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"status"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Task Created"}}
+                                  >
+                                    
+                                  </SchemaItem><li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                                    >
+                                      ]
+                                    </div>
+                                  </li>
+                                </div>
+                              </details>
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"requestId"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"710733"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"requestedfor"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"admin"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"requestor"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"admin"}}
+                            >
+                              
+                            </SchemaItem>
+                          </div>
+                        </details>
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"tabList"}
+                        required={false}
+                        schemaName={"string[]"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"array","items":{"type":"string","example":"comments"},"example":["comments","Owner","Owners Manager","dynamicattributes","requestor","requestedfor"]}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"count\": 8,\n  \"errorCode\": \"0\",\n  \"msg\": \"SUCCESS\",\n  \"requestHistoryDetails\": {\n    \"Owner\": [\n      {\n        \"Access\": \"Account Operators\",\n        \"Approve Date\": \"\",\n        \"Assignee\": \"Saviynt AdminUser (admin)\",\n        \"Business Justification\": \"Entitlement added as part of Modify Role-[ProjectManager] Request Auto Approved  CREATED_SNOW::::REQ0010161::::555cfda30f0363007c378f8ce1050e70::::625cfda30f0363007c378f8ce1050ea2:::: null\",\n        \"Endpoint\": \"Office365\",\n        \"Entitlement Type\": \"AADGroup\",\n        \"Entitlement value\": \"CN=Account Operators,CN=Builtin,DC=corpAD,DC=saviynt,DC=com\",\n        \"Request Type\": \"Request for Access\",\n        \"Start Date\": \"2018-08-23 06:12:25\",\n        \"State\": \"Rejected (Saviynt AdminUser(admin))\",\n        \"endpointname\": \"Office365\"\n      },\n      {\n        \"Access\": \"ProjectManager\",\n        \"Approve Date\": \"\",\n        \"Assignee\": \"Saviynt AdminUser (admin)\",\n        \"Business Justification\": \"Approval Request for Update Role Auto Approved  CREATED_SNOW::::REQ0010161::::555cfda30f0363007c378f8ce1050e70::::625cfda30f0363007c378f8ce1050ea2:::: null\",\n        \"Endpoint\": \"\",\n        \"Entitlement Type\": \"\",\n        \"Request Type\": \"Update Role\",\n        \"Start Date\": \"2018-08-23 06:12:26\",\n        \"State\": \"Rejected (Saviynt AdminUser(admin))\",\n        \"endpointname\": \"\"\n      }\n    ],\n    \"Owners Manager\": [\n      {\n        \"Access\": \"Account Operators\",\n        \"Approve Date\": \"2018-08-23 06:12:25\",\n        \"Assignee\": \"aws Rachels (awsadmin)\",\n        \"Business Justification\": \"Entitlement added as part of Modify Role-[ProjectManager] Request Auto Approved  CREATED_SNOW::::REQ0010161::::555cfda30f0363007c378f8ce1050e70::::625cfda30f0363007c378f8ce1050ea2:::: null\",\n        \"Endpoint\": \"Office365\",\n        \"Entitlement Type\": \"AADGroup\",\n        \"Entitlement value\": \"CN=Account Operators,CN=Builtin,DC=corpAD,DC=saviynt,DC=com\",\n        \"Request Type\": \"Request for Access\",\n        \"Start Date\": \"2018-08-23 06:11:53\",\n        \"State\": \"Rejected (Saviynt AdminUser(admin))\",\n        \"endpointname\": \"Office365\"\n      },\n      {\n        \"Access\": \"ProjectManager\",\n        \"Approve Date\": \"2018-08-23 06:12:26\",\n        \"Assignee\": \"aws Rachels (awsadmin)\",\n        \"Business Justification\": \"Approval Request for Update Role Auto Approved  CREATED_SNOW::::REQ0010161::::555cfda30f0363007c378f8ce1050e70::::625cfda30f0363007c378f8ce1050ea2:::: null\",\n        \"Endpoint\": \"\",\n        \"Entitlement Type\": \"\",\n        \"Request Type\": \"Update Role\",\n        \"Start Date\": \"2018-08-23 06:11:53\",\n        \"State\": \"Rejected (Saviynt AdminUser(admin))\",\n        \"endpointname\": \"\"\n      }\n    ],\n    \"comments\": \"string\",\n    \"dynamicattributes\": [],\n    \"requestAccessDetails\": [\n      {\n        \"Access\": \"Account Operators\",\n        \"End Date\": \"\",\n        \"Endpoint\": \"Office365\",\n        \"Entitlement Type\": \"AADGroup\",\n        \"Entitlement value\": \"CN=Account Operators,CN=Builtin,DC=corpAD,DC=saviynt,DC=com\",\n        \"Request Type\": \"Request for Access\",\n        \"Start Date\": \"2018-08-23 06:11:53\",\n        \"comments\": \"Entitlement added as part of Modify Role-[ProjectManager] Request Auto Approved  CREATED_SNOW::::REQ0010161::::555cfda30f0363007c378f8ce1050e70::::625cfda30f0363007c378f8ce1050ea2:::: null\",\n        \"endpointname\": \"Office365\",\n        \"parentrequestkey\": \"724\",\n        \"request_accesskey\": \"725\",\n        \"requestkey\": \"387\",\n        \"status\": \"Task Created\"\n      },\n      {\n        \"Access\": \"ProjectManager\",\n        \"End Date\": \"2018-09-02 06:11:53\",\n        \"Endpoint\": \"\",\n        \"Entitlement Type\": \"\",\n        \"Request Type\": \"Update Role\",\n        \"Start Date\": \"2018-08-23 06:11:53\",\n        \"comments\": \"Approval Request for Update Role Auto Approved  CREATED_SNOW::::REQ0010161::::555cfda30f0363007c378f8ce1050e70::::625cfda30f0363007c378f8ce1050ea2:::: null\",\n        \"endpointname\": \"\",\n        \"parentrequestkey\": \"\",\n        \"request_accesskey\": \"724\",\n        \"requestkey\": \"387\",\n        \"status\": \"Task Created\"\n      }\n    ],\n    \"requestId\": \"710733\",\n    \"requestedfor\": \"admin\",\n    \"requestor\": \"admin\"\n  },\n  \"tabList\": [\n    \"comments\",\n    \"Owner\",\n    \"Owners Manager\",\n    \"dynamicattributes\",\n    \"requestor\",\n    \"requestedfor\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Fetch Request History Details"}
+                  value={"Fetch Request History Details"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"count\": 8,\n  \"errorCode\": \"0\",\n  \"msg\": \"SUCCESS\",\n  \"requestHistoryDetails\": {\n    \"Owner\": [\n      {\n        \"Access\": \"Account Operators\",\n        \"Approve Date\": \"\",\n        \"Assignee\": \"Saviynt AdminUser (admin)\",\n        \"Business Justification\": \"Entitlement added as part of Modify Role-[ProjectManager] Request Auto Approved  CREATED_SNOW::::REQ0010161::::555cfda30f0363007c378f8ce1050e70::::625cfda30f0363007c378f8ce1050ea2:::: null\",\n        \"Endpoint\": \"Office365\",\n        \"Entitlement Type\": \"AADGroup\",\n        \"Entitlement value\": \"CN=Account Operators,CN=Builtin,DC=corpAD,DC=saviynt,DC=com\",\n        \"Request Type\": \"Request for Access\",\n        \"Start Date\": \"2018-08-23 06:12:25\",\n        \"State\": \"Rejected (Saviynt AdminUser(admin))\",\n        \"endpointname\": \"Office365\"\n      },\n      {\n        \"Access\": \"ProjectManager\",\n        \"Approve Date\": \"\",\n        \"Assignee\": \"Saviynt AdminUser (admin)\",\n        \"Business Justification\": \"Approval Request for Update Role Auto Approved  CREATED_SNOW::::REQ0010161::::555cfda30f0363007c378f8ce1050e70::::625cfda30f0363007c378f8ce1050ea2:::: null\",\n        \"Endpoint\": \"\",\n        \"Entitlement Type\": \"\",\n        \"Request Type\": \"Update Role\",\n        \"Start Date\": \"2018-08-23 06:12:26\",\n        \"State\": \"Rejected (Saviynt AdminUser(admin))\",\n        \"endpointname\": \"\"\n      }\n    ],\n    \"Owners Manager\": [\n      {\n        \"Access\": \"Account Operators\",\n        \"Approve Date\": \"2018-08-23 06:12:25\",\n        \"Assignee\": \"aws Rachels (awsadmin)\",\n        \"Business Justification\": \"Entitlement added as part of Modify Role-[ProjectManager] Request Auto Approved  CREATED_SNOW::::REQ0010161::::555cfda30f0363007c378f8ce1050e70::::625cfda30f0363007c378f8ce1050ea2:::: null\",\n        \"Endpoint\": \"Office365\",\n        \"Entitlement Type\": \"AADGroup\",\n        \"Entitlement value\": \"CN=Account Operators,CN=Builtin,DC=corpAD,DC=saviynt,DC=com\",\n        \"Request Type\": \"Request for Access\",\n        \"Start Date\": \"2018-08-23 06:11:53\",\n        \"State\": \"Rejected (Saviynt AdminUser(admin))\",\n        \"endpointname\": \"Office365\"\n      },\n      {\n        \"Access\": \"ProjectManager\",\n        \"Approve Date\": \"2018-08-23 06:12:26\",\n        \"Assignee\": \"aws Rachels (awsadmin)\",\n        \"Business Justification\": \"Approval Request for Update Role Auto Approved  CREATED_SNOW::::REQ0010161::::555cfda30f0363007c378f8ce1050e70::::625cfda30f0363007c378f8ce1050ea2:::: null\",\n        \"Endpoint\": \"\",\n        \"Entitlement Type\": \"\",\n        \"Request Type\": \"Update Role\",\n        \"Start Date\": \"2018-08-23 06:11:53\",\n        \"State\": \"Rejected (Saviynt AdminUser(admin))\",\n        \"endpointname\": \"\"\n      }\n    ],\n    \"comments\": null,\n    \"dynamicattributes\": [],\n    \"requestAccessDetails\": [\n      {\n        \"Access\": \"Account Operators\",\n        \"End Date\": \"\",\n        \"Endpoint\": \"Office365\",\n        \"Entitlement Type\": \"AADGroup\",\n        \"Entitlement value\": \"CN=Account Operators,CN=Builtin,DC=corpAD,DC=saviynt,DC=com\",\n        \"Request Type\": \"Request for Access\",\n        \"Start Date\": \"2018-08-23 06:11:53\",\n        \"comments\": \"Entitlement added as part of Modify Role-[ProjectManager] Request Auto Approved  CREATED_SNOW::::REQ0010161::::555cfda30f0363007c378f8ce1050e70::::625cfda30f0363007c378f8ce1050ea2:::: null\",\n        \"endpointname\": \"Office365\",\n        \"parentrequestkey\": \"724\",\n        \"request_accesskey\": \"725\",\n        \"requestkey\": \"387\",\n        \"status\": \"Task Created\"\n      },\n      {\n        \"Access\": \"ProjectManager\",\n        \"End Date\": \"2018-09-02 06:11:53\",\n        \"Endpoint\": \"\",\n        \"Entitlement Type\": \"\",\n        \"Request Type\": \"Update Role\",\n        \"Start Date\": \"2018-08-23 06:11:53\",\n        \"comments\": \"Approval Request for Update Role Auto Approved  CREATED_SNOW::::REQ0010161::::555cfda30f0363007c378f8ce1050e70::::625cfda30f0363007c378f8ce1050ea2:::: null\",\n        \"endpointname\": \"\",\n        \"parentrequestkey\": \"\",\n        \"request_accesskey\": \"724\",\n        \"requestkey\": \"387\",\n        \"status\": \"Task Created\"\n      }\n    ],\n    \"requestId\": \"710733\",\n    \"requestedfor\": \"admin\",\n    \"requestor\": \"admin\"\n  },\n  \"tabList\": [\n    \"comments\",\n    \"Owner\",\n    \"Owners Manager\",\n    \"dynamicattributes\",\n    \"requestor\",\n    \"requestedfor\"\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      
