@@ -5,17 +5,16 @@ import TabItem from '@theme/TabItem';
 
 
 ## ImportAccountEntJSON
-A ImportAccountEntJSON typically refers to a JSON formatted configuration section used in Saviynt to define to map account and entitlement attributes of the target application to account and entitlement attributes of IGA for account import.
+An ImportAccountEntJSON typically refers to a JSON formatted configuration section used in Saviynt to define to map account and entitlement attributes of the target application to account and entitlement attributes of IGA for account import.
 
 ### Key Elements of ImportAccountEntJSON
 
-- **Authentication Information** : It includes details about the type of authentication required (e.g., OAuth2, Basic, JWT) and the necessary credentials or tokens to authenticate the connection securely.
-- **Connection Details**  This includes URLs, ports, and endpoints to which the application needs to connect. It also specifies the HTTP methods to use (GET, POST, PUT, DELETE) and any special headers or parameters required by the API.
-- **Error Handling**  Configuration often details how to handle specific errors, such as authentication failures or connection timeouts, which can be crucial for maintaining reliable operations.
-- **Security Settings**  This may include configurations for SSL/TLS settings, key files, or other security-related options that ensure the connection is secure.
-- **Rate Limiting and Throttling**  Some ConnectionJSON files may specify settings related to API rate limits, like maximum number of requests per second, to prevent service overload.
+- **Attribute Mapping** (colsToPropsMap): This maps the attributes from the target application to the corresponding attributes in EIC. It's crucial to understand the source attributes available and how they correlate to EIC attributes to ensure accurate data mapping.
+- **Error Handling**: Includes various fields such as expiryError, authError, retryFailureStatusCode, timeOutError, errorPath, and maxRefreshTryCount. These fields handle different error scenarios during the import process, such as authentication failures or data parsing issues.
+- **Transformation and Formatting**: Often, the data from the source system needs to be transformed or formatted before being mapped to EIC attributes. This might include converting timestamps, formatting strings, or applying conditional logic.
+- **Filtering and Thresholds**: Sometimes, you might need to set thresholds for importing data, such as only importing active accounts or those that meet certain criteria. This helps in managing the volume of data imported and maintaining the relevance of the data.
 
-The following table describes all the attributes in ConnectionJSON:
+The following table describes all the attributes in ImportAccountEntJSON:
 
 | Attributes Variable       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 |---------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
