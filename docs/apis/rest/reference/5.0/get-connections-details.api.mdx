@@ -1,0 +1,778 @@
+---
+id: get-connections-details
+title: "Get Connections Details"
+description: "This API returns connection details in SSM."
+sidebar_label: "Get Connections Details"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: apis/rest/reference/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+proxy: https://cors-api-18af4d883f64.herokuapp.com
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Connections Details"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/getConnectionDetails"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API returns connection details in SSM. 
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+Mandatory params:
+`connectiontype` or `connectionname`(if both are passed then connectionkey will be considered)
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"multipart/form-data"}
+    value={"multipart/form-data-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"connectionkey"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"120"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"connectionname"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"Workday"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Get Connections Details - Success
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Credentials
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Origin
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Cache-Control
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Expires
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Referrer-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                connectionattributes
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <SchemaItem
+                              collapsible={false}
+                              name={"ACCOUNTS_IMPORT_JSON"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"CHANGEPASSJSON"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"COMBINEDCREATEREQUEST"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"CONNECTIONJSON"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"{\r\n\t\"authentications\": {\r\n\t\t\"login\": {\r\n\t\t\t\"authType\": \"basic\",\r\n\t\t\t\"properties\": {\r\n\t\t\t\t\"SOAP_ENDPOINT\": \"https://wd2-impl-services1.workday.com/ccx/service/saviynt_pt1/Human_Resources/34.0\",\r\n\t\t\t\t\"USERNAME\": \"ISU001@saviynt_pt1\",\r\n\t\t\t\t\"PASSWORD\": \"S@v1ynt@321\",\r\n\t\t\t\t\"PASSWORD_TYPE\": \"PasswordText\",\r\n\t\t\t\t\"REQUESTPARAMS\": {\r\n\t\t\t\t\t\"CONTENT-TYPE\": \"text/xml;charset=UTF-8\",\r\n\t\t\t\t\t\"Connection\": \"Keep-Alive\",\r\n\t\t\t\t\t\"Keep-Alive\": \"timeout=600, max=1000\"\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n}"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"CREATEACCOUNTJSON"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"DATA_TO_IMPORT"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"DATEFORMAT"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"DELETEACCOUNTJSON"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"DISABLEACCOUNTJSON"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"ENABLEACCOUNTJSON"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"GRANTACCESSJSON"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"HR_IMPORT_JSON"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"{\r\n  \"REQUESTXML1\": \"<soapenv:Envelope xmlns:bsvc=\\\"urn:com.workday/bsvc\\\" xmlns:soapenv=\\\"http://schemas.xmlsoap.org/soap/envelope/\\\"><soapenv:Header><wsse:Security soapenv:mustUnderstand=\\\"1\\\" xmlns:wsse=\\\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd\\\" xmlns:wsu=\\\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd\\\"><wsse:UsernameToken wsu:Id=\\\"UsernameToken-AF7DBE0D8832CC288F150119366041544\\\"><wsse:Username>${USERNAME}</wsse:Username><wsse:Password Type=\\\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText\\\">${PASSWORD}</wsse:Password><wsse:Nonce EncodingType=\\\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary\\\">hVovDsRjkofd3OphNZ83kg==</wsse:Nonce><wsu:Created>2017-07-27T22:14:20.415Z</wsu:Created></wsse:UsernameToken></wsse:Security></soapenv:Header><soapenv:Body><bsvc:Get_Workers_Request bsvc:version=\\\"v33.1\\\"><bsvc:Request_Criteria><bsvc:Exclude_Inactive_Workers>false</bsvc:Exclude_Inactive_Workers><bsvc:Exclude_Employees>false</bsvc:Exclude_Employees><bsvc:Exclude_Contingent_Workers>false</bsvc:Exclude_Contingent_Workers></bsvc:Request_Criteria><bsvc:Response_Filter><bsvc:Page>${PAGE_NUMBER}</bsvc:Page><bsvc:Count>${PAGE_SIZE}</bsvc:Count></bsvc:Response_Filter><bsvc:Response_Group><bsvc:Include_Reference>false</bsvc:Include_Reference><bsvc:Include_Personal_Information>true</bsvc:Include_Personal_Information><bsvc:Include_Additional_Jobs>false</bsvc:Include_Additional_Jobs><bsvc:Include_Employment_Information>true</bsvc:Include_Employment_Information><bsvc:Include_Compensation>false</bsvc:Include_Compensation><bsvc:Include_Organizations>true</bsvc:Include_Organizations><bsvc:Exclude_Organization_Support_Role_Data>true</bsvc:Exclude_Organization_Support_Role_Data><bsvc:Exclude_Location_Hierarchies>true</bsvc:Exclude_Location_Hierarchies><bsvc:Exclude_Cost_Centers>false</bsvc:Exclude_Cost_Centers><bsvc:Exclude_Cost_Center_Hierarchies>true</bsvc:Exclude_Cost_Center_Hierarchies><bsvc:Exclude_Companies>true</bsvc:Exclude_Companies><bsvc:Exclude_Company_Hierarchies>true</bsvc:Exclude_Company_Hierarchies><bsvc:Exclude_Matrix_Organizations>true</bsvc:Exclude_Matrix_Organizations><bsvc:Exclude_Pay_Groups>true</bsvc:Exclude_Pay_Groups><bsvc:Exclude_Regions>true</bsvc:Exclude_Regions><bsvc:Exclude_Region_Hierarchies>true</bsvc:Exclude_Region_Hierarchies><bsvc:Exclude_Supervisory_Organizations>true</bsvc:Exclude_Supervisory_Organizations><bsvc:Exclude_Teams>true</bsvc:Exclude_Teams><bsvc:Exclude_Custom_Organizations>true</bsvc:Exclude_Custom_Organizations><bsvc:Include_Roles>true</bsvc:Include_Roles><bsvc:Include_Management_Chain_Data>true</bsvc:Include_Management_Chain_Data><bsvc:Include_Multiple_Managers_in_Management_Chain_Data>false</bsvc:Include_Multiple_Managers_in_Management_Chain_Data><bsvc:Include_Benefit_Enrollments>false</bsvc:Include_Benefit_Enrollments><bsvc:Include_Benefit_Eligibility>false</bsvc:Include_Benefit_Eligibility><bsvc:Include_Related_Persons>false</bsvc:Include_Related_Persons><bsvc:Include_Qualifications>false</bsvc:Include_Qualifications><bsvc:Include_Employee_Review>false</bsvc:Include_Employee_Review><bsvc:Include_Goals>false</bsvc:Include_Goals><bsvc:Include_Development_Items>false</bsvc:Include_Development_Items><bsvc:Include_Skills>false</bsvc:Include_Skills><bsvc:Include_Photo>false</bsvc:Include_Photo><bsvc:Include_Worker_Documents>false</bsvc:Include_Worker_Documents><bsvc:Include_Transaction_Log_Data>false</bsvc:Include_Transaction_Log_Data><bsvc:Include_Subevents_for_Corrected_Transaction>false</bsvc:Include_Subevents_for_Corrected_Transaction><bsvc:Include_Subevents_for_Rescinded_Transaction>false</bsvc:Include_Subevents_for_Rescinded_Transaction><bsvc:Include_Succession_Profile>false</bsvc:Include_Succession_Profile><bsvc:Include_Talent_Assessment>false</bsvc:Include_Talent_Assessment><bsvc:Include_Employee_Contract_Data>true</bsvc:Include_Employee_Contract_Data><bsvc:Include_Collective_Agreement_Data>false</bsvc:Include_Collective_Agreement_Data><bsvc:Include_Probation_Period_Data>false</bsvc:Include_Probation_Period_Data><bsvc:Include_Feedback_Received>false</bsvc:Include_Feedback_Received><bsvc:Include_User_Account>false</bsvc:Include_User_Account><bsvc:Include_Career>false</bsvc:Include_Career><bsvc:Include_Account_Provisioning>false</bsvc:Include_Account_Provisioning><bsvc:Include_Background_Check_Data>false</bsvc:Include_Background_Check_Data><bsvc:Include_Contingent_Worker_Tax_Authority_Form_Information>false</bsvc:Include_Contingent_Worker_Tax_Authority_Form_Information><bsvc:Exclude_Funds>true</bsvc:Exclude_Funds><bsvc:Exclude_Fund_Hierarchies>true</bsvc:Exclude_Fund_Hierarchies><bsvc:Exclude_Grants>true</bsvc:Exclude_Grants><bsvc:Exclude_Grant_Hierarchies>true</bsvc:Exclude_Grant_Hierarchies><bsvc:Exclude_Business_Units>true</bsvc:Exclude_Business_Units><bsvc:Exclude_Business_Unit_Hierarchies>true</bsvc:Exclude_Business_Unit_Hierarchies><bsvc:Exclude_Programs>true</bsvc:Exclude_Programs><bsvc:Exclude_Program_Hierarchies>true</bsvc:Exclude_Program_Hierarchies><bsvc:Exclude_Gifts>true</bsvc:Exclude_Gifts><bsvc:Exclude_Gift_Hierarchies>true</bsvc:Exclude_Gift_Hierarchies></bsvc:Response_Group></bsvc:Get_Workers_Request></soapenv:Body></soapenv:Envelope>\",\r\n  \"USERMAPPING1\": \"CITY:Worker_Data.Personal_Data.Contact_Data.Address_Data(Usage_Data->Type_Data->Type_Reference->ID=='WORK').Municipality,COMPANYNAME:Worker_Data.Employment_Data.Worker_Job_Data.Position_Organizations_Data.Position_Organization_Data.Organization_Data.Organization_Name,COSTCENTER:Worker_Data.Employment_Data.Worker_Job_Data.Position_Organizations_Data.Position_Organization_Data.Organization_Data.Organization_Code,COUNTRY:Worker_Data.Employment_Data.Worker_Job_Data.Position_Data.Business_Site_Summary_Data.Address_Data.Country_Reference.ID(@type=='ISO_3166-1_Alpha-3_Code'),CUSTOMPROPERTY16:Worker_Data.Employment_Data.Worker_Job_Data.Position_Data.Job_Profile_Summary_Data.Job_Family_Reference.ID(@type=='Job_Family_ID'),CUSTOMPROPERTY18:Worker_Data.Personal_Data.Name_Data.Preferred_Name_Data.Name_Detail_Data.Last_Name,CUSTOMPROPERTY20:Worker_Data.Employment_Data.Worker_Job_Data.Position_Data.Pay_Rate_Type_Reference.ID(@type=='Pay_Rate_Type_ID'),CUSTOMPROPERTY21:Worker_Data.Employment_Data.Worker_Job_Data.Position_Data.Business_Site_Summary_Data.Name,CUSTOMPROPERTY22:Worker_Data.User_ID,EMAIL:Worker_Data.Personal_Data.Contact_Data.Email_Address_Data(Usage_Data->Type_Data->Type_Reference->ID=='WORK').Email_Address,EMPLOYEEID:Worker_Data.Worker_ID,FIRSTNAME:Worker_Data.Personal_Data.Name_Data.Legal_Name_Data.Name_Detail_Data.First_Name,JOBCODE:Worker_Data.Employment_Data.Worker_Job_Data.Position_Data.Job_Profile_Summary_Data.Job_Profile_Reference.ID(@type=='Job_Profile_ID'),JOBCODEDESC:Worker_Data.Employment_Data.Worker_Job_Data.Position_Data.Job_Profile_Summary_Data.Job_Profile_Name,LASTNAME:Worker_Data.Personal_Data.Name_Data.Legal_Name_Data.Name_Detail_Data.Last_Name,LOCATION:Worker_Data.Employment_Data.Worker_Job_Data.Position_Data.Business_Site_Summary_Data.Location_Reference.ID(@type=='Location_ID'),CUSTOMPROPERTY30:Worker_Data.Employment_Data.Worker_Job_Data.Position_Data.Business_Site_Summary_Data.Location_Reference.ID(@type=='Location_ID'),LOCATIONDESC:Worker_Data.Employment_Data.Worker_Job_Data.Position_Data.Business_Site_Summary_Data.Location_Type_Reference.ID(@type=='Location_Type_ID'), MIDDLENAME:Worker_Data.Personal_Data.Name_Data.Legal_Name_Data.Name_Detail_Data.Middle_Name,PHONENUMBER:Worker_Data.Personal_Data.Contact_Data.Phone_Data(Usage_Data->Type_Data->Type_Reference->ID=='WORK').@Formatted_Phone,PREFEREDFIRSTNAME:Worker_Data.Personal_Data.Name_Data.Preferred_Name_Data.Name_Detail_Data.First_Name,REGIONCODE:Worker_Data.Personal_Data.Contact_Data.Address_Data(Usage_Data->Type_Data->Type_Reference->ID=='WORK').Postal_Code,STARTDATE:Worker_Data.Employment_Data.Worker_Status_Data.Hire_Date,STATE:Worker_Data.Personal_Data.Contact_Data.Address_Data(Usage_Data->Type_Data->Type_Reference->ID=='WORK').Country_Region_Descriptor,STATUSKEY:Worker_Data.Employment_Data.Worker_Status_Data.Active,STREET:Worker_Data.Personal_Data.Contact_Data.Address_Data(Usage_Data->Type_Data->Type_Reference->ID=='WORK').Address_Line_Data(@Type=='ADDRESS_LINE_1'),TITLE:Worker_Data.Employment_Data.Worker_Job_Data.Position_Data.Business_Title,USERNAME:Worker_Data.Worker_ID,OWNER:Worker_Data.Employment_Data.Worker_Job_Data.Position_Data.Manager_as_of_last_detected_manager_change_Reference.ID(@type=='Employee_ID')\",\r\n  \"PREFIX1\": \"wd\",\r\n  \"RESPONSETOTALRESULTS1\": \"Body.Get_Workers_Response.Response_Results.Total_Results\",\r\n  \"RESPONSEPAGERESULTS1\": \"Body.Get_Workers_Response.Response_Results.Page_Results\",\r\n  \"RESPONSEDATAPATH1\": \"Body.Get_Workers_Response.Response_Data.Worker\"\r\n}"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"PAGE_SIZE"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"PASSWORD"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"y//A5/5dsRuThK42K5e8rA=="}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"PASSWORD_MAX_LENGTH"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"PASSWORD_MIN_LENGTH"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"PASSWORD_NOOFCAPSALPHA"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"PASSWORD_NOOFDIGITS"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"PASSWORD_NOOFSPLCHARS"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"PASSWORD_TYPE"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"PasswordText"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"RESPONSEPATH_PAGERESULTS"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"RESPONSEPATH_TOTALRESULTS"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"RESPONSEPATH_USERLIST"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"REVOKEACCESSJSON"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"SOAP_ENDPOINT"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"https://wd2-impl-services1.workday.com/ccx/service/saviynt_pt1/Human_Resources/34.0"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"UPDATEACCOUNTJSON"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"UPDATEUSERJSON"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"USERNAME"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"ISU001@saviynt_pt1"}}
+                            >
+                              
+                            </SchemaItem>
+                          </div>
+                        </details>
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"connectionkey"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":120}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"connectionname"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Workday"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"connectiontype"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Workday-SOAP"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"createdby"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"admin(null null)"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"createdon"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"2020-03-12T11:49:15Z"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"defaultsavroles"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":""}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"description"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Workday"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"emailtemplate"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":""}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"errorcode"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":0}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"success"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"status"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":1}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"updatedby"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"admin(adminfname adminlname)"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"connectionattributes\": {\n    \"ACCOUNTS_IMPORT_JSON\": \"\",\n    \"CHANGEPASSJSON\": \"string\",\n    \"COMBINEDCREATEREQUEST\": \"\",\n    \"CONNECTIONJSON\": \"{\\r\\n\\t\\\"authentications\\\": {\\r\\n\\t\\t\\\"login\\\": {\\r\\n\\t\\t\\t\\\"authType\\\": \\\"basic\\\",\\r\\n\\t\\t\\t\\\"properties\\\": {\\r\\n\\t\\t\\t\\t\\\"SOAP_ENDPOINT\\\": \\\"https://wd2-impl-services1.workday.com/ccx/service/saviynt_pt1/Human_Resources/34.0\\\",\\r\\n\\t\\t\\t\\t\\\"USERNAME\\\": \\\"ISU001@saviynt_pt1\\\",\\r\\n\\t\\t\\t\\t\\\"PASSWORD\\\": \\\"S@v1ynt@321\\\",\\r\\n\\t\\t\\t\\t\\\"PASSWORD_TYPE\\\": \\\"PasswordText\\\",\\r\\n\\t\\t\\t\\t\\\"REQUESTPARAMS\\\": {\\r\\n\\t\\t\\t\\t\\t\\\"CONTENT-TYPE\\\": \\\"text/xml;charset=UTF-8\\\",\\r\\n\\t\\t\\t\\t\\t\\\"Connection\\\": \\\"Keep-Alive\\\",\\r\\n\\t\\t\\t\\t\\t\\\"Keep-Alive\\\": \\\"timeout=600, max=1000\\\"\\r\\n\\t\\t\\t\\t}\\r\\n\\t\\t\\t}\\r\\n\\t\\t}\\r\\n\\t}\\r\\n}\",\n    \"CREATEACCOUNTJSON\": \"\",\n    \"DATA_TO_IMPORT\": \"\",\n    \"DATEFORMAT\": \"\",\n    \"DELETEACCOUNTJSON\": \"\",\n    \"DISABLEACCOUNTJSON\": \"\",\n    \"ENABLEACCOUNTJSON\": \"\",\n    \"GRANTACCESSJSON\": \"\",\n    \"HR_IMPORT_JSON\": \"{\\r\\n  \\\"REQUESTXML1\\\": \\\"<soapenv:Envelope xmlns:bsvc=\\\\\\\"urn:com.workday/bsvc\\\\\\\" xmlns:soapenv=\\\\\\\"http://schemas.xmlsoap.org/soap/envelope/\\\\\\\"><soapenv:Header><wsse:Security soapenv:mustUnderstand=\\\\\\\"1\\\\\\\" xmlns:wsse=\\\\\\\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd\\\\\\\" xmlns:wsu=\\\\\\\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd\\\\\\\"><wsse:UsernameToken wsu:Id=\\\\\\\"UsernameToken-AF7DBE0D8832CC288F150119366041544\\\\\\\"><wsse:Username>${USERNAME}</wsse:Username><wsse:Password Type=\\\\\\\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText\\\\\\\">${PASSWORD}</wsse:Password><wsse:Nonce EncodingType=\\\\\\\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary\\\\\\\">hVovDsRjkofd3OphNZ83kg==</wsse:Nonce><wsu:Created>2017-07-27T22:14:20.415Z</wsu:Created></wsse:UsernameToken></wsse:Security></soapenv:Header><soapenv:Body><bsvc:Get_Workers_Request bsvc:version=\\\\\\\"v33.1\\\\\\\"><bsvc:Request_Criteria><bsvc:Exclude_Inactive_Workers>false</bsvc:Exclude_Inactive_Workers><bsvc:Exclude_Employees>false</bsvc:Exclude_Employees><bsvc:Exclude_Contingent_Workers>false</bsvc:Exclude_Contingent_Workers></bsvc:Request_Criteria><bsvc:Response_Filter><bsvc:Page>${PAGE_NUMBER}</bsvc:Page><bsvc:Count>${PAGE_SIZE}</bsvc:Count></bsvc:Response_Filter><bsvc:Response_Group><bsvc:Include_Reference>false</bsvc:Include_Reference><bsvc:Include_Personal_Information>true</bsvc:Include_Personal_Information><bsvc:Include_Additional_Jobs>false</bsvc:Include_Additional_Jobs><bsvc:Include_Employment_Information>true</bsvc:Include_Employment_Information><bsvc:Include_Compensation>false</bsvc:Include_Compensation><bsvc:Include_Organizations>true</bsvc:Include_Organizations><bsvc:Exclude_Organization_Support_Role_Data>true</bsvc:Exclude_Organization_Support_Role_Data><bsvc:Exclude_Location_Hierarchies>true</bsvc:Exclude_Location_Hierarchies><bsvc:Exclude_Cost_Centers>false</bsvc:Exclude_Cost_Centers><bsvc:Exclude_Cost_Center_Hierarchies>true</bsvc:Exclude_Cost_Center_Hierarchies><bsvc:Exclude_Companies>true</bsvc:Exclude_Companies><bsvc:Exclude_Company_Hierarchies>true</bsvc:Exclude_Company_Hierarchies><bsvc:Exclude_Matrix_Organizations>true</bsvc:Exclude_Matrix_Organizations><bsvc:Exclude_Pay_Groups>true</bsvc:Exclude_Pay_Groups><bsvc:Exclude_Regions>true</bsvc:Exclude_Regions><bsvc:Exclude_Region_Hierarchies>true</bsvc:Exclude_Region_Hierarchies><bsvc:Exclude_Supervisory_Organizations>true</bsvc:Exclude_Supervisory_Organizations><bsvc:Exclude_Teams>true</bsvc:Exclude_Teams><bsvc:Exclude_Custom_Organizations>true</bsvc:Exclude_Custom_Organizations><bsvc:Include_Roles>true</bsvc:Include_Roles><bsvc:Include_Management_Chain_Data>true</bsvc:Include_Management_Chain_Data><bsvc:Include_Multiple_Managers_in_Management_Chain_Data>false</bsvc:Include_Multiple_Managers_in_Management_Chain_Data><bsvc:Include_Benefit_Enrollments>false</bsvc:Include_Benefit_Enrollments><bsvc:Include_Benefit_Eligibility>false</bsvc:Include_Benefit_Eligibility><bsvc:Include_Related_Persons>false</bsvc:Include_Related_Persons><bsvc:Include_Qualifications>false</bsvc:Include_Qualifications><bsvc:Include_Employee_Review>false</bsvc:Include_Employee_Review><bsvc:Include_Goals>false</bsvc:Include_Goals><bsvc:Include_Development_Items>false</bsvc:Include_Development_Items><bsvc:Include_Skills>false</bsvc:Include_Skills><bsvc:Include_Photo>false</bsvc:Include_Photo><bsvc:Include_Worker_Documents>false</bsvc:Include_Worker_Documents><bsvc:Include_Transaction_Log_Data>false</bsvc:Include_Transaction_Log_Data><bsvc:Include_Subevents_for_Corrected_Transaction>false</bsvc:Include_Subevents_for_Corrected_Transaction><bsvc:Include_Subevents_for_Rescinded_Transaction>false</bsvc:Include_Subevents_for_Rescinded_Transaction><bsvc:Include_Succession_Profile>false</bsvc:Include_Succession_Profile><bsvc:Include_Talent_Assessment>false</bsvc:Include_Talent_Assessment><bsvc:Include_Employee_Contract_Data>true</bsvc:Include_Employee_Contract_Data><bsvc:Include_Collective_Agreement_Data>false</bsvc:Include_Collective_Agreement_Data><bsvc:Include_Probation_Period_Data>false</bsvc:Include_Probation_Period_Data><bsvc:Include_Feedback_Received>false</bsvc:Include_Feedback_Received><bsvc:Include_User_Account>false</bsvc:Include_User_Account><bsvc:Include_Career>false</bsvc:Include_Career><bsvc:Include_Account_Provisioning>false</bsvc:Include_Account_Provisioning><bsvc:Include_Background_Check_Data>false</bsvc:Include_Background_Check_Data><bsvc:Include_Contingent_Worker_Tax_Authority_Form_Information>false</bsvc:Include_Contingent_Worker_Tax_Authority_Form_Information><bsvc:Exclude_Funds>true</bsvc:Exclude_Funds><bsvc:Exclude_Fund_Hierarchies>true</bsvc:Exclude_Fund_Hierarchies><bsvc:Exclude_Grants>true</bsvc:Exclude_Grants><bsvc:Exclude_Grant_Hierarchies>true</bsvc:Exclude_Grant_Hierarchies><bsvc:Exclude_Business_Units>true</bsvc:Exclude_Business_Units><bsvc:Exclude_Business_Unit_Hierarchies>true</bsvc:Exclude_Business_Unit_Hierarchies><bsvc:Exclude_Programs>true</bsvc:Exclude_Programs><bsvc:Exclude_Program_Hierarchies>true</bsvc:Exclude_Program_Hierarchies><bsvc:Exclude_Gifts>true</bsvc:Exclude_Gifts><bsvc:Exclude_Gift_Hierarchies>true</bsvc:Exclude_Gift_Hierarchies></bsvc:Response_Group></bsvc:Get_Workers_Request></soapenv:Body></soapenv:Envelope>\\\",\\r\\n  \\\"USERMAPPING1\\\": \\\"CITY:Worker_Data.Personal_Data.Contact_Data.Address_Data(Usage_Data->Type_Data->Type_Reference->ID=='WORK').Municipality,COMPANYNAME:Worker_Data.Employment_Data.Worker_Job_Data.Position_Organizations_Data.Position_Organization_Data.Organization_Data.Organization_Name,COSTCENTER:Worker_Data.Employment_Data.Worker_Job_Data.Position_Organizations_Data.Position_Organization_Data.Organization_Data.Organization_Code,COUNTRY:Worker_Data.Employment_Data.Worker_Job_Data.Position_Data.Business_Site_Summary_Data.Address_Data.Country_Reference.ID(@type=='ISO_3166-1_Alpha-3_Code'),CUSTOMPROPERTY16:Worker_Data.Employment_Data.Worker_Job_Data.Position_Data.Job_Profile_Summary_Data.Job_Family_Reference.ID(@type=='Job_Family_ID'),CUSTOMPROPERTY18:Worker_Data.Personal_Data.Name_Data.Preferred_Name_Data.Name_Detail_Data.Last_Name,CUSTOMPROPERTY20:Worker_Data.Employment_Data.Worker_Job_Data.Position_Data.Pay_Rate_Type_Reference.ID(@type=='Pay_Rate_Type_ID'),CUSTOMPROPERTY21:Worker_Data.Employment_Data.Worker_Job_Data.Position_Data.Business_Site_Summary_Data.Name,CUSTOMPROPERTY22:Worker_Data.User_ID,EMAIL:Worker_Data.Personal_Data.Contact_Data.Email_Address_Data(Usage_Data->Type_Data->Type_Reference->ID=='WORK').Email_Address,EMPLOYEEID:Worker_Data.Worker_ID,FIRSTNAME:Worker_Data.Personal_Data.Name_Data.Legal_Name_Data.Name_Detail_Data.First_Name,JOBCODE:Worker_Data.Employment_Data.Worker_Job_Data.Position_Data.Job_Profile_Summary_Data.Job_Profile_Reference.ID(@type=='Job_Profile_ID'),JOBCODEDESC:Worker_Data.Employment_Data.Worker_Job_Data.Position_Data.Job_Profile_Summary_Data.Job_Profile_Name,LASTNAME:Worker_Data.Personal_Data.Name_Data.Legal_Name_Data.Name_Detail_Data.Last_Name,LOCATION:Worker_Data.Employment_Data.Worker_Job_Data.Position_Data.Business_Site_Summary_Data.Location_Reference.ID(@type=='Location_ID'),CUSTOMPROPERTY30:Worker_Data.Employment_Data.Worker_Job_Data.Position_Data.Business_Site_Summary_Data.Location_Reference.ID(@type=='Location_ID'),LOCATIONDESC:Worker_Data.Employment_Data.Worker_Job_Data.Position_Data.Business_Site_Summary_Data.Location_Type_Reference.ID(@type=='Location_Type_ID'), MIDDLENAME:Worker_Data.Personal_Data.Name_Data.Legal_Name_Data.Name_Detail_Data.Middle_Name,PHONENUMBER:Worker_Data.Personal_Data.Contact_Data.Phone_Data(Usage_Data->Type_Data->Type_Reference->ID=='WORK').@Formatted_Phone,PREFEREDFIRSTNAME:Worker_Data.Personal_Data.Name_Data.Preferred_Name_Data.Name_Detail_Data.First_Name,REGIONCODE:Worker_Data.Personal_Data.Contact_Data.Address_Data(Usage_Data->Type_Data->Type_Reference->ID=='WORK').Postal_Code,STARTDATE:Worker_Data.Employment_Data.Worker_Status_Data.Hire_Date,STATE:Worker_Data.Personal_Data.Contact_Data.Address_Data(Usage_Data->Type_Data->Type_Reference->ID=='WORK').Country_Region_Descriptor,STATUSKEY:Worker_Data.Employment_Data.Worker_Status_Data.Active,STREET:Worker_Data.Personal_Data.Contact_Data.Address_Data(Usage_Data->Type_Data->Type_Reference->ID=='WORK').Address_Line_Data(@Type=='ADDRESS_LINE_1'),TITLE:Worker_Data.Employment_Data.Worker_Job_Data.Position_Data.Business_Title,USERNAME:Worker_Data.Worker_ID,OWNER:Worker_Data.Employment_Data.Worker_Job_Data.Position_Data.Manager_as_of_last_detected_manager_change_Reference.ID(@type=='Employee_ID')\\\",\\r\\n  \\\"PREFIX1\\\": \\\"wd\\\",\\r\\n  \\\"RESPONSETOTALRESULTS1\\\": \\\"Body.Get_Workers_Response.Response_Results.Total_Results\\\",\\r\\n  \\\"RESPONSEPAGERESULTS1\\\": \\\"Body.Get_Workers_Response.Response_Results.Page_Results\\\",\\r\\n  \\\"RESPONSEDATAPATH1\\\": \\\"Body.Get_Workers_Response.Response_Data.Worker\\\"\\r\\n}\",\n    \"PAGE_SIZE\": \"\",\n    \"PASSWORD\": \"y//A5/5dsRuThK42K5e8rA==\",\n    \"PASSWORD_MAX_LENGTH\": \"\",\n    \"PASSWORD_MIN_LENGTH\": \"\",\n    \"PASSWORD_NOOFCAPSALPHA\": \"\",\n    \"PASSWORD_NOOFDIGITS\": \"\",\n    \"PASSWORD_NOOFSPLCHARS\": \"\",\n    \"PASSWORD_TYPE\": \"PasswordText\",\n    \"RESPONSEPATH_PAGERESULTS\": \"\",\n    \"RESPONSEPATH_TOTALRESULTS\": \"\",\n    \"RESPONSEPATH_USERLIST\": \"\",\n    \"REVOKEACCESSJSON\": \"\",\n    \"SOAP_ENDPOINT\": \"https://wd2-impl-services1.workday.com/ccx/service/saviynt_pt1/Human_Resources/34.0\",\n    \"UPDATEACCOUNTJSON\": \"\",\n    \"UPDATEUSERJSON\": \"\",\n    \"USERNAME\": \"ISU001@saviynt_pt1\"\n  },\n  \"connectionkey\": 120,\n  \"connectionname\": \"Workday\",\n  \"connectiontype\": \"Workday-SOAP\",\n  \"createdby\": \"admin(null null)\",\n  \"createdon\": \"2020-03-12T11:49:15Z\",\n  \"defaultsavroles\": \"\",\n  \"description\": \"Workday\",\n  \"emailtemplate\": \"\",\n  \"errorcode\": 0,\n  \"msg\": \"success\",\n  \"status\": 1,\n  \"updatedby\": \"admin(adminfname adminlname)\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Get Connections Details - Success"}
+                  value={"Get Connections Details - Success"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"connectionattributes\": {\n    \"ACCOUNTS_IMPORT_JSON\": \"\",\n    \"CHANGEPASSJSON\": null,\n    \"COMBINEDCREATEREQUEST\": \"\",\n    \"CONNECTIONJSON\": \"{\\r\\n\\t\\\"authentications\\\": {\\r\\n\\t\\t\\\"login\\\": {\\r\\n\\t\\t\\t\\\"authType\\\": \\\"basic\\\",\\r\\n\\t\\t\\t\\\"properties\\\": {\\r\\n\\t\\t\\t\\t\\\"SOAP_ENDPOINT\\\": \\\"https://wd2-impl-services1.workday.com/ccx/service/saviynt_pt1/Human_Resources/34.0\\\",\\r\\n\\t\\t\\t\\t\\\"USERNAME\\\": \\\"ISU001@saviynt_pt1\\\",\\r\\n\\t\\t\\t\\t\\\"PASSWORD\\\": \\\"S@v1ynt@321\\\",\\r\\n\\t\\t\\t\\t\\\"PASSWORD_TYPE\\\": \\\"PasswordText\\\",\\r\\n\\t\\t\\t\\t\\\"REQUESTPARAMS\\\": {\\r\\n\\t\\t\\t\\t\\t\\\"CONTENT-TYPE\\\": \\\"text/xml;charset=UTF-8\\\",\\r\\n\\t\\t\\t\\t\\t\\\"Connection\\\": \\\"Keep-Alive\\\",\\r\\n\\t\\t\\t\\t\\t\\\"Keep-Alive\\\": \\\"timeout=600, max=1000\\\"\\r\\n\\t\\t\\t\\t}\\r\\n\\t\\t\\t}\\r\\n\\t\\t}\\r\\n\\t}\\r\\n}\",\n    \"CREATEACCOUNTJSON\": \"\",\n    \"DATA_TO_IMPORT\": \"\",\n    \"DATEFORMAT\": \"\",\n    \"DELETEACCOUNTJSON\": \"\",\n    \"DISABLEACCOUNTJSON\": \"\",\n    \"ENABLEACCOUNTJSON\": \"\",\n    \"GRANTACCESSJSON\": \"\",\n    \"HR_IMPORT_JSON\": \"{\\r\\n  \\\"REQUESTXML1\\\": \\\"<soapenv:Envelope xmlns:bsvc=\\\\\\\"urn:com.workday/bsvc\\\\\\\" xmlns:soapenv=\\\\\\\"http://schemas.xmlsoap.org/soap/envelope/\\\\\\\"><soapenv:Header><wsse:Security soapenv:mustUnderstand=\\\\\\\"1\\\\\\\" xmlns:wsse=\\\\\\\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd\\\\\\\" xmlns:wsu=\\\\\\\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd\\\\\\\"><wsse:UsernameToken wsu:Id=\\\\\\\"UsernameToken-AF7DBE0D8832CC288F150119366041544\\\\\\\"><wsse:Username>${USERNAME}</wsse:Username><wsse:Password Type=\\\\\\\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText\\\\\\\">${PASSWORD}</wsse:Password><wsse:Nonce EncodingType=\\\\\\\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary\\\\\\\">hVovDsRjkofd3OphNZ83kg==</wsse:Nonce><wsu:Created>2017-07-27T22:14:20.415Z</wsu:Created></wsse:UsernameToken></wsse:Security></soapenv:Header><soapenv:Body><bsvc:Get_Workers_Request bsvc:version=\\\\\\\"v33.1\\\\\\\"><bsvc:Request_Criteria><bsvc:Exclude_Inactive_Workers>false</bsvc:Exclude_Inactive_Workers><bsvc:Exclude_Employees>false</bsvc:Exclude_Employees><bsvc:Exclude_Contingent_Workers>false</bsvc:Exclude_Contingent_Workers></bsvc:Request_Criteria><bsvc:Response_Filter><bsvc:Page>${PAGE_NUMBER}</bsvc:Page><bsvc:Count>${PAGE_SIZE}</bsvc:Count></bsvc:Response_Filter><bsvc:Response_Group><bsvc:Include_Reference>false</bsvc:Include_Reference><bsvc:Include_Personal_Information>true</bsvc:Include_Personal_Information><bsvc:Include_Additional_Jobs>false</bsvc:Include_Additional_Jobs><bsvc:Include_Employment_Information>true</bsvc:Include_Employment_Information><bsvc:Include_Compensation>false</bsvc:Include_Compensation><bsvc:Include_Organizations>true</bsvc:Include_Organizations><bsvc:Exclude_Organization_Support_Role_Data>true</bsvc:Exclude_Organization_Support_Role_Data><bsvc:Exclude_Location_Hierarchies>true</bsvc:Exclude_Location_Hierarchies><bsvc:Exclude_Cost_Centers>false</bsvc:Exclude_Cost_Centers><bsvc:Exclude_Cost_Center_Hierarchies>true</bsvc:Exclude_Cost_Center_Hierarchies><bsvc:Exclude_Companies>true</bsvc:Exclude_Companies><bsvc:Exclude_Company_Hierarchies>true</bsvc:Exclude_Company_Hierarchies><bsvc:Exclude_Matrix_Organizations>true</bsvc:Exclude_Matrix_Organizations><bsvc:Exclude_Pay_Groups>true</bsvc:Exclude_Pay_Groups><bsvc:Exclude_Regions>true</bsvc:Exclude_Regions><bsvc:Exclude_Region_Hierarchies>true</bsvc:Exclude_Region_Hierarchies><bsvc:Exclude_Supervisory_Organizations>true</bsvc:Exclude_Supervisory_Organizations><bsvc:Exclude_Teams>true</bsvc:Exclude_Teams><bsvc:Exclude_Custom_Organizations>true</bsvc:Exclude_Custom_Organizations><bsvc:Include_Roles>true</bsvc:Include_Roles><bsvc:Include_Management_Chain_Data>true</bsvc:Include_Management_Chain_Data><bsvc:Include_Multiple_Managers_in_Management_Chain_Data>false</bsvc:Include_Multiple_Managers_in_Management_Chain_Data><bsvc:Include_Benefit_Enrollments>false</bsvc:Include_Benefit_Enrollments><bsvc:Include_Benefit_Eligibility>false</bsvc:Include_Benefit_Eligibility><bsvc:Include_Related_Persons>false</bsvc:Include_Related_Persons><bsvc:Include_Qualifications>false</bsvc:Include_Qualifications><bsvc:Include_Employee_Review>false</bsvc:Include_Employee_Review><bsvc:Include_Goals>false</bsvc:Include_Goals><bsvc:Include_Development_Items>false</bsvc:Include_Development_Items><bsvc:Include_Skills>false</bsvc:Include_Skills><bsvc:Include_Photo>false</bsvc:Include_Photo><bsvc:Include_Worker_Documents>false</bsvc:Include_Worker_Documents><bsvc:Include_Transaction_Log_Data>false</bsvc:Include_Transaction_Log_Data><bsvc:Include_Subevents_for_Corrected_Transaction>false</bsvc:Include_Subevents_for_Corrected_Transaction><bsvc:Include_Subevents_for_Rescinded_Transaction>false</bsvc:Include_Subevents_for_Rescinded_Transaction><bsvc:Include_Succession_Profile>false</bsvc:Include_Succession_Profile><bsvc:Include_Talent_Assessment>false</bsvc:Include_Talent_Assessment><bsvc:Include_Employee_Contract_Data>true</bsvc:Include_Employee_Contract_Data><bsvc:Include_Collective_Agreement_Data>false</bsvc:Include_Collective_Agreement_Data><bsvc:Include_Probation_Period_Data>false</bsvc:Include_Probation_Period_Data><bsvc:Include_Feedback_Received>false</bsvc:Include_Feedback_Received><bsvc:Include_User_Account>false</bsvc:Include_User_Account><bsvc:Include_Career>false</bsvc:Include_Career><bsvc:Include_Account_Provisioning>false</bsvc:Include_Account_Provisioning><bsvc:Include_Background_Check_Data>false</bsvc:Include_Background_Check_Data><bsvc:Include_Contingent_Worker_Tax_Authority_Form_Information>false</bsvc:Include_Contingent_Worker_Tax_Authority_Form_Information><bsvc:Exclude_Funds>true</bsvc:Exclude_Funds><bsvc:Exclude_Fund_Hierarchies>true</bsvc:Exclude_Fund_Hierarchies><bsvc:Exclude_Grants>true</bsvc:Exclude_Grants><bsvc:Exclude_Grant_Hierarchies>true</bsvc:Exclude_Grant_Hierarchies><bsvc:Exclude_Business_Units>true</bsvc:Exclude_Business_Units><bsvc:Exclude_Business_Unit_Hierarchies>true</bsvc:Exclude_Business_Unit_Hierarchies><bsvc:Exclude_Programs>true</bsvc:Exclude_Programs><bsvc:Exclude_Program_Hierarchies>true</bsvc:Exclude_Program_Hierarchies><bsvc:Exclude_Gifts>true</bsvc:Exclude_Gifts><bsvc:Exclude_Gift_Hierarchies>true</bsvc:Exclude_Gift_Hierarchies></bsvc:Response_Group></bsvc:Get_Workers_Request></soapenv:Body></soapenv:Envelope>\\\",\\r\\n  \\\"USERMAPPING1\\\": \\\"CITY:Worker_Data.Personal_Data.Contact_Data.Address_Data(Usage_Data->Type_Data->Type_Reference->ID=='WORK').Municipality,COMPANYNAME:Worker_Data.Employment_Data.Worker_Job_Data.Position_Organizations_Data.Position_Organization_Data.Organization_Data.Organization_Name,COSTCENTER:Worker_Data.Employment_Data.Worker_Job_Data.Position_Organizations_Data.Position_Organization_Data.Organization_Data.Organization_Code,COUNTRY:Worker_Data.Employment_Data.Worker_Job_Data.Position_Data.Business_Site_Summary_Data.Address_Data.Country_Reference.ID(@type=='ISO_3166-1_Alpha-3_Code'),CUSTOMPROPERTY16:Worker_Data.Employment_Data.Worker_Job_Data.Position_Data.Job_Profile_Summary_Data.Job_Family_Reference.ID(@type=='Job_Family_ID'),CUSTOMPROPERTY18:Worker_Data.Personal_Data.Name_Data.Preferred_Name_Data.Name_Detail_Data.Last_Name,CUSTOMPROPERTY20:Worker_Data.Employment_Data.Worker_Job_Data.Position_Data.Pay_Rate_Type_Reference.ID(@type=='Pay_Rate_Type_ID'),CUSTOMPROPERTY21:Worker_Data.Employment_Data.Worker_Job_Data.Position_Data.Business_Site_Summary_Data.Name,CUSTOMPROPERTY22:Worker_Data.User_ID,EMAIL:Worker_Data.Personal_Data.Contact_Data.Email_Address_Data(Usage_Data->Type_Data->Type_Reference->ID=='WORK').Email_Address,EMPLOYEEID:Worker_Data.Worker_ID,FIRSTNAME:Worker_Data.Personal_Data.Name_Data.Legal_Name_Data.Name_Detail_Data.First_Name,JOBCODE:Worker_Data.Employment_Data.Worker_Job_Data.Position_Data.Job_Profile_Summary_Data.Job_Profile_Reference.ID(@type=='Job_Profile_ID'),JOBCODEDESC:Worker_Data.Employment_Data.Worker_Job_Data.Position_Data.Job_Profile_Summary_Data.Job_Profile_Name,LASTNAME:Worker_Data.Personal_Data.Name_Data.Legal_Name_Data.Name_Detail_Data.Last_Name,LOCATION:Worker_Data.Employment_Data.Worker_Job_Data.Position_Data.Business_Site_Summary_Data.Location_Reference.ID(@type=='Location_ID'),CUSTOMPROPERTY30:Worker_Data.Employment_Data.Worker_Job_Data.Position_Data.Business_Site_Summary_Data.Location_Reference.ID(@type=='Location_ID'),LOCATIONDESC:Worker_Data.Employment_Data.Worker_Job_Data.Position_Data.Business_Site_Summary_Data.Location_Type_Reference.ID(@type=='Location_Type_ID'), MIDDLENAME:Worker_Data.Personal_Data.Name_Data.Legal_Name_Data.Name_Detail_Data.Middle_Name,PHONENUMBER:Worker_Data.Personal_Data.Contact_Data.Phone_Data(Usage_Data->Type_Data->Type_Reference->ID=='WORK').@Formatted_Phone,PREFEREDFIRSTNAME:Worker_Data.Personal_Data.Name_Data.Preferred_Name_Data.Name_Detail_Data.First_Name,REGIONCODE:Worker_Data.Personal_Data.Contact_Data.Address_Data(Usage_Data->Type_Data->Type_Reference->ID=='WORK').Postal_Code,STARTDATE:Worker_Data.Employment_Data.Worker_Status_Data.Hire_Date,STATE:Worker_Data.Personal_Data.Contact_Data.Address_Data(Usage_Data->Type_Data->Type_Reference->ID=='WORK').Country_Region_Descriptor,STATUSKEY:Worker_Data.Employment_Data.Worker_Status_Data.Active,STREET:Worker_Data.Personal_Data.Contact_Data.Address_Data(Usage_Data->Type_Data->Type_Reference->ID=='WORK').Address_Line_Data(@Type=='ADDRESS_LINE_1'),TITLE:Worker_Data.Employment_Data.Worker_Job_Data.Position_Data.Business_Title,USERNAME:Worker_Data.Worker_ID,OWNER:Worker_Data.Employment_Data.Worker_Job_Data.Position_Data.Manager_as_of_last_detected_manager_change_Reference.ID(@type=='Employee_ID')\\\",\\r\\n  \\\"PREFIX1\\\": \\\"wd\\\",\\r\\n  \\\"RESPONSETOTALRESULTS1\\\": \\\"Body.Get_Workers_Response.Response_Results.Total_Results\\\",\\r\\n  \\\"RESPONSEPAGERESULTS1\\\": \\\"Body.Get_Workers_Response.Response_Results.Page_Results\\\",\\r\\n  \\\"RESPONSEDATAPATH1\\\": \\\"Body.Get_Workers_Response.Response_Data.Worker\\\"\\r\\n}\",\n    \"PAGE_SIZE\": \"\",\n    \"PASSWORD\": \"y//A5/5dsRuThK42K5e8rA==\",\n    \"PASSWORD_MAX_LENGTH\": \"\",\n    \"PASSWORD_MIN_LENGTH\": \"\",\n    \"PASSWORD_NOOFCAPSALPHA\": \"\",\n    \"PASSWORD_NOOFDIGITS\": \"\",\n    \"PASSWORD_NOOFSPLCHARS\": \"\",\n    \"PASSWORD_TYPE\": \"PasswordText\",\n    \"RESPONSEPATH_PAGERESULTS\": \"\",\n    \"RESPONSEPATH_TOTALRESULTS\": \"\",\n    \"RESPONSEPATH_USERLIST\": \"\",\n    \"REVOKEACCESSJSON\": \"\",\n    \"SOAP_ENDPOINT\": \"https://wd2-impl-services1.workday.com/ccx/service/saviynt_pt1/Human_Resources/34.0\",\n    \"UPDATEACCOUNTJSON\": \"\",\n    \"UPDATEUSERJSON\": \"\",\n    \"USERNAME\": \"ISU001@saviynt_pt1\"\n  },\n  \"connectionkey\": 120,\n  \"connectionname\": \"Workday\",\n  \"connectiontype\": \"Workday-SOAP\",\n  \"createdby\": \"admin(null null)\",\n  \"createdon\": \"2020-03-12T11:49:15Z\",\n  \"defaultsavroles\": \"\",\n  \"description\": \"Workday\",\n  \"emailtemplate\": \"\",\n  \"errorcode\": 0,\n  \"msg\": \"success\",\n  \"status\": 1,\n  \"updatedby\": \"admin(adminfname adminlname)\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

@@ -150,7 +150,7 @@ const config: Config = {
           saviynt:{
             specPath: "static/api-specs/saviynt-rest-api-5.0-bundle.yaml",
             proxy: "https://cors-api-18af4d883f64.herokuapp.com",
-            outputDir: "docs/apis/rest/5.0/reference", // No trailing slash
+            outputDir: "docs/apis/rest/reference/5.0/", // No trailing slash
             sidebarOptions: {
               groupPathsBy: "tag",
               categoryLinkSource: "tag",
@@ -164,7 +164,7 @@ const config: Config = {
           ecf:{
             specPath: "static/api-specs/saviynt-ecf-api-bundle.yaml",
             // proxy: "https://cors-anywhere.herokuapp.com",
-            outputDir: "docs/connectors/ecf/1.0/reference", // No trailing slash
+            outputDir: "docs/connectors/ecf/reference/1.0/", // No trailing slash
             sidebarOptions: {
               groupPathsBy: "tag",
               categoryLinkSource: "tag",

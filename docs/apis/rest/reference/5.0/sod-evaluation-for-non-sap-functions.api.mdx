@@ -1,0 +1,1020 @@
+---
+id: sod-evaluation-for-non-sap-functions
+title: "SoD Evaluation for Non - SAP Functions"
+description: "This API can be used to evaluate SODs for entitlements with the same name."
+sidebar_label: "SoD Evaluation for Non - SAP Functions"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: apis/rest/reference/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+proxy: https://cors-api-18af4d883f64.herokuapp.com
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"SoD Evaluation for Non - SAP Functions"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/sodEvaluation"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API can be used to evaluate SODs for entitlements with the same name.
+
+**Mandatory Parameters**:
+
+\* `user` - account name  
+\* entitlement JSON
+
+StartFragment
+
+\{    
+
+"user": "soduser971",
+
+"entitlementJSON": \{ 
+
+ "Data": \[
+
+ \{
+
+ "Endpoint": "SODendpoint2",
+
+  "EntitlementType": "NewPandC",
+
+   "ExistingEntitlementsKeys": \[
+
+    "635216",
+
+    "635217", 
+
+     "635218" 
+
+     \],
+
+ "NewEntitlementsKeys": \[
+
+ "635215",
+
+ "635214"  
+
+   \]
+
+   \},
+
+   \{
+
+  "Endpoint": "SODendpoint2",
+
+  "EntitlementType": "NewPandC",   
+
+   "ExistingEntitlementsKeys": \[   
+
+    "635216",  
+
+     "635217",    
+
+     "635218"    
+
+      \], 
+
+    "NewEntitlementsKeys": \[       
+
+    "635215", 
+
+    "635214"  
+
+      \]    
+
+      \} 
+
+      \] 
+
+   \}
+
+\}
+
+EndFragment
+
+  
+  
+**HEADERS**
+
+EndFragment
+
+The `Authorization` must have `Bearer` followed by `Token`.
+
+**Optional parameters**:
+
+`Ruleset - ExistingEntitlementsKeys/NewEntitlementsKeys -`These parameters are available from Release v2022.0.  
+The SODEvaluation API takes the input parameters in the following order:
+
+\* Key of the entitlement  
+\* Name of the entitlement
+
+The Key of the entitlement takes precedence to check SODs during access request to avoid the failure of duplicate entitlements so that the SOD risks are displayed if exists. If the entitlement key is not passed in the API, then the entitlement name is considered.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={true}
+          className={"schemaItem"}
+        >
+          <details
+            style={{}}
+            className={"openapi-markdown__details"}
+          >
+            <summary
+              style={{}}
+            >
+              <span
+                className={"openapi-schema__container"}
+              >
+                <strong
+                  className={"openapi-schema__property"}
+                >
+                  entitlementJSON
+                </strong><span
+                  className={"openapi-schema__name"}
+                >
+                   object
+                </span>
+              </span>
+            </summary><div
+              style={{"marginLeft":"1rem"}}
+            >
+              <SchemaItem
+                collapsible={true}
+                className={"schemaItem"}
+              >
+                <details
+                  style={{}}
+                  className={"openapi-markdown__details"}
+                >
+                  <summary
+                    style={{}}
+                  >
+                    <span
+                      className={"openapi-schema__container"}
+                    >
+                      <strong
+                        className={"openapi-schema__property"}
+                      >
+                        Data
+                      </strong><span
+                        className={"openapi-schema__name"}
+                      >
+                         object[]
+                      </span>
+                    </span>
+                  </summary><div
+                    style={{"marginLeft":"1rem"}}
+                  >
+                    <li>
+                      <div
+                        style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                      >
+                        Array [
+                      </div>
+                    </li><SchemaItem
+                      collapsible={false}
+                      name={"Endpoint"}
+                      required={false}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"type":"string","example":"SODendpoint2"}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={false}
+                      name={"EntitlementType"}
+                      required={false}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"type":"string","example":"NewPandC"}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={false}
+                      name={"ExistingEntitlementsKeys"}
+                      required={false}
+                      schemaName={"string[]"}
+                      qualifierMessage={undefined}
+                      schema={{"type":"array","items":{"type":"string","example":"635216"},"example":["635216","635217","635218"]}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={false}
+                      name={"NewEntitlementsKeys"}
+                      required={false}
+                      schemaName={"string[]"}
+                      qualifierMessage={undefined}
+                      schema={{"type":"array","items":{"type":"string","example":"635215"},"example":["635215","635214"]}}
+                    >
+                      
+                    </SchemaItem><li>
+                      <div
+                        style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                      >
+                        ]
+                      </div>
+                    </li>
+                  </div>
+                </details>
+              </SchemaItem>
+            </div>
+          </details>
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"user"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"soduser971"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          SoD Evaluation for Non - SAP Functions / SoD Evaluation for Non - SAP Functions(riskSODEvaluationByUser) / SOD Evaluation for Non-SAP Duplicate Entitlements
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Vary
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"SUCCESS"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <strong>
+                              result
+                            </strong><span
+                              style={{"opacity":"0.6"}}
+                            >
+                               object
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            
+                          </div><div>
+                            <span
+                              className={"badge badge--info"}
+                            >
+                              anyOf
+                            </span><SchemaTabs>
+                              <TabItem
+                                label={"MOD1"}
+                                value={"0-item-properties"}
+                              >
+                                <SchemaItem
+                                  collapsible={true}
+                                  className={"schemaItem"}
+                                >
+                                  <details
+                                    style={{}}
+                                    className={"openapi-markdown__details"}
+                                  >
+                                    <summary
+                                      style={{}}
+                                    >
+                                      <span
+                                        className={"openapi-schema__container"}
+                                      >
+                                        <strong
+                                          className={"openapi-schema__property"}
+                                        >
+                                          SOD
+                                        </strong><span
+                                          className={"openapi-schema__name"}
+                                        >
+                                           object[]
+                                        </span>
+                                      </span>
+                                    </summary><div
+                                      style={{"marginLeft":"1rem"}}
+                                    >
+                                      <li>
+                                        <div
+                                          style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                                        >
+                                          Array [
+                                        </div>
+                                      </li><SchemaItem
+                                        collapsible={false}
+                                        name={"Assigned_MitigatingControls"}
+                                        required={false}
+                                        schemaName={"undefined[]"}
+                                        qualifierMessage={undefined}
+                                        schema={{"type":"array","items":{},"example":[]}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        collapsible={false}
+                                        name={"Available_MitigatingControls"}
+                                        required={false}
+                                        schemaName={"undefined[]"}
+                                        qualifierMessage={undefined}
+                                        schema={{"type":"array","items":{},"example":[]}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        collapsible={false}
+                                        name={"Description"}
+                                        required={false}
+                                        schemaName={"string"}
+                                        qualifierMessage={undefined}
+                                        schema={{"type":"string","example":""}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        collapsible={true}
+                                        className={"schemaItem"}
+                                      >
+                                        <details
+                                          style={{}}
+                                          className={"openapi-markdown__details"}
+                                        >
+                                          <summary
+                                            style={{}}
+                                          >
+                                            <span
+                                              className={"openapi-schema__container"}
+                                            >
+                                              <strong
+                                                className={"openapi-schema__property"}
+                                              >
+                                                Functions
+                                              </strong><span
+                                                className={"openapi-schema__name"}
+                                              >
+                                                 object[]
+                                              </span>
+                                            </span>
+                                          </summary><div
+                                            style={{"marginLeft":"1rem"}}
+                                          >
+                                            <li>
+                                              <div
+                                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                                              >
+                                                Array [
+                                              </div>
+                                            </li><SchemaItem
+                                              collapsible={false}
+                                              name={"Description"}
+                                              required={false}
+                                              schemaName={"string"}
+                                              qualifierMessage={undefined}
+                                              schema={{"type":"string","example":""}}
+                                            >
+                                              
+                                            </SchemaItem><SchemaItem
+                                              collapsible={true}
+                                              className={"schemaItem"}
+                                            >
+                                              <details
+                                                style={{}}
+                                                className={"openapi-markdown__details"}
+                                              >
+                                                <summary
+                                                  style={{}}
+                                                >
+                                                  <span
+                                                    className={"openapi-schema__container"}
+                                                  >
+                                                    <strong
+                                                      className={"openapi-schema__property"}
+                                                    >
+                                                      Entitlements
+                                                    </strong><span
+                                                      className={"openapi-schema__name"}
+                                                    >
+                                                       object[]
+                                                    </span>
+                                                  </span>
+                                                </summary><div
+                                                  style={{"marginLeft":"1rem"}}
+                                                >
+                                                  <li>
+                                                    <div
+                                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                                                    >
+                                                      Array [
+                                                    </div>
+                                                  </li><SchemaItem
+                                                    collapsible={false}
+                                                    name={"Entitlement"}
+                                                    required={false}
+                                                    schemaName={"string"}
+                                                    qualifierMessage={undefined}
+                                                    schema={{"type":"string","example":"[Accounting Journal Event: Create Journal: Initiate, Verify Capital Project Expense: Review Capital Project Transactions - Manual Journals: Initiate]"}}
+                                                  >
+                                                    
+                                                  </SchemaItem><SchemaItem
+                                                    collapsible={false}
+                                                    name={"EntitlementDescription"}
+                                                    required={false}
+                                                    schemaName={"string"}
+                                                    qualifierMessage={undefined}
+                                                    schema={{"type":"string","example":""}}
+                                                  >
+                                                    
+                                                  </SchemaItem><SchemaItem
+                                                    collapsible={false}
+                                                    name={"EntitlementDisplayName"}
+                                                    required={false}
+                                                    schemaName={"string"}
+                                                    qualifierMessage={undefined}
+                                                    schema={{"type":"string","example":""}}
+                                                  >
+                                                    
+                                                  </SchemaItem><SchemaItem
+                                                    collapsible={false}
+                                                    name={"ParentRole"}
+                                                    required={false}
+                                                    schemaName={"string"}
+                                                    qualifierMessage={undefined}
+                                                    schema={{"type":"string","example":"[Accountant]"}}
+                                                  >
+                                                    
+                                                  </SchemaItem><SchemaItem
+                                                    collapsible={false}
+                                                    name={"Role"}
+                                                    required={false}
+                                                    schemaName={"string"}
+                                                    qualifierMessage={undefined}
+                                                    schema={{"type":"string","example":"Accountant"}}
+                                                  >
+                                                    
+                                                  </SchemaItem><li>
+                                                    <div
+                                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                                                    >
+                                                      ]
+                                                    </div>
+                                                  </li>
+                                                </div>
+                                              </details>
+                                            </SchemaItem><SchemaItem
+                                              collapsible={false}
+                                              name={"FunctionName"}
+                                              required={false}
+                                              schemaName={"string"}
+                                              qualifierMessage={undefined}
+                                              schema={{"type":"string","example":"GL: Enter Journal Entry"}}
+                                            >
+                                              
+                                            </SchemaItem><li>
+                                              <div
+                                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                                              >
+                                                ]
+                                              </div>
+                                            </li>
+                                          </div>
+                                        </details>
+                                      </SchemaItem><SchemaItem
+                                        collapsible={false}
+                                        name={"Priority"}
+                                        required={false}
+                                        schemaName={"number"}
+                                        qualifierMessage={undefined}
+                                        schema={{"type":"number","example":1}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        collapsible={false}
+                                        name={"Risk"}
+                                        required={false}
+                                        schemaName={"string"}
+                                        qualifierMessage={undefined}
+                                        schema={{"type":"string","example":"GL: Enter Journal Entry conflicts with PTP: Create Invoices"}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        collapsible={false}
+                                        name={"RiskId"}
+                                        required={false}
+                                        schemaName={"number"}
+                                        qualifierMessage={undefined}
+                                        schema={{"type":"number","example":1762}}
+                                      >
+                                        
+                                      </SchemaItem><li>
+                                        <div
+                                          style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                                        >
+                                          ]
+                                        </div>
+                                      </li>
+                                    </div>
+                                  </details>
+                                </SchemaItem>
+                              </TabItem><TabItem
+                                label={"MOD2"}
+                                value={"1-item-properties"}
+                              >
+                                <li>
+                                  <div
+                                    style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                                  >
+                                    Array [
+                                  </div>
+                                </li><SchemaItem
+                                  collapsible={false}
+                                  name={"ACCOUNT"}
+                                  required={false}
+                                  schemaName={"number"}
+                                  qualifierMessage={undefined}
+                                  schema={{"type":"number","example":2}}
+                                >
+                                  
+                                </SchemaItem><SchemaItem
+                                  collapsible={false}
+                                  name={"ENTLIST"}
+                                  required={false}
+                                  schemaName={"string[]"}
+                                  qualifierMessage={undefined}
+                                  schema={{"type":"array","items":{"type":"string","example":"4351776###927###4359855###4359855###Accountant"},"example":["4351776###927###4359855###4359855###Accountant","4351775###890###4359855###4359855###Accountant","4351755###890###4359855###4359855###Accountant"]}}
+                                >
+                                  
+                                </SchemaItem><SchemaItem
+                                  collapsible={false}
+                                  name={"MC"}
+                                  required={false}
+                                  schemaName={"string"}
+                                  qualifierMessage={undefined}
+                                  schema={{"type":"string"}}
+                                >
+                                  
+                                </SchemaItem><SchemaItem
+                                  collapsible={false}
+                                  name={"RISKS"}
+                                  required={false}
+                                  schemaName={"number"}
+                                  qualifierMessage={undefined}
+                                  schema={{"type":"number","example":1762}}
+                                >
+                                  
+                                </SchemaItem><li>
+                                  <div
+                                    style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                                  >
+                                    ]
+                                  </div>
+                                </li>
+                              </TabItem><TabItem
+                                label={"MOD3"}
+                                value={"2-item-properties"}
+                              >
+                                <SchemaItem
+                                  collapsible={true}
+                                  className={"schemaItem"}
+                                >
+                                  <details
+                                    style={{}}
+                                    className={"openapi-markdown__details"}
+                                  >
+                                    <summary
+                                      style={{}}
+                                    >
+                                      <span
+                                        className={"openapi-schema__container"}
+                                      >
+                                        <strong
+                                          className={"openapi-schema__property"}
+                                        >
+                                          SOD
+                                        </strong><span
+                                          className={"openapi-schema__name"}
+                                        >
+                                           object[]
+                                        </span>
+                                      </span>
+                                    </summary><div
+                                      style={{"marginLeft":"1rem"}}
+                                    >
+                                      <li>
+                                        <div
+                                          style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                                        >
+                                          Array [
+                                        </div>
+                                      </li><SchemaItem
+                                        collapsible={false}
+                                        name={"Assigned_MitigatingControls"}
+                                        required={false}
+                                        schemaName={"undefined[]"}
+                                        qualifierMessage={undefined}
+                                        schema={{"type":"array","items":{},"example":[]}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        collapsible={false}
+                                        name={"Available_MitigatingControls"}
+                                        required={false}
+                                        schemaName={"undefined[]"}
+                                        qualifierMessage={undefined}
+                                        schema={{"type":"array","items":{},"example":[]}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        collapsible={false}
+                                        name={"Description"}
+                                        required={false}
+                                        schemaName={"string"}
+                                        qualifierMessage={undefined}
+                                        schema={{"type":"string","example":"RiskDepth2"}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        collapsible={true}
+                                        className={"schemaItem"}
+                                      >
+                                        <details
+                                          style={{}}
+                                          className={"openapi-markdown__details"}
+                                        >
+                                          <summary
+                                            style={{}}
+                                          >
+                                            <span
+                                              className={"openapi-schema__container"}
+                                            >
+                                              <strong
+                                                className={"openapi-schema__property"}
+                                              >
+                                                Functions
+                                              </strong><span
+                                                className={"openapi-schema__name"}
+                                              >
+                                                 object[]
+                                              </span>
+                                            </span>
+                                          </summary><div
+                                            style={{"marginLeft":"1rem"}}
+                                          >
+                                            <li>
+                                              <div
+                                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                                              >
+                                                Array [
+                                              </div>
+                                            </li><SchemaItem
+                                              collapsible={false}
+                                              name={"Description"}
+                                              required={false}
+                                              schemaName={"string"}
+                                              qualifierMessage={undefined}
+                                              schema={{"type":"string","example":"test"}}
+                                            >
+                                              
+                                            </SchemaItem><SchemaItem
+                                              collapsible={false}
+                                              name={"Entitlements"}
+                                              required={false}
+                                              schemaName={"undefined[]"}
+                                              qualifierMessage={undefined}
+                                              schema={{"type":"array","items":{},"example":[]}}
+                                            >
+                                              
+                                            </SchemaItem><SchemaItem
+                                              collapsible={false}
+                                              name={"FunctionName"}
+                                              required={false}
+                                              schemaName={"string"}
+                                              qualifierMessage={undefined}
+                                              schema={{"type":"string","example":"FunctionDepthLevel2"}}
+                                            >
+                                              
+                                            </SchemaItem><li>
+                                              <div
+                                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                                              >
+                                                ]
+                                              </div>
+                                            </li>
+                                          </div>
+                                        </details>
+                                      </SchemaItem><SchemaItem
+                                        collapsible={false}
+                                        name={"Priority"}
+                                        required={false}
+                                        schemaName={"number"}
+                                        qualifierMessage={undefined}
+                                        schema={{"type":"number","example":2}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        collapsible={false}
+                                        name={"Risk"}
+                                        required={false}
+                                        schemaName={"string"}
+                                        qualifierMessage={undefined}
+                                        schema={{"type":"string","example":"RiskDepth2"}}
+                                      >
+                                        
+                                      </SchemaItem><SchemaItem
+                                        collapsible={false}
+                                        name={"RiskId"}
+                                        required={false}
+                                        schemaName={"number"}
+                                        qualifierMessage={undefined}
+                                        schema={{"type":"number","example":3215}}
+                                      >
+                                        
+                                      </SchemaItem><li>
+                                        <div
+                                          style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                                        >
+                                          ]
+                                        </div>
+                                      </li>
+                                    </div>
+                                  </details>
+                                </SchemaItem>
+                              </TabItem>
+                            </SchemaTabs>
+                          </div>
+                        </details>
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"message\": \"SUCCESS\",\n  \"result\": {}\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"SOD Evaluation for Non-SAP Duplicate Entitlements"}
+                  value={"SOD Evaluation for Non-SAP Duplicate Entitlements"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"message\": \"SUCCESS\",\n  \"result\": {\n    \"SOD\": [\n      {\n        \"Assigned_MitigatingControls\": [],\n        \"Available_MitigatingControls\": [],\n        \"Description\": \"RiskDepth2\",\n        \"Functions\": [\n          {\n            \"Description\": \"test\",\n            \"Entitlements\": [],\n            \"FunctionName\": \"FunctionDepthLevel2\"\n          }\n        ],\n        \"Priority\": 2,\n        \"Risk\": \"RiskDepth2\",\n        \"RiskId\": 3215\n      },\n      {\n        \"Assigned_MitigatingControls\": [],\n        \"Available_MitigatingControls\": [],\n        \"Description\": \"RiskDepth3\",\n        \"Functions\": [\n          {\n            \"Description\": \"oiu\",\n            \"Entitlements\": [],\n            \"FunctionName\": \"FunctionDepthLevel3\"\n          }\n        ],\n        \"Priority\": 2,\n        \"Risk\": \"RiskDepth3\",\n        \"RiskId\": 3216\n      },\n      {\n        \"Assigned_MitigatingControls\": [],\n        \"Available_MitigatingControls\": [],\n        \"Description\": \"risk 971\",\n        \"Functions\": [\n          {\n            \"Description\": \"FA1\",\n            \"Entitlements\": [],\n            \"FunctionName\": \"Function971\"\n          }\n        ],\n        \"Priority\": 2,\n        \"Risk\": \"Risk971\",\n        \"RiskId\": 3224\n      }\n    ]\n  }\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"SoD Evaluation for Non - SAP Functions"}
+                  value={"SoD Evaluation for Non - SAP Functions"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"message\": \"SUCCESS\",\n  \"result\": {\n    \"SOD\": [\n      {\n        \"Assigned_MitigatingControls\": [],\n        \"Available_MitigatingControls\": [],\n        \"Description\": \"\",\n        \"Functions\": [\n          {\n            \"Description\": \"\",\n            \"Entitlements\": [\n              {\n                \"Entitlement\": \"[Accounting Journal Event: Create Journal: Initiate, Verify Capital Project Expense: Review Capital Project Transactions - Manual Journals: Initiate]\",\n                \"EntitlementDescription\": \"\",\n                \"EntitlementDisplayName\": \"\",\n                \"ParentRole\": \"[Accountant]\",\n                \"Role\": \"Accountant\"\n              }\n            ],\n            \"FunctionName\": \"GL: Enter Journal Entry\"\n          },\n          {\n            \"Description\": \"\",\n            \"Entitlements\": [\n              {\n                \"Entitlement\": \"[Verify Capital Project Expense: Review Capital Project Transactions - Supplier Invoices: Initiate]\",\n                \"EntitlementDescription\": \"\",\n                \"EntitlementDisplayName\": \"\",\n                \"ParentRole\": \"[Accountant]\",\n                \"Role\": \"Accountant\"\n              }\n            ],\n            \"FunctionName\": \"PTP: Create Invoices\"\n          }\n        ],\n        \"Priority\": 1,\n        \"Risk\": \"GL: Enter Journal Entry conflicts with PTP: Create Invoices\",\n        \"RiskId\": 1762\n      },\n      {\n        \"Assigned_MitigatingControls\": [],\n        \"Available_MitigatingControls\": [],\n        \"Description\": \"\",\n        \"Functions\": [\n          {\n            \"Description\": \"\",\n            \"Entitlements\": [\n              {\n                \"Entitlement\": \"[Accounting Journal Event: Create Journal: Initiate, Verify Capital Project Expense: Review Capital Project Transactions - Manual Journals: Initiate]\",\n                \"EntitlementDescription\": \"\",\n                \"EntitlementDisplayName\": \"\",\n                \"ParentRole\": \"[Accountant]\",\n                \"Role\": \"Accountant\"\n              }\n            ],\n            \"FunctionName\": \"GL: Enter Journal Entry\"\n          },\n          {\n            \"Description\": \"\",\n            \"Entitlements\": [\n              {\n                \"Entitlement\": \"[Prepaid Spend Amortization Event: Create Prepaid Spend Amortization: Initiate, Receipt Accrual Event: Create Receipt Accrual: Initiate, Accounting Journal Unpost Event: Unpost Journal: Initiate]\",\n                \"EntitlementDescription\": \"\",\n                \"EntitlementDisplayName\": \"\",\n                \"ParentRole\": \"[Accountant]\",\n                \"Role\": \"Accountant\"\n              }\n            ],\n            \"FunctionName\": \"GL: Post Journal Entry\"\n          }\n        ],\n        \"Priority\": 1,\n        \"Risk\": \"GL: Enter Journal Entry conflicts with GL: Post Journal Entry\",\n        \"RiskId\": 1763\n      },\n      {\n        \"Assigned_MitigatingControls\": [],\n        \"Available_MitigatingControls\": [],\n        \"Description\": \"\",\n        \"Functions\": [\n          {\n            \"Description\": \"\",\n            \"Entitlements\": [\n              {\n                \"Entitlement\": \"[Process: Allocations: Modify, Allocation Finalize Event: Finalize Allocation: Initiate, Revaluation Run Event: Run Revaluation: Initiate, Allocation Run Event: Run Allocation: Initiate, Period Close Notification Event: Period Close Notification: Initiate, Allocation Run Event: Schedule Allocation Run: Initiate]\",\n                \"EntitlementDescription\": \"\",\n                \"EntitlementDisplayName\": \"\",\n                \"ParentRole\": \"[Accountant]\",\n                \"Role\": \"Accountant\"\n              }\n            ],\n            \"FunctionName\": \"GL: Mass Allocate Journal Entries\"\n          },\n          {\n            \"Description\": \"\",\n            \"Entitlements\": [\n              {\n                \"Entitlement\": \"[Accounting Journal Event: Create Journal: Initiate, Verify Capital Project Expense: Review Capital Project Transactions - Manual Journals: Initiate]\",\n                \"EntitlementDescription\": \"\",\n                \"EntitlementDisplayName\": \"\",\n                \"ParentRole\": \"[Accountant]\",\n                \"Role\": \"Accountant\"\n              }\n            ],\n            \"FunctionName\": \"GL: Enter Journal Entry\"\n          }\n        ],\n        \"Priority\": 1,\n        \"Risk\": \"GL: Mass Allocate Journal Entries conflicts with GL: Enter Journal Entry\",\n        \"RiskId\": 1764\n      },\n      {\n        \"Assigned_MitigatingControls\": [],\n        \"Available_MitigatingControls\": [],\n        \"Description\": \"\",\n        \"Functions\": [\n          {\n            \"Description\": \"\",\n            \"Entitlements\": [\n              {\n                \"Entitlement\": \"[Accounting Journal Event: Create Journal: Initiate, Verify Capital Project Expense: Review Capital Project Transactions - Manual Journals: Initiate]\",\n                \"EntitlementDescription\": \"\",\n                \"EntitlementDisplayName\": \"\",\n                \"ParentRole\": \"[Accountant]\",\n                \"Role\": \"Accountant\"\n              }\n            ],\n            \"FunctionName\": \"GL: Enter Journal Entry\"\n          },\n          {\n            \"Description\": \"\",\n            \"Entitlements\": [\n              {\n                \"Entitlement\": \"[Process: Business Asset Accounting: Modify]\",\n                \"EntitlementDescription\": \"\",\n                \"EntitlementDisplayName\": \"\",\n                \"ParentRole\": \"[Accountant]\",\n                \"Role\": \"Accountant\"\n              }\n            ],\n            \"FunctionName\": \"AM: Assets Depreciation\"\n          }\n        ],\n        \"Priority\": 1,\n        \"Risk\": \"GL: Enter Journal Entry conflicts with AM: Assets Depreciation\",\n        \"RiskId\": 1769\n      },\n      {\n        \"Assigned_MitigatingControls\": [],\n        \"Available_MitigatingControls\": [],\n        \"Description\": \"\",\n        \"Functions\": [\n          {\n            \"Description\": \"\",\n            \"Entitlements\": [\n              {\n                \"Entitlement\": \"[Accounting Journal Event: Create Journal: Initiate, Verify Capital Project Expense: Review Capital Project Transactions - Manual Journals: Initiate]\",\n                \"EntitlementDescription\": \"\",\n                \"EntitlementDisplayName\": \"\",\n                \"ParentRole\": \"[Accountant]\",\n                \"Role\": \"Accountant\"\n              }\n            ],\n            \"FunctionName\": \"GL: Enter Journal Entry\"\n          },\n          {\n            \"Description\": \"\",\n            \"Entitlements\": [\n              {\n                \"Entitlement\": \"[Process: Allocations: Modify, Allocation Finalize Event: Finalize Allocation: Initiate, Revaluation Run Event: Run Revaluation: Initiate, Allocation Run Event: Run Allocation: Initiate, Period Close Notification Event: Period Close Notification: Initiate, Allocation Run Event: Schedule Allocation Run: Initiate]\",\n                \"EntitlementDescription\": \"\",\n                \"EntitlementDisplayName\": \"\",\n                \"ParentRole\": \"[Accountant]\",\n                \"Role\": \"Accountant\"\n              }\n            ],\n            \"FunctionName\": \"GL: Mass Allocate Journal Entries\"\n          }\n        ],\n        \"Priority\": 1,\n        \"Risk\": \"GL: Enter Journal Entry conflicts with GL: Mass Allocate Journal Entries\",\n        \"RiskId\": 1773\n      },\n      {\n        \"Assigned_MitigatingControls\": [],\n        \"Available_MitigatingControls\": [],\n        \"Description\": \"\",\n        \"Functions\": [\n          {\n            \"Description\": \"\",\n            \"Entitlements\": [\n              {\n                \"Entitlement\": \"[Prepaid Spend Amortization Event: Create Prepaid Spend Amortization: Initiate, Receipt Accrual Event: Create Receipt Accrual: Initiate, Accounting Journal Unpost Event: Unpost Journal: Initiate]\",\n                \"EntitlementDescription\": \"\",\n                \"EntitlementDisplayName\": \"\",\n                \"ParentRole\": \"[Accountant]\",\n                \"Role\": \"Accountant\"\n              }\n            ],\n            \"FunctionName\": \"GL: Post Journal Entry\"\n          },\n          {\n            \"Description\": \"\",\n            \"Entitlements\": [\n              {\n                \"Entitlement\": \"[Process: Business Asset Accounting: Modify]\",\n                \"EntitlementDescription\": \"\",\n                \"EntitlementDisplayName\": \"\",\n                \"ParentRole\": \"[Accountant]\",\n                \"Role\": \"Accountant\"\n              }\n            ],\n            \"FunctionName\": \"AM: Assets Depreciation\"\n          }\n        ],\n        \"Priority\": 1,\n        \"Risk\": \"GL: Post Journal Entry conflicts with AM: Assets Depreciation\",\n        \"RiskId\": 1775\n      },\n      {\n        \"Assigned_MitigatingControls\": [],\n        \"Available_MitigatingControls\": [],\n        \"Description\": \"\",\n        \"Functions\": [\n          {\n            \"Description\": \"\",\n            \"Entitlements\": [\n              {\n                \"Entitlement\": \"[Prepaid Spend Amortization Event: Create Prepaid Spend Amortization: Initiate, Receipt Accrual Event: Create Receipt Accrual: Initiate, Accounting Journal Unpost Event: Unpost Journal: Initiate]\",\n                \"EntitlementDescription\": \"\",\n                \"EntitlementDisplayName\": \"\",\n                \"ParentRole\": \"[Accountant]\",\n                \"Role\": \"Accountant\"\n              }\n            ],\n            \"FunctionName\": \"GL: Post Journal Entry\"\n          },\n          {\n            \"Description\": \"\",\n            \"Entitlements\": [\n              {\n                \"Entitlement\": \"[Process: Allocations: Modify, Allocation Finalize Event: Finalize Allocation: Initiate, Revaluation Run Event: Run Revaluation: Initiate, Allocation Run Event: Run Allocation: Initiate, Period Close Notification Event: Period Close Notification: Initiate, Allocation Run Event: Schedule Allocation Run: Initiate]\",\n                \"EntitlementDescription\": \"\",\n                \"EntitlementDisplayName\": \"\",\n                \"ParentRole\": \"[Accountant]\",\n                \"Role\": \"Accountant\"\n              }\n            ],\n            \"FunctionName\": \"GL: Mass Allocate Journal Entries\"\n          }\n        ],\n        \"Priority\": 1,\n        \"Risk\": \"GL: Post Journal Entry conflicts with GL: Mass Allocate Journal Entries\",\n        \"RiskId\": 1780\n      },\n      {\n        \"Assigned_MitigatingControls\": [],\n        \"Available_MitigatingControls\": [],\n        \"Description\": \"\",\n        \"Functions\": [\n          {\n            \"Description\": \"\",\n            \"Entitlements\": [\n              {\n                \"Entitlement\": \"[Payment Printing Event: Create Positive Pay File: Initiate]\",\n                \"EntitlementDescription\": \"\",\n                \"EntitlementDisplayName\": \"\",\n                \"ParentRole\": \"[Accountant]\",\n                \"Role\": \"Accountant\"\n              }\n            ],\n            \"FunctionName\": \"GL: Open Close Periods\"\n          },\n          {\n            \"Description\": \"\",\n            \"Entitlements\": [\n              {\n                \"Entitlement\": \"[Accounting Journal Event: Create Journal: Initiate, Verify Capital Project Expense: Review Capital Project Transactions - Manual Journals: Initiate]\",\n                \"EntitlementDescription\": \"\",\n                \"EntitlementDisplayName\": \"\",\n                \"ParentRole\": \"[Accountant]\",\n                \"Role\": \"Accountant\"\n              }\n            ],\n            \"FunctionName\": \"GL: Enter Journal Entry\"\n          }\n        ],\n        \"Priority\": 0,\n        \"Risk\": \"GL: Open Close Periods conflicts with GL: Enter Journal Entry\",\n        \"RiskId\": 1781\n      },\n      {\n        \"Assigned_MitigatingControls\": [],\n        \"Available_MitigatingControls\": [],\n        \"Description\": \"\",\n        \"Functions\": [\n          {\n            \"Description\": \"\",\n            \"Entitlements\": [\n              {\n                \"Entitlement\": \"[Payment Printing Event: Create Positive Pay File: Initiate]\",\n                \"EntitlementDescription\": \"\",\n                \"EntitlementDisplayName\": \"\",\n                \"ParentRole\": \"[Accountant]\",\n                \"Role\": \"Accountant\"\n              }\n            ],\n            \"FunctionName\": \"GL: Open Close Periods\"\n          },\n          {\n            \"Description\": \"\",\n            \"Entitlements\": [\n              {\n                \"Entitlement\": \"[Prepaid Spend Amortization Event: Create Prepaid Spend Amortization: Initiate, Receipt Accrual Event: Create Receipt Accrual: Initiate, Accounting Journal Unpost Event: Unpost Journal: Initiate]\",\n                \"EntitlementDescription\": \"\",\n                \"EntitlementDisplayName\": \"\",\n                \"ParentRole\": \"[Accountant]\",\n                \"Role\": \"Accountant\"\n              }\n            ],\n            \"FunctionName\": \"GL: Post Journal Entry\"\n          }\n        ],\n        \"Priority\": 3,\n        \"Risk\": \"GL: Open Close Periods conflicts with GL: Post Journal Entry\",\n        \"RiskId\": 1782\n      },\n      {\n        \"Assigned_MitigatingControls\": [],\n        \"Available_MitigatingControls\": [],\n        \"Description\": \"\",\n        \"Functions\": [\n          {\n            \"Description\": \"\",\n            \"Entitlements\": [\n              {\n                \"Entitlement\": \"[Process: Journals: Modify]\",\n                \"EntitlementDescription\": \"\",\n                \"EntitlementDisplayName\": \"\",\n                \"ParentRole\": \"[Accountant]\",\n                \"Role\": \"Accountant\"\n              }\n            ],\n            \"FunctionName\": \"OTC: Enter Journal Entry\"\n          },\n          {\n            \"Description\": \"\",\n            \"Entitlements\": [\n              {\n                \"Entitlement\": \"[Record Intercompany Receipt Event: Record Intercompany Receipt: Initiate]\",\n                \"EntitlementDescription\": \"\",\n                \"EntitlementDisplayName\": \"\",\n                \"ParentRole\": \"[Accountant]\",\n                \"Role\": \"Accountant\"\n              }\n            ],\n            \"FunctionName\": \"OTC: Enter Customer Receipts\"\n          }\n        ],\n        \"Priority\": 1,\n        \"Risk\": \"OTC: Enter Journal Entry conflicts with OTC: Enter Customer Receipts\",\n        \"RiskId\": 1821\n      },\n      {\n        \"Assigned_MitigatingControls\": [],\n        \"Available_MitigatingControls\": [],\n        \"Description\": \"\",\n        \"Functions\": [\n          {\n            \"Description\": \"\",\n            \"Entitlements\": [\n              {\n                \"Entitlement\": \"[Prepaid Spend Amortization Event: Create Prepaid Spend Amortization: Initiate, Receipt Accrual Event: Create Receipt Accrual: Initiate, Accounting Journal Unpost Event: Unpost Journal: Initiate]\",\n                \"EntitlementDescription\": \"\",\n                \"EntitlementDisplayName\": \"\",\n                \"ParentRole\": \"[Accountant]\",\n                \"Role\": \"Accountant\"\n              }\n            ],\n            \"FunctionName\": \"GL: Post Journal Entry\"\n          },\n          {\n            \"Description\": \"\",\n            \"Entitlements\": [\n              {\n                \"Entitlement\": \"[Record Intercompany Receipt Event: Record Intercompany Receipt: Initiate]\",\n                \"EntitlementDescription\": \"\",\n                \"EntitlementDisplayName\": \"\",\n                \"ParentRole\": \"[Accountant]\",\n                \"Role\": \"Accountant\"\n              }\n            ],\n            \"FunctionName\": \"OTC: Enter Customer Receipts\"\n          }\n        ],\n        \"Priority\": 1,\n        \"Risk\": \"GL: Post Journal Entry conflicts with OTC: Enter Customer Receipts\",\n        \"RiskId\": 1823\n      },\n      {\n        \"Assigned_MitigatingControls\": [],\n        \"Available_MitigatingControls\": [],\n        \"Description\": \"\",\n        \"Functions\": [\n          {\n            \"Description\": \"\",\n            \"Entitlements\": [\n              {\n                \"Entitlement\": \"[Verify Capital Project Expense: Review Capital Project Transactions - Supplier Invoices: Initiate]\",\n                \"EntitlementDescription\": \"\",\n                \"EntitlementDisplayName\": \"\",\n                \"ParentRole\": \"[Accountant]\",\n                \"Role\": \"Accountant\"\n              }\n            ],\n            \"FunctionName\": \"PTP: Create Invoices\"\n          },\n          {\n            \"Description\": \"\",\n            \"Entitlements\": [\n              {\n                \"Entitlement\": \"[Process: Intercompany Payment/Settlement: Modify]\",\n                \"EntitlementDescription\": \"\",\n                \"EntitlementDisplayName\": \"\",\n                \"ParentRole\": \"[Accountant]\",\n                \"Role\": \"Accountant\"\n              }\n            ],\n            \"FunctionName\": \"PTP: Print Checks\"\n          }\n        ],\n        \"Priority\": 1,\n        \"Risk\": \"PTP: Create Invoices conflicts with PTP: Print Checks\",\n        \"RiskId\": 1848\n      },\n      {\n        \"Assigned_MitigatingControls\": [],\n        \"Available_MitigatingControls\": [],\n        \"Description\": \"\",\n        \"Functions\": [\n          {\n            \"Description\": \"\",\n            \"Entitlements\": [\n              {\n                \"Entitlement\": \"[Verify Capital Project Expense: Review Capital Project Transactions - Supplier Invoices: Initiate]\",\n                \"EntitlementDescription\": \"\",\n                \"EntitlementDisplayName\": \"\",\n                \"ParentRole\": \"[Accountant]\",\n                \"Role\": \"Accountant\"\n              }\n            ],\n            \"FunctionName\": \"PTP: Create Invoices\"\n          },\n          {\n            \"Description\": \"\",\n            \"Entitlements\": [\n              {\n                \"Entitlement\": \"[Procurement Mass Close Event: Mass Close Procurement Documents: Initiate, Procurement Roll Forward: Roll Forward Procurement Documents: Initiate, Verify Capital Project Expense: Review Capital Project Transactions - Supplier Invoices: Initiate]\",\n                \"EntitlementDescription\": \"\",\n                \"EntitlementDisplayName\": \"\",\n                \"ParentRole\": \"[Accountant]\",\n                \"Role\": \"Accountant\"\n              }\n            ],\n            \"FunctionName\": \"PTP: Payables Transactions\"\n          }\n        ],\n        \"Priority\": 1,\n        \"Risk\": \"PTP: Create Invoices conflicts with PTP: Payables Transactions\",\n        \"RiskId\": 1866\n      }\n    ]\n  }\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"SoD Evaluation for Non - SAP Functions(riskSODEvaluationByUser)"}
+                  value={"SoD Evaluation for Non - SAP Functions(riskSODEvaluationByUser)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"message\": \"SUCCESS\",\n  \"result\": [\n    {\n      \"ACCOUNT\": 2,\n      \"ENTLIST\": [\n        \"4351776###927###4359855###4359855###Accountant\",\n        \"4351775###890###4359855###4359855###Accountant\",\n        \"4351755###890###4359855###4359855###Accountant\"\n      ],\n      \"MC\": null,\n      \"RISKS\": 1762\n    },\n    {\n      \"ACCOUNT\": 2,\n      \"ENTLIST\": [\n        \"4351768###892###4359855###4359855###Accountant\",\n        \"4351758###892###4359855###4359855###Accountant\",\n        \"4351775###890###4359855###4359855###Accountant\",\n        \"4351755###890###4359855###4359855###Accountant\",\n        \"4351766###892###4359855###4359855###Accountant\"\n      ],\n      \"MC\": null,\n      \"RISKS\": 1763\n    },\n    {\n      \"ACCOUNT\": 2,\n      \"ENTLIST\": [\n        \"4351760###891###4359855###4359855###Accountant\",\n        \"4351759###891###4359855###4359855###Accountant\",\n        \"4351775###890###4359855###4359855###Accountant\",\n        \"4351755###890###4359855###4359855###Accountant\",\n        \"4352569###891###4359855###4359855###Accountant\",\n        \"4351763###891###4359855###4359855###Accountant\",\n        \"4351761###891###4359855###4359855###Accountant\",\n        \"4351762###891###4359855###4359855###Accountant\"\n      ],\n      \"MC\": null,\n      \"RISKS\": 1764\n    },\n    {\n      \"ACCOUNT\": 2,\n      \"ENTLIST\": [\n        \"4351775###890###4359855###4359855###Accountant\",\n        \"4351755###890###4359855###4359855###Accountant\",\n        \"4352568###942###4359855###4359855###Accountant\"\n      ],\n      \"MC\": null,\n      \"RISKS\": 1769\n    },\n    {\n      \"ACCOUNT\": 2,\n      \"ENTLIST\": [\n        \"4351760###891###4359855###4359855###Accountant\",\n        \"4351759###891###4359855###4359855###Accountant\",\n        \"4351775###890###4359855###4359855###Accountant\",\n        \"4351755###890###4359855###4359855###Accountant\",\n        \"4352569###891###4359855###4359855###Accountant\",\n        \"4351763###891###4359855###4359855###Accountant\",\n        \"4351761###891###4359855###4359855###Accountant\",\n        \"4351762###891###4359855###4359855###Accountant\"\n      ],\n      \"MC\": null,\n      \"RISKS\": 1773\n    },\n    {\n      \"ACCOUNT\": 2,\n      \"ENTLIST\": [\n        \"4351768###892###4359855###4359855###Accountant\",\n        \"4351758###892###4359855###4359855###Accountant\",\n        \"4352568###942###4359855###4359855###Accountant\",\n        \"4351766###892###4359855###4359855###Accountant\"\n      ],\n      \"MC\": null,\n      \"RISKS\": 1775\n    },\n    {\n      \"ACCOUNT\": 2,\n      \"ENTLIST\": [\n        \"4351760###891###4359855###4359855###Accountant\",\n        \"4351759###891###4359855###4359855###Accountant\",\n        \"4351768###892###4359855###4359855###Accountant\",\n        \"4351758###892###4359855###4359855###Accountant\",\n        \"4352569###891###4359855###4359855###Accountant\",\n        \"4351763###891###4359855###4359855###Accountant\",\n        \"4351761###891###4359855###4359855###Accountant\",\n        \"4351762###891###4359855###4359855###Accountant\",\n        \"4351766###892###4359855###4359855###Accountant\"\n      ],\n      \"MC\": null,\n      \"RISKS\": 1780\n    },\n    {\n      \"ACCOUNT\": 2,\n      \"ENTLIST\": [\n        \"4351775###890###4359855###4359855###Accountant\",\n        \"4351755###890###4359855###4359855###Accountant\",\n        \"4351764###894###4359855###4359855###Accountant\"\n      ],\n      \"MC\": null,\n      \"RISKS\": 1781\n    },\n    {\n      \"ACCOUNT\": 2,\n      \"ENTLIST\": [\n        \"4351768###892###4359855###4359855###Accountant\",\n        \"4351758###892###4359855###4359855###Accountant\",\n        \"4351764###894###4359855###4359855###Accountant\",\n        \"4351766###892###4359855###4359855###Accountant\"\n      ],\n      \"MC\": null,\n      \"RISKS\": 1782\n    },\n    {\n      \"ACCOUNT\": 2,\n      \"ENTLIST\": [\n        \"4351765###907###4359855###4359855###Accountant\",\n        \"4352572###916###4359855###4359855###Accountant\"\n      ],\n      \"MC\": null,\n      \"RISKS\": 1821\n    },\n    {\n      \"ACCOUNT\": 2,\n      \"ENTLIST\": [\n        \"4351768###892###4359855###4359855###Accountant\",\n        \"4351758###892###4359855###4359855###Accountant\",\n        \"4351765###907###4359855###4359855###Accountant\",\n        \"4351766###892###4359855###4359855###Accountant\"\n      ],\n      \"MC\": null,\n      \"RISKS\": 1823\n    },\n    {\n      \"ACCOUNT\": 2,\n      \"ENTLIST\": [\n        \"4351776###927###4359855###4359855###Accountant\",\n        \"4352571###956###4359855###4359855###Accountant\"\n      ],\n      \"MC\": null,\n      \"RISKS\": 1848\n    },\n    {\n      \"ACCOUNT\": 2,\n      \"ENTLIST\": [\n        \"4351776###960###4359855###4359855###Accountant\",\n        \"4351771###960###4359855###4359855###Accountant\",\n        \"4351776###927###4359855###4359855###Accountant\",\n        \"4351769###960###4359855###4359855###Accountant\"\n      ],\n      \"MC\": null,\n      \"RISKS\": 1866\n    }\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      
