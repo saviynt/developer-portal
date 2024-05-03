@@ -1,0 +1,395 @@
+---
+id: update-account
+title: "Update Account"
+description: "This method updates a particular 'account' record in Saviynt, based on the account name."
+sidebar_label: "Update Account"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWG1v47gR/isDfroDJMt2kn1Re0VzXufqttkEcbaLIg7ODDW2uJFIHUnZqwv83w9Dyo6cBEkKFCgKJF8ik8OZhzPPDIe8Y44vLUuvGBdC18pZdh2xDK0wsnJSK5ayy1xaKNHlOoO6yrhDCxwqbpwUdcENzLaLZwwMCm0ykAqmfCUb5SK44RYz0ApcjtBKguIl9mbqMkeYH9cu10b+zsngHMraOsj5CmH+M3KDZg4LXRR6jRncNDC/1Leo5r2ZOuUq406bhsDw0qYAMLcoaiNdYxvrsJxHNIYqq7RULvwi03OI96DM1JnfLi+6ukRtnS4roys0rvnzAJyGg/5fghrruKtt+O44bD5T81azXis085mKYe6aCucpTCsUctFAbdGANv7/0ui6Am69e/wSIOkeeL9L8nW5v1F0aHoQw3zFi/qh2qCO9rQ14F39Cm2Gq9uOMoJDQ6AX99B68G9dg+AKbCvmMVhYGF2Cd9BRBMN3ERkfvu/ttA3fwUIb4o2RJTcNCDROLiQa4CqD4fswrRqwKLTK9kQ66BXovUAR+sirIIwZLnhduACK5Ad+Z1z4yNzvjWcZATRY6tWLvpmpmdqLcAi5tFXBG08mPyB0WaJyLSNaCsisnXzApPjoXUujilu71iYTOVdL7JKqMnIlC1xiq2MX3Xk0U/OQiTRGXN7GmYLlybXONe3IS0m17OZel70QwylXNS+KBqa1rVBlmCW7oXOjV9JKrTBLpl+m5+PPn8af4OTi7BQmp+dnF5cwHV/8azIaJ4NkmBwkh9E2BCkMOm7w9IcYLjsVgMbA5dwRTllW2jjMAo8IrMulyWKqMg3wqiqk8OUBfiCe4HdeVgVGMEWzkgLheLu1ac4NZve/TyYX45PJL3+7HF9MPgWiWA1a/di7R6rqoiCwUgltDApX6KVWbRS0qXKuCLwzNSYLXlj0EyteyIzgeieexlkWN03T3M+53Oh6mT8xXXAbbFAIn5jfcqLQ4taLzGZP6tjnzr4iFjEim3faJGMpC4RpHcMiZvC3Gq37WWcNS++Y0MqhcvTZcXfyzdIZcMesyLHk9EVxYynTN99QkJ6W1BKtX9spfR1pbgwnSNJhaV+jJZw9OznrjFRLFrE28ixlIXnZJmJUpZ6XHZBYmH5OjDKHJH35eF40u+GywIZtNpvO8NU99C2+LTw2YFsIwc7OzL2uqLOcZ9lr1nKh9S3bXG8itl9jBs/jF5X3yd5J/+x+0QpasD1Kn5ee+sPXW6Cq9LzwN52rr1OS3T+7X20i1LIXGdCJlBf+4hNiWypoZBf3fRb/76L6RFB95B62aD463eDs3LMNwNbLj53cEd06MnjLO8ygrbSywWPDfp/+7dt+4MaI5cgzNH7BJ+7wyerxRIS+YhZB/wMc10sY9gcfoN9PD96lhwP45fSSERYq9qGqvEbfccVFjvFIN9phMugNWh0uHml9K1+NazSaXpzEl2f/GH/+6T0/Qvx4lMUfBkfD+PDjAcY3hyhixI8Hhwfv+wfvhPgTnHOX/5QEwv2Xyioao81IZy+kUp/SoURr+fIFyTZcEKKXwbQWAq1d1EXR/Eep0kHG+qxj/UUTgWDhYsFSVmnr981dzlKWPDyurA++9dlYm4KlLHeusmmS3DlUXLlNz4Ybhyh0nfWELpPx6DThlUxWRz63jOQ37YbCksdkbscpv3xzwNKdzzYbysdt9ngcN/56QtcXll5dd6enFNdgqiu0iwhhp015MZa2QixqP060KTkZ//vXQH3iy8X9gT3exvGtVPkTQKqF9t6VLhwOgQkwVg5NZaRFmGSonHQNjIgecHw+gQtcoEEl8BFIfyEY6aJA7w2oqA/O0LaXDMdlYbf3IltXbe8aqGz9TYZmXkbxw3gy+pGcicYGy0e9fo/SyKEp7dmi7W87bG9J7vnthRIWqgwXns+tD2l/04CMRQ8SZr1e97pq7E4OSy5Jsh35a0eK3FxIgcpi14wvsjD0mB9b4X66p80yadfa5J+T0fjzdBwPe/1e7sqCFH+PqR0mvfs6uijXVdwW06SuCs0zmwz7g49J/zBpHf0rKfn1M181Pbta+ryholJy1UH86Lh60ALtCvbbu8fbu8fbu8fbu8fbu8f/27tH26g4/O6SquBS0RHjD5a7tr28evAach2xnNrP9Ird3VHd/mKKzYaGf6vRULN3fd9A+l5ve83xLdctNnRRCCdHfEnmOw3Sw7afuqyw4lgIrNyzstedDvn8bHpJLWL7YlOGptvwte/T1ixlMzZj/uGHNPju04/fsYKrZR3a8qCX/v4AlAlBig==
+sidebar_class_name: "post api-method"
+info_path: apis/rest/reference/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+proxy: https://cors-api-18af4d883f64.herokuapp.com
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update Account"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/updateAccount"}
+>
+  
+</MethodEndpoint>
+
+
+
+This method updates a particular "account" record in Saviynt, based on the account name.
+The `Authorization` must have `Bearer` followed by `Token`.
+Mandatory params:   `securitysystem`,   `endpoint`,   `name` - account name
+Optional params:   `customproperty<1 to 30>`,   `status`,   `description`
+`accountowner`
+- `type`: Specify user or usergroup as the owner type. This is a mandatory parameter. - `value`: Specify usergroup name or username. This is a mandatory parameter. - `rank`: Specify the rank of the owner. You can specify values from 1 to 5, 26, or 27. Specify 26 for a primary certifier and 27 for any secondary certifier. This is an optional parameter, and the default value is 1. - `action`: Specify add or remove. This is a mandatory parameter.
+
+`description`,   `displayname`,   `comments`,   `accountid`,   `customproperty<1-56>`,   `passwordchangestatus`,   `privileged`,   `usergroup`,
+`updateuser` - username of user who is updating the account,   `status` - Manually Suspended/Manually Provisioned/SUSPENDED FROM IMPORT SERVICE/1/2/3/4, default: 1   `accounttype` - The account type that is imported from the third-party application (for example, Service Account, Shared Account, FIREFIGHTERID, and so on). default: null   `incorrectlogons`,   `orphan` - true/false,   `validfrom` - MM-dd-yyyy,   `validthrough` - MM-dd-yyyy,   `lastlogondate` - MM-dd-yyyy,   `passwordlockdate`\- MM-dd-yyyy,   `lastpasswordchange` - MM-dd-yyyy
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={true}
+          className={"schemaItem"}
+        >
+          <details
+            style={{}}
+            className={"openapi-markdown__details"}
+          >
+            <summary
+              style={{}}
+            >
+              <span
+                className={"openapi-schema__container"}
+              >
+                <strong
+                  className={"openapi-schema__property"}
+                >
+                  accountowner
+                </strong><span
+                  className={"openapi-schema__name"}
+                >
+                   object[]
+                </span>
+              </span>
+            </summary><div
+              style={{"marginLeft":"1rem"}}
+            >
+              <li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                >
+                  Array [
+                </div>
+              </li><SchemaItem
+                collapsible={false}
+                name={"action"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"remove"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"rank"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"1"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"type"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"user"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"value"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"dbailey"}}
+              >
+                
+              </SchemaItem><li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                >
+                  ]
+                </div>
+              </li>
+            </div>
+          </details>
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"customproperty1"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"cp1"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"description"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"desc"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"endpoint"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"System1"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"name"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"johnWS"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"securitysystem"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"System1"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"status"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"1"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Update Account
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Account Updated Successfully"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"message\": \"Account Updated Successfully\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Update Account"}
+                  value={"Update Account"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"message\": \"Account Updated Successfully\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

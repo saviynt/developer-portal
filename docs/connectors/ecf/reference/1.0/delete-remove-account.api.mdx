@@ -1,0 +1,183 @@
+---
+id: delete-remove-account
+title: "This API deletes an account"
+description: "This API deletes an account"
+sidebar_label: "This API deletes an account"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVE1vGzcQ/SuDObXARnKCnPamKjLgogECS0FRODpQ3JGWMUUy5FD2Vtj/Xgx3vbEto60uksj3OG/efJzRB4qKjXc3DdbYkCWmd5GO/kQLrX12jBWyOiSs73A8gS/Rn0wy3hl3wG2FQUV1JKYoqDMahzUGxS1W6NSRsEY1MG8+YYVJt3RUWJ+RuyCXiaM81FcY6Uc2kRqsOWbqt3KSgneJkuA/XF3JV0NJRxNENda4zlpTSnA7IrFC7R2TY8GqEKzRJcP59ySE86UAv/tOWhINUfxgM4SjGH1c+oYutVZIj+oYrBxdifIjpaQO/4Fcf10uV+s1PPl4W3xuYExhn63tsC+fCj++ley1MjZHAuNgtBRKzeRWSC/Rm9YkWHy5GTCUQE00FMnc+p9Vl/SlZjXOX9R/fp6K10v1KJ6eCp2jxRpb5pDq+XzMc6b9ca6CmZ/eo1Qwkc7RcFcYO1KR4iJLnLvt8+u1FGXw/TloslOiPDWP/B9AWI0/rn08KsYaf/9zU5wwbu8L3fDgvTqZzjGsHpmiUxaW3jnS7CNcS/c++HhfvFoH0mY/9gy+aWlQBwJrEifglgorPWfB3kf4PwFn8JfPoJWDnAi+4SZ2YBh85m8IvsQE9kCPwfpIbwebveY9GGthnCTofJYXVObWR/M3wYPhFhQkVmw0sL8nV0HyBZhan20DexMTg7ZG34N3sJi4u8zsHSguStgHUK6BINugIVBwUjZTBSwemSRRSke8Mkc43JJ0cQLnQWnOyg5S5AnTFNykSuyZYrgOhsEaghWnaXaYwefut9IIm/KMxLhMQKSRg6X1iWZYoTTyUNb3szLFwSc+qrIkxsX17yP0ojemVmV65Hmwyjh5swzJeZytO3y9W+ufq3FbYesTC+p83qlEX6Ptezn+kSnKAG0rPKlo1E5a+u6MjUnyu8F6r2yiC0HTIsRfbsfV+ivIQn9L6HioXCfWiLtYI1Z4T92LDd5v+wpbUg3FImK4X2hNgZ8xLzavTPu0cz6t/lhtVtj3/wCyuEQ6
+sidebar_class_name: "delete api-method"
+info_path: connectors/ecf/reference/1.0/saviynt-external-connector-framework-api-specification
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"This API deletes an account"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/removeAccount/{accountID}"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API deletes an account
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"in":"path","name":"accountID","schema":{"type":"string"},"required":true}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Success Response
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"SUCCESS Account Removed Successfully"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"message\": \"SUCCESS Account Removed Successfully\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem><TabItem
+        label={"400"}
+        value={"400"}
+      >
+        <div>
+          
+          
+          Failure in account deletion
+          
+          
+        </div><div>
+          
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

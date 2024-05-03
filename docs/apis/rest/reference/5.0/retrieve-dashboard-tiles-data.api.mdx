@@ -1,0 +1,452 @@
+---
+id: retrieve-dashboard-tiles-data
+title: "Retrieve Dashboard Tiles Data"
+description: "This API call can be used to fetch details like number of open userrequests, number of attestations, number of delegates, and number of pending approvals for a specific user."
+sidebar_label: "Retrieve Dashboard Tiles Data"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVt9v2zYQ/leIe9oA2bIVt3Y0FFjqJEO2JS1iD3tIg5oWzxYbSmRJyoln+H8fjpId5QfqPOxxAYIo5PHu43fH724Dni8dpDcguMvnmlvh4DYCgS6z0nipS0hhmkvHTj5fsIwrxTJesjmyyqFgXrMF+ixnAj2XyjEl75CVVTFHy/SCaYMlWVqL3yt03kWtTe49Os8pyJN1gQqX3KOLGC9Fa8NgKWS5ZNwYq1dcObbQlnHmDGZyIbMQqcu+2C8l/U5zZLOTyufayn9CmBkrKudZzlfIZh+RW7QzttBK6XsUbL5ms6m+w3L26OOSl4J7bdfMcMsLl9LijOJc8QJnEIE2aIPzCwEpWPRW4gpPd3ROpUJ3yj2HCBoSPmqxhnQDmS49lp4+i0p5abj18ULboiPIPt2Ay3IswpdfG4QU9PwbZh4iMJbieomOdnd4WpbOW1kuIQJ84IVRtMRFIUvYhh8C44wuXe0g6fXoz9O0X+q5VMj2V4EIcuQCbThyyj2+ivGVyOdWRqw/ZCfVkiW9/oj1R2nyPu0ds98up0BoJmhXaN/q78TwLMfOWK+1x7jf7Tc+fGes9Z18M67xeHJ93pl++uPs6oN4z/uj4fGwMzoeDTqD+aDfGfXmw444HvST435fCIG/sM/c5x9iCAy28seNUTILZRB/c8Te25PXfgaHrb32XGW6quM2tvUTaV+tPxgFjPu39N95HgbHaK22Yy0O1FwPthEUbvljK1dlGTq3qBSZN898JxmHkedymR8GngyTbQRK3x82HRwRahSyKt7gl9y+kbyjo5q9tiQevh+paGP9hhAhQSFF9VJw8eItpxtYcVXhqxXYugwV0vMyam8Pn9YC9KDJdzupr+a0lbVkmLQzMzh6xn6SPGWYaHxJ4kuadlwEOgr0uSaNNtoFjrnPIYW4CNS0Vc4FMaK2uIHKKkgh9964NI43Hkte+m3X8ZVclz5TuhLdTBfx2fgy5kbGq3cQwYpbyecN9fWRl/LarBO5C14pD+k+idvt9pZgZJWVfh1wzEO3om4G6c1te3tCOlOHahvtS4Sw06WCGaSNEUTNx7m2Bafgv/9dS7EsFzoclz48zkl9VXZWerTGSofsQmDppV+zMd0/jAbXuECLZYbw6vQw1kphRiuMercU6JjPcT836EX411XGaOtRsDpbdYenncMofjq7GP9M5KN1deR33V6X6tGjLdynBfUYmWErnU0WQwKDUQy1rPMsJKwMPRXofpMaGUTPKuL+/r7bduP2dlhwqcI7CCu/tqxI5ZTMsHTYDhO6GksC5pdReNjuaruMm7Mu/vNifHY1Oesk3V4390WQz4eO0suQwac+2ijvTafpXnFllObCxUmvfxz3BnFD9Fdy8vWKr9Zdt1qGwqB3U/Cyhfi6mXYedYWFeYc1A8+TQmgNPP9PlD+aKJt36/HBx0Zxmtmaetg0onUDz0XrNoKcZC29gc1mzh3+ZdV2S8vfK7QkIbePshQUZDfMBXW5wzWNQ3V+OlMCEO36w6vD6TbaHTrJMjS+Zf5iFiKx2ovv50+TKWlPMwMXddcgx6Kumf0ngdxu/wV+emUY
+sidebar_class_name: "post api-method"
+info_path: apis/rest/reference/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+proxy: https://cors-api-18af4d883f64.herokuapp.com
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Retrieve Dashboard Tiles Data"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/mobileDashboard"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API call can be used to fetch details like number of open userrequests, number of attestations, number of delegates, and number of pending approvals for a specific user. 
+
+The `Authorization` must have `Bearer` followed by `Token`. 
+
+Mandatory params:
+`userName`
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"multipart/form-data"}
+    value={"multipart/form-data-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"userName"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"admin"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Mobile Dashboard
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                attestations
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <SchemaItem
+                              collapsible={false}
+                              name={"totalcount"}
+                              required={false}
+                              schemaName={"number"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"number","example":148}}
+                            >
+                              
+                            </SchemaItem>
+                          </div>
+                        </details>
+                      </SchemaItem><SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                delegates
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <SchemaItem
+                              collapsible={false}
+                              name={"totalcount"}
+                              required={false}
+                              schemaName={"number"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"number","example":17}}
+                            >
+                              
+                            </SchemaItem>
+                          </div>
+                        </details>
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"successful"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                pendingrequests
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <SchemaItem
+                              collapsible={false}
+                              name={"highcount"}
+                              required={false}
+                              schemaName={"number"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"number","example":272}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"lowcount"}
+                              required={false}
+                              schemaName={"number"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"number","example":43}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"mediumcount"}
+                              required={false}
+                              schemaName={"number"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"number","example":22}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"totalcount"}
+                              required={false}
+                              schemaName={"number"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"number","example":337}}
+                            >
+                              
+                            </SchemaItem>
+                          </div>
+                        </details>
+                      </SchemaItem><SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                userrequests
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <SchemaItem
+                              collapsible={false}
+                              name={"openrequestcount"}
+                              required={false}
+                              schemaName={"number"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"number","example":317}}
+                            >
+                              
+                            </SchemaItem>
+                          </div>
+                        </details>
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"attestations\": {\n    \"totalcount\": 148\n  },\n  \"delegates\": {\n    \"totalcount\": 17\n  },\n  \"errorCode\": \"0\",\n  \"msg\": \"successful\",\n  \"pendingrequests\": {\n    \"highcount\": 272,\n    \"lowcount\": 43,\n    \"mediumcount\": 22,\n    \"totalcount\": 337\n  },\n  \"userrequests\": {\n    \"openrequestcount\": 317\n  }\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Mobile Dashboard"}
+                  value={"Mobile Dashboard"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"attestations\": {\n    \"totalcount\": 148\n  },\n  \"delegates\": {\n    \"totalcount\": 17\n  },\n  \"errorCode\": \"0\",\n  \"msg\": \"successful\",\n  \"pendingrequests\": {\n    \"highcount\": 272,\n    \"lowcount\": 43,\n    \"mediumcount\": 22,\n    \"totalcount\": 337\n  },\n  \"userrequests\": {\n    \"openrequestcount\": 317\n  }\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

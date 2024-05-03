@@ -1,0 +1,869 @@
+---
+id: get-account-details
+title: "Get Account Details"
+description: "This method returns a `List` of 'Accounts' in SSM."
+sidebar_label: "Get Account Details"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: apis/rest/reference/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+proxy: https://cors-api-18af4d883f64.herokuapp.com
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Account Details"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/getAccounts"}
+>
+  
+</MethodEndpoint>
+
+
+
+This method returns a `List` of "Accounts" in SSM.
+The `Authorization` must have `Bearer` followed by `Token`.
+Optional params:   `username`,   `endpoint`,   `max`,   `offset`,   `accountQuery`,   `advsearchcriteria` - accountKey,description,comments,accounttype,status,customproperty1-customproperty56,accountID,displayName,name,creator (username),updateuser (username),validfromDate validthrough,createdon,lastlogondate,lastpasswordchange,updatedate,orphan (true/false),   accountowner - with fields 1. type - user/ usergroup (mandatory), 2. value - username/ usergroup name (mandatory), 3. rank - 1 to 5 (optional)
+Sample - "advsearchcriteria":\{ "status":"ACTIVE","name":"john\*","createdon":"2016-12-13","customproperty12":"\*Ro\*","orphan":"true","accountowner": \[   \{   "type": "user",   "value": "janedoe",   "rank": "1"   \}   \]\},
+Date can be searched with 'yyyy-MM-dd', dates and boolean are exact match.
+**Note**: Any OR conditions must be used within parenthesis. For example:
+\{   "accountQuery":"(acc.status='1' or acc.comments like '%a%')",   "username":"admin"   \}
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"accountQuery"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"acc.status='1'"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={true}
+          className={"schemaItem"}
+        >
+          <details
+            style={{}}
+            className={"openapi-markdown__details"}
+          >
+            <summary
+              style={{}}
+            >
+              <span
+                className={"openapi-schema__container"}
+              >
+                <strong
+                  className={"openapi-schema__property"}
+                >
+                  advsearchcriteria
+                </strong><span
+                  className={"openapi-schema__name"}
+                >
+                   object
+                </span>
+              </span>
+            </summary><div
+              style={{"marginLeft":"1rem"}}
+            >
+              <SchemaItem
+                collapsible={true}
+                className={"schemaItem"}
+              >
+                <details
+                  style={{}}
+                  className={"openapi-markdown__details"}
+                >
+                  <summary
+                    style={{}}
+                  >
+                    <span
+                      className={"openapi-schema__container"}
+                    >
+                      <strong
+                        className={"openapi-schema__property"}
+                      >
+                        accountowner
+                      </strong><span
+                        className={"openapi-schema__name"}
+                      >
+                         object[]
+                      </span>
+                    </span>
+                  </summary><div
+                    style={{"marginLeft":"1rem"}}
+                  >
+                    <li>
+                      <div
+                        style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                      >
+                        Array [
+                      </div>
+                    </li><SchemaItem
+                      collapsible={false}
+                      name={"rank"}
+                      required={false}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"type":"string","example":"1"}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={false}
+                      name={"type"}
+                      required={false}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"type":"string","example":"user"}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={false}
+                      name={"value"}
+                      required={false}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"type":"string","example":"admin"}}
+                    >
+                      
+                    </SchemaItem><li>
+                      <div
+                        style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                      >
+                        ]
+                      </div>
+                    </li>
+                  </div>
+                </details>
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"name"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"svc*"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"status"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","example":"ACTIVE"}}
+              >
+                
+              </SchemaItem>
+            </div>
+          </details>
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Get Account Details
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Credentials
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Access-Control-Allow-Origin
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Cache-Control
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Expires
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Referrer-Policy
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Strict-Transport-Security
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Content-Type-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  X-Frame-Options
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                Accountdetails
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object[]
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                              >
+                                Array [
+                              </div>
+                            </li><SchemaItem
+                              collapsible={false}
+                              name={"accountID"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"CN=svcIT62341,OU=SaviyntPoC,DC=corpAD,DC=saviynt,DC=com"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"accountKey"}
+                              required={false}
+                              schemaName={"number"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"number","example":541341}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"accountclass"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"top,person,organizationalPerson,user"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={true}
+                              className={"schemaItem"}
+                            >
+                              <details
+                                style={{}}
+                                className={"openapi-markdown__details"}
+                              >
+                                <summary
+                                  style={{}}
+                                >
+                                  <span
+                                    className={"openapi-schema__container"}
+                                  >
+                                    <strong
+                                      className={"openapi-schema__property"}
+                                    >
+                                      accountowner
+                                    </strong><span
+                                      className={"openapi-schema__name"}
+                                    >
+                                       object[]
+                                    </span>
+                                  </span>
+                                </summary><div
+                                  style={{"marginLeft":"1rem"}}
+                                >
+                                  <li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                                    >
+                                      Array [
+                                    </div>
+                                  </li><SchemaItem
+                                    collapsible={false}
+                                    name={"rank"}
+                                    required={false}
+                                    schemaName={"number"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"number","example":1}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"type"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"user"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"value"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"admin"}}
+                                  >
+                                    
+                                  </SchemaItem><li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                                    >
+                                      ]
+                                    </div>
+                                  </li>
+                                </div>
+                              </details>
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"accounttype"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Service Account"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"comments"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Created as per request - 2430001"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"createdon"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"07/10/2020"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"creator"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"System created"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty1"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"svcIT62341"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty11"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"12717263"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty19"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"0"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty2"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"svcIT62341"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty20"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"svcIT62341@saviynt.com"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty26"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"CN=svcIT62341,OU=SaviyntPoC,DC=corpAD,DC=saviynt,DC=com"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty3"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"AdminUser"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty30"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"512"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty6"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"svcIT62341"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"customproperty7"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Saviynt"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"endpoint"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"SaviyntAD"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"endpointKey"}
+                              required={false}
+                              schemaName={"number"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"number","example":760}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"lastpasswordchange"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"07/10/2020"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"name"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"svcIT62341"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"status"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"1"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"updatedate"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"07/10/2020"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"userKey"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"username"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":""}}
+                            >
+                              
+                            </SchemaItem><li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                              >
+                                ]
+                              </div>
+                            </li>
+                          </div>
+                        </details>
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"displaycount"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":1}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Successful"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"total"}
+                        required={false}
+                        schemaName={"number"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"number","example":1}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"Accountdetails\": [\n    {\n      \"accountID\": \"CN=svcIT62341,OU=SaviyntPoC,DC=corpAD,DC=saviynt,DC=com\",\n      \"accountKey\": 541341,\n      \"accountclass\": \"top,person,organizationalPerson,user\",\n      \"accountowner\": [\n        {\n          \"rank\": 1,\n          \"type\": \"user\",\n          \"value\": \"admin\"\n        },\n        {\n          \"rank\": 26,\n          \"type\": \"user\",\n          \"value\": \"allisonadowner\"\n        }\n      ],\n      \"accounttype\": \"Service Account\",\n      \"comments\": \"Created as per request - 2430001\",\n      \"createdon\": \"07/10/2020\",\n      \"creator\": \"System created\",\n      \"customproperty1\": \"svcIT62341\",\n      \"customproperty11\": \"12717263\",\n      \"customproperty19\": \"0\",\n      \"customproperty2\": \"svcIT62341\",\n      \"customproperty20\": \"svcIT62341@saviynt.com\",\n      \"customproperty26\": \"CN=svcIT62341,OU=SaviyntPoC,DC=corpAD,DC=saviynt,DC=com\",\n      \"customproperty3\": \"AdminUser\",\n      \"customproperty30\": \"512\",\n      \"customproperty6\": \"svcIT62341\",\n      \"customproperty7\": \"Saviynt\",\n      \"endpoint\": \"SaviyntAD\",\n      \"endpointKey\": 760,\n      \"lastpasswordchange\": \"07/10/2020\",\n      \"name\": \"svcIT62341\",\n      \"status\": \"1\",\n      \"updatedate\": \"07/10/2020\",\n      \"userKey\": \"\",\n      \"username\": \"\"\n    }\n  ],\n  \"displaycount\": 1,\n  \"errorCode\": \"0\",\n  \"msg\": \"Successful\",\n  \"total\": 1\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Get Account Details"}
+                  value={"Get Account Details"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"Accountdetails\": [\n    {\n      \"accountID\": \"CN=svcIT62341,OU=SaviyntPoC,DC=corpAD,DC=saviynt,DC=com\",\n      \"accountKey\": 541341,\n      \"accountclass\": \"top,person,organizationalPerson,user\",\n      \"accountowner\": [\n        {\n          \"rank\": 1,\n          \"type\": \"user\",\n          \"value\": \"admin\"\n        },\n        {\n          \"rank\": 26,\n          \"type\": \"user\",\n          \"value\": \"allisonadowner\"\n        }\n      ],\n      \"accounttype\": \"Service Account\",\n      \"comments\": \"Created as per request - 2430001\",\n      \"createdon\": \"07/10/2020\",\n      \"creator\": \"System created\",\n      \"customproperty1\": \"svcIT62341\",\n      \"customproperty11\": \"12717263\",\n      \"customproperty19\": \"0\",\n      \"customproperty2\": \"svcIT62341\",\n      \"customproperty20\": \"svcIT62341@saviynt.com\",\n      \"customproperty26\": \"CN=svcIT62341,OU=SaviyntPoC,DC=corpAD,DC=saviynt,DC=com\",\n      \"customproperty3\": \"AdminUser\",\n      \"customproperty30\": \"512\",\n      \"customproperty6\": \"svcIT62341\",\n      \"customproperty7\": \"Saviynt\",\n      \"endpoint\": \"SaviyntAD\",\n      \"endpointKey\": 760,\n      \"lastpasswordchange\": \"07/10/2020\",\n      \"name\": \"svcIT62341\",\n      \"status\": \"1\",\n      \"updatedate\": \"07/10/2020\",\n      \"userKey\": \"\",\n      \"username\": \"\"\n    }\n  ],\n  \"displaycount\": 1,\n  \"errorCode\": \"0\",\n  \"msg\": \"Successful\",\n  \"total\": 1\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

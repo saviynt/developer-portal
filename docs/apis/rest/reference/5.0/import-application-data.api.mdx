@@ -1,0 +1,303 @@
+---
+id: import-application-data
+title: "Import Application Data"
+description: "This API is used to run import data job for a specific application"
+sidebar_label: "Import Application Data"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVltv2zYU/isEnzZAsmw3GRYNBaYq6uZe7MByEQRpYNPUkcVGElWScuoZ/u/DoSRHaYImLwP2UAOG6cPDc/3OZU8N22jqX9PaiFzTG4cmoLkSlRGypD5dZEKT4GJChCa1hoQYSVRdElFUUhmSMMPIF7kmqVSEEV0BF6nghFVVLjhDIZ/VZ/tdZEBWQW0yqcQ/9mZFilobkrEtkNUbYArUiqQyz+UdJGS9I6uFvIVy1Un4yMqEGal2pGKKFdon3c1K77SBomQFrBxL4LIsgaMWs6seE6fI2b2eWWdZ3ok9Sk3rPJdKlFxBAaVh+Yq4BIlej9aIZpzLujRaKsY5aI2cHc1rSJYvnEfBIvoUR/N45ZIr0N5UdvqCJBGtJW14rUFgQGnCWUlYriVZA6mYxlS4R//fSkXgGyuqHJwjcTQgSI+DCzKx4hxSKbkVCRCTQV+2S96Fs2UQ/z2LF449x1fxdN4cww+TaNqS0W6HXARxfDmbn6OScaMkuIyfU0Jc5FoGYRjF8fJ9dOX0/sZROI8Wy05ydzX7NF0sJ+dOOJ/F94T57EO0DOZT6lBZgbJYmiTUp03UgnvsnTPDqEMVfK1Bmzcy2VF/T7ksDZQGj0WdG1ExZbxUqsJFOCNZ8wwKe0L0UJ/K9Rfghjq0UqjSCNCtpB6gevzaKFFuqEPbrFCfxhaiI3pw6ENw/vhZssYX9/h+oRL7Qc91JUvdWDseDvHnYYE3WSNtpDJgCSjLfc4MPBmLJ9QustohwzEJ6g0ZD0e/k/HQH5/44zH56+OCoiExqC2ol8oLKsYzcEO5kwa80WDUyjBuKOWteLFdYRjP37qL2fto+nqdvgKWnDIXXp2m7klywt0zdjZyx2d8xCD9LR1z/ge5YCZ77VEbvB5Oev3M+6IxcC8HCSglVSiTZ1I3xDwXevNjrjZdlZLYUog2TBlIiK5ti8HetBtc5MA0YLsmPAN+27yJDTO1xv69AWOLk9dKQWlQiKl143OryRreh4a/p1uW1/CdQ3RIW6P/Y8saOBdgMomVXkltA81MRn3qNYXfYlhbqOFQ29Na5dSnmTGV9j1vb6BkpTkMNNuKXWl4LutkwGXhReFHj1XC255Sh26ZEmzdBqF58rhuWjrOy5TVuaH+MUuHw+EGzeC1EmZn7Vjb6YbTj/rXN/3rGFHUqOozHTGAtqNTlo36LRN12sNbqQqGyt9dNoUmylTa58I0HaFxlUSlAVUpoYFMEiiNMDsSov92us8hBQUlB/rkAhDKPG8aVtfdtc1TAoaJXBOZ2r+6rjAPkJAmUdquBXjzvBW/RJPwVww+KN1oPh0MBwgvA6rQsxQ7iODQS2ebRZtAy+TRpmgZtwlr2iVF/+LGMup8h4i7u7tBX4w+8kHBBHK2lD97XFioueBQauirsT2LjK3Nj7Uwez2QauO1b7X3YRJG0zhyx4PhIDNFjoK/ubnc2Aw+lNG38q5y297k1VUuWaK98XB05g1PvDbQSxSynLLtbqC3GwsMLJmClT2L24rtzctuDDyAQG9g/lwHf66D/+d1sO2ZBr4Zr8qZKLGibB3t21lxTXuz4sahGQ4S/5ru92um4ZPKDwckf61BYee+uZ8GtnF3G5Jt6rewwx2jKQ53gbqdbko+uVkenO5RwDlUpsf+aMHAGXEcdxezeIEtv11gi2b2ouCkKdjjEY08HP4FTQLRiQ==
+sidebar_class_name: "post api-method"
+info_path: apis/rest/reference/5.0/saviynt-enterprise-identity-cloud-api-reference
+custom_edit_url: null
+proxy: https://cors-api-18af4d883f64.herokuapp.com
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Import Application Data"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/importData"}
+>
+  
+</MethodEndpoint>
+
+
+
+This API is used to run import data job for a specific application
+
+The `Authorization` must have `Bearer` followed by `Token`
+
+Mandatory params: 
+
+`systemname`,
+`connectiontype`,
+`connectionName`
+
+Optional params:
+
+`fullorincremental` - full/incremental,
+`accountsoraccess` - accounts/access
+`CREATEUSERS`- Yes/No
+
+Additional import parameters can also be passed - 
+
+For example, 
+
+1. For SAP Import, provide the parameters - JCO_ASHOST, JCO_SYSNR, JCO_CLIENT, JCO_USER, PASSWORD
+2. For AWS Import, provide the parameters  - AWS_ACCESS_KEY,AWS_ACCESS_SECRET_PASSWORD,AWS_ACCOUNT_ID,CROSS_ACCOUNT_ROLE_ARN
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"multipart/form-data"}
+    value={"multipart/form-data-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"connectionName"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"System1"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"connectiontype"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"db"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"systemname"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","example":"System1"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Import Data
+          
+          
+        </div><details
+          style={{"textAlign":"left","marginBottom":"1rem"}}
+          className={"openapi-markdown__details"}
+          data-collaposed={true}
+          open={false}
+        >
+          <summary
+            style={{}}
+          >
+            <strong>
+              Response Headers
+            </strong>
+          </summary><ul
+            style={{"marginLeft":"1rem"}}
+          >
+            <li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Date
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Server
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li><li
+              className={"schemaItem"}
+            >
+              <summary
+                style={{}}
+              >
+                <strong>
+                  Set-Cookie
+                </strong><span
+                  style={{"opacity":"0.6"}}
+                >
+                   string
+                </span>
+              </summary><div>
+                
+              </div>
+            </li>
+          </ul>
+        </details><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"errorCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"0"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"msg"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Import process started successfully.Please use checkImportStatus to get the current status"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \"Import process started successfully.Please use checkImportStatus to get the current status\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Import Data"}
+                  value={"Import Data"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"errorCode\": \"0\",\n  \"msg\": \"Import process started successfully.Please use checkImportStatus to get the current status\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      
