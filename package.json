@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "yarn gen-all && node ./.scripts/fetchContributors.js && docusaurus start",
-    "build": "yarn gen-all && node ./.scripts/fetchContributors.js && docusaurus build",
+    "start": "yarn gen-all && docusaurus start",
+    "build": "yarn gen-all && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
@@ -21,6 +21,7 @@
     "re-gen": "yarn clean-all && yarn gen-all"
   },
   "dependencies": {
+    "@docsearch/react": "3",
     "@docusaurus/core": "3.1.1",
     "@docusaurus/plugin-content-blog": "3.1.1",
     "@docusaurus/plugin-content-docs": "3.1.1",
