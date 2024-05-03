@@ -26,6 +26,17 @@
   --ifm-color-secondary: #2f8921; /* Replace with your secondary color code */
 
   --ifm-color-tertiary: #c9a225; /* Replace with your tertiary color code */
+
+    /* START STATUS COLORS */
+    --ifm-color-info: #0074d3;
+    --ifm-color-warning: #a36700;
+    --ifm-color-danger: #d13c3c;
+    --ifm-color-success: #1db846;
+    /* END STATUS COLORS */
+
+    /* START SIDEBAR VARS*/
+    /* --doc-sidebar-width: 300px !important; */
+  /* END SIDEBAR VARS */
 }
 
 /* For dark mode, maintain the color contrast for readability */
@@ -52,15 +63,85 @@
 }
 
 
-.navbar__item {
-  font-size: 14px; /* Adjust this value as needed */
+/* START NAVBAR */
+.navbar {
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+  box-shadow: none;
 }
 
-/* Top Navigation Menu Item Hover */
-/* .navbar__link:hover,
-.navbar__item--active:hover {
-  text-underline-offset : var(--ifm-color-secondary); 
-} */
+.navbar .navbar__inner {
+  margin: 0 auto;
+}
+
+.dropdown {
+  .navbar__link {
+    color: var(--ifm-navbar-link-color);
+    font-weight: var(--ifm-font-weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.25px;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.dropdown__menu {
+  &.mega {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    background-color: var(--ifm-navbar-background-color);
+  }
+
+  ul {
+    list-style: none;
+    padding: 1rem;
+  }
+}
+
+.dropdown__link {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin-top: 0;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.navbar-section-title {
+  font-size: 0.75rem;
+  padding-left: 0.5rem;
+  line-height: 135%;
+  font-weight: 600;
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+}
+
+.navbar-doc-items {
+  margin: 0.5rem 0;
+}
+
+.section__docs {
+  font-weight: bolder;
+  cursor: inherit;
+  background-color: transparent !important;
+  border-radius: 0;
+  border-bottom: 1px solid var(--ifm-color-emphasis-400);
+}
+
+.indent {
+  padding-left: 1rem;
+}
+
+.navbar-sidebar {
+  font-size: 14px;
+}
+
+/* END NAVBAR */
+
 
 /* Page content */
 body {
@@ -69,6 +150,142 @@ body {
   font-weight: 400;
 }
 
+
+/* START TOC */
+.table-of-contents {
+  margin-left: 0;
+  padding-left: var(--ifm-toc-padding-horizontal);
+
+  &.table-of-contents__left-border {
+    border-left: 1px solid var(--ifm-color-gray-400);
+  }
+
+  .table-of-contents__link {
+    display: block;
+    font-size: 0.75rem;
+  }
+
+  .table-of-contents__link--active {
+    font-weight: var(--ifm-font-weight-bold);
+    border-left: 0.125rem solid var(--ifm-color-gray-700);
+    color: var(--ifm-font-color-base);
+    margin-left: -1rem;
+    padding-left: 0.75rem;
+  }
+}
+/* END TOC */
+
+/* START SIDEBAR */
+
+.theme-doc-sidebar-item-link-level-1 {
+  font-weight: var(--ifm-font-weight-bold);
+}
+
+.theme-doc-sidebar-menu {
+  font-size: 14px;
+  font-weight: var(--ifm-font-weight-normal);
+
+  .menu__link {
+    .menu__link--active,
+    &.menu__link--active {
+      font-weight: var(--ifm-font-weight-bold);
+    }
+  }
+}
+
+.menu__list-item--collapsed {
+  .menu__list-item-collapsible {
+    &::before {
+      transform: rotate(0deg) !important;
+      transition: all var(--ifm-transition-fast) ease-in-out;
+    }
+  }
+}
+
+.theme-doc-sidebar-menu {
+  .theme-doc-sidebar-item-category {
+    .menu__list-item-collapsible + .menu__list {
+      padding-left: 1.1rem;
+    }
+
+    .theme-doc-sidebar-item-link {
+      margin-top: 0;
+
+      .menu__link {
+        border-left: 0.1rem solid var(--ifm-color-gray-400);
+        border-radius: 0 0.25rem 0.25rem 0;
+        padding-left: 1.05rem;
+      }
+
+      .menu__link--active {
+        border-left: 0.1rem solid var(--ifm-color-gray-700);
+      }
+    }
+  }
+
+  .theme-doc-sidebar-item-link-level-1.menu__list-item,
+  .theme-doc-sidebar-item-link-level-2.menu__list-item {
+    display: flex;
+    align-items: center;
+
+    .menu__link {
+      border-left: none;
+      justify-content: flex-start;
+    }
+  }
+
+  .menu__list-item {
+    .menu__caret {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      padding: 0 0;
+    }
+
+    .menu__caret::before,
+    .menu__link--sublist::after {
+      min-width: 1.5rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      background: url("/icons/chevron-top.svg") no-repeat;
+      background-position: center center;
+      min-height: 29.5px;
+      padding-left: var(--ifm-menu-link-padding-horizontal);
+    }
+
+    .menu__link--sublist::after {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .menu__list-item-collapsible {
+      &::before {
+        content: "";
+
+        width: 1.5rem;
+        height: 1.5rem;
+        height: auto;
+        background-position: center center;
+        transform: rotate(90deg);
+        transition: all 0.3s ease-in-out;
+      }
+
+      .menu__link--active {
+        background: var(--ifm-menu-color-background-active) !important;
+      }
+    }
+  }
+}
+/* END SIDEBAR */
+
+
+
+
+
 /* Override --ifm text-decoration */
 a:any-link:hover {
   text-decoration: none;
@@ -76,20 +293,21 @@ a:any-link:hover {
 
 /* Sidebar Method labels */
 .api-method > .menu__link {
-  align-items: center;
+  align-items: left;
   justify-content: start;
 }
 
-.api-method > .menu__link::before {
-  width: 50px;
+.api-method > .menu__link::before {  
+  width: 30px;
   height: 20px;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 20px;
   text-transform: uppercase;
   font-weight: 400;
-  border-radius: 0.25rem;
+  border-radius: 0.20rem;
   border: 1px solid;
-  border-inline-start-width: 5px;
+  border-inline-start-width: 2px;
+  margin-left: auto;
   margin-right: var(--ifm-spacing-horizontal);
   text-align: center;
   flex-shrink: 0;
@@ -142,6 +360,56 @@ a:any-link:hover {
   background-color: var(--ifm-color-secondary-darkest);
 }
 
+/* API Explorer send button */
+.openapi-explorer__request-btn {
+  background-color: var(--ifm-color-success) !important;
+}
+
+.openapi-explorer__request-btn:hover {
+  background-color: var(--ifm-color-success-light) !important;
+}
+
+.openapi-explorer__response-placeholder-message {
+  color: var(--ifm-color-gray-100) !important;
+  text-align: left !important;
+}
+
+.openapi-explorer__response-placeholder-message code {
+  background-color: unset !important;
+}
+
+code {
+  background-color: var(--ifm-pre-background) !important;
+}
+
+.openapi-explorer__form-item {
+  font-size: 0.9rem !important;
+}
+
+
+/* START DETAILS MARKERS */
+.theme-api-markdown > div:first-child summary::before {
+  content: "";
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>')
+    50% / 1.2rem 1.2rem;
+  filter: var(--ifm-menu-link-sublist-icon-filter);
+  height: 0.75rem;
+  transform: rotate(90deg) !important;
+  width: 0.75rem;
+  transition: transform var(--ifm-transition-fast) linear !important;
+  border: none !important;
+  transform-origin: unset !important;
+}
+
+.theme-api-markdown
+  > div:first-child
+  details[data-collapsed="false"]
+  > summary::before {
+  transform: rotate(180deg) !important;
+}
+/* END DETAILS MARKERS  */
+
+
 /* GitHub Header Link */
 .header-github-link:hover {
   opacity: 0.6;
@@ -188,28 +456,6 @@ div[class^="announcementBar_"] {
   /* Other styles you might want to keep or adjust */
 }
 
-/* div[class^="announcementBar_"] {
-  --site-announcement-bar-stripe-color1: hsl(
-    var(--site-primary-hue-saturation) 85%
-  );
-  --site-announcement-bar-stripe-color2: hsl(
-    var(--site-primary-hue-saturation) 95%
-  );
-  background: repeating-linear-gradient(
-    35deg,
-    var(--site-announcement-bar-stripe-color1),
-    var(--site-announcement-bar-stripe-color1) 20px,
-    var(--site-announcement-bar-stripe-color2) 10px,
-    var(--site-announcement-bar-stripe-color2) 40px
-  );
-  font-weight: bold;
-} */
-
-
-/* showcase css */
-
-/* src/css/custom.css */
-/* src/css/custom.css */
 
 .demo-showcase-card {
   display: block;
@@ -335,6 +581,12 @@ div[class^="announcementBar_"] {
   justify-content: center; /* Centers icon horizontally */
   user-select: none; /* Prevents the icon text from being selectable */
 }
+
+/* START BUTTON */
+.button.button--secondary {
+  color: var(--ifm-button-color) !important;
+}
+/* END BUTTON */
 
 .button-group .material-icons {
   margin-right: 20px;
