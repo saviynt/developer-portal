@@ -9,10 +9,6 @@ const navbar: Navbar ={
     hideOnScroll: false,  // Set to true or false based on your preference
     items: [
       {
-        label: "APIs",
-        to: "/apis",
-      },
-      {
         label: "GUIDE",
         to: "/guide",
       },
