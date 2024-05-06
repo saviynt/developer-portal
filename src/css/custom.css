@@ -55,6 +55,16 @@
   /* END SIDEBAR VARS */
 }
 
+/* Assuming you have a class .logo for your SVG */
+.logo {
+  filter: none; /* Restore original colors for dark mode */
+}
+
+/* Specific styles for dark mode */
+[data-theme="dark"] .logo {
+  filter: brightness(0) invert(1);
+}
+
 /* For dark mode, maintain the color contrast for readability */
 [data-theme="dark"] {
   --ifm-background-color: #121546;

@@ -14,7 +14,7 @@ const config: Config = {
   baseUrl: "/",
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/saviynt_favicon.ico",
+  favicon: "img/saviynt_favicon.ico", 
   organizationName: "Saviynt",
   projectName: "developer-portal",
 

@@ -1,36 +1,28 @@
 import React, { useEffect } from 'react';
 
-const GitHubDiscussions = ({ repo, issueTerm = 'pathname', label = 'discussion', theme = 'github-light' }) => {
+const GiscusComponent = () => {
   useEffect(() => {
-    // Cleanup existing script to reconfigure or reinitialize when props change
-    const existingScript = document.getElementById('github-discussion-script');
-    if (existingScript) {
-      existingScript.remove();
-    }
-
     const script = document.createElement('script');
-    script.id = 'github-discussion-script'; // Unique ID for the script tag
-    script.src = 'https://utteranc.es/client.js';
+    script.src = 'https://giscus.app/client.js';
     script.async = true;
-    script.setAttribute('repo', repo);
-    script.setAttribute('issue-term', issueTerm);
-    script.setAttribute('label', label);
-    script.setAttribute('theme', theme);
-    script.crossOrigin = 'anonymous';
+    script.setAttribute('data-repo', 'saviynt/developer-portal');
+    script.setAttribute('data-repo-id', 'R_kgDOLnTSUg');
+    script.setAttribute('data-category', 'General');
+    script.setAttribute('data-category-id', 'DIC_kwDOLnTSUs4Cel7H');
+    script.setAttribute('data-mapping', 'pathname');
+    script.setAttribute('data-reactions-enabled', '1');
+    script.setAttribute('data-emit-metadata', '0');
+    script.setAttribute('data-theme', 'light');
+    script.setAttribute('data-lang', 'en');
+    script.setAttribute('crossorigin', 'anonymous');
+    document.body.appendChild(script);
 
-    const anchor = document.getElementById('github-discussions');
-    if (anchor) {
-      anchor.innerHTML = ''; // Clear previous content
-      anchor.appendChild(script);
-    }
-
-    // Cleanup function to remove script on component unmount
     return () => {
-      script.remove();
+      document.body.removeChild(script);
     };
-  }, [repo, issueTerm, label, theme]);  // Re-run the effect if these props change
+  }, []);
 
-  return <div id="github-discussions"></div>;
+  return <div className="giscus" />;
 };
 
-export default GitHubDiscussions;
+export default GiscusComponent;
