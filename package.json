@@ -21,16 +21,17 @@
     "re-gen": "yarn clean-all && yarn gen-all"
   },
   "dependencies": {
-    "@docsearch/react": "3",
-    "@docusaurus/core": "3.1.1",
+    "@algolia/client-search": "^4.9.1",
+    "@docusaurus/core": "^3.1.1",
+    "@docusaurus/mdx-loader": "3.1.1",
     "@docusaurus/plugin-content-blog": "3.1.1",
     "@docusaurus/plugin-content-docs": "3.1.1",
     "@docusaurus/plugin-google-gtag": "3.1.1",
     "@docusaurus/preset-classic": "3.1.1",
     "@docusaurus/theme-live-codeblock": "3.1.1",
     "@docusaurus/theme-mermaid": "3.1.1",
+    "@docusaurus/utils-common": "3.1.1",
     "clsx": "^1.1.1",
-    "docusaurus-plugin-image-zoom": "^2.0.0",
     "docusaurus-plugin-openapi-docs": "3.0.0-beta.10",
     "docusaurus-theme-openapi-docs": "3.0.0-beta.10",
     "dompurify": "^3.1.0",
@@ -41,7 +42,6 @@
     "prism-react-renderer": "^2.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-flow-renderer": "^10.3.17",
     "react-live": "^4.1.6"
   },
   "browserslist": {
@@ -59,10 +59,10 @@
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.1.1",
     "@docusaurus/tsconfig": "3.1.1",
-    "@docusaurus/types": "3.1.1",
+    "@docusaurus/types": "^3.1.1",
     "@types/lodash": "^4.17.0",
     "@types/mustache": "^4.2.5",
-    "css-minimizer-webpack-plugin": "^4.2.0",
+    "css-minimizer-webpack-plugin": "^4.2.2",
     "eslint-plugin-prettier": "^5.0.1",
     "typescript": "^5.4.5"
   }

@@ -187,15 +187,6 @@ const config: Config = {
         // NOTE: options are passed through JSON.stringify(), so functions (such as `sanitize_properties`) are not supported.
       },
     ],
-    [
-      'docusaurus-plugin-image-zoom',
-      {
-        // options like selector, background, zIndex, etc.
-        selector: '.markdown :not(a) > img',
-        background: 'rgba(0,0,0,0.8)',
-        zIndex: 9999,
-      },
-    ],
   ],
   markdown: {
     mermaid: true,
