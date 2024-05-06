@@ -10,7 +10,7 @@
  */
  import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
 import api_rest_5_0_sidebar from "./docs/apis/rest/reference/5.0/sidebar";
-// import api_ecf_sidebar from "./docs/connectors/ecf/reference/1.0/sidebar";
+import api_ecf_sidebar from "./docs/connectors/ecf/reference/1.0/sidebar";
 
 import {
   versionCrumb,
@@ -165,8 +165,7 @@ import {
                       "This is a Saviynt REST API Specification External Connector Framework",
                     slug: "/connectors/ecf/reference/1.0/",
                   },
-                  // items: api_ecf_sidebar,
-                  items: [],
+                  items: api_ecf_sidebar,
                 }
               ]
             },
