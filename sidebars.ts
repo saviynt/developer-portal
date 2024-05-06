@@ -160,7 +160,7 @@ import {
                   label: "📚 Reference",
                   link: {
                     type: "generated-index",
-                    title: "ECF API Reference",
+                    title: "ECF API References",
                     description:
                       "This is a Saviynt REST API Specification External Connector Framework",
                     slug: "/connectors/ecf/reference/1.0/",
@@ -171,7 +171,7 @@ import {
             },
             {
               type: 'link',
-              label: 'Community Connectors',  // This is the text that will be displayed in the link
+              label: '🔗 Community Connectors',  // This is the text that will be displayed in the link
               href: '/community/community-connectors',  // This is the path to the document, adjusted for direct linking
             },
           ],

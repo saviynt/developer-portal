@@ -9,15 +9,15 @@ const navbar: Navbar ={
     hideOnScroll: false,  // Set to true or false based on your preference
     items: [
       {
-        label: "GUIDE",
+        label: "📖 GUIDE",
         to: "/guide",
       },
       {
-        label: "COMMUNITY",
+        label: "👥 COMMUNITY",
         to: "/community",
       },
       {
-        label: "BLOGS",
+        label: "📰 BLOGS",
         to: "/blog/",
       },
       {
