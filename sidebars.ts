@@ -8,7 +8,7 @@
 
  Create as many sidebars as you want.
  */
- import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
+import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
 import api_rest_5_0_sidebar from "./docs/apis/rest/reference/5.0/sidebar";
 import api_ecf_sidebar from "./docs/connectors/ecf/reference/1.0/sidebar";
 
@@ -66,7 +66,7 @@ import {
             },
             {
               type: "category",
-              label: "Reference",
+              label: "📚 Reference",
               link: {
                 type: "generated-index",
                 title: "API Reference 5.0",
@@ -78,7 +78,7 @@ import {
             },
             {
               type: 'category', 
-              label: "Changelog",
+              label: "📝 Changelog",
               link: {
                 type: 'doc',
                 id: 'apis/rest/reference/changelog',
@@ -157,7 +157,7 @@ import {
                 },
                 {
                   type: "category",
-                  label: "Reference",
+                  label: "📚 Reference",
                   link: {
                     type: "generated-index",
                     title: "ECF API Reference",
@@ -170,8 +170,9 @@ import {
               ]
             },
             {
-              type: 'doc',
-              id: 'community/community-connectors',
+              type: 'link',
+              label: 'Community Connectors',  // This is the text that will be displayed in the link
+              href: '/community/community-connectors',  // This is the path to the document, adjusted for direct linking
             },
           ],
         },
