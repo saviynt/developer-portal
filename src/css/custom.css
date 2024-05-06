@@ -176,7 +176,7 @@ body {
 /* END TOC */
 
 /* START SIDEBAR */
-/*
+
 .theme-doc-sidebar-item-link-level-1 {
   font-weight: var(--ifm-font-weight-bold);
 }
@@ -202,6 +202,7 @@ body {
   }
 }
 
+/*
 .theme-doc-sidebar-menu {
   .theme-doc-sidebar-item-category {
     .menu__list-item-collapsible + .menu__list {
@@ -298,7 +299,7 @@ a:any-link:hover {
   justify-content: start;
 }
 
-.api-method > .menu__link::before {  
+.api-method > .menu__link::after {  
   width: 30px;
   height: 20px;
   font-size: 10px;
@@ -314,49 +315,49 @@ a:any-link:hover {
   flex-shrink: 0;
 }
 
-.get > .menu__link::before {
+.get > .menu__link::after {
   content: "get";
   background-color: var(--ifm-color-info-contrast-background);
   color: var(--ifm-color-info-contrast-foreground);
   border-color: var(--ifm-color-info-dark);
 }
 
-.post > .menu__link::before {
+.post > .menu__link::after {
   content: "post";
   background-color: var(--ifm-color-success-contrast-background);
   color: var(--ifm-color-success-contrast-foreground);
   border-color: var(--ifm-color-success-dark);
 }
 
-.delete > .menu__link::before {
+.delete > .menu__link::after {
   content: "del";
   background-color: var(--ifm-color-danger-contrast-background);
   color: var(--ifm-color-danger-contrast-foreground);
   border-color: var(--ifm-color-danger-dark);
 }
 
-.put > .menu__link::before {
+.put > .menu__link::after {
   content: "put";
   background-color: var(--ifm-color-warning-contrast-background);
   color: var(--ifm-color-warning-contrast-foreground);
   border-color: var(--ifm-color-warning-dark);
 }
 
-.patch > .menu__link::before {
+.patch > .menu__link::after {
   content: "patch";
   background-color: var(--ifm-color-success-contrast-background);
   color: var(--ifm-color-success-contrast-foreground);
   border-color: var(--ifm-color-success-dark);
 }
 
-.head > .menu__link::before {
+.head > .menu__link::after {
   content: "head";
   background-color: var(--ifm-color-secondary-contrast-background);
   color: var(--ifm-color-secondary-contrast-foreground);
   border-color: var(--ifm-color-secondary-dark);
 }
 
-.event > .menu__link::before {
+.event > .menu__link::after {
   content: "event";
   background-color: var(--ifm-color-secondary-darkest);
 }
