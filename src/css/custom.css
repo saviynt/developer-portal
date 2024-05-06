@@ -34,6 +34,22 @@
     --ifm-color-success: #1db846;
     /* END STATUS COLORS */
 
+      /* START GRAY (STEEL BLUE) COLORS */
+  --ifm-color-gray-0: #fcfcfd;
+  --ifm-color-gray-100: #f0f4f7;
+  --ifm-color-gray-200: #dfe5eb;
+  --ifm-color-gray-300: #b8c1cc;
+  --ifm-color-gray-400: #9aa5b2;
+  --ifm-color-gray-500: #768494;
+  --ifm-color-gray-600: #5d6a7a;
+  --ifm-color-gray-700: #475566;
+  --ifm-color-gray-800: #354252;
+  --ifm-color-gray-900: #19222e;
+  --ifm-color-gray-1000: #0b1117;
+  --ifm-button-background-color: var(--ifm-color-emphasis-0);
+
+  /* END GRAY (STEEL BLUE) COLORS */
+
     /* START SIDEBAR VARS*/
     /* --doc-sidebar-width: 300px !important; */
   /* END SIDEBAR VARS */
@@ -152,136 +168,135 @@ body {
 
 
 /* START TOC */
+/* Base styles for the table of contents */
 .table-of-contents {
   margin-left: 0;
   padding-left: var(--ifm-toc-padding-horizontal);
-
-  &.table-of-contents__left-border {
-    border-left: 1px solid var(--ifm-color-gray-400);
-  }
-
-  .table-of-contents__link {
-    display: block;
-    font-size: 0.75rem;
-  }
-
-  .table-of-contents__link--active {
-    font-weight: var(--ifm-font-weight-bold);
-    border-left: 0.125rem solid var(--ifm-color-gray-700);
-    color: var(--ifm-font-color-base);
-    margin-left: -1rem;
-    padding-left: 0.75rem;
-  }
 }
+
+/* Modifier class for the table of contents when it has a left border */
+.table-of-contents.table-of-contents__left-border {
+  border-left: 1px solid var(--ifm-color-gray-400);
+}
+
+/* Styles for individual links within the table of contents */
+.table-of-contents__link {
+  display: block;
+  font-size: 0.75rem;
+}
+
+/* Styles for active links within the table of contents */
+.table-of-contents__link--active {
+  font-weight: var(--ifm-font-weight-bold);
+  border-left: 0.125rem solid var(--ifm-color-gray-700);
+  color: var(--ifm-font-color-base);
+  margin-left: -1rem;
+  padding-left: 0.75rem;
+}
+
 /* END TOC */
 
 /* START SIDEBAR */
 
+/* Styles for a sidebar item at level 1 */
 .theme-doc-sidebar-item-link-level-1 {
   font-weight: var(--ifm-font-weight-bold);
 }
 
+/* Styles for the sidebar menu */
 .theme-doc-sidebar-menu {
   font-size: 14px;
   font-weight: var(--ifm-font-weight-normal);
-
-  .menu__link {
-    .menu__link--active,
-    &.menu__link--active {
-      font-weight: var(--ifm-font-weight-bold);
-    }
-  }
 }
 
-.menu__list-item--collapsed {
-  .menu__list-item-collapsible {
-    &::before {
-      transform: rotate(0deg) !important;
-      transition: all var(--ifm-transition-fast) ease-in-out;
-    }
-  }
+/* Styles for active menu links within the sidebar menu */
+.theme-doc-sidebar-menu .menu__link.menu__link--active,
+.theme-doc-sidebar-menu .menu__link.menu__link--active {
+  font-weight: var(--ifm-font-weight-bold);
 }
 
-/*
-.theme-doc-sidebar-menu {
-  .theme-doc-sidebar-item-category {
-    .menu__list-item-collapsible + .menu__list {
-      padding-left: 1.1rem;
-    }
-
-    .theme-doc-sidebar-item-link {
-      margin-top: 0;
-
-      .menu__link {
-        border-left: 0.1rem solid var(--ifm-color-gray-400);
-        border-radius: 0 0.25rem 0.25rem 0;
-        padding-left: 1.05rem;
-      }
-
-      .menu__link--active {
-        border-left: 0.1rem solid var(--ifm-color-gray-700);
-      }
-    }
-  }
-
-  .theme-doc-sidebar-item-link-level-1.menu__list-item,
-  .theme-doc-sidebar-item-link-level-2.menu__list-item {
-    display: flex;
-    align-items: center;
-
-    .menu__link {
-      border-left: none;
-      justify-content: flex-start;
-    }
-  }
-
-  .menu__list-item {
-    .menu__caret {
-      display: flex;
-      align-items: center;
-      justify-content: start;
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      padding: 0 0;
-    }
-
-    .menu__caret::before,
-    .menu__link--sublist::after {
-      min-width: 1.5rem;
-      width: 1.5rem;
-      height: 1.5rem;
-      background: url("/icons/chevron-top.svg") no-repeat;
-      background-position: center center;
-      min-height: 29.5px;
-      padding-left: var(--ifm-menu-link-padding-horizontal);
-    }
-
-    .menu__link--sublist::after {
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
-
-    .menu__list-item-collapsible {
-      &::before {
-        content: "";
-
-        width: 1.5rem;
-        height: 1.5rem;
-        height: auto;
-        background-position: center center;
-        transform: rotate(90deg);
-        transition: all 0.3s ease-in-out;
-      }
-
-      .menu__link--active {
-        background: var(--ifm-menu-color-background-active) !important;
-      }
-    }
-  }
+/* Specific styles when the menu list item is collapsed */
+.menu__list-item--collapsed .menu__list-item-collapsible::before {
+  transform: rotate(0deg) !important;
+  transition: all var(--ifm-transition-fast) ease-in-out;
 }
-*/
+
+
+/* Styles for the sidebar menu category */
+.theme-doc-sidebar-menu .theme-doc-sidebar-item-category .menu__list-item-collapsible + .menu__list {
+  padding-left: 1.1rem;
+}
+
+/* Styles for links within the sidebar menu category */
+.theme-doc-sidebar-menu .theme-doc-sidebar-item-category .theme-doc-sidebar-item-link {
+  margin-top: 0;
+}
+
+.theme-doc-sidebar-menu .theme-doc-sidebar-item-category .theme-doc-sidebar-item-link .menu__link {
+  border-left: 0.1rem solid var(--ifm-color-gray-400);
+  border-radius: 0 0.25rem 0.25rem 0;
+  padding-left: 1.05rem;
+}
+
+.theme-doc-sidebar-menu .theme-doc-sidebar-item-category .theme-doc-sidebar-item-link .menu__link--active {
+  border-left: 0.1rem solid var(--ifm-color-gray-700);
+}
+
+/* Styles for specific levels of links within the sidebar */
+.theme-doc-sidebar-menu .theme-doc-sidebar-item-link-level-1.menu__list-item,
+.theme-doc-sidebar-menu .theme-doc-sidebar-item-link-level-2.menu__list-item {
+  display: flex;
+  align-items: center;
+}
+
+.theme-doc-sidebar-menu .theme-doc-sidebar-item-link-level-1.menu__link,
+.theme-doc-sidebar-menu .theme-doc-sidebar-item-link-level-2.menu__link {
+  border-left: none;
+  justify-content: flex-start;
+}
+
+/* Styles for collapsible menu items */
+.theme-doc-sidebar-menu .menu__list-item .menu__caret {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+}
+
+.theme-doc-sidebar-menu .menu__list-item .menu__caret::before,
+.theme-doc-sidebar-menu .menu__list-item .menu__link--sublist::after {
+  min-width: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url("/icons/chevron-top.svg") no-repeat;
+  background-position: center center;
+  min-height: 29.5px;
+  padding-left: var(--ifm-menu-link-padding-horizontal);
+}
+
+.theme-doc-sidebar-menu .menu__list-item .menu__link--sublist::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.theme-doc-sidebar-menu .menu__list-item .menu__list-item-collapsible::before {
+  content: "";
+  width: 1.5rem;
+  height: 1.5rem;
+  background-position: center center;
+  transform: rotate(90deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.theme-doc-sidebar-menu .menu__list-item .menu__list-item-collapsible .menu__link--active {
+  background: var(--ifm-menu-color-background-active) !important;
+}
+
+
 /* END SIDEBAR */
 
 

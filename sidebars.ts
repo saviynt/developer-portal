@@ -171,7 +171,7 @@ import {
             },
             {
               type: 'doc',
-              id: 'connectors/community-connectors',
+              id: 'community/community-connectors',
             },
           ],
         },
