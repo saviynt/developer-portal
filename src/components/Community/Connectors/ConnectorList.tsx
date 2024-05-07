@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
+
 const ConnectorList = () => {
   const [connector, setconnector] = useState([]);
   const [error, setError] = useState(null);
@@ -57,9 +58,17 @@ const ConnectorList = () => {
             <p className="demo-showcase-card__description">{connector.description}</p>
           </div>
           <div className="demo-showcase-card__footer">
-            {/* {connector.tags.map((tag, index) => (
-              <span key={index} className={`tag tag--${tag}`}>{tag}</span>
-            ))} */}
+            <a href={connector.githubLink} className="material-icons" aria-label="View source on GitHub" style={{ marginRight: '10px', cursor: 'pointer' }}>
+                  code
+                </a>
+                <a href={connector.distLink} download={`${connector.name}.zip`} className="material-icons" aria-label="Download" style={{ marginRight: '10px', cursor: 'pointer' }}>
+                  file_download
+                </a>
+                <a href={`${connector.githubLink}/issues`} className="material-icons" target="_blank" rel="noopener noreferrer" aria-label="Report Issues" style={{ cursor: 'pointer' }}>
+                  bug_report
+                </a>
+                <a href={`${connector.githubLink}/graphs/contributors`} target="_blank" rel="noopener noreferrer" title="View Contributors">
+                </a>
           </div>
         </div>
         </div>
