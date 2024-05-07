@@ -75,19 +75,43 @@ Once custom connector unit testing is successful, you should work with EIC admin
 ### Configure ECF Connection:
 1. Go to Admin -> Connections -> Open the connnection named ECF.
 2. Rename the connection name: Default name is ECF, however you may want to import more ECF based connections later on, when you import connection transport package next time that will replace your existing connection with name as ECF, hence this is important to change connection name to ensure your connection is not overwritten later on.
-3. Update ConnectionJson, 
-
-
-### Create connection:
-1. Login to EIC.
-2. Go to Admin -> Connections -> Actions -> Create Connection.
-3. Select connection type as ECF.
-4. Update connection details as per your server host URL and credentials.
-5. There is no need to update any other json on connections page, these are preconfigured as per ECF specification.
-6. Save connection.
+3. Configure ConnectionJson, copy and paste below json (replace https://<HostName>:<Port>, with valid hostname and port details):
+```
+{
+  "authentications": {
+    "userAuth": {
+      "authType": "oauth2",
+      "url": "https://<HostName>:<Port>/api/v1/login",
+      "httpMethod": "POST",
+      "httpParams": "{}",
+      "httpContentType": "application/json",
+      "httpHeaders": {
+        "Content-Type": "application/json"
+      },
+      "authError": [
+        "USER_AUTHENTICATION_FAILED",
+        "PARTNER_AUTHENTICATION_FAILED",
+        "AuthenticationFailed"
+      ],
+      "errorPath": "errorCode",
+      "maxRefreshTryCount": 5,
+      "tokenResponsePath": "access_token",
+      "tokenType": "Bearer",
+      "authHeaderName": "Authorization",
+      "accessToken": "Bearer abcd",
+      "retryFailureStatusCode": [
+        401
+      ]
+    }
+  }
+}
+```
+4. Update other connection parameters, replace https://<HostName>:<Port>, with valid hostname and port details.
+5. There is no need to update any other configuration on connections page, these are preconfigured as per ECF specification.
+6. Save and Test connection.
 
 ### Create Security System and EndPoint:
-1. Create a security system and use connection created in previous step as connection and provisioning connection.
+1. Create a security system and use connection created in previous step as Connection and Provisioning Connection.
 2. Create an endpoint for security system created in step 1.
 3. Configure workflows as needed for provisioning operations.
 
