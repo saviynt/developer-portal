@@ -21,7 +21,7 @@ const ShowcaseCard: React.FC<ShowcaseCardProps> = ({ item }) => {
   return (
     <a href={item.link} className="demo-showcase-card" aria-label={`Learn more about ${item.title}`} target="_blank" rel="noopener noreferrer">
     {/* <div className="demo-showcase-card"> */}
-      <div className="demo-showcase-card__image">
+      <div className="demo-showcase-card__header">
         <img src={item.imageUrl} alt={item.title} />
       </div>
       <div className="demo-showcase-card__content">
@@ -33,7 +33,7 @@ const ShowcaseCard: React.FC<ShowcaseCardProps> = ({ item }) => {
             </a>
          </div> */}
       </div>
-      <div className="demo-showcase-card__tags">
+      <div className="demo-showcase-card__footer">
         {item.tags.map((tag, index) => (
           <span key={index} className={`tag tag--${tag}`}>{tag}</span>
         ))}

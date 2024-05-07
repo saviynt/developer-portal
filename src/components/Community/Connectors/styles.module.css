@@ -1,0 +1,79 @@
+.connector-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s;
+  }
+  
+  .connector-card:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+  
+  .connector-card__header {
+    background: #f5f5f5;
+    text-align: center;
+    padding: 16px;
+  }
+  
+  .connector-logo {
+    width: 80px;
+    height: auto;
+  }
+  
+  .connector-card__body {
+    padding: 16px;
+    background: #ffffff;
+  }
+  
+  .connector-name {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .github-link, .download-link {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+  }
+  
+  .github-author {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .author-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .last-updated {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+  }
+  
+  .connector-card__footer {
+    background: #f9f9f9;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  
+  .tag {
+    background: #e0e0e0;
+    border-radius: 16px;
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  
+  .connector-card:hover .github-link, .connector-card:hover .download-link {
+    color: #0077cc;
+  }
+  

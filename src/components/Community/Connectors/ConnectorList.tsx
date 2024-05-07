@@ -49,14 +49,14 @@ const ConnectorList = () => {
       {connector.map(connector => (
         <div className="col col--4"> 
         <div key={connector.name} className="demo-showcase-card" onClick={() => handleCardClick(connector)}>
-        <div className="demo-showcase-card__image">
+        <div className="demo-showcase-card__header">
           <img src={connector.logoUrl} alt={connector.name} />
         </div>
           <div className="demo-showcase-card__content">
             <h5 className="demo-showcase-card__title">{connector.name}</h5>
             <p className="demo-showcase-card__description">{connector.description}</p>
           </div>
-          <div className="demo-showcase-card__tags">
+          <div className="demo-showcase-card__footer">
             {/* {connector.tags.map((tag, index) => (
               <span key={index} className={`tag tag--${tag}`}>{tag}</span>
             ))} */}
