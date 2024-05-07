@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { useColorMode } from '@docusaurus/theme-common'; // Import useColorMode
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
@@ -8,9 +9,14 @@ import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
+  const { colorMode } = useColorMode(); // Get current color mode
+
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner, styles.heroBackgroundImage)}>
+    <header className={clsx('hero hero--primary', styles.heroBanner, {
+      [styles.heroBackgroundImage]: colorMode === 'light', // Apply normal background in light mode
+      [styles.heroBackgroundImageInverted]: colorMode === 'dark' // Apply inverted background in dark mode
+    })}>
       <div className="container">
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
@@ -22,7 +28,7 @@ function HomepageHeader() {
 }
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}

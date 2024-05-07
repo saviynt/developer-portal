@@ -17,6 +17,12 @@
   background-position: center;
 }
 
+.heroBackgroundImageInverted {
+  background-image: url('/static/img/homepage/background_white.png'); /* Update with your actual image path */
+  background-size: cover;
+  background-position: center;
+}
+
 @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 2rem;

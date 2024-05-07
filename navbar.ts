@@ -3,8 +3,9 @@ import type { Navbar } from '@docusaurus/theme-common';
 const navbar: Navbar ={
     title: "FOR DEVELOPERS",
     logo: {
-      alt: "Keytar",
+      alt: "SAVIYNT",
       src: "img/Saviynt_logo_Navy.svg",
+      srcDark: 'img/Saviynt_logo_White.svg',
     },
     hideOnScroll: false,  // Set to true or false based on your preference
     items: [
