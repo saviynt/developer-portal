@@ -62,6 +62,22 @@ Note: You may choose to remove operations which you may not want to perform, how
 
 Once custom connector unit testing is successful, you should work with EIC administrator for this step. In this step, you will configure EIC artifacts needed to integrate the ECF based custom connector with EIC:
 
+### Import ECF connection transport package:
+1. Download <b>[Connection Template Package](https://github.com/saviynt/ExternalConnectorFramework-APISpec/blob/main/connection_template/transport_admin_2024-05-07_10-01-23(UTC).zip)</b> file.
+2. Login to EIC.
+3. Go to Admin -> Transport -> Import Package.
+4. Select the downloaded package file in "Choose package to import *" option and provide business justification.
+5. Click on View Summary. Summary page should display connection object named ECF.
+6. Click on Request and then Submit to confirm import.
+7. Initially status will show In Queue, You can refresh the status, it should be Success in sometime, this will confirm transport package with ECF connection is successfully imported.
+8. You can validate same by navigating to Admin -> Connections -> Search for ECF.
+
+### Configure ECF Connection:
+1. Go to Admin -> Connections -> Open the connnection named ECF.
+2. Rename the connection name: Default name is ECF, however you may want to import more ECF based connections later on, when you import connection transport package next time that will replace your existing connection with name as ECF, hence this is important to change connection name to ensure your connection is not overwritten later on.
+3. Update ConnectionJson, 
+
+
 ### Create connection:
 1. Login to EIC.
 2. Go to Admin -> Connections -> Actions -> Create Connection.
