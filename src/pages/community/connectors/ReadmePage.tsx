@@ -57,7 +57,7 @@ const ReadmePage = () => {
   const [readmeContent, setReadmeContent] = useState('');
   const [error, setError] = useState(null);
   const { readmeUrl, githubUrl, distLink, name } = location.state || {};
-  const issuesUrl = githubUrl ? `https://github.com/saviynt/community-connectors/issues/new?labels=${name}` : null;  // Ensuring no trailing slash
+  const issuesUrl = githubUrl ? `https://github.com/saviynt/saviynt-connectors/issues/new?labels=${name}` : null;  // Ensuring no trailing slash
 
 
   useEffect(() => {
@@ -107,10 +107,13 @@ const ReadmePage = () => {
                       bug_report
                     </a>
                   </div>
+                  
                 <h1>{name} Community Connector</h1>
-              <div className="markdown" dangerouslySetInnerHTML={{ __html: readmeContent }} />
-              <GitHubComments repo="saviynt/community-connectors" issueTerm={name} label="connector" theme="github-light" />
-              </div>
+                  <div className="markdown" dangerouslySetInnerHTML={{ __html: readmeContent }} />
+                  <div className="comments">
+                    <GitHubComments repo="saviynt/saviynt-connectors" issueTerm={name} label="connector" theme="github-light" />
+                  </div>
+                </div>
               )}
             </div>
           </div>

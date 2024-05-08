@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 
 const GITHUB_API_URL = 'https://api.github.com/repos';
 const REPO_OWNER = 'saviynt';
-const REPO_NAME = 'community-connectors';
+const REPO_NAME = 'saviynt-connectors';
 const BRANCH = 'main';
 // const TOKEN = 'your_github_token';
 

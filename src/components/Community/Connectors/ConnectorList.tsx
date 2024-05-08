@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
-
+import { FaUsers } from 'react-icons/fa';
 
 const ConnectorList = () => {
   const [connector, setconnector] = useState([]);
@@ -67,7 +67,9 @@ const ConnectorList = () => {
                 <a href={`${connector.githubLink}/issues`} className="material-icons" target="_blank" rel="noopener noreferrer" aria-label="Report Issues" style={{ cursor: 'pointer' }}>
                   bug_report
                 </a>
-                <a href={`${connector.githubLink}/graphs/contributors`} target="_blank" rel="noopener noreferrer" title="View Contributors">
+                <a href={`${connector.authors}`} target="_blank" rel="noopener noreferrer" title="View Contributors">
+                  <FaUsers style={{ marginRight: '5px' }} />
+                  Contributors
                 </a>
           </div>
         </div>
