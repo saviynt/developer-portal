@@ -7,7 +7,7 @@ import TabItem from '@theme/TabItem';
 ## ConnectionJSON
 A ConnectionJSON typically refers to a JSON formatted configuration section used in Saviynt to define the details of a connection to an external system, service, or API. This JSON structure is used to specify how an application should authenticate and interact with other services. 
 
-### Key Elements of ConnectionJSON
+## Key Elements of ConnectionJSON
 
 - **Authentication Information** : It includes details about the type of authentication required (e.g., OAuth2, Basic, JWT) and the necessary credentials or tokens to authenticate the connection securely.
 - **Connection Details**  This includes URLs, ports, and endpoints to which the application needs to connect. It also specifies the HTTP methods to use (GET, POST, PUT, DELETE) and any special headers or parameters required by the API.
@@ -255,9 +255,9 @@ JSON
   - **Description**: This is a placeholder for the initial access token, which might be provided for setup or testing. This should be replaced with an actual token obtained through the authentication process.
 
 
-### Common Features
+## Common Features
 
-#### Multiple Authentications 
+### Multiple Authentications 
 Supports multiple authentications where more than one authentication mechanism is required. For example, for Azure AD, there are graph.windows.net APIs and [http://graph.microsoft.com](http://graph.microsoft.com) APIs and each API has a different authentication mechanism and hence two authentication constructs are used in ConnectionJSON.
 
 Example:
@@ -319,7 +319,7 @@ Example:
   }
 }
 ```
-#### SSL Parameter
+### SSL Parameter
 Installing SSL certificates is sufficient to make https API calls, however, if target applications expect customizations such as the TLS version, you can pass SSL parameters while making API calls.
 
 ``` JSON
@@ -362,7 +362,7 @@ Installing SSL certificates is sufficient to make https API calls, however, if t
   }
 }
 ```
-#### Connection JSON Validation 
+### Connection JSON Validation 
 The connector supports validating authType as oauth2. To do this, populate the http parameters in the **testConnectionParams** attribute. It validates the connection parameters and prompts Successful or Failed status based on the provided credentials while saving the connection.
 
 From Release v23.10 onwards, if you specify an incorrect value or blank value for the testConnectionParams attribute in the ConnectionJSON parameter and then click Save & Test Connection, the connector displays a detailed error message in the debug log file and the Job Log Detail page of the Test Connections Job. The message includes the name of the failed connection, type of error with exception that occurred in the target, and any additional details that might help in troubleshooting the connection issue.
@@ -418,9 +418,9 @@ JSON
   }
   }
 ```
-### Authentication Types
+## Authentication Types
 The following authentication types are supported:
-#### Basic 
+### Basic 
 Used for authentication where only username and password are required to authorize the REST API calls. Values for username or password fields must be provided in the properties attribute. You can leave the HTTP related parameters empty.
 
 Example:
@@ -458,7 +458,7 @@ JSON
 }
 ```
 
-#### BasicWithAccessToken
+### BasicWithAccessToken
 Used for authentication when the access token is obtained using the basic username and password credentials. In this type, the primary http parameters are **url** , **httpHeaders** , **httpMethod** and **httpContentType**.
 
 
@@ -536,7 +536,7 @@ Example 2: To refresh the token for BasicwithAccesToken auth type when the impor
 }
 ```
 
-#### BasicWithHMAC
+### BasicWithHMAC
 Used when authentication requires Hash-based Message Authentication Code (HMAC) signed signature using the credentials passed in the **properties**
 
 Example:
@@ -567,7 +567,7 @@ Example:
 }
 ```
 
-#### Cookies
+### Cookies
 Used for authentication using cookies.
 
 Example 
@@ -614,7 +614,7 @@ Example
 }
 ```
 
-#### SignedHeaders
+### SignedHeaders
 Used for authentication using SignedHeaders.
 
 Example  JSON
@@ -647,7 +647,7 @@ Example  JSON
   }
 }
 ```
-#### JWT 
+### JWT 
 Used for authentication using JSON Web Tokens (JWT). For this authentication, specify the values for the following attributes: **httpParamsName** , **jwtConfig** , **signedAlgorithm** , **key** , and **jwtExpiryDuration**.
 
 
@@ -758,15 +758,19 @@ Example JSON
   }
 }
 ```
-#### OAuth2
+### OAuth2
 Supports OAuth protocol for API authorization with various types of OAuth2 mechanisms. You must provide the token that the connector must regenerate when a wrong token is specified or existing token has expired.
 
 
 > To regenerate the token, provide the values for the following attributes: url , httpMethod , httpParams , httpHeaders , and httpContentType.
 
+>
+> Resource Owner Password Flow is not supported by Saviynt REST connector
+> 
+
 The following tokens are used for OAuth:
 
-##### Static Access Token
+#### Static Access Token
 Some cloud applications support hardcoded access token that never expires until it is manually revoked from the target application. In this case, an attribute named **accessToken** is populated with the hardcoded token and other parameters are left with dummy values.
 
 Example JSON
@@ -799,7 +803,7 @@ Example JSON
         }
       }
   ```
-##### Static Refresh Token
+#### Static Refresh Token
 In this scenario, access tokens expire after a specific time period but refresh tokens never expire. Therefore, refresh tokens are used as new access tokens. To regenerate a refresh token, specify values for the following attributes: **url** , **httpMethod** , **httpParams** , **httpHeaders** , and **httpContentType**.
 
 Example:
@@ -830,7 +834,7 @@ Example:
 }
 ```
 
-##### Renew Access Token and Refresh Token using Single API
+#### Renew Access Token and Refresh Token using Single API
 In this OAuth mechanism, the access and refresh tokens expire after a time period, and the latest refresh token is used to regenerate new access and refresh tokens. To regenerate these tokens, specify the values for the following attributes: **refreshType** , **refreshTokenResponsePath** , and **refreshToken**.
 
 Example:
@@ -872,7 +876,7 @@ Example:
   }
    ```
 
-##### Renew Access Token and Refresh Token using Different API
+#### Renew Access Token and Refresh Token using Different API
 In some OAuth mechanisms, access token and refresh token both expire after a certain time period. After the refresh token is renewed, you need to place a call to obtain the new refresh token to use it for obtaining the new access token. To regenerate a token, specify the values for the following attributes: **refreshType** , **refreshTokenResponsePath** , **refreshToken** , **refrshTokenAuthError** , **refreshTokenErrorPath** , and **refreshTokenCall**.
 
 Example:
@@ -929,7 +933,7 @@ Example:
     }
   }
 ```
-###  Mask values of sensitive attributes in logs
+##  Mask values of sensitive attributes in logs
 
 The connector supports masking values of sensitive attributes in logs using the **mask** **InLogs** attribute.
 
@@ -976,7 +980,7 @@ Example:
 }
 
 ```
-### Clear special characters 
+## Clear special characters 
 > The connector supports clearing special characters in API response using the **cleanUpTextContent** attribute.
 
 
@@ -1013,7 +1017,7 @@ Example:
 }
 
 ```
-### Handle space in httpParams 
+## Handle space in httpParams 
 The connector replaces space in the **httpParams** attribute with %20 before sending the request to hit the connection API. From Release v23.5 onwards, a new content type named as application/x-www-form-urlencoded-pws is introduced.
 
 Example:
