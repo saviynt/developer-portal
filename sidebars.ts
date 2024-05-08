@@ -172,7 +172,7 @@ import {
             {
               type: 'link',
               label: '🔗 Community Connectors',  // This is the text that will be displayed in the link
-              href: '/community/community-connectors',  // This is the path to the document, adjusted for direct linking
+              href: '/community/connectors',  // This is the path to the document, adjusted for direct linking
             },
           ],
         },

@@ -497,8 +497,10 @@ div[class^="announcementBar_"] {
 
 .demo-showcase-card:hover,
 .demo-showcase-card:focus {
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-  /* Optionally add other styles to indicate hover/focus state */
+  cursor: pointer; /* Changes cursor to a hand */
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5); /* Enhances shadow to make it appear more raised */
+  transform: translateY(-5px); /* Moves the card up slightly */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for shadow and transform */
 }
 
 .demo-showcase-card__header {
