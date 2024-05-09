@@ -1,5 +1,10 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+---
+sidebar_position:1
+sidebar_label: ConnectionJSON
+title: Connecting to Target Application
+---
 
 # ConnectionJSON
 
@@ -7,7 +12,7 @@ import TabItem from '@theme/TabItem';
 ## ConnectionJSON
 A ConnectionJSON typically refers to a JSON formatted configuration section used in Saviynt to define the details of a connection to an external system, service, or API. This JSON structure is used to specify how an application should authenticate and interact with other services. 
 
-### Key Elements of ConnectionJSON
+## Key Elements of ConnectionJSON
 
 - **Authentication Information** : It includes details about the type of authentication required (e.g., OAuth2, Basic, JWT) and the necessary credentials or tokens to authenticate the connection securely.
 - **Connection Details**  This includes URLs, ports, and endpoints to which the application needs to connect. It also specifies the HTTP methods to use (GET, POST, PUT, DELETE) and any special headers or parameters required by the API.
@@ -255,172 +260,9 @@ JSON
   - **Description**: This is a placeholder for the initial access token, which might be provided for setup or testing. This should be replaced with an actual token obtained through the authentication process.
 
 
-### Common Features
-
-#### Multiple Authentications 
-Supports multiple authentications where more than one authentication mechanism is required. For example, for Azure AD, there are graph.windows.net APIs and [http://graph.microsoft.com](http://graph.microsoft.com) APIs and each API has a different authentication mechanism and hence two authentication constructs are used in ConnectionJSON.
-
-Example:
-
-``` JSON
-{
-  "authentications": {
-    "userAuth": {
-      "authType": "oauth2",
-      "url": "https://<domain name>/<<TenantID>>/oauth2/token",
-      "httpMethod": "POST",
-      "httpParams": {
-        "grant_type": "client_credentials",
-        "client_secret": "<<ClientSecret>>",
-        "client_id": "<<ClientID>>",
-        "resource": "https://graph.microsoft.com/"
-      },
-      "httpHeaders": {
-        "contentType": "application/x-www-form-urlencoded"
-      },
-      "httpContentType": "application/x-www-form-urlencoded",
-      "expiryError": "ExpiredAuthenticationToken",
-      "authError": [
-        "InvalidAuthenticationToken"
-      ],
-      "timeOutError": "Read timed out",
-      "errorPath": "error.code",
-      "maxRefreshTryCount": 5,
-      "tokenResponsePath": "access_token",
-      "tokenType": "Bearer",
-      "accessToken": "Bearer abc"
-    },
-    "entAuth": {
-      "authType": "oauth2",
-      "url": "https://<domain name>/<<TenantID>>/oauth2/token",
-      "httpMethod": "POST",
-      "httpParams": {
-        "grant_type": "client_credentials",
-        "client_secret": "<<ClientSecret>>",
-        "client_id": "<<ClientID>>",
-        "resource": "https://graph.windows.net/"
-      },
-      "httpHeaders": {
-        "contentType": "application/x-www-form-urlencoded"
-      },
-      "httpContentType": "application/x-www-form-urlencoded",
-      "expiryError": "ExpiredAuthenticationToken",
-      "authError": [
-        "InvalidAuthenticationToken",
-        "Authentication_MissingOrMalformed"
-      ],
-      "timeOutError": "Read timed out",
-      "errorPath": "odata~dot#error.code",
-      "maxRefreshTryCount": 3,
-      "tokenResponsePath": "access_token",
-      "tokenType": "Bearer",
-      "accessToken": "Bearer abcde"
-    }
-  }
-}
-```
-#### SSL Parameter
-Installing SSL certificates is sufficient to make https API calls, however, if target applications expect customizations such as the TLS version, you can pass SSL parameters while making API calls.
-
-``` JSON
-{
-  "authentications": {
-    "acctAuth": {
-      "authType": "oauth2",
-      "url": "XXXXXXXXXXXX",
-      "httpMethod": "POST",
-      "httpParams": {
-        "grant_type": "client_cert"
-      },
-      "httpContentType": "application/x-www-form-urlencoded",
-      "ssl": {
-        "keyFile": "opt/java/jdk1.8.0_181/jre/lib/security/cacerts",
-        "keyFilePassword": "changeit",
-        "keyManagerAlgorithm": "SunX509",
-        "keyStoreType": "JKS",
-        "sslAlgorithmName": "TLSv1.2"
-      },
-      "httpHeaders": {
-        "Content-Type": "application/x-www-form-urlencoded",
-        "Authorization": "Basic xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-      },
-      "retryFailureStatusCode": [401],
-      "expiryError": "ExpiredAuthenticationToken",
-      "authError": [
-        "SESSION_NOT_VALID",
-        "AuthenticationFailed",
-        "ExpiredJwtException",
-        "401 Unauthorized"
-      ],
-      "timeOutError": "Read timed out",
-      "errorPath": "code",
-      "maxRefreshTryCount": 6,
-      "tokenResponsePath": "access_token",
-      "tokenType": "Bearer",
-      "accessToken": "Bearer xxxxxxxxxxxxxxxxx"
-    }
-  }
-}
-```
-#### Connection JSON Validation 
-The connector supports validating authType as oauth2. To do this, populate the http parameters in the **testConnectionParams** attribute. It validates the connection parameters and prompts Successful or Failed status based on the provided credentials while saving the connection.
-
-From Release v23.10 onwards, if you specify an incorrect value or blank value for the testConnectionParams attribute in the ConnectionJSON parameter and then click Save & Test Connection, the connector displays a detailed error message in the debug log file and the Job Log Detail page of the Test Connections Job. The message includes the name of the failed connection, type of error with exception that occurred in the target, and any additional details that might help in troubleshooting the connection issue.
-
-For more information about troubleshooting issues encountered during saving and testing a connection, see Errors while Saving and Testing a Connection under Troubleshooting Issues in the REST Integration Guide.
-
-
-Example:
-
-JSON
-
-```
-{
-  "authentications": {
-    "acctAuth": {
-      "authType": "Basic",
-      "url": "https://<domain name>",
-      "httpMethod": "POST",
-      "httpParams": {},
-      "httpHeaders": {},
-      "httpContentType": "text/html",
-      "properties": {
-        "userName": "username",
-        "password": "password"
-      },
-      "expiryError": "Couldn't authenticate you",
-      "authError": [
-        "Couldn't authenticate you"
-      ],
-      "timeOutError": "Read timed out",
-      "errorPath": "error",
-      "maxRefreshTryCount": 5,
-      "tokenResponsePath": "access_token",
-      "tokenType": "Basic",
-      "accessToken": "Basic asdfghjkl",
-      "testConnectionParams": {
-        "http": {
-          "url": "https://<domain name>/api/v2/users.json",
-          "httpHeaders": {
-            "Authorization": "${access_token}"
-          },
-          "httpContentType": "application/json",
-          "httpMethod": "GET"
-        },
-        "successResponse": [],
-        "successResponsePath": "",
-        "errors": [
-          "Couldn't authenticate you"
-        ],
-        "errorPath": "error"
-      }
-    }
-  }
-  }
-```
-### Authentication Types
+## Authentication Types
 The following authentication types are supported:
-#### Basic 
+### Basic 
 Used for authentication where only username and password are required to authorize the REST API calls. Values for username or password fields must be provided in the properties attribute. You can leave the HTTP related parameters empty.
 
 Example:
@@ -458,7 +300,7 @@ JSON
 }
 ```
 
-#### BasicWithAccessToken
+### BasicWithAccessToken
 Used for authentication when the access token is obtained using the basic username and password credentials. In this type, the primary http parameters are **url** , **httpHeaders** , **httpMethod** and **httpContentType**.
 
 
@@ -536,7 +378,7 @@ Example 2: To refresh the token for BasicwithAccesToken auth type when the impor
 }
 ```
 
-#### BasicWithHMAC
+### BasicWithHMAC
 Used when authentication requires Hash-based Message Authentication Code (HMAC) signed signature using the credentials passed in the **properties**
 
 Example:
@@ -567,7 +409,7 @@ Example:
 }
 ```
 
-#### Cookies
+### Cookies
 Used for authentication using cookies.
 
 Example 
@@ -614,7 +456,7 @@ Example
 }
 ```
 
-#### SignedHeaders
+### SignedHeaders
 Used for authentication using SignedHeaders.
 
 Example  JSON
@@ -647,7 +489,7 @@ Example  JSON
   }
 }
 ```
-#### JWT 
+### JWT 
 Used for authentication using JSON Web Tokens (JWT). For this authentication, specify the values for the following attributes: **httpParamsName** , **jwtConfig** , **signedAlgorithm** , **key** , and **jwtExpiryDuration**.
 
 
@@ -758,15 +600,19 @@ Example JSON
   }
 }
 ```
-#### OAuth2
+### OAuth2
 Supports OAuth protocol for API authorization with various types of OAuth2 mechanisms. You must provide the token that the connector must regenerate when a wrong token is specified or existing token has expired.
 
 
 > To regenerate the token, provide the values for the following attributes: url , httpMethod , httpParams , httpHeaders , and httpContentType.
 
+>
+> Resource Owner Password Flow is not supported by Saviynt REST connector
+> 
+
 The following tokens are used for OAuth:
 
-##### Static Access Token
+#### Static Access Token
 Some cloud applications support hardcoded access token that never expires until it is manually revoked from the target application. In this case, an attribute named **accessToken** is populated with the hardcoded token and other parameters are left with dummy values.
 
 Example JSON
@@ -799,7 +645,7 @@ Example JSON
         }
       }
   ```
-##### Static Refresh Token
+#### Static Refresh Token
 In this scenario, access tokens expire after a specific time period but refresh tokens never expire. Therefore, refresh tokens are used as new access tokens. To regenerate a refresh token, specify values for the following attributes: **url** , **httpMethod** , **httpParams** , **httpHeaders** , and **httpContentType**.
 
 Example:
@@ -830,7 +676,7 @@ Example:
 }
 ```
 
-##### Renew Access Token and Refresh Token using Single API
+#### Renew Access Token and Refresh Token using Single API
 In this OAuth mechanism, the access and refresh tokens expire after a time period, and the latest refresh token is used to regenerate new access and refresh tokens. To regenerate these tokens, specify the values for the following attributes: **refreshType** , **refreshTokenResponsePath** , and **refreshToken**.
 
 Example:
@@ -872,7 +718,7 @@ Example:
   }
    ```
 
-##### Renew Access Token and Refresh Token using Different API
+#### Renew Access Token and Refresh Token using Different API
 In some OAuth mechanisms, access token and refresh token both expire after a certain time period. After the refresh token is renewed, you need to place a call to obtain the new refresh token to use it for obtaining the new access token. To regenerate a token, specify the values for the following attributes: **refreshType** , **refreshTokenResponsePath** , **refreshToken** , **refrshTokenAuthError** , **refreshTokenErrorPath** , and **refreshTokenCall**.
 
 Example:
@@ -927,6 +773,170 @@ Example:
         }
       }
     }
+  }
+```
+
+## Common Features
+
+### Multiple Authentications 
+Supports multiple authentications where more than one authentication mechanism is required. For example, for Azure AD, there are graph.windows.net APIs and [http://graph.microsoft.com](http://graph.microsoft.com) APIs and each API has a different authentication mechanism and hence two authentication constructs are used in ConnectionJSON.
+
+Example:
+
+``` JSON
+{
+  "authentications": {
+    "userAuth": {
+      "authType": "oauth2",
+      "url": "https://<domain name>/<<TenantID>>/oauth2/token",
+      "httpMethod": "POST",
+      "httpParams": {
+        "grant_type": "client_credentials",
+        "client_secret": "<<ClientSecret>>",
+        "client_id": "<<ClientID>>",
+        "resource": "https://graph.microsoft.com/"
+      },
+      "httpHeaders": {
+        "contentType": "application/x-www-form-urlencoded"
+      },
+      "httpContentType": "application/x-www-form-urlencoded",
+      "expiryError": "ExpiredAuthenticationToken",
+      "authError": [
+        "InvalidAuthenticationToken"
+      ],
+      "timeOutError": "Read timed out",
+      "errorPath": "error.code",
+      "maxRefreshTryCount": 5,
+      "tokenResponsePath": "access_token",
+      "tokenType": "Bearer",
+      "accessToken": "Bearer abc"
+    },
+    "entAuth": {
+      "authType": "oauth2",
+      "url": "https://<domain name>/<<TenantID>>/oauth2/token",
+      "httpMethod": "POST",
+      "httpParams": {
+        "grant_type": "client_credentials",
+        "client_secret": "<<ClientSecret>>",
+        "client_id": "<<ClientID>>",
+        "resource": "https://graph.windows.net/"
+      },
+      "httpHeaders": {
+        "contentType": "application/x-www-form-urlencoded"
+      },
+      "httpContentType": "application/x-www-form-urlencoded",
+      "expiryError": "ExpiredAuthenticationToken",
+      "authError": [
+        "InvalidAuthenticationToken",
+        "Authentication_MissingOrMalformed"
+      ],
+      "timeOutError": "Read timed out",
+      "errorPath": "odata~dot#error.code",
+      "maxRefreshTryCount": 3,
+      "tokenResponsePath": "access_token",
+      "tokenType": "Bearer",
+      "accessToken": "Bearer abcde"
+    }
+  }
+}
+```
+### SSL Parameter
+Installing SSL certificates is sufficient to make https API calls, however, if target applications expect customizations such as the TLS version, you can pass SSL parameters while making API calls.
+
+``` JSON
+{
+  "authentications": {
+    "acctAuth": {
+      "authType": "oauth2",
+      "url": "XXXXXXXXXXXX",
+      "httpMethod": "POST",
+      "httpParams": {
+        "grant_type": "client_cert"
+      },
+      "httpContentType": "application/x-www-form-urlencoded",
+      "ssl": {
+        "keyFile": "opt/java/jdk1.8.0_181/jre/lib/security/cacerts",
+        "keyFilePassword": "changeit",
+        "keyManagerAlgorithm": "SunX509",
+        "keyStoreType": "JKS",
+        "sslAlgorithmName": "TLSv1.2"
+      },
+      "httpHeaders": {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Authorization": "Basic xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+      },
+      "retryFailureStatusCode": [401],
+      "expiryError": "ExpiredAuthenticationToken",
+      "authError": [
+        "SESSION_NOT_VALID",
+        "AuthenticationFailed",
+        "ExpiredJwtException",
+        "401 Unauthorized"
+      ],
+      "timeOutError": "Read timed out",
+      "errorPath": "code",
+      "maxRefreshTryCount": 6,
+      "tokenResponsePath": "access_token",
+      "tokenType": "Bearer",
+      "accessToken": "Bearer xxxxxxxxxxxxxxxxx"
+    }
+  }
+}
+```
+### Connection JSON Validation 
+The connector supports validating authType as oauth2. To do this, populate the http parameters in the **testConnectionParams** attribute. It validates the connection parameters and prompts Successful or Failed status based on the provided credentials while saving the connection.
+
+From Release v23.10 onwards, if you specify an incorrect value or blank value for the testConnectionParams attribute in the ConnectionJSON parameter and then click Save & Test Connection, the connector displays a detailed error message in the debug log file and the Job Log Detail page of the Test Connections Job. The message includes the name of the failed connection, type of error with exception that occurred in the target, and any additional details that might help in troubleshooting the connection issue.
+
+For more information about troubleshooting issues encountered during saving and testing a connection, see Errors while Saving and Testing a Connection under Troubleshooting Issues in the REST Integration Guide.
+
+
+Example:
+
+JSON
+
+```
+{
+  "authentications": {
+    "acctAuth": {
+      "authType": "Basic",
+      "url": "https://<domain name>",
+      "httpMethod": "POST",
+      "httpParams": {},
+      "httpHeaders": {},
+      "httpContentType": "text/html",
+      "properties": {
+        "userName": "username",
+        "password": "password"
+      },
+      "expiryError": "Couldn't authenticate you",
+      "authError": [
+        "Couldn't authenticate you"
+      ],
+      "timeOutError": "Read timed out",
+      "errorPath": "error",
+      "maxRefreshTryCount": 5,
+      "tokenResponsePath": "access_token",
+      "tokenType": "Basic",
+      "accessToken": "Basic asdfghjkl",
+      "testConnectionParams": {
+        "http": {
+          "url": "https://<domain name>/api/v2/users.json",
+          "httpHeaders": {
+            "Authorization": "${access_token}"
+          },
+          "httpContentType": "application/json",
+          "httpMethod": "GET"
+        },
+        "successResponse": [],
+        "successResponsePath": "",
+        "errors": [
+          "Couldn't authenticate you"
+        ],
+        "errorPath": "error"
+      }
+    }
+  }
   }
 ```
 ###  Mask values of sensitive attributes in logs
