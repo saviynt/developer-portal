@@ -51,10 +51,13 @@ const ConnectorList = () => {
         <div className="col col--4"> 
         <div key={connector.name} className="demo-showcase-card" onClick={() => handleCardClick(connector)}>
         <div className="demo-showcase-card__header">
-          <img src={connector.logoUrl} alt={connector.name} />
+          <img src={connector.logoUrl || '/community/connector/image.png'} alt="Connector" onError={(e) => { 
+            e.target.onerror = null; // Prevents looping in case the default image also fails
+           }} 
+          />
+          <h5 className="demo-showcase-card__title">{connector.name}</h5>
         </div>
           <div className="demo-showcase-card__content">
-            <h5 className="demo-showcase-card__title">{connector.name}</h5>
             <p className="demo-showcase-card__description">{connector.description}</p>
           </div>
           <div className="demo-showcase-card__footer">
@@ -64,12 +67,8 @@ const ConnectorList = () => {
                 <a href={connector.distLink} download={`${connector.name}.zip`} className="material-icons" aria-label="Download" style={{ marginRight: '10px', cursor: 'pointer' }}>
                   file_download
                 </a>
-                <a href={`${connector.githubLink}/issues`} className="material-icons" target="_blank" rel="noopener noreferrer" aria-label="Report Issues" style={{ cursor: 'pointer' }}>
-                  bug_report
-                </a>
-                <a href={`${connector.authors}`} target="_blank" rel="noopener noreferrer" title="View Contributors">
-                  <FaUsers style={{ marginRight: '5px' }} />
-                  Contributors
+                <a href={`${connector.githubLink}/discuss`} className="material-icons" target="_blank" rel="noopener noreferrer" aria-label="Report Issues" style={{ cursor: 'pointer' }}>
+                  forum
                 </a>
           </div>
         </div>
