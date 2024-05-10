@@ -5,7 +5,10 @@ info:
     "Try it out" will require you to authorize with a static token, so you should first click on Authorize button at the top and provide a value, this is a sample specification and there is no actual token validation, so you can provide any string value for e.g. MyBearerToken and click on Authorize, then Close.
   version: "1.0"
 servers: 
-  - url: https://example.com/api/v1
+  - url: '{server}'
+    variables:
+      server:
+        default: https://example.com:443/api/v1
 security:
   - bearerAuth: []  # Bearer Token Authentication
 tags:
@@ -265,7 +268,7 @@ paths:
                     example: "SUCCESS Account Created Successfully"
         '400':    # status code
           description: Failure in create account
-  /updateAccount/{accountID1}:
+  /updateAccount/{accountID}:
     patch:
       operationId: patch-updateAccount
       tags :
@@ -273,7 +276,7 @@ paths:
       summary: This API updates an account
       parameters:
         - in: path
-          name: accountID1
+          name: accountID
           schema:
             type: string
           required: true
@@ -281,23 +284,46 @@ paths:
         content:
           application/json:
             schema:
-                $ref: '#/components/schemas/updateaccount'
+              type: object
+            examples:
+             Update Account:
+              value:
+                firstname: "Logan"
+                preferedFirstName: "Logan"
+                lastname: "Prasad"
+                middlename: "N"
+                email: "logan@example.net"
+                employeeType: "Regular"
+                jobcodedesc: "QA"
+                manager: "Joe"
+                statuskey: "1"
+                customproperty1: "customized value"
+             Enable Account:
+              value:
+                status: "1"
+             Disable Account:
+              value:
+                status: "0"
       responses:
         '200':    # status code
           description: Success Response
           content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  errorCode:
-                    type: string
-                    example: "0"
-                  message:
-                    type: string
-                    example: "SUCCESS Account Updated Successfully"
+           application/json:
+            examples:
+              Update Account:
+                  value:
+                    errorCode: "0"
+                    message: "SUCCESS Account Updated Successfully"
+              Enable Account:
+                  value:
+                    errorCode: "0"
+                    message: "SUCCESS Account Enabled Successfully"
+              Disable Account:
+                  value:
+                    errorCode: "0"
+                    message: "SUCCESS Account Disabled Successfully"
         '400':    # status code
-          description: Failure in account update
+          description: Failure response
   /removeAccount/{accountID}:
     delete:
       operationId: delete-removeAccount
@@ -2206,39 +2232,6 @@ components:
         manager:
           type: string
           example: "admin"
-        statuskey:
-          type: string
-          example: "1"
-        customproperty1:
-          type: string
-          example: "customized value"
-    updateaccount:
-      type: object
-      properties:
-        firstname:
-          type: string
-          example: "Logan"
-        preferedFirstName:
-          type: string
-          example: "Logan"
-        lastname:
-          type: string
-          example: "Prasad"
-        middlename:
-          type: string
-          example: "N"
-        email:
-          type: string
-          example: "logan@example.net"
-        employeeType:
-          type: string
-          example: "Regular"
-        jobcodedesc:
-          type: string
-          example: "QA"
-        manager:
-          type: string
-          example: "Joe"
         statuskey:
           type: string
           example: "1"
