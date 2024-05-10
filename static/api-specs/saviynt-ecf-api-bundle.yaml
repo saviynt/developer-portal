@@ -5,10 +5,12 @@ info:
     "Try it out" will require you to authorize with a static token, so you should first click on Authorize button at the top and provide a value, this is a sample specification and there is no actual token validation, so you can provide any string value for e.g. MyBearerToken and click on Authorize, then Close.
   version: "1.0"
 servers: 
-  - url: '{server}'
+  - url: '{server}/api/{version}'
     variables:
       server:
-        default: https://example.com:443/api/v1
+        default: https://example.com:443
+      version:
+        default: v1
 security:
   - bearerAuth: []  # Bearer Token Authentication
 tags:
@@ -270,7 +272,7 @@ paths:
           description: Failure in create account
   /updateAccount/{accountID}:
     patch:
-      operationId: patch-updateAccount
+      operationId: patchUpdateAccount
       tags :
         - Account Provisioning
       summary: This API updates an account
