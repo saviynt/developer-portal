@@ -146,7 +146,7 @@ The default server implementation includes bearer token authentication for all A
 This example demonstrates how a developer might implement a basic (and insecure) authentication check by modifying the ```controllers/AccountImport.js``` file:
 
 ``` javascript
-module.exports.apiV1AccountsPOST = function apiV1AccountsPOST (req, res, next, body, offSet, pageSize) {
+module.exports.postAccounts = function postAccounts (req, res, next, body, offset, pagesize) {
 
 // sample custom code here to perform authorization
 const authHeader = req.headers['authorization'] &&
@@ -157,7 +157,7 @@ if (!(authHeader.toLowerCase() === "bearer <token value>")) {
 		}
 // sample code completed
 
-Default.apiV1AccountsPOST(body)
+AccountImport.postAccounts(body, offset, pagesize)
     .then(function (response) {
       utils.writeJson(res, response);
     })
@@ -258,7 +258,7 @@ Node.js offers a variety of logging libraries. This example utilizes the popular
 			```JavaScript
 			const logger = require('../utils/logger');
 			
-			module.exports.apiV1CreateAccountPOST = function apiV1CreateAccountPOST (req, res, next, body) {
+			module.exports.postCreateAccount = function postCreateAccount (req, res, next, body) {
 			  logger.info("Calling create accounts API with request body:", body);
 			  // ... your existing code here ...
 			};
@@ -292,7 +292,7 @@ Your custom connector will likely require various business logic and data valida
 	```JavaScript
 	const { ApiError } = require('./errors'); // Assuming an error class is defined
 	
-	exports.apiV1CreateAccountPOST = function(body) {
+	exports.postCreateAccount = function(body) {
 	  return new Promise(function(resolve, reject) {
 	    if (!body.hasOwnProperty('firstName')) {
 	      const errorResponse = new ApiError(400, "Missing 'firstname' parameter in request body");
