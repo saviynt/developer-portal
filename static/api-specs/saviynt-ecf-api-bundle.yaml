@@ -534,7 +534,7 @@ components:
           offset:
             type: string
             example: "0"
-          count:
+          pagesize:
             type: integer
             example: 3
           totalCount:
@@ -1102,7 +1102,7 @@ components:
           offset:
             type: string
             example: "0"
-          count:
+          pagesize:
             type: integer
             example: 3
           totalCount:
@@ -1507,7 +1507,13 @@ components:
     roles:
       type: object
       properties:
-          count:
+          offset:
+            type: string
+            example: "0"
+          pagesize:
+            type: integer
+            example: 4
+          totalCount:
             type: integer
             example: 4
           roles:
@@ -1833,7 +1839,13 @@ components:
     groups:
       type: object
       properties:
-          count:
+          offset:
+            type: string
+            example: "0"
+          pagesize:
+            type: integer
+            example: 3
+          totalCount:
             type: integer
             example: 3
           groups:
@@ -2105,10 +2117,7 @@ components:
                 - "15553759289493"
     groupsmembership:
       type: object
-      properties:
-          count:
-            type: integer
-            example: 9     
+      properties:     
           group_memberships:
               type: array
               items:
@@ -2140,9 +2149,6 @@ components:
     rolesmembership:
       type: object
       properties:
-          count:
-            type: integer
-            example: 9     
           role_memberships:
               type: array
               items:
