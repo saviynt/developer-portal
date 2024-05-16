@@ -532,1589 +532,1607 @@ components:
       type: object
       properties:
           offset:
-            type: string
-            example: "0"
+            type: integer
           pagesize:
             type: integer
-            example: 3
-          totalCount:
+          totalcount:
             type: integer
-            example: 3
           users:
             type: array
             items:
-              type: object
-              properties:
-                ACCOUNTEXPIRED:
-                  type: integer
-                ACCOUNTLOCKED:
-                  type: integer
-                CITY:
-                  type: string
-                COMMENTS:
-                  type: string
-                COMPANYNAME:
-                  type: string
-                COSTCENTER:
-                  type: string
-                COUNTRY:
-                  type: string
-                CUSTOMPROPERTY1:
-                  type: string
-                CUSTOMPROPERTY2:
-                  type: string
-                CUSTOMPROPERTY3:
-                  type: string
-                CUSTOMPROPERTY4:
-                  type: string
-                CUSTOMPROPERTY5:
-                  type: string
-                CUSTOMPROPERTY6:
-                  type: string
-                CUSTOMPROPERTY7:
-                  type: string
-                CUSTOMPROPERTY8:
-                  type: string
-                CUSTOMPROPERTY9:
-                  type: string
-                CUSTOMPROPERTY10:
-                  type: string
-                CUSTOMPROPERTY11:
-                  type: string
-                CUSTOMPROPERTY12:
-                  type: string
-                CUSTOMPROPERTY13:
-                  type: string
-                CUSTOMPROPERTY14:
-                  type: string
-                CUSTOMPROPERTY15:
-                  type: string
-                CUSTOMPROPERTY16:
-                  type: string
-                CUSTOMPROPERTY17:
-                  type: string
-                CUSTOMPROPERTY18:
-                  type: string
-                CUSTOMPROPERTY19:
-                  type: string
-                CUSTOMPROPERTY20:
-                  type: string
-                CUSTOMPROPERTY21:
-                  type: string
-                CUSTOMPROPERTY22:
-                  type: string
-                CUSTOMPROPERTY23:
-                  type: string
-                CUSTOMPROPERTY24:
-                  type: string
-                CUSTOMPROPERTY25:
-                  type: string
-                CUSTOMPROPERTY26:
-                  type: string
-                CUSTOMPROPERTY27:
-                  type: string
-                CUSTOMPROPERTY28:
-                  type: string
-                CUSTOMPROPERTY29:
-                  type: string
-                CUSTOMPROPERTY30:
-                  type: string
-                CUSTOMPROPERTY31:
-                  type: string
-                CUSTOMPROPERTY32:
-                  type: string
-                CUSTOMPROPERTY33:
-                  type: string
-                CUSTOMPROPERTY34:
-                  type: string
-                CUSTOMPROPERTY35:
-                  type: string
-                CUSTOMPROPERTY36:
-                  type: string
-                CUSTOMPROPERTY37:
-                  type: string
-                CUSTOMPROPERTY38:
-                  type: string
-                CUSTOMPROPERTY39:
-                  type: string
-                CUSTOMPROPERTY40:
-                  type: string
-                CUSTOMPROPERTY41:
-                  type: string
-                CUSTOMPROPERTY42:
-                  type: string
-                CUSTOMPROPERTY43:
-                  type: string
-                CUSTOMPROPERTY44:
-                  type: string
-                CUSTOMPROPERTY45:
-                  type: string
-                CUSTOMPROPERTY46:
-                  type: string
-                CUSTOMPROPERTY47:
-                  type: string
-                CUSTOMPROPERTY48:
-                  type: string
-                CUSTOMPROPERTY49:
-                  type: string
-                CUSTOMPROPERTY50:
-                  type: string
-                CUSTOMPROPERTY51:
-                  type: string
-                CUSTOMPROPERTY52:
-                  type: string
-                CUSTOMPROPERTY53:
-                  type: string
-                CUSTOMPROPERTY54:
-                  type: string
-                CUSTOMPROPERTY55:
-                  type: string
-                CUSTOMPROPERTY56:
-                  type: string
-                CUSTOMPROPERTY57:
-                  type: string
-                CUSTOMPROPERTY58:
-                  type: string
-                CUSTOMPROPERTY59:
-                  type: string
-                CUSTOMPROPERTY60:
-                  type: string
-                CUSTOMPROPERTY61:
-                  type: string
-                CUSTOMPROPERTY62:
-                  type: string
-                CUSTOMPROPERTY63:
-                  type: string
-                CUSTOMPROPERTY64:
-                  type: string
-                CUSTOMPROPERTY65:
-                  type: string
-                DEPARTMENTNUMBER:
-                  type: string
-                DEPARTMENTNAME:
-                  type: string
-                DISPLAYNAME:
-                  type: string
-                EMAIL:
-                  type: string
-                EMPLOYEETYPE:
-                  type: string
-                EMPLOYEEID:
-                  type: string
-                EMPLOYEECLASS:
-                  type: string
-                ENDDATE:
-                  type: string
-                FIRSTNAME:
-                  type: string
-                JOBCODE:
-                  type: string
-                JOBDESCRIPTION:
-                  type: string
-                JOB_FUNCTION:
-                  type: string
-                JOBCODEDESC:
-                  type: string
-                LASTNAME:
-                  type: string
-                LEAVESTATUS:
-                  type: string
-                LOCALE:
-                  type: string
-                LOCATION:
-                  type: string
-                LOCATIONDESC:
-                  type: string
-                LOCATIONNUMBER:
-                  type: string
-                MANAGER:
-                  type: string
-                MIDDLENAME:
-                  type: string
-                ORGUNITID:
-                  type: string
-                PHONENUMBER:
-                  type: string
-                PREFEREDFIRSTNAME:
-                  type: string
-                REGION:
-                  type: string
-                REGIONCODE:
-                  type: string
-                SECONDARYEMAIL:
-                  type: string
-                SECONDARYMANAGER:
-                  type: string
-                SECONDARYPHONE:
-                  type: string
-                SITEID:
-                  type: string
-                STARTDATE:
-                  type: string
-                STATE:
-                  type: string
-                STATUSKEY:
-                  type: string
-                STREET:
-                  type: string
-                TERMDATE:
-                  type: string
-                TITLE:
-                  type: string
-                UPDATEDATE:
-                  type: string
-                USERNAME:
-                  type: string
-            example:
-              - ACCOUNTEXPIRED: "0"
-                ACCOUNTLOCKED: "0"
-                CITY: "San Francisco"
-                COMMENTS: "NULL"
-                COMPANYNAME: "Global Modern Services, Inc. (USA)"
-                COSTCENTER: "40000 Office of CHRO"
-                COUNTRY: "United States of America"
-                CUSTOMPROPERTY1: "3aa5550b7fe348b98d7b5741afc65534"
-                CUSTOMPROPERTY10: "NULL"
-                CUSTOMPROPERTY11: "NULL"
-                CUSTOMPROPERTY12: "NULL"
-                CUSTOMPROPERTY13: "NULL"
-                CUSTOMPROPERTY14: "NULL"
-                CUSTOMPROPERTY15: "NULL"
-                CUSTOMPROPERTY16: "NULL"
-                CUSTOMPROPERTY17: "NULL"
-                CUSTOMPROPERTY18: "NULL"
-                CUSTOMPROPERTY19: "NULL"
-                CUSTOMPROPERTY2: "NULL"
-                CUSTOMPROPERTY20: "NULL"
-                CUSTOMPROPERTY21: "NULL"
-                CUSTOMPROPERTY22: "NULL"
-                CUSTOMPROPERTY23: "NULL"
-                CUSTOMPROPERTY24: "NULL"
-                CUSTOMPROPERTY25: "NULL"
-                CUSTOMPROPERTY26: "NULL"
-                CUSTOMPROPERTY27: "NULL"
-                CUSTOMPROPERTY28: "NULL"
-                CUSTOMPROPERTY29: "NULL"
-                CUSTOMPROPERTY3: "NULL"
-                CUSTOMPROPERTY30: "NULL"
-                CUSTOMPROPERTY31: "NULL"
-                CUSTOMPROPERTY32: "NULL"
-                CUSTOMPROPERTY33: "NULL"
-                CUSTOMPROPERTY34: "NULL"
-                CUSTOMPROPERTY35: "NULL"
-                CUSTOMPROPERTY36: "NULL"
-                CUSTOMPROPERTY37: "NULL"
-                CUSTOMPROPERTY38: "NULL"
-                CUSTOMPROPERTY39: "NULL"
-                CUSTOMPROPERTY4: "NULL"
-                CUSTOMPROPERTY40: "Update1"
-                CUSTOMPROPERTY41: "NULL"
-                CUSTOMPROPERTY42: "NULL"
-                CUSTOMPROPERTY43: "NULL"
-                CUSTOMPROPERTY44: "NULL"
-                CUSTOMPROPERTY45: "NULL"
-                CUSTOMPROPERTY46: "NULL"
-                CUSTOMPROPERTY47: "NULL"
-                CUSTOMPROPERTY48: "NULL"
-                CUSTOMPROPERTY49: "NULL"
-                CUSTOMPROPERTY5: "NULL"
-                CUSTOMPROPERTY50: "NULL"
-                CUSTOMPROPERTY51: "NULL"
-                CUSTOMPROPERTY52: "NULL"
-                CUSTOMPROPERTY53: "NULL"
-                CUSTOMPROPERTY54: "NULL"
-                CUSTOMPROPERTY55: "NULL"
-                CUSTOMPROPERTY56: "NULL"
-                CUSTOMPROPERTY57: "NULL"
-                CUSTOMPROPERTY58: "NULL"
-                CUSTOMPROPERTY59: "NULL"
-                CUSTOMPROPERTY6: "NULL"
-                CUSTOMPROPERTY60: "NULL"
-                CUSTOMPROPERTY61: "NULL"
-                CUSTOMPROPERTY62: "NULL"
-                CUSTOMPROPERTY63: "NULL"
-                CUSTOMPROPERTY64: "NULL"
-                CUSTOMPROPERTY65: "NULL"
-                CUSTOMPROPERTY7: "NULL"
-                CUSTOMPROPERTY8: "NULL"
-                CUSTOMPROPERTY9: "NULL"
-                DEPARTMENTNUMBER: "NULL"
-                DEPARTMENTNAME: "NULL"
-                DISPLAYNAME: "Neil Sharma"
-                EMAIL: "nsharma@example.net"
-                EMPLOYEETYPE: "Regular"
-                EMPLOYEECLASS: "NULL"
-                EMPLOYEEID: "21001"
-                ENDDATE: "NULL"
-                FIRSTNAME: "Neil"
-                JOBCODE: "NULL"
-                JOBDESCRIPTION: "NULL"
-                JOB_FUNCTION: "NULL"
-                JOBCODEDESC: "NULL"
-                LASTNAME: "Sharma"
-                LEAVESTATUS: "NULL"
-                LOCALE: "NULL"
-                LOCATION: "San Francisco"
-                LOCATIONDESC: "NULL"
-                LOCATIONNUMBER: "NULL"
-                MANAGER: "1"
-                MIDDLENAME: "NULL"
-                ORGUNITID: "NULL"
-                PHONENUMBER: "+1 (415) 789-8904"
-                PREFEREDFIRSTNAME: "Neil"
-                REGION: "NULL"
-                REGIONCODE: "NULL"
-                SECONDARYEMAIL: "NULL"
-                SECONDARYMANAGER: "NULL"
-                SECONDARYPHONE: "NULL"
-                SITEID: "NULL"
-                STARTDATE: "NULL"
-                STATE: "NULL"
-                STATUSKEY: "1"
-                STREET: "NULL"
-                TERMDATE: "NULL"
-                TITLE: "Chief Human Resources Officer"
-                UPDATEDATE: "20-03-2024 12:18"
-                USERNAME: "nsharma"
-              - ACCOUNTEXPIRED: "0"
-                ACCOUNTLOCKED: "0"
-                CITY: "San Francisco"
-                COMMENTS: "NULL"
-                COMPANYNAME: "Global Modern Services, Inc. (USA)"
-                COSTCENTER: "10000 Office of CEO"
-                COUNTRY: "United States of America"
-                CUSTOMPROPERTY1: "0e44c92412d34b01ace61e80a47aaf6d"
-                CUSTOMPROPERTY10: "NULL"
-                CUSTOMPROPERTY11: "NULL"
-                CUSTOMPROPERTY12: "NULL"
-                CUSTOMPROPERTY13: "NULL"
-                CUSTOMPROPERTY14: "NULL"
-                CUSTOMPROPERTY15: "NULL"
-                CUSTOMPROPERTY16: "NULL"
-                CUSTOMPROPERTY17: "NULL"
-                CUSTOMPROPERTY18: "NULL"
-                CUSTOMPROPERTY19: "NULL"
-                CUSTOMPROPERTY2: "NULL"
-                CUSTOMPROPERTY20: "NULL"
-                CUSTOMPROPERTY21: "NULL"
-                CUSTOMPROPERTY22: "NULL"
-                CUSTOMPROPERTY23: "NULL"
-                CUSTOMPROPERTY24: "NULL"
-                CUSTOMPROPERTY25: "NULL"
-                CUSTOMPROPERTY26: "NULL"
-                CUSTOMPROPERTY27: "NULL"
-                CUSTOMPROPERTY28: "NULL"
-                CUSTOMPROPERTY29: "NULL"
-                CUSTOMPROPERTY3: "NULL"
-                CUSTOMPROPERTY30: "NULL"
-                CUSTOMPROPERTY31: "NULL"
-                CUSTOMPROPERTY32: "NULL"
-                CUSTOMPROPERTY33: "NULL"
-                CUSTOMPROPERTY34: "NULL"
-                CUSTOMPROPERTY35: "NULL"
-                CUSTOMPROPERTY36: "NULL"
-                CUSTOMPROPERTY37: "NULL"
-                CUSTOMPROPERTY38: "NULL"
-                CUSTOMPROPERTY39: "NULL"
-                CUSTOMPROPERTY4: "NULL"
-                CUSTOMPROPERTY40: "NULL"
-                CUSTOMPROPERTY41: "NULL"
-                CUSTOMPROPERTY42: "NULL"
-                CUSTOMPROPERTY43: "NULL"
-                CUSTOMPROPERTY44: "NULL"
-                CUSTOMPROPERTY45: "NULL"
-                CUSTOMPROPERTY46: "NULL"
-                CUSTOMPROPERTY47: "NULL"
-                CUSTOMPROPERTY48: "NULL"
-                CUSTOMPROPERTY49: "NULL"
-                CUSTOMPROPERTY5: "NULL"
-                CUSTOMPROPERTY50: "NULL"
-                CUSTOMPROPERTY51: "NULL"
-                CUSTOMPROPERTY52: "NULL"
-                CUSTOMPROPERTY53: "NULL"
-                CUSTOMPROPERTY54: "NULL"
-                CUSTOMPROPERTY55: "NULL"
-                CUSTOMPROPERTY56: "NULL"
-                CUSTOMPROPERTY57: "NULL"
-                CUSTOMPROPERTY58: "NULL"
-                CUSTOMPROPERTY59: "NULL"
-                CUSTOMPROPERTY6: "NULL"
-                CUSTOMPROPERTY60: "NULL"
-                CUSTOMPROPERTY61: "NULL"
-                CUSTOMPROPERTY62: "NULL"
-                CUSTOMPROPERTY63: "NULL"
-                CUSTOMPROPERTY64: "NULL"
-                CUSTOMPROPERTY65: "NULL"
-                CUSTOMPROPERTY7: "NULL"
-                CUSTOMPROPERTY8: "NULL"
-                CUSTOMPROPERTY9: "NULL"
-                DEPARTMENTNUMBER: "NULL"
-                DEPARTMENTNAME: "NULL"
-                DISPLAYNAME: "Morgan Choudhary"
-                EMAIL: "mchoudhary@example.net"
-                EMPLOYEETYPE: "Regular"
-                EMPLOYEECLASS: "NULL"
-                EMPLOYEEID: "21002"
-                ENDDATE: "NULL"
-                FIRSTNAME: "Morgan"
-                JOBCODE: "NULL"
-                JOBDESCRIPTION: "NULL"
-                JOB_FUNCTION: "NULL"
-                JOBCODEDESC: "NULL"
-                LASTNAME: "Choudhary"
-                LEAVESTATUS: "NULL"
-                LOCALE: "NULL"
-                LOCATION: "San Francisco"
-                LOCATIONDESC: "NULL"
-                LOCATIONNUMBER: "NULL"
-                MANAGER: "NULL"
-                MIDDLENAME: "NULL"
-                ORGUNITID: "NULL"
-                PHONENUMBER: "NULL"
-                PREFEREDFIRSTNAME: "Morgan"
-                REGION: "NULL"
-                REGIONCODE: "NULL"
-                SECONDARYEMAIL: "NULL"
-                SECONDARYMANAGER: "NULL"
-                SECONDARYPHONE: "NULL"
-                SITEID: "NULL"
-                STARTDATE: "NULL"
-                STATE: "NULL"
-                STATUSKEY: "1"
-                STREET: "NULL"
-                TERMDATE: "NULL"
-                TITLE: "Chief Executive Officer"
-                USERNAME: "mchoudhary"
-                VENDORMANAGER: "NULL"
-              - ACCOUNTEXPIRED: "0"
-                ACCOUNTLOCKED: "0"
-                CITY: "San Francisco"
-                COMMENTS: "NULL"
-                COMPANYNAME: "Global Modern Services, Inc. (USA)"
-                COSTCENTER: "60000 Office of CIO"
-                COUNTRY: "United States of America"
-                CUSTOMPROPERTY1: "3895af7993ff4c509cbea2e1817172e0"
-                CUSTOMPROPERTY10: "NULL"
-                CUSTOMPROPERTY11: "NULL"
-                CUSTOMPROPERTY12: "NULL"
-                CUSTOMPROPERTY13: "NULL"
-                CUSTOMPROPERTY14: "NULL"
-                CUSTOMPROPERTY15: "NULL"
-                CUSTOMPROPERTY16: "NULL"
-                CUSTOMPROPERTY17: "NULL"
-                CUSTOMPROPERTY18: "NULL"
-                CUSTOMPROPERTY19: "NULL"
-                CUSTOMPROPERTY2: "NULL"
-                CUSTOMPROPERTY20: "NULL"
-                CUSTOMPROPERTY21: "NULL"
-                CUSTOMPROPERTY22: "NULL"
-                CUSTOMPROPERTY23: "NULL"
-                CUSTOMPROPERTY24: "NULL"
-                CUSTOMPROPERTY25: "NULL"
-                CUSTOMPROPERTY26: "NULL"
-                CUSTOMPROPERTY27: "NULL"
-                CUSTOMPROPERTY28: "NULL"
-                CUSTOMPROPERTY29: "NULL"
-                CUSTOMPROPERTY3: "NULL"
-                CUSTOMPROPERTY30: "NULL"
-                CUSTOMPROPERTY31: "NULL"
-                CUSTOMPROPERTY32: "NULL"
-                CUSTOMPROPERTY33: "NULL"
-                CUSTOMPROPERTY34: "NULL"
-                CUSTOMPROPERTY35: "NULL"
-                CUSTOMPROPERTY36: "NULL"
-                CUSTOMPROPERTY37: "NULL"
-                CUSTOMPROPERTY38: "NULL"
-                CUSTOMPROPERTY39: "NULL"
-                CUSTOMPROPERTY4: "NULL"
-                CUSTOMPROPERTY40: "NULL"
-                CUSTOMPROPERTY41: "NULL"
-                CUSTOMPROPERTY42: "NULL"
-                CUSTOMPROPERTY43: "NULL"
-                CUSTOMPROPERTY44: "NULL"
-                CUSTOMPROPERTY45: "NULL"
-                CUSTOMPROPERTY46: "NULL"
-                CUSTOMPROPERTY47: "NULL"
-                CUSTOMPROPERTY48: "NULL"
-                CUSTOMPROPERTY49: "NULL"
-                CUSTOMPROPERTY5: "NULL"
-                CUSTOMPROPERTY50: "NULL"
-                CUSTOMPROPERTY51: "NULL"
-                CUSTOMPROPERTY52: "NULL"
-                CUSTOMPROPERTY53: "NULL"
-                CUSTOMPROPERTY54: "NULL"
-                CUSTOMPROPERTY55: "NULL"
-                CUSTOMPROPERTY56: "NULL"
-                CUSTOMPROPERTY57: "NULL"
-                CUSTOMPROPERTY58: "NULL"
-                CUSTOMPROPERTY59: "NULL"
-                CUSTOMPROPERTY6: "NULL"
-                CUSTOMPROPERTY60: "NULL"
-                CUSTOMPROPERTY61: "NULL"
-                CUSTOMPROPERTY62: "NULL"
-                CUSTOMPROPERTY63: "NULL"
-                CUSTOMPROPERTY64: "NULL"
-                CUSTOMPROPERTY65: "NULL"
-                CUSTOMPROPERTY7: "NULL"
-                CUSTOMPROPERTY8: "NULL"
-                CUSTOMPROPERTY9: "NULL"
-                DEPARTMENTNUMBER: "NULL"
-                DEPARTMENTNAME: "NULL"
-                DISPLAYNAME: "Oliver Nehra"
-                EMAIL: "onehra@example.net"
-                EMPLOYEETYPE: "Regular"
-                EMPLOYEECLASS: "NULL"
-                EMPLOYEEID: "21003"
-                ENDDATE: "NULL"
-                FIRSTNAME: "Oliver"
-                JOBCODE: "NULL"
-                JOBDESCRIPTION: "NULL"
-                JOB_FUNCTION: "NULL"
-                JOBCODEDESC: "NULL"
-                LASTNAME: "Nehra"
-                LEAVESTATUS: "NULL"
-                LOCALE: "NULL"
-                LOCATION: "San Francisco"
-                LOCATIONDESC: "NULL"
-                LOCATIONNUMBER: "NULL"
-                MANAGER: "NULL"
-                MIDDLENAME: "NULL"
-                ORGUNITID: "NULL"
-                PHONENUMBER: "NULL"
-                PREFEREDFIRSTNAME: "Oliver"
-                REGION: "NULL"
-                REGIONCODE: "NULL"
-                RISKSCORE: "NULL"
-                SECONDARYEMAIL: "NULL"
-                SECONDARYMANAGER: "NULL"
-                SECONDARYPHONE: "NULL"
-                SITEID: "NULL"
-                STARTDATE: "NULL"
-                STATE: "NULL"
-                STATUSKEY: "1"
-                STREET: "NULL"
-                TERMDATE: "NULL"
-                TITLE: "Chief Information Officer"
-                USERNAME: "onehra"
+              $ref: '#/components/schemas/user'
+      example:
+        offset: 0
+        pagesize: 3
+        totalcount: 3
+        users:
+          - ACCOUNTEXPIRED: "0"
+            ACCOUNTLOCKED: "0"
+            CITY: "San Francisco"
+            COMMENTS: "NULL"
+            COMPANYNAME: "Global Modern Services, Inc. (USA)"
+            COSTCENTER: "40000 Office of CHRO"
+            COUNTRY: "United States of America"
+            CUSTOMPROPERTY1: "3aa5550b7fe348b98d7b5741afc65534"
+            CUSTOMPROPERTY10: "NULL"
+            CUSTOMPROPERTY11: "NULL"
+            CUSTOMPROPERTY12: "NULL"
+            CUSTOMPROPERTY13: "NULL"
+            CUSTOMPROPERTY14: "NULL"
+            CUSTOMPROPERTY15: "NULL"
+            CUSTOMPROPERTY16: "NULL"
+            CUSTOMPROPERTY17: "NULL"
+            CUSTOMPROPERTY18: "NULL"
+            CUSTOMPROPERTY19: "NULL"
+            CUSTOMPROPERTY2: "NULL"
+            CUSTOMPROPERTY20: "NULL"
+            CUSTOMPROPERTY21: "NULL"
+            CUSTOMPROPERTY22: "NULL"
+            CUSTOMPROPERTY23: "NULL"
+            CUSTOMPROPERTY24: "NULL"
+            CUSTOMPROPERTY25: "NULL"
+            CUSTOMPROPERTY26: "NULL"
+            CUSTOMPROPERTY27: "NULL"
+            CUSTOMPROPERTY28: "NULL"
+            CUSTOMPROPERTY29: "NULL"
+            CUSTOMPROPERTY3: "NULL"
+            CUSTOMPROPERTY30: "NULL"
+            CUSTOMPROPERTY31: "NULL"
+            CUSTOMPROPERTY32: "NULL"
+            CUSTOMPROPERTY33: "NULL"
+            CUSTOMPROPERTY34: "NULL"
+            CUSTOMPROPERTY35: "NULL"
+            CUSTOMPROPERTY36: "NULL"
+            CUSTOMPROPERTY37: "NULL"
+            CUSTOMPROPERTY38: "NULL"
+            CUSTOMPROPERTY39: "NULL"
+            CUSTOMPROPERTY4: "NULL"
+            CUSTOMPROPERTY40: "Update1"
+            CUSTOMPROPERTY41: "NULL"
+            CUSTOMPROPERTY42: "NULL"
+            CUSTOMPROPERTY43: "NULL"
+            CUSTOMPROPERTY44: "NULL"
+            CUSTOMPROPERTY45: "NULL"
+            CUSTOMPROPERTY46: "NULL"
+            CUSTOMPROPERTY47: "NULL"
+            CUSTOMPROPERTY48: "NULL"
+            CUSTOMPROPERTY49: "NULL"
+            CUSTOMPROPERTY5: "NULL"
+            CUSTOMPROPERTY50: "NULL"
+            CUSTOMPROPERTY51: "NULL"
+            CUSTOMPROPERTY52: "NULL"
+            CUSTOMPROPERTY53: "NULL"
+            CUSTOMPROPERTY54: "NULL"
+            CUSTOMPROPERTY55: "NULL"
+            CUSTOMPROPERTY56: "NULL"
+            CUSTOMPROPERTY57: "NULL"
+            CUSTOMPROPERTY58: "NULL"
+            CUSTOMPROPERTY59: "NULL"
+            CUSTOMPROPERTY6: "NULL"
+            CUSTOMPROPERTY60: "NULL"
+            CUSTOMPROPERTY61: "NULL"
+            CUSTOMPROPERTY62: "NULL"
+            CUSTOMPROPERTY63: "NULL"
+            CUSTOMPROPERTY64: "NULL"
+            CUSTOMPROPERTY65: "NULL"
+            CUSTOMPROPERTY7: "NULL"
+            CUSTOMPROPERTY8: "NULL"
+            CUSTOMPROPERTY9: "NULL"
+            DEPARTMENTNUMBER: "NULL"
+            DEPARTMENTNAME: "NULL"
+            DISPLAYNAME: "Neil Sharma"
+            EMAIL: "nsharma@example.net"
+            EMPLOYEETYPE: "Regular"
+            EMPLOYEECLASS: "NULL"
+            EMPLOYEEID: "21001"
+            ENDDATE: "NULL"
+            FIRSTNAME: "Neil"
+            JOBCODE: "NULL"
+            JOBDESCRIPTION: "NULL"
+            JOB_FUNCTION: "NULL"
+            JOBCODEDESC: "NULL"
+            LASTNAME: "Sharma"
+            LEAVESTATUS: "NULL"
+            LOCALE: "NULL"
+            LOCATION: "San Francisco"
+            LOCATIONDESC: "NULL"
+            LOCATIONNUMBER: "NULL"
+            MANAGER: "1"
+            MIDDLENAME: "NULL"
+            ORGUNITID: "NULL"
+            PHONENUMBER: "+1 (415) 789-8904"
+            PREFEREDFIRSTNAME: "Neil"
+            REGION: "NULL"
+            REGIONCODE: "NULL"
+            SECONDARYEMAIL: "NULL"
+            SECONDARYMANAGER: "NULL"
+            SECONDARYPHONE: "NULL"
+            SITEID: "NULL"
+            STARTDATE: "NULL"
+            STATE: "NULL"
+            STATUSKEY: "1"
+            STREET: "NULL"
+            TERMDATE: "NULL"
+            TITLE: "Chief Human Resources Officer"
+            UPDATEDATE: "20-03-2024 12:18"
+            USERNAME: "nsharma"
+          - ACCOUNTEXPIRED: "0"
+            ACCOUNTLOCKED: "0"
+            CITY: "San Francisco"
+            COMMENTS: "NULL"
+            COMPANYNAME: "Global Modern Services, Inc. (USA)"
+            COSTCENTER: "10000 Office of CEO"
+            COUNTRY: "United States of America"
+            CUSTOMPROPERTY1: "0e44c92412d34b01ace61e80a47aaf6d"
+            CUSTOMPROPERTY10: "NULL"
+            CUSTOMPROPERTY11: "NULL"
+            CUSTOMPROPERTY12: "NULL"
+            CUSTOMPROPERTY13: "NULL"
+            CUSTOMPROPERTY14: "NULL"
+            CUSTOMPROPERTY15: "NULL"
+            CUSTOMPROPERTY16: "NULL"
+            CUSTOMPROPERTY17: "NULL"
+            CUSTOMPROPERTY18: "NULL"
+            CUSTOMPROPERTY19: "NULL"
+            CUSTOMPROPERTY2: "NULL"
+            CUSTOMPROPERTY20: "NULL"
+            CUSTOMPROPERTY21: "NULL"
+            CUSTOMPROPERTY22: "NULL"
+            CUSTOMPROPERTY23: "NULL"
+            CUSTOMPROPERTY24: "NULL"
+            CUSTOMPROPERTY25: "NULL"
+            CUSTOMPROPERTY26: "NULL"
+            CUSTOMPROPERTY27: "NULL"
+            CUSTOMPROPERTY28: "NULL"
+            CUSTOMPROPERTY29: "NULL"
+            CUSTOMPROPERTY3: "NULL"
+            CUSTOMPROPERTY30: "NULL"
+            CUSTOMPROPERTY31: "NULL"
+            CUSTOMPROPERTY32: "NULL"
+            CUSTOMPROPERTY33: "NULL"
+            CUSTOMPROPERTY34: "NULL"
+            CUSTOMPROPERTY35: "NULL"
+            CUSTOMPROPERTY36: "NULL"
+            CUSTOMPROPERTY37: "NULL"
+            CUSTOMPROPERTY38: "NULL"
+            CUSTOMPROPERTY39: "NULL"
+            CUSTOMPROPERTY4: "NULL"
+            CUSTOMPROPERTY40: "NULL"
+            CUSTOMPROPERTY41: "NULL"
+            CUSTOMPROPERTY42: "NULL"
+            CUSTOMPROPERTY43: "NULL"
+            CUSTOMPROPERTY44: "NULL"
+            CUSTOMPROPERTY45: "NULL"
+            CUSTOMPROPERTY46: "NULL"
+            CUSTOMPROPERTY47: "NULL"
+            CUSTOMPROPERTY48: "NULL"
+            CUSTOMPROPERTY49: "NULL"
+            CUSTOMPROPERTY5: "NULL"
+            CUSTOMPROPERTY50: "NULL"
+            CUSTOMPROPERTY51: "NULL"
+            CUSTOMPROPERTY52: "NULL"
+            CUSTOMPROPERTY53: "NULL"
+            CUSTOMPROPERTY54: "NULL"
+            CUSTOMPROPERTY55: "NULL"
+            CUSTOMPROPERTY56: "NULL"
+            CUSTOMPROPERTY57: "NULL"
+            CUSTOMPROPERTY58: "NULL"
+            CUSTOMPROPERTY59: "NULL"
+            CUSTOMPROPERTY6: "NULL"
+            CUSTOMPROPERTY60: "NULL"
+            CUSTOMPROPERTY61: "NULL"
+            CUSTOMPROPERTY62: "NULL"
+            CUSTOMPROPERTY63: "NULL"
+            CUSTOMPROPERTY64: "NULL"
+            CUSTOMPROPERTY65: "NULL"
+            CUSTOMPROPERTY7: "NULL"
+            CUSTOMPROPERTY8: "NULL"
+            CUSTOMPROPERTY9: "NULL"
+            DEPARTMENTNUMBER: "NULL"
+            DEPARTMENTNAME: "NULL"
+            DISPLAYNAME: "Morgan Choudhary"
+            EMAIL: "mchoudhary@example.net"
+            EMPLOYEETYPE: "Regular"
+            EMPLOYEECLASS: "NULL"
+            EMPLOYEEID: "21002"
+            ENDDATE: "NULL"
+            FIRSTNAME: "Morgan"
+            JOBCODE: "NULL"
+            JOBDESCRIPTION: "NULL"
+            JOB_FUNCTION: "NULL"
+            JOBCODEDESC: "NULL"
+            LASTNAME: "Choudhary"
+            LEAVESTATUS: "NULL"
+            LOCALE: "NULL"
+            LOCATION: "San Francisco"
+            LOCATIONDESC: "NULL"
+            LOCATIONNUMBER: "NULL"
+            MANAGER: "NULL"
+            MIDDLENAME: "NULL"
+            ORGUNITID: "NULL"
+            PHONENUMBER: "NULL"
+            PREFEREDFIRSTNAME: "Morgan"
+            REGION: "NULL"
+            REGIONCODE: "NULL"
+            SECONDARYEMAIL: "NULL"
+            SECONDARYMANAGER: "NULL"
+            SECONDARYPHONE: "NULL"
+            SITEID: "NULL"
+            STARTDATE: "NULL"
+            STATE: "NULL"
+            STATUSKEY: "1"
+            STREET: "NULL"
+            TERMDATE: "NULL"
+            TITLE: "Chief Executive Officer"
+            USERNAME: "mchoudhary"
+            VENDORMANAGER: "NULL"
+          - ACCOUNTEXPIRED: "0"
+            ACCOUNTLOCKED: "0"
+            CITY: "San Francisco"
+            COMMENTS: "NULL"
+            COMPANYNAME: "Global Modern Services, Inc. (USA)"
+            COSTCENTER: "60000 Office of CIO"
+            COUNTRY: "United States of America"
+            CUSTOMPROPERTY1: "3895af7993ff4c509cbea2e1817172e0"
+            CUSTOMPROPERTY10: "NULL"
+            CUSTOMPROPERTY11: "NULL"
+            CUSTOMPROPERTY12: "NULL"
+            CUSTOMPROPERTY13: "NULL"
+            CUSTOMPROPERTY14: "NULL"
+            CUSTOMPROPERTY15: "NULL"
+            CUSTOMPROPERTY16: "NULL"
+            CUSTOMPROPERTY17: "NULL"
+            CUSTOMPROPERTY18: "NULL"
+            CUSTOMPROPERTY19: "NULL"
+            CUSTOMPROPERTY2: "NULL"
+            CUSTOMPROPERTY20: "NULL"
+            CUSTOMPROPERTY21: "NULL"
+            CUSTOMPROPERTY22: "NULL"
+            CUSTOMPROPERTY23: "NULL"
+            CUSTOMPROPERTY24: "NULL"
+            CUSTOMPROPERTY25: "NULL"
+            CUSTOMPROPERTY26: "NULL"
+            CUSTOMPROPERTY27: "NULL"
+            CUSTOMPROPERTY28: "NULL"
+            CUSTOMPROPERTY29: "NULL"
+            CUSTOMPROPERTY3: "NULL"
+            CUSTOMPROPERTY30: "NULL"
+            CUSTOMPROPERTY31: "NULL"
+            CUSTOMPROPERTY32: "NULL"
+            CUSTOMPROPERTY33: "NULL"
+            CUSTOMPROPERTY34: "NULL"
+            CUSTOMPROPERTY35: "NULL"
+            CUSTOMPROPERTY36: "NULL"
+            CUSTOMPROPERTY37: "NULL"
+            CUSTOMPROPERTY38: "NULL"
+            CUSTOMPROPERTY39: "NULL"
+            CUSTOMPROPERTY4: "NULL"
+            CUSTOMPROPERTY40: "NULL"
+            CUSTOMPROPERTY41: "NULL"
+            CUSTOMPROPERTY42: "NULL"
+            CUSTOMPROPERTY43: "NULL"
+            CUSTOMPROPERTY44: "NULL"
+            CUSTOMPROPERTY45: "NULL"
+            CUSTOMPROPERTY46: "NULL"
+            CUSTOMPROPERTY47: "NULL"
+            CUSTOMPROPERTY48: "NULL"
+            CUSTOMPROPERTY49: "NULL"
+            CUSTOMPROPERTY5: "NULL"
+            CUSTOMPROPERTY50: "NULL"
+            CUSTOMPROPERTY51: "NULL"
+            CUSTOMPROPERTY52: "NULL"
+            CUSTOMPROPERTY53: "NULL"
+            CUSTOMPROPERTY54: "NULL"
+            CUSTOMPROPERTY55: "NULL"
+            CUSTOMPROPERTY56: "NULL"
+            CUSTOMPROPERTY57: "NULL"
+            CUSTOMPROPERTY58: "NULL"
+            CUSTOMPROPERTY59: "NULL"
+            CUSTOMPROPERTY6: "NULL"
+            CUSTOMPROPERTY60: "NULL"
+            CUSTOMPROPERTY61: "NULL"
+            CUSTOMPROPERTY62: "NULL"
+            CUSTOMPROPERTY63: "NULL"
+            CUSTOMPROPERTY64: "NULL"
+            CUSTOMPROPERTY65: "NULL"
+            CUSTOMPROPERTY7: "NULL"
+            CUSTOMPROPERTY8: "NULL"
+            CUSTOMPROPERTY9: "NULL"
+            DEPARTMENTNUMBER: "NULL"
+            DEPARTMENTNAME: "NULL"
+            DISPLAYNAME: "Oliver Nehra"
+            EMAIL: "onehra@example.net"
+            EMPLOYEETYPE: "Regular"
+            EMPLOYEECLASS: "NULL"
+            EMPLOYEEID: "21003"
+            ENDDATE: "NULL"
+            FIRSTNAME: "Oliver"
+            JOBCODE: "NULL"
+            JOBDESCRIPTION: "NULL"
+            JOB_FUNCTION: "NULL"
+            JOBCODEDESC: "NULL"
+            LASTNAME: "Nehra"
+            LEAVESTATUS: "NULL"
+            LOCALE: "NULL"
+            LOCATION: "San Francisco"
+            LOCATIONDESC: "NULL"
+            LOCATIONNUMBER: "NULL"
+            MANAGER: "NULL"
+            MIDDLENAME: "NULL"
+            ORGUNITID: "NULL"
+            PHONENUMBER: "NULL"
+            PREFEREDFIRSTNAME: "Oliver"
+            REGION: "NULL"
+            REGIONCODE: "NULL"
+            RISKSCORE: "NULL"
+            SECONDARYEMAIL: "NULL"
+            SECONDARYMANAGER: "NULL"
+            SECONDARYPHONE: "NULL"
+            SITEID: "NULL"
+            STARTDATE: "NULL"
+            STATE: "NULL"
+            STATUSKEY: "1"
+            STREET: "NULL"
+            TERMDATE: "NULL"
+            TITLE: "Chief Information Officer"
+            USERNAME: "onehra"      
+    user:      
+      type: array
+      items:
+        type: object
+        properties:
+          ACCOUNTEXPIRED:
+            type: integer
+          ACCOUNTLOCKED:
+            type: integer
+          CITY:
+            type: string
+          COMMENTS:
+            type: string
+          COMPANYNAME:
+            type: string
+          COSTCENTER:
+            type: string
+          COUNTRY:
+            type: string
+          CUSTOMPROPERTY1:
+            type: string
+          CUSTOMPROPERTY2:
+            type: string
+          CUSTOMPROPERTY3:
+            type: string
+          CUSTOMPROPERTY4:
+            type: string
+          CUSTOMPROPERTY5:
+            type: string
+          CUSTOMPROPERTY6:
+            type: string
+          CUSTOMPROPERTY7:
+            type: string
+          CUSTOMPROPERTY8:
+            type: string
+          CUSTOMPROPERTY9:
+            type: string
+          CUSTOMPROPERTY10:
+            type: string
+          CUSTOMPROPERTY11:
+            type: string
+          CUSTOMPROPERTY12:
+            type: string
+          CUSTOMPROPERTY13:
+            type: string
+          CUSTOMPROPERTY14:
+            type: string
+          CUSTOMPROPERTY15:
+            type: string
+          CUSTOMPROPERTY16:
+            type: string
+          CUSTOMPROPERTY17:
+            type: string
+          CUSTOMPROPERTY18:
+            type: string
+          CUSTOMPROPERTY19:
+            type: string
+          CUSTOMPROPERTY20:
+            type: string
+          CUSTOMPROPERTY21:
+            type: string
+          CUSTOMPROPERTY22:
+            type: string
+          CUSTOMPROPERTY23:
+            type: string
+          CUSTOMPROPERTY24:
+            type: string
+          CUSTOMPROPERTY25:
+            type: string
+          CUSTOMPROPERTY26:
+            type: string
+          CUSTOMPROPERTY27:
+            type: string
+          CUSTOMPROPERTY28:
+            type: string
+          CUSTOMPROPERTY29:
+            type: string
+          CUSTOMPROPERTY30:
+            type: string
+          CUSTOMPROPERTY31:
+            type: string
+          CUSTOMPROPERTY32:
+            type: string
+          CUSTOMPROPERTY33:
+            type: string
+          CUSTOMPROPERTY34:
+            type: string
+          CUSTOMPROPERTY35:
+            type: string
+          CUSTOMPROPERTY36:
+            type: string
+          CUSTOMPROPERTY37:
+            type: string
+          CUSTOMPROPERTY38:
+            type: string
+          CUSTOMPROPERTY39:
+            type: string
+          CUSTOMPROPERTY40:
+            type: string
+          CUSTOMPROPERTY41:
+            type: string
+          CUSTOMPROPERTY42:
+            type: string
+          CUSTOMPROPERTY43:
+            type: string
+          CUSTOMPROPERTY44:
+            type: string
+          CUSTOMPROPERTY45:
+            type: string
+          CUSTOMPROPERTY46:
+            type: string
+          CUSTOMPROPERTY47:
+            type: string
+          CUSTOMPROPERTY48:
+            type: string
+          CUSTOMPROPERTY49:
+            type: string
+          CUSTOMPROPERTY50:
+            type: string
+          CUSTOMPROPERTY51:
+            type: string
+          CUSTOMPROPERTY52:
+            type: string
+          CUSTOMPROPERTY53:
+            type: string
+          CUSTOMPROPERTY54:
+            type: string
+          CUSTOMPROPERTY55:
+            type: string
+          CUSTOMPROPERTY56:
+            type: string
+          CUSTOMPROPERTY57:
+            type: string
+          CUSTOMPROPERTY58:
+            type: string
+          CUSTOMPROPERTY59:
+            type: string
+          CUSTOMPROPERTY60:
+            type: string
+          CUSTOMPROPERTY61:
+            type: string
+          CUSTOMPROPERTY62:
+            type: string
+          CUSTOMPROPERTY63:
+            type: string
+          CUSTOMPROPERTY64:
+            type: string
+          CUSTOMPROPERTY65:
+            type: string
+          DEPARTMENTNUMBER:
+            type: string
+          DEPARTMENTNAME:
+            type: string
+          DISPLAYNAME:
+            type: string
+          EMAIL:
+            type: string
+          EMPLOYEETYPE:
+            type: string
+          EMPLOYEEID:
+            type: string
+          EMPLOYEECLASS:
+            type: string
+          ENDDATE:
+            type: string
+          FIRSTNAME:
+            type: string
+          JOBCODE:
+            type: string
+          JOBDESCRIPTION:
+            type: string
+          JOB_FUNCTION:
+            type: string
+          JOBCODEDESC:
+            type: string
+          LASTNAME:
+            type: string
+          LEAVESTATUS:
+            type: string
+          LOCALE:
+            type: string
+          LOCATION:
+            type: string
+          LOCATIONDESC:
+            type: string
+          LOCATIONNUMBER:
+            type: string
+          MANAGER:
+            type: string
+          MIDDLENAME:
+            type: string
+          ORGUNITID:
+            type: string
+          PHONENUMBER:
+            type: string
+          PREFEREDFIRSTNAME:
+            type: string
+          REGION:
+            type: string
+          REGIONCODE:
+            type: string
+          SECONDARYEMAIL:
+            type: string
+          SECONDARYMANAGER:
+            type: string
+          SECONDARYPHONE:
+            type: string
+          SITEID:
+            type: string
+          STARTDATE:
+            type: string
+          STATE:
+            type: string
+          STATUSKEY:
+            type: string
+          STREET:
+            type: string
+          TERMDATE:
+            type: string
+          TITLE:
+            type: string
+          UPDATEDATE:
+            type: string
+          USERNAME:
+            type: string
     accounts:
       type: object
       properties:
           offset:
-            type: string
-            example: "0"
+            type: integer
           pagesize:
             type: integer
-            example: 3
-          totalCount:
+          totalcount:
             type: integer
-            example: 3
           accounts:
             type: array
             items:
-              type: object
-              properties:
-                ACCOUNTID:
-                  type: string
-                ACCOUNTCLASS:
-                  type: string
-                ACCOUNTTYPE:
-                  type: string
-                COMMENTS:
-                  type: string
-                CUSTOMPROPERTY1:
-                  type: string
-                CUSTOMPROPERTY2:
-                  type: string
-                CUSTOMPROPERTY3:
-                  type: string
-                CUSTOMPROPERTY4:
-                  type: string
-                CUSTOMPROPERTY5:
-                  type: string
-                CUSTOMPROPERTY6:
-                  type: string
-                CUSTOMPROPERTY7:
-                  type: string
-                CUSTOMPROPERTY8:
-                  type: string
-                CUSTOMPROPERTY9:
-                  type: string
-                CUSTOMPROPERTY10:
-                  type: string
-                CUSTOMPROPERTY11:
-                  type: string
-                CUSTOMPROPERTY12:
-                  type: string
-                CUSTOMPROPERTY13:
-                  type: string
-                CUSTOMPROPERTY14:
-                  type: string
-                CUSTOMPROPERTY15:
-                  type: string
-                CUSTOMPROPERTY16:
-                  type: string
-                CUSTOMPROPERTY17:
-                  type: string
-                CUSTOMPROPERTY18:
-                  type: string
-                CUSTOMPROPERTY19:
-                  type: string
-                CUSTOMPROPERTY20:
-                  type: string
-                CUSTOMPROPERTY21:
-                  type: string
-                CUSTOMPROPERTY22:
-                  type: string
-                CUSTOMPROPERTY23:
-                  type: string
-                CUSTOMPROPERTY24:
-                  type: string
-                CUSTOMPROPERTY25:
-                  type: string
-                CUSTOMPROPERTY26:
-                  type: string
-                CUSTOMPROPERTY27:
-                  type: string
-                CUSTOMPROPERTY28:
-                  type: string
-                CUSTOMPROPERTY29:
-                  type: string
-                CUSTOMPROPERTY30:
-                  type: integer
-                CUSTOMPROPERTY31:
-                  type: string
-                CUSTOMPROPERTY32:
-                  type: string
-                CUSTOMPROPERTY33:
-                  type: string
-                CUSTOMPROPERTY34:
-                  type: string
-                CUSTOMPROPERTY35:
-                  type: string
-                CUSTOMPROPERTY36:
-                  type: string
-                CUSTOMPROPERTY37:
-                  type: string
-                CUSTOMPROPERTY38:
-                  type: string
-                CUSTOMPROPERTY39:
-                  type: string
-                CUSTOMPROPERTY40:
-                  type: string
-                CUSTOMPROPERTY41:
-                  type: string
-                CUSTOMPROPERTY42:
-                  type: string
-                CUSTOMPROPERTY43:
-                  type: string
-                CUSTOMPROPERTY44:
-                  type: string
-                CUSTOMPROPERTY45:
-                  type: string
-                CUSTOMPROPERTY46:
-                  type: string
-                CUSTOMPROPERTY47:
-                  type: string
-                CUSTOMPROPERTY48:
-                  type: string
-                CUSTOMPROPERTY49:
-                  type: string
-                CUSTOMPROPERTY50:
-                  type: string
-                CUSTOMPROPERTY51:
-                  type: string
-                CUSTOMPROPERTY52:
-                  type: string
-                CUSTOMPROPERTY53:
-                  type: string
-                CUSTOMPROPERTY54:
-                  type: string
-                CUSTOMPROPERTY55:
-                  type: string
-                CUSTOMPROPERTY56:
-                  type: string
-                CUSTOMPROPERTY57:
-                  type: string
-                CUSTOMPROPERTY58:
-                  type: string
-                CUSTOMPROPERTY59:
-                  type: string
-                CUSTOMPROPERTY60:
-                  type: string
-                DESCRIPTION:
-                  type: string
-                DISPLAYNAME:
-                  type: string
-                INCORRECTLOGONS:
-                  type: string
-                LASTLOGONDATE:
-                  type: string
-                LASTPASSWORDCHANGE:
-                  type: string
-                LOCKEDSTATE:
-                  type: string
-                NAME:
-                  type: string
-                PASSWORDCHANGESTATUS:
-                  type: string
-                PASSWORDLOCKDATE:
-                  type: string
-                STATUS:
-                  type: integer
-                UPDATEDATE:
-                  type: string
-                VALIDFROM:
-                  type: string
-                VALIDTHROUGH:
-                  type: string
-                TARGETLASTPASSWORDCHANGE:
-                  type: string
-            example:
-            - ACCOUNTID: "15553759289491"
-              ACCOUNTCLASS: "NULL"
-              ACCOUNTTYPE: "NULL"
-              COMMENTS: "NULL"
-              CUSTOMPROPERTY1: "Neil Sharma"
-              CUSTOMPROPERTY10: "NULL"
-              CUSTOMPROPERTY11: "NULL"
-              CUSTOMPROPERTY12: "NULL"
-              CUSTOMPROPERTY13: "NULL"
-              CUSTOMPROPERTY14: "52837161b68f41ad996d558406ee4a6d"
-              CUSTOMPROPERTY15: "NULL"
-              CUSTOMPROPERTY16: "NULL"
-              CUSTOMPROPERTY17: "NULL"
-              CUSTOMPROPERTY18: "NULL"
-              CUSTOMPROPERTY19: "NULL"
-              CUSTOMPROPERTY2: "NULL"
-              CUSTOMPROPERTY20: "NULL"
-              CUSTOMPROPERTY21: "NULL"
-              CUSTOMPROPERTY22: "NULL"
-              CUSTOMPROPERTY23: "NULL"
-              CUSTOMPROPERTY24: "NULL"
-              CUSTOMPROPERTY25: "NULL"
-              CUSTOMPROPERTY26: "NULL"
-              CUSTOMPROPERTY27: "NULL"
-              CUSTOMPROPERTY28: "NULL"
-              CUSTOMPROPERTY29: "NULL"
-              CUSTOMPROPERTY3: "NULL"
-              CUSTOMPROPERTY30: 0
-              CUSTOMPROPERTY31: "NULL"
-              CUSTOMPROPERTY32: "NULL"
-              CUSTOMPROPERTY33: "NULL"
-              CUSTOMPROPERTY34: "NULL"
-              CUSTOMPROPERTY35: "NULL"
-              CUSTOMPROPERTY36: "NULL"
-              CUSTOMPROPERTY37: "NULL"
-              CUSTOMPROPERTY38: "NULL"
-              CUSTOMPROPERTY39: "NULL"
-              CUSTOMPROPERTY4: "nsharma@example.net"
-              CUSTOMPROPERTY40: "NULL"
-              CUSTOMPROPERTY41: "NULL"
-              CUSTOMPROPERTY42: "NULL"
-              CUSTOMPROPERTY43: "NULL"
-              CUSTOMPROPERTY44: "NULL"
-              CUSTOMPROPERTY45: "NULL"
-              CUSTOMPROPERTY46: "NULL"
-              CUSTOMPROPERTY47: "NULL"
-              CUSTOMPROPERTY48: "NULL"
-              CUSTOMPROPERTY49: "NULL"
-              CUSTOMPROPERTY5: "Neil"
-              CUSTOMPROPERTY50: "NULL"
-              CUSTOMPROPERTY51: "NULL"
-              CUSTOMPROPERTY52: "NULL"
-              CUSTOMPROPERTY53: "NULL"
-              CUSTOMPROPERTY54: "NULL"
-              CUSTOMPROPERTY55: "NULL"
-              CUSTOMPROPERTY56: "NULL"
-              CUSTOMPROPERTY57: "NULL"
-              CUSTOMPROPERTY58: "NULL"
-              CUSTOMPROPERTY59: "NULL"
-              CUSTOMPROPERTY6: "Sharma"
-              CUSTOMPROPERTY60: "NULL"
-              CUSTOMPROPERTY7: "NULL"
-              CUSTOMPROPERTY8: "NULL"
-              CUSTOMPROPERTY9: "NULL"
-              DESCRIPTION: "NULL"
-              DISPLAYNAME: "NULL"
-              INCORRECTLOGONS: "NULL"
-              LASTLOGONDATE: "NULL"
-              LASTPASSWORDCHANGE: "NULL"
-              LOCKEDSTATE: "NULL"
-              NAME: "nsharma"
-              PASSWORDCHANGESTATUS: "NULL"
-              PASSWORDLOCKDATE: "NULL"
-              STATUS: 1
-              UPDATEDATE: "NULL"
-              VALIDFROM: "NULL"
-              VALIDTHROUGH: "NULL"
-              TARGETLASTPASSWORDCHANGE: "NULL"
-            - ACCOUNTID: "15553759289492"
-              ACCOUNTCLASS: "NULL"
-              ACCOUNTTYPE: "NULL"
-              COMMENTS: "NULL"
-              CUSTOMPROPERTY1: "Morgan Choudhary"
-              CUSTOMPROPERTY2: "NULL"
-              CUSTOMPROPERTY3: "NULL"
-              CUSTOMPROPERTY4: "mchoudhary@example.net"
-              CUSTOMPROPERTY5: "Morgan"
-              CUSTOMPROPERTY6: "Choudhary"
-              CUSTOMPROPERTY7: "NULL"
-              CUSTOMPROPERTY8: "NULL"
-              CUSTOMPROPERTY9: "NULL"
-              CUSTOMPROPERTY10: "NULL"
-              CUSTOMPROPERTY11: "NULL"
-              CUSTOMPROPERTY12: "NULL"
-              CUSTOMPROPERTY13: "NULL"
-              CUSTOMPROPERTY14: "0d32ccd079004a1c8954caf934f220d6"
-              CUSTOMPROPERTY15: "NULL"
-              CUSTOMPROPERTY16: "NULL"
-              CUSTOMPROPERTY17: "NULL"
-              CUSTOMPROPERTY18: "NULL"
-              CUSTOMPROPERTY19: "NULL"
-              CUSTOMPROPERTY20: "NULL"
-              CUSTOMPROPERTY21: "NULL"
-              CUSTOMPROPERTY22: "NULL"
-              CUSTOMPROPERTY23: "NULL"
-              CUSTOMPROPERTY24: "NULL"
-              CUSTOMPROPERTY25: "NULL"
-              CUSTOMPROPERTY26: "NULL"
-              CUSTOMPROPERTY27: "NULL"
-              CUSTOMPROPERTY28: "NULL"
-              CUSTOMPROPERTY29: "NULL"
-              CUSTOMPROPERTY30: 0
-              CUSTOMPROPERTY31: "NULL"
-              CUSTOMPROPERTY32: "NULL"
-              CUSTOMPROPERTY33: "NULL"
-              CUSTOMPROPERTY34: "NULL"
-              CUSTOMPROPERTY35: "NULL"
-              CUSTOMPROPERTY36: "NULL"
-              CUSTOMPROPERTY37: "NULL"
-              CUSTOMPROPERTY38: "NULL"
-              CUSTOMPROPERTY39: "NULL"
-              CUSTOMPROPERTY40: "NULL"
-              CUSTOMPROPERTY41: "NULL"
-              CUSTOMPROPERTY42: "NULL"
-              CUSTOMPROPERTY43: "NULL"
-              CUSTOMPROPERTY44: "NULL"
-              CUSTOMPROPERTY45: "NULL"
-              CUSTOMPROPERTY46: "NULL"
-              CUSTOMPROPERTY47: "NULL"
-              CUSTOMPROPERTY48: "NULL"
-              CUSTOMPROPERTY49: "NULL"
-              CUSTOMPROPERTY50: "NULL"
-              CUSTOMPROPERTY51: "NULL"
-              CUSTOMPROPERTY52: "NULL"
-              CUSTOMPROPERTY53: "NULL"
-              CUSTOMPROPERTY54: "NULL"
-              CUSTOMPROPERTY55: "NULL"
-              CUSTOMPROPERTY56: "NULL"
-              CUSTOMPROPERTY57: "NULL"
-              CUSTOMPROPERTY58: "NULL"
-              CUSTOMPROPERTY59: "NULL"
-              CUSTOMPROPERTY60: "NULL"
-              DESCRIPTION: "NULL"
-              DISPLAYNAME: "NULL"
-              INCORRECTLOGONS: "NULL"
-              LASTLOGONDATE: "NULL"
-              LASTPASSWORDCHANGE: "NULL"
-              LOCKEDSTATE: "NULL"
-              NAME: "mchoudhary"
-              PASSWORDCHANGESTATUS: "NULL"
-              PASSWORDLOCKDATE: "NULL"
-              STATUS: 1
-              UPDATEDATE: "NULL"
-              VALIDFROM: "NULL"
-              VALIDTHROUGH: "NULL"
-              TARGETLASTPASSWORDCHANGE: "NULL"
-            - ACCOUNTID: "15553759289493"
-              ACCOUNTCLASS: "NULL"
-              ACCOUNTTYPE: "NULL"
-              COMMENTS: "NULL"
-              CUSTOMPROPERTY1: "Logan Prasad"
-              CUSTOMPROPERTY2: "NULL"
-              CUSTOMPROPERTY3: "NULL"
-              CUSTOMPROPERTY4: "logan@example.net"
-              CUSTOMPROPERTY5: "Logan"
-              CUSTOMPROPERTY6: "Prasad"
-              CUSTOMPROPERTY7: "NULL"
-              CUSTOMPROPERTY8: "NULL"
-              CUSTOMPROPERTY9: "NULL"
-              CUSTOMPROPERTY10: "NULL"
-              CUSTOMPROPERTY11: "NULL"
-              CUSTOMPROPERTY12: "NULL"
-              CUSTOMPROPERTY13: "NULL"
-              CUSTOMPROPERTY14: "3aa5550b7fe348b98d7b5741afc65534"
-              CUSTOMPROPERTY15: "NULL"
-              CUSTOMPROPERTY16: "NULL"
-              CUSTOMPROPERTY17: "NULL"
-              CUSTOMPROPERTY18: "NULL"
-              CUSTOMPROPERTY19: "NULL"
-              CUSTOMPROPERTY20: "NULL"
-              CUSTOMPROPERTY21: "NULL"
-              CUSTOMPROPERTY22: "NULL"
-              CUSTOMPROPERTY23: "NULL"
-              CUSTOMPROPERTY24: "NULL"
-              CUSTOMPROPERTY25: "NULL"
-              CUSTOMPROPERTY26: "NULL"
-              CUSTOMPROPERTY27: "NULL"
-              CUSTOMPROPERTY28: "NULL"
-              CUSTOMPROPERTY29: "NULL"
-              CUSTOMPROPERTY30: 0
-              CUSTOMPROPERTY31: "NULL"
-              CUSTOMPROPERTY32: "NULL"
-              CUSTOMPROPERTY33: "NULL"
-              CUSTOMPROPERTY34: "NULL"
-              CUSTOMPROPERTY35: "NULL"
-              CUSTOMPROPERTY36: "NULL"
-              CUSTOMPROPERTY37: "NULL"
-              CUSTOMPROPERTY38: "NULL"
-              CUSTOMPROPERTY39: "NULL"
-              CUSTOMPROPERTY40: "NULL"
-              CUSTOMPROPERTY41: "NULL"
-              CUSTOMPROPERTY42: "NULL"
-              CUSTOMPROPERTY43: "NULL"
-              CUSTOMPROPERTY44: "NULL"
-              CUSTOMPROPERTY45: "NULL"
-              CUSTOMPROPERTY46: "NULL"
-              CUSTOMPROPERTY47: "NULL"
-              CUSTOMPROPERTY48: "NULL"
-              CUSTOMPROPERTY49: "NULL"
-              CUSTOMPROPERTY50: "NULL"
-              CUSTOMPROPERTY51: "NULL"
-              CUSTOMPROPERTY52: "NULL"
-              CUSTOMPROPERTY53: "NULL"
-              CUSTOMPROPERTY54: "NULL"
-              CUSTOMPROPERTY55: "NULL"
-              CUSTOMPROPERTY56: "NULL"
-              CUSTOMPROPERTY57: "NULL"
-              CUSTOMPROPERTY58: "NULL"
-              CUSTOMPROPERTY59: "NULL"
-              CUSTOMPROPERTY60: "NULL"
-              DESCRIPTION: "NULL"
-              DISPLAYNAME: "NULL"
-              INCORRECTLOGONS: "NULL"
-              LASTLOGONDATE: "NULL"
-              LASTPASSWORDCHANGE: "NULL"
-              LOCKEDSTATE: "NULL"
-              NAME: "lprasad"
-              PASSWORDCHANGESTATUS: "NULL"
-              PASSWORDLOCKDATE: "NULL"
-              STATUS: 1
-              UPDATEDATE: "NULL"
-              VALIDFROM: "NULL"
-              VALIDTHROUGH: "NULL"
-              TARGETLASTPASSWORDCHANGE: "NULL"
+              $ref: '#/components/schemas/account'
+      example:    
+        offset: 0
+        pagesize: 3
+        totalcount: 3
+        accounts:
+          - ACCOUNTID: "15553759289491"
+            ACCOUNTCLASS: "NULL"
+            ACCOUNTTYPE: "NULL"
+            COMMENTS: "NULL"
+            CUSTOMPROPERTY1: "Neil Sharma"
+            CUSTOMPROPERTY10: "NULL"
+            CUSTOMPROPERTY11: "NULL"
+            CUSTOMPROPERTY12: "NULL"
+            CUSTOMPROPERTY13: "NULL"
+            CUSTOMPROPERTY14: "52837161b68f41ad996d558406ee4a6d"
+            CUSTOMPROPERTY15: "NULL"
+            CUSTOMPROPERTY16: "NULL"
+            CUSTOMPROPERTY17: "NULL"
+            CUSTOMPROPERTY18: "NULL"
+            CUSTOMPROPERTY19: "NULL"
+            CUSTOMPROPERTY2: "NULL"
+            CUSTOMPROPERTY20: "NULL"
+            CUSTOMPROPERTY21: "NULL"
+            CUSTOMPROPERTY22: "NULL"
+            CUSTOMPROPERTY23: "NULL"
+            CUSTOMPROPERTY24: "NULL"
+            CUSTOMPROPERTY25: "NULL"
+            CUSTOMPROPERTY26: "NULL"
+            CUSTOMPROPERTY27: "NULL"
+            CUSTOMPROPERTY28: "NULL"
+            CUSTOMPROPERTY29: "NULL"
+            CUSTOMPROPERTY3: "NULL"
+            CUSTOMPROPERTY30: 0
+            CUSTOMPROPERTY31: "NULL"
+            CUSTOMPROPERTY32: "NULL"
+            CUSTOMPROPERTY33: "NULL"
+            CUSTOMPROPERTY34: "NULL"
+            CUSTOMPROPERTY35: "NULL"
+            CUSTOMPROPERTY36: "NULL"
+            CUSTOMPROPERTY37: "NULL"
+            CUSTOMPROPERTY38: "NULL"
+            CUSTOMPROPERTY39: "NULL"
+            CUSTOMPROPERTY4: "nsharma@example.net"
+            CUSTOMPROPERTY40: "NULL"
+            CUSTOMPROPERTY41: "NULL"
+            CUSTOMPROPERTY42: "NULL"
+            CUSTOMPROPERTY43: "NULL"
+            CUSTOMPROPERTY44: "NULL"
+            CUSTOMPROPERTY45: "NULL"
+            CUSTOMPROPERTY46: "NULL"
+            CUSTOMPROPERTY47: "NULL"
+            CUSTOMPROPERTY48: "NULL"
+            CUSTOMPROPERTY49: "NULL"
+            CUSTOMPROPERTY5: "Neil"
+            CUSTOMPROPERTY50: "NULL"
+            CUSTOMPROPERTY51: "NULL"
+            CUSTOMPROPERTY52: "NULL"
+            CUSTOMPROPERTY53: "NULL"
+            CUSTOMPROPERTY54: "NULL"
+            CUSTOMPROPERTY55: "NULL"
+            CUSTOMPROPERTY56: "NULL"
+            CUSTOMPROPERTY57: "NULL"
+            CUSTOMPROPERTY58: "NULL"
+            CUSTOMPROPERTY59: "NULL"
+            CUSTOMPROPERTY6: "Sharma"
+            CUSTOMPROPERTY60: "NULL"
+            CUSTOMPROPERTY7: "NULL"
+            CUSTOMPROPERTY8: "NULL"
+            CUSTOMPROPERTY9: "NULL"
+            DESCRIPTION: "NULL"
+            DISPLAYNAME: "NULL"
+            INCORRECTLOGONS: "NULL"
+            LASTLOGONDATE: "NULL"
+            LASTPASSWORDCHANGE: "NULL"
+            LOCKEDSTATE: "NULL"
+            NAME: "nsharma"
+            PASSWORDCHANGESTATUS: "NULL"
+            PASSWORDLOCKDATE: "NULL"
+            STATUS: 1
+            UPDATEDATE: "NULL"
+            VALIDFROM: "NULL"
+            VALIDTHROUGH: "NULL"
+            TARGETLASTPASSWORDCHANGE: "NULL"
+          - ACCOUNTID: "15553759289492"
+            ACCOUNTCLASS: "NULL"
+            ACCOUNTTYPE: "NULL"
+            COMMENTS: "NULL"
+            CUSTOMPROPERTY1: "Morgan Choudhary"
+            CUSTOMPROPERTY2: "NULL"
+            CUSTOMPROPERTY3: "NULL"
+            CUSTOMPROPERTY4: "mchoudhary@example.net"
+            CUSTOMPROPERTY5: "Morgan"
+            CUSTOMPROPERTY6: "Choudhary"
+            CUSTOMPROPERTY7: "NULL"
+            CUSTOMPROPERTY8: "NULL"
+            CUSTOMPROPERTY9: "NULL"
+            CUSTOMPROPERTY10: "NULL"
+            CUSTOMPROPERTY11: "NULL"
+            CUSTOMPROPERTY12: "NULL"
+            CUSTOMPROPERTY13: "NULL"
+            CUSTOMPROPERTY14: "0d32ccd079004a1c8954caf934f220d6"
+            CUSTOMPROPERTY15: "NULL"
+            CUSTOMPROPERTY16: "NULL"
+            CUSTOMPROPERTY17: "NULL"
+            CUSTOMPROPERTY18: "NULL"
+            CUSTOMPROPERTY19: "NULL"
+            CUSTOMPROPERTY20: "NULL"
+            CUSTOMPROPERTY21: "NULL"
+            CUSTOMPROPERTY22: "NULL"
+            CUSTOMPROPERTY23: "NULL"
+            CUSTOMPROPERTY24: "NULL"
+            CUSTOMPROPERTY25: "NULL"
+            CUSTOMPROPERTY26: "NULL"
+            CUSTOMPROPERTY27: "NULL"
+            CUSTOMPROPERTY28: "NULL"
+            CUSTOMPROPERTY29: "NULL"
+            CUSTOMPROPERTY30: 0
+            CUSTOMPROPERTY31: "NULL"
+            CUSTOMPROPERTY32: "NULL"
+            CUSTOMPROPERTY33: "NULL"
+            CUSTOMPROPERTY34: "NULL"
+            CUSTOMPROPERTY35: "NULL"
+            CUSTOMPROPERTY36: "NULL"
+            CUSTOMPROPERTY37: "NULL"
+            CUSTOMPROPERTY38: "NULL"
+            CUSTOMPROPERTY39: "NULL"
+            CUSTOMPROPERTY40: "NULL"
+            CUSTOMPROPERTY41: "NULL"
+            CUSTOMPROPERTY42: "NULL"
+            CUSTOMPROPERTY43: "NULL"
+            CUSTOMPROPERTY44: "NULL"
+            CUSTOMPROPERTY45: "NULL"
+            CUSTOMPROPERTY46: "NULL"
+            CUSTOMPROPERTY47: "NULL"
+            CUSTOMPROPERTY48: "NULL"
+            CUSTOMPROPERTY49: "NULL"
+            CUSTOMPROPERTY50: "NULL"
+            CUSTOMPROPERTY51: "NULL"
+            CUSTOMPROPERTY52: "NULL"
+            CUSTOMPROPERTY53: "NULL"
+            CUSTOMPROPERTY54: "NULL"
+            CUSTOMPROPERTY55: "NULL"
+            CUSTOMPROPERTY56: "NULL"
+            CUSTOMPROPERTY57: "NULL"
+            CUSTOMPROPERTY58: "NULL"
+            CUSTOMPROPERTY59: "NULL"
+            CUSTOMPROPERTY60: "NULL"
+            DESCRIPTION: "NULL"
+            DISPLAYNAME: "NULL"
+            INCORRECTLOGONS: "NULL"
+            LASTLOGONDATE: "NULL"
+            LASTPASSWORDCHANGE: "NULL"
+            LOCKEDSTATE: "NULL"
+            NAME: "mchoudhary"
+            PASSWORDCHANGESTATUS: "NULL"
+            PASSWORDLOCKDATE: "NULL"
+            STATUS: 1
+            UPDATEDATE: "NULL"
+            VALIDFROM: "NULL"
+            VALIDTHROUGH: "NULL"
+            TARGETLASTPASSWORDCHANGE: "NULL"
+          - ACCOUNTID: "15553759289493"
+            ACCOUNTCLASS: "NULL"
+            ACCOUNTTYPE: "NULL"
+            COMMENTS: "NULL"
+            CUSTOMPROPERTY1: "Logan Prasad"
+            CUSTOMPROPERTY2: "NULL"
+            CUSTOMPROPERTY3: "NULL"
+            CUSTOMPROPERTY4: "logan@example.net"
+            CUSTOMPROPERTY5: "Logan"
+            CUSTOMPROPERTY6: "Prasad"
+            CUSTOMPROPERTY7: "NULL"
+            CUSTOMPROPERTY8: "NULL"
+            CUSTOMPROPERTY9: "NULL"
+            CUSTOMPROPERTY10: "NULL"
+            CUSTOMPROPERTY11: "NULL"
+            CUSTOMPROPERTY12: "NULL"
+            CUSTOMPROPERTY13: "NULL"
+            CUSTOMPROPERTY14: "3aa5550b7fe348b98d7b5741afc65534"
+            CUSTOMPROPERTY15: "NULL"
+            CUSTOMPROPERTY16: "NULL"
+            CUSTOMPROPERTY17: "NULL"
+            CUSTOMPROPERTY18: "NULL"
+            CUSTOMPROPERTY19: "NULL"
+            CUSTOMPROPERTY20: "NULL"
+            CUSTOMPROPERTY21: "NULL"
+            CUSTOMPROPERTY22: "NULL"
+            CUSTOMPROPERTY23: "NULL"
+            CUSTOMPROPERTY24: "NULL"
+            CUSTOMPROPERTY25: "NULL"
+            CUSTOMPROPERTY26: "NULL"
+            CUSTOMPROPERTY27: "NULL"
+            CUSTOMPROPERTY28: "NULL"
+            CUSTOMPROPERTY29: "NULL"
+            CUSTOMPROPERTY30: 0
+            CUSTOMPROPERTY31: "NULL"
+            CUSTOMPROPERTY32: "NULL"
+            CUSTOMPROPERTY33: "NULL"
+            CUSTOMPROPERTY34: "NULL"
+            CUSTOMPROPERTY35: "NULL"
+            CUSTOMPROPERTY36: "NULL"
+            CUSTOMPROPERTY37: "NULL"
+            CUSTOMPROPERTY38: "NULL"
+            CUSTOMPROPERTY39: "NULL"
+            CUSTOMPROPERTY40: "NULL"
+            CUSTOMPROPERTY41: "NULL"
+            CUSTOMPROPERTY42: "NULL"
+            CUSTOMPROPERTY43: "NULL"
+            CUSTOMPROPERTY44: "NULL"
+            CUSTOMPROPERTY45: "NULL"
+            CUSTOMPROPERTY46: "NULL"
+            CUSTOMPROPERTY47: "NULL"
+            CUSTOMPROPERTY48: "NULL"
+            CUSTOMPROPERTY49: "NULL"
+            CUSTOMPROPERTY50: "NULL"
+            CUSTOMPROPERTY51: "NULL"
+            CUSTOMPROPERTY52: "NULL"
+            CUSTOMPROPERTY53: "NULL"
+            CUSTOMPROPERTY54: "NULL"
+            CUSTOMPROPERTY55: "NULL"
+            CUSTOMPROPERTY56: "NULL"
+            CUSTOMPROPERTY57: "NULL"
+            CUSTOMPROPERTY58: "NULL"
+            CUSTOMPROPERTY59: "NULL"
+            CUSTOMPROPERTY60: "NULL"
+            DESCRIPTION: "NULL"
+            DISPLAYNAME: "NULL"
+            INCORRECTLOGONS: "NULL"
+            LASTLOGONDATE: "NULL"
+            LASTPASSWORDCHANGE: "NULL"
+            LOCKEDSTATE: "NULL"
+            NAME: "lprasad"
+            PASSWORDCHANGESTATUS: "NULL"
+            PASSWORDLOCKDATE: "NULL"
+            STATUS: 1
+            UPDATEDATE: "NULL"
+            VALIDFROM: "NULL"
+            VALIDTHROUGH: "NULL"
+            TARGETLASTPASSWORDCHANGE: "NULL"
+    account:        
+      type: object
+      properties:
+        ACCOUNTID:
+          type: string
+        ACCOUNTCLASS:
+          type: string
+        ACCOUNTTYPE:
+          type: string
+        COMMENTS:
+          type: string
+        CUSTOMPROPERTY1:
+          type: string
+        CUSTOMPROPERTY2:
+          type: string
+        CUSTOMPROPERTY3:
+          type: string
+        CUSTOMPROPERTY4:
+          type: string
+        CUSTOMPROPERTY5:
+          type: string
+        CUSTOMPROPERTY6:
+          type: string
+        CUSTOMPROPERTY7:
+          type: string
+        CUSTOMPROPERTY8:
+          type: string
+        CUSTOMPROPERTY9:
+          type: string
+        CUSTOMPROPERTY10:
+          type: string
+        CUSTOMPROPERTY11:
+          type: string
+        CUSTOMPROPERTY12:
+          type: string
+        CUSTOMPROPERTY13:
+          type: string
+        CUSTOMPROPERTY14:
+          type: string
+        CUSTOMPROPERTY15:
+          type: string
+        CUSTOMPROPERTY16:
+          type: string
+        CUSTOMPROPERTY17:
+          type: string
+        CUSTOMPROPERTY18:
+          type: string
+        CUSTOMPROPERTY19:
+          type: string
+        CUSTOMPROPERTY20:
+          type: string
+        CUSTOMPROPERTY21:
+          type: string
+        CUSTOMPROPERTY22:
+          type: string
+        CUSTOMPROPERTY23:
+          type: string
+        CUSTOMPROPERTY24:
+          type: string
+        CUSTOMPROPERTY25:
+          type: string
+        CUSTOMPROPERTY26:
+          type: string
+        CUSTOMPROPERTY27:
+          type: string
+        CUSTOMPROPERTY28:
+          type: string
+        CUSTOMPROPERTY29:
+          type: string
+        CUSTOMPROPERTY30:
+          type: integer
+        CUSTOMPROPERTY31:
+          type: string
+        CUSTOMPROPERTY32:
+          type: string
+        CUSTOMPROPERTY33:
+          type: string
+        CUSTOMPROPERTY34:
+          type: string
+        CUSTOMPROPERTY35:
+          type: string
+        CUSTOMPROPERTY36:
+          type: string
+        CUSTOMPROPERTY37:
+          type: string
+        CUSTOMPROPERTY38:
+          type: string
+        CUSTOMPROPERTY39:
+          type: string
+        CUSTOMPROPERTY40:
+          type: string
+        CUSTOMPROPERTY41:
+          type: string
+        CUSTOMPROPERTY42:
+          type: string
+        CUSTOMPROPERTY43:
+          type: string
+        CUSTOMPROPERTY44:
+          type: string
+        CUSTOMPROPERTY45:
+          type: string
+        CUSTOMPROPERTY46:
+          type: string
+        CUSTOMPROPERTY47:
+          type: string
+        CUSTOMPROPERTY48:
+          type: string
+        CUSTOMPROPERTY49:
+          type: string
+        CUSTOMPROPERTY50:
+          type: string
+        CUSTOMPROPERTY51:
+          type: string
+        CUSTOMPROPERTY52:
+          type: string
+        CUSTOMPROPERTY53:
+          type: string
+        CUSTOMPROPERTY54:
+          type: string
+        CUSTOMPROPERTY55:
+          type: string
+        CUSTOMPROPERTY56:
+          type: string
+        CUSTOMPROPERTY57:
+          type: string
+        CUSTOMPROPERTY58:
+          type: string
+        CUSTOMPROPERTY59:
+          type: string
+        CUSTOMPROPERTY60:
+          type: string
+        DESCRIPTION:
+          type: string
+        DISPLAYNAME:
+          type: string
+        INCORRECTLOGONS:
+          type: string
+        LASTLOGONDATE:
+          type: string
+        LASTPASSWORDCHANGE:
+          type: string
+        LOCKEDSTATE:
+          type: string
+        NAME:
+          type: string
+        PASSWORDCHANGESTATUS:
+          type: string
+        PASSWORDLOCKDATE:
+          type: string
+        STATUS:
+          type: integer
+        UPDATEDATE:
+          type: string
+        VALIDFROM:
+          type: string
+        VALIDTHROUGH:
+          type: string
+        TARGETLASTPASSWORDCHANGE:
+          type: string
     roles:
       type: object
       properties:
           offset:
-            type: string
-            example: "0"
+            type: integer
           pagesize:
             type: integer
-            example: 4
-          totalCount:
+          totalcount:
             type: integer
-            example: 4
           roles:
             type: array
             items:
-              type: object
-              properties:
-                entitlementID:
-                  type: integer
-                entitlement_value:
-                  type: string
-                description:
-                  type: string
-                displayname:
-                  type: string
-                entitlement_glossary:
-                  type: string
-                status:
-                  type: string
-                entclass:
-                  type: string
-                CUSTOMPROPERTY1:
-                  type: string
-                CUSTOMPROPERTY2:
-                  type: string
-                  format: date-time
-                CUSTOMPROPERTY3:
-                  type: string
-                  format: date-time
-                CUSTOMPROPERTY4:
-                  type: string
-                CUSTOMPROPERTY5:
-                  type: string
-                CUSTOMPROPERTY6:
-                  type: string
-                CUSTOMPROPERTY7:
-                  type: string
-                CUSTOMPROPERTY8:
-                  type: string
-                CUSTOMPROPERTY9:
-                  type: string
-                CUSTOMPROPERTY10:
-                  type: string
-                CUSTOMPROPERTY11:
-                  type: string
-                CUSTOMPROPERTY12:
-                  type: string
-                CUSTOMPROPERTY13:
-                  type: string
-                CUSTOMPROPERTY14:
-                  type: string
-                CUSTOMPROPERTY15:
-                  type: string
-                CUSTOMPROPERTY16:
-                  type: string
-                CUSTOMPROPERTY17:
-                  type: string
-                CUSTOMPROPERTY18:
-                  type: string
-                CUSTOMPROPERTY19:
-                  type: string
-                CUSTOMPROPERTY20:
-                  type: string
-                CUSTOMPROPERTY21:
-                  type: string
-                CUSTOMPROPERTY22:
-                  type: string
-                CUSTOMPROPERTY23:
-                  type: string
-                CUSTOMPROPERTY24:
-                  type: string
-                CUSTOMPROPERTY25:
-                  type: string
-                CUSTOMPROPERTY26:
-                  type: string
-                CUSTOMPROPERTY27:
-                  type: string
-                CUSTOMPROPERTY28:
-                  type: string
-                CUSTOMPROPERTY29:
-                  type: string
-                CUSTOMPROPERTY30:
-                  type: integer
-                CUSTOMPROPERTY31:
-                  type: string
-                CUSTOMPROPERTY32:
-                  type: string
-                CUSTOMPROPERTY33:
-                  type: string
-                CUSTOMPROPERTY34:
-                  type: string
-                CUSTOMPROPERTY35:
-                  type: string
-                CUSTOMPROPERTY36:
-                  type: string
-                CUSTOMPROPERTY37:
-                  type: string
-                CUSTOMPROPERTY38:
-                  type: string
-                CUSTOMPROPERTY39:
-                  type: string
-                CUSTOMPROPERTY40:
-                  type: string
-                childEntitlements:
-                  type: object
-                  properties:
-                    roles:
-                      type: array
-                      items:
-                        type: object
-                        properties:
-                          entitlementID:
-                            type: integer
-                owners:
-                  type: array
-                  items:
-                    type: string
-            example:
-            - entitlementID: 15553692240529
-              entitlement_value: Light agent
-              description: Can view and add private comments to tickets
-              displayname: "Light agent"
-              entitlement_glossary: "Light agent"
-              status: "0"
-              entclass: "Role"
-              customproperty1: "NULL"
-              customproperty2: "2023-05-24t06:34:23.000z"
-              customproperty3: "2023-05-24t06:34:23.000z"
-              customproperty4: "NULL"
-              customproperty5: "NULL"
-              customproperty6: "NULL"
-              customproperty7: "NULL"
-              customproperty8: "NULL"
-              customproperty9: "NULL"
-              customproperty10: "NULL"
-              customproperty11: "NULL"
-              customproperty12: "NULL"
-              customproperty13: "NULL"
-              customproperty14: "NULL"
-              customproperty15: "NULL"
-              customproperty16: "NULL"
-              customproperty17: "NULL"
-              customproperty18: "NULL"
-              customproperty19: "NULL"
-              customproperty20: "NULL"
-              customproperty21: "NULL"
-              customproperty22: "NULL"
-              customproperty23: "NULL"
-              customproperty24: "NULL"
-              customproperty25: "NULL"
-              customproperty26: "NULL"
-              customproperty27: "NULL"
-              customproperty28: "NULL"
-              customproperty29: "NULL"
-              customproperty30: "NULL"
-              customproperty31: "NULL"
-              customproperty32: "NULL"
-              customproperty33: "NULL"
-              customproperty34: "NULL"
-              customproperty35: "NULL"
-              customproperty36: "NULL"
-              customproperty37: "NULL"
-              customproperty38: "NULL"
-              customproperty39: "NULL"
-              customproperty40: "NULL"
-              childEntitlements:
-                roles:
-                  - entitlementID: 15553670302865
-                  - entitlementID: 15553670340241
-              owners:
-                - "15553759289491"
-            - entitlementID: 15553670302865
-              entitlement_value: "Contributor"
-              description: "Can provide limited support"
-              displayname: "Contributor"
-              entitlement_glossary: "Contributor"
-              status: "1"
-              entclass: "Role"
-              customproperty1: "NULL"
-              customproperty2: "2023-05-24t06:34:23.000z"
-              customproperty3: "2023-05-24t06:34:23.000z"
-              customproperty4: "NULL"
-              customproperty5: "NULL"
-              customproperty6: "NULL"
-              customproperty7: "NULL"
-              customproperty8: "NULL"
-              customproperty9: "NULL"
-              customproperty10: "NULL"
-              customproperty11: "NULL"
-              customproperty12: "NULL"
-              customproperty13: "NULL"
-              customproperty14: "NULL"
-              customproperty15: "NULL"
-              customproperty16: "NULL"
-              customproperty17: "NULL"
-              customproperty18: "NULL"
-              customproperty19: "NULL"
-              customproperty20: "NULL"
-              customproperty21: "NULL"
-              customproperty22: "NULL"
-              customproperty23: "NULL"
-              customproperty24: "NULL"
-              customproperty25: "NULL"
-              customproperty26: "NULL"
-              customproperty27: "NULL"
-              customproperty28: "NULL"
-              customproperty29: "NULL"
-              customproperty30: "NULL"
-              customproperty31: "NULL"
-              customproperty32: "NULL"
-              customproperty33: "NULL"
-              customproperty34: "NULL"
-              customproperty35: "NULL"
-              customproperty36: "NULL"
-              customproperty37: "NULL"
-              customproperty38: "NULL"
-              customproperty39: "NULL"
-              customproperty40: "NULL"
-              owners:
-                - "15553759289491"
-            - entitlementID: 15553670340241
-              entitlement_value: Billing admin
-              description: Can manage all settings, including billing.
-              displayname: "Billing admin"
-              entitlement_glossary: "Billing admin"
-              status: "0"
-              entclass: "Role"
-              customproperty1: "NULL"
-              customproperty2: "2023-05-24t06:34:23.000z"
-              customproperty3: "2023-05-24t06:34:23.000z"
-              customproperty4: "NULL"
-              customproperty5: "NULL"
-              customproperty6: "NULL"
-              customproperty7: "NULL"
-              customproperty8: "NULL"
-              customproperty9: "NULL"
-              customproperty10: "NULL"
-              customproperty11: "NULL"
-              customproperty12: "NULL"
-              customproperty13: "NULL"
-              customproperty14: "NULL"
-              customproperty15: "NULL"
-              customproperty16: "NULL"
-              customproperty17: "NULL"
-              customproperty18: "NULL"
-              customproperty19: "NULL"
-              customproperty20: "NULL"
-              customproperty21: "NULL"
-              customproperty22: "NULL"
-              customproperty23: "NULL"
-              customproperty24: "NULL"
-              customproperty25: "NULL"
-              customproperty26: "NULL"
-              customproperty27: "NULL"
-              customproperty28: "NULL"
-              customproperty29: "NULL"
-              customproperty30: "NULL"
-              customproperty31: "NULL"
-              customproperty32: "NULL"
-              customproperty33: "NULL"
-              customproperty34: "NULL"
-              customproperty35: "NULL"
-              customproperty36: "NULL"
-              customproperty37: "NULL"
-              customproperty38: "NULL"
-              customproperty39: "NULL"
-              customproperty40: "NULL"
-              owners:
-                - "15553759289492"
-            - entitlementID: 15553707898001
-              entitlement_value: Admin
-              description: Can manage all settings, except billing
-              displayname: "Admin"
-              entitlement_glossary: "Admin"
-              status: "1"
-              entclass: "Role"
-              customproperty1: "NULL"
-              customproperty2: "2023-05-24t06:34:23.000z"
-              customproperty3: "2023-05-24t06:34:23.000z"
-              customproperty4: "NULL"
-              customproperty5: "NULL"
-              customproperty6: "NULL"
-              customproperty7: "NULL"
-              customproperty8: "NULL"
-              customproperty9: "NULL"
-              customproperty10: "NULL"
-              customproperty11: "NULL"
-              customproperty12: "NULL"
-              customproperty13: "NULL"
-              customproperty14: "NULL"
-              customproperty15: "NULL"
-              customproperty16: "NULL"
-              customproperty17: "NULL"
-              customproperty18: "NULL"
-              customproperty19: "NULL"
-              customproperty20: "NULL"
-              customproperty21: "NULL"
-              customproperty22: "NULL"
-              customproperty23: "NULL"
-              customproperty24: "NULL"
-              customproperty25: "NULL"
-              customproperty26: "NULL"
-              customproperty27: "NULL"
-              customproperty28: "NULL"
-              customproperty29: "NULL"
-              customproperty30: "NULL"
-              customproperty31: "NULL"
-              customproperty32: "NULL"
-              customproperty33: "NULL"
-              customproperty34: "NULL"
-              customproperty35: "NULL"
-              customproperty36: "NULL"
-              customproperty37: "NULL"
-              customproperty38: "NULL"
-              customproperty39: "NULL"
-              customproperty40: "NULL"
-              childEntitlements:
-                roles:
-                  - entitlementID: 15553692240529
-                  - entitlementID: 15553670302865
-              owners:
-                - "15553759289491"
+              $ref: '#/components/schemas/role'
+      example:
+        offset: 0
+        pagesize: 4
+        totalcount: 4
+        roles:
+          - entitlementID: 15553692240529
+            entitlement_value: Light agent
+            description: Can view and add private comments to tickets
+            displayname: "Light agent"
+            entitlement_glossary: "Light agent"
+            status: "0"
+            entclass: "Role"
+            customproperty1: "NULL"
+            customproperty2: "2023-05-24t06:34:23.000z"
+            customproperty3: "2023-05-24t06:34:23.000z"
+            customproperty4: "NULL"
+            customproperty5: "NULL"
+            customproperty6: "NULL"
+            customproperty7: "NULL"
+            customproperty8: "NULL"
+            customproperty9: "NULL"
+            customproperty10: "NULL"
+            customproperty11: "NULL"
+            customproperty12: "NULL"
+            customproperty13: "NULL"
+            customproperty14: "NULL"
+            customproperty15: "NULL"
+            customproperty16: "NULL"
+            customproperty17: "NULL"
+            customproperty18: "NULL"
+            customproperty19: "NULL"
+            customproperty20: "NULL"
+            customproperty21: "NULL"
+            customproperty22: "NULL"
+            customproperty23: "NULL"
+            customproperty24: "NULL"
+            customproperty25: "NULL"
+            customproperty26: "NULL"
+            customproperty27: "NULL"
+            customproperty28: "NULL"
+            customproperty29: "NULL"
+            customproperty30: "NULL"
+            customproperty31: "NULL"
+            customproperty32: "NULL"
+            customproperty33: "NULL"
+            customproperty34: "NULL"
+            customproperty35: "NULL"
+            customproperty36: "NULL"
+            customproperty37: "NULL"
+            customproperty38: "NULL"
+            customproperty39: "NULL"
+            customproperty40: "NULL"
+            childEntitlements:
+              roles:
+                - entitlementID: 15553670302865
+                - entitlementID: 15553670340241
+            owners:
+              - "15553759289491"
+          - entitlementID: 15553670302865
+            entitlement_value: "Contributor"
+            description: "Can provide limited support"
+            displayname: "Contributor"
+            entitlement_glossary: "Contributor"
+            status: "1"
+            entclass: "Role"
+            customproperty1: "NULL"
+            customproperty2: "2023-05-24t06:34:23.000z"
+            customproperty3: "2023-05-24t06:34:23.000z"
+            customproperty4: "NULL"
+            customproperty5: "NULL"
+            customproperty6: "NULL"
+            customproperty7: "NULL"
+            customproperty8: "NULL"
+            customproperty9: "NULL"
+            customproperty10: "NULL"
+            customproperty11: "NULL"
+            customproperty12: "NULL"
+            customproperty13: "NULL"
+            customproperty14: "NULL"
+            customproperty15: "NULL"
+            customproperty16: "NULL"
+            customproperty17: "NULL"
+            customproperty18: "NULL"
+            customproperty19: "NULL"
+            customproperty20: "NULL"
+            customproperty21: "NULL"
+            customproperty22: "NULL"
+            customproperty23: "NULL"
+            customproperty24: "NULL"
+            customproperty25: "NULL"
+            customproperty26: "NULL"
+            customproperty27: "NULL"
+            customproperty28: "NULL"
+            customproperty29: "NULL"
+            customproperty30: "NULL"
+            customproperty31: "NULL"
+            customproperty32: "NULL"
+            customproperty33: "NULL"
+            customproperty34: "NULL"
+            customproperty35: "NULL"
+            customproperty36: "NULL"
+            customproperty37: "NULL"
+            customproperty38: "NULL"
+            customproperty39: "NULL"
+            customproperty40: "NULL"
+            owners:
+              - "15553759289491"
+          - entitlementID: 15553670340241
+            entitlement_value: Billing admin
+            description: Can manage all settings, including billing.
+            displayname: "Billing admin"
+            entitlement_glossary: "Billing admin"
+            status: "0"
+            entclass: "Role"
+            customproperty1: "NULL"
+            customproperty2: "2023-05-24t06:34:23.000z"
+            customproperty3: "2023-05-24t06:34:23.000z"
+            customproperty4: "NULL"
+            customproperty5: "NULL"
+            customproperty6: "NULL"
+            customproperty7: "NULL"
+            customproperty8: "NULL"
+            customproperty9: "NULL"
+            customproperty10: "NULL"
+            customproperty11: "NULL"
+            customproperty12: "NULL"
+            customproperty13: "NULL"
+            customproperty14: "NULL"
+            customproperty15: "NULL"
+            customproperty16: "NULL"
+            customproperty17: "NULL"
+            customproperty18: "NULL"
+            customproperty19: "NULL"
+            customproperty20: "NULL"
+            customproperty21: "NULL"
+            customproperty22: "NULL"
+            customproperty23: "NULL"
+            customproperty24: "NULL"
+            customproperty25: "NULL"
+            customproperty26: "NULL"
+            customproperty27: "NULL"
+            customproperty28: "NULL"
+            customproperty29: "NULL"
+            customproperty30: "NULL"
+            customproperty31: "NULL"
+            customproperty32: "NULL"
+            customproperty33: "NULL"
+            customproperty34: "NULL"
+            customproperty35: "NULL"
+            customproperty36: "NULL"
+            customproperty37: "NULL"
+            customproperty38: "NULL"
+            customproperty39: "NULL"
+            customproperty40: "NULL"
+            owners:
+              - "15553759289492"
+          - entitlementID: 15553707898001
+            entitlement_value: Admin
+            description: Can manage all settings, except billing
+            displayname: "Admin"
+            entitlement_glossary: "Admin"
+            status: "1"
+            entclass: "Role"
+            customproperty1: "NULL"
+            customproperty2: "2023-05-24t06:34:23.000z"
+            customproperty3: "2023-05-24t06:34:23.000z"
+            customproperty4: "NULL"
+            customproperty5: "NULL"
+            customproperty6: "NULL"
+            customproperty7: "NULL"
+            customproperty8: "NULL"
+            customproperty9: "NULL"
+            customproperty10: "NULL"
+            customproperty11: "NULL"
+            customproperty12: "NULL"
+            customproperty13: "NULL"
+            customproperty14: "NULL"
+            customproperty15: "NULL"
+            customproperty16: "NULL"
+            customproperty17: "NULL"
+            customproperty18: "NULL"
+            customproperty19: "NULL"
+            customproperty20: "NULL"
+            customproperty21: "NULL"
+            customproperty22: "NULL"
+            customproperty23: "NULL"
+            customproperty24: "NULL"
+            customproperty25: "NULL"
+            customproperty26: "NULL"
+            customproperty27: "NULL"
+            customproperty28: "NULL"
+            customproperty29: "NULL"
+            customproperty30: "NULL"
+            customproperty31: "NULL"
+            customproperty32: "NULL"
+            customproperty33: "NULL"
+            customproperty34: "NULL"
+            customproperty35: "NULL"
+            customproperty36: "NULL"
+            customproperty37: "NULL"
+            customproperty38: "NULL"
+            customproperty39: "NULL"
+            customproperty40: "NULL"
+            childEntitlements:
+              roles:
+                - entitlementID: 15553692240529
+                - entitlementID: 15553670302865
+            owners:
+              - "15553759289491"
+    role:        
+      type: object
+      properties:
+        entitlementID:
+          type: integer
+        entitlement_value:
+          type: string
+        description:
+          type: string
+        displayname:
+          type: string
+        entitlement_glossary:
+          type: string
+        status:
+          type: string
+        entclass:
+          type: string
+        CUSTOMPROPERTY1:
+          type: string
+        CUSTOMPROPERTY2:
+          type: string
+          format: date-time
+        CUSTOMPROPERTY3:
+          type: string
+          format: date-time
+        CUSTOMPROPERTY4:
+          type: string
+        CUSTOMPROPERTY5:
+          type: string
+        CUSTOMPROPERTY6:
+          type: string
+        CUSTOMPROPERTY7:
+          type: string
+        CUSTOMPROPERTY8:
+          type: string
+        CUSTOMPROPERTY9:
+          type: string
+        CUSTOMPROPERTY10:
+          type: string
+        CUSTOMPROPERTY11:
+          type: string
+        CUSTOMPROPERTY12:
+          type: string
+        CUSTOMPROPERTY13:
+          type: string
+        CUSTOMPROPERTY14:
+          type: string
+        CUSTOMPROPERTY15:
+          type: string
+        CUSTOMPROPERTY16:
+          type: string
+        CUSTOMPROPERTY17:
+          type: string
+        CUSTOMPROPERTY18:
+          type: string
+        CUSTOMPROPERTY19:
+          type: string
+        CUSTOMPROPERTY20:
+          type: string
+        CUSTOMPROPERTY21:
+          type: string
+        CUSTOMPROPERTY22:
+          type: string
+        CUSTOMPROPERTY23:
+          type: string
+        CUSTOMPROPERTY24:
+          type: string
+        CUSTOMPROPERTY25:
+          type: string
+        CUSTOMPROPERTY26:
+          type: string
+        CUSTOMPROPERTY27:
+          type: string
+        CUSTOMPROPERTY28:
+          type: string
+        CUSTOMPROPERTY29:
+          type: string
+        CUSTOMPROPERTY30:
+          type: integer
+        CUSTOMPROPERTY31:
+          type: string
+        CUSTOMPROPERTY32:
+          type: string
+        CUSTOMPROPERTY33:
+          type: string
+        CUSTOMPROPERTY34:
+          type: string
+        CUSTOMPROPERTY35:
+          type: string
+        CUSTOMPROPERTY36:
+          type: string
+        CUSTOMPROPERTY37:
+          type: string
+        CUSTOMPROPERTY38:
+          type: string
+        CUSTOMPROPERTY39:
+          type: string
+        CUSTOMPROPERTY40:
+          type: string
+        childEntitlements:
+          type: object
+          properties:
+            roles:
+              $ref: '#/components/schemas/childroles'  
+        owners:
+          type: array
+          items:
+            type: string
+    childroles:
+      type: array
+      items:
+        type: object
+        properties:
+          entitlementID:
+            type: integer
     groups:
       type: object
       properties:
           offset:
-            type: string
-            example: "0"
+            type: integer
           pagesize:
             type: integer
-            example: 3
-          totalCount:
+          totalcount:
             type: integer
-            example: 3
           groups:
             type: array
             items:
-              type: object
-              properties:
-                entitlementID:
-                  type: integer
-                entitlement_value:
-                  type: string
-                description:
-                  type: string
-                displayname:
-                  type: string
-                entitlement_glossary:
-                  type: string
-                status:
-                  type: string
-                entclass:
-                  type: string
-                CUSTOMPROPERTY1:
-                  type: string
-                CUSTOMPROPERTY2:
-                  type: string
-                  format: date-time
-                CUSTOMPROPERTY3:
-                  type: string
-                  format: date-time
-                CUSTOMPROPERTY4:
-                  type: string
-                CUSTOMPROPERTY5:
-                  type: string
-                CUSTOMPROPERTY6:
-                  type: string
-                CUSTOMPROPERTY7:
-                  type: string
-                CUSTOMPROPERTY8:
-                  type: string
-                CUSTOMPROPERTY9:
-                  type: string
-                CUSTOMPROPERTY10:
-                  type: string
-                CUSTOMPROPERTY11:
-                  type: string
-                CUSTOMPROPERTY12:
-                  type: string
-                CUSTOMPROPERTY13:
-                  type: string
-                CUSTOMPROPERTY14:
-                  type: string
-                CUSTOMPROPERTY15:
-                  type: string
-                CUSTOMPROPERTY16:
-                  type: string
-                CUSTOMPROPERTY17:
-                  type: string
-                CUSTOMPROPERTY18:
-                  type: string
-                CUSTOMPROPERTY19:
-                  type: string
-                CUSTOMPROPERTY20:
-                  type: string
-                CUSTOMPROPERTY21:
-                  type: string
-                CUSTOMPROPERTY22:
-                  type: string
-                CUSTOMPROPERTY23:
-                  type: string
-                CUSTOMPROPERTY24:
-                  type: string
-                CUSTOMPROPERTY25:
-                  type: string
-                CUSTOMPROPERTY26:
-                  type: string
-                CUSTOMPROPERTY27:
-                  type: string
-                CUSTOMPROPERTY28:
-                  type: string
-                CUSTOMPROPERTY29:
-                  type: string
-                CUSTOMPROPERTY30:
-                  type: integer
-                CUSTOMPROPERTY31:
-                  type: string
-                CUSTOMPROPERTY32:
-                  type: string
-                CUSTOMPROPERTY33:
-                  type: string
-                CUSTOMPROPERTY34:
-                  type: string
-                CUSTOMPROPERTY35:
-                  type: string
-                CUSTOMPROPERTY36:
-                  type: string
-                CUSTOMPROPERTY37:
-                  type: string
-                CUSTOMPROPERTY38:
-                  type: string
-                CUSTOMPROPERTY39:
-                  type: string
-                CUSTOMPROPERTY40:
-                  type: string
-                childEntitlements:
-                  type: object
-                  properties:
-                    groups:
-                      type: array
-                      items:
-                        type: object
-                        properties:
-                          entitlementID:
-                            type: integer
-                owners:
-                  type: array
-                  items:
-                    type: string
-            example:
-            - entitlementID: 15553798176145
-              entitlement_value: Admin Users
-              description: "NULL"
-              displayname: "Admin Users"
-              entitlement_glossary: "NULL"
-              status: "1"
-              entclass: "Group"
-              customproperty1: "NULL"
-              customproperty2: "2023-05-24t06:34:23.000z"
-              customproperty3: "2023-05-24t06:34:23.000z"
-              customproperty4: "NULL"
-              customproperty5: "NULL"
-              customproperty6: "NULL"
-              customproperty7: "NULL"
-              customproperty8: "NULL"
-              customproperty9: "NULL"
-              customproperty10: "NULL"
-              customproperty11: "NULL"
-              customproperty12: "NULL"
-              customproperty13: "NULL"
-              customproperty14: "NULL"
-              customproperty15: "NULL"
-              customproperty16: "NULL"
-              customproperty17: "NULL"
-              customproperty18: "NULL"
-              customproperty19: "NULL"
-              customproperty20: "NULL"
-              customproperty21: "NULL"
-              customproperty22: "NULL"
-              customproperty23: "NULL"
-              customproperty24: "NULL"
-              customproperty25: "NULL"
-              customproperty26: "NULL"
-              customproperty27: "NULL"
-              customproperty28: "NULL"
-              customproperty29: "NULL"
-              customproperty30: "NULL"
-              customproperty31: "NULL"
-              customproperty32: "NULL"
-              customproperty33: "NULL"
-              customproperty34: "NULL"
-              customproperty35: "NULL"
-              customproperty36: "NULL"
-              customproperty37: "NULL"
-              customproperty38: "NULL"
-              customproperty39: "NULL"
-              customproperty40: "NULL"
-              owners:
-                - "15553759289491"
-              childEntitlements:
-                roles:
-                  - entitlementID: 15553769734673
-                  - entitlementID: 15553720929041
-            - entitlementID: 15553769734673
-              entitlement_value: "End Users"
-              description: "NULL"
-              displayname: "End Users"
-              entitlement_glossary: "End Users"
-              status: "0"
-              entclass: "Group"
-              customproperty1: "NULL"
-              customproperty2: "2023-05-24t06:34:23.000z"
-              customproperty3: "2023-05-24t06:34:23.000z"
-              customproperty4: "NULL"
-              customproperty5: "NULL"
-              customproperty6: "NULL"
-              customproperty7: "NULL"
-              customproperty8: "NULL"
-              customproperty9: "NULL"
-              customproperty10: "NULL"
-              customproperty11: "NULL"
-              customproperty12: "NULL"
-              customproperty13: "NULL"
-              customproperty14: "NULL"
-              customproperty15: "NULL"
-              customproperty16: "NULL"
-              customproperty17: "NULL"
-              customproperty18: "NULL"
-              customproperty19: "NULL"
-              customproperty20: "NULL"
-              customproperty21: "NULL"
-              customproperty22: "NULL"
-              customproperty23: "NULL"
-              customproperty24: "NULL"
-              customproperty25: "NULL"
-              customproperty26: "NULL"
-              customproperty27: "NULL"
-              customproperty28: "NULL"
-              customproperty29: "NULL"
-              customproperty30: "NULL"
-              customproperty31: "NULL"
-              customproperty32: "NULL"
-              customproperty33: "NULL"
-              customproperty34: "NULL"
-              customproperty35: "NULL"
-              customproperty36: "NULL"
-              customproperty37: "NULL"
-              customproperty38: "NULL"
-              customproperty39: "NULL"
-              customproperty40: "NULL"
-              owners:
-                - "15553759289493"
-            - entitlementID: 15553720929041
-              entitlement_value: Support
-              description: Group for support activity
-              displayname: "Support Group"
-              entitlement_glossary: "Group for support activity"
-              status: "0"
-              entclass: "Group"
-              customproperty1: "NULL"
-              customproperty2: "2023-05-24t06:34:23.000z"
-              customproperty3: "2023-05-24t06:34:23.000z"
-              customproperty4: "NULL"
-              customproperty5: "NULL"
-              customproperty6: "NULL"
-              customproperty7: "NULL"
-              customproperty8: "NULL"
-              customproperty9: "NULL"
-              customproperty10: "NULL"
-              customproperty11: "NULL"
-              customproperty12: "NULL"
-              customproperty13: "NULL"
-              customproperty14: "NULL"
-              customproperty15: "NULL"
-              customproperty16: "NULL"
-              customproperty17: "NULL"
-              customproperty18: "NULL"
-              customproperty19: "NULL"
-              customproperty20: "NULL"
-              customproperty21: "NULL"
-              customproperty22: "NULL"
-              customproperty23: "NULL"
-              customproperty24: "NULL"
-              customproperty25: "NULL"
-              customproperty26: "NULL"
-              customproperty27: "NULL"
-              customproperty28: "NULL"
-              customproperty29: "NULL"
-              customproperty30: "NULL"
-              customproperty31: "NULL"
-              customproperty32: "NULL"
-              customproperty33: "NULL"
-              customproperty34: "NULL"
-              customproperty35: "NULL"
-              customproperty36: "NULL"
-              customproperty37: "NULL"
-              customproperty38: "NULL"
-              customproperty39: "NULL"
-              customproperty40: "NULL"
-              owners:
-                - "15553759289493"
+              $ref: '#/components/schemas/group'
+      example:
+        offset: 0
+        pagesize: 3
+        totalcount: 3
+        groups:
+          - entitlementID: 15553798176145
+            entitlement_value: Admin Users
+            description: "NULL"
+            displayname: "Admin Users"
+            entitlement_glossary: "NULL"
+            status: "1"
+            entclass: "Group"
+            customproperty1: "NULL"
+            customproperty2: "2023-05-24t06:34:23.000z"
+            customproperty3: "2023-05-24t06:34:23.000z"
+            customproperty4: "NULL"
+            customproperty5: "NULL"
+            customproperty6: "NULL"
+            customproperty7: "NULL"
+            customproperty8: "NULL"
+            customproperty9: "NULL"
+            customproperty10: "NULL"
+            customproperty11: "NULL"
+            customproperty12: "NULL"
+            customproperty13: "NULL"
+            customproperty14: "NULL"
+            customproperty15: "NULL"
+            customproperty16: "NULL"
+            customproperty17: "NULL"
+            customproperty18: "NULL"
+            customproperty19: "NULL"
+            customproperty20: "NULL"
+            customproperty21: "NULL"
+            customproperty22: "NULL"
+            customproperty23: "NULL"
+            customproperty24: "NULL"
+            customproperty25: "NULL"
+            customproperty26: "NULL"
+            customproperty27: "NULL"
+            customproperty28: "NULL"
+            customproperty29: "NULL"
+            customproperty30: "NULL"
+            customproperty31: "NULL"
+            customproperty32: "NULL"
+            customproperty33: "NULL"
+            customproperty34: "NULL"
+            customproperty35: "NULL"
+            customproperty36: "NULL"
+            customproperty37: "NULL"
+            customproperty38: "NULL"
+            customproperty39: "NULL"
+            customproperty40: "NULL"
+            owners:
+              - "15553759289491"
+            childEntitlements:
+              roles:
+                - entitlementID: 15553769734673
+                - entitlementID: 15553720929041
+          - entitlementID: 15553769734673
+            entitlement_value: "End Users"
+            description: "NULL"
+            displayname: "End Users"
+            entitlement_glossary: "End Users"
+            status: "0"
+            entclass: "Group"
+            customproperty1: "NULL"
+            customproperty2: "2023-05-24t06:34:23.000z"
+            customproperty3: "2023-05-24t06:34:23.000z"
+            customproperty4: "NULL"
+            customproperty5: "NULL"
+            customproperty6: "NULL"
+            customproperty7: "NULL"
+            customproperty8: "NULL"
+            customproperty9: "NULL"
+            customproperty10: "NULL"
+            customproperty11: "NULL"
+            customproperty12: "NULL"
+            customproperty13: "NULL"
+            customproperty14: "NULL"
+            customproperty15: "NULL"
+            customproperty16: "NULL"
+            customproperty17: "NULL"
+            customproperty18: "NULL"
+            customproperty19: "NULL"
+            customproperty20: "NULL"
+            customproperty21: "NULL"
+            customproperty22: "NULL"
+            customproperty23: "NULL"
+            customproperty24: "NULL"
+            customproperty25: "NULL"
+            customproperty26: "NULL"
+            customproperty27: "NULL"
+            customproperty28: "NULL"
+            customproperty29: "NULL"
+            customproperty30: "NULL"
+            customproperty31: "NULL"
+            customproperty32: "NULL"
+            customproperty33: "NULL"
+            customproperty34: "NULL"
+            customproperty35: "NULL"
+            customproperty36: "NULL"
+            customproperty37: "NULL"
+            customproperty38: "NULL"
+            customproperty39: "NULL"
+            customproperty40: "NULL"
+            owners:
+              - "15553759289493"
+          - entitlementID: 15553720929041
+            entitlement_value: Support
+            description: Group for support activity
+            displayname: "Support Group"
+            entitlement_glossary: "Group for support activity"
+            status: "0"
+            entclass: "Group"
+            customproperty1: "NULL"
+            customproperty2: "2023-05-24t06:34:23.000z"
+            customproperty3: "2023-05-24t06:34:23.000z"
+            customproperty4: "NULL"
+            customproperty5: "NULL"
+            customproperty6: "NULL"
+            customproperty7: "NULL"
+            customproperty8: "NULL"
+            customproperty9: "NULL"
+            customproperty10: "NULL"
+            customproperty11: "NULL"
+            customproperty12: "NULL"
+            customproperty13: "NULL"
+            customproperty14: "NULL"
+            customproperty15: "NULL"
+            customproperty16: "NULL"
+            customproperty17: "NULL"
+            customproperty18: "NULL"
+            customproperty19: "NULL"
+            customproperty20: "NULL"
+            customproperty21: "NULL"
+            customproperty22: "NULL"
+            customproperty23: "NULL"
+            customproperty24: "NULL"
+            customproperty25: "NULL"
+            customproperty26: "NULL"
+            customproperty27: "NULL"
+            customproperty28: "NULL"
+            customproperty29: "NULL"
+            customproperty30: "NULL"
+            customproperty31: "NULL"
+            customproperty32: "NULL"
+            customproperty33: "NULL"
+            customproperty34: "NULL"
+            customproperty35: "NULL"
+            customproperty36: "NULL"
+            customproperty37: "NULL"
+            customproperty38: "NULL"
+            customproperty39: "NULL"
+            customproperty40: "NULL"
+            owners:
+              - "15553759289493"
+    group:
+      type: object
+      properties:
+        entitlementID:
+          type: integer
+        entitlement_value:
+          type: string
+        description:
+          type: string
+        displayname:
+          type: string
+        entitlement_glossary:
+          type: string
+        status:
+          type: string
+        entclass:
+          type: string
+        CUSTOMPROPERTY1:
+          type: string
+        CUSTOMPROPERTY2:
+          type: string
+          format: date-time
+        CUSTOMPROPERTY3:
+          type: string
+          format: date-time
+        CUSTOMPROPERTY4:
+          type: string
+        CUSTOMPROPERTY5:
+          type: string
+        CUSTOMPROPERTY6:
+          type: string
+        CUSTOMPROPERTY7:
+          type: string
+        CUSTOMPROPERTY8:
+          type: string
+        CUSTOMPROPERTY9:
+          type: string
+        CUSTOMPROPERTY10:
+          type: string
+        CUSTOMPROPERTY11:
+          type: string
+        CUSTOMPROPERTY12:
+          type: string
+        CUSTOMPROPERTY13:
+          type: string
+        CUSTOMPROPERTY14:
+          type: string
+        CUSTOMPROPERTY15:
+          type: string
+        CUSTOMPROPERTY16:
+          type: string
+        CUSTOMPROPERTY17:
+          type: string
+        CUSTOMPROPERTY18:
+          type: string
+        CUSTOMPROPERTY19:
+          type: string
+        CUSTOMPROPERTY20:
+          type: string
+        CUSTOMPROPERTY21:
+          type: string
+        CUSTOMPROPERTY22:
+          type: string
+        CUSTOMPROPERTY23:
+          type: string
+        CUSTOMPROPERTY24:
+          type: string
+        CUSTOMPROPERTY25:
+          type: string
+        CUSTOMPROPERTY26:
+          type: string
+        CUSTOMPROPERTY27:
+          type: string
+        CUSTOMPROPERTY28:
+          type: string
+        CUSTOMPROPERTY29:
+          type: string
+        CUSTOMPROPERTY30:
+          type: integer
+        CUSTOMPROPERTY31:
+          type: string
+        CUSTOMPROPERTY32:
+          type: string
+        CUSTOMPROPERTY33:
+          type: string
+        CUSTOMPROPERTY34:
+          type: string
+        CUSTOMPROPERTY35:
+          type: string
+        CUSTOMPROPERTY36:
+          type: string
+        CUSTOMPROPERTY37:
+          type: string
+        CUSTOMPROPERTY38:
+          type: string
+        CUSTOMPROPERTY39:
+          type: string
+        CUSTOMPROPERTY40:
+          type: string
+        childEntitlements:
+          type: object
+          properties:
+            groups:
+              $ref: '#/components/schemas/childgroups'  
+        owners:
+          type: array
+          items:
+            type: string
+    childgroups:
+      type: array
+      items:
+        type: object
+        properties:
+          entitlementID:
+            type: integer
     groupsmembership:
       type: object
       properties:     
