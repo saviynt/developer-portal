@@ -212,7 +212,7 @@ paths:
           description: Failure in fetching account role association
   /updateUser/{userName}:
     patch:
-      operationId: patch-updateUser
+      operationId: patchUpdateUser
       tags :
         - User Provisioning
       summary: This API updates a user
@@ -245,7 +245,7 @@ paths:
           description: Failure in user update
   /createAccount:
     post:
-      operationId: post-createAccount
+      operationId: postCreateAccount
       tags :
         - Account Provisioning
       summary: This API creates an account
@@ -328,7 +328,7 @@ paths:
           description: Failure response
   /removeAccount/{accountID}:
     delete:
-      operationId: delete-removeAccount
+      operationId: deleteRemoveAccount
       tags :
         - Account Provisioning
       summary: This API deletes an account
