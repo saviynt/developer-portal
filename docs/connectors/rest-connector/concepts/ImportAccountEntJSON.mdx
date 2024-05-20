@@ -85,7 +85,7 @@ Here is an example configuration for `ImportAccountEntJSON` that includes basic 
 
 The following table describes all the attributes in ImportAccountEntJSON:
 
-### **Attribute : accountParams** 
+### Attribute : accountParams
 |  Variable        | Description                                                                                                                              |
 |----------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
 | Connection                 | Populates the connection type value specified in the acctAuth attribute while defining ConnectionJSON.                        |
@@ -122,7 +122,7 @@ The following table describes all the attributes in ImportAccountEntJSON:
 |                            | - You must specify the following entry in colsToPropsMap of one of the accounts calls: **"customproperty31": "STORE#ACC#ENT#MAPPINGINFO~#~char"** |
 |                            | - Use statusConfig to map the status of entitlements in IGA with the status in the target application.                                   |
 
-### **Attribute : entitlementParams**
+### Attribute : entitlementParams
 |  Variable        | Description                                                                                                                              |
 |----------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
 | Connection                 |  Populates the connection type value specified in the acctAuth attribute while defining **ConnectionJSON**.                    |
@@ -152,7 +152,7 @@ The following table describes all the attributes in ImportAccountEntJSON:
 | disableDeletedEntitlements | This variable is no longer required after the introduction of the **statusAndThresholdConfig** variable. Set this to false in the current codebase. |
 | makeProcessingStatus       | Use this variable when there are multiple API calls involved for importing one entitlement type. In most cases, there is an API that gets all the entitlement objects of that type and other APIs might obtain additional data for each entitlement object. In this case, the status of the entitlement should be in process till all the details of that entitlement object is imported. Hence, makeProcessingStatus can be set to true for the first API call and false for the successive API call. The default value is false. |
 
-### **Attribute : acctEntParams**
+### Attribute : acctEntParams
 |  Variable        | Description                                                                                                                              |
 |----------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
 |  createUsers             |  Use this variable to instruct the connector to create users while importing accounts. When set to true, users are created during account import. The default value is false. |
@@ -175,7 +175,7 @@ The following table describes all the attributes in ImportAccountEntJSON:
 | entKeyField                | Use this variable to define the key field that uniquely identifies the entitlement value.                                               |
 | ownerKeyField              | Use this variable to define the key field that uniquely identifies the owner of the entitlement.                                        |
 
-### **Attribute : entOwnerParams**
+### Attribute : entOwnerParams
 |  Variable        | Description                                                                                                                              |
 |----------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
 | Connection                 |  Populates the connection type value specified in the acctAuth attribute while defining **ConnectionJSON**.                    |
@@ -193,7 +193,7 @@ The following table describes all the attributes in ImportAccountEntJSON:
 | acctKeyField               | Use this variable to define the key field that uniquely identifies the account.                                                         |
 | entKeyField                | Use this variable to define the key field that uniquely identifies the entitlement value.                                               |
 
-### **Attribute : entMappingParams**
+### Attribute : entMappingParams
 |  Variable        | Description                                                                                                                              |
 |----------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
 | Connection                 |  Populates the connection type value specified in the acctAuth attribute while defining **ConnectionJSON**.                    |
