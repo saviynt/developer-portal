@@ -28,62 +28,7 @@ The `ImportAccountEntJSON` is a parameter used in Saviynt's REST Connector to ma
    - **errorPath**: Path to extract error messages from the response.
    - **maxRefreshTryCount**: Maximum number of retries for refreshing tokens.
 
-### Example of ImportAccountEntJSON
-
-Here is an example configuration for `ImportAccountEntJSON` that includes basic attribute mapping and error handling scenarios:
-
-```json
-{
-  "ImportAccountEntJSON": {
-    "colsToPropsMap": {
-      "accountID": "id",
-      "accountName": "username",
-      "email": "emailAddress",
-      "status": "accountStatus",
-      "createdDate": "createdDate~#~epochdate"
-    },
-    "statusAndThresholdConfig": {
-      "accountThresholdValue": 100,
-      "inactivateAccountsNotInFile": true,
-      "statusColumn": "accountStatus",
-      "activeStatus": [
-        "ACTIVE",
-        "ENABLED"
-      ],
-      "inactivateEntsNotInFeed": true,
-      "entThresholdValue": {
-        "entType": {
-          "Group": {
-            "ent": 100
-          },
-          "Role": {
-            "ent": 100
-          }
-        }
-      }
-    },
-    "errorHandling": {
-      "expiryError": [
-        "token_expired",
-        "session_expired"
-      ],
-      "authError": [
-        "invalid_token",
-        "authentication_failed"
-      ],
-      "retryFailureStatusCode": [
-        401,
-        403
-      ],
-      "timeOutError": "request_timeout",
-      "errorPath": "error.message",
-      "maxRefreshTryCount": 3
-    }
-  }
-}
-```
-
-The following table describes all the attributes in ImportAccountEntJSON:
+The following tables describes all the attributes in ImportAccountEntJSON:
 
 ### Attribute : accountParams
 |  Variable        | Description                                                                                                                              |
@@ -211,100 +156,165 @@ The following table describes all the attributes in ImportAccountEntJSON:
 |                            | - ENT2 - makes the target entitlement type as a child of current entitlement.                                                           |
 
 
+## Common features
 
-### Sample ConnectionJSON
+### Support for Multiple API Call
+Supports calling multiple dependent APIs for the same parent API call to import extended properties from the target application.
 
-#### Sample 1
-This **ConnectionJSON** is a comprehensive setup for authenticating via OAuth2 using username and password as credentials. It covers various error handling scenarios, specifies how to process and interpret API responses, and includes robust retry logic to handle token expiration effectively. This configuration is essential for maintaining secure and efficient access to APIs requiring OAuth2 authentication.
+### Sample1  
+Add multiple calls in the accountParams attribute. In this example, the first API call fetches a list of users, and the second call fetches details for each user using data from the first call.  This example uses the `${accountName}` binding variable to iterate the accounts imported as part of call1. Set the **dependentCall** variable under **inputParams** to true when the call2 is dependent on call1. 
 
-
-<details>
-<summary> JSON </summary>
-<p>
-``` json
+```
 {
-  "authentications": {
-    "userAuth": {
-      "authType": "oauth2",
-      "url": "https://<domain name>/api/v18.2/auth",
-      "httpMethod": "POST",
-      "httpParams": {
-        "username": "<Username>",
-        "password": "<Password>"
+  "accountParams": {
+    "connection": "acctAuth",
+    "createUsers": true,
+    "adminName": "admin",
+    "processingType": "SequentialAndIterative", 
+    "statusAndThresholdConfig": {
+      "deleteLinks": false,
+      "accountThresholdValue": 30,
+      "correlateInactiveAccounts": false,
+      "inactivateAccountsNotInFile": false,
+      "deleteAccEntForActiveAccounts": true
+    },
+    "call": {
+      "call1": {
+        "callOrder": 0,
+        "stageNumber": 0,
+        "http": {
+          "url": "https://api.**************.com/v1/enterprise/345992/users",
+          "httpHeaders": {
+            "Authorization": "${access_token}"
+          },
+          "httpContentType": "application/x-www-form-urlencoded",
+          "httpMethod": "GET"
+        },
+        "listField": "users",
+        "keyField": "accountID",
+        "colsToPropsMap": {
+          "accountID": "id~#~char",
+          "name": "id~#~char"
+        },
+        "disableDeletedAccounts": true
       },
-      "httpHeaders": {
-        "contentType": "application/x-www-form-urlencoded"
-      },
-      "httpContentType": "application/x-www-form-urlencoded",
-      "expiryError": "ExpiredAuthenticationToken",
-      "authError": [
-        "InvalidAuthenticationToken",
-        "AuthenticationFailed",
-        "FAILURE",
-        "INVALID_SESSION_ID"
-      ],
-      "timeOutError": "Read timed out",
-      "errorPath": "errors.type",
-      "maxRefreshTryCount": 5,
-      "tokenResponsePath": "sessionId",
-      "tokenType": "Bearer",
-      "accessToken": "<access token>"
+      "call2": {
+        "callOrder": 1,
+        "stageNumber": 3,
+        "http": {
+          "url": "https://api.**************.com/v1/user/${accountName}",
+          "httpHeaders": {
+            "Authorization": "${access_token}"
+          },
+          "httpContentType": "application/x-www-form-urlencoded",
+          "httpMethod": "GET"
+        },
+        "inputParams": {
+          "dependentCall": true
+        },
+        "listField": "",
+        "keyField": "accountID",
+        "nextApiKeyField": "accountID",
+        "colsToPropsMap": {
+          "accountID": "id~#~char",
+          "name": "username~#~char",
+          "customproperty1": "emailId~#~char",
+          "customproperty2": "lastName~#~char",
+          "customproperty3": "company~#~char",
+          "customproperty4": "timezone~#~char",
+          "customproperty5": "defaultEndpoint~#~char",
+          "customproperty6": "lastLogin~#~char"
+        }
+      }
     }
   }
 }
 ```
-</p>
-</details>
-**Authentication Configuration Details**
 
-- **Authentication Type (`authType`)**: `oauth2`
-  - Specifies that the OAuth 2.0 protocol is used for authentication. This is a common standard for authorizing secure API requests by obtaining an access token.
+Here's the breakdown of this JSON in simple terms
 
-- **URL (`url`)**: `https://<domain name>/api/v18.2/auth`
-  - This is the endpoint where the OAuth2 authentication request is sent. The `<domain name>` should be replaced with the actual domain of the API providing the OAuth2 service.
+#### Account Parameters
 
-- **HTTP Method (`httpMethod`)**: `POST`
-  - The method used to send the request to the authentication URL. OAuth2 typically uses POST to securely transmit credential data.
+- **Connection (`connection`)**: 
+  - **"acctAuth"**: This is a placeholder for the actual connection name. This connection contains all the details needed to communicate with the external system.
+  
+- **Create Users (`createUsers`)**:
+  - **true**: This means new users will be created if they don't already exist in Saviynt.
+  
+- **Admin Name (`adminName`)**:
+  - **"admin"**: The username for the admin account that has the necessary permissions to perform the import.
 
-- **HTTP Parameters (`httpParams`)**:
-  - `username`: `<Username>`
-  - `password`: `<Password>`
-  - These fields hold the credentials needed to authenticate the request. `<Username>` and `<Password>` are placeholders and should be replaced with actual user credentials.
+- **Processing Type (`processingType`)**:
+  - **"SequentialAndIterative"**: Specifies the method used to process the accounts. Sequential means one after another, and iterative means it will repeat the process.
 
-- **HTTP Headers (`httpHeaders`)**:
-  - `contentType`: "application/x-www-form-urlencoded"
-  - Specifies the media type of the request body, indicating that the form data is URL-encoded.
+#### Status and Threshold Configuration (`statusAndThresholdConfig`)
 
-- **HTTP Content Type (`httpContentType`)**: `application/x-www-form-urlencoded`
-  - Reiterates the content type specified in the headers, ensuring the body format is recognized by the server handling the authentication.
+This section deals with handling inactive accounts and account thresholds.
 
-- **Expiry Error (`expiryError`)**: `ExpiredAuthenticationToken`
-  - Defines the error message or code that is expected when the authentication token has expired, prompting re-authentication or token refresh.
+- **Delete Links (`deleteLinks`)**:
+  - **false**: Indicates that existing links (associations) between accounts and entitlements (permissions) should not be deleted.
 
-- **Authentication Error (`authError`)**:
-  - `InvalidAuthenticationToken`
-  - `AuthenticationFailed`
-  - `FAILURE`
-  - `INVALID_SESSION_ID`
-  - This array lists possible error messages or codes that can be encountered if authentication fails for various reasons, such as invalid credentials or session timeouts.
+- **Account Threshold Value (`accountThresholdValue`)**:
+  - **30**: Sets a limit of 30 accounts before any action is taken to inactivate or delete accounts.
 
-- **Time Out Error (`timeOutError`)**: `Read timed out`
-  - Specifies the error message when the authentication request times out due to server non-responsiveness or network issues.
+- **Correlate Inactive Accounts (`correlateInactiveAccounts`)**:
+  - **false**: Indicates that inactive accounts should not be correlated with any actions.
 
-- **Error Path (`errorPath`)**: `errors.type`
-  - This is the JSON path that points to where in the response body the error details are provided when an authentication error occurs.
+- **Inactivate Accounts Not in File (`inactivateAccountsNotInFile`)**:
+  - **false**: Accounts not present in the import file will not be inactivated.
 
-- **Max Refresh Try Count (`maxRefreshTryCount`)**: 5
-  - Indicates the maximum number of times the system should attempt to refresh the authentication token before giving up and reporting a failure.
+- **Delete Account Entitlements for Active Accounts (`deleteAccEntForActiveAccounts`)**:
+  - **true**: Deletes account entitlements for accounts that are still active.
 
-- **Token Response Path (`tokenResponsePath`)**: `sessionId`
-  - The JSON path where the access token (or session ID in this context) can be found in the API response.
 
-- **Token Type (`tokenType`)**: `Bearer`
-  - Declares the type of token being used, which in this case is a Bearer token. This indicates that the token should be included in the Authorization header of subsequent API requests.
+#### API Calls (`call`)**
+This section defines how to call external APIs to fetch account data.
 
-- **Access Token (`accessToken`)**: `<access token>`
-  - This is a placeholder for the initial access token, which might be pre-provided for initial setup or testing. It should be replaced with an actual token once obtained.
+- **Call 1 (`call1`)**:
+  - **Order and Stage**:
+    - **callOrder**: 0 (first call)
+    - **stageNumber**: 0 (first stage)
+  - **HTTP Details**:
+    - **URL**: The endpoint to fetch user data from the external system.
+    - **HTTP Headers**:
+      - **Authorization**: Uses a token (`${access_token}`) for authentication.
+    - **Content Type**: **"application/x-www-form-urlencoded"**
+    - **Method**: **GET** (fetch data)
+  - **List Field (`listField`)**: **"users"** (the field in the response that contains the user data)
+  - **Key Field (`keyField`)**: **"accountID"** (unique identifier for accounts)
+  - **Columns to Properties Map (`colsToPropsMap`)**:
+    - **"accountID"**: Mapped to **"id~#~char"**
+    - **"name"**: Mapped to **"id~#~char"**
+  - **Disable Deleted Accounts (`disableDeletedAccounts`)**: **true** (disable accounts that are marked as deleted)
+
+- **Call 2 (`call2`)**:
+  - **Order and Stage**:
+    - **callOrder**: 1 (second call)
+    - **stageNumber**: 3 (third stage)
+  - **HTTP Details**:
+    - **URL**: Fetches detailed user information using account name.
+    - **HTTP Headers**:
+      - **Authorization**: Uses a token (`${access_token}`) for authentication.
+    - **Content Type**: **"application/x-www-form-urlencoded"**
+    - **Method**: **GET** (fetch data)
+  - **Input Parameters (`inputParams`)**:
+    - **dependentCall**: true (depends on the previous call)
+  - **List Field**: Empty (not used here)
+  - **Key Field**: **"accountID"**
+  - **Next API Key Field (`nextApiKeyField`)**: **"accountID"**
+  - **Columns to Properties Map (`colsToPropsMap`)**:
+    - Maps fields like **"accountID"**, **"name"**, **"customproperty1"** (email), and other custom properties to the corresponding fields in Saviynt.
+
+#### Error Handling
+
+Error handling is not explicitly shown in the provided JSON, but here’s how it might look:
+
+- **Expiry Error (`expiryError`)**: Handle token expiry issues.
+- **Auth Error (`authError`)**: Handle authentication errors.
+- **Retry Failure Status Code (`retryFailureStatusCode`)**: List of HTTP status codes that should trigger a retry.
+- **Timeout Error (`timeOutError`)**: Handle cases where the API call times out.
+- **Error Path (`errorPath`)**: Path in the response where error messages can be found.
+- **Max Refresh Try Count (`maxRefreshTryCount`)**: Maximum number of retries for refreshing the token.
 
 
 #### Sample 2
