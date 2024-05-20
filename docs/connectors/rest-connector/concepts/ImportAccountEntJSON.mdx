@@ -9,69 +9,82 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 
-# ImportAccountEntJSON
-
-
 ## ImportAccountEntJSON
-A ConnectionJSON typically refers to a JSON formatted configuration section used in Saviynt to define the details of a connection to an external system, service, or API. This JSON structure is used to specify how an application should authenticate and interact with other services. 
 
-### Key Elements of ConnectionJSON
+The `ImportAccountEntJSON` is a parameter used in Saviynt's REST Connector to map attributes from a REST application to Saviynt Enterprise Identity Cloud (EIC) attributes for importing accounts and entitlements. It defines how data from the target application should be transformed and mapped into Saviynt during the import process.
 
-- **Authentication Information** : It includes details about the type of authentication required (e.g., OAuth2, Basic, JWT) and the necessary credentials or tokens to authenticate the connection securely.
-- **Connection Details**  This includes URLs, ports, and endpoints to which the application needs to connect. It also specifies the HTTP methods to use (GET, POST, PUT, DELETE) and any special headers or parameters required by the API.
-- **Error Handling**  Configuration often details how to handle specific errors, such as authentication failures or connection timeouts, which can be crucial for maintaining reliable operations.
-- **Security Settings**  This may include configurations for SSL/TLS settings, key files, or other security-related options that ensure the connection is secure.
-- **Rate Limiting and Throttling**  Some ConnectionJSON files may specify settings related to API rate limits, like maximum number of requests per second, to prevent service overload.
 
-The following table describes all the attributes in ConnectionJSON:
+### Key Elements of ImportAccountEntJSON
 
-| Attribute               | Description                                                                                                                                                                                                                                       | Example                                                                                                                          |
-|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| `acctAuth`              | Specifies the unique name of the authentication configuration. This name is used to reference this particular authentication setup throughout the application.                                                                                    | `"acctAuth": "MainAppConnection"`                                                                                                |
-| `authType`              | Determines the method of authentication used. This parameter decides how the API handles and expects authentication details.                                                                                                                      | `"authType": "oauth2"`                                                                                                           |
-| `jwtConfig`             | Configures the details for JWT-based authentication, including the headers and payload of the JWT.                                                                                                                                                | `"jwtConfig": { "jwtHeader": { "alg": "HS256" }, "jwtPayload": { "iss": "yourIssuer" } }`                                       |
-| `signedAlgorithm`       | Specifies the algorithm used for signing JWT tokens. It's crucial for ensuring the integrity and the non-repudiation of the tokens.                                                                                                               | `"signedAlgorithm": "RS256"`                                                                                                     |
-| `key`                   | Refers to the cryptographic key used for signing or encrypting tokens, depending on the `authType`.                                                                                                                                               | `"key": "base64EncodedKeyString"`                                                                                                |
-| `jwtExpiryDuration`     | Defines how long (in seconds) the JWT token remains valid.                                                                                                                                                                                       | `"jwtExpiryDuration": "3600"` (1 hour)                                                                                           |
-| `username`              | The username used in Basic authentication. It's used in conjunction with a password.                                                                                                                                                              | `"username": "apiuser"`                                                                                                          |
-| `password`              | The password corresponding to the `username` for Basic authentication.                                                                                                                                                                            | `"password": "s3cur3p@ssword"`                                                                                                   |
-| `client_id`             | A public identifier for apps, required mostly in OAuth2 and JWT authentication types.                                                                                                                                                             | `"client_id": "client_x12345"`                                                                                                   |
-| `client_secret`         | A secret known only to the application and the authorization server, used in OAuth2 authentication.                                                                                                                                               | `"client_secret": "secretValue12345"`                                                                                            |
-| `scope`                 | Specifies the level of access that the application is requesting.                                                                                                                                                                                 | `"scope": "email profile"`                                                                                                       |
-| `url`                   | The URL of the authentication server or API endpoint. This field varies based on `authType`.                                                                                                                                                      | `"url": "https://api.example.com/oauth2/token"`                                                                                  |
-| `httpMethod`            | HTTP method used when making a request to the authentication server.                                                                                                                                                                              | `"httpMethod": "POST"`                                                                                                           |
-| `httpParams`            | Additional parameters needed to successfully make an API call. These could include tokens, API keys, or other credentials.                                                                                                                         | `"httpParams": { "grant_type": "client_credentials" }`                                                                           |
-| `httpHeaders`           | HTTP headers necessary for the API call. These may include content types or authentication tokens.                                                                                                                                                 | `"httpHeaders": { "Content-Type": "application/x-www-form-urlencoded" }`                                                         |
-| `httpContentType`       | The content type of the request body, informing the server how to interpret the data in the body of the request.                                                                                                                                  | `"httpContentType": "application/json"`                                                                                          |
-| `expiryError`           | Error message or code to be displayed or logged when an authentication token expires.                                                                                                                                                              | `"expiryError": "Token has expired"`                                                                                             |
-| `authError`             | Error messages related to authentication failures. This can be a list to handle multiple potential errors.                                                                                                                                        | `"authError": ["Invalid credentials", "Account locked"]`                                                                         |
-| `timeOutError`          | Message displayed when a timeout error occurs during the authentication process.                                                                                                                                                                  | `"timeOutError": "Connection to authentication server timed out"`                                                               |
-| `errorPath`             | JSON path expression indicating where in the response body authentication-related errors can be found.                                                                                                                                           | `"errorPath": "response.error.message"`                                                                                          |
-| `maxRefreshTryCount`    | Maximum number of attempts to refresh an authentication token before giving up.                                                                                                                                                                   | `"maxRefreshTryCount": 5`                                                                                                        |
-| `tokenResponsePath`     | Path in the JSON response from which to extract the authentication token.                                                                                                                                                                         | `"tokenResponsePath": "token.access_token"`                                                                                      |
-| `tokenType`             | Type of token expected, usually 'Bearer' or 'Basic'. It defines how the token is presented when making authenticated requests.                                                                                                                     | `"tokenType": "Bearer"`                                                                                                          |
-| `accessToken`           | Initial value for the access token, used primarily during setup or testing. It gets updated as tokens are refreshed.                                                                                                                              | `"accessToken": "Bearer initialAccessTokenValue"`                                                                                |
-| `authHeaderName`        | Specifies the HTTP header name where the token is expected, useful if the target API does not use the standard 'Authorization' header.                                                                                                            | `"authHeaderName": "X-Custom-Auth"`                                                                                              |
-| `refreshType`           | Indicates the method used to refresh tokens, applicable in token-based authentication schemes like OAuth2.                                                                                                                                       | `"refreshType": "tokenRefresh"`                                                                                                  |
-| `refreshTokenResponsePath` | Path in the API response to find the refresh token.                                                                                                                                                                                             | `"refreshTokenResponsePath": "refresh_token"`                                                                                    |
-| `refreshToken`          | Current valid refresh token used to obtain new access tokens upon expiry.                                                                                                                                                                         | `"refreshToken": "initialRefreshTokenValue"`                                                                                     |
-| `refreshTokenAuthError` | List of specific errors that trigger a token refresh if encountered during API interaction.                                                                                                                                                       | `"refreshTokenAuthError": ["token_expired", "token_invalid"]`                                                                    |
-| `refreshTokenErrorPath` | Path in the response where errors related to token refresh are located.                                                                                                                                                                           | `"refreshTokenErrorPath": "response.errors"`                                                                                     |
-| `refreshTokenCall`      | Configuration to make a separate API call to refresh the token. This is structured similarly to other API calls with URL, headers, and method.                                                                                                     | `"refreshTokenCall": { "url": "https://api.example.com/refresh", "httpMethod": "POST" }`                                         |
-| `maskInLogs`            | List of parameters whose values should be masked in logs to prevent sensitive information exposure.                                                                                                                                                | `"maskInLogs": ["password", "client_secret"]`                                                                                    |
-| `retryAfterCalls`       | Specifies the number of API calls after which the system should pause, often used to handle API rate limiting.                                                                                                                                     | `"retryAfterCalls": 100`                                                                                                         |
-| `retryWaitSeconds`      | The number of seconds to wait after a specified number of calls has been made, useful for handling rate limits.                                                                                                                                    | `"retryWaitSeconds": 60`                                                                                                         |
-| `cleanUpTextContent`    | A boolean flag to indicate whether the API response content should be cleaned or formatted before parsing. This can be useful when responses include non-standard characters that can interfere with JSON parsing.                                | `"cleanUpTextContent": true`                                                                                                     |
-| `retryFailureStatusCode`| List of HTTP status codes that, when encountered, should trigger a retry of the API call.                                                                                                                                                          | `"retryFailureStatusCode": [401, 503]`                                                                                           |
-| `keyFile`               | Specifies the path to the key file used for SSL or other cryptographic operations.                                                                                                                                                                | `"keyFile": "/path/to/keyfile.pem"` This may vary depending on the version                                                                                             |
-| `keyFilePassword`       | Password for the key file if it's encrypted.                                                                                                                                                                                                      | `"keyFilePassword": "filePassword123"`                                                                                           |
-| `keyManagerAlgorithm`   | Cryptographic algorithm used by the key manager when managing keys.                                                                                                                                                                               | `"keyManagerAlgorithm": "SunX509"`                                                                                               |
-| `keyStoreType`          | Type of key store used to hold cryptographic keys (e.g., JKS, PKCS12).                                                                                                                                                                            | `"keyStoreType": "JKS"`                                                                                                          |
-| `sslAlgorithmName`      | Specifies the SSL protocol to be used for secure communication.                                                                                                                                                                                   | `"sslAlgorithmName": "TLSv1.2"`                                                                                                  |
+1. **colsToPropsMap**: This element is used to map columns from the target application's data to Saviynt attributes. It specifies how the incoming data fields should be mapped to the Saviynt schema.
 
-> Note
->
-> From Release v23.8, the REST connector uses the default path of key file that you upload under Admin > Settings > File Directory > Connector Files for creating a connection. Instead of the absolute path, specify the file name that contains the public-private keypair. For more information about uploading connector files, see Configuring File Directories in the Enterprise Identity Cloud Administration Guide.
+2. **statusAndThresholdConfig**: This element defines configurations for handling account status and thresholds during the import process. It includes parameters for managing inactive accounts and entitlements, setting threshold values, and specifying status columns.
+
+3. **errorHandling**: This element includes various error handling configurations to manage and respond to errors during the import process. Key fields include:
+   - **expiryError**: Specifies errors related to token expiry.
+   - **authError**: Lists possible authentication errors.
+   - **retryFailureStatusCode**: HTTP status codes that trigger a retry mechanism.
+   - **timeOutError**: Defines the behavior when a timeout occurs.
+   - **errorPath**: Path to extract error messages from the response.
+   - **maxRefreshTryCount**: Maximum number of retries for refreshing tokens.
+
+## Example of ImportAccountEntJSON
+
+Here is an example configuration for `ImportAccountEntJSON` that includes basic attribute mapping and error handling scenarios:
+
+```json
+{
+  "ImportAccountEntJSON": {
+    "colsToPropsMap": {
+      "accountID": "id",
+      "accountName": "username",
+      "email": "emailAddress",
+      "status": "accountStatus",
+      "createdDate": "createdDate~#~epochdate"
+    },
+    "statusAndThresholdConfig": {
+      "accountThresholdValue": 100,
+      "inactivateAccountsNotInFile": true,
+      "statusColumn": "accountStatus",
+      "activeStatus": [
+        "ACTIVE",
+        "ENABLED"
+      ],
+      "inactivateEntsNotInFeed": true,
+      "entThresholdValue": {
+        "entType": {
+          "Group": {
+            "ent": 100
+          },
+          "Role": {
+            "ent": 100
+          }
+        }
+      }
+    },
+    "errorHandling": {
+      "expiryError": [
+        "token_expired",
+        "session_expired"
+      ],
+      "authError": [
+        "invalid_token",
+        "authentication_failed"
+      ],
+      "retryFailureStatusCode": [
+        401,
+        403
+      ],
+      "timeOutError": "request_timeout",
+      "errorPath": "error.message",
+      "maxRefreshTryCount": 3
+    }
+  }
+}
+```
+
+The following table describes all the attributes in ImportAccountEntJSON:
+
 
 ### Sample ConnectionJSON
 
