@@ -104,7 +104,7 @@ The following table describes all the attributes in ImportAccountEntJSON:
 | colsToPropsMap             | Use this variable to map account objects in the target application with account attributes in IGA, so that data from the target application is correctly saved. Review the following guidelines before mapping account attributes: |
 |                            | - Represent the logical mapping in this format: AccountsTableAttribute in EIC::TargetapplicationAttribute#Parsabledatatypeinsaviynt  |
 |                            | - Represent the target application attributes in the same case and format as they are in the target application.                         |
-|                            | - If the field name in the target application contains a dot(.), use a ~dot# separator. For example, odata~dot#error.                    |
+|                            | - If the field name in the target application contains a dot(.), use a `~dot# separator. For example, odata`~dot#error.                    |
 |                            | - If the list objects are at the top of the hierarchy in the response JSON, keep the field empty.                                        |
 |                            | - If mapping is mandatory for a field, for example, name, accountID, mention the name of the field in the keyField variable.             |
 |                            | - If the path is a nested path, separate it with a dot (.) and to specify the mapping for the path, use an index square bracket, for example, **“customproperty9”: “address.home[1].city”**. |
@@ -143,9 +143,9 @@ The following table describes all the attributes in ImportAccountEntJSON:
 | keyField                   | Use this variable to specify the column name in IGA where the entitlement identification ID is saved.                                   |
 | statusConfig               | Use this variable to map the status of entitlements in IGA with the status in the target application.                                    |
 | colsToPropsMap             | Use this variable to map entitlement objects in the target application with entitlement attributes in IGA, so that data from the target application is correctly saved. Review the following guidelines before mapping entitlement attributes: |
-|                            | - Represent the logical mapping in this format: <EntitlementsTableAttribute in EIC>::<TargetapplicationAttribute>#<Parsabledatatypeinsaviynt> |
+|                            | - Represent the logical mapping in this format: EntitlementsTableAttribute in EIC::TargetapplicationAttribute#Parsabledatatypeinsaviynt |
 |                            | - Represent the target application attributes in the same case and format as they are in the target application.                         |
-|                            | - If the field name in the target application contains a dot(.), use a ~dot# separator. For example, odata~dot#error.                    |
+|                            | - If the field name in the target application contains a dot(.), use a `~dot# separator. For example, odata`~dot#error.                    |
 |                            | - If the list objects are at the top of the hierarchy in the response JSON, keep the field empty.                                        |
 |                            | - Instead of specifying the column name in status field under colstoprop, map the status field to a customproperty and add this value in **STATUS_THRESHOLD_CONFIG**. |
 | Pagination                 | Use this variable to define the pagination parameters. For more information, see the Pagination feature in **ImportAccountEntJSON**.      |
