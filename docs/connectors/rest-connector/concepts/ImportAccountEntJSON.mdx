@@ -9,12 +9,12 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 
-## ImportAccountEntJSON
+# ImportAccountEntJSON
 
 The `ImportAccountEntJSON` is a parameter used in Saviynt's REST Connector to map attributes from a REST application to Saviynt Enterprise Identity Cloud (EIC) attributes for importing accounts and entitlements. It defines how data from the target application should be transformed and mapped into Saviynt during the import process.
 
 
-### Key Elements of ImportAccountEntJSON
+## Key Elements of ImportAccountEntJSON
 
 1. **colsToPropsMap**: This element is used to map columns from the target application's data to Saviynt attributes. It specifies how the incoming data fields should be mapped to the Saviynt schema.
 
@@ -28,7 +28,7 @@ The `ImportAccountEntJSON` is a parameter used in Saviynt's REST Connector to ma
    - **errorPath**: Path to extract error messages from the response.
    - **maxRefreshTryCount**: Maximum number of retries for refreshing tokens.
 
-## Example of ImportAccountEntJSON
+### Example of ImportAccountEntJSON
 
 Here is an example configuration for `ImportAccountEntJSON` that includes basic attribute mapping and error handling scenarios:
 
@@ -84,6 +84,132 @@ Here is an example configuration for `ImportAccountEntJSON` that includes basic 
 ```
 
 The following table describes all the attributes in ImportAccountEntJSON:
+
+### **Attribute : accountParams** 
+|  Variable        | Description                                                                                                                              |
+|----------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| Connection                 | Populates the connection type value specified in the acctAuth attribute while defining ConnectionJSON.                        |
+| processingType             | Always specify the processing type as.                                                                                                   |
+| successResponses           | Use this variable to specify the possible response messages on successfully importing accounts.                                          |
+| doNotChangeIfFailed        | Use this variable to instruct the connector to not delete or inactivate existing data on failure of the account API, the entType API, or the mapping API. When set to true, the connector does not delete or inactivate existing data. |
+| call                       | Use this variable to make an API call to the target application API for importing accounts. The connector allows you to specify multiple API calls to import accounts. You must specify each API call for importing accounts as a separate call. There is no fixed name, but the preferred naming convention is: call1, call2, call3. |
+| callOrder                  | Use this variable to specify the order to call APIs. Specify the value for the first call as zero. The lowest order value is called the first call. |
+| stageNumber                | Use this variable to specify the stage number for the API call. Specify the stage number as zero for the first API call.                 |
+| url                        | Use this variable to specify the URL of the target application.                                                                          |
+| httpMethod                 | Use this variable to specify the API call method for a successful API call such as GET, POST, PUT, DELETE and GETWITHBODY.               |
+| httpHeaders                | Use this variable to specify the API header parameter to send along with the API call.                                                  |
+| listField                  | Use this variable to specify the path of account objects in the response JSON or XML (received after making the http API call). If the path is a nested path, separate it with a dot (.), for example, “customproperty9”: “address.home”. |
+| keyField                   | Use this variable to specify the name of the field that uniquely defines whether the incoming account object is a new account or an existing account. |
+| statusConfig               | Use this variable to map the status of accounts in IGA with the status in the target application.                                        |
+| colsToPropsMap             | Use this variable to map account objects in the target application with account attributes in IGA, so that data from the target application is correctly saved. Review the following guidelines before mapping account attributes: |
+|                            | - Represent the logical mapping in this format: <AccountsTableAttribute in EIC>::<TargetapplicationAttribute>#<Parsabledatatypeinsaviynt>  |
+|                            | - Represent the target application attributes in the same case and format as they are in the target application.                         |
+|                            | - If the field name in the target application contains a dot(.), use a ~dot# separator. For example, odata~dot#error.                    |
+|                            | - If the list objects are at the top of the hierarchy in the response JSON, keep the field empty.                                        |
+|                            | - If mapping is mandatory for a field, for example, name, accountID, mention the name of the field in the keyField variable.             |
+|                            | - If the path is a nested path, separate it with a dot (.) and to specify the mapping for the path, use an index square bracket, for example, **“customproperty9”: “address.home[1].city”**. |
+| Pagination                 | Use this variable to define the pagination parameters. For more information, see the Pagination feature in **ImportAccountEntJSON**.      |
+| inputParams                | Set the **dependentCall** variable as , if you want to import the metadata of an account in successive calls. The value passed in the **URL** variable of an API is called for each account. The value specified in the **nextApiKeyField** variable is bound in the URL variable of the successive API calls. |
+|                            | For example, if you want to get the metadata of account based on account ID, specify the value for the nextApiKeyField variable as accountID. The account ID of the account in the previous call is bound in the URL variable of the successive API calls. |
+|                            | Set the dependentCall variable as false, if you do not want to mark successive calls to be dependent on the previous call.               |
+| disableDeletedAccounts     | This variable is no longer required after the introduction of the **statusAndThresholdConfig** variable. Set this to false in the current codebase. |
+| acctEntMappings            | Use this variable to specify the mapping between accounts and entitlements if there is no separate API call made for entitlements import. |
+|                            | - Use **importAsEntitlement** to instruct the connector to import entitlements. When set to true, the connector imports associated entitlements. The default value is false. |
+|                            | - Do not specify any value in listPath.                                                                                                  |
+|                            | - Do not specify any value in idPath.                                                                                                    |
+|                            | - Do not specify any value in keyField.                                                                                                  |
+|                            | - Use colsToPropsMap to map entitlement objects in the target application with entitlement attributes in IGA, so that data from the target application is correctly saved. Specify values in this variable, only if **importAsEntitlement** is set as true. |
+|                            | - You must specify the following entry in colsToPropsMap of one of the accounts calls: **"customproperty31": "STORE#ACC#ENT#MAPPINGINFO~#~char"** |
+|                            | - Use statusConfig to map the status of entitlements in IGA with the status in the target application.                                   |
+
+### **Attribute : entitlementParams**
+|  Variable        | Description                                                                                                                              |
+|----------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| Connection                 |  Populates the connection type value specified in the acctAuth attribute while defining **ConnectionJSON**.                    |
+| processingType             | Always specify the processing type as **SequentialAndIterative**.                                                                       |
+| successResponses           | Use this variable to specify the possible response messages on successfully importing entitlements.                                      |
+| doNotChangeIfFailed        | Use this variable to instruct the connector to not delete or inactivate existing data on failure of the account API, the entType API, or the mapping API. When set to true, the connector does not delete or inactivate existing data. |
+| entTypes                   | Use this variable to specify all entitlement types to be imported.                                                                       |
+| entTypeOrder               | Each entitlement type can comprise of multiple API calls. Specify order of the entitlement type as 0 for the first entitlement type, specify as 1 for the second entitlement type, and so on. |
+| entTypeLabels              | Use this variable to define the label for an EntitlementType property. For example, if you want to rename the customproperty3 to Tag specify "customproperty3": "Tags", under entTypeLabels. |
+| call                       | Use this variable to make an API call to the target application API for importing entitlements. The connector allows you to specify multiple API calls to import entitlements. You must specify each API call for importing entitlements as a separate call. There is no fixed name, but the preferred naming convention is: call1, call2, call3. |
+| callOrder                  | Use this variable to specify the order to call APIs. Specify the value for the first call as zero. The lowest order value is called the first call. |
+| stageNumber                | Use this variable to specify the stage number for the API call. Specify the stage number as zero for the first API call.                 |
+| inputParams                | Set the dependentCall variable as true, if you want to import the metadata of an entitlement in successive calls. The value passed in the URL variable of an API is called for each entitlement. The value specified in the nextApiKeyField variable is bound in the URL variable of the successive API calls. |
+|                            | For example, if you want to get the metadata of entitlement based on entitlement ID, specify the value for the **nextApiKeyField** variable as entitlementID. The entitlement ID of the entitlement in the previous call is bound in the URL variable of the successive API calls. |
+|                            | Set the dependentCall variable as false, if you do not want to mark successive calls to be dependent on the previous call.               |
+| http                       | Use this variable to specify the http details required to make the API call, for example, URL, http params, headers, content-type, ssl parameters. For most cases, Authorization header value is ${access_token} which is a place holder and it is populated from the accessToken attribute in ConnectionJSON. Specify httpContentType as application/x-www-form-urlencoded, application/json, application/xml. |
+| listField                  | Use this variable to specify the path of entitlement objects in the response JSON or XML (received after making the http API call). If the path is a nested path, separate it with a dot (.), for example, “customproperty9”: “address.home”. |
+| keyField                   | Use this variable to specify the column name in IGA where the entitlement identification ID is saved.                                   |
+| statusConfig               | Use this variable to map the status of entitlements in IGA with the status in the target application.                                    |
+| colsToPropsMap             | Use this variable to map entitlement objects in the target application with entitlement attributes in IGA, so that data from the target application is correctly saved. Review the following guidelines before mapping entitlement attributes: |
+|                            | - Represent the logical mapping in this format: <EntitlementsTableAttribute in EIC>::<TargetapplicationAttribute>#<Parsabledatatypeinsaviynt> |
+|                            | - Represent the target application attributes in the same case and format as they are in the target application.                         |
+|                            | - If the field name in the target application contains a dot(.), use a ~dot# separator. For example, odata~dot#error.                    |
+|                            | - If the list objects are at the top of the hierarchy in the response JSON, keep the field empty.                                        |
+|                            | - Instead of specifying the column name in status field under colstoprop, map the status field to a customproperty and add this value in **STATUS_THRESHOLD_CONFIG**. |
+| Pagination                 | Use this variable to define the pagination parameters. For more information, see the Pagination feature in **ImportAccountEntJSON**.      |
+| disableDeletedEntitlements | This variable is no longer required after the introduction of the **statusAndThresholdConfig** variable. Set this to false in the current codebase. |
+| makeProcessingStatus       | Use this variable when there are multiple API calls involved for importing one entitlement type. In most cases, there is an API that gets all the entitlement objects of that type and other APIs might obtain additional data for each entitlement object. In this case, the status of the entitlement should be in process till all the details of that entitlement object is imported. Hence, makeProcessingStatus can be set to true for the first API call and false for the successive API call. The default value is false. |
+
+### **Attribute : acctEntParams**
+|  Variable        | Description                                                                                                                              |
+|----------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
+|  createUsers             |  Use this variable to instruct the connector to create users while importing accounts. When set to true, users are created during account import. The default value is false. |
+|                            | **adminName** : If createUsers is true, new users are imported and the manager is set as an admin as default. Select the user name if you want to add the user manager other than admin. |
+| Connection                 | Populates the connection type value specified in the acctAuth attribute while defining **ConnectionJSON**.                              |
+| statusAndThresholdConfig   | Use this variable, if you are not specifying any value in the **STATUS_THRESHOLD_CONFIG** connection parameter.                         |
+| statusColumn               | Specify the account attribute mapped with the status of the account. Use this variable, if you are not specifying any value in the **statusColumn** attribute of the **STATUS_THRESHOLD_CONFIG** connection parameter. |
+| processingType             | Always specify the processing type as **SequentialAndIterative**.                                                                       |
+| successResponses           | Use this variable to specify the possible response messages on successfully importing entitlements.                                      |
+| entTypes                   | Use this variable to specify all entitlement types to be imported.                                                                       |
+| call                       | Use this variable to make an API call to the target application API for importing entitlements. The connector allows you to specify multiple API calls to import entitlements. You must specify each API call for importing entitlements as a separate call. There is no fixed name, but the preferred naming convention is: call1, call2, call3. |
+| callOrder                  | Use this variable to specify the order to call APIs. Specify the value for the first call as zero. The lowest order value is called the first call. |
+| stageNumber                | Use this variable to specify the stage number for the API call. Specify the stage number as zero for the first API call.                 |
+| http                       | Use this variable to specify the http details required to make the API call, for example, URL, http params, headers, content-type, ssl parameters. For most cases, Authorization header value is ${access_token} which is a place holder and it is populated from the accessToken attribute in ConnectionJSON. Specify httpContentType as application/x-www-form-urlencoded, application/json, application/xml. |
+| listField                  | Use this variable to specify the path of entitlement objects in the response JSON or XML (received after making the http API call). If the path is a nested path, separate it with a dot (.), for example, “customproperty9”: “address.home”. |
+| acctIdPath                 | Use this variable to define the path of the account ID in the response JSON.                                                            |
+| entIdPath                  | Use this variable to define the path of the entitlement ID in the response JSON.                                                       |
+| ownerIdPath                | Use this variable to define the path of the owner of the entitlement in the response JSON.                                              |
+| acctKeyField               | Use this variable to define the key field that uniquely identifies the account.                                                         |
+| entKeyField                | Use this variable to define the key field that uniquely identifies the entitlement value.                                               |
+| ownerKeyField              | Use this variable to define the key field that uniquely identifies the owner of the entitlement.                                        |
+
+### **Attribute : entOwnerParams**
+|  Variable        | Description                                                                                                                              |
+|----------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| Connection                 |  Populates the connection type value specified in the acctAuth attribute while defining **ConnectionJSON**.                    |
+| successResponses           | Use this variable to specify the possible response messages on successfully importing entitlement owner.                                |
+| doNotChangeIfFailed        | Use this variable to instruct the connector to not delete or inactivate existing data on failure of the API. When set to true, the connector does not delete or inactivate existing data. |
+| entTypes                   | Use this variable to specify all entitlement types to be imported.                                                                       |
+| callOrder                  | Use this variable to specify the order to call APIs. Specify the value for the first call as zero. The lowest order value is called the first call. |
+| stageNumber                | Use this variable to specify the stage number for the API call. Specify the stage number as zero for the first API call.                 |
+| ownerKeyField              | Use this variable to define the key field that uniquely identifies the owner of the entitlement.                                        |
+| http                       | Use this variable to specify the http details required to make the API call, for example, URL, http params, headers, content-type, ssl parameters. For most cases, Authorization header value is ${access_token} which is a place holder and it is populated from the accessToken attribute in ConnectionJSON. Specify httpContentType as application/x-www-form-urlencoded, application/json, application/xml. |
+| listField                  | Use this variable to specify the path of entitlement objects in the response JSON or XML (received after making the http API call). If the path is a nested path, separate it with a dot (.), for example, “customproperty9”: “address.home”. |
+| acctIdPath                 | Use this variable to define the path of the account ID in the response JSON.                                                            |
+| entIdPath                  | Use this variable to define the path of the entitlement ID in the response JSON.                                                       |
+| ownerIdPath                | Use this variable to define the path of the owner of the entitlement in the response JSON.                                              |
+| acctKeyField               | Use this variable to define the key field that uniquely identifies the account.                                                         |
+| entKeyField                | Use this variable to define the key field that uniquely identifies the entitlement value.                                               |
+
+### **Attribute : entMappingParams**
+|  Variable        | Description                                                                                                                              |
+|----------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| Connection                 |  Populates the connection type value specified in the acctAuth attribute while defining **ConnectionJSON**.                    |
+| callOrder                  | Use this variable to specify the order to call APIs. Specify the value for the first call as zero. The lowest order value is called the first call. |
+| stageNumber                | Use this variable to specify the stage number for the API call. Specify the stage number as zero for the first API call.                 |
+| http                       | Use this variable to specify the http details required to make the API call, for example, URL, http params, headers, content-type, ssl parameters. For most cases, Authorization header value is ${access_token} which is a place holder and it is populated from the accessToken attribute in ConnectionJSON. Specify httpContentType as application/x-www-form-urlencoded, application/json, application/xml. |
+| listField                  | Use this variable to specify the path of entitlement objects in the response JSON or XML (received after making the http API call). If the path is a nested path, separate it with a dot (.), for example, “customproperty9”: “address.home”. |
+| ent1IdPath                 | Use this variable to define the path of the parent entitlement ID in the response JSON.                                                 |
+| ent2IdPath                 | Use this variable to define the path of the child entitlement ID in the response JSON.                                                  |
+| ent1KeyField               | Use this variable to define the key field that uniquely identifies the entitlement value of the parent entitlement.                     |
+| ent2KeyField               | Use this variable to define the key field that uniquely identifies the entitlement value of the child entitlement.                      |
+| targetEntType              | Use this variable to reference the name of child entitlement type for mapping.                                                         |
+| mappingTypes               | Use this variable to define the type of mapping to be used. The possible values are:                                                    |
+|                            | - ENTMAP - enables bi-directional mapping through entitlementmap.                                                                      |
+|                            | - ENT2 - makes the target entitlement type as a child of current entitlement.                                                           |
+
 
 
 ### Sample ConnectionJSON
