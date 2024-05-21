@@ -137,8 +137,218 @@ The ConnectionJSON configuration will look like this -
 This `ConnectionJSON` sets up the necessary parameters and structures to securely and effectively communicate with Zscaler SCIM endpoint.
 
 
-### Step 2 - ImportAccountJSON
+### Step 2 - ImportAccountEntJSON
 
 Refer to [Zscaler SCIM Examples](https://help.zscaler.com/zia/scim-api-examples) for detailed Zscaler APIs for User Management
+
+~~~
+{
+   "accountParams":{
+      "processingType":"SequentialAndIterative",
+      "connection":"ZscalerZia",
+      "createUsers":false,
+      "statusAndThresholdConfig":{
+         "accountThresholdValue": 200000,
+         "accountsNotInImportAction":"Suspend"
+      },
+      "successResponses":{
+         "statusCode":[
+            200,
+            201,
+            202,
+            203,
+            204,
+            205
+         ]
+      },
+      "call":{
+         "call1":{
+            "http":{
+               "url":"https://scim.zscalertwo.net/51427645/318848/scim/Users",
+               "httpContentType":"application/json",
+               "httpMethod":"GET",
+               "httpHeaders":{
+                  "Authorization":"${access_token}",
+                  "Accept":"application/json"
+               }
+            },
+            "listField":"Resources",
+            "keyField":"accountID",
+            "colsToPropsMap":{
+               "accountID":"id~#~char",
+               "name":"externalId~#~char",
+               "displayName":"displayName~#~char",
+               "customproperty1":"id~#~char",
+               "customproperty2":"externalId~#~char",
+               "customproperty3":"userName~#~char",
+               "customproperty4":"active~#~char"
+            },
+            "pagination":{
+               "nextUrl":{
+                  "nextUrlPath":"${response?.objectList?.size()>0?'https://scim.zscalertwo.net/51427645/318848/scim/Users?startIndex='+Math.addExact(response.completeResponseMap.itemsPerPage,response.completeResponseMap.startIndex)+'&count='+response.completeResponseMap.itemsPerPage:null}"
+               }
+            }
+         }
+      }
+   },
+   "entitlementParams":{
+      "processingType":"SequentialAndIterative",
+      "successResponses":{
+         "statusCode":[
+            200,
+            201,
+            202,
+            203,
+            204,
+            205
+         ]
+      },
+      "entTypes":{
+         "Entitlement":{
+            "call":{
+               "call1":{
+                  "connection":"ZscalerZia",
+                  "http":{
+                     "url":"https://scim.zscalertwo.net/51427645/318848/scim/Groups",
+                     "httpContentType":"application/json",
+                     "httpMethod":"GET",
+                     "httpHeaders":{
+                        "Authorization":"${access_token}",
+                        "Accept":"application/json"
+                     }
+                  },
+                  "listField":"Resources",
+                  "keyField":"entitlementID",
+                  "colsToPropsMap":{
+                     "entitlementID":"id~#~char",
+                     "entitlement_value":"displayName~#~char",
+                     "customproperty1":"id~#~char"
+                  },
+                  "pagination":{
+                     "nextUrl":{
+                        "nextUrlPath":"${response?.objectList?.size()>0?'https://scim.zscalertwo.net/51427645/318848/scim/Groups?startIndex='+Math.addExact(response.completeResponseMap.itemsPerPage,response.completeResponseMap.startIndex)+'&count='+response.completeResponseMap.itemsPerPage:null}"
+                     }
+                  }
+               }
+            }
+         }
+      }
+   },
+   "acctEntParams":{
+      "connection":"ZscalerZia",
+      "entTypes":{
+         "Entitlement":{
+            "call":{
+               "call1":{
+                  "callOrder":"0",
+                  "stageNumber":"0",
+                  "processingType":"httpEntToAcct",
+                  "http":{
+                     "httpHeaders":{
+                        "Authorization":"${access_token}",
+                        "Accept":"application/json"
+                     },
+                     "url":"https://scim.zscalertwo.net/51427645/318848/scim/Groups/${id}",
+                     "httpContentType":"application/json",
+                     "httpMethod":"GET"
+                  },
+                  "entKeyField":"entitlementID",
+                  "acctIdPath":"value",
+                  "listField":"members",
+                  "idPath":"value",
+                  "acctKeyField":"accountID"
+               }
+            }
+         }
+      }
+   }
+}
+~~~
+
+#### Zscaler JSON Configuration for Importing Accounts and Entitlements
+
+This JSON configuration is used to import accounts and entitlements from Zscaler into the Saviynt Enterprise Identity Cloud (EIC).
+
+##### accountParams
+
+- `processingType`: Specifies the processing method for account data. Here, it's set to "SequentialAndIterative".
+- `connection`: The name of the connection to the target system, in this case, "ZscalerZia".
+- `createUsers`: Indicates whether new users should be created during the import process. Set to `false` here.
+- `statusAndThresholdConfig`: Configures thresholds and actions for account import.
+  - `accountThresholdValue`: Sets a threshold for account processing.
+  - `accountsNotInImportAction`: Action to take for accounts not included in the import, such as "Suspend".
+- `successResponses`: Lists acceptable HTTP status codes that indicate a successful operation.
+
+###### HTTP Call Configuration (`call` > `call1`)
+
+- `http`: Configures the HTTP request details.
+  - `url`: Endpoint URL for fetching account data.
+  - `httpContentType`: Specifies the content type of the HTTP request, set to "application/json".
+  - `httpMethod`: HTTP method to use, here it is "GET".
+  - `httpHeaders`: Defines HTTP headers, including authorization and content type.
+
+- `listField`: Specifies the field in the response that contains the list of resources, here "Resources".
+- `keyField`: Key field in the response that uniquely identifies each account, here "accountID".
+- `colsToPropsMap`: Maps columns from the response to properties in Saviynt.
+
+###### Pagination
+
+- `pagination`: Handles paginated responses.
+  - `nextUrl`: Defines the path for the next set of results.
+
+##### entitlementParams
+
+- `processingType`: Specifies the processing method for entitlement data. Here, it's set to "SequentialAndIterative".
+- `successResponses`: Lists acceptable HTTP status codes that indicate a successful operation.
+- `entTypes`: Defines entitlement types to be imported.
+
+###### HTTP Call Configuration (`entTypes` > `Entitlement` > `call` > `call1`)
+
+- `connection`: Connection name.
+- `http`: Configures the HTTP request details.
+  - `url`: Endpoint URL for fetching entitlement data.
+  - `httpContentType`: Content type of the HTTP request.
+  - `httpMethod`: HTTP method to use.
+  - `httpHeaders`: HTTP headers.
+
+- `listField`: Specifies the field in the response that contains the list of resources, here "Resources".
+- `keyField`: Key field in the response that uniquely identifies each entitlement, here "entitlementID".
+- `colsToPropsMap`: Maps columns from the response to properties in Saviynt.
+
+###### Pagination
+
+- `pagination`: Handles paginated responses.
+  - `nextUrl`: Defines the path for the next set of results.
+
+##### acctEntParams
+
+###### Parameters
+
+- `connection`: The name of the connection to the target system, in this case, "ZscalerZia".
+- `entTypes`: Defines entitlement types to be associated with accounts.
+
+###### HTTP Call Configuration (`entTypes` > `Entitlement` > `call` > `call1`)
+
+- `callOrder`: Specifies the order of the call.
+- `stageNumber`: Indicates the stage number in the process.
+- `processingType`: Processing type for associating entitlements with accounts, here it is "httpEntToAcct".
+- `http`: Configures the HTTP request details.
+  - `httpHeaders`: HTTP headers.
+  - `url`: Endpoint URL for fetching entitlement details.
+  - `httpContentType`: Content type of the HTTP request.
+  - `httpMethod`: HTTP method to use.
+
+- `entKeyField`: Key field for the entitlement in the response.
+- `acctIdPath`: Path to the account ID in the response.
+- `listField`: Field containing the list of members.
+- `idPath`: Path to the ID in the list.
+- `acctKeyField`: Key field for the account in the response.
+
+**Summary**
+
+This JSON configuration is used to import accounts and entitlements from Zscaler into the Saviynt EIC. It defines how to connect to the Zscaler API, how to handle responses, and how to map data from Zscaler to Saviynt. It also includes error handling and pagination to ensure robust and complete data import.
+
+This comprehensive setup allows for effective integration between Zscaler and Saviynt, facilitating automated identity management and access governance.
+
 
 
