@@ -553,11 +553,12 @@ s://<URL>/api/now/table/sys_user?sysparm_limit=2000&sysparm_offset=148000;rel="p
 
 The logic to iterate into the next page using the URL available in the response headers is as follows:
 1. Split the link based on comma and count the number of links in the response headers.
-
 `<https://<URL>/api/now/table/sys_user?sysparm_limit=2000&sysparm_offset=0;rel="first", --(0)>`
 `<https://<URL>/api/now/table/sys_user?sysparm_limit=2000&sysparm_offset=2000;rel="next", --(1)>`
 `<https://<URL>/api/now/table/sys_user?sysparm_limit=2000&sysparm_offset=150000;rel="last" —-(2)>`
+
 2. Find the position of the next URL in the link. In the above link the position of next URL is 1. Similarly find the position of the next URL in page two and the last page.
+
 3. While constructing the pagination block, utilize the if-else condition to check the size of the links in the headers and use the replace function to remove <, > and >;rel="next\ and replace it with null to get a valid URL as shown below.
 `https://<URL>/api/now/table/sys_user?sysparm_limit=2000&sysparm_offset=2000`
 
