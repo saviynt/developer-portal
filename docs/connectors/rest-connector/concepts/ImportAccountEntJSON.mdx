@@ -524,6 +524,79 @@ The `nextUrlPath` dynamically determines the URL of the next page:
    - If `next_page` is `null`, it sets `nextUrlPath` to `null`, indicating there is no next page.
    - If `next_page` is not `null`, it sets `nextUrlPath` to the value of `next_page`, providing the URL for the next page.
 
+##### Uses headers to evaluate the next URL
+
+Response of page one links:
+
+```
+<https://<URL>/api/now/table/sys_user?sysparm_limit=2000&sysparm_offset=0;rel="first",http
+s://<URL>/api/now/table/sys_user?sysparm_limit=2000&sysparm_offset=2000;rel="next",https:/
+/<URL>/api/now/table/sys_user?sysparm_limit=2000&sysparm_offset=150000;rel="last">
+```
+
+Response of page two links:
+
+```
+<https://<URL>/api/now/table/sys_user?sysparm_limit=2000&sysparm_offset=0;rel="first",http
+s://<URL>/api/now/table/sys_user?sysparm_limit=2000&sysparm_offset=0;rel="prev",https://<U
+RL>/api/now/table/sys_user?sysparm_limit=2000&sysparm_offset=4000;rel="next",https://<URL>
+/api/now/table/sys_user?sysparm_limit=2000&sysparm_offset=150000;rel="last">
+```
+
+Response from the last call links:
+
+```
+<https://<URL>/api/now/table/sys_user?sysparm_limit=2000&sysparm_offset=0;rel="first",http
+s://<URL>/api/now/table/sys_user?sysparm_limit=2000&sysparm_offset=148000;rel="prev",https
+://<URL>/api/now/table/sys_user?sysparm_limit=2000&sysparm_offset=150000;rel="last">
+```
+
+The logic to iterate into the next page using the URL available in the response headers is as follows:
+1. Split the link based on comma and count the number of links in the response headers.
+
+`<https://<URL>/api/now/table/sys_user?sysparm_limit=2000&sysparm_offset=0;rel="first", --(0)>`
+`<https://<URL>/api/now/table/sys_user?sysparm_limit=2000&sysparm_offset=2000;rel="next", --(1)>`
+`<https://<URL>/api/now/table/sys_user?sysparm_limit=2000&sysparm_offset=150000;rel="last" —-(2)>`
+2. Find the position of the next URL in the link. In the above link the position of next URL is 1. Similarly find the position of the next URL in page two and the last page.
+3. While constructing the pagination block, utilize the if-else condition to check the size of the links in the headers and use the replace function to remove <, > and >;rel="next\ and replace it with null to get a valid URL as shown below.
+`https://<URL>/api/now/table/sys_user?sysparm_limit=2000&sysparm_offset=2000`
+
+>
+> The first and last page might have three links as shown in the above header responses. To avoid the error in the last page, mention the function “contains('next')” in the condition to consider the link only if it contains the nextUrl attribute else it stops the pagination.
+
+```
+"pagination": {
+    "nextUrl": {
+        "nextUrlPath": "${headers?.Link?.split(',').size()==4?headers.Link.split(',')[2].replace('<', '').replace('>;rel=\"next\"','').trim():(headers?.Link?.split(',')?.size()==3 && headers?.Link.contains('next'))?headers.Link.split(',')[1].replace('<', '').
+```
+
+**Explanation of the Expression**
+- `${headers?.Link?.split(',')}`
+   - `headers` is expected to contain the HTTP headers returned in the response.
+   - `Link` is the specific header containing pagination URLs.
+   - `split(',')` splits the `Link` header value into an array of strings based on commas.
+- `.size() == 4`
+   - This checks if the `Link` header contains four parts when split by commas. This typically means there are four different pagination URLs (first, prev, next, last).
+- `headers.Link.split(',')[2]`
+   - If there are four parts, the third part ([2] in a zero-indexed array) is assumed to be the "next" URL.
+- `.replace('<', '').replace('>;rel=\"next\"','').trim()`
+   - These methods clean up the URL by removing the < and >;rel="next" parts and trimming any whitespace.
+- `headers?.Link?.split(',')?.size()==3 && headers?.Link.contains('next')`
+   - This checks if the `Link` header contains three parts and includes a "next" URL. This is a fallback if there are only three parts in the `Link` header.
+- `headers.Link.split(',')[1]`
+   - If the above condition is true, the second part (`[1]` in a zero-indexed array) is assumed to be the "next" URL.
+- `replace('<', '').replace('>;rel=\"next\"','').trim()`
+   - These methods clean up the URL by removing the `<` and `>;rel="next"` parts and trimming any whitespace.
+- `: null`
+   - If none of the conditions are met, `null` is returned, indicating there is no next page.
+
+**Putting It All Together**
+
+The `nextUrlPath` dynamically determines the URL of the next page:
+   - If the `Link` header has four parts, it extracts the third part as the "next" URL.
+   - If the `Link` header has three parts and includes a "next" URL, it extracts the second part as the "next" URL.
+   - If neither condition is met, it returns `null`, indicating there is no next page.
+
 #### SSL Parameter
 Installing SSL certificates is sufficient to make https API calls, however, if target applications expect customizations such as the TLS version, you can pass SSL parameters while making API calls.
 
