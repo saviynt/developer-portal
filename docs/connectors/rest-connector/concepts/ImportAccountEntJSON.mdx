@@ -161,7 +161,7 @@ The following tables describes all the attributes in ImportAccountEntJSON:
 ### Support for Multiple API Call
 Supports calling multiple dependent APIs for the same parent API call to import extended properties from the target application.
 
-### Sample1  
+#### Multiple API Calls in accountParams - Sample
 Add multiple calls in the accountParams attribute. In this example, the first API call fetches a list of users, and the second call fetches details for each user using data from the first call.  This example uses the `${accountName}` binding variable to iterate the accounts imported as part of call1. Set the **dependentCall** variable under **inputParams** to true when the call2 is dependent on call1. 
 
 ```
@@ -267,7 +267,7 @@ This section deals with handling inactive accounts and account thresholds.
   - **true**: Deletes account entitlements for accounts that are still active.
 
 
-#### API Calls (`call`)**
+#### API Calls (`call`)
 This section defines how to call external APIs to fetch account data.
 
 - **Call 1 (`call1`)**:
@@ -317,165 +317,213 @@ Error handling is not explicitly shown in the provided JSON, but here’s how it
 - **Max Refresh Try Count (`maxRefreshTryCount`)**: Maximum number of retries for refreshing the token.
 
 
-#### Sample 2
-This sample ConnectionJSON describes when the access token is available as part of response headers
-
-This `ConnectionJSON` outlines an OAuth2 authentication configuration but requires several details to be fully operational. It is crucial to fill in the empty fields with accurate data according to the specific API requirements and security practices. This configuration is essential for maintaining secure access to APIs that require OAuth2 authentication.
-
-JSON
+#### Multiple API calls in the entitlementParams
+This example uses the ${entitlementID} binding variable to iterate the entitlementIDs imported as part of call1. Set the **entitlementname** variable under **inputParams** to the name of entitlement type when the call2 is dependent on call1.
 
 ```
 {
-  "authentications": {
-    "acctAuth": {
-      "authType": "oauth2",
-      "url": "",
-      "httpMethod": "POST",
-      "httpParams": {
-      },
-      "httpHeaders": {
-        "Content-Type": "application/x-www-form-urlencoded"
-      },
-      "httpContentType": "application/x-www-form-urlencoded",
-      "expiryError": "ExpiredAuthenticationToken",
-      "authError": [
-        "USER_AUTHENTICATION_FAILED"
-      ],
-      "timeOutError": "error",
-      "errorPath": "error",
-      "maxRefreshTryCount": 3,
-      "tokenResponsePath": "#HEADERS#Set-Cookie",
-      "tokenType": "",
-      "authHeaderName": "Cookie",
-      "retryFailureStatusCode": [
-      ],
-      "accessToken": "sdfghjk"
+  "accountParams": {},
+  "entitlementParams": {
+    "connection": "acctAuth",
+    "processingType": "SequentialAndIterative",
+    "entTypes": {
+      "zone": {
+        "entTypeOrder": 0,
+        "call": {
+          "call1": {
+            "callOrder": 0,
+            "stageNumber": 0,
+            "http": {
+              "url": "https://*****/Group",
+              "httpHeaders": {
+                "Authorization": "${access_token}",
+                "Accept": "text/json"
+               },
+              "httpContentType": "application/json",
+              "httpMethod": "GET"
+            },
+            "listField": "Rsp.Result",
+            "keyField": "entitlementID",
+            "colsToPropsMap": {
+              "entitlementID": "Guid~#~char",
+              "entitlement_value": "Guid~#~char"
+            },
+            "disableDeletedEntitlements": true
+          },
+          "call2": {
+            "connection": "acctAuth",
+            "callOrder": 1,
+            "stageNumber": 3,
+            "http": {
+              "url": "https://****/groupID/${entitlementID}",
+              "httpHeaders": {
+                "Authorization": "${access_token}",
+                "Accept": "text/json"
+              },
+              "httpContentType": "application/json",
+              "httpMethod": "GET"
+            },
+            "inputParams": {
+              "entitlementname": "zone"
+            },
+            "listField": "",
+            "keyField": "entitlementID",
+            "colsToPropsMap": {
+              "entitlementID": "Rsp.Result.Guid~#~char",
+              "entitlement_value": "Rsp.Result.Guid~#~char",
+              "customproperty1": "Rsp.Result.AccessPermissionLevel~#~char",
+              "customproperty2": "Rsp.Result.Name~#~char",
+              "customproperty3": "Rsp.Result.OwnerRole~#~char"
+            },
+            "disableDeletedEntitlements": true
+          }
+        }
+      }
     }
-  }
-}
+  },
+  "acctEntParams": {
+   }
+ }
 ```
 
-> Note
-> #HEADERS# is mandatory, if access token is present in the response headers.
+Here's the breakdown of this JSON in simple terms
 
-**Authentication Configuration Details**
+This JSON configuration is used to call multiple APIs to fetch and manage entitlement data from an external system into Saviynt. In simple terms, this JSON configuration helps Saviynt fetch and manage entitlement data from another system. It defines how to connect to the system, make API calls to fetch data, and handle different types of entitlement data.
 
-- **Authentication Type (`authType`)**: `oauth2`
-  - **Description**: Specifies that OAuth 2.0 protocol is used for authentication. This protocol is primarily used for securing API requests by validating credentials and issuing tokens.
+**Detailed Explanation**
 
-- **URL (`url`)**:
-  - **Description**: The endpoint URL where the OAuth2 authentication request is sent. Currently, this is empty and needs to be specified with the actual API endpoint.
+#### Entitlement Parameters
 
-- **HTTP Method (`httpMethod`)**: `POST`
-  - **Description**: The method used to send the request to the authentication URL. POST is typically used to securely transmit credential data to the server.
+- **Connection (`connection`)**:
+  - **"acctAuth"**: This is a placeholder for the actual connection name. This connection contains all the details needed to communicate with the external system.
+- **Processing Type (`processingType`)**:
+  - **"SequentialAndIterative"**: Specifies that the processing should be done one after another (sequential) and will repeat the process (iterative).
 
-- **HTTP Parameters (`httpParams`)**:
-  - **Description**: This should include any necessary parameters required for the authentication request. Currently, this object is empty and should be configured based on specific OAuth2 requirements.
+#### Entitlement Types (`entTypes`)
 
-- **HTTP Headers (`httpHeaders`)**:
-  - **Content-Type**: "application/x-www-form-urlencoded"
-    - **Description**: Specifies the media type of the request body, indicating that the form data is URL-encoded.
+- **Zone (`zone`)**:
+  - **Entitlement Type Order (`entTypeOrder`)**: **0** (first type to be processed)
 
-- **HTTP Content Type (`httpContentType`)**: `application/x-www-form-urlencoded`
-  - **Description**: Reinforces that the body of the HTTP request is URL-encoded.
+#### API Calls (`call`)
 
-- **Expiry Error (`expiryError`)**: "ExpiredAuthenticationToken"
-  - **Description**: Defines the error message that is expected when the authentication token has expired, prompting a token refresh or re-authentication.
+This section defines how to call external APIs to fetch entitlement data. Each call has its own settings for the request.
 
-- **Authentication Error (`authError`)**:
-  - **List**:
-    - "USER_AUTHENTICATION_FAILED"
-  - **Description**: Specifies the error messages that can be encountered if the authentication process fails. This helps in diagnosing authentication issues.
+-  **Call 1 (`call1`)**
+   - **Order and Stage**:
+     - **callOrder**: 0 (first call)
+     - **stageNumber**: 0 (first stage)
+   - **HTTP Details**:
+     - **URL**: The endpoint to fetch entitlement data from the external system.
+     - **HTTP Headers**:
+       - **Authorization**: Uses a token (`${access_token}`) for authentication.
+       - **Accept**: **"text/json"** (specifies the response format)
+     - **Content Type**: **"application/json"** (format of the request)
+     - **Method**: **GET** (fetch data)
+   - **List Field (`listField`)**: **"Rsp.Result"** (the field in the response that contains the entitlement data)
+   - **Key Field (`keyField`)**: **"entitlementID"** (unique identifier for entitlements)
+   - **Columns to Properties Map (`colsToPropsMap`)**:
+     - **"entitlementID"**: Mapped to **"Guid~#~char"**
+     - **"entitlement_value"**: Mapped to **"Guid~#~char"**
+   - **Disable Deleted Entitlements (`disableDeletedEntitlements`)**: **true** (disable entitlements that are marked as deleted)
 
-- **Time Out Error (`timeOutError`)**: "error"
-  - **Description**: Specifies the error message when the authentication request times out. This needs more specific detailing to reflect actual timeout errors.
+- **Call 2 (`call2`)**
+   - **Connection**: Uses the same connection (`"acctAuth"`)
+   - **Order and Stage**:
+     - **callOrder**: 1 (second call)
+     - **stageNumber**: 3 (third stage)
+   - **HTTP Details**:
+     - **URL**: Fetches detailed entitlement information using `entitlementID`.
+     - **HTTP Headers**:
+       - **Authorization**: Uses a token (`${access_token}`) for authentication.
+       - **Accept**: **"text/json"** (specifies the response format)
+     - **Content Type**: **"application/json"** (format of the request)
+     - **Method**: **GET** (fetch data)
+   - **Input Parameters (`inputParams`)**:
+     - **"entitlementname"**: **"zone"** (the name of the entitlement type)
+   - **List Field**: Empty (not used here)
+   - **Key Field**: **"entitlementID"**
+   - **Columns to Properties Map (`colsToPropsMap`)**:
+     - **"entitlementID"**: Mapped to **"Rsp.Result.Guid~#~char"**
+     - **"entitlement_value"**: Mapped to **"Rsp.Result.Guid~#~char"**
+     - **"customproperty1"**: Mapped to **"Rsp.Result.AccessPermissionLevel~#~char"**
+     - **"customproperty2"**: Mapped to **"Rsp.Result.Name~#~char"**
+     - **"customproperty3"**: Mapped to **"Rsp.Result.OwnerRole~#~char"**
+   - **Disable Deleted Entitlements (`disableDeletedEntitlements`)**: **true** (disable entitlements that are marked as deleted)
 
-- **Error Path (`errorPath`)**: "error"
-  - **Description**: This is the JSON path that points to where in the response body the error details are provided when an authentication error occurs.
 
-- **Maximum Refresh Try Count (`maxRefreshTryCount`)**: 3
-  - **Description**: Indicates the maximum number of attempts the system should make to refresh the authentication token before giving up and returning an error.
+### Pagination
+Support for Pagination : Provides the logic to handle the pagination of objects returned from the target application. Various types of pagination are supported to import all accounts and entitlements.
 
-- **Token Response Path (`tokenResponsePath`)**: "#HEADERS#Set-Cookie"
-  - **Description**: Specifies where in the API response the authentication token can be found. In this case, it's indicated that the token is stored in the response headers under 'Set-Cookie'.
+#### NextUrl Type
+##### Uses Response Body to evaluate the next url
 
-- **Token Type (`tokenType`)**:
-  - **Description**: This should specify the type of token (e.g., Bearer, Basic). Currently, it is empty and needs to be defined based on the OAuth2 setup.
-
-- **Authentication Header Name (`authHeaderName`)**: "Cookie"
-  - **Description**: Specifies the HTTP header name where the token is expected. It is set to "Cookie", which might be used for cookie-based session management.
-
-- **Retry Failure Status Code (`retryFailureStatusCode`)**:
-  - **Description**: An array that should list the HTTP status codes that, when encountered, should trigger a retry of the API call. It is currently empty and should include status codes like 401 or 503 based on the API's error handling practices.
-
-- **Access Token (`accessToken`)**: "sdfghjk"
-  - **Description**: This is a placeholder for the initial access token, which might be provided for setup or testing. This should be replaced with an actual token obtained through the authentication process.
-
-
-### Common Features
-
-#### Multiple Authentications 
-Supports multiple authentications where more than one authentication mechanism is required. For example, for Azure AD, there are graph.windows.net APIs and [http://graph.microsoft.com](http://graph.microsoft.com) APIs and each API has a different authentication mechanism and hence two authentication constructs are used in ConnectionJSON.
-
-Example:
-
-``` JSON
+Example - Next Page url in response.
+```
 {
-  "authentications": {
-    "userAuth": {
-      "authType": "oauth2",
-      "url": "https://<domain name>/<<TenantID>>/oauth2/token",
-      "httpMethod": "POST",
-      "httpParams": {
-        "grant_type": "client_credentials",
-        "client_secret": "<<ClientSecret>>",
-        "client_id": "<<ClientID>>",
-        "resource": "https://graph.microsoft.com/"
-      },
-      "httpHeaders": {
-        "contentType": "application/x-www-form-urlencoded"
-      },
-      "httpContentType": "application/x-www-form-urlencoded",
-      "expiryError": "ExpiredAuthenticationToken",
-      "authError": [
-        "InvalidAuthenticationToken"
-      ],
-      "timeOutError": "Read timed out",
-      "errorPath": "error.code",
-      "maxRefreshTryCount": 5,
-      "tokenResponsePath": "access_token",
-      "tokenType": "Bearer",
-      "accessToken": "Bearer abc"
-    },
-    "entAuth": {
-      "authType": "oauth2",
-      "url": "https://<domain name>/<<TenantID>>/oauth2/token",
-      "httpMethod": "POST",
-      "httpParams": {
-        "grant_type": "client_credentials",
-        "client_secret": "<<ClientSecret>>",
-        "client_id": "<<ClientID>>",
-        "resource": "https://graph.windows.net/"
-      },
-      "httpHeaders": {
-        "contentType": "application/x-www-form-urlencoded"
-      },
-      "httpContentType": "application/x-www-form-urlencoded",
-      "expiryError": "ExpiredAuthenticationToken",
-      "authError": [
-        "InvalidAuthenticationToken",
-        "Authentication_MissingOrMalformed"
-      ],
-      "timeOutError": "Read timed out",
-      "errorPath": "odata~dot#error.code",
-      "maxRefreshTryCount": 3,
-      "tokenResponsePath": "access_token",
-      "tokenType": "Bearer",
-      "accessToken": "Bearer abcde"
-    }
-  }
+    "next_page": "https://saviyntxxx.zendesk.com/api/v2/users.json?page=2&per_page=2",
+    "previous_page": null,
+    "count": 7
+}
+
+```
+Example - No pages to iterate
+```
+{
+    "next_page": null,
+    "previous_page": null,
+    "count": 7
 }
 ```
+
+The logic to iterate into the next page using the URL available in the response body is as follows:
+
+1. Analyze the complete response for the attribute containing the next page URL.
+2. Use the attribute in the if-else condition as shown in the example below.
+3. Use the value in the response to paginate into the next pages if the **next_page** attribute contains a value, else the pagination stops.
+
+```
+"pagination": {
+    "nextUrl": {
+        "nextUrlPath": "${response?.completeResponseMap?.next_page==null?null:response.completeResponseMap.next_page}"
+    }
+}
+
+```
+
+>
+> Specify the response.completeResponseMap attribute before the traversing path pagination attribute in the response.
+
+**Breakdown and Explanation**
+
+- `pagination`: This is the root object that contains information related to pagination. It helps in navigating through paginated API responses.
+- `nextUrl`: This object contains the URL of the next page in the paginated response.
+- `nextUrlPath`: This field is a string that uses a Groovy expression to determine the next page URL. The expression evaluates whether there is a next page available and provides the appropriate URL.
+
+**Groovy Expression**
+
+The value of 'nextUrlPath' is:
+```
+"${response?.completeResponseMap?.next_page==null?null:response.completeResponseMap.next_page}"
+```
+- `${...}`
+   - This syntax is used to embed Groovy expressions inside a string. It allows for dynamic computation of the string value based on the expression.
+
+- `response?.completeResponseMap?.next_page`
+   - The 'response' object is expected to contain the API response.
+   - `?`. is the safe navigation operator in Groovy. It checks if the preceding object is not null before accessing the property. If `response` or `completeResponseMap` is null, it returns null instead of throwing an exception.
+   - `next_page` is a property within `completeResponseMap` that contains the URL of the next page.
+
+- `== null ? null : response.completeResponseMap.next_page`
+   - This is a ternary conditional operator in Groovy. It works as follows
+      - If `response.completeResponseMap.next_page` is `null`, the expression evaluates to null.
+      - If `response.completeResponseMap.next_page` is not `null`, the expression evaluates to the value of `response.completeResponseMap.next_page`.
+
+**Putting It All Together**
+
+The `nextUrlPath` dynamically determines the URL of the next page:
+   - If `next_page` is `null`, it sets `nextUrlPath` to `null`, indicating there is no next page.
+   - If `next_page` is not `null`, it sets `nextUrlPath` to the value of `next_page`, providing the URL for the next page.
+
 #### SSL Parameter
 Installing SSL certificates is sufficient to make https API calls, however, if target applications expect customizations such as the TLS version, you can pass SSL parameters while making API calls.
 
