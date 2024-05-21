@@ -455,6 +455,7 @@ This section defines how to call external APIs to fetch entitlement data. Each c
 Support for Pagination : Provides the logic to handle the pagination of objects returned from the target application. Various types of pagination are supported to import all accounts and entitlements.
 
 #### NextUrl Type
+
 ##### Type 1 - Uses Response Body to evaluate the next url
 
 Example - Next Page url in response.
@@ -629,28 +630,95 @@ The logic to iterate into the next page using the page parameters in the respons
 }
 ~~~
 
-**Breakdown and Explanation**
-
-###### "pagination" Key
-This part of the JSON deals with pagination, which is a way to handle large sets of data by splitting them into smaller chunks or "pages."
-
-###### "nextUrl" Key
-Within "pagination," there is a "nextUrl" key. This key will contain the URL needed to get the next set of data if there are more pages to fetch.
-
-###### "nextUrlPath" Key
-The "nextUrlPath" key inside "nextUrl" dynamically creates the URL for the next page. Let's break down this part further:
+**Explanation of the Expression**
 
 - **`${response?.objectList?.size()>0? ... : null}`**:
   - This is a conditional expression. It checks if the `objectList` in the `response` has more than 0 items.
   - **If true**, it constructs the next URL.
   - **If false**, it returns `null`, indicating there are no more pages.
 
-###### URL Construction:
+- URL Construction:
+   - **`'https://examplesaviyntcom/organization-api-service/v1/management-units?page='`**: This is the base URL for the API endpoint.
+   - **`Math.addExact(response.completeResponseMap.pagination.page,1)`**: This Java method adds 1 to the current page number to get the next page.
+   - **`'&per_page='+response.completeResponseMap.pagination.per_page`**: This appends the current number of items per page to the URL.
 
-- **`'https://examplesaviyntcom/organization-api-service/v1/management-units?page='`**: This is the base URL for the API endpoint.
-- **`Math.addExact(response.completeResponseMap.pagination.page,1)`**: This Java method adds 1 to the current page number to get the next page.
-- **`'&per_page='+response.completeResponseMap.pagination.per_page`**: This appends the current number of items per page to the URL.
-
-###### Summary
+**Putting It All Together**
 In simple terms, this JSON snippet dynamically creates a URL to fetch the next page of data from an API. It checks if there are more items to load, and if so, it constructs the URL for the next page; otherwise, it returns `null`.
 
+#### Page Type
+##### Example 1 - When the totalCount Path is available in the response, specify totalCountPath as shown in the below configuration
+
+```
+"pagination": {
+    "page": {
+      "pageSizeParam": "per_page",
+      "pageSize": 50,
+      "pageRecordCount": "completeResponseMap.meta.count",
+      "pageNumberParam": "page",
+      "totalCountPath": "completeResponseMap.meta.total_count",
+      "firstPageNumber": 1
+    }
+  }
+```
+**Breakdown and Explanation**
+1. `"pagination": { ... }`
+   - This is the main block that contains all the settings related to pagination.
+2. `"page": { ... }`
+   - This block specifies how to handle pages within the pagination.
+3. `"pageSizeParam": "per_page"`
+   - This sets the parameter name used in the API request to specify the number of records per page. In this case, it's "per_page".
+4. `"pageSize": 50`
+   - This specifies the number of records to fetch per page. Here, 50 records will be fetched in each API request.
+5. `"pageRecordCount": "completeResponseMap.meta.count"`
+   - This tells the system where to find the count of records in the response from the API. It looks into the path "completeResponseMap.meta.count" in the response JSON to find this number.
+6. `"pageNumberParam": "page"`
+   - This sets the parameter name used in the API request to specify which page of data to fetch. Here, it is "page".
+7. `"totalCountPath": "completeResponseMap.meta.total_count"`
+   - This indicates where to find the total number of records in the response from the API. It looks into the path "completeResponseMap.meta.total_count" in the response JSON to find this total count.
+8. `"firstPageNumber": 1`
+   - This specifies the number of the first page. Usually, pagination starts at 1, but some APIs might start at 0 or another number.
+
+**Putting It All Together**
+   - The API will fetch data in chunks (pages) of 50 records.
+   - The parameter per_page will be used to specify the number of records per page in the API request.
+   - The parameter page will be used to specify the page number in the API request.
+   - The total number of records and the count of records per page are found in the paths completeResponseMap.meta.total_count and completeResponseMap.meta.count in the API response, respectively.
+   - Pagination starts from page 1.
+
+##### Example 2 - When the totalCount Path is available in the header, specify totalCountPath as shown in the below configuration.
+
+~~~
+"pagination": {
+    "page": {
+        "pageSizeParam": "size",
+        "pageSize": 25,
+        "pageRecordCount": "25",
+        "pageNumberParam": "page",
+        "totalCountPath": "headers.x-total-count",
+        "firstPageNumber": 0
+    }
+}
+~~~
+**Breakdown and Explanation**
+1. `"pagination": { ... }`
+   - This is the main block that contains all the settings related to pagination.
+2. `"page": { ... }`
+   - This block specifies how to handle pages within the pagination.
+3. `"pageSizeParam": size`
+   - This sets the parameter name used in the API request to specify the number of records per page. Here, it is "size".
+4. `"pageSize": 25`
+   - This specifies the number of records to fetch per page. In this case, it will fetch 25 records per request.
+5. `"pageRecordCount": 25`
+   - This is the number of records in the current page. Here, it is set to a fixed value of 25.
+6. `"pageNumberParam": "page"`
+   - This sets the parameter name used in the API request to specify which page of data to fetch. Here, it is "page".
+7. `"totalCountPath": "headers.x-total-count"`
+   - This indicates where to find the total number of records in the API response. It looks in the HTTP headers under "x-total-count".
+8. `"firstPageNumber": 0`
+   - This specifies the number of the first page. Here, pagination starts at 0.
+
+**Putting It All Together**
+   - By specifying pageSize, the configuration ensures that data is fetched in chunks of 25 records, making it easier to handle large datasets.
+   - Using pageSizeParam and pageNumberParam, the configuration sets up the parameters that the API will use to understand how much data to send back and which page of data to return.
+   - By defining pageRecordCount and totalCountPath, the configuration helps in understanding the structure of the response and how to interpret the data returned by the API, including knowing how many total records there are and how many records are in the current page.
+   - The firstPageNumber parameter indicates that the API pagination starts from page 0, which is important for correctly requesting and receiving data.
