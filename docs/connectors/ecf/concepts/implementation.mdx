@@ -107,8 +107,9 @@ Once custom connector unit testing is successful, you should work with EIC admin
 }
 ```
 4. Update other connection parameters, replace https://\<HostName\>:\<Port\>, with valid hostname and port details.
-5. There is no need to update any other configuration on connections page, these are preconfigured as per ECF specification.
-6. Save and Test connection.
+5. Review STATUS_THRESHOLD_CONFIG parameter and update as per requirement. As per ECF specification, account status from target should have been mapped with customproperty11, however if your API response has account status mapped with a different EIC Account Attribute, please update same as statusColumn. Also specify all possible values that indicate the active status of the accounts in the target application in activeStatus field. 
+6. There is no need to update any other configuration on connections page, these are preconfigured as per ECF specification.
+7. Save and Test connection.
 
 ### Create Security System and EndPoint:
 1. Create a security system and use connection created in previous step as Connection and Provisioning Connection.
