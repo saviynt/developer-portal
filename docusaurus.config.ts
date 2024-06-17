@@ -6,6 +6,7 @@ import { DOCUSAURUS_VERSION } from "@docusaurus/utils";
 import navbar from './navbar';  // Adjust the import path based on where you place your navbar.ts file
 import footer from './footer';  // Adjust the import path based on where you place your navbar.ts file
 import announcementBar from './announcementBar';
+import path from 'path';
 
 const config: Config = {
   title: "Saviynt for Developers",
@@ -42,7 +43,7 @@ const config: Config = {
           customCss: "./src/css/custom.css",
         },
         sitemap: {
-          changefreq: 'daily',
+          changefreq: 'DAILY',
           priority: 0.5,
           ignorePatterns: ['/tags/**'],
           filename: 'sitemap.xml',
