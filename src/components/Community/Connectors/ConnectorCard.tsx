@@ -7,7 +7,7 @@ const ConnectorCard = ({ connector }) => {
   const history = useHistory();
 
   const handleCardClick = () => {
-    history.push(`/community/connectors/readmepage?q=${connector.name}`);
+    history.push(`/community/connectors/readme?q=${connector.name}`);
   };
 
   return (
