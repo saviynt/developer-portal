@@ -16,12 +16,10 @@
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/saviynt/deveoper-portal">
+  <a href="https://developers.saviynt.com">
     <img src="static/img/Saviynt_logo_Navy.svg" alt="Logo" width="60%">
   </a>
 
