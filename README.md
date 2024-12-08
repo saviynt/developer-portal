@@ -185,14 +185,10 @@ Project Link: [https://github.com/saviynt/developer-portal](https://github.com/s
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
-* []()
+Much thanks to our [contributors](https://github.com/saviynt/developer-portal/graphs/contributors).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
