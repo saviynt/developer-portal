@@ -22,7 +22,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/saviynt/deveoper-portal">
-    <img src="static/img/Saviynt_logo_Navy.svg" alt="Logo" width="250%">
+    <img src="static/img/Saviynt_logo_Navy.svg" alt="Logo" width="175%">
   </a>
 
 <h3 align="center">developer.saviynt.com</h3>
