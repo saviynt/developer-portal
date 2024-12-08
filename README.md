@@ -1,4 +1,4 @@
-﻿<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+﻿<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/https://github.com/lamw/vmware-explore-2022-session-urls/blob/master/vmware-explore-us.md73 -->
 <a name="readme-top"></a>
 
 <!-- PROJECT SHIELDS -->
@@ -22,7 +22,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/saviynt/deveoper-portal">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="static/img/Saviynt_logo_Navy.svg" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">developer.saviynt.com</h3>
