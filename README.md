@@ -24,12 +24,7 @@
   </a>
 
 <h3 align="center"><a href="https://developers.saviynt.com">developers.saviynt.com</a></h3>
-
   <p align="center">
-    project_description
-    <br />
-    <a href="https://github.com/saviynt/deveoper-portal"><strong>Explore the docs »</strong></a>
-    <br />
     <br />
     <a href="https://saviynt.github.io/developer-portal/">Developer Portal</a>
     ·
@@ -38,8 +33,6 @@
     <a href="https://github.com/saviynt/developer-portal/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
-
-
 
 <!-- TABLE OF CONTENTS -->
 <details>
