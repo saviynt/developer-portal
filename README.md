@@ -25,7 +25,7 @@
     <img src="static/img/Saviynt_logo_Navy.svg" alt="Logo" width="60%">
   </a>
 
-<h3 align="center">developer.saviynt.com</h3>
+<h3 align="center"><a href="https://developers.saviynt.com">developers.saviynt.com</a></h3>
 
   <p align="center">
     project_description
