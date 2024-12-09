@@ -18,7 +18,7 @@ const navbar: Navbar = {
       to: "/community",
     },
     {
-      label: "📰 BLOGS",
+      label: "📰 BLOG",
       to: "/blog/",
     },
     {
