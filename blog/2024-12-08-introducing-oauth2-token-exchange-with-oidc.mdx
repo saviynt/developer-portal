@@ -30,8 +30,8 @@ To configure Saviynt Identity Cloud, you will need to configure it to call your 
 Addtionally, any IdP API credentials such as application client ID and client secret, will need to be configured in both your IdP and Saviynt. The following parameters need to be updated in your `externalconfig.properties` file.
 
 ```
-MSOPENID.CLIENTID=<IdP App Client ID>
-MSOPENID.CLIENTSECRET= <IdP App Secret>
+MSOPENID.CLIENTID=<IdP App Client ID for Saviynt>
+MSOPENID.CLIENTSECRET= <IdP App Secret for Saviynt>
 MSOPENID.INTROSPECTION.URL=<IdP Introspection API>
 MSOPENID.USERNAMEINJSON=preferred_username, sub
 ```
@@ -47,22 +47,26 @@ Accept: application/json
 
 grant_type=urn:ietf:params:oauth:grant-type:token-exchange& \
 subject_token_type_type=urn:ietf:params:oauth:token-type:access_token& \
-subject_token={access token from the IdP}
+subject_token=<IdP OAuth 2.0 access or OIDC ID token for Custom App>
 ```
 
 ### Making the Token Introspection Request
 
-Inline to the Token Exchange Request from your client, Saviynt will make a Token Introspection API request to your IdP to ensure the token is still valid (Steps 4 and 5). It is important to note that this is a live call to your IdP.
+Inline to the Token Exchange Request from your client, Saviynt will make a Token Introspection API request to your IdP to ensure the token is still valid (Steps 4 and 5). It is important to note that this is a live call to your IdP. Your app does not need to make this call. It is made for you by Saviynt.
 
 ```
-POST /introspect HTTP/1.1
-Host: <your_idp_host>
+POST /path/to/introspect HTTP/1.1
+Host: <IdP Hostname>
 Accept: application/json
 Content-Type: application/x-www-form-urlencoded
 Authorization: Bearer <IdP access token for Saviynt Identity Cloud>
 
-token=<IdP access or ID token being exchagned for a Saviynt Identity Cloud access token>
+token=<IdP OAuth 2.0 access or OIDC ID token for Custom App to validate>
 ```
+
+### The Token Exchange Response
+
+Upon receiving a successful response from the IdP's Token Introspection API endpoint, Saviynt will provide the custom app with an OAuth 2.0 access token to call Saviynt APIs.
 
 ## Try it Out!
 
