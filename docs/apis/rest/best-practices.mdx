@@ -2,11 +2,11 @@
 
 The following are recommended best practices for using the Saviynt REST API.
 
-1. Saviynt utilized JWT token for authentication, which is based on RFC6750. This token must be present as Bearer token to call any Saviynt API. This access_token is generated based on service account and access to token is granted based on SAV role linked to the service account.
+1. Saviynt utilized JWT token for authentication, which is based on IETF RFC-6750. This token must be present as Bearer token to call any Saviynt API. This access_token is generated based on service account and access to token is granted based on SAV role linked to the service account.
 2. Follow a standard naming convention across all Saviynt API user identities. This will help in maintaining consistency and clarity throughout the system.
     - As an example, adherence to a standardized naming convention such as– \[Prefix\]\_\[Unique Identifier\]\_\[Module Component\]
-3. Avoid assigning the "ROLE_ADMIN" SAV role to every API user identity by default. Instead, implement a least privilege approach by creating a custom SAV role that has no features accesses and only includes the necessary web service permissions.
-    - For instance, if the requirement involves managing Access Requests via Saviynt APIs, limit the webservice access permissions to specific APIs such as "/getToken", "/validatetoken", "/getUser", "/getAccount", "/getEndpoint", "/getEntitlement", and "/createRequest". On the other hand, if the goal is to manage user lifecycle through Saviynt APIs, restrict access to relevant user APIs like "/getToken", "/validatetoken", "/getUser", "/createUser", and "/updateUser".
+3. Avoid assigning the `ROLE_ADMIN` SAV role to every API user identity by default. Instead, implement a least privilege approach by creating a custom SAV role that has no features accesses and only includes the necessary web service permissions.
+    - For instance, if the requirement involves managing Access Requests via Saviynt APIs, limit the webservice access permissions to specific APIs such as `/getToken`, `/validatetoken`, `/getUser`, `/getAccount`, `/getEndpoint`, `/getEntitlement`, and `/createRequest`. On the other hand, if the goal is to manage user lifecycle through Saviynt APIs, restrict access to relevant user APIs like `/getToken`, `/validatetoken`, `/getUser`, `/createUser`, and `/updateUser`.
 4. If the password expiration flag is set to true on the API user identity, it is not possible to generate a bearer token for authentication. Since API users do not have access to log into the Saviynt UI, the following steps should be followed.
     - Maintain an ADMIN API user to manage the passwords of API users
     - Set the password of the API user using the changePassword API `{url}/ECM/{path}/changePassword`.
