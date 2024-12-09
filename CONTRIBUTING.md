@@ -25,8 +25,8 @@
 
 ### Editing the Content
    - If you dont know MD format and looking for confluence type experince to edit from scratch or if you have the content and looking to convert it from text / html format to MarkDown(MD) or MDX format use https://holocron.so/. It also has AI support to reformat with the power of AI
-   - ![image](https://github.com/saviynt/developer-portal/assets/8769736/3c9d34e7-9f6e-43d0-a52b-f1b117d542ba)
-   - ![image](https://github.com/saviynt/developer-portal/assets/8769736/fb63fe08-8e66-47ac-a936-89ec083b30aa)
+   - ![image](https://github.com/saviynt/saviynt-developer-portal/assets/8769736/3c9d34e7-9f6e-43d0-a52b-f1b117d542ba)
+   - ![image](https://github.com/saviynt/saviynt-developer-portal/assets/8769736/fb63fe08-8e66-47ac-a936-89ec083b30aa)
 
 ### Updating the Side Navigation
 
@@ -39,11 +39,11 @@
 ### Using GitHub Editor Features
 
 - **Editing Files:** You can edit files directly by navigating to them, clicking the pencil icon to open the editor.
-- **Renaming Files:**  Editing a file also lets you enter a new name for your file ![image](https://github.com/saviynt/developer-portal/assets/8769736/e59703ee-bdd3-4bb2-a46b-dbec562220db)
+- **Renaming Files:**  Editing a file also lets you enter a new name for your file ![image](https://github.com/saviynt/saviynt-developer-portal/assets/8769736/e59703ee-bdd3-4bb2-a46b-dbec562220db)
 - **Moving Files/Creating Folders:** You can also move files to entirely new locations using just the filename field.
 To navigate down into a folder, just type the name of the folder you want to move the
 file into followed by /. The folder can be one that’s already part of your repository,
-or it can even be a brand-new folder that doesn’t exist yet! ![image](https://github.com/saviynt/developer-portal/assets/8769736/cdef2f77-817d-4d89-8a8a-3ba127eef6df)
+or it can even be a brand-new folder that doesn’t exist yet! ![image](https://github.com/saviynt/saviynt-developer-portal/assets/8769736/cdef2f77-817d-4d89-8a8a-3ba127eef6df)
 
 - **Preview Changes:** Use the ‘Preview changes’ tab to see how the Markdown will render after the changes.
 - **Committing Changes:** Write a meaningful commit message and description. This helps maintainers understand the purpose of your changes.
@@ -68,7 +68,7 @@ or it can even be a brand-new folder that doesn’t exist yet! ![image](https://
 
 To crate a local branch, commit your change and submit a pull request, do the following:
 
-1. Fork the Project `git clone https://github.com/saviynt/developer-portal`
+1. Fork the Project `git clone https://github.com/saviynt/saviynt-developer-portal`
 1. Create your Feature Branch (`git checkout -b content/MyAmazingUpdate`)
 1. Commit your Changes (`git commit -m 'Add some MyAmazingUpdate'`)
 1. Push to the Branch (`git push origin content/MyAmazingUpdate`)
@@ -79,15 +79,14 @@ To crate a local branch, commit your change and submit a pull request, do the fo
 1. **Clone the Repository**
 
 ```
-git clone https://github.com/saviynt/developer-portal.git
+git clone https://github.com/saviynt/saviynt-developer-portal.git
 ```
 
 2. **Navigate to the Project Directory:** After cloning, navigate to the project directory with:
 
    ```
-   cd developer-portal
+   cd saviynt-developer-portal
    ```
-
 
 3. **Install Dependencies:** Inside the project directory, install the project dependencies with Yarn:
 

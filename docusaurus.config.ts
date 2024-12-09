@@ -15,9 +15,9 @@ const config: Config = {
   baseUrl: "/",
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/saviynt_favicon.ico", 
+  favicon: "img/saviynt_favicon.ico",
   organizationName: "Saviynt",
-  projectName: "developer-portal",
+  projectName: "saviynt-developer-portal",
 
   presets: [
     [
@@ -27,7 +27,7 @@ const config: Config = {
           routeBasePath: "/",
           sidebarPath: "./sidebars.ts",
           editUrl:
-            "https://github.com/saviynt/developer-portal/tree/main",
+            "https://github.com/saviynt/saviynt-developer-portal/tree/main",
           docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi
         },
         blog: {
@@ -36,7 +36,7 @@ const config: Config = {
           blogSidebarTitle: 'All posts',
           blogSidebarCount: 'ALL',
           blogTagsListComponent: '@theme/BlogTagsListPage',
-          
+
           // Other blog configurations...
         },
         theme: {
@@ -132,17 +132,17 @@ const config: Config = {
         // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
       }
     },
-    
+
   } satisfies Preset.ThemeConfig,
 
   plugins: [
     [
-      "docusaurus-plugin-openapi-docs", 
+      "docusaurus-plugin-openapi-docs",
       {
         id: "openapi",
         docsPluginId: "classic",
         config: {
-          saviynt:{
+          saviynt: {
             specPath: "static/api-specs/saviynt-rest-api-5.0-bundle.yaml",
             proxy: "https://cors-api-18af4d883f64.herokuapp.com",
             outputDir: "docs/apis/rest/reference/5.0/", // No trailing slash
@@ -153,10 +153,10 @@ const config: Config = {
             hideSendButton: false,
             showSchemas: true,
             downloadUrl:
-              "https://github.com/saviynt/developer-portal/blob/main/static/api-specs/saviynt-rest-api-5.0-bundle.yaml",
+              "https://github.com/saviynt/saviynt-developer-portal/blob/main/static/api-specs/saviynt-rest-api-5.0-bundle.yaml",
             baseUrl: "/apis/rest/5.0/reference", // Leading slash is important
           } satisfies OpenApiPlugin.Options,
-          ecf:{
+          ecf: {
             specPath: "static/api-specs/saviynt-ecf-api-bundle.yaml",
             // proxy: "https://cors-anywhere.herokuapp.com",
             outputDir: "docs/connectors/ecf/reference/1.0/", // No trailing slash
@@ -166,7 +166,7 @@ const config: Config = {
             },
             hideSendButton: false,
             showSchemas: true,
-            // downloadUrl:"https://github.com/saviynt/developer-portal/blob/main/static/api-specs/saviynt-rest-api-5.0-bundle.yaml",
+            // downloadUrl:"https://github.com/saviynt/saviynt-developer-portal/blob/main/static/api-specs/saviynt-rest-api-5.0-bundle.yaml",
             baseUrl: "/connectors/ecf/1.0/reference", // Leading slash is important
           } satisfies OpenApiPlugin.Options,
         } satisfies Plugin.PluginOptions,

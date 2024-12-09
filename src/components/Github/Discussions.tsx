@@ -5,7 +5,7 @@ const GiscusComponent = () => {
     const script = document.createElement('script');
     script.src = 'https://giscus.app/client.js';
     script.async = true;
-    script.setAttribute('data-repo', 'saviynt/developer-portal');
+    script.setAttribute('data-repo', 'saviynt/saviynt-developer-portal');
     script.setAttribute('data-repo-id', 'R_kgDOLnTSUg');
     script.setAttribute('data-category', 'General');
     script.setAttribute('data-category-id', 'DIC_kwDOLnTSUs4Cel7H');
