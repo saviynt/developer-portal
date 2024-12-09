@@ -42,7 +42,6 @@ This is the repo for the Saviynt Developer Portal. It is managed on Git as via a
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
@@ -77,9 +76,10 @@ This is an example of how to list things you need to use the software and how to
 
 ## Usage
 
-After installing dependencies via `npm install`, use the following to start the local, development server.
+After installing dependencies via `npm install`, use the following to start the local, development server. Of note, `yarn install` is necessary for the GitHub build pipeline, so ensure you have a `yarn.lock` file when merging dependency updates.
 
 ```
+% yarn install
 % yarn start
 ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
