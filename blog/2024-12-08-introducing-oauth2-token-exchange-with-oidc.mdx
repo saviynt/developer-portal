@@ -13,6 +13,8 @@ OAuth 2.0 and OpenID Connect are the most popular and important security protoco
 
 Specifically, this is implemented using industry standards OAuth 2.0 Token Exchange flow ([IETF RFC-8693](https://datatracker.ietf.org/doc/html/rfc8693)) and the associated OAuth 2.0 Token Introspection API ([IETF RFC-7662](https://datatracker.ietf.org/doc/html/rfc7662)). The token exchange can be performed submitting an IdP OAuth 2.0 access token or an IdP OIDC ID token to Saviynt Identity Cloud, which will exchange it for a Saviynt OAuth 2.0 access token. Read more below for an overview and in our [documentation for "Configuring OAuth 2.0 Token Exchange Authentication"](https://docs.saviyntcloud.com/bundle/EIC-Admin-v24x/page/Content/Chapter06-EIC-Configurations/OAuth-Token-Exchange.htm).
 
+<!-- truncate -->
+
 ## How it Works
 
 At a high level, OAuth 2.0 Token Exchange works with applications requesting a Saviynt Identity Cloud API Access Token by presenting and IdP issued token, which can be an OAuth 2.0 access token or an OIDC ID token, both issued by the IdP. There are 3 major parts to such an integration, described below.
