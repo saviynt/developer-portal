@@ -48,40 +48,24 @@ This is the repo for the Saviynt Developer Portal. It is managed on Git as via a
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/saviynt/developer-portal.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## Usage
-
-After installing dependencies via `npm install`, use the following to start the local, development server. Of note, `yarn install` is necessary for the GitHub build pipeline, so ensure you have a `yarn.lock` file when merging dependency updates.
+The following installs the developer portal and dependencies. `yarn install` creates the `yarn.lock` file which is necesary for the GitHub build pipline.
 
 ```
+% git clone https://github.com/saviynt/developer-portal
+% cd developer-portal
 % yarn install
+```
+
+### Usage
+
+After installing dependencies via `yarn install`, start the development server with `yarn start`:
+
+```
 % yarn start
 ```
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
