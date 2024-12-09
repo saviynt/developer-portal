@@ -37,7 +37,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This is the repo for the Saviynt Developer Portal. It is managed on Git as via a Docs as Code (DaC) approach.
+This is the repo for the Saviynt Developer Portal hosted at [`https://developers.saviynt.com`](https://developers.saviynt.com). It is managed on [GitHub](https://github.com/saviynt/) via a Docs as Code (DaC) approach.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -78,7 +78,11 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Much thanks to our [contributors](https://github.com/saviynt/developer-portal/graphs/contributors).
+Much thanks to:
+
+1. [Our contributors](https://github.com/saviynt/developer-portal/graphs/contributors)
+1. [Docusaurus](https://github.com/facebook/docusaurus)
+1. [Docusaurus OpenAPI Doc Generator](https://github.com/PaloAltoNetworks/docusaurus-openapi-docs)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
