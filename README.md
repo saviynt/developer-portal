@@ -94,13 +94,13 @@ Much thanks to our [contributors](https://github.com/saviynt/developer-portal/gr
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/saviynt/developer-portal.svg?style=for-the-badge
-[contributors-url]: https://github.com/saviynt/deveoper-portal/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/saviynt/deveoper-portal.svg?style=for-the-badge
-[forks-url]: https://github.com/saviynt/deveoper-portal/network/members
+[contributors-url]: https://github.com/saviynt/developer-portal/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/saviynt/developer-portal.svg?style=for-the-badge
+[forks-url]: https://github.com/saviynt/developer-portal/network/members
 [stars-shield]: https://img.shields.io/github/stars/saviynt/developer-portal.svg?style=for-the-badge
 [stars-url]: https://github.com/saviynt/developer-portal/stargazers
 [issues-shield]: https://img.shields.io/github/issues/saviynt/developer-portal.svg?style=for-the-badge
-[issues-url]: https://github.com/saviynt/deveoper-portal/issues
+[issues-url]: https://github.com/saviynt/developer-portal/issues
 [license-shield]: https://img.shields.io/github/license/saviynt/developer-portal.svg?style=for-the-badge
 [license-url]: https://github.com/saviynt/developer-portal/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
