@@ -40,13 +40,18 @@ MSOPENID.USERNAMEINJSON=preferred_username, sub
 
 The Token Exchange request occurs as Steps 3 and 6 in the diagram. It is designed and implemented by Saviynt is as follows. A sucessful reqwuest will return a Saviynt Identity Cloud OAuth 2.0 access token. Behind the scenes, Saviynt Identity cloud is making a Token Introspection API call to your IdP described in the next section.
 
+For the `subject_token_type`, the following token types are supported:
+
+1. OAuth 2.0 Access Token: `urn:ietf:params:oauth:token-type:access_token`
+2. OpenID Connect ID Token: `urn:ietf:params:oauth:token-type:id_token`
+
 ```
 POST https://<SAVIYNT_HOSTNAME>/ECM/oauth2/token
 Content-Type: application/x-www-form-urlencoded
 Accept: application/json
 
 grant_type=urn:ietf:params:oauth:grant-type:token-exchange& \
-subject_token_type_type=urn:ietf:params:oauth:token-type:access_token& \
+subject_token_type=urn:ietf:params:oauth:token-type:access_token& \
 subject_token=<IdP OAuth 2.0 access or OIDC ID token for Custom App>
 ```
 
@@ -70,4 +75,4 @@ Upon receiving a successful response from the IdP's Token Introspection API endp
 
 ## Try it Out!
 
-We are very excited about this enhancement and look forward to our customers trying this out. The documentation is available [here again](https://docs.saviyntcloud.com/bundle/EIC-Admin-v24x/page/Content/Chapter06-EIC-Configurations/OAuth-Token-Exchange.htm). If you have any questions, feel free to post on the [Saviynt Forums](https://forums.saviynt.com/). And if you have any feature requests for different OAuth 2.0 flows or OpenID Connect capabilities, please post on the [Saviynt Ideas Portal](https://ideas.saviynt.com/).
+We are very excited about this enhancement and look forward to our customers trying this out. The [documentation is available here again](https://docs.saviyntcloud.com/bundle/EIC-Admin-v24x/page/Content/Chapter06-EIC-Configurations/OAuth-Token-Exchange.htm). If you have any questions, feel free to post on the [Saviynt Forums](https://forums.saviynt.com/). And if you have any feature requests for different OAuth 2.0 flows or OpenID Connect capabilities, please post on the [Saviynt Ideas Portal](https://ideas.saviynt.com/).
