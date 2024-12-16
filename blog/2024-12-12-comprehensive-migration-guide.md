@@ -1,5 +1,5 @@
 ---
-slug: migration-from-legacy-guide
+slug: comprehensive-migration-guide
 title: Migration from Legacy IGA to Saviynt: A Comprehensive Guide
 authors: schoudhary
 tags: [migration]
