@@ -1,8 +1,8 @@
 ---
-slug: new-phase-community-connectors
-title: Community Connector @ Developer Portal
-authors: Kkundan
-tags: [community-connectors]
+slug: comprehensive-migration-guide
+title: Migration from Legacy IGA to Saviynt
+authors: schoudhary
+tags: [migration]
 ---
 import GitHubComments from '@site/src/components/Github/Comments';
 
