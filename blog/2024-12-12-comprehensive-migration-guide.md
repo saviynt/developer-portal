@@ -1,9 +1,10 @@
 ---
-slug: comprehensive-migration-guide
-title: Migration from Legacy IGA to Saviynt: A Comprehensive Guide
-authors: schoudhary
-tags: [migration]
+slug: new-phase-community-connectors
+title: Community Connector @ Developer Portal
+authors: Kkundan
+tags: [community-connectors]
 ---
+import GitHubComments from '@site/src/components/Github/Comments';
 
 # Migration from Legacy IGA to Saviynt: A Comprehensive Guide
 
