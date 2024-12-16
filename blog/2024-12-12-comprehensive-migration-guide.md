@@ -1,6 +1,6 @@
 ---
 title: Migration from Legacy IGA to Saviynt
-authors: schoudhary
+authors: sagarchou
 tags: [migration]
 ---
 import GitHubComments from '@site/src/components/Github/Comments';
