@@ -13,6 +13,8 @@ Migrating to Saviynt from a legacy Identity Governance and Administration (IGA) 
 
 Migration to Saviynt involves transferring identity-related data, roles, access policies, workflows, and governance controls from an outdated system to Saviynt’s modern IGA platform. This process is more than a data transfer; it includes rethinking identity management processes, leveraging Saviynt’s advanced capabilities, and aligning with new security, compliance, and user experience standards. The migration aims to improve security, streamline operations, and enhance user experience.
 
+<!-- truncate -->
+
 ### **Why Migrate to Saviynt?**
 
 Organizations move to Saviynt for several key reasons:
